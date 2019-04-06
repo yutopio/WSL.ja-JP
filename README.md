@@ -1,22 +1,21 @@
-# Windows Subsystem for Linux (WSL) Documentation
+# <a name="windows-subsystem-for-linux-wsl-documentation"></a>Linux (WSL) ドキュメント用の Windows サブシステム
 
-## Issues
-If you find doc issues / errors or have an improvement you'd like to suggest, please file an issue and/or submit a pull-request - we greatly appreciate PR's in particular :)
+## <a name="issues"></a>Issues
+ドキュメントの問題が見つかった場合/エラーまたは問題やプル要求を送信してくださいの提案する改善がある - ありがとう PR の特に:)
 
-> **Note:** This repo's issue tracker is only for reporting issues with the WSL docs.
-> Other related issue repo's:
+> **注:** このリポジトリの issue トラッカーは、WSL ドキュメントに関する問題の報告だけです。その他の関連する問題リポジトリの:
 > * WSL: https://github.com/Microsoft/WSL/
-> * Windows Console: https://github.com/Microsoft/Console/
+> * Windows コンソール: https://github.com/Microsoft/Console/
 
-## External Links
+## <a name="external-links"></a>外部リンク
 
-[Rendered documentation website](https://docs.microsoft.com/windows/wsl/) 
+[表示されたドキュメントの web サイト](https://docs.microsoft.com/windows/wsl/) 
 
-[Release notes for WSL](https://docs.microsoft.com/en-us/windows/wsl/release-notes)
+[WSL のリリース ノート](https://docs.microsoft.com/en-us/windows/wsl/release-notes)
 
-## Microsoft Open Source Code of Conduct
+## <a name="microsoft-open-source-code-of-conduct"></a>Microsoft のオープン ソース倫理
 
-This project has adopted the [Microsoft Open Source Code of Conduct](https://opensource.microsoft.com/codeofconduct/).
-For more information see the [Code of Conduct FAQ](https://opensource.microsoft.com/codeofconduct/faq/) or contact [opencode@microsoft.com](mailto:opencode@microsoft.com) with any additional questions or comments.
+このプロジェクトを採用しています、 [Microsoft オープン ソース倫理規定](https://opensource.microsoft.com/codeofconduct/)します。
+詳細については、次を参照してください。、 [FAQ の実施コード](https://opensource.microsoft.com/codeofconduct/faq/)にお問い合わせくださいまたは[ opencode@microsoft.com ](mailto:opencode@microsoft.com)その他の質問またはコメント。
 
-Welcome to the markdown source for Microsoft's command-line shells and console documentation.
+へようこそ Microsoft のコマンド ライン シェルの markdown ソースとドキュメントをコンソールします。
