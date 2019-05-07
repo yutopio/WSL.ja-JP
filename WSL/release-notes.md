@@ -7,14 +7,27 @@ ms.date: 07/31/2017
 ms.topic: article
 ms.assetid: 36ea641e-4d49-4881-84eb-a9ca85b1cdf4
 ms.custom: seodec18
-ms.openlocfilehash: 3eee7ff6d1f8302e98cde84fccabf5d9113c83f2
-ms.sourcegitcommit: ca08a78925880ed3eccf88edb30def16c83f2543
+ms.openlocfilehash: 2567e68ca0e9897a7b7bc7315760b81ff4923c1a
+ms.sourcegitcommit: 8c74868b8d8ff0106e15e4bce5e8337642883ec1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/04/2019
-ms.locfileid: "59063630"
+ms.lasthandoff: 05/01/2019
+ms.locfileid: "64988261"
 ---
 # <a name="release-notes-for-windows-subsystem-for-linux"></a>Windows Subsystem for Linux のリリース ノート
+
+## <a name="build-18890"></a>ビルド 18890
+一般的な Windows ビルド 18890 に関する情報を参照してください、 [Windows ブログ](https://blogs.windows.com/windowsexperience/2019/05/01/announcing-windows-10-insider-preview-build-18890/)します。
+
+### <a name="wsl"></a>WSL
+* 非ブロッキング ソケット リーク [GH 2913]
+* EOF 入力ターミナルには、それ以降の読み取り [GH 3421] をブロックできます。
+* [GH 3928 で説明した] wsl.conf を参照するヘッダーを resolv.conf を更新します。
+* Epoll でデッドロック コード [GH 3922] の削除します。
+* -インポートおよび – [GH 3932] をエクスポートする引数にスペースを処理します。
+* Mmap の拡張ファイルが正しく機能しません [GH 3939]
+* ARM64 に関する問題を解決する\\wsl$ アクセスが正しく機能していません
+* Wsl.exe の向上の既定のアイコンを追加します。
 
 ## <a name="build-18342"></a>ビルド 18342
 一般的な Windows ビルド 18342 に関する情報を参照してください、 [Windows ブログ](https://blogs.windows.com/windowsexperience/2019/02/20/announcing-windows-10-insider-preview-build-18342/)します。
@@ -349,8 +362,7 @@ wslconfig.exe /terminate <DistributionName>
 * Futex pi に対応した操作のサポートを追加します。 [GH 1006]
     * 優先順位いないこと現在サポートされている WSL 機能、制限がありますが、標準の使用状況ブロックを解除する必要がありますので注意してください。
 * WSL プロセスの Windows ファイアウォールのサポート。 [GH 1852]
-    * たとえば、WSL を許可するのには、任意のポートでリッスンするには、管理者特権で Windows cmd を使用に python が処理します。
-```netsh.exe advfirewall firewall add rule name=wsl_python dir=in action=allow program="C:\users\<username>\appdata\local\packages\canonicalgrouplimited.ubuntuonwindows_79rhkp1fndgsc\localstate\rootfs\usr\bin\python2.7" enable=yes```
+    * たとえば、WSL を許可するのには、任意のポートでリッスンするには、管理者特権で Windows cmd を使用に python が処理します。 ```netsh.exe advfirewall firewall add rule name=wsl_python dir=in action=allow program="C:\users\<username>\appdata\local\packages\canonicalgrouplimited.ubuntuonwindows_79rhkp1fndgsc\localstate\rootfs\usr\bin\python2.7" enable=yes```
     * ファイアウォール規則を追加する方法の詳細については、次を参照してください[リンク。](https://support.microsoft.com/en-us/help/947709/how-to-use-the-netsh-advfirewall-firewall-context-instead-of-the-netsh)
 * Wsl.exe を使用する場合は、ユーザーの既定のシェルを尊重します。 [GH 2372]
 * すべてのネットワーク インターフェイスは、イーサネットとして報告します。 [GH 2996]
@@ -517,7 +529,7 @@ WSL および Windows アプリケーションは、Unix ソケット上で互�
   * fmask: すべての定期的なファイルを除外するアクセス許可の 8 進数のマスク。
   * dmask: すべてのディレクトリを除外するアクセス許可の 8 進数のマスク。
 
-  次に、例を示します。
+  例:
   ```
   mount -t drvfs C: /mnt/c -o uid=1000,gid=1000,umask=22,fmask=111
   ```
@@ -526,7 +538,7 @@ WSL および Windows アプリケーションは、Unix ソケット上で互�
 
 * 新しい環境変数を導入`WSLENV`WSL と Win32 の間の環境変数のフローを構成する。
 
-  次に、例を示します。
+  例:
 
   ``` bash
   WSLENV=GOPATH/l:USERPROFILE/pu:DISPLAY
@@ -793,7 +805,7 @@ WSL でいくつかの実装を持つ新しいまたは強化された syscall �
 `prlimit64`<br/>
 
 ### <a name="known-issues"></a>既知の問題
-#### [<a name="github-issue-2392-windows-folders-not-recognized-by-wsl-"></a>GitHub 問題 2392:Windows フォルダーが WSL で認識されない.](https://github.com/Microsoft/BashOnWindows/issues/2392)
+#### <a name="github-issue-2392-windows-folders-not-recognized-by-wsl-httpsgithubcommicrosoftbashonwindowsissues2392"></a>[GitHub 問題 2392:Windows フォルダーが WSL で認識されない.](https://github.com/Microsoft/BashOnWindows/issues/2392)
 WSL が経由で Windows のファイル/フォルダーを列挙中に問題が 16257 のビルドで`/mnt/c/...`します。
 この問題は修正されておりで解放する必要がある 2017 年 8 月 14 の開始週に Insider のビルドします。
 
