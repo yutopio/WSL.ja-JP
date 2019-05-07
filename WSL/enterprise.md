@@ -1,5 +1,5 @@
 ---
-title: Windows Subsystem for for Enterprise Linux
+title: エンタープライズ向け Windows Subsystem for Linux
 description: リソースや、最善の方法については、Linux 用 Windows サブシステムを使用して、エンタープライズ環境でします。
 keywords: BashOnWindows、bash、wsl、windows、linux、windowssubsystem、ubuntu、debian、suse、windows 10、enterprise、展開、オフラインでパッケージ化、ストア、配布、インストール用の windows サブシステムのインストールします。
 author: mscraigloewen
@@ -9,13 +9,13 @@ ms.topic: article
 ms.assetid: 7afaeacf-435a-4e58-bff0-a9f0d75b8a51
 ms.custom: seodec18
 ms.openlocfilehash: 9d867654d1b66fc14b58bc5e111986a7d38ef79c
-ms.sourcegitcommit: ca08a78925880ed3eccf88edb30def16c83f2543
+ms.sourcegitcommit: ae0956bc0543b1c45765f3620ce9a55c9afe55da
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/04/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59063280"
 ---
-# <a name="windows-subsystem-for-linux-for-enterprise"></a>Windows Subsystem for for Enterprise Linux
+# <a name="windows-subsystem-for-linux-for-enterprise"></a>エンタープライズ向け Windows Subsystem for Linux
 
 ビジネス向け Microsoft Store では、自分の会社の WSL のデプロイを希望する企業までのさまざまなソリューションを提供します。 [オンライン ドキュメント](https://docs.microsoft.com/en-us/microsoft-store/)ビジネス向け Microsoft Store は、ストアのエクスペリエンスに関する全般情報を調べるための優れたリソースです。
 

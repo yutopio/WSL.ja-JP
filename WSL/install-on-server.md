@@ -9,10 +9,10 @@ ms.topic: article
 ms.assetid: 9281ffa2-4fa9-4078-bf6f-b51c967617e3
 ms.custom: seodec18
 ms.openlocfilehash: c0b8af08a06428ebd292b8c6b9b275726988bdbe
-ms.sourcegitcommit: ca08a78925880ed3eccf88edb30def16c83f2543
+ms.sourcegitcommit: ae0956bc0543b1c45765f3620ce9a55c9afe55da
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/04/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59063620"
 ---
 # <a name="windows-server-installation-guide"></a>Windows Server インストール ガイド
@@ -61,6 +61,6 @@ ms.locfileid: "59063620"
     $userenv = [System.Environment]::GetEnvironmentVariable("Path", "User")
     [System.Environment]::SetEnvironmentVariable("PATH", $userenv + "C:\Users\Administrator\Ubuntu", "User")
     ```
-    」と入力して任意のパスから、ディストリビューションを起動できるようになりました`<distro>.exe`します。 次に、例を示します。 `ubuntu.exe`
+    」と入力して任意のパスから、ディストリビューションを起動できるようになりました`<distro>.exe`します。 たとえば次のようになります。`ubuntu.exe`
 
 必要があります、Linux ディストリビューションがインストールされた[ディストリビューションの新しいインスタンスを初期化](initialize-distro.md)ディストリビューションを使用する前にします。

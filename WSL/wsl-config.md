@@ -9,10 +9,10 @@ ms.topic: article
 ms.assetid: 7ca59bd7-d9d3-4f6d-8b92-b8faa9bcf250
 ms.custom: seodec18
 ms.openlocfilehash: c806552750f413fcb75f989d868a57cc939af64a
-ms.sourcegitcommit: ca08a78925880ed3eccf88edb30def16c83f2543
+ms.sourcegitcommit: ae0956bc0543b1c45765f3620ce9a55c9afe55da
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/04/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59063500"
 ---
 # <a name="manage-and-configure-windows-subsystem-for-linux"></a>管理および Linux 用の Windows サブシステムの構成
@@ -23,7 +23,7 @@ ms.locfileid: "59063500"
 
 Linux 用 Windows サブシステムで Linux を実行する方法はたくさんあります。
 
-1. `[distro]` IE `ubuntu`
+1. `[distro]` ie `ubuntu`
 1. `wsl.exe` または `bash.exe`
 1. `wsl [command]` または `bash -c [command]`
 
@@ -43,7 +43,7 @@ Windows ストアで「起動」をクリックすると同じです。
 
 ディストリビューションを実行して、この方法でコマンドラインからの欠点はことには自動的に作業ディレクトリ現在のディレクトリからに変更配布のホーム ディレクトリ。
 
-**以下に例を示します。**
+**例:**
 
 ```console
 PS C:\Users\sarah> pwd
@@ -66,7 +66,7 @@ PS C:\Users\sarah>
 
 WSL をコマンドラインから実行する最善の方法を使用して`wsl.exe`します。
 
-**以下に例を示します。**
+**例:**
 
 ```console
 PS C:\Users\sarah> pwd
@@ -83,7 +83,7 @@ scooley@scooley-elmer:/mnt/c/Users/sarah$ pwd
 
 だけでなく`wsl`に現在の作業ディレクトリを維持、に沿って側の Windows のコマンドの 1 つのコマンドを実行できます。
 
-**以下に例を示します。**
+**例:**
 
 ```console
 PS C:\Users\sarah> Get-Date
@@ -100,7 +100,7 @@ PS C:\Users\sarah> wsl date
 Sun Mar 11 19:55:47 DST 2018
 ```
 
-**以下に例を示します。**
+**例:**
 
 ```console
 PS C:\Users\sarah> Get-VM
@@ -130,7 +130,7 @@ PS C:\Users\sarah>
 
 #### <a name="list-distributions"></a>ディストリビューションの一覧
 
-`wsl -l` 、 `wsl --list`  
+`wsl -l` , `wsl --list`  
 WSL を利用できる Linux ディストリビューションを使用可能なを一覧表示します。  分布が表示されている場合がインストールされ、使用する準備が完了します。
 
 `wsl --list --all`   
@@ -143,11 +143,11 @@ WSL を利用できる Linux ディストリビューションを使用可能な
 
 既定のディストリビューションで WSL を実行するときに実行される 1 つ`wsl`コマンド行にします。
 
-`wsl -s <DistributionName>`、 `wsl --setdefault <DistributionName>`
+`wsl -s <DistributionName>`, `wsl --setdefault <DistributionName>`
 
 既定の配布を設定`<DistributionName>`します。
 
-**以下に例を示します。**  
+**例:**  
 `wsl -s Ubuntu` 既定のディストリビューションを Ubuntu に設定します。  今すぐ実行すると`wsl npm init`Ubuntu で実行されます。  実行した場合の`wsl`Ubuntu のセッションが開きます。
 
 #### <a name="unregister-and-reinstall-a-distribution"></a>登録を解除して、配布を再インストール
@@ -167,13 +167,13 @@ WSL から配布を再インストールまたはクリーンアップできる�
 
 #### <a name="run-as-a-specific-user"></a>特定のユーザーとして実行します。
 
-`wsl -u <Username>`、 `wsl --user <Username>`
+`wsl -u <Username>`, `wsl --user <Username>`
 
 WSL は、指定したユーザーとして実行します。 WSL 配布内でそのユーザーが存在する必要がありますに注意してください。
 
 #### <a name="run-a-specific-distribution"></a>特定の配布を実行します。
 
-`wsl --d <DistributionName>`、 `wsl --distribution <DistributionName>`
+`wsl --d <DistributionName>`, `wsl --distribution <DistributionName>`
 
 WSL の指定した配布を実行する、既定値を変更することがなく特定の配布のコマンドを送信するために使用できます。
 
@@ -213,7 +213,7 @@ WSL を利用できる Linux ディストリビューションを使用可能な
 
 既定の配布を設定`<DistributionName>`します。
 
-**以下に例を示します。**  
+**例:**  
 `wslconfig /setdefault Ubuntu` 既定のディストリビューションを Ubuntu に設定します。  今すぐ実行すると`wsl npm init`Ubuntu で実行されます。  実行した場合の`wsl`Ubuntu のセッションが開きます。
 
 #### <a name="unregister-and-reinstall-a-distribution"></a>登録を解除して、配布を再インストール

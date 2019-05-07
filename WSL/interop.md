@@ -8,10 +8,10 @@ ms.topic: article
 ms.assetid: 3cefe0db-7616-4848-a2b6-9296746a178b
 ms.custom: seodec18
 ms.openlocfilehash: 5dcfe0987ecb6615fbe1ab67d178679ac6ad9317
-ms.sourcegitcommit: ca08a78925880ed3eccf88edb30def16c83f2543
+ms.sourcegitcommit: ae0956bc0543b1c45765f3620ce9a55c9afe55da
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/04/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59063250"
 ---
 # <a name="windows-subsystem-for-linux-interoperability-with-windows"></a>Windows と Linux の相互運用性用 Windows サブシステム
@@ -37,7 +37,7 @@ Windows コマンド プロンプト (CMD または PowerShell) を使用して�
 1. WSL の既定のユーザーとして実行します。
 1. 呼び出し元のプロセスとターミナルとして同じ Windows 管理者権限を持ちます。
 
-次に、例を示します。
+例:
 
 ```console
 C:\temp> wsl ls -la

@@ -9,10 +9,10 @@ ms.topic: article
 ms.assetid: f70e685f-24c6-4908-9546-bf4f0291d8fd
 ms.custom: seodec18
 ms.openlocfilehash: 5820d701d5c0e22f14bf76e3dc6fe70bacb5213a
-ms.sourcegitcommit: ca08a78925880ed3eccf88edb30def16c83f2543
+ms.sourcegitcommit: ae0956bc0543b1c45765f3620ce9a55c9afe55da
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/04/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59063600"
 ---
 # <a name="user-accounts-and-permissions-for-windows-subsystem-for-linux"></a>ユーザー アカウントと Linux 用 Windows サブシステムのアクセス許可
@@ -132,12 +132,12 @@ WSL で Linux を実行するときに、Linux は、起動するプロセスと
 
 上記の Windows アクセス許可は、Linux インスタンス内でアクセス許可に依存しません。Linux の「Root 特権」Linux 環境とファイルシステム内のユーザーの権限の影響のみ影響を与えるありませんに与えられている Windows 特権。 そのため、ルートとして Linux プロセスを実行している (経由など`sudo`) Linux 環境内で管理者権限を処理するのみを付与します。
 
-**以下に例を示します。**    
+**例:**    
 管理者特権の Windows で Bash セッションがアクセスできる`cd /mnt/c/Users/Administrator`Bash セッションを管理者特権が「アクセス許可が拒否されました」エラーを表示せずにします。
 
 Linux では、入力`sudo cd /mnt/c/Users/Administrator`Windows 内でアクセス許可が Windows によって管理されるため、管理者のディレクトリへのアクセスを付与されませんが。
 
 Linux のアクセス許可モデルは、Linux 環境をユーザーが現在の Linux ユーザーに基づいて、アクセス許可を持っている内で重要です。
 
-**以下に例を示します。**  
+**例:**  
 Sudo グループ内のユーザーが実行される可能性が`sudo apt update`します。
