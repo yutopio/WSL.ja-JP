@@ -86,7 +86,7 @@ Bash on Ubuntu on Windows の更新が必要になるの 2 つのコンポーネ
 1. [OK] をクリックします。
 
 ### <a name="error-0x80040154-after-windows-update"></a>"エラー。0x80040154"Windows の更新後
-Linux の機能の Windows サブシステムが無効になっている Windows の更新中にします。 このような場合、Windows の機能が再度有効にする必要があります。 Linux が記載されているは、Windows サブシステムを有効にする手順、[インストール ガイド](https://msdn.microsoft.com/en-us/commandline/wsl/install_guide#enable-the-windows-subsystem-for-linux-feature-gui https://msdn.microsoft.com/en-us/commandline/wsl/install_guide#enable-the-windows-subsystem-for-linux-feature-gui)します。
+Linux の機能の Windows サブシステムが無効になっている Windows の更新中にします。 このような場合、Windows の機能が再度有効にする必要があります。 Linux が記載されているは、Windows サブシステムを有効にする手順、[インストール ガイド](https://msdn.microsoft.com/en-us/commandline/wsl/install_guide#enable-the-windows-subsystem-for-linux-feature-guihttps://msdn.microsoft.com/en-us/commandline/wsl/install_guide#enable-the-windows-subsystem-for-linux-feature-gui)します。
 
 ### <a name="changing-the-display-language"></a>表示言語を変更します。
 WSL インストールは自動的に Windows インストールのロケールに一致するように Ubuntu ロケールを変更しようとします。  この動作したくない場合は、インストールが完了した後は、Ubuntu ロケールを変更するには、このコマンドを実行できます。  この変更を有効にする bash.exe を再起動する必要があります。

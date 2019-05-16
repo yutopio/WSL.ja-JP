@@ -146,7 +146,7 @@ WSL では、従来のコンソールで実行することはできません。 
 1. [OK] をクリックします。
 
 ## <a name="why-do-i-get-error-0x80040154-when-i-run-bashexe-after-upgrading-windows"></a>なぜ"エラー。0x80040154"Windows をアップグレードした後 bash.exe を実行するとしますか?
-"Linux 用 Windows サブシステム"機能が無効になっている Windows の更新中にします。 このような場合、Windows の機能が再度有効にする必要があります。 "Linux 用 Windows サブシステム"機能を有効にする手順が記載されて、[インストール ガイド](https://msdn.microsoft.com/en-us/commandline/wsl/install_guide#enable-the-windows-subsystem-for-linux-feature-gui https://msdn.microsoft.com/en-us/commandline/wsl/install_guide#enable-the-windows-subsystem-for-linux-feature-gui)します。
+"Linux 用 Windows サブシステム"機能が無効になっている Windows の更新中にします。 このような場合、Windows の機能が再度有効にする必要があります。 "Linux 用 Windows サブシステム"機能を有効にする手順が記載されて、[インストール ガイド](https://msdn.microsoft.com/en-us/commandline/wsl/install_guide#enable-the-windows-subsystem-for-linux-feature-guihttps://msdn.microsoft.com/en-us/commandline/wsl/install_guide#enable-the-windows-subsystem-for-linux-feature-gui)します。
 
 ## <a name="how-do-i-change-the-display-language-of-wsl"></a>WSL の表示言語を変更する方法はありますか
 WSL インストールは自動的に Windows インストールのロケールに一致するように Ubuntu ロケールを変更しようとします。 この動作したくない場合は、インストールが完了した後は、Ubuntu ロケールを変更するには、このコマンドを実行できます。 この変更を有効にする bash.exe を再起動する必要があります。
