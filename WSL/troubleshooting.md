@@ -8,12 +8,12 @@ ms.date: 11/15/2017
 ms.topic: article
 ms.assetid: 6753f1b2-200e-49cc-93a5-4323e1117246
 ms.custom: seodec18
-ms.openlocfilehash: 055bdc02dcf8f078caa014abd6dd755a47c99cfe
-ms.sourcegitcommit: ae0956bc0543b1c45765f3620ce9a55c9afe55da
+ms.openlocfilehash: feb9e25da73eeb0d7f0cef4014221a42e2ca179b
+ms.sourcegitcommit: db69625e26bc141ea379a830790b329e51ed466b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59063300"
+ms.lasthandoff: 06/13/2019
+ms.locfileid: "67040849"
 ---
 # <a name="troubleshooting-windows-subsystem-for-linux"></a>トラブルシューティングの Windows Subsystem for Linux
 
@@ -26,8 +26,8 @@ Windows 上の VPN に接続したら、bash にネットワーク接続が切�
 3. 現在の resolv.con のリンクを解除します。 `sudo unlink /etc/resolv.conf`
 4. `sudo mv /etc/resolv.conf.new /etc/resolv.conf`
 5. 開いている`/etc/resolv.conf`と <br/>
-   a.  というファイルから最初の行を削除"\# WSL でのこのファイルを自動的に生成されました。 このファイルの自動生成を停止するには、この行を削除します。"です。 <br/>
-   b.  DNS サーバーの一覧で最初のエントリとして (1) から上の DNS エントリを追加します。 <br/>
+   a. というファイルから最初の行を削除"\# WSL でのこのファイルを自動的に生成されました。 このファイルの自動生成を停止するには、この行を削除します。"です。 <br/>
+   b. DNS サーバーの一覧で最初のエントリとして (1) から上の DNS エントリを追加します。 <br/>
    c. ファイルを閉じます。 <br/>
 
 変更を元に戻す必要があります、VPN を切断すると、`/etc/resolv.conf`します。 これを行うには、次の操作を行います。
@@ -86,7 +86,7 @@ Bash on Ubuntu on Windows の更新が必要になるの 2 つのコンポーネ
 1. [OK] をクリックします。
 
 ### <a name="error-0x80040154-after-windows-update"></a>"エラー。0x80040154"Windows の更新後
-Linux の機能の Windows サブシステムが無効になっている Windows の更新中にします。 このような場合、Windows の機能が再度有効にする必要があります。 Linux が記載されているは、Windows サブシステムを有効にする手順、[インストール ガイド](https://msdn.microsoft.com/en-us/commandline/wsl/install_guide#enable-the-windows-subsystem-for-linux-feature-guihttps://msdn.microsoft.com/en-us/commandline/wsl/install_guide#enable-the-windows-subsystem-for-linux-feature-gui)します。
+Linux の機能の Windows サブシステムが無効になっている Windows の更新中にします。 このような場合、Windows の機能が再度有効にする必要があります。 Linux が記載されているは、Windows サブシステムを有効にする手順、[インストール ガイド](https://msdn.microsoft.com/en-us/commandline/wsl/install_guide#enable-the-windows-subsystem-for-linux-feature-gui https://msdn.microsoft.com/en-us/commandline/wsl/install_guide#enable-the-windows-subsystem-for-linux-feature-gui)します。
 
 ### <a name="changing-the-display-language"></a>表示言語を変更します。
 WSL インストールは自動的に Windows インストールのロケールに一致するように Ubuntu ロケールを変更しようとします。  この動作したくない場合は、インストールが完了した後は、Ubuntu ロケールを変更するには、このコマンドを実行できます。  この変更を有効にする bash.exe を再起動する必要があります。
@@ -149,7 +149,6 @@ systeminfo | Select-String "^OS Name","^OS Version"
 ### <a name="confirm-wsl-is-enabled"></a>WSL が有効になっていることを確認します。
 PowerShell で、次を実行して、Windows Subsystem for Linux が有効になっていることを確認できます。  
 ``` PowerShell
-PowerShell
 Get-WindowsOptionalFeature -Online -FeatureName Microsoft-Windows-Subsystem-Linux
 ```
 
@@ -165,7 +164,22 @@ SSH サーバーを接続しようとは、次のエラーで失敗しました�
    sudo service ssh stop
    sudo /usr/sbin/sshd -d
    ```
-3. スタートアップ ログを確認し、ログ メッセージが表示されない理由ホストキーが利用可能を: debug1: sshd バージョン OpenSSH_7.2、OpenSSL 1.0.2g 2016 年 3 月 1日 debug1: key_load_private: パスフレーズが正しくありませんが秘密キー debug1 を復号化に指定された: key_load_public:ファイルまたはディレクトリはホスト キーを読み込めません:/etc/ssh/ssh_host_rsa_key debug1: key_load_private:このようななしのファイルまたはディレクトリ debug1: key_load_public:ファイルまたはディレクトリはホスト キーを読み込めません:/etc/ssh/ssh_host_dsa_key debug1: key_load_private:このようななしのファイルまたはディレクトリ debug1: key_load_public:ファイルまたはディレクトリはホスト キーを読み込めません:/etc/ssh/ssh_host_ecdsa_key debug1: key_load_private:このようななしのファイルまたはディレクトリ debug1: key_load_public:ファイルまたはディレクトリはホスト キーを読み込めません:/etc/ssh/ssh_host_ed25519_key
+3. スタートアップ ログを確認し、理由ホストキーに利用をなどのログ メッセージが表示されないかどうかを確認します。
+   ```
+   debug1: sshd version OpenSSH_7.2, OpenSSL 1.0.2g  1 Mar 2016
+   debug1: key_load_private: incorrect passphrase supplied to decrypt private key
+   debug1: key_load_public: No such file or directory
+   Could not load host key: /etc/ssh/ssh_host_rsa_key
+   debug1: key_load_private: No such file or directory
+   debug1: key_load_public: No such file or directory
+   Could not load host key: /etc/ssh/ssh_host_dsa_key
+   debug1: key_load_private: No such file or directory
+   debug1: key_load_public: No such file or directory
+   Could not load host key: /etc/ssh/ssh_host_ecdsa_key
+   debug1: key_load_private: No such file or directory
+   debug1: key_load_public: No such file or directory
+   Could not load host key: /etc/ssh/ssh_host_ed25519_key
+   ```
 
 このようなメッセージが表示され、キーは 不足している場合`/etc/ssh/`キーを再生成またはだけを消去して openssh サーバーをインストールする必要があります。
 ```BASH

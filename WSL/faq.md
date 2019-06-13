@@ -7,12 +7,12 @@ ms.author: taraj
 ms.date: 9/4/2018
 ms.topic: article
 ms.assetid: 129101ed-b88a-43c2-b6a2-cd2c4ff6fee1
-ms.openlocfilehash: 80675d8452b626ebe1d235774167c5ff27e4b44d
-ms.sourcegitcommit: ae0956bc0543b1c45765f3620ce9a55c9afe55da
+ms.openlocfilehash: 07461f7db4a351f5b79ab0c5179d3d917ef1bdf7
+ms.sourcegitcommit: bb88269eb37405192625fa81ff91162393fb491f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59063270"
+ms.lasthandoff: 06/12/2019
+ms.locfileid: "67035061"
 ---
 # <a name="frequently-asked-questions-about-windows-subsystem-for-linux"></a>Linux 用 Windows サブシステムに関するよく寄せられる質問
 
@@ -82,7 +82,7 @@ WSL の利点の 1 つは、Windows と Linux の両方のアプリまたはツ�
 
 WSL が コンピューターの固定ドライブをマウント、 `/mnt/<drive>` Linux ディストリビューションでのフォルダー。 たとえば、`C:`下ドライブがマウントされて `/mnt/c/` 
 
-マウントされたドライブを使用して、コードを編集できます、たとえば、`C:\dev\myproj\`を使用して[Visual Studio](https://visualstudio.microsoft.com/vs/) /または[VS Code](https://code.visualstudio.com/)とを使用して同じファイルにアクセスして Linux では、そのコードのビルドおよびテスト`\mnt\c\dev\myproj`します。
+マウントされたドライブを使用して、コードを編集できます、たとえば、`C:\dev\myproj\`を使用して[Visual Studio](https://visualstudio.microsoft.com/vs/) /または[VS Code](https://code.visualstudio.com/)とを使用して同じファイルにアクセスして Linux では、そのコードのビルドおよびテスト`/mnt/c/dev/myproj`します。
 
 > **重要な注意事項**:WSL を使用する主な制限事項の 1 つは、直接へのアクセスまたは変更する、Windows アプリケーションやツールを使用して Linux ディストリビューションのファイル システム内のファイルがサポートされていないことです。 参照トピック[Windows アプリケーションおよびツールを使用して Linux ファイルを変更しないでください。](https://blogs.msdn.microsoft.com/commandline/2016/11/17/do-not-change-linux-files-using-windows-apps-and-tools/)
 
@@ -146,7 +146,7 @@ WSL では、従来のコンソールで実行することはできません。 
 1. [OK] をクリックします。
 
 ## <a name="why-do-i-get-error-0x80040154-when-i-run-bashexe-after-upgrading-windows"></a>なぜ"エラー。0x80040154"Windows をアップグレードした後 bash.exe を実行するとしますか?
-"Linux 用 Windows サブシステム"機能が無効になっている Windows の更新中にします。 このような場合、Windows の機能が再度有効にする必要があります。 "Linux 用 Windows サブシステム"機能を有効にする手順が記載されて、[インストール ガイド](https://msdn.microsoft.com/en-us/commandline/wsl/install_guide#enable-the-windows-subsystem-for-linux-feature-guihttps://msdn.microsoft.com/en-us/commandline/wsl/install_guide#enable-the-windows-subsystem-for-linux-feature-gui)します。
+"Linux 用 Windows サブシステム"機能が無効になっている Windows の更新中にします。 このような場合、Windows の機能が再度有効にする必要があります。 "Linux 用 Windows サブシステム"機能を有効にする手順が記載されて、[インストール ガイド](https://msdn.microsoft.com/en-us/commandline/wsl/install_guide#enable-the-windows-subsystem-for-linux-feature-gui https://msdn.microsoft.com/en-us/commandline/wsl/install_guide#enable-the-windows-subsystem-for-linux-feature-gui)します。
 
 ## <a name="how-do-i-change-the-display-language-of-wsl"></a>WSL の表示言語を変更する方法はありますか
 WSL インストールは自動的に Windows インストールのロケールに一致するように Ubuntu ロケールを変更しようとします。 この動作したくない場合は、インストールが完了した後は、Ubuntu ロケールを変更するには、このコマンドを実行できます。 この変更を有効にする bash.exe を再起動する必要があります。
