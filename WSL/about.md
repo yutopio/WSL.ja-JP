@@ -9,12 +9,12 @@ ms.topic: article
 ms.assetid: 3cefe0db-7616-4848-a2b6-9296746a178b
 ms.custom: seodec18
 ms.localizationpriority: High
-ms.openlocfilehash: ad582d1b3a3d4277ee1b9b7adb0dc63a644abce9
-ms.sourcegitcommit: ae0956bc0543b1c45765f3620ce9a55c9afe55da
+ms.openlocfilehash: f2df3c06d6c56aa8bc5a41ea9f075635b70c8685
+ms.sourcegitcommit: db69625e26bc141ea379a830790b329e51ed466b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/12/2019
-ms.locfileid: "59529066"
+ms.lasthandoff: 06/13/2019
+ms.locfileid: "67040808"
 ---
 # <a name="windows-subsystem-for-linux-documentation"></a>Linux のドキュメント用の Windows サブシステム
 
@@ -32,9 +32,9 @@ Windows Subsystem for Linux では、Windows、未変更の状態で仮想マシ
 1. Unix のようなコマンド ライン シェルを使用して Windows アプリケーションを起動します。
 1. Windows 上の Gnu/linux アプリケーションを呼び出します。
 
-## <a name="getting-started"></a>概要
+## <a name="getting-started"></a>作業の開始
 
-* [Windows 上の Linux をインストールします。](install_guide.md)
+* [Windows 10 上の Linux をインストールします。](install-win10.md)
 * [コマンドのリファレンスを参照してください。](reference.md)
 * [読み取りについてよく寄せられる質問](faq.md)
 

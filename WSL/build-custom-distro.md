@@ -8,12 +8,12 @@ ms.date: 03/27/2018
 ms.topic: article
 ms.assetid: a5095219-0c82-4ce5-9a6d-5c2fc00835a3
 ms.custom: seodec18
-ms.openlocfilehash: b98101c19d7d450548531521c3f8ee15ce62f9f1
-ms.sourcegitcommit: ae0956bc0543b1c45765f3620ce9a55c9afe55da
+ms.openlocfilehash: 4072df5fa81f65fd9a3ff875ab887c03b234bce1
+ms.sourcegitcommit: db69625e26bc141ea379a830790b329e51ed466b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59063260"
+ms.lasthandoff: 06/13/2019
+ms.locfileid: "67040776"
 ---
 # <a name="creating-a-custom-linux-distro-for-wsl"></a>WSL のカスタムの Linux ディストリビューションの作成
 
@@ -24,7 +24,7 @@ Microsoft Store の WSL ディストリビューションのパッケージを�
 * 開発者は開発用コンピューターにサイドロードできるカスタムの Linux ディストリビューションの作成
 
 ## <a name="background"></a>背景
-Microsoft Store 経由での UWP アプリケーションとして WSL の Linux ディストリビューションを配布します。 WSL - Windows カーネルに配置されるサブシステムで実行し、それらのアプリケーションをインストールすることができます。 この配信メカニズムは、以前のブログ投稿で説明したように、多くのメリットが。
+Microsoft Store 経由での UWP アプリケーションとして WSL の Linux ディストリビューションを配布します。 WSL - Windows カーネルに配置されるサブシステムで実行し、それらのアプリケーションをインストールすることができます。 説明したように、この配信メカニズムによって多くの利点があります、[以前ブログの投稿](https://blogs.msdn.microsoft.com/commandline/2017/07/10/ubuntu-now-available-from-the-windows-store/)します。
 
 ## <a name="sideloading-a-custom-linux-distro-package"></a>カスタムの Linux ディストリビューションのパッケージのサイドロード
 パーソナル コンピューターにサイドローディングするアプリケーションとして、カスタムの Linux ディストリビューションのパッケージを作成できます。 カスタム パッケージは配布されません Microsoft Store を介して配布 maintainer として送信する場合を除きに注意してください。
@@ -42,6 +42,6 @@ Microsoft Store 経由での UWP アプリケーションとして WSL の Linux
 * [コマンド ラインのブログ](https://blogs.msdn.microsoft.com/commandline/)
 
 ## <a name="provide-feedback"></a>ご意見とご感想
-* [ディストリビューション ランチャー Gitub リポジトリ](https://github.com/Microsoft/WSL-DistroLauncher)
+* [ディストリビューションの起動ツールの GitHub リポジトリ](https://github.com/Microsoft/WSL-DistroLauncher)
 * [WSL の GitHub の issue トラッカー](https://github.com/Microsoft/BashOnWindows/issues)
 * [コマンド ライン UserVoice ポータル](https://wpdev.uservoice.com/forums/266908-command-prompt-console-bash-on-ubuntu-on-windo/category/161892-bash)

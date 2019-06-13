@@ -19,3 +19,6 @@
 詳細については、次を参照してください。、 [FAQ の実施コード](https://opensource.microsoft.com/codeofconduct/faq/)にお問い合わせくださいまたは[ opencode@microsoft.com ](mailto:opencode@microsoft.com)その他の質問またはコメント。
 
 へようこそ Microsoft のコマンド ライン シェルの markdown ソースとドキュメントをコンソールします。
+
+## <a name="license"></a>ライセンス
+Creative Commons Attribution 4.0 International (4.0 CC) の Public License の下で配布します。

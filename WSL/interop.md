@@ -7,12 +7,12 @@ ms.date: 12/20/2017
 ms.topic: article
 ms.assetid: 3cefe0db-7616-4848-a2b6-9296746a178b
 ms.custom: seodec18
-ms.openlocfilehash: 5dcfe0987ecb6615fbe1ab67d178679ac6ad9317
-ms.sourcegitcommit: ae0956bc0543b1c45765f3620ce9a55c9afe55da
+ms.openlocfilehash: e4608c25c6bcc63413d53b2c808c16fe2a62dd5c
+ms.sourcegitcommit: db69625e26bc141ea379a830790b329e51ed466b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59063250"
+ms.lasthandoff: 06/13/2019
+ms.locfileid: "67040819"
 ---
 # <a name="windows-subsystem-for-linux-interoperability-with-windows"></a>Windows と Linux の相互運用性用 Windows サブシステム
 
@@ -198,7 +198,7 @@ WSL セッション間で相互運用機能を無効化は永続化されませ�
 
 ## <a name="creators-update-and-anniversary-update"></a>Creators Update と Anniversary Update
 
-相互運用エクスペリエンスの事前 Fall Creators Update は、相互運用機能の最新のエクスペリエンスに似ていますが、中には、handfull の主な相違点があります。
+相互運用エクスペリエンスの事前 Fall Creators Update は、相互運用機能の最新のエクスペリエンスに似ていますが、いくつかの主な違いがあります。
 
 要約。
 

@@ -1,5 +1,5 @@
 ---
-title: Linux (WSL) 用の Windows サブシステムを Windows 10 上にインストールします。
+title: Windows 10 での Linux (WSL) 用の Windows サブシステムをインストールします。
 description: Windows 10 での Linux 用 Windows サブシステムのインストール手順。
 keywords: BashOnWindows、bash、wsl、windows、linux、windowssubsystem、ubuntu、debian、suse、windows 10 用 windows サブシステムのインストールします。
 author: taraj
@@ -8,12 +8,12 @@ ms.date: 07/23/2018
 ms.topic: article
 ms.assetid: 7afaeacf-435a-4e58-bff0-a9f0d75b8a51
 ms.custom: seodec18
-ms.openlocfilehash: 40bbe73acbfd0483e18ab6ff1696fdb44eaff2e4
-ms.sourcegitcommit: ae0956bc0543b1c45765f3620ce9a55c9afe55da
+ms.openlocfilehash: d30a5883d648e084193659e997c55d203eb5a735
+ms.sourcegitcommit: bb88269eb37405192625fa81ff91162393fb491f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59063290"
+ms.lasthandoff: 06/12/2019
+ms.locfileid: "67035052"
 ---
 # <a name="windows-subsystem-for-linux-installation-guide-for-windows-10"></a>Windows 10 用の Linux インストール ガイド用 Windows サブシステム
 
@@ -44,11 +44,18 @@ WSL の任意の Linux ディストリビューションをインストールす
 
     次のリンクには、各ディストリビューションの Windows ストア ページが開きます。
 
-    * [Ubuntu](https://www.microsoft.com/store/p/ubuntu/9nblggh4msv6)
-    * [OpenSUSE](https://www.microsoft.com/store/apps/9njvjts82tjx)
-    * [SLES](https://www.microsoft.com/store/apps/9p32mwbh6cns)
+    * [Ubuntu 16.04 LTS](https://www.microsoft.com/store/apps/9pjn388hp8c9)
+    * [Ubuntu 18.04 LTS](https://www.microsoft.com/store/apps/9N9TNGVNDL3Q)
+    * [OpenSUSE Leap 15](https://www.microsoft.com/store/apps/9n1tb6fpvj8c)
+    * [OpenSUSE Leap 42](https://www.microsoft.com/store/apps/9njvjts82tjx)
+    * [SUSE Linux Enterprise Server 12](https://www.microsoft.com/store/apps/9p32mwbh6cns)
+    * [SUSE Linux Enterprise Server 15](https://www.microsoft.com/store/apps/9pmw35d7fnlx)
     * [Kali Linux](https://www.microsoft.com/store/apps/9PKR34TNCV07)
     * [Debian GNU/Linux](https://www.microsoft.com/store/apps/9MSVKQC78PK6)
+    * [WSL の fedora Remix](https://www.microsoft.com/store/apps/9n6gdm4k2hnc)
+    * [WLinux](https://www.microsoft.com/store/apps/9NV1GV1PXZ6P)
+    * [WLinux Enterprise](https://www.microsoft.com/store/apps/9N8LP0X93VCP)
+    * [Alpine WSL](https://www.microsoft.com/store/apps/9p804crf0395)
 
 1. ディストリビューションのページで、"Get"を選択します
 
@@ -65,3 +72,8 @@ WSL の任意の Linux ディストリビューションをインストールす
     * Windows Subsystem for Linux は、システム ドライブでのみ実行されます (通常、これは、`C:`ドライブ)。 ディストリビューションの場合は、システム ドライブに格納されていることを確認します。  
     * 開いている**設定** -> **ストレージ** -> **以上の記憶域の設定。新しいコンテンツが保存されている変更**
     ![c: ドライブにアプリをインストールするシステム設定の画像](media/AppStorage.png)
+    
+    
+ * **WslRegisterDistribution 0x8007019e エラーで失敗しました**   
+  * 省略可能なコンポーネントが有効でない Linux 用 Windows サブシステム: 
+   * 開いている**コントロール パネルの**  -> **プログラムと機能**-> * * Windows の機能を有効にする」オンまたはオフ * * チェック->  **Windows Subsystem for Linux**またはを使用して、この記事の冒頭で説明されている PowerShell コマンドレット。
