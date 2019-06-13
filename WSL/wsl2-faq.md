@@ -1,0 +1,56 @@
+---
+title: WSL 2 についてよく寄せられる質問
+description: Linux 2 用 Windows サブシステムに関するよく寄せられる質問
+keywords: BashOnWindows、bash、wsl、wsl2、windows、linux、windowssubsystem、ubuntu、debian、suse、windows 10 用 windows サブシステムのインストールします。
+author: mscraigloewen
+ms.author: mscraigloewen
+ms.date: 05/30/2019
+ms.topic: article
+ms.assetid: 7afaeacf-435a-4e58-bff0-a9f0d75b8a51
+ms.custom: seodec18
+ms.openlocfilehash: 84805278abaeb6334c662e1dfab1bced3e0ddb0b
+ms.sourcegitcommit: bb88269eb37405192625fa81ff91162393fb491f
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 06/12/2019
+ms.locfileid: "67038092"
+---
+# <a name="wsl-2-faq"></a><span data-ttu-id="0843f-104">WSL 2 に関する FAQ</span><span class="sxs-lookup"><span data-stu-id="0843f-104">WSL 2 FAQ</span></span>
+
+<span data-ttu-id="0843f-105">よく寄せられる質問 (FAQ)、Windows サブシステム Linux 2 の一覧を以下に示します。</span><span class="sxs-lookup"><span data-stu-id="0843f-105">Below is a list of frequently asked questions (FAQ) about the Windows Subsystem for Linux 2.</span></span>
+
+## <a name="does-wsl-2-use-hyper-v-will-it-be-available-on-windows-10-home"></a><span data-ttu-id="0843f-106">WSL 2 は、HYPER-V を使用しますか。</span><span class="sxs-lookup"><span data-stu-id="0843f-106">Does WSL 2 use Hyper-V?</span></span> <span data-ttu-id="0843f-107">リリースされる予定の Windows 10 Home でしょうか。</span><span class="sxs-lookup"><span data-stu-id="0843f-107">Will it be available on Windows 10 Home?</span></span>
+
+<span data-ttu-id="0843f-108">WSL 2 は、WSL が現在使用可能な Windows 10 Home を含む、すべての Sku で利用可能なであるされます。</span><span class="sxs-lookup"><span data-stu-id="0843f-108">WSL 2 will be available on all SKUs where WSL is currently available, including Windows 10 Home.</span></span>
+
+<span data-ttu-id="0843f-109">WSL の最新のバージョンでは、仮想化を有効にするのに HYPER-V のアーキテクチャを使用します。</span><span class="sxs-lookup"><span data-stu-id="0843f-109">The newest version of WSL uses Hyper-V architecture to enable its virtualization.</span></span> <span data-ttu-id="0843f-110">このアーキテクチャは、HYPER-V 機能のサブセットであるオプションのコンポーネントで使用できるになります。</span><span class="sxs-lookup"><span data-stu-id="0843f-110">This architecture will be available in an optional component that is a subset of the Hyper-V feature.</span></span> <span data-ttu-id="0843f-111">このオプションのコンポーネントは、すべての Sku で利用できるになります。</span><span class="sxs-lookup"><span data-stu-id="0843f-111">This optional component will be available on all SKUs.</span></span> <span data-ttu-id="0843f-112">WSL 2 リリースに近づくにつれてすぐにこのエクスペリエンスについての詳細情報を確認したいことができます。</span><span class="sxs-lookup"><span data-stu-id="0843f-112">You can expect to see more details about this experience soon as we get closer to the WSL 2 release.</span></span>
+
+## <a name="what-will-happen-to-wsl-1-will-it-be-abandoned"></a><span data-ttu-id="0843f-113">WSL 1 になるか。</span><span class="sxs-lookup"><span data-stu-id="0843f-113">What will happen to WSL 1?</span></span> <span data-ttu-id="0843f-114">その見向きもされなくなりますか。</span><span class="sxs-lookup"><span data-stu-id="0843f-114">Will it be abandoned?</span></span>
+
+<span data-ttu-id="0843f-115">います現在ある WSL 1 を廃止する予定はありません。</span><span class="sxs-lookup"><span data-stu-id="0843f-115">We currently have no plans to deprecate WSL 1.</span></span> <span data-ttu-id="0843f-116">WSL 1 と 2 の WSL ディストリビューション サイド バイ サイドで実行しできますアップグレードでき、いつでもすべてのディストリビューションをダウン グレードできます。</span><span class="sxs-lookup"><span data-stu-id="0843f-116">You can run WSL 1 and WSL 2 distros side by side, and can upgrade and downgrade any distro at any time.</span></span> <span data-ttu-id="0843f-117">新しいアーキテクチャとして WSL 2 を追加するには、WSL を驚くような方法で Windows、Linux 環境を実行するようにする機能を提供する、WSL チームに適したプラットフォームについて説明します。</span><span class="sxs-lookup"><span data-stu-id="0843f-117">Adding WSL 2 as a new architecture presents a better platform for the WSL team to deliver features that make WSL an amazing way to run a Linux environment in Windows.</span></span>
+
+## <a name="will-i-be-able-to-run-wsl-2-and-other-3rd-party-virtualization-tools-such-as-vmware-or-virtualbox"></a><span data-ttu-id="0843f-118">ある WSL 2 と VMware、VirtualBox などその他のサード パーティ製の仮想化ツールを実行するでしょうか。</span><span class="sxs-lookup"><span data-stu-id="0843f-118">Will I be able to run WSL 2 and other 3rd party virtualization tools such as VMware, or VirtualBox?</span></span>
+
+<span data-ttu-id="0843f-119">HYPER-V が、WSL 2 が有効になっているときに実行できない、使用されている場合、一部のサード パーティ アプリケーションは使用できません。</span><span class="sxs-lookup"><span data-stu-id="0843f-119">Some 3rd party applications cannot work when Hyper-V is in use, which means they will not be able to run when WSL 2 is enabled.</span></span> <span data-ttu-id="0843f-120">残念ながら、これは、VMware と VirtualBox VirtualBox 6 以前のバージョン (VirtualBox 2018 の年 12 月にリリースされた 6.0.0 [Windows ホスト上のフォールバック実行コアとして HYPER-V を今すぐサポート][ 1]!)</span><span class="sxs-lookup"><span data-stu-id="0843f-120">Unfortunately, this does include VMware, and versions of VirtualBox before VirtualBox 6 (VirtualBox 6.0.0 released in December 2018 [now supports Hyper-V as a fallback execution core on a Windows host][1]!)</span></span>
+
+<span data-ttu-id="0843f-121">この問題を解決するための方法を調査しています。</span><span class="sxs-lookup"><span data-stu-id="0843f-121">We are investigating ways to help resolve this issue.</span></span> <span data-ttu-id="0843f-122">たとえばと呼ばれる Api のセットを公開します[ハイパーバイザー プラットフォーム][ 2]サード パーティ製の仮想化のプロバイダーを使用して、そのソフトウェアと HYPER-V の互換性のあること</span><span class="sxs-lookup"><span data-stu-id="0843f-122">For example, we expose a set of APIs called [Hypervisor Platform][2] that third-party virtualization providers can use to make their software compatible with Hyper-V’s.</span></span> <span data-ttu-id="0843f-123">これにより、アプリケーションなど、エミュレーションの HYPER-V のアーキテクチャを使用して[Google Android Emulator][3]と 6 およびこれを超える VirtualBox の両方の HYPER-V と互換性のあるようになりました。</span><span class="sxs-lookup"><span data-stu-id="0843f-123">This lets applications use the Hyper-V architecture for their emulation such as [the Google Android Emulator][3], and VirtualBox 6 and above which are both now compatible with Hyper-V.</span></span>
+
+## <a name="can-i-access-the-gpu-in-wsl-2-are-there-plans-to-increase-hardware-support"></a><span data-ttu-id="0843f-124">WSL 2 での GPU にアクセスできますか。</span><span class="sxs-lookup"><span data-stu-id="0843f-124">Can I access the GPU in WSL 2?</span></span> <span data-ttu-id="0843f-125">ハードウェアのサポートを向上する計画はありますか。</span><span class="sxs-lookup"><span data-stu-id="0843f-125">Are there plans to increase hardware support?</span></span>
+
+<span data-ttu-id="0843f-126">WSL 2 ハードウェアへのアクセスの最初のリリースでサポートが限られておりにある例:: GPU、シリアル アクセスまたは Usb ができないことができます。</span><span class="sxs-lookup"><span data-stu-id="0843f-126">In initial releases of WSL 2 hardware access support will be limited, e.g: you will be unable to access the GPU, serial or USBs .</span></span> <span data-ttu-id="0843f-127">ただしより優れたデバイス サポートを追加するは、バックログで高いようにこれらのデバイスとの対話を希望する開発者の多くの複数のユース ケースが開きます。</span><span class="sxs-lookup"><span data-stu-id="0843f-127">However, adding better device support is high on our backlog, as this opens many more use cases for developers that wish to interact with these devices.</span></span> <span data-ttu-id="0843f-128">それまでは、シリアル ポート、および USB のアクセスを持つ WSL 1 を必ず使用することができます。</span><span class="sxs-lookup"><span data-stu-id="0843f-128">In the meantime, you can always use WSL 1 which has serial port and USB access.</span></span> <span data-ttu-id="0843f-129">このブログと内部関係者に、最新の機能について把握する twitter WSL チーム メンバーに引き続き注目がビルドし、対話するにはどのようなデバイスについてフィードバックを提供することにご連絡ください!</span><span class="sxs-lookup"><span data-stu-id="0843f-129">Please stay tuned to this blog and WSL team members on Twitter to stay informed about the latest features coming to insider builds and reach out to give us feedback on what devices you’d like to interact with!</span></span>
+
+## <a name="will-wsl-2-be-able-to-use-networking-applications"></a><span data-ttu-id="0843f-130">WSL 2 はネットワーク アプリケーションを使用できますか。</span><span class="sxs-lookup"><span data-stu-id="0843f-130">Will WSL 2 be able to use networking applications?</span></span>
+
+<span data-ttu-id="0843f-131">はい、アプリケーションを一般にネットワークが高速で、互換性を呼び出す完全なシステムがあるために、適しています。</span><span class="sxs-lookup"><span data-stu-id="0843f-131">Yes, in general networking applications will be faster and work better since we have full system call compatibility.</span></span> <span data-ttu-id="0843f-132">ただし、新しいアーキテクチャは、仮想化されたネットワーク コンポーネントを使用します。</span><span class="sxs-lookup"><span data-stu-id="0843f-132">However, the new architecture uses virtualized networking components.</span></span> <span data-ttu-id="0843f-133">つまり、初期のプレビュー ビルド WSL 2 は、仮想マシンと同様により動作が例。WSL 2 では、ホスト コンピューターは異なる IP アドレスがあります。</span><span class="sxs-lookup"><span data-stu-id="0843f-133">This means that in initial preview builds WSL 2 will behave more similarly to a virtual machine, e.g: WSL 2 will have a different IP address than the host machine.</span></span> <span data-ttu-id="0843f-134">WSL 1 と同じと感じる WSL 2 の提供に取り組んでいますが、ネットワーク アジャイル チームのストーリーの向上が含まれます。</span><span class="sxs-lookup"><span data-stu-id="0843f-134">We are committed to making WSL 2 feel the same as WSL 1, and that includes improving our networking story.</span></span> <span data-ttu-id="0843f-135">Linux または localhost を使用して Windows からネットワークのすべてのアプリへのアクセスなど、することが簡単に機能強化を追加する予定です。</span><span class="sxs-lookup"><span data-stu-id="0843f-135">We expect to add improvements as quickly as we are able to, such as accessing all networking apps from Linux or Windows using localhost.</span></span> <span data-ttu-id="0843f-136">WSL 2 のリリースに近いので、ネットワーク、ストーリーと機能強化についての詳細について掲載する予定です。</span><span class="sxs-lookup"><span data-stu-id="0843f-136">We will be posting more details about our networking story and improvements as we approach the release of WSL 2.</span></span>
+
+## <a name="can-i-run-wsl-2-in-a-virtual-machine"></a><span data-ttu-id="0843f-137">仮想マシンで WSL 2 を実行できますか。</span><span class="sxs-lookup"><span data-stu-id="0843f-137">Can I run WSL 2 in a virtual machine?</span></span>
+
+<span data-ttu-id="0843f-138">うん！</span><span class="sxs-lookup"><span data-stu-id="0843f-138">Yes!</span></span> <span data-ttu-id="0843f-139">仮想マシンに仮想化が有効に入れ子になったことを確認する必要があります。</span><span class="sxs-lookup"><span data-stu-id="0843f-139">You need to make sure that the virtual machine has nested virtualization enabled.</span></span> <span data-ttu-id="0843f-140">これは、管理者特権で PowerShell ウィンドウで、次のコマンドを実行して、HYPER-V で有効ことができます。</span><span class="sxs-lookup"><span data-stu-id="0843f-140">This can be enabled in Hyper-V by running the following command in a PowerShell window with Administrator privileges:</span></span>
+
+`Set-VMProcessor -VMName <VMName> -ExposeVirtualizationExtensions $true`
+
+<span data-ttu-id="0843f-141">置き換えてください '&lt;VMName&gt;' 仮想マシンの名前に置き換えます。</span><span class="sxs-lookup"><span data-stu-id="0843f-141">Make sure to replace '&lt;VMName&gt;' with the name of your virtual machine.</span></span>
+
+ [1]: https://www.virtualbox.org/wiki/Changelog-6.0
+ [2]: https://docs.microsoft.com/en-us/virtualization/api/
+ [3]: https://devblogs.microsoft.com/visualstudio/hyper-v-android-emulator-support/
