@@ -8,5 +8,11 @@
 # [相互運用性](./interop.md)
 # [カスタム Distro のビルド](./build-custom-distro.md)
 # [よく寄せられる質問](./faq.md)
+# [WSL 2](./wsl2-index.md)
+## [WSL 2 について](./wsl2-about.md)
+## [WSL 2 のインストール](./wsl2-install.md)
+## [WSL 1 から WSL 2 へのユーザー エクスペリエンスの変更](./wsl2-ux-changes.md)
+## [よく寄せられる質問](./wsl2-faq.md)
+
 # [トラブルシューティング](./troubleshooting.md)
 # [リリース ノート](./release-notes.md)
