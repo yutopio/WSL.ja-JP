@@ -1,54 +1,66 @@
 ---
-title: WSL 2 をインストールします。
+title: WSL 2 のインストール
 description: WSL 2 のインストール手順
-keywords: BashOnWindows、bash、wsl、wsl2、windows、linux、windowssubsystem、ubuntu、debian、suse、windows 10 用 windows サブシステムのインストールします。
+keywords: BashOnWindows, bash, wsl, wsl2, windows, windows subsystem for linux, windowssubsystem, ubuntu, debian, suse, windows 10, インストール
 author: mscraigloewen
 ms.author: mscraigloewen
 ms.date: 05/30/2019
 ms.topic: article
 ms.assetid: 7afaeacf-435a-4e58-bff0-a9f0d75b8a51
 ms.custom: seodec18
-ms.openlocfilehash: 2af43a046333fc8c7b4142cdc5077cdfbf29fea7
-ms.sourcegitcommit: bb88269eb37405192625fa81ff91162393fb491f
-ms.translationtype: MT
+ms.openlocfilehash: 3ad180ecc9deaa1566e9870700b26f82f631c7f1
+ms.sourcegitcommit: 9ad7a54668f39677e9660186e4f5172ea2597e2b
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/12/2019
-ms.locfileid: "67038082"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68246864"
 ---
-# <a name="installation-instructions-for-wsl-2"></a><span data-ttu-id="a6035-104">WSL 2 のインストール手順</span><span class="sxs-lookup"><span data-stu-id="a6035-104">Installation Instructions for WSL 2</span></span>
+# <a name="installation-instructions-for-wsl-2"></a><span data-ttu-id="b9d74-104">WSL 2 のインストール手順</span><span class="sxs-lookup"><span data-stu-id="b9d74-104">Installation Instructions for WSL 2</span></span>
 
-<span data-ttu-id="a6035-105">インストールして開始には、WSL 2 は、次の手順を完了します。</span><span class="sxs-lookup"><span data-stu-id="a6035-105">To install and start using WSL 2 complete the following steps:</span></span>
+<span data-ttu-id="b9d74-105">WSL 2 をインストールして使用を開始するには、次の手順を実行します。</span><span class="sxs-lookup"><span data-stu-id="b9d74-105">To install and start using WSL 2 complete the following steps:</span></span>
 
-- <span data-ttu-id="a6035-106">'仮想マシン プラットフォーム' オプションのコンポーネントを有効にします。</span><span class="sxs-lookup"><span data-stu-id="a6035-106">Enable the 'Virtual Machine Platform' optional component</span></span>
-- <span data-ttu-id="a6035-107">WSL 2 のコマンドラインを使用してバックアップするディストリビューションを設定します。</span><span class="sxs-lookup"><span data-stu-id="a6035-107">Set a distro to be backed by WSL 2 using the command line</span></span>
-- <span data-ttu-id="a6035-108">使用している WSL、ディストリビューションのバージョン確認します。</span><span class="sxs-lookup"><span data-stu-id="a6035-108">Verify what versions of WSL your distros are using</span></span>
+- <span data-ttu-id="b9d74-106">"仮想マシン プラットフォーム" のオプション コンポーネントを有効にする</span><span class="sxs-lookup"><span data-stu-id="b9d74-106">Enable the 'Virtual Machine Platform' optional component</span></span>
+- <span data-ttu-id="b9d74-107">コマンド ラインを使用して、WSL 2 によってサポートされるようにディストリビューションを設定する</span><span class="sxs-lookup"><span data-stu-id="b9d74-107">Set a distro to be backed by WSL 2 using the command line</span></span>
+- <span data-ttu-id="b9d74-108">現在のディストリビューションが使用している WSL のバージョンを確認する</span><span class="sxs-lookup"><span data-stu-id="b9d74-108">Verify what versions of WSL your distros are using</span></span>
 
-## <a name="enable-the-virtual-machine-platform-optional-component"></a><span data-ttu-id="a6035-109">'仮想マシン プラットフォーム' オプションのコンポーネントを有効にします。</span><span class="sxs-lookup"><span data-stu-id="a6035-109">Enable the 'Virtual Machine Platform' optional component</span></span>
+<span data-ttu-id="b9d74-109">WSL 2 を使用するには Windows 10 ビルド 18917 以降を実行している必要があり、また WSL が既にインストールされている必要があることに注意してください(そのようにするための手順については、[こちら](./install-win10.md)を参照してください)。</span><span class="sxs-lookup"><span data-stu-id="b9d74-109">Please note that you'll need to be running Windows 10 build 18917 or higher to use WSL 2, and that you will need to have WSL already installed (you can find instructions to do so [here](./install-win10.md)).</span></span> 
 
-<span data-ttu-id="a6035-110">管理者として PowerShell を開きを実行します。</span><span class="sxs-lookup"><span data-stu-id="a6035-110">Open PowerShell as an Administrator and run:</span></span>
+## <a name="enable-the-virtual-machine-platform-optional-component"></a><span data-ttu-id="b9d74-110">"仮想マシン プラットフォーム" のオプション コンポーネントを有効にする</span><span class="sxs-lookup"><span data-stu-id="b9d74-110">Enable the 'Virtual Machine Platform' optional component</span></span>
+
+<span data-ttu-id="b9d74-111">管理者として PowerShell を開き、以下を実行します。</span><span class="sxs-lookup"><span data-stu-id="b9d74-111">Open PowerShell as an Administrator and run:</span></span>
 
 `Enable-WindowsOptionalFeature -Online -FeatureName VirtualMachinePlatform`
 
-<span data-ttu-id="a6035-111">これらの変更が有効にした後、コンピューターを再起動する必要があります。</span><span class="sxs-lookup"><span data-stu-id="a6035-111">After these changes are enabled you will need to restart your computer.</span></span>
+<span data-ttu-id="b9d74-112">これらの変更を有効にした後、コンピューターを再起動する必要があります。</span><span class="sxs-lookup"><span data-stu-id="b9d74-112">After these changes are enabled you will need to restart your computer.</span></span>
 
-## <a name="set-a-distro-to-be-backed-by-wsl-2-using-the-command-line"></a><span data-ttu-id="a6035-112">WSL 2 のコマンドラインを使用してバックアップするディストリビューションを設定します。</span><span class="sxs-lookup"><span data-stu-id="a6035-112">Set a distro to be backed by WSL 2 using the command line</span></span>
+## <a name="set-a-distro-to-be-backed-by-wsl-2-using-the-command-line"></a><span data-ttu-id="b9d74-113">コマンド ラインを使用して、WSL 2 によってサポートされるようにディストリビューションを設定する</span><span class="sxs-lookup"><span data-stu-id="b9d74-113">Set a distro to be backed by WSL 2 using the command line</span></span>
 
-<span data-ttu-id="a6035-113">Powershell を実行します。</span><span class="sxs-lookup"><span data-stu-id="a6035-113">In PowerShell run:</span></span>
+<span data-ttu-id="b9d74-114">PowerShell で、以下を実行します。</span><span class="sxs-lookup"><span data-stu-id="b9d74-114">In PowerShell run:</span></span>
 
 `wsl --set-version <Distro> 2`
 
-<span data-ttu-id="a6035-114">置き換えてくださいと`<Distro>`ディストリビューションの実際の名前に置き換えます。</span><span class="sxs-lookup"><span data-stu-id="a6035-114">and make sure to replace `<Distro>` with the actual name of your distro.</span></span> <span data-ttu-id="a6035-115">(これらは、コマンドを使用して: `wsl -l`)。</span><span class="sxs-lookup"><span data-stu-id="a6035-115">(You can find these with the command: `wsl -l`).</span></span> <span data-ttu-id="a6035-116">上記と同じコマンドを実行して、' 2' で ' 1' に置き換えることによって WSL 1 にいつでも変更することができます。</span><span class="sxs-lookup"><span data-stu-id="a6035-116">You can change back to WSL 1 at anytime by running the same command as above but replacing the '2' with a '1'.</span></span>
+<span data-ttu-id="b9d74-115">`<Distro>` は、お使いのディストリビューションの実際の名前に必ず置き換えてください。</span><span class="sxs-lookup"><span data-stu-id="b9d74-115">and make sure to replace `<Distro>` with the actual name of your distro.</span></span> <span data-ttu-id="b9d74-116">(これらは、コマンド `wsl -l` を使用して確認できます)。</span><span class="sxs-lookup"><span data-stu-id="b9d74-116">(You can find these with the command: `wsl -l`).</span></span> <span data-ttu-id="b9d74-117">上記と同じコマンドで "2" を "1" に置き換えて実行することにより、いつでも WSL 1 に戻すことができます。</span><span class="sxs-lookup"><span data-stu-id="b9d74-117">You can change back to WSL 1 at anytime by running the same command as above but replacing the '2' with a '1'.</span></span>
 
-<span data-ttu-id="a6035-117">さらに、WSL 2 に、既定のアーキテクチャを作成する場合は、これを行う次のコマンドで。</span><span class="sxs-lookup"><span data-stu-id="a6035-117">Additionally, if you want to make WSL 2 your default architecture you can do so with this command:</span></span>
+<span data-ttu-id="b9d74-118">また、WSL 2 を既定のアーキテクチャにする場合は、次のコマンドを使用して実行できます。</span><span class="sxs-lookup"><span data-stu-id="b9d74-118">Additionally, if you want to make WSL 2 your default architecture you can do so with this command:</span></span>
 
 `wsl --set-default-version 2`
 
-<span data-ttu-id="a6035-118">これにより、いずれかをインストールする新しいディストリビューション WSL 2 ディストリビューションとして初期化します。</span><span class="sxs-lookup"><span data-stu-id="a6035-118">This will make any new distro that you install be initialized as a WSL 2 distro.</span></span>
+<span data-ttu-id="b9d74-119">これにより、インストールする新しいディストリビューションはすべて WSL 2 ディストリビューションとして初期化されます。</span><span class="sxs-lookup"><span data-stu-id="b9d74-119">This will make any new distro that you install be initialized as a WSL 2 distro.</span></span>
 
-## <a name="finish-with-verifying-what-versions-of-wsl-your-distro-are-using"></a><span data-ttu-id="a6035-119">使用している WSL、ディストリビューションのバージョンの確認が完了します。</span><span class="sxs-lookup"><span data-stu-id="a6035-119">Finish with verifying what versions of WSL your distro are using</span></span>
+## <a name="finish-with-verifying-what-versions-of-wsl-your-distro-are-using"></a><span data-ttu-id="b9d74-120">現在のディストリビューションが使用している WSL のバージョンを確認して終了する</span><span class="sxs-lookup"><span data-stu-id="b9d74-120">Finish with verifying what versions of WSL your distro are using</span></span>
 
-<span data-ttu-id="a6035-120">次のコマンドを使用して、各ディストリビューションを使用して WSL のバージョンを確認します。</span><span class="sxs-lookup"><span data-stu-id="a6035-120">To verify what versions of WSL each distro is using use the following command:</span></span>
+<span data-ttu-id="b9d74-121">各ディストリビューションでどのバージョンの WSL が使用されているかを確認するには、次のコマンドを使用します。</span><span class="sxs-lookup"><span data-stu-id="b9d74-121">To verify what versions of WSL each distro is using use the following command:</span></span>
 
-<span data-ttu-id="a6035-121">`wsl --list --verbose` または `wsl -l -v`</span><span class="sxs-lookup"><span data-stu-id="a6035-121">`wsl --list --verbose` or `wsl -l -v`</span></span>
+<span data-ttu-id="b9d74-122">`wsl --list --verbose` または `wsl -l -v`</span><span class="sxs-lookup"><span data-stu-id="b9d74-122">`wsl --list --verbose` or `wsl -l -v`</span></span>
 
-<span data-ttu-id="a6035-122">上の選択したディストリビューションは、'2'、'version' 列の下を表示する必要があります。</span><span class="sxs-lookup"><span data-stu-id="a6035-122">The distro that you've chosen above should now display a '2' under the 'version' column.</span></span> <span data-ttu-id="a6035-123">完了したら、WSL 2 ディストリビューションを使用する自由!</span><span class="sxs-lookup"><span data-stu-id="a6035-123">Now that you're finished feel free to start using your WSL 2 distro!</span></span> 
+<span data-ttu-id="b9d74-123">上記で選択したディストリビューションで、 [version] 列に "2" と表示されるはずです。</span><span class="sxs-lookup"><span data-stu-id="b9d74-123">The distro that you've chosen above should now display a '2' under the 'version' column.</span></span> <span data-ttu-id="b9d74-124">これで、WSL 2 ディストリビューションを自由に使い始めることができます。</span><span class="sxs-lookup"><span data-stu-id="b9d74-124">Now that you're finished feel free to start using your WSL 2 distro!</span></span> 
+
+## <a name="troubleshooting"></a><span data-ttu-id="b9d74-125">トラブルシューティング:</span><span class="sxs-lookup"><span data-stu-id="b9d74-125">Troubleshooting:</span></span> 
+
+<span data-ttu-id="b9d74-126">WSL2 のインストール時の関連エラーと推奨される修正を次に示します。</span><span class="sxs-lookup"><span data-stu-id="b9d74-126">Below are related errors and suggested fixes when installing WSL 2.</span></span> <span data-ttu-id="b9d74-127">その他の一般的な WSL エラーとその解決策については、[WSL のトラブルシューティングのページ](troubleshooting.md)を参照してください。</span><span class="sxs-lookup"><span data-stu-id="b9d74-127">Please refer to the [WSL troubleshooting page](troubleshooting.md) for other general WSL errors and their solutions.</span></span>
+
+* <span data-ttu-id="b9d74-128">**インストールがエラー 0x80070003 またはエラー 0x80370102 で失敗した**</span><span class="sxs-lookup"><span data-stu-id="b9d74-128">**Installation failed with error 0x80070003 or error 0x80370102**</span></span>
+    * <span data-ttu-id="b9d74-129">コンピューターの BIOS 内部で仮想化が有効になっていることを確認してください。</span><span class="sxs-lookup"><span data-stu-id="b9d74-129">Please make sure that virtualization is enabled inside of your computer's BIOS.</span></span> <span data-ttu-id="b9d74-130">これを行う方法の手順は、コンピューターによって異なりますが、最も可能性が高いのは CPU 関連のオプションの下です。</span><span class="sxs-lookup"><span data-stu-id="b9d74-130">The instructions on how to do this will vary from computer to computer, and will most likely be under CPU related options.</span></span>
+   
+* <span data-ttu-id="b9d74-131">**アップグレードしようとしたときに次のエラーが発生する: `Invalid command line option: wsl --set-version Ubuntu 2`**</span><span class="sxs-lookup"><span data-stu-id="b9d74-131">**Error when trying to upgrade: `Invalid command line option: wsl --set-version Ubuntu 2`**</span></span>
+    * <span data-ttu-id="b9d74-132">Windows Subsystem for Linux が有効になっていること、および Windows ビルド バージョン 18917 以降を使用していることを確認してください。</span><span class="sxs-lookup"><span data-stu-id="b9d74-132">Please make sure that you have the Windows Subsystem for Linux enabled, and that you're using Windows Build version 18917 or higher.</span></span> <span data-ttu-id="b9d74-133">WSL を有効にするには、Powershell プロンプトで管理者特権を使用してこのコマンドを実行します: `Enable-WindowsOptionalFeature -Online -FeatureName Microsoft-Windows-Subsystem-Linux`。</span><span class="sxs-lookup"><span data-stu-id="b9d74-133">To enable WSL run this command in a Powershell prompt with admin privileges: `Enable-WindowsOptionalFeature -Online -FeatureName Microsoft-Windows-Subsystem-Linux`.</span></span> <span data-ttu-id="b9d74-134">WSL のインストール手順の詳細については、[こちら](./install-win10.md)を参照してください。</span><span class="sxs-lookup"><span data-stu-id="b9d74-134">You can find the full WSL install instructions [here](./install-win10.md).</span></span>
