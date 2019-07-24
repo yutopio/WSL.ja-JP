@@ -1,63 +1,74 @@
 ---
-title: Windows Subsystem for Linux のリリース ノート
-description: Windows Subsystem for Linux のリリース ノート。  毎週更新されます。
-keywords: BashOnWindows、bash、wsl、windows、linux、windowssubsystem、ubuntu 用 windows サブシステム
+title: Windows Subsystem for Linux のリリースノート
+description: Windows Subsystem for Linux のリリースノートです。  毎週更新されました。
+keywords: BashOnWindows、bash、wsl、windows、windows subsystem for linux、windowssubsystem、ubuntu
 author: benhillis
 ms.date: 07/31/2017
 ms.topic: article
 ms.assetid: 36ea641e-4d49-4881-84eb-a9ca85b1cdf4
 ms.custom: seodec18
-ms.openlocfilehash: 2567e68ca0e9897a7b7bc7315760b81ff4923c1a
-ms.sourcegitcommit: 8c74868b8d8ff0106e15e4bce5e8337642883ec1
+ms.openlocfilehash: e2d9d5fc70c173e9b516ab7af01599b623b40b39
+ms.sourcegitcommit: cd239efc5c7c25ffbe5de25b2438d44181a838a9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/01/2019
-ms.locfileid: "64988261"
+ms.lasthandoff: 06/14/2019
+ms.locfileid: "67042426"
 ---
-# <a name="release-notes-for-windows-subsystem-for-linux"></a>Windows Subsystem for Linux のリリース ノート
+# <a name="release-notes-for-windows-subsystem-for-linux"></a>Windows Subsystem for Linux のリリースノート
 
-## <a name="build-18890"></a>ビルド 18890
-一般的な Windows ビルド 18890 に関する情報を参照してください、 [Windows ブログ](https://blogs.windows.com/windowsexperience/2019/05/01/announcing-windows-10-insider-preview-build-18890/)します。
 
-### <a name="wsl"></a>WSL
-* 非ブロッキング ソケット リーク [GH 2913]
-* EOF 入力ターミナルには、それ以降の読み取り [GH 3421] をブロックできます。
-* [GH 3928 で説明した] wsl.conf を参照するヘッダーを resolv.conf を更新します。
-* Epoll でデッドロック コード [GH 3922] の削除します。
-* -インポートおよび – [GH 3932] をエクスポートする引数にスペースを処理します。
-* Mmap の拡張ファイルが正しく機能しません [GH 3939]
-* ARM64 に関する問題を解決する\\wsl$ アクセスが正しく機能していません
-* Wsl.exe の向上の既定のアイコンを追加します。
-
-## <a name="build-18342"></a>ビルド 18342
-一般的な Windows ビルド 18342 に関する情報を参照してください、 [Windows ブログ](https://blogs.windows.com/windowsexperience/2019/02/20/announcing-windows-10-insider-preview-build-18342/)します。
+## <a name="build-18917"></a>ビルド18917
+ビルド18917の一般的な Windows 情報については、 [windows のブログ](https://blogs.windows.com/windowsexperience/2019/06/12/announcing-windows-10-insider-preview-build-18917/)を参照してください。
 
 ### <a name="wsl"></a>WSL
-* ユーザーが Windows から WSL ディストリビューションでの Linux ファイルにアクセスする機能が追加されました。 これらのファイルは、コマンドライン、およびもファイル エクスプ ローラー、VSCode のように、Windows アプリを使用アクセスできるなどは、これらのファイルと対話できます。 移動して、ファイルにアクセス\\ \\wsl$\\< distro_name > に移動してディストリビューションを実行しているの一覧を表示または\\ \\wsl$
-* 追加の CPU 情報タグを追加し、[GH 2234] Cpus_allowed [リスト] の値を修正
-* Exec 非リーダー スレッド [GH 3800] からのサポートします。
-* 致命的でない [GH 3785] として構成の更新の失敗を扱う
-* [GH 3768] のオフセットを正しく処理するために binfmt を更新します。
-* 9 の計画 [GH 3854] のネットワーク ドライブのマッピングを有効にします。
-* -> Linux のサポート Windows と Linux バインド マウント モードの Windows パスの変換を ->
-* 読み取り専用、開かれたファイルに読み取り専用のセクションで、マッピングを作成します。
+* WSL 2 が利用可能になりました。 詳細については、[ブログ](https://devblogs.microsoft.com/commandline/wsl-2-is-now-available-in-windows-insiders/)を参照してください。
+* シンボリックリンクを使用した Windows プロセスの起動が正常に機能しない回帰を修正する [GH 3999]
+* Wsl--list--verbose, wsl--list--quiet, および wsl .exe--import--version オプションを wsl に追加します。
+* Wsl--shutdown オプションを追加します。
+* プラン 9:書き込み用のディレクトリを開くことを成功させる
 
-## <a name="build-18334"></a>ビルド 18334
-一般的な Windows ビルド 18334 に関する情報を参照してください、 [Windows ブログ](https://blogs.windows.com/windowsexperience/2019/02/08/announcing-windows-10-insider-preview-build-18334/)します。
+## <a name="build-18890"></a>ビルド18890
+ビルド18890の一般的な Windows 情報については、 [windows のブログ](https://blogs.windows.com/windowsexperience/2019/05/01/announcing-windows-10-insider-preview-build-18890/)を参照してください。
 
 ### <a name="wsl"></a>WSL
-* Windows タイム ゾーンが Linux のタイム ゾーン [GH 3747] にマップする方法を再設計します。
-* メモリ リークを修正し、新しい文字列変換関数 [GH 3746] を追加
-* ないスレッドで、threadgroup SIGCONT は no-op [GH 3741] 
-* 正しく/proc/self/fd のソケットと epoll のファイル記述子を表示します。
+* 非ブロッキングソケットリーク [GH 2913]
+* ターミナルへの EOF 入力が後続の読み取りをブロックする可能性がある [GH 3421]
+* Resolv.conf を参照するようにを更新する (GH 3928 で説明)
+* Epoll delete コードでのデッドロック [GH 3922]
+* --Import および– export の引数内のスペースを処理する [GH 3932]
+* Mmap ファイルの拡張が正しく機能しない [GH 3939]
+* ARM64 \\wsl $ アクセスが正常に動作しない問題を修正します
+* Wsl のより適切な既定のアイコンを追加する
 
-## <a name="build-18305"></a>ビルド 18305
-一般的な Windows ビルド 18305 に関する情報を参照してください、 [Windows ブログ](https://blogs.windows.com/windowsexperience/2018/12/19/announcing-windows-10-insider-preview-build-18305/)します。
+## <a name="build-18342"></a>ビルド18342
+ビルド18342の一般的な Windows 情報については、 [windows のブログ](https://blogs.windows.com/windowsexperience/2019/02/20/announcing-windows-10-insider-preview-build-18342/)を参照してください。
 
 ### <a name="wsl"></a>WSL
-* pthreads プライマリ スレッドの終了 [GH 3589] 時にファイルへのアクセスが失われる
-* 必要である場合を除き、TIOCSCTTY は"-force"パラメーターを無視する必要があります [GH 3652]
-* wsl.exe コマンドラインの機能強化と加算のインポート/エクスポート機能。
+* Windows から WSL ディストリビューションの Linux ファイルにユーザーがアクセスできる機能が追加されました。 これらのファイルには、コマンドラインを使用してアクセスできます。また、ファイルエクスプローラーや VSCode などの Windows アプリもこれらのファイルと対話できます。 \\Wsl $ \\ \\ \\< distro_name > に移動してファイルにアクセスするか、wsl $ に移動して実行中のディストリビューションの一覧を表示します。\\
+* CPU 情報タグを追加し、Cpus_allowed [リスト] の値を修正する [GH 2234]
+* リーダー以外のスレッドからの exec のサポート [GH 3800]
+* 構成の更新エラーを致命的でないものとして扱う [GH 3785]
+* オフセットを正しく処理するように binfmt を更新する [GH 3768]
+* プラン9のネットワークドライブのマッピングを有効にする [GH 3854]
+* Windows > Linux および Linux をサポートする-bind マウント用の Windows パス変換 >
+* 読み取り専用で開かれたファイルのマッピングの読み取り専用セクションを作成する
+
+## <a name="build-18334"></a>ビルド18334
+ビルド18334の一般的な Windows 情報については、 [windows のブログ](https://blogs.windows.com/windowsexperience/2019/02/08/announcing-windows-10-insider-preview-build-18334/)を参照してください。
+
+### <a name="wsl"></a>WSL
+* Windows タイムゾーンを Linux タイムゾーンにマップする方法の設計 [GH 3747]
+* メモリリークを修正し、新しい文字列変換関数を追加する [GH 3746]
+* スレッドのない threadgroup の SIGCONT は、no op [GH 3741] 
+* /Proc/self/fd にソケットと epoll ファイル記述子を正しく表示する
+
+## <a name="build-18305"></a>ビルド18305
+ビルド18305の一般的な Windows 情報については、 [windows のブログ](https://blogs.windows.com/windowsexperience/2018/12/19/announcing-windows-10-insider-preview-build-18305/)を参照してください。
+
+### <a name="wsl"></a>WSL
+* pthreads プライマリスレッドが終了したときにファイルへのアクセスが失われる [GH 3589]
+* TIOCSCTTY は、必要な場合を除き、"force" パラメーターを無視する必要があります [GH 3652]
+* wsl コマンドラインの機能強化とインポート/エクスポート機能の追加。
 ```
 Usage: wsl.exe [Argument] [Options...] [CommandLine]
 
@@ -115,54 +126,54 @@ Arguments to manage Windows Subsystem for Linux:
         Display usage information.
 ```
 
-## <a name="build-18277"></a>ビルド 18277
-一般的な Windows ビルド 18277 に関する情報を参照してください、 [Windows ブログ](https://blogs.windows.com/windowsexperience/2018/11/07/announcing-windows-10-insider-preview-build-18277/)します。
+## <a name="build-18277"></a>ビルド18277
+ビルド18277の一般的な Windows 情報については、 [windows のブログ](https://blogs.windows.com/windowsexperience/2018/11/07/announcing-windows-10-insider-preview-build-18277/)を参照してください。
 
 ### <a name="wsl"></a>WSL
-* ビルド 18272 [GH 3645] で導入された「インターフェイスがサポートされています」エラーを修正します。
-* Umount syscall [GH 3605] の MNT_FORCE フラグを無視します。
-* 公式の CreatePseudoConsole API を使用してスイッチ WSL 相互運用機能
-* FUTEX_WAIT の再起動時には、タイムアウト値を管理なし
+* ビルド18272で導入された "そのようなインターフェイスがサポートされていません" というエラーを修正する [GH 3645]
+* Umount syscall の MNT_FORCE フラグを無視する [GH 3605]
+* WSL 相互運用機能を切り替えて、正式な Create擬似コンソール API を使用する
+* FUTEX_WAIT の再起動時にタイムアウト値を保持しない
 
-## <a name="build-18272"></a>ビルド 18272
-一般的な Windows ビルド 18272 に関する情報を参照してください、 [Windows ブログ](https://blogs.windows.com/windowsexperience/2018/10/31/announcing-windows-10-insider-preview-build-18272/)します。
-
-### <a name="wsl"></a>WSL
-* **警告:** WSL を使用できない、このビルドで問題があります。 お使いのディストリビューションを起動しようとするときは、「インターフェイスがサポートされています」エラーが表示されます。 問題は修正されており、次の週の高速 Insider ビルドになります。 インストールしている場合ことができますにロールバックする前に"以前のバージョンの Windows 10 に Go"を使用して Windows ビルド設定でこのビルドに更新プログラム]-> [& セキュリティ Recovery]-> [です。
-
-## <a name="build-18267"></a>ビルド 18267
-一般的な Windows ビルド 18267 に関する情報を参照してください、 [Windows ブログ](https://blogs.windows.com/windowsexperience/2018/10/24/announcing-windows-10-insider-preview-build-18267/)します。
+## <a name="build-18272"></a>ビルド18272
+ビルド18272の一般的な Windows 情報については、 [windows のブログ](https://blogs.windows.com/windowsexperience/2018/10/31/announcing-windows-10-insider-preview-build-18272/)を参照してください。
 
 ### <a name="wsl"></a>WSL
-* ゾンビのプロセスを取得しない可能性があります、無期限に問題を修正します。
-* エラー メッセージが [GH 3592] の最大長を超える場合、WslRegisterDistribution がハングします。
-* Fsync DrvFs [GH 3556] で、読み取り専用のファイルが正常に許可します。
-* [GH 3584] 内のシンボリック リンクを作成する前にディレクトリ/bin と/sbin ディレクトリが存在することを確認します。
-* WSL インスタンスのインスタンスの終了タイムアウト メカニズムを追加します。 タイムアウトは 15 秒、つまり、インスタンスは、最後の WSL プロセスが終了した後、15 秒を終了して現在設定されます。 ディストリビューションをすぐに終了するには、次のように使用します。
+* **要する**このビルドには、WSL が動作しなくなる問題があります。 ディストリビューションを起動しようとすると、"そのようなインターフェイスはサポートされていません" というエラーが表示されます。 この問題は修正され、来週の Insider Fast ビルドに含まれるようになりました。 このビルドがインストールされている場合は、「設定-> Update & Security-> Recovery」の「以前のバージョンの Windows 10 に戻る」を使用して、以前の Windows ビルドにロールバックできます。
+
+## <a name="build-18267"></a>ビルド18267
+ビルド18267の一般的な Windows 情報については、 [windows のブログ](https://blogs.windows.com/windowsexperience/2018/10/24/announcing-windows-10-insider-preview-build-18267/)を参照してください。
+
+### <a name="wsl"></a>WSL
+* ゾンビプロセスが reaped されず、無期限に保持される問題を修正します。
+* エラーメッセージが最大長を超えた場合、WslRegisterDistribution がハングする [GH 3592]
+* DrvFs で読み取り専用ファイルの fsync を正常に実行できるようにする [GH 3556]
+* [GH 3584] 内にシンボリックリンクを作成する前に、/bin と/sbin ディレクトリが存在することを確認します。
+* WSL インスタンスのインスタンス終了タイムアウトメカニズムが追加されました。 タイムアウトは現在15秒に設定されています。つまり、最後の WSL プロセスが終了してから15秒後にインスタンスが終了します。 ディストリビューションをすぐに終了するには、次のように使用します。
 ```
 wslconfig.exe /terminate <DistributionName>
 ```
 
 ## <a name="build-17763-1809"></a>ビルド 17763 (1809)
-一般的な Windows ビルド 17763 に関する情報を参照してください、 [Windows ブログ](https://blogs.windows.com/windowsexperience/2018/10/02/how-to-get-the-windows-10-october-2018-update/)します。
+ビルド17763の一般的な Windows 情報については、 [windows のブログ](https://blogs.windows.com/windowsexperience/2018/10/02/how-to-get-the-windows-10-october-2018-update/)を参照してください。
 
 ### <a name="wsl"></a>WSL
-* Setpriority syscall アクセス許可のチェックが同じスレッドの優先順位 [GH 1838] を変更するためには厳格すぎます。
-* バイアスをかけない割り込み時間が clock_gettime(CLOCK_BOOTTIME) [GH 3434] の負の値が返されないように、ブート時に使用されるように
-* WSL binfmt インタープリター [GH 3424] でハンドルのシンボリック リンク
-* Threadgroup リーダー ファイル記述子のクリーンアップの処理の改善。
-* WSL KeQueryInterruptTimePrecise を KeQueryPerformanceCounter ではなく [GH 3252] のオーバーフローを回避するために使用するスイッチします。
-* Ptrace アタッチ システム コール [GH 1731] から不適切な戻り値が発生します。
-* 修正プログラムのいくつかの AF_UNIX 関連の問題 [GH 3371]
-* WSL の相互運用機能を現在の作業ディレクトリが 5 より小さい文字長 [GH 3379] の場合は失敗を引き起こす可能性のある問題を修正します。
-* 存在しないポート [GH 3286] へのループバック接続に失敗した 1 つの 2 つ目の遅延を防ぐ
-* 書き込むスタブ ファイル [GH 2893] の追加します。
-* 正確な IPV6 スコープ情報。
-* PR_SET_PTRACER サポート [GH 3053]
-* パイプのファイル システムが誤ってところイベント [GH 3276] の消去
-* Win32 実行可能ファイルの NTFS シンボリック リンクを使用して起動のリンクをシンボリック名 [GH 2909] を順守していません
-* ゾンビのサポート [GH 1353] の強化
-* [GH 場合 1493] Windows の相互運用機能を制御するための wsl.conf エントリを追加します。
+* 同じスレッド優先順位を変更するための setpriority syscall アクセス許可チェックが strict すぎます [GH 1838]
+* Clock_gettime (CLOCK_BOOTTIME) の負の値が返されないように、起動時間にバイアスをかけない割り込み時間を使用することを確認してください () [GH 3434]
+* WSL binfmt インタープリターでのシンボリックリンクの処理 [GH 3424]
+* Threadgroup リーダーファイル記述子のクリーンアップをより適切に処理します。
+* KeQueryPerformanceCounter ではなく KeQueryInterruptTimePrecise を使用してオーバーフローを回避するように WSL を切り替える [GH 3252]
+* Ptrace をアタッチすると、システムコールから無効な戻り値が返される [GH 1731]
+* AF_UNIX 関連のいくつかの問題を修正する [GH 3371]
+* 現在の作業ディレクトリの長さが5文字未満の場合に WSL 相互運用機能が失敗する原因となる問題を修正しました [GH 3379]
+* 存在しないポートへのループバック接続で1秒間の遅延が発生しないようにする [GH 3286]
+* /Proc/sys/fs/file-max スタブファイルの追加 [GH 2893]
+* より正確な IPV6 スコープ情報。
+* PR_SET_PTRACER のサポート [GH 3053]
+* パイプファイルシステムがエッジトリガーの epoll イベントを誤って消去しています [GH 3276]
+* NTFS シンボリックリンクによって起動された Win32 実行可能ファイルがシンボリックリンク名を尊重しない [GH 2909]
+* 強化されたゾンビサポート [GH 1353]
+* Windows 相互運用機能の動作を制御するための wsl のエントリを追加する [GH 1493]
   ```
     [interop]
 
@@ -170,98 +181,98 @@ wslconfig.exe /terminate <DistributionName>
 
     appendWindowsPath=false # append Windows path to $PATH variable; default is true
   ```
-* 常にではありません UNIX ソケット ファミリの種類 [GH 1774] を返す getsockname 問題を修正しました
-* TIOCSTI [GH 1863] のサポートを追加します。
-* 接続処理中の非ブロッキング ソケットの書き込み試行 [GH 2846] EAGAIN を返す必要があります。
-* [GH 3246、3291] のマウントされた Vhd での相互運用機能をサポートします。
-* アクセス許可のチェックのルート フォルダー [GH 3304] 上の問題を修正します。
-* TTY キーボード ioctl KDGKBTYPE、KDGKBMODE および KDSKBMODE の制限付きのサポート。
-* バック グラウンドで起動された場合でも、Windows UI アプリを実行する必要があります。
-* Wsl-u または - ユーザー オプション [GH 1203] の追加します。
-* 高速スタートアップを有効にした場合、WSL 起動の問題を修正 [GH 2576]
-* Unix ソケットが切断されているピア資格情報 [GH 3183] を保持する必要があります。
-* 非ブロッキング Unix ソケット EAGAIN [GH 3191] で無期限に失敗しました。
-* 場合 = off が新しい既定 drvfs マウントの種類 [GH 2937、3212、3328]
-    * 参照してください[ブログ](https://blogs.msdn.microsoft.com/commandline/2018/06/14/improved-per-directory-case-sensitivity-support-in-wsl/)詳細についてはします。
-* Wslconfig を追加/ディストリビューションの実行を停止する終了します。
-* WSL シェルのコンテキストにスペースを含むパスを正しく処理しないメニュー エントリの問題を解決します。
-* 拡張属性として大文字と小文字をディレクトリあたりの公開します。
-* ARM64: キャッシュのメンテナンス操作をエミュレートします。 解決[dotnet 問題](https://github.com/dotnet/core/issues/1561)します。
-* DrvFs:、エスケープされた文字に対応するプライベートの範囲内の文字のみエスケープ解除します。
-* ELF パーサー インタープリター長さの検証 [GH 3154] で 1 ではオフのエラーを修正します。
-* WSL の絶対タイマー、過去の時刻では [GH 3091] が起動されません。
-* 新しく作成した再解析ポイントはそのために一覧表示、親ディレクトリを確認します。
-* アトミックに DrvFs で大文字と小文字のディレクトリを作成します。
-* 追加の問題を修正しました、ファイルが存在するにもかかわらずに、マルチ スレッド操作で ENOENT に返すことができます。 [GH 2712]
-* UMCI が有効にすると、固定 WSL はエラーを起動します。 [GH 3020]
-* WSL [GH 437、603、1836] を起動するエクスプ ローラーのコンテキスト メニューを追加します。 を使用するには、shift キーを押しして、エクスプ ローラー ウィンドウで右クリックします。
-* [GH 2822、3100] Unix ソケット非ブロッキング動作を修正します。
-* GH 2026 で報告される NETLINK コマンドのハングを修正。
-* マウント フラグと反映フラグ [GH 2911] のサポートを追加します。
-* 切り捨てが発生しない inotify イベント [GH 2978] で問題を解決します。
-* 追加 - wsl.exe シェルせず 1 つのバイナリを呼び出すための exec オプション。
-* 追加 - 特定のディストリビューションを選択する wsl.exe の分散オプション。
-* Dmesg の制限付きのサポート。 アプリケーションは、dmesg をログインできるようになりました。 WSL ドライバーでは、dmesg に限定された情報を記録します。 今後、このドライバーから他の情報診断/を実行するために拡張できます。
-    * 注: dmesg は現在サポートされてから、`/dev/kmsg`デバイス インターフェイス。 `syslog` syscall インターフェイスはまだサポートされていません。 そのため、いくつかの`dmesg`などのコマンド ライン オプション`-S`、`-C`機能しません。
-* 既定の gid およびネイティブ [GH 3042] に一致するようにシリアル デバイスのモードを変更します。
-* DrvFs 拡張属性をサポートします。
-    * 注:DrvFs では、拡張属性の名前をいくつかの制限があります。 一部の文字 (のように '/'、':' と '\*') を許可、および拡張がない属性名は DrvFs で大文字小文字を区別しません。
+* 常に UNIX ソケットファミリの種類を返す getsockname でないことを修正する [GH 1774]
+* TIOCSTI のサポートを追加する [GH 1863]
+* 接続処理中の非ブロッキングソケットは、書き込み試行に EAGAIN を返します [GH 2846]
+* マウントされた Vhd での相互運用のサポート [GH 3246, 3291]
+* ルートフォルダーでのアクセス許可チェックの問題の修正 [GH 3304]
+* TTY キーボード ioctl KDGKBTYPE、KDGKBMODE、および KDSKBMODE のサポートが制限されています。
+* Windows UI アプリは、バックグラウンドで起動した場合でも実行する必要があります。
+* Wsl-u または--user オプションを追加する [GH 1203]
+* 高速スタートアップが有効になっているときの WSL 起動の問題を修正する [GH 2576]
+* Unix ソケットが切断されたピア資格情報を保持する必要がある [GH 3183]
+* EAGAIN で無制限の非ブロッキング Unix ソケットが失敗する [GH 3191]
+* case = off は新しい既定の drvfs マウントの種類 [GH 2937, 3212, 3328]
+    * 詳細については、[ブログ](https://blogs.msdn.microsoft.com/commandline/2018/06/14/improved-per-directory-case-sensitivity-support-in-wsl/)を参照してください。
+* Wslconfig/terminate を追加して、実行中のディストリビューションを停止します。
+* スペースを含むパスを正しく処理しない WSL シェルコンテキストメニューエントリの問題を修正します。
+* ディレクトリごとの大文字と小文字の区別を拡張属性として公開する
+* ARM64: キャッシュメンテナンス操作をエミュレートします。 [Dotnet の問題](https://github.com/dotnet/core/issues/1561)を解決します。
+* DrvFs: エスケープされた文字に対応するプライベート範囲内の文字のみを unescape します。
+* ELF パーサーインタープリターの長さの検証での1つずつのエラーの修正 [GH 3154]
+* 過去の時間を持つ WSL 絶対タイマーが起動しない [GH 3091]
+* 新しく作成された再解析ポイントが親ディレクトリに表示されていることを確認します。
+* DrvFs に大文字と小文字を区別するディレクトリをアトミックに作成します。
+* ファイルが存在する場合でも、マルチスレッド操作が ENOENT を返す可能性のある追加の問題を修正しました。 [GH 2712]
+* UMCI が有効になっているときの WSL 起動エラーを修正しました。 [GH 3020]
+* WSL [GH 437, 603, 1836] を起動するには、エクスプローラーのコンテキストメニューを追加します。 を使用するには、エクスプローラーウィンドウで、shift キーを押しながら右クリックします。
+* Unix ソケットの非ブロッキング動作の修正 [GH 2822、3100]
+* GH 2026 で報告されているように、ハングしている NETLINK コマンドを修正しました。
+* マウント伝達フラグ [GH 2911] のサポートを追加します。
+* Truncate で inotify イベントが発生しない問題を修正する [GH 2978]。
+* シェルを使用せずに1つのバイナリを呼び出すには、wsl の--exec オプションを追加します。
+* 特定のディストリビューションを選択するには、wsl のディストリビューションオプションを追加します。
+* Dmesg のサポートが制限されています。 アプリケーションは、dmesg にログを記録できるようになりました。 WSL ドライバーは、制限された情報を dmesg に記録します。 将来は、この機能を拡張して、ドライバーから他の情報や診断情報を伝達することができます。
+    * 注: 現在、 `/dev/kmsg` dmesg はデバイスインターフェイスでサポートされています。 `syslog`syscall インターフェイスはまだサポートされていません。 そのため、などの一部の`dmesg`コマンドラインオプション`-S` `-C`は機能しません。
+* ネイティブと一致するように既定の gid とシリアルデバイスのモードを変更する [GH 3042]
+* DrvFs は拡張属性をサポートするようになりました。
+    * 注:DrvFs では、拡張属性の名前にいくつかの制限があります。 一部の文字 ('/'、': '、'\*' など) は使用できません。また、拡張属性名は、drvfs では大文字と小文字が区別されません。
 
-## <a name="build-18252-skip-ahead"></a>ビルド 18252 (スキップ先)
-一般的な Windows ビルド 18252 に関する情報を参照してください、 [Windows ブログ](https://blogs.windows.com/windowsexperience/2018/10/03/announcing-windows-10-insider-preview-build-18252/)します。
-
-### <a name="wsl"></a>WSL
-* Lxssmanager dll 外および個別のツールのフォルダーには、init と多くのバイナリを移動します。
-* CLONE_FILES を使用する場合は、ファイル記述子を閉じる周囲の競合を修正します。
-* DrvFs パスを変換するときに、/proc/pid/mountinfo で省略可能なフィールドを処理します。
-* S_IFREG のメタデータのサポートなしに成功 DrvFs mknod を許可します。
-* DrvFs に作成される読み取り専用ファイルは読み取り専用属性が [GH 3411] の設定が必要
-* DrvFs マウントを処理するために/sbin/mount.drvfs ヘルパーを追加します。
-* DrvFs の POSIX 名の変更を使用します。
-* ボリューム GUID を除くボリュームでは、パスの変換を許可します。
-
-## <a name="build-17738-fast"></a>17738 (Fast) のビルドします。
-一般的な Windows ビルド 17738 に関する情報を参照してください、 [Windows ブログ](https://blogs.windows.com/windowsexperience/2018/08/14/announcing-windows-10-insider-preview-build-17738/)します。
+## <a name="build-18252-skip-ahead"></a>ビルド 18252 (前へスキップ)
+ビルド18252の一般的な Windows 情報については、 [windows のブログ](https://blogs.windows.com/windowsexperience/2018/10/03/announcing-windows-10-insider-preview-build-18252/)を参照してください。
 
 ### <a name="wsl"></a>WSL
-* Setpriority syscall アクセス許可のチェックが同じスレッドの優先順位 [GH 1838] を変更するためには厳格すぎます。
-* バイアスをかけない割り込み時間が clock_gettime(CLOCK_BOOTTIME) [GH 3434] の負の値が返されないように、ブート時に使用されるように
-* WSL binfmt インタープリター [GH 3424] でハンドルのシンボリック リンク
-* Threadgroup リーダー ファイル記述子のクリーンアップの処理の改善。
+* Init と bsdtar のバイナリを lxssmanager dll から別のツールフォルダーに移動する
+* CLONE_FILES を使用するときのファイル記述子の終了に関する競合を修正します。
+* DrvFs パスを変換するときに/proc/pid/mountinfo の省略可能なフィールドを処理する
+* S_IFREG のメタデータをサポートせずに DrvFs mknod を正常に実行できるようにする
+* DrvFs で作成される readonly ファイルは、readonly 属性セットを持つ必要があります [GH 3411]
+* DrvFs のマウントを処理する/sbin/mount.drvfs helper を追加する
+* DrvFs で POSIX 名の変更を使用します。
+* ボリューム GUID がないボリュームでパスの変換を許可します。
 
-## <a name="build-17728-fast"></a>17728 (Fast) のビルドします。
-一般的な Windows ビルド 17728 に関する情報を参照してください、 [Windows ブログ](https://blogs.windows.com/windowsexperience/2018/07/31/announcing-windows-10-insider-preview-build-17728/)します。
-
-### <a name="wsl"></a>WSL
-* WSL KeQueryInterruptTimePrecise を KeQueryPerformanceCounter ではなく [GH 3252] のオーバーフローを回避するために使用するスイッチします。
-* Ptrace アタッチ システム コール [GH 1731] から不適切な戻り値が発生します。
-* AF_UNIX 数に関連する修正プログラムの問題 [GH 3371]
-* WSL の相互運用機能を現在の作業ディレクトリが 5 より小さい文字長 [GH 3379] の場合は失敗を引き起こす可能性のある問題を修正します。
-
-## <a name="build-18204-skip-ahead"></a>ビルド 18204 (スキップ先)
-一般的な Windows ビルド 18204 に関する情報を参照してください、 [Windows ブログ](https://blogs.windows.com/windowsexperience/2018/07/25/announcing-windows-10-insider-preview-build-17723-and-build-18204/)します。
+## <a name="build-17738-fast"></a>ビルド 17738 (高速)
+ビルド17738の一般的な Windows 情報については、 [windows のブログ](https://blogs.windows.com/windowsexperience/2018/08/14/announcing-windows-10-insider-preview-build-17738/)を参照してください。
 
 ### <a name="wsl"></a>WSL
-* パイプのところイベント [GH 3276] をオフにすると、ファイル システム inadvertenly
-* Win32 実行可能ファイルの NTFS シンボリック リンクを使用して起動のリンクをシンボリック名 [GH 2909] を順守していません
+* 同じスレッド優先順位を変更するための setpriority syscall アクセス許可チェックが strict すぎます [GH 1838]
+* Clock_gettime (CLOCK_BOOTTIME) の負の値が返されないように、起動時間にバイアスをかけない割り込み時間を使用することを確認してください () [GH 3434]
+* WSL binfmt インタープリターでのシンボリックリンクの処理 [GH 3424]
+* Threadgroup リーダーファイル記述子のクリーンアップをより適切に処理します。
 
-## <a name="build-17723-fast"></a>17723 (Fast) のビルドします。
-一般的な Windows ビルド 17723 に関する情報を参照してください、 [Windows ブログ](https://blogs.windows.com/windowsexperience/2018/07/25/announcing-windows-10-insider-preview-build-17723-and-build-18204/)します。
-
-### <a name="wsl"></a>WSL
-* 存在しないポート [GH 3286] へのループバック接続に失敗した 1 つの 2 つ目の遅延を防ぐ
-* 書き込むスタブ ファイル [GH 2893] の追加します。
-* 正確な IPV6 スコープ情報。
-* PR_SET_PTRACER サポート [GH 3053]
-* パイプのところイベント [GH 3276] をオフにすると、ファイル システム inadvertenly
-* Win32 実行可能ファイルの NTFS シンボリック リンクを使用して起動のリンクをシンボリック名 [GH 2909] を順守していません
-
-## <a name="build-17713"></a>ビルド 17713
-一般的な Windows ビルド 17713 に関する情報を参照してください、 [Windows ブログ](https://blogs.windows.com/windowsexperience/2018/07/11/announcing-windows-10-insider-preview-build-17713/)します。
+## <a name="build-17728-fast"></a>ビルド 17728 (高速)
+ビルド17728の一般的な Windows 情報については、 [windows のブログ](https://blogs.windows.com/windowsexperience/2018/07/31/announcing-windows-10-insider-preview-build-17728/)を参照してください。
 
 ### <a name="wsl"></a>WSL
-* ゾンビのサポート [GH 1353] の強化
-* [GH 場合 1493] Windows の相互運用機能を制御するための wsl.conf エントリを追加します。
+* KeQueryPerformanceCounter ではなく KeQueryInterruptTimePrecise を使用してオーバーフローを回避するように WSL を切り替える [GH 3252]
+* Ptrace をアタッチすると、システムコールから無効な戻り値が返される [GH 1731]
+* AF_UNIX 関連のさまざまな問題を修正する [GH 3371]
+* 現在の作業ディレクトリの長さが5文字未満の場合に WSL 相互運用機能が失敗する原因となる問題を修正しました [GH 3379]
+
+## <a name="build-18204-skip-ahead"></a>ビルド 18204 (前へスキップ)
+ビルド18204の一般的な Windows 情報については、 [windows のブログ](https://blogs.windows.com/windowsexperience/2018/07/25/announcing-windows-10-insider-preview-build-17723-and-build-18204/)を参照してください。
+
+### <a name="wsl"></a>WSL
+* パイプファイルシステム inadvertenly によるエッジトリガー epoll イベントの消去 [GH 3276]
+* NTFS シンボリックリンクによって起動された Win32 実行可能ファイルがシンボリックリンク名を尊重しない [GH 2909]
+
+## <a name="build-17723-fast"></a>ビルド 17723 (高速)
+ビルド17723の一般的な Windows 情報については、 [windows のブログ](https://blogs.windows.com/windowsexperience/2018/07/25/announcing-windows-10-insider-preview-build-17723-and-build-18204/)を参照してください。
+
+### <a name="wsl"></a>WSL
+* 存在しないポートへのループバック接続で1秒間の遅延が発生しないようにする [GH 3286]
+* /Proc/sys/fs/file-max スタブファイルの追加 [GH 2893]
+* より正確な IPV6 スコープ情報。
+* PR_SET_PTRACER のサポート [GH 3053]
+* パイプファイルシステム inadvertenly によるエッジトリガー epoll イベントの消去 [GH 3276]
+* NTFS シンボリックリンクによって起動された Win32 実行可能ファイルがシンボリックリンク名を尊重しない [GH 2909]
+
+## <a name="build-17713"></a>ビルド17713
+ビルド17713の一般的な Windows 情報については、 [windows のブログ](https://blogs.windows.com/windowsexperience/2018/07/11/announcing-windows-10-insider-preview-build-17713/)を参照してください。
+
+### <a name="wsl"></a>WSL
+* 強化されたゾンビサポート [GH 1353]
+* Windows 相互運用機能の動作を制御するための wsl のエントリを追加する [GH 1493]
   ```
     [interop]
 
@@ -269,274 +280,274 @@ wslconfig.exe /terminate <DistributionName>
 
     appendWindowsPath=false # append Windows path to $PATH variable; default is true
   ```
-* 常にではありません UNIX ソケット ファミリの種類 [GH 1774] を返す getsockname 問題を修正しました
-* TIOCSTI [GH 1863] のサポートを追加します。
-* 接続処理中の非ブロッキング ソケットの書き込み試行 [GH 2846] EAGAIN を返す必要があります。
-* [GH 3246、3291] のマウントされた Vhd での相互運用機能をサポートします。
-* アクセス許可のチェックのルート フォルダー [GH 3304] 上の問題を修正します。
-* TTY キーボード ioctl KDGKBTYPE、KDGKBMODE および KDSKBMODE の制限付きのサポート。
-* バック グラウンドで起動された場合でも、Windows UI アプリを実行する必要があります。
+* 常に UNIX ソケットファミリの種類を返す getsockname でないことを修正する [GH 1774]
+* TIOCSTI のサポートを追加する [GH 1863]
+* 接続処理中の非ブロッキングソケットは、書き込み試行に EAGAIN を返します [GH 2846]
+* マウントされた Vhd での相互運用のサポート [GH 3246, 3291]
+* ルートフォルダーでのアクセス許可チェックの問題の修正 [GH 3304]
+* TTY キーボード ioctl KDGKBTYPE、KDGKBMODE、および KDSKBMODE のサポートが制限されています。
+* Windows UI アプリは、バックグラウンドで起動した場合でも実行する必要があります。
 
-## <a name="build-17704"></a>ビルド 17704
-一般的な Windows ビルド 17704 に関する情報を参照してください、 [Windows ブログ](https://blogs.windows.com/windowsexperience/2018/06/27/announcing-windows-10-insider-preview-build-17704/)します。
+## <a name="build-17704"></a>ビルド17704
+ビルド17704の一般的な Windows 情報については、 [windows のブログ](https://blogs.windows.com/windowsexperience/2018/06/27/announcing-windows-10-insider-preview-build-17704/)を参照してください。
 
 ### <a name="wsl"></a>WSL
-* Wsl-u または - ユーザー オプション [GH 1203] の追加します。
-* 高速スタートアップを有効にした場合、WSL 起動の問題を修正 [GH 2576]
-* Unix ソケットが切断されているピア資格情報 [GH 3183] を保持する必要があります。
-* 非ブロッキング Unix ソケット EAGAIN [GH 3191] で無期限に失敗しました。
-* 場合 = off が新しい既定 drvfs マウントの種類 [GH 2937、3212、3328]
-    * 参照してください[ブログ](https://blogs.msdn.microsoft.com/commandline/2018/06/14/improved-per-directory-case-sensitivity-support-in-wsl/)詳細についてはします。
-* Wslconfig を追加/ディストリビューションの実行を停止する終了します。
+* Wsl-u または--user オプションを追加する [GH 1203]
+* 高速スタートアップが有効になっているときの WSL 起動の問題を修正する [GH 2576]
+* Unix ソケットが切断されたピア資格情報を保持する必要がある [GH 3183]
+* EAGAIN で無制限の非ブロッキング Unix ソケットが失敗する [GH 3191]
+* case = off は新しい既定の drvfs マウントの種類 [GH 2937, 3212, 3328]
+    * 詳細については、[ブログ](https://blogs.msdn.microsoft.com/commandline/2018/06/14/improved-per-directory-case-sensitivity-support-in-wsl/)を参照してください。
+* Wslconfig/terminate を追加して、実行中のディストリビューションを停止します。
 
 ## <a name="build-17692"></a>ビルド 17692
-一般的な Windows ビルド 17692 に関する情報を参照してください、 [Windows ブログ](https://blogs.windows.com/windowsexperience/2018/06/14/announcing-windows-10-insider-preview-build-17692)します。
+ビルド17692の一般的な Windows 情報については、 [windows のブログ](https://blogs.windows.com/windowsexperience/2018/06/14/announcing-windows-10-insider-preview-build-17692)を参照してください。
 
 ### <a name="wsl"></a>WSL
-* WSL シェルのコンテキストにスペースを含むパスを正しく処理しないメニュー エントリの問題を解決します。
-* 拡張属性として大文字と小文字をディレクトリあたりの公開します。
-* ARM64: キャッシュのメンテナンス操作をエミュレートします。 解決[dotnet 問題](https://github.com/dotnet/core/issues/1561)します。
-* DrvFs:、エスケープされた文字に対応するプライベートの範囲内の文字のみエスケープ解除します。
+* スペースを含むパスを正しく処理しない WSL シェルコンテキストメニューエントリの問題を修正します。
+* ディレクトリごとの大文字と小文字の区別を拡張属性として公開する
+* ARM64: キャッシュメンテナンス操作をエミュレートします。 [Dotnet の問題](https://github.com/dotnet/core/issues/1561)を解決します。
+* DrvFs: エスケープされた文字に対応するプライベート範囲内の文字のみを unescape します。
 
 ## <a name="build-17686"></a>ビルド 17686
-一般的な Windows ビルド 17686 に関する情報を参照してください、 [Windows ブログ](https://blogs.windows.com/windowsexperience/2018/06/06/announcing-windows-10-insider-preview-build-17686)します。
+ビルド17686の一般的な Windows 情報については、 [windows のブログ](https://blogs.windows.com/windowsexperience/2018/06/06/announcing-windows-10-insider-preview-build-17686)を参照してください。
 
 ### <a name="wsl"></a>WSL
-* ELF パーサー インタープリター長さの検証 [GH 3154] で 1 ではオフのエラーを修正します。
-* WSL の絶対タイマー、過去の時刻では [GH 3091] が起動されません。
-* 新しく作成した再解析ポイントはそのために一覧表示、親ディレクトリを確認します。
-* アトミックに DrvFs で大文字と小文字のディレクトリを作成します。
+* ELF パーサーインタープリターの長さの検証での1つずつのエラーの修正 [GH 3154]
+* 過去の時間を持つ WSL 絶対タイマーが起動しない [GH 3091]
+* 新しく作成された再解析ポイントが親ディレクトリに表示されていることを確認します。
+* DrvFs に大文字と小文字を区別するディレクトリをアトミックに作成します。
 
-## <a name="build-17677"></a>ビルド 17677
-一般的な Windows ビルド 17677 に関する情報を参照してください、 [Windows ブログ](https://blogs.windows.com/windowsexperience/2018/05/24/announcing-windows-10-insider-preview-build-17677/)します。
-
-### <a name="wsl"></a>WSL
-* 追加の問題を修正しました、ファイルが存在するにもかかわらずに、マルチ スレッド操作で ENOENT に返すことができます。 [GH 2712]
-* UMCI が有効にすると、固定 WSL はエラーを起動します。 [GH 3020]
-
-## <a name="build-17666"></a>ビルド 17666
-一般的な Windows ビルド 17666 に関する情報を参照してください、 [Windows ブログ](https://blogs.windows.com/windowsexperience/2018/05/09/announcing-windows-10-insider-preview-build-17666/)します。
+## <a name="build-17677"></a>ビルド17677
+ビルド17677の一般的な Windows 情報については、 [windows のブログ](https://blogs.windows.com/windowsexperience/2018/05/24/announcing-windows-10-insider-preview-build-17677/)を参照してください。
 
 ### <a name="wsl"></a>WSL
-#### <a name="warning-there-is-an-issue-preventing-wsl-from-running-on-some-amd-chipsets-gh-3134-a-fix-is-ready-and-making-its-way-to-the-insider-build-branch"></a>警告:WSL がいくつか AMD チップセット [GH 3134] で実行されていることを防止、問題があります。 修正プログラムは、その方法 Insider ビルド ブランチ準備しです。
-* WSL [GH 437、603、1836] を起動するエクスプ ローラーのコンテキスト メニューを追加します。 保留中の shift キーと、エクスプ ローラー ウィンドウで右クリックを使用します。
-* [GH 2822、3100] unix ソケット非ブロッキング動作を修正します。
-* GH 2026 で報告される NETLINK コマンドのハングを修正。
-* マウント フラグと反映フラグ [GH 2911] のサポートを追加します。
-* 切り捨てが発生しない inotify イベント [GH 2978] で問題を解決します。
-* 追加 - wsl.exe シェルせず 1 つのバイナリを呼び出すための exec オプション。
-* 追加 - 特定のディストリビューションを選択する wsl.exe の分散オプション。
+* ファイルが存在する場合でも、マルチスレッド操作が ENOENT を返す可能性のある追加の問題を修正しました。 [GH 2712]
+* UMCI が有効になっているときの WSL 起動エラーを修正しました。 [GH 3020]
 
-## <a name="build-17655-skip-ahead"></a>ビルド 17655 (スキップ先)
-一般的な Windows ビルド 17655 に関する情報を参照してください、 [Windows ブログ](https://blogs.windows.com/windowsexperience/2018/04/25/announcing-windows-10-insider-preview-build-17655-for-skip-ahead/)します。
+## <a name="build-17666"></a>ビルド17666
+ビルド17666の一般的な Windows 情報については、 [windows のブログ](https://blogs.windows.com/windowsexperience/2018/05/09/announcing-windows-10-insider-preview-build-17666/)を参照してください。
 
 ### <a name="wsl"></a>WSL
-* Dmesg の制限付きのサポート。 アプリケーションは、dmesg をログインできるようになりました。 WSL ドライバーでは、dmesg に限定された情報を記録します。 今後、このドライバーから他の情報診断/を実行するために拡張できます。
-    * 注: dmesg は現在サポートされてから、`/dev/kmsg`デバイス インターフェイス。 `syslog` sycall インターフェイスはまだサポートされていません。 そのため、いくつかの`dmesg`などのコマンド ライン オプション`-S`、`-C`機能しません。
-* ファイルが存在するにもかかわらずに、マルチ スレッド操作で ENOENT に返すことが問題を修正しました。 [GH 2712]
+#### <a name="warning-there-is-an-issue-preventing-wsl-from-running-on-some-amd-chipsets-gh-3134-a-fix-is-ready-and-making-its-way-to-the-insider-build-branch"></a>警告:一部の AMD チップセットで WSL の実行を妨げる問題があります [GH 3134]。 修正の準備ができました。 Insider Build 分岐に変更することができます。
+* WSL [GH 437, 603, 1836] を起動するには、エクスプローラーのコンテキストメニューを追加します。 [エクスプローラー] ウィンドウで [保留] をクリックして右クリックします。
+* Unix ソケットの非ブロッキング動作の修正 [GH 2822、3100]
+* GH 2026 で報告されているように、ハングしている NETLINK コマンドを修正しました。
+* マウント伝達フラグ [GH 2911] のサポートを追加します。
+* Truncate で inotify イベントが発生しない問題を修正する [GH 2978]。
+* シェルを使用せずに1つのバイナリを呼び出すには、wsl の--exec オプションを追加します。
+* 特定のディストリビューションを選択するには、wsl のディストリビューションオプションを追加します。
 
-## <a name="build-17639-skip-ahead"></a>ビルド 17639 (スキップ先)
-一般的な Windows ビルド 17639 に関する情報を参照してください、 [Windows ブログ](https://blogs.windows.com/windowsexperience/2018/04/04/announcing-windows-10-insider-preview-build-17639-for-skip-ahead/)します。
-
-### <a name="wsl"></a>WSL
-* 既定の gid およびネイティブ [GH 3042] に一致するようにシリアル デバイスのモードを変更します。
-* DrvFs 拡張属性をサポートします。
-    * 注:DrvFs では、拡張属性の名前をいくつかの制限があります。 具体的には、いくつかの文字 (のように '/'、':' と '\*') を許可、および拡張がない属性名は DrvFs で大文字小文字を区別しません。
-
-## <a name="build-17133-fast"></a>17133 (Fast) のビルドします。
-一般的な Windows ビルド 17133 に関する情報を参照してください、 [Windows ブログ](https://blogs.windows.com/windowsexperience/2018/03/27/announcing-windows-10-insider-preview-build-17133-for-fast/)します。
+## <a name="build-17655-skip-ahead"></a>ビルド 17655 (前へスキップ)
+ビルド17655の一般的な Windows 情報については、 [windows のブログ](https://blogs.windows.com/windowsexperience/2018/04/25/announcing-windows-10-insider-preview-build-17655-for-skip-ahead/)を参照してください。
 
 ### <a name="wsl"></a>WSL
-* WSL でハングを修正しました。 [GH 3039、3034]
+* Dmesg のサポートが制限されています。 アプリケーションは、dmesg にログを記録できるようになりました。 WSL ドライバーは、制限された情報を dmesg に記録します。 将来は、この機能を拡張して、ドライバーから他の情報や診断情報を伝達することができます。
+    * 注: 現在、 `/dev/kmsg` dmesg はデバイスインターフェイスでサポートされています。 `syslog`sycall インターフェイスは、まだサポートされていません。 そのため、などの一部の`dmesg`コマンドラインオプション`-S` `-C`は機能しません。
+* ファイルが存在する場合でも、マルチスレッド操作で ENOENT が返される問題を修正しました。 [GH 2712]
 
-## <a name="build-17128-fast"></a>17128 (Fast) のビルドします。
-一般的な Windows ビルド 17128 に関する情報を参照してください、 [Windows ブログ](https://blogs.windows.com/windowsexperience/2018/03/23/announcing-windows-10-insider-preview-build-17128-for-fast/)します。
+## <a name="build-17639-skip-ahead"></a>ビルド 17639 (前へスキップ)
+ビルド17639の一般的な Windows 情報については、 [windows のブログ](https://blogs.windows.com/windowsexperience/2018/04/04/announcing-windows-10-insider-preview-build-17639-for-skip-ahead/)を参照してください。
+
+### <a name="wsl"></a>WSL
+* ネイティブと一致するように既定の gid とシリアルデバイスのモードを変更する [GH 3042]
+* DrvFs は拡張属性をサポートするようになりました。
+    * 注:DrvFs では、拡張属性の名前にいくつかの制限があります。 特に、一部の文字 ('/'、': '、'\*' など) は使用できません。また、拡張属性名は、drvfs では大文字と小文字が区別されません。
+
+## <a name="build-17133-fast"></a>ビルド 17133 (高速)
+ビルド17133の一般的な Windows 情報については、 [windows のブログ](https://blogs.windows.com/windowsexperience/2018/03/27/announcing-windows-10-insider-preview-build-17133-for-fast/)を参照してください。
+
+### <a name="wsl"></a>WSL
+* WSL のハングを修正します。 [GH 3039、3034]
+
+## <a name="build-17128-fast"></a>ビルド 17128 (高速)
+ビルド17128の一般的な Windows 情報については、 [windows のブログ](https://blogs.windows.com/windowsexperience/2018/03/23/announcing-windows-10-insider-preview-build-17128-for-fast/)を参照してください。
 
 ### <a name="wsl"></a>WSL
 * なし
 
-## <a name="build-17627-skip-ahead"></a>ビルド 17627 (スキップ先)
-一般的な Windows ビルド 17627 に関する情報を参照してください、 [Windows ブログ](https://blogs.windows.com/windowsexperience/2018/03/21/announcing-windows-10-insider-preview-build-17627-for-skip-ahead/)します。
+## <a name="build-17627-skip-ahead"></a>ビルド 17627 (前へスキップ)
+ビルド17627の一般的な Windows 情報については、 [windows のブログ](https://blogs.windows.com/windowsexperience/2018/03/21/announcing-windows-10-insider-preview-build-17627-for-skip-ahead/)を参照してください。
 
 ### <a name="wsl"></a>WSL
-* Futex pi に対応した操作のサポートを追加します。 [GH 1006]
-    * 優先順位いないこと現在サポートされている WSL 機能、制限がありますが、標準の使用状況ブロックを解除する必要がありますので注意してください。
-* WSL プロセスの Windows ファイアウォールのサポート。 [GH 1852]
-    * たとえば、WSL を許可するのには、任意のポートでリッスンするには、管理者特権で Windows cmd を使用に python が処理します。 ```netsh.exe advfirewall firewall add rule name=wsl_python dir=in action=allow program="C:\users\<username>\appdata\local\packages\canonicalgrouplimited.ubuntuonwindows_79rhkp1fndgsc\localstate\rootfs\usr\bin\python2.7" enable=yes```
-    * ファイアウォール規則を追加する方法の詳細については、次を参照してください[リンク。](https://support.microsoft.com/en-us/help/947709/how-to-use-the-netsh-advfirewall-firewall-context-instead-of-the-netsh)
-* Wsl.exe を使用する場合は、ユーザーの既定のシェルを尊重します。 [GH 2372]
-* すべてのネットワーク インターフェイスは、イーサネットとして報告します。 [GH 2996]
-* 破損している/etc/passwd ファイルの処理の改善。 [GH 3001]
+* Futex pi 対応の操作のサポートを追加します。 [GH 1006]
+    * 優先順位は現在サポートされている WSL 機能ではないため、制限がありますが、標準の使用をブロック解除する必要があります。
+* WSL プロセス用の Windows ファイアウォールのサポート。 [GH 1852]
+    * たとえば、WSL python プロセスが任意のポートでリッスンできるようにするには、管理者特権の Windows cmd を使用します。```netsh.exe advfirewall firewall add rule name=wsl_python dir=in action=allow program="C:\users\<username>\appdata\local\packages\canonicalgrouplimited.ubuntuonwindows_79rhkp1fndgsc\localstate\rootfs\usr\bin\python2.7" enable=yes```
+    * ファイアウォール規則を追加する方法の詳細については、「[リンク](https://support.microsoft.com/en-us/help/947709/how-to-use-the-netsh-advfirewall-firewall-context-instead-of-the-netsh)」を参照してください。
+* Wsl を使用するときのユーザーの既定のシェルを尊重します。 [GH 2372]
+* すべてのネットワークインターフェイスをイーサネットとして報告します。 [GH 2996]
+* 破損した/etc/passwd ファイルの処理が改善されます。 [GH 3001]
 
 ### <a name="console"></a>Console
-* バグ修正。
+* 修正はありません。
 
-### <a name="ltp-results"></a>成る結果:
-進行中のテスト。
+### <a name="ltp-results"></a>LTP の結果:
+テストを実行中です。
 
-## <a name="build-17618-skip-ahead"></a>ビルド 17618 (スキップ先)
-一般的な Windows ビルド 17618 に関する情報を参照してください、 [Windows ブログ](https://blogs.windows.com/windowsexperience/2018/03/07/announcing-windows-10-insider-preview-build-17618-skip-ahead/)します。
+## <a name="build-17618-skip-ahead"></a>ビルド 17618 (前へスキップ)
+ビルド17618の一般的な Windows 情報については、 [windows のブログ](https://blogs.windows.com/windowsexperience/2018/03/07/announcing-windows-10-insider-preview-build-17618-skip-ahead/)を参照してください。
 
 ### <a name="wsl"></a>WSL
-* NT の相互運用機能 pseudoconsole 機能が導入 [GH 988、1366、1433、1542、2370、2406]。
-* レガシ インストール メカニズム (lxrun.exe) は非推奨とされました。 ディストリビューションをインストールするためのサポートされているメカニズムは、Microsoft Store からです。
+* NT interop の擬似コンソール機能の導入 [GH 988、1366、1433、1542、2370、2406]。
+* レガシインストールメカニズム (lxrun) は非推奨となりました。 ディストリビューションのインストールに関してサポートされているメカニズムは、Microsoft Store を使用することです。
 
 ### <a name="console"></a>Console
-* バグ修正。
+* 修正はありません。
 
-### <a name="ltp-results"></a>成る結果:
-進行中のテスト。
+### <a name="ltp-results"></a>LTP の結果:
+テストを実行中です。
 
 ## <a name="build-17110"></a>ビルド 17110
-一般的な Windows ビルド 17110 に関する情報を参照してください、 [Windows ブログ](https://blogs.windows.com/windowsexperience/2018/02/27/announcing-windows-10-insider-preview-build-17110-fast/)します。
+ビルド17110の一般的な Windows 情報については、 [windows のブログ](https://blogs.windows.com/windowsexperience/2018/02/27/announcing-windows-10-insider-preview-build-17110-fast/)を参照してください。
 
 ### <a name="wsl"></a>WSL
-* Windows [GH 2928] から終了する/init を許可します。
-* DrvFs は既定でディレクトリあたり大文字小文字の区別を使用するようになりました (に相当します"ケース dir ="マウント オプション)。
-    * 使用して"ケース force ="(以前の動作) では、レジストリ キーを設定する必要があります。 有効にするのには、次のコマンドを実行"ケース force ="それを使用する必要がある場合: reg HKLM\SYSTEM\CurrentControlSet\Services\lxss/v DrvFsAllowForceCaseSensitivity/t REG_DWORD/d 1 を追加します。
-    * WSL で大文字と小文字を区別する必要がある Windows の以前のバージョンで作成された既存のディレクトリがある場合は、マークと小文字を区別する fsutil.exe を使用して: fsutil.exe ファイル setcasesensitiveinfo<path>を有効にします。
-* Uname syscall から返される文字列を NULL に終了します。
+* /Init を Windows から終了することを許可します [GH 2928]。
+* DrvFs では、既定でディレクトリごとの大文字小文字の区別が使用されるようになりました ("case = dir" マウントオプションと同等)。
+    * "Case = force" (以前の動作) を使用するには、レジストリキーを設定する必要があります。 次のコマンドを実行して、使用する必要がある場合は "case = force" を有効にします。 reg add HKLM\SYSTEM\CurrentControlSet\Services\lxss/v DrvFsAllowForceCaseSensitivity/t REG_DWORD/d 1
+    * 以前のバージョンの Windows で wsl で作成された既存のディレクトリがあり、大文字と小文字を区別する必要がある場合は、fsutil を使用し<path>て大文字と小文字を区別するように指定します。 fsutil .exe ファイル setcasesensitiveinfo enable
+* Uname syscall から返された NULL の終了文字列。
 
 ### <a name="console"></a>Console
-* バグ修正。
+* 修正はありません。
 
-### <a name="ltp-results"></a>成る結果:
-進行中のテスト。
+### <a name="ltp-results"></a>LTP の結果:
+テストを実行中です。
 
-## <a name="build-17107"></a>ビルド 17107
-一般的な Windows ビルド 17107 に関する情報を参照してください、 [Windows ブログ](https://blogs.windows.com/windowsexperience/2018/02/23/announcing-windows-10-insider-preview-build-17107-fast-ring/)します。
+## <a name="build-17107"></a>ビルド17107
+ビルド17107の一般的な Windows 情報については、 [windows のブログ](https://blogs.windows.com/windowsexperience/2018/02/23/announcing-windows-10-insider-preview-build-17107-fast-ring/)を参照してください。
 
 ### <a name="wsl"></a>WSL
-* マスター pty エンドポイント [GH 2552] 上の TCSETSF と TCSETSW をサポートします。
-* 同時の相互運用プロセスの開始と、EINVAL [GH 2813] が発生することができます。
-* メモリ stat に適切なトレースの状態を表示する PTRACE_ATTACH を修正します。
-* CLEARTID と SETTID の両方のフラグでの有効期間が短いプロセスの複製、修正プログラムの競合はでした TID アドレスをクリアせずに終了します。
-* Pre 17093 ビルドから移動するときに、Linux ファイル システムのディレクトリをアップグレードする場合は、メッセージを表示します。 17093 ファイル システムの変更の詳細については、のリリース ノートを参照してください。 [17093](https://github.com/MicrosoftDocs/WSL/blob/live/WSL/release-notes.md#build-17093)します。
+* マスター pty エンドポイントで TCSETSF と TCSETSF をサポートする [GH 2552]。
+* 相互運用プロセスを同時に開始すると、EINVAL [GH 2813] になります。
+* /Proc/pid/status. に適切なトレースの状態を表示するように PTRACE_ATTACH を修正します。
+* CLEARTID フラグと SETTID フラグの両方で複製された短い有効期間のプロセスが、TID アドレスをクリアせずに終了する可能性がある競合を修正しました。
+* 17093より前のビルドから移動するときに、Linux ファイルシステムディレクトリをアップグレードするときにメッセージを表示します。 17093ファイルシステムの変更の詳細については、 [17093](https://github.com/MicrosoftDocs/WSL/blob/live/WSL/release-notes.md#build-17093)のリリースノートを参照してください。
 
 ### <a name="console"></a>Console
-* バグ修正。
+* 修正はありません。
 
-### <a name="ltp-results"></a>成る結果:
-進行中のテスト。
+### <a name="ltp-results"></a>LTP の結果:
+テストを実行中です。
 
-## <a name="build-17101"></a>ビルド 17101
-一般的な Windows ビルド 17101 に関する情報を参照してください、 [Windows ブログ](https://blogs.windows.com/windowsexperience/2018/02/14/announcing-windows-10-insider-preview-build-17101-fast-build-17604-skip-ahead/)します。
+## <a name="build-17101"></a>ビルド17101
+ビルド17101の一般的な Windows 情報については、 [windows のブログ](https://blogs.windows.com/windowsexperience/2018/02/14/announcing-windows-10-insider-preview-build-17101-fast-build-17604-skip-ahead/)を参照してください。
 
 ### <a name="wsl"></a>WSL
-* Signalfd をサポートします。 [GH 129]
-* ファイル名がプライベートの Unicode 文字としてエンコードすることによって、NTFS の無効な文字を含むをサポートします。 [GH 1514]
-* 書き込みがサポートされていない場合、自動マウントは読み取り専用にフォールバックが。 [GH 2603]
-* (絵文字の文字) などの Unicode サロゲート ペアの貼り付けを許可します。 [GH 2765]
-* 擬似/proc と/sys が読み取りを返すし、select、ポーリング、epoll、副次的 [GH 2838] からの準備完了の書き込み
-* レジストリが改ざんされてまたは破損するいると、無限ループに移動するサービスを引き起こす可能性のある問題を解決します。
-* Iproute2 の新しい (4.14 アップ ストリーム) バージョンを使用する netlink メッセージを修正します。
+* Signalfd のサポート。 [GH 129]
+* ファイル名に無効な NTFS 文字を含むファイル名は、プライベート Unicode 文字としてエンコードすることによってサポートされます。 [GH 1514]
+* 書き込みがサポートされていない場合、自動マウントは読み取り専用にフォールバックします。 [GH 2603]
+* Unicode サロゲートペア (絵文字文字など) の貼り付けを許可します。 [GH 2765]
+* /Proc および/sys の疑似ファイルは、select、poll、epoll、et al から読み取りおよび書き込み準備を返す必要があります。 [GH 2838]
+* レジストリが改ざんされているか、または破損している場合に、サービスが無限ループに入る可能性のある問題を修正しました。
+* Iproute2 の新しい (アップストリーム 4.14) バージョンで動作するように netlink メッセージを修正します。
 
 ### <a name="console"></a>Console
-* バグ修正。
+* 修正はありません。
 
-### <a name="ltp-results"></a>成る結果:
-進行中のテスト。
+### <a name="ltp-results"></a>LTP の結果:
+テストを実行中です。
 
-## <a name="build-17093"></a>ビルド 17093
-一般的な Windows ビルド 17093 に関する情報を参照してください、 [Windows ブログ](https://blogs.windows.com/windowsexperience/2018/02/07/announcing-windows-10-insider-preview-build-17093-pc/)します。
+## <a name="build-17093"></a>ビルド17093
+ビルド17093の一般的な Windows 情報については、 [windows のブログ](https://blogs.windows.com/windowsexperience/2018/02/07/announcing-windows-10-insider-preview-build-17093-pc/)を参照してください。
 
 #### <a name="important"></a>重要:
-このビルドにアップグレードした後初めて WSL を開始するときに、Linux ファイル システムのディレクトリをアップグレードする作業の実行が必要です。 緩やかに変化を開始する WSL が表示されるようには、数分にかかるこの可能性があります。 これは、ストアからインストールする各配布とにのみ発生する必要があります。
-* DrvFs での大文字小文字の区別のサポートが向上しました。
-    * DrvFs は、ディレクトリあたり大文字小文字の区別をサポートします。 これは、新しいフラグ設定可能なディレクトリをそれらのディレクトリ内のすべての操作を扱う必要があるかを示すで小文字の区別、でも Windows アプリケーション大文字と小文字が異なるだけファイルを正しく開くことができます。
-    * DrvFs がディレクトリ単位ごとに大文字小文字の区別を制御する新しいマウント オプション
-        * ケース force =: すべてのディレクトリは小文字の区別 (ドライブのルート) を除くに扱われます。 WSL で作成された新しいディレクトリは、大文字小文字が区別としてマークされます。 これは、新しいディレクトリの大文字と小文字をマークすることを除く、従来の動作です。
-        * ケース = dir: ディレクトリあたり大文字小文字の区別フラグを使用してディレクトリだけを小文字の区別; に扱われますその他のディレクトリは、大文字と小文字を区別しません。 WSL で作成された新しいディレクトリは、大文字小文字が区別としてマークされます。
-        * ケース = オフ: ディレクトリあたり大文字小文字の区別フラグを使用してディレクトリだけを小文字の区別; に扱われますその他のディレクトリは、大文字と小文字を区別しません。 WSL で作成された新しいディレクトリは、大文字と小文字を区別しないとしてマークされます。
-    * 注: 以前のリリースで WSL で作成されたディレクトリがないこのフラグが設定されるのでは扱われません小文字の区別を使用する場合、"ケース dir ="オプション。 既存のディレクトリにこのフラグを設定する方法は近日公開予定。
-    * これらのオプションを使用してマウントの例 (既存のドライブをする必要がありますまずマウントを解除する前に、さまざまなオプションをマウントすることができます): sudo mount-t drvfs c:、/mnt/retention/o c ケース dir を =
-    * ここでは、ケース = 強制は、既定のオプション。 これは、ケースに変更、将来 dir を = です。
-* 例: DrvFs をマウントする際に Windows パスにスラッシュに使用することようになりましたことができます: sudo-t drvfs//server/share/mnt/share をマウントします。
-* WSL は、今すぐ [GH 2636] インスタンスの起動中に、/etc/fstab ファイルを処理します。
-    * これは自動的に DrvFs ドライブをマウントする前に行われますfstab によって既にマウントされていたすべてのドライブはいない再マウントする、自動的に特定のドライブのマウント ポイントを変更することができます。
-    * この動作は wsl.conf を使用してオフにすることができます。
-* /Proc でマウント、mountinfo mountstats ファイルは、バック スラッシュとスペース [GH 2799] などの特殊文字を正しくエスケープします。
-* メタデータが有効にした場合、WSL シンボリック リンク、または fifo ソケットなど DrvFs で作成された特別なファイルのコピーし、Windows 間で移動ようになりましたことができます。
+このビルドにアップグレードした後に初めて WSL を開始するときは、Linux ファイルシステムディレクトリをアップグレードする作業を実行する必要があります。 この処理には数分かかる場合があるため、WSL の開始に時間がかかることがあります。 これは、ストアからインストールされた各ディストリビューションにつき1回のみ発生します。
+* DrvFs での大文字と小文字の区別のサポートが向上しました。
+    * DrvFs では、ディレクトリごとの大文字小文字の区別がサポートされるようになりました。 これは、ディレクトリに設定できる新しいフラグで、これらのディレクトリ内のすべての操作を大文字と小文字を区別して扱う必要があることを示します。これにより、Windows アプリケーションでも大文字と小文字のみが異なるファイルを正しく開くことができます。
+    * DrvFs には、ディレクトリごとに大文字と小文字の区別を制御する新しいマウントオプションがあります。
+        * case = force: すべてのディレクトリは大文字と小文字を区別して処理されます (ドライブのルートを除く)。 WSL で作成された新しいディレクトリは、大文字と小文字が区別されます。 これは、新しいディレクトリの大文字小文字の区別をマークする場合を除き、従来の動作です。
+        * case = dir: ディレクトリごとの大文字小文字の区別フラグを持つディレクトリのみが、大文字と小文字を区別して扱われます。他のディレクトリでは大文字と小文字が区別されます。 WSL で作成された新しいディレクトリは、大文字と小文字が区別されます。
+        * case = off: ディレクトリごとの大文字小文字の区別フラグを持つディレクトリのみが、大文字と小文字を区別して扱われます。他のディレクトリでは大文字と小文字が区別されます。 WSL で作成された新しいディレクトリは、大文字と小文字が区別されません。
+    * 注: 以前のリリースで WSL によって作成されたディレクトリには、このフラグが設定されていないため、"case = dir" オプションを使用した場合、は大文字と小文字が区別されません。 既存のディレクトリにこのフラグを設定する方法は近日中に予定されています。
+    * これらのオプションを使用してマウントする例 (既存のドライブの場合は、別のオプションでマウントする前にマウントを解除する必要があります): sudo mount-t drvfs C:/mnt/c case = dir
+    * ここでは、case = force は引き続き既定のオプションです。 これは、将来、case = dir に変更されます。
+* DrvFs をマウントするときに Windows パスでスラッシュを使用できるようになりました。例: sudo mount-t drvfs/server/mnt/share
+* WSL は、インスタンスの開始時に/etc/fstab ファイルを処理するようになりました [GH 2636]。
+    * これは、DrvFs ドライブを自動的にマウントする前に行われます。fstab によって既にマウントされているドライブは自動的には再マウントされないため、特定のドライブのマウントポイントを変更することができます。
+    * この動作は、wsl を使用して無効にすることができます。
+* Mount、mountinfo、および mountstats の各ファイルは、円記号やスペースなどの特殊文字を正しくエスケープします [GH 2799]
+* WSL シンボリックリンクなどの DrvFs を使用して作成された特殊なファイル、またはメタデータが有効になっている場合は、fifo とソケットを使用して、Windows からコピーおよび移動できるようになりました。
 
-#### <a name="wsl-is-more-configurable-with-wslconf"></a>WSL は wsl.conf でさらに構成できます。
-サブシステムを起動するたびに適用される WSL で自動的に特定の機能を構成するためのメソッドを追加しました。 これには、自動マウント オプションおよびネットワークの構成が含まれます。 こちらのブログでの詳細については、について説明します。 https://aka.ms/wslconf
+#### <a name="wsl-is-more-configurable-with-wslconf"></a>WSL は wsl. conf で構成可能
+WSL で特定の機能を自動的に構成するためのメソッドを追加しました。これは、サブシステムを起動するたびに適用されます。 これには、自動マウントオプションとネットワーク構成が含まれます。 詳細については、次のブログ投稿を参照してください。 https://aka.ms/wslconf
 
-#### <a name="afunix-allows-socket-connections-between-linux-processes-on-wsl-and-windows-native-processes"></a>AF_UNIX は、WSL 上の Linux プロセスと Windows のネイティブ プロセスの間のソケット接続を許可します。
-WSL および Windows アプリケーションは、Unix ソケット上で互いと通信ようになりましたできます。 Windows でサービスを実行して、Windows と WSL の両方のアプリで使用できるようにする場合を考えます。 ここで、Unix ソケットでできることです。 読み取りでの詳細は私たちのブログ投稿 https://aka.ms/afunixinterop
+#### <a name="afunix-allows-socket-connections-between-linux-processes-on-wsl-and-windows-native-processes"></a>AF_UNIX は、WSL および Windows ネイティブプロセスでの Linux プロセス間のソケット接続を許可します。
+WSL と Windows アプリケーションは、Unix ソケット経由で相互に通信できるようになりました。 Windows でサービスを実行し、Windows と WSL アプリの両方で使用できるようにする場合を考えてみましょう。 これは、Unix ソケットで可能です。 詳細については、ブログの投稿の「」を参照してください。 https://aka.ms/afunixinterop
 
 ### <a name="wsl"></a>WSL
-* Mmap() MAP_NORESERVE [GH 121、2784] でのサポートします。
-* CLONE_PTRACE と CLONE_UNTRACED [2781 GH 121、] をサポートします。
-* [GH 121、2781] の複製で SIGCHLD 非終了のシグナルを処理します。
+* MAP_NORESERVE を使用した mmap () のサポート [GH 121、2784]
+* Support CLONE_PTRACE and CLONE_UNTRACED [GH 121, 2781]
+* 複製で SIGCHLD 以外の終了シグナルを処理する [GH 121, 2781]
 * スタブ/proc/sys/fs/inotify/max_user_instances と/proc/sys/fs/inotify/max_user_watches [GH 1705]
-* [GH 1884] の非ゼロ オフセットを持つロード ヘッダーを含む ELF バイナリの読み込みエラー
-* イメージの読み込み時に末尾のページのバイトをゼロにします。
-* Execve プロセスが終了するサイレント モードでのケースを削減します。
+* 0以外のオフセットで読み込みヘッダーを含む ELF バイナリの読み込み中にエラーが発生した [GH 1884]
+* イメージの読み込み時に、ページの末尾のバイトをゼロアウトします。
+* Execve がサイレントモードでプロセスを終了するケースを減らす
 
 ### <a name="console"></a>Console
-* バグ修正。
+* 修正はありません。
 
-### <a name="ltp-results"></a>成る結果:
-進行中のテスト。
+### <a name="ltp-results"></a>LTP の結果:
+テストを実行中です。
 
 ## <a name="build-17083"></a>ビルド 17083
-一般的な Windows ビルド 17083 に関する情報を参照してください、 [Windows ブログ](https://blogs.windows.com/windowsexperience/2018/01/24/announcing-windows-10-insider-preview-build-17083-for-pc/)します。
+ビルド17083の一般的な Windows 情報については、 [windows のブログ](https://blogs.windows.com/windowsexperience/2018/01/24/announcing-windows-10-insider-preview-build-17083-for-pc/)を参照してください。
 
 ### <a name="wsl"></a>WSL
-* Epoll [GH 2798、2801 を報告しました 2857] に関連する固定のバグチェック
-* ASLR [GH 1185、2870] をオフにするときに固定がハングします。
-* Mmap 操作にアトミック [GH 2732] が表示されることを確認します。
+* Epoll に関連するバグチェック (GH 2798、2801、2857) を修正します。
+* ASLR をオフにするとハングを修正する [GH 1185, 2870]
+* Mmap 操作がアトミックとして表示されることを確認する [GH 2732]
 
 ### <a name="console"></a>Console
-* バグ修正。
+* 修正はありません。
 
-### <a name="ltp-results"></a>成る結果:
-進行中のテスト。
+### <a name="ltp-results"></a>LTP の結果:
+テストを実行中です。
 
-## <a name="build-17074"></a>ビルド 17074
-一般的な Windows ビルド 17074 に関する情報を参照してください、 [Windows ブログ](https://blogs.windows.com/windowsexperience/2018/01/11/announcing-windows-10-insider-preview-build-17074-pc/)します。
+## <a name="build-17074"></a>ビルド17074
+ビルド17074の一般的な Windows 情報については、 [windows のブログ](https://blogs.windows.com/windowsexperience/2018/01/11/announcing-windows-10-insider-preview-build-17074-pc/)を参照してください。
 
 ### <a name="wsl"></a>WSL
-* 固定のストレージ形式の DrvFs メタデータ [GH 2777] </br>
-概要DrvFs メタデータがこのビルドは表示が正しくないかまったくない前に作成します。 影響を受けるファイルを修正するのにには、メタデータを再適用するのに chmod、chown を使用します。
-* 複数の信号と再開可能な syscall で問題を修正しました。
+* DrvFs メタデータの固定ストレージ形式 [GH 2777] </br>
+**重要:** このビルドの前に作成された DrvFs メタデータは、正しく表示されないか、まったく表示されません。 影響を受けるファイルを修正するには、chmod と chown を使用してメタデータを再適用します。
+* 複数のシグナルと再開可能な syscall の問題を修正した。
 
 ### <a name="console"></a>Console
-* バグ修正。
+* 修正はありません。
 
-### <a name="ltp-results"></a>成る結果:
-進行中のテスト。
+### <a name="ltp-results"></a>LTP の結果:
+テストを実行中です。
 
-## <a name="build-17063"></a>ビルド 17063
-一般的な Windows ビルド 17063 に関する情報を参照してください、 [Windows ブログ](https://blogs.windows.com/windowsexperience/2017/12/19/announcing-windows-10-insider-preview-build-17063-pc/)します。
+## <a name="build-17063"></a>ビルド17063
+ビルド17063の一般的な Windows 情報については、 [windows のブログ](https://blogs.windows.com/windowsexperience/2017/12/19/announcing-windows-10-insider-preview-build-17063-pc/)を参照してください。
 
 ### <a name="wsl"></a>WSL
-* DrvFs には、Linux の追加のメタデータがサポートされています。 これにより、所有者と chmod/chown とも fifo、unix ソケット デバイス ファイルなどの特殊なファイルの作成を使用してファイルのモードを設定できます。 これは既定で無効にここではまだ実験段階であるためです。
-**注:** DrvFs で使用されるメタデータ形式でバグを修正しました。 メタデータの実験用には、このビルドで動作しますが、将来のビルドのこのビルドによって作成されたメタデータが正しく読み取られない。  手動で変更されたファイルの所有者を更新する必要があり、カスタム デバイス ID を持つデバイスが再作成する必要があります。
+* DrvFs は、追加の Linux メタデータをサポートします。 これにより、chmod/chown を使用してファイルの所有者とモードを設定できるほか、fifo、unix ソケット、デバイスファイルなどの特殊なファイルを作成することもできます。 現時点では、これはまだ試験段階であるため、既定では無効になっています。
+**注:** DrvFs で使用されるメタデータ形式のバグを修正しています。 メタデータは実験のためにこのビルドで機能しますが、今後のビルドでは、このビルドによって作成されたメタデータを正しく読み取ることができません。  変更したファイルの所有者を手動で更新しなければならない場合があります。カスタムデバイス ID を持つデバイスを再作成する必要があります。
 
-  メタデータのオプションを使用してマウント DrvFs を有効にする (既存のマウントを有効にするにする必要がありますまずマウントを解除できます)。
+  有効にするには、メタデータオプションを使用して DrvFs をマウントします (既存のマウントで有効にするには、最初にマウントを解除する必要があります)。
 
   ```bash
   mount -t drvfs C: /mnt/c -o metadata
   ```
 
-  Linux のアクセス許可は、追加のメタデータとしては、ファイルに追加されます。Windows のアクセス許可には影響しません。  メタデータを削除 Windows エディターを使用してファイルを編集することがありますに注意してください。 この場合、ファイルは、その既定のアクセス許可に戻されます。
+  Linux のアクセス許可は、ファイルに追加のメタデータとして追加されます。Windows のアクセス許可には影響しません。  Windows エディターを使用してファイルを編集すると、メタデータが削除される場合があることに注意してください。 この場合、ファイルは既定のアクセス許可に戻ります。
 
-* メタデータなしのコントロール ファイルに追加されたマウント オプション DrvFs。
-  * uid: すべてのファイルの所有者を使用するユーザーの ID。
-  * gid: すべてのファイルの所有者のためのグループ ID。
-  * umask: すべてのファイルとディレクトリを除外するアクセス許可の 8 進数のマスク。
-  * fmask: すべての定期的なファイルを除外するアクセス許可の 8 進数のマスク。
-  * dmask: すべてのディレクトリを除外するアクセス許可の 8 進数のマスク。
+* メタデータなしでファイルを制御するための、DrvFs にマウントオプションを追加しました。
+  * uid: すべてのファイルの所有者に使用されるユーザー ID。
+  * gid: すべてのファイルの所有者に使用されるグループ ID。
+  * umask: すべてのファイルとディレクトリに対して除外するアクセス許可の8進数のマスク。
+  * fmask: すべての標準ファイルに対して除外するアクセス許可の8進数のマスク。
+  * dmask: すべてのディレクトリに対して除外するアクセス許可の8進数のマスク。
 
   例:
   ```
   mount -t drvfs C: /mnt/c -o uid=1000,gid=1000,umask=22,fmask=111
   ```
 
-  メタデータのないファイルの既定のアクセス許可を指定するメタデータのオプションとの組み合わせ。
+  メタデータオプションと組み合わせて、メタデータのないファイルに対する既定のアクセス許可を指定します。
 
-* 新しい環境変数を導入`WSLENV`WSL と Win32 の間の環境変数のフローを構成する。
+* では、wsl と`WSLENV`Win32 の間で環境変数がどのように流れるかを構成するために、新しい環境変数が導入されました。
 
   例:
 
@@ -544,60 +555,60 @@ WSL および Windows アプリケーションは、Unix ソケット上で互�
   WSLENV=GOPATH/l:USERPROFILE/pu:DISPLAY
   ```
 
-  `WSLENV` 環境変数 Win32 から WSL プロセスまたは WSL から Win32 プロセスを起動するときに含めることができるコロンで区切られた一覧を示します。  各変数は、次の後が変換される方法を指定するフラグのスラッシュに付けることができます。
-  * p:値は、Win32 のパスと WSL パスの間を変換するパスです。
-  * L:値は、パスの一覧です。 WSL、コロンで区切られたリストを勧めします。 Win32 では、セミコロン区切りのリストを勧めします。
-  * u:値は、必ず含まれる Win32 の WSL を呼び出すときに
-  * 属性:値は、必ず含まれる WSL から Win32 を呼び出すときに
+  `WSLENV`は、wsl から Win32 または Win32 プロセスから WSL プロセスを起動するときに含めることができる環境変数のコロン区切りの一覧です。  各変数には、スラッシュとその後に続くフラグを付けて、変換方法を指定できます。
+  * irtran-p値は、WSL パスと Win32 パスの間で変換されるパスです。
+  * 左右値はパスの一覧です。 WSL では、コロンで区切られたリストです。 Win32 では、セミコロンで区切られたリストです。
+  * u値は、Win32 から WSL を呼び出すときにのみ含める必要があります
+  * リダイレクト値は、WSL から Win32 を呼び出すときにのみ含める必要があります
 
-  設定できる`WSLENV`.bashrc や、ユーザーのカスタムの Windows 環境でします。
+  ユーザーのカスタム`WSLENV` Windows 環境では、.bashrc またはを設定できます。
 
-* drvfs マウントは、tar からのタイムスタンプを正しく保持 cp-p (GH 1939)
-* drvfs シンボリック リンク レポートの適切なサイズ (GH 2641)
-* 読み取り/書き込みの IO サイズが非常に大きな (GH 2653) のしくみ
-* プロセス グループ Id (GH 2534) で未定義の動作します。
-* 大規模な予約のリージョンの強化された mmap パフォーマンスが大幅にghc (GH 1671) のパフォーマンスが向上します。
-* READ_IMPLIES_EXEC; のパーソナリティのサポート最大値および clisp (GH 1185) を修正します。
-* mprotect PROT_GROWSDOWN; をサポートしています修正 clisp (GH 1128)
-* オーバー コミット モードをページ フォールトを修正修正 sbcl (GH 1128)
-* 複製は、複数のフラグの組み合わせをサポートしています
-* 選択/epoll epoll ファイル (以前れません) をサポートします。
-* 実装されていない syscall の ptrace を通知します。
-* Resolv.conf nameservers [GH 2694] を生成するときのないインターフェイスを無視します。
-* 物理アドレスなしのネットワーク インターフェイスを列挙します。 [GH 2685]
-* 追加のバグ修正と機能強化。
+* drvfs マウントによって tar、cp-p からのタイムスタンプが正しく保持される (GH 1939)
+* drvfs symlink は正しいサイズを報告します (GH 2641)
+* I/O サイズが非常に大きい場合の読み取り/書き込みの機能 (GH 2653)
+* waitpid はプロセスグループ Id と連動します (GH 2534)
+* 大きな予約領域での mmap パフォーマンスが大幅に向上しました。ghc のパフォーマンスを向上させます (GH 1671)
+* READ_IMPLIES_EXEC でのパーソナリティのサポート最大化 a と clisp (GH 1185) を修正します。
+* mprotect は PROT_GROWSDOWN をサポートしています。clisp (GH 1128) を修正します。
+* 過剰コミットモードでのページフォールトの修正sbcl (GH 1128) を修正します。
+* 複製では、より多くのフラグの組み合わせがサポートされます
+* Epoll ファイルの select/epoll (以前は no op) をサポートします。
+* 未実装の syscall の ptrace を通知します。
+* Resolv.conf を生成するときにアップしていないインターフェイスを無視する [GH 2694]
+* 物理アドレスのないネットワークインターフェイスを列挙します。 [GH 2685]
+* 追加のバグの修正と改善。
 
-### <a name="linux-tools-available-to-developers-on-windows"></a>Windows 上の開発者が利用できる Linux ツール
+### <a name="linux-tools-available-to-developers-on-windows"></a>Windows の開発者が使用できる Linux ツール
 
-* Windows コマンド ライン ツール チェーンと curl の多く (tar) が含まれています。
-  読み取り[このブログ](https://aka.ms/tarcurlwindows)をこれら 2 つの新しいツールの追加の詳細を学習し、Windows での開発者エクスペリエンスを形成している方法を参照してください。
+* Windows コマンドラインツールチェーンには、bsdtar (tar) と curl が含まれています。
+  この2つの新しいツールの追加の詳細と、Windows での開発者エクスペリエンスの整形方法を確認するには、[このブログ](https://aka.ms/tarcurlwindows)を参照してください。
 
-*   `AF_UNIX` Windows Insider SDK (17061 +) で使用できます。
-  読み取り[このブログ](https://blogs.msdn.microsoft.com/commandline/2017/12/19/af_unix-comes-to-windows/)について`AF_UNIX`および Windows の開発者が使用できる方法です。
+*   `AF_UNIX`は、Windows Insider SDK (17061 +) で利用できます。
+  の詳細と、Windows 上の`AF_UNIX`開発者が使用する方法については、[このブログ](https://blogs.msdn.microsoft.com/commandline/2017/12/19/af_unix-comes-to-windows/)を参照してください。
 
 ### <a name="console"></a>Console
-* バグ修正。
+* 修正はありません。
 
-### <a name="ltp-results"></a>成る結果:
-進行中のテスト。
+### <a name="ltp-results"></a>LTP の結果:
+テストを実行中です。
 
 
-## <a name="build-17046"></a>ビルド 17046
+## <a name="build-17046"></a>ビルド17046
 
-一般的な Windows ビルド 17046 に関する情報を参照してください、 [Windows ブログ](https://blogs.windows.com/windowsexperience/2017/11/22/announcing-windows-10-insider-preview-build-17046-pc)します。
+ビルド17046の一般的な Windows 情報については、 [windows のブログ](https://blogs.windows.com/windowsexperience/2017/11/22/announcing-windows-10-insider-preview-build-17046-pc)を参照してください。
 
 ### <a name="fixed"></a>固定
 #### <a name="wsl"></a>WSL
-- アクティブなターミナルをせずに実行するプロセスを許可します。 [GH 709、1007、1511、2252、2391、et al]。
-- CLONE_VFORK といなくて向上をサポートします。 [GH 1878、2615]
-- WSL がネットワーク操作に TDI フィルター ドライバーをスキップします。 [GH 1554]
-- DrvFs は、特定の条件が満たされたときに、NT シンボリック リンクを作成します。 [GH 353、1475、2602]
-    - リンク先は相対である必要があります、マウント ポイントやシンボリック リンクを越える必要がありますいないや、存在する必要があります。
-    - ユーザー必要があります (通常必要 wsl.exe 管理者特権でを起動すること) SE_CREATE_SYMBOLIC_LINK_PRIVILEGE、開発者モードがオンになっている場合を除き、します。
-    - その他のすべての状況で DrvFs はまだ WSL シンボリック リンクを作成します。
-- 管理者特権と、管理者特権以外の WSL インスタンスを同時に実行を許可します。
-- /Proc/sys/kernel/yama/ptrace_scope をサポートします。
-- WSL <> - Windows パスの変換を実行する wslpath を追加します。 [GH 522、1243、1834、2327、et al]。
+- アクティブなターミナルを使用せずにプロセスを実行できるようにします。 [GH 709、1007、1511、2252、2391、et al.]
+- CLONE_VFORK と CLONE_VM のサポートの強化。 [GH 1878、2615]
+- WSL ネットワーク操作の TDI フィルタードライバーをスキップします。 [GH 1554]
+- DrvFs は、特定の条件が満たされたときに NT シンボリックリンクを作成します。 [GH 353、1475、2602]
+    - リンク先は相対パスである必要があり、マウントポイントやシンボリックリンクを越えることはできず、存在する必要があります。
+    - 開発者モードが有効になっていない場合は、ユーザーは SE_CREATE_SYMBOLIC_LINK_PRIVILEGE を持っている必要があります (通常は、管理者特権で起動する必要があります)。
+    - それ以外の状況でも、DrvFs は WSL シンボリックリンクを作成します。
+- 昇格および昇格されていない WSL インスタンスの同時実行を許可します。
+- /Proc/sys/kernel/yama/ptrace_scope のサポート
+- Wslpath を追加して、WSL <-> Windows パス変換を実行します。 [GH 522、1243、1834、2327、et al]
   ```
     wslpath usage:
       -a    force result to absolute path format
@@ -608,628 +619,628 @@ WSL および Windows アプリケーションは、Unix ソケット上で互�
       EX: wslpath ‘c:\users’
   ```
   #### <a name="console"></a>Console
-- バグ修正。
+- 修正はありません。
 
-### <a name="ltp-results"></a>成る結果:
-進行中のテスト。
+### <a name="ltp-results"></a>LTP の結果:
+テストを実行中です。
 
 
-## <a name="build-17040"></a>ビルド 17040
+## <a name="build-17040"></a>ビルド17040
 
-一般的な Windows ビルド 17040 に関する情報を参照してください、 [Windows ブログ](https://blogs.windows.com/windowsexperience/2017/11/16/announcing-windows-10-insider-preview-build-17040-pc)します。<br/>
+ビルド17040の一般的な Windows 情報については、 [windows のブログ](https://blogs.windows.com/windowsexperience/2017/11/16/announcing-windows-10-insider-preview-build-17040-pc)を参照してください。<br/>
 
 
 ### <a name="fixed"></a>固定
 #### <a name="wsl"></a>WSL
-- 17035 以降の修正プログラムがありません。
+- 17035以降の修正プログラムはありません。
 
 #### <a name="console"></a>Console
-- 17035 以降の修正プログラムがありません。
+- 17035以降の修正プログラムはありません。
 
-### <a name="ltp-results"></a>成る結果:
-進行中のテスト。
+### <a name="ltp-results"></a>LTP の結果:
+テストを実行中です。
 
-## <a name="build-17035"></a>ビルド 17035
+## <a name="build-17035"></a>ビルド17035
 
-一般的な Windows ビルド 17035 に関する情報を参照してください、 [Windows ブログ](https://blogs.windows.com/windowsexperience/2017/11/08/announcing-windows-10-insider-preview-build-17035-pc)します。<br/>
+ビルド17035の一般的な Windows 情報については、 [windows のブログ](https://blogs.windows.com/windowsexperience/2017/11/08/announcing-windows-10-insider-preview-build-17035-pc)を参照してください。<br/>
 
 
 ### <a name="fixed"></a>固定
 #### <a name="wsl"></a>WSL
-- DrvFs ファイルへのアクセスによって変更できる場合によっては失敗します。 [GH 2448]
+- DrvFs 上のファイルへのアクセスは、場合によっては、EINVAL で失敗することがあります。 [GH 2448]
 
 #### <a name="console"></a>Console
-- VT モード内の行の挿入/削除するときに色の一部が失われる。
+- VT モードで行を挿入または削除するときに色が失われることがあります。
 
-### <a name="ltp-results"></a>成る結果:
-進行中のテスト。
+### <a name="ltp-results"></a>LTP の結果:
+テストを実行中です。
 
-## <a name="build-17025"></a>ビルド 17025
+## <a name="build-17025"></a>ビルド17025
 
-一般的な Windows ビルド 17025 に関する情報を参照してください、 [Windows ブログ](https://blogs.windows.com/windowsexperience/2017/10/25/announcing-windows-10-insider-preview-build-17025-pc)します。<br/>
+ビルド17025の一般的な Windows 情報については、 [windows のブログ](https://blogs.windows.com/windowsexperience/2017/10/25/announcing-windows-10-insider-preview-build-17025-pc)を参照してください。<br/>
 
 
 ### <a name="fixed"></a>固定
 #### <a name="wsl"></a>WSL
-- 新しいフォア グラウンド プロセス グループ [GH 1653、2510] 内には、初期のプロセスを開始します。
-- SIGHUP 配信では、[GH 2496] を修正します。
-- [GH 2497] 何もない場合は、既定の仮想のブリッジの名前を生成します。
+- 新しいフォアグラウンドプロセスグループで初期プロセスを開始します [GH 1653, 2510]。
+- SIGHUP 配信の修正プログラム [GH 2496]。
+- [GH 2497] が指定されていない場合は、既定の仮想ブリッジ名を生成します。
 - /Proc/sys/kernel/random/boot_id [GH 2518] を実装します。
-- 複数の相互運用機能の stdout と stderr のパイプを修正します。
-- Syncfs システム コールをスタブします。
+- 相互運用機能の stdout/stderr パイプの修正。
+- Syncfs システム呼び出しをスタブします。
 
 #### <a name="console"></a>Console
-- サード パーティ製コンソール [GH 111] の入力の VT 翻訳を修正します。
+- サードパーティコンソールの入力 VT translation の修正 [GH 111]
 
-### <a name="ltp-results"></a>成る結果:
-進行中のテスト。
+### <a name="ltp-results"></a>LTP の結果:
+テストを実行中です。
 
-## <a name="build-17017"></a>ビルド 17017
+## <a name="build-17017"></a>ビルド17017
 
-一般的な Windows ビルド 17017 に関する情報を参照してください、 [Windows ブログ](https://blogs.windows.com/windowsexperience/2017/10/13/announcing-windows-10-insider-preview-build-17017-pc)します。<br/>
+ビルド17017の一般的な Windows 情報については、 [windows のブログ](https://blogs.windows.com/windowsexperience/2017/10/13/announcing-windows-10-insider-preview-build-17017-pc)を参照してください。<br/>
 
 
 ### <a name="fixed"></a>固定
 #### <a name="wsl"></a>WSL
-- 空の [GH 330] ELF プログラム ヘッダーを無視します。
-- 非対話型ユーザー用の WSL インスタンスを作成する LxssManager を許可する (ssh およびスケジュール タスクのサポート) [GH 777、1602]。
-- サポート WSL Win32]-> [WSL (「開始」) のシナリオ [GH 1228]-> [です。
-- [GH 1614] 相互運用機能を介して呼び出すコンソール アプリの終了の制限付きのサポート。
-- Devpts [GH 1948] のマウント オプションをサポートします。
-- Ptrace 子 [GH 2333] の起動をブロックします。
-- EPOLLET [GH 2462] の一部のイベントがありません。
-- PTRACE_GETSIGINFO 用のデータを返します。
-- Lseek で Getdents には、正しくない結果が得られます。
-- データがなくなったをパイプで入力を待機しているいくつかの Win32 相互運用機能アプリ ハングを修正します。
-- Tty/pty ファイルの指定をサポートします。
+- 空の ELF プログラムヘッダー [GH 330] を無視します。
+- LxssManager が非対話型ユーザーの WSL インスタンスを作成できるようにします (ssh およびスケジュールされたタスクのサポート) [GH 777, 1602]。
+- WSL-> Win32 > WSL ("設立") シナリオのサポート [GH 1228]。
+- 相互運用機能によって起動されるコンソールアプリの終了の制限付きサポート [GH 1614]。
+- Devpts のマウントオプション [GH 1948] をサポートします。
+- Ptrace が子スタートアップをブロックしています [GH 2333]。
+- EPOLLET には、一部のイベント [GH 2462] がありません。
+- PTRACE_GETSIGINFO の他のデータを返します。
+- Getdents と lseek では、正しくない結果が得られます。
+- いくつかの Win32 相互運用アプリのハングを修正しました。これ以上データのないパイプで入力を待機しています。
+- O_ASYNC は、tty/pty ファイルをサポートしています。
 - 追加の機能強化とバグ修正
 
 #### <a name="console"></a>Console
-- コンソールには、このリリースで変更が関連付けられていません。
+- このリリースでは、コンソールに関連する変更はありません。
 
-### <a name="ltp-results"></a>成る結果:
-進行中のテスト。
+### <a name="ltp-results"></a>LTP の結果:
+テストを実行中です。
 
 ## <a name="fall-creators-update"></a>Fall Creators Update
 
-## <a name="build-16288"></a>ビルド 16288
+## <a name="build-16288"></a>ビルド16288
 
-一般的な Windows ビルド 16288 に関する情報を参照してください、 [Windows ブログ](https://blogs.windows.com/windowsexperience/2017/09/12/announcing-windows-10-insider-preview-build-16288-pc-build-15250-mobile/#7pLWQbj23JisfzV5.97/)します。<br/>
+ビルド16288の一般的な Windows 情報については、 [windows のブログ](https://blogs.windows.com/windowsexperience/2017/09/12/announcing-windows-10-insider-preview-build-16288-pc-build-15250-mobile/#7pLWQbj23JisfzV5.97/)を参照してください。<br/>
 
 
 ### <a name="fixed"></a>固定
 #### <a name="wsl"></a>WSL
-- 正しく初期化し、uid や gid、ソケット ファイル記述子の設定 [GH 2490] モードのレポート
+- ソケットファイル記述子の uid、gid、およびモードを正しく初期化して報告する [GH 2490]
 - 追加の機能強化とバグ修正
 
 #### <a name="console"></a>Console
-- コンソールには、このリリースで変更が関連付けられていません。
+- このリリースでは、コンソールに関連する変更はありません。
 
-### <a name="ltp-results"></a>成る結果:
-16273 以降変更なし
+### <a name="ltp-results"></a>LTP の結果:
+16273以降の変更はありません
 
-## <a name="build-16278"></a>ビルド 16278
+## <a name="build-16278"></a>ビルド16278
 
-一般的な Windows ビルド 162738 に関する情報を参照してください、 [Windows ブログ](https://blogs.windows.com/windowsexperience/2017/08/29/announcing-windows-10-insider-preview-build-16278-pc/#HMz6Xq7Su68WKi0t.97/)します。<br/>
+ビルド162738の一般的な Windows 情報については、 [windows のブログ](https://blogs.windows.com/windowsexperience/2017/08/29/announcing-windows-10-insider-preview-build-16278-pc/#HMz6Xq7Su68WKi0t.97/)を参照してください。<br/>
 
 
 ### <a name="fixed"></a>固定
 #### <a name="wsl"></a>WSL
-- LX MM 状態 [GH 2415] 解除を行うときにバックアップ ファイルのセクションのマップ ビューを明示的にマップ解除します。
+- LX MM 状態を解除するときに、ファイルによってサポートされるセクションのマップされたビューを明示的にマップ解除する [GH 2415]
 - 追加の機能強化とバグ修正
 
 #### <a name="console"></a>Console
-- コンソールには、このリリースで変更が関連付けられていません。
+- このリリースでは、コンソールに関連する変更はありません。
 
-### <a name="ltp-results"></a>成る結果:
-16273 以降変更なし
+### <a name="ltp-results"></a>LTP の結果:
+16273以降の変更はありません
 
-## <a name="build-16275"></a>ビルド 16275
+## <a name="build-16275"></a>ビルド16275
 
-一般的な Windows ビルド 162735 に関する情報を参照してください、 [Windows ブログ](https://blogs.windows.com/windowsexperience/2017/08/25/announcing-windows-10-insider-preview-build-16275-pc-build-15245-mobile/#8QkxWqQbY37yZslV.97/)します。<br/>
+ビルド162735の一般的な Windows 情報については、 [windows のブログ](https://blogs.windows.com/windowsexperience/2017/08/25/announcing-windows-10-insider-preview-build-16275-pc-build-15245-mobile/#8QkxWqQbY37yZslV.97/)を参照してください。<br/>
 
 
 ### <a name="fixed"></a>固定
 #### <a name="wsl"></a>WSL
-- このリリースで変更に関連付けられた WSL がありません。
+- このリリースでは、WSL 関連の変更はありません。
 
 #### <a name="console"></a>Console
-- コンソールには、このリリースで変更が関連付けられていません。
+- このリリースでは、コンソールに関連する変更はありません。
 
-### <a name="ltp-results"></a>成る結果:
-16273 以降変更なし
+### <a name="ltp-results"></a>LTP の結果:
+16273以降の変更はありません
 
-## <a name="build-16273"></a>ビルド 16273
+## <a name="build-16273"></a>ビルド16273
 
-一般的な Windows ビルド 16273 に関する情報を参照してください、 [Windows ブログ](https://blogs.windows.com/windowsexperience/2017/08/23/announcing-windows-10-insider-preview-build-16273-pc/)します。<br/>
+ビルド16273の一般的な Windows 情報については、 [windows のブログ](https://blogs.windows.com/windowsexperience/2017/08/23/announcing-windows-10-insider-preview-build-16273-pc/)を参照してください。<br/>
 
 
 ### <a name="fixed"></a>固定
 #### <a name="wsl"></a>WSL
-- DrvFs ディレクトリ [GH 2392] の正しくないファイルの種類が報告されることが問題を修正しました
-- その使用 uevent プログラムのブロックを解除する NETLINK_KOBJECT_UEVENT ソケットの作成を許可する [GH 1121、2293、2242、2295、2235、648、637]
-- 接続の非ブロッキングのサポートを追加 [GH 903、1391、1584、1585、1829、2290、2314]
-- 実装 CLONE_FS 複製システム呼び出しフラグ [GH 2242]
-- タブまたは NT の相互運用 [GH 1625、2164] で正しく引用符を処理しないに関する問題を修正します。
-- 解決するには再 WSL を起動しようとするときにエラー [GH 651、2095] のインスタンスにアクセスが拒否されました
-- Futex FUTEX_REQUEUE および FUTEX_CMP_REQUEUE 操作 [GH 2242] 実装します。
-- さまざまな SysFs ファイル [GH 2214] のアクセス許可を修正します。
-- [GH 2290] のセットアップ中に Haskell スタックのハングを修正します。
-- Binfmt_misc 'C' の実装 'o' と 'P' フラグ [GH 2103]
-- Add /proc/sys/kernel /shmmax /shmmni & /threads-max [GH 1753]
-- Ioprio_set システム コール [GH 498] の部分的なサポートを追加します。
-- スタブ SO_REUSEPORT SO_PASSCRED netlink ソケット [GH 69] のサポートを追加 (&)
-- 現在、配布の場合、RegisterDistribuiton から別のエラー コードを返すインストールまたはアンインストールします。
-- 部分的にインストールされている WSL ディストリビューション wslconfig.exe 経由での登録解除を許可します。
-- Udp::msg_peek から python ソケット テスト ハングを修正します。
+- DrvFs がディレクトリに対して正しくないファイルの種類を報告する場合があるという問題を修正しました [GH 2392]
+- Uevent [GH 1121、2293、2242、2295、2235、648、637] を使用するプログラムのブロックを解除するための NETLINK_KOBJECT_UEVENT sockets の作成を許可します
+- 非ブロッキング接続のサポートを追加する [GH 903、1391、1584、1585、1829、2290、2314]
+- CLONE_FS CLONE システム呼び出しフラグを実装する [GH 2242]
+- NT interop でタブまたは引用符を正しく処理しない問題を修正する [GH 1625, 2164]
+- WSL インスタンスを再起動しようとしたときにアクセス拒否エラーを解決する [GH 651、2095]
+- Futex FUTEX_REQUEUE と FUTEX_CMP_REQUEUE 操作の実装 [GH 2242]
+- さまざまな SysFs ファイルのアクセス許可を修正する [GH 2214]
+- セットアップ中に Haskell stack のハングを修正する [GH 2290]
+- Binfmt_misc ' C ' ' O ' および ' P ' フラグを実装する [GH 2103]
+- /Proc/sys/kernel/shmmax/shmmni & 追加する [GH 1753]
+- Ioprio_set システム呼び出しの部分的なサポートを追加する [GH 498]
+- スタブ SO_REUSEPORT & SO_PASSCRED for netlink sockets のサポートの追加 [GH 69]
+- ディストリビューションが現在インストールまたはアンインストールされている場合は、RegisterDistribuiton から別のエラーコードを返します。
+- Wslconfig .exe 経由で部分的にインストールされた WSL ディストリビューションの登録解除を許可する
+- Udp:: msg_peek から python ソケットテストハングを修正します。
 - 追加の機能強化とバグ修正
 
 #### <a name="console"></a>Console
-- コンソールには、このリリースで変更が関連付けられていません。
+- このリリースでは、コンソールに関連する変更はありません。
 
-### <a name="ltp-results"></a>成る結果:
-合計テスト数:1904<br/>
-合計には、テストがスキップされました。209<br/>
-失敗の総数:229<br/>
-[成るテスト実行のログ](https://github.com/Microsoft/CommandLine-Documentation/tree/live/LTP_Results/16273)<br/>
+### <a name="ltp-results"></a>LTP の結果:
+テストの合計:1904<br/>
+スキップされたテストの合計数:209<br/>
+合計エラー数:229<br/>
+[LTP テストの実行ログ](https://github.com/Microsoft/CommandLine-Documentation/tree/live/LTP_Results/16273)<br/>
 
 ## <a name="build-16257"></a>ビルド 16257
 
-一般的な Windows ビルド 16257 に関する情報を参照してください、 [Windows ブログ](https://blogs.windows.com/windowsexperience/2017/08/02/announcing-windows-10-insider-preview-build-16257-pc-build-15237-mobile/)します。<br/>
+ビルド16257の一般的な Windows 情報については、 [windows のブログ](https://blogs.windows.com/windowsexperience/2017/08/02/announcing-windows-10-insider-preview-build-16257-pc-build-15237-mobile/)を参照してください。<br/>
 
 
 ### <a name="fixed"></a>固定
 #### <a name="wsl"></a>WSL
-- Prlimit64 システム コールを実装します。
-- Ulimit n (setrlimit RLIMIT_NOFILE) のサポートを追加する [GH 1688]
-- スタブ MSG_MORE TCP ソケット [GH 2351]
-- 無効な AT_EXECFN 補助ベクター動作 [GH 2133] を修正します。
-- コンソール/tty のコピー/貼り付けの動作を修正しより優れたいっぱいバッファー処理 [GH 2204、2131] の追加
-- ユーザー ID の設定およびグループ ID の設定のプログラム [GH 2031] 補助のベクトル内の AT_SECURE を設定します。
-- 擬似端末のマスター エンドポイント TIOCPGRP [GH 1063] は処理されません。
-- 修正プログラム lseek が LxFs [GH から 2310] 内のディレクトリを巻き戻すには
-- 多量の使用 [GH 1882] 後に/dev/ptmx をロックします。
+- Prlimit64 システム呼び出しを実装する
+- Ulimit-n (setrlimit RLIMIT_NOFILE) のサポートを追加する [GH 1688]
+- TCP ソケットのスタブ MSG_MORE [GH 2351]
+- 無効な AT_EXECFN 補助ベクター動作の修正 [GH 2133]
+- コンソール/tty のコピー/貼り付け動作を修正し、完全なバッファー処理をさらに追加する [GH 2204, 2131]
+- AT_SECURE プログラムと set-group-ID プログラムの補助ベクターでの設定 [GH 2031]
+- Psuedo-ターミナルマスターエンドポイントが TIOCPGRP を処理しない [GH 1063]
+- Lseek が LxFs のディレクトリを巻き戻していることを修正する [GH 2310]
+- 大きな使用率が高くなった後の GH のロック [1882]
 - 追加の機能強化とバグ修正
 
 #### <a name="console"></a>Console
-- 水平方向の線/アンダー スコア Everywhere [GH 2168] の修正
-- 注文処理の変更 [GH 2170] を終了するは困難加えたら NPM 問題の修正します。
-- この新しい配色を追加するには。 https://blogs.msdn.microsoft.com/commandline/2017/08/02/updating-the-windows-console-colors/
+- すべての場所で水平線/アンダースコアを修正する [GH 2168]
+- プロセスの順序が変更されたことを修正し、NPM を閉じることが困難になる [GH 2170]
+- 新しい配色を追加しました。 https://blogs.msdn.microsoft.com/commandline/2017/08/02/updating-the-windows-console-colors/
 
-### <a name="ltp-results"></a>成る結果:
-16251 以降変更なし
+### <a name="ltp-results"></a>LTP の結果:
+16251以降の変更はありません
 
-### <a name="syscall-support"></a>Syscall サポート
-WSL でいくつかの実装を持つ新しいまたは強化された syscall の一覧を以下に示します。 少なくとも 1 つのシナリオではこの一覧に syscall がサポートされているが場合がありますがすべてのパラメーター サポートされていませんこの時点で。
+### <a name="syscall-support"></a>Syscall のサポート
+次に示すのは、WSL でいくつかの実装を持つ新しいまたは強化された syscall の一覧です。 この一覧の syscall は、少なくとも1つのシナリオでサポートされていますが、現時点では一部のパラメーターがサポートされていない可能性があります。
 
 `prlimit64`<br/>
 
 ### <a name="known-issues"></a>既知の問題
-#### <a name="github-issue-2392-windows-folders-not-recognized-by-wsl-httpsgithubcommicrosoftbashonwindowsissues2392"></a>[GitHub 問題 2392:Windows フォルダーが WSL で認識されない.](https://github.com/Microsoft/BashOnWindows/issues/2392)
-WSL が経由で Windows のファイル/フォルダーを列挙中に問題が 16257 のビルドで`/mnt/c/...`します。
-この問題は修正されておりで解放する必要がある 2017 年 8 月 14 の開始週に Insider のビルドします。
+#### <a name="github-issue-2392-windows-folders-not-recognized-by-wsl-httpsgithubcommicrosoftbashonwindowsissues2392"></a>[GitHub の問題 2392:Windows フォルダーは WSL によって認識されません...](https://github.com/Microsoft/BashOnWindows/issues/2392)
+ビルド16257では、を介し`/mnt/c/...`て Windows ファイル/フォルダーを列挙するときに、wsl に問題があります。
+この問題は修正されており、8/14/2017 の実行時に、Insider ビルドでリリースされる必要があります。
 
 <br/>
 
-## <a name="build-16251"></a>ビルド 16251
+## <a name="build-16251"></a>ビルド16251
 
-一般的な Windows ビルド 16251 に関する情報を参照してください、 [Windows ブログ](https://blogs.windows.com/windowsexperience/2017/07/26/announcing-windows-10-insider-preview-build-16251-pc-build-15235-mobile/)します。<br/>
+ビルド16251の一般的な Windows 情報については、 [windows のブログ](https://blogs.windows.com/windowsexperience/2017/07/26/announcing-windows-10-insider-preview-build-16251-pc-build-15235-mobile/)を参照してください。<br/>
 
 
 ### <a name="fixed"></a>固定
 #### <a name="wsl"></a>WSL
-- WSL オプションのコンポーネントからベータ版のタグを削除しを参照してください[ブログの投稿](https://blogs.msdn.microsoft.com/commandline/2017/07/28/windows-subsystem-for-linux-out-of-beta/)詳細についてはします。
-- 保存された一連の uid と gid の exec [GH 962、1415、2072] でユーザー ID の設定とグループ ID の設定のバイナリを正しく初期化します。
-- Ptrace PTRACE_O_TRACEEXIT [GH 555] のサポートが追加されました
-- Ptrace サポートが追加されました PTRACE_GETFPREGS と PTRACE_GETREGSET NT_FPREGSET [GH 555] で
-- Ptrace を固定を停止する場合は無視信号
+- WSL オプションコンポーネントからベータタグを削除します。詳細については、[ブログの投稿](https://blogs.msdn.microsoft.com/commandline/2017/07/28/windows-subsystem-for-linux-out-of-beta/)を参照してください。
+- Set-ユーザー ID および set-ID バイナリが exec で正しく初期化されました。 exec [GH 962, 1415, 2072]
+- Ptrace PTRACE_O_TRACEEXIT のサポートを追加しました [GH 555]
+- NT_FPREGSET を使用した ptrace PTRACE_GETFPREGS と PTRACE_GETREGSET のサポートを追加しました [GH 555]
+- 無視されたシグナルで停止する ptrace を修正しました
 - 追加の機能強化とバグ修正
 
 #### <a name="console"></a>Console
-- コンソールには、このリリースで変更が関連付けられていません。
+- このリリースでは、コンソールに関連する変更はありません。
 
-### <a name="ltp-results"></a>成る結果:
-渡すテスト数:768</br>
-失敗したテスト数:244</br>
-スキップされたテスト数:96</br>
-[成るテスト実行のログ](https://github.com/Microsoft/CommandLine-Documentation/tree/live/LTP_Results/16251)<br/>
+### <a name="ltp-results"></a>LTP の結果:
+成功したテストの数:768</br>
+失敗したテストの数:244</br>
+スキップされたテストの数:96</br>
+[LTP テストの実行ログ](https://github.com/Microsoft/CommandLine-Documentation/tree/live/LTP_Results/16251)<br/>
 
 </br>
 
-## <a name="build-16241"></a>ビルド 16241
+## <a name="build-16241"></a>ビルド16241
 
-一般的な Windows ビルド 16241 に関する情報を参照してください、 [Windows ブログ](https://blogs.windows.com/windowsexperience/2017/07/13/announcing-windows-10-insider-preview-build-16241-pc-build-15230-mobile/)します。<br/>
+ビルド16241の一般的な Windows 情報については、 [windows のブログ](https://blogs.windows.com/windowsexperience/2017/07/13/announcing-windows-10-insider-preview-build-16241-pc-build-15230-mobile/)を参照してください。<br/>
 
 
 ### <a name="fixed"></a>固定
 #### <a name="wsl"></a>WSL
-- このリリースで変更に関連付けられた WSL がありません。
+- このリリースでは、WSL 関連の変更はありません。
 
 #### <a name="console"></a>Console
-- 報告されていた、交差行 DEC の正しくない文字を出力するための修正プログラム[ここ](https://www.reddit.com/r/Windows10/comments/6in82t/i_believe_ive_found_the_most_obscure_bug_ever/)
-- コード ページ 65001 (utf8) に表示されている出力テキストの修正
-- 選択の変更、パレットの他の部分を 1 つの色の RGB 値に加えられた変更を転送することはありません。 これにより、コンソールのプロパティ シートを使用して、はるかに簡単です。
-- Ctrl キーを押しながら S キーが正常に動作する表示されません。
-- されていない太字/-Dim 不在であれば完全に ANSI エスケープ コード [GH 2174] から
-- コンソールで Vim の配色テーマ [GH 1706] を正しくサポートしません。
-- 特定の文字 [GH 2149] に貼り付けることはできません。
-- 折り返しのサイズ変更が編集/コマンド ライン [GH ConEmu 1123] 機能がある場合は、bash ウィンドウをサイズ変更と対話妙
-- Ctrl キーを押し、-l まま画面ダーティ [GH 1978]
-- HDPI [GH 1907] で VT を表示するときに、コンソール表示バグ
-- Japansese 文字が Unicode 文字 U + 30FB は奇妙に見える [GH 2146]
+- [ここで](https://www.reddit.com/r/Windows10/comments/6in82t/i_believe_ive_found_the_most_obscure_bug_ever/)最初に報告された、10進線に誤った文字を出力するように修正しました。
+- コードページ 65001 (utf8) に出力テキストが表示されないように修正します。
+- ある色の RGB 値に対して行われた変更を、選択の変更時にパレットの他の部分に転送しないでください。 これにより、コンソールプロパティシートが非常に使いやすいようになります。
+- Ctrl + S が正しく動作していません
+- ANSI エスケープコードに完全に存在しない太字/-Dim [GH 2174]
+- コンソールが Vim 色のテーマを正しくサポートしていない [GH 1706]
+- 特定の文字を貼り付けることはできません [GH 2149]
+- 編集/コマンドライン上にあるときに bash ウィンドウのサイズを変更すると、リフローサイズの変更がおかしくなる [GH ConEmu 1123]
+- Ctrl + L を押したまま画面をダーティにする [GH 1978]
+- HDPI で VT を表示するときのコンソールレンダリングのバグ [GH 1907]
+- Unicode 文字 U + 30FB で Japansese 文字が奇妙に見える [GH 2146]
 - 追加の機能強化とバグ修正
 
 </br>
 
 ## <a name="build-16237"></a>ビルド 16237
 
-一般的な Windows ビルド 16237 に関する情報を参照してください、 [Windows ブログ](https://blogs.windows.com/windowsexperience/2017/07/07/announcing-windows-10-insider-preview-build-16237-pc/)します。<br/>
+ビルド16237の一般的な Windows 情報については、 [windows のブログ](https://blogs.windows.com/windowsexperience/2017/07/07/announcing-windows-10-insider-preview-build-16237-pc/)を参照してください。<br/>
 
 
 ### <a name="fixed"></a>固定
-- 既定の属性を使用して、EAs のない lxfs (ルート、ルート、0000) でのファイル
-- 拡張属性の使用のディストリビューションのサポートが追加されました
-- 埋め込み getdents と getdents64 で返されるエントリを修正
-- Shmctl するシステム コール [GH 2068] のアクセス許可チェックを修正します。
-- Tty [GH 2231] の状態は固定の正しくない初期 epoll
-- [GH 2077] のすべてのエントリが返されない DrvFs readdir を修正します。
-- 修正 LxFs readdir ファイルが [GH 2077] のリンクを解除
-- リンクされていない drvfs ファイルの詳しい情報を再度開くを許可します。
-- WSL 機能を無効にするためのグローバル レジストリ キーのオーバーライドを追加 (相互運用機能/ドライブのマウント)
-- DrvFs (および LxFs)「状態」での不正なブロックの数の修正 [GH 1894]
+- Lxfs に EAs がないファイルの既定の属性を使用する (ルート、ルート、0000)
+- 拡張属性を使用するディストリビューションのサポートを追加しました
+- Getdents と getdents64 によって返されるエントリの埋め込みを修正する
+- Shmctl SHM_STAT システム呼び出しのアクセス許可チェックを修正する [GH 2068]
+- Tty の初期 epoll 状態が正しくないことを修正した [GH 2231]
+- すべてのエントリを返さないように DrvFs readdir を修正する [GH 2077]
+- ファイルのリンクが解除されたときに LxFs readdir を修正する [GH 2077]
+- Procfs を使用して、リンクされていない drvfs ファイルを再び開くことを許可する
+- WSL 機能を無効にするためのグローバルレジストリキーの上書き (相互運用/ドライブのマウント) を追加しました
+- DrvFs (および LxFs) の "stat" で間違ったブロックカウントを修正する [GH 1894]
 - 追加の機能強化とバグ修正
 
 </br>
 
-## <a name="build-16232"></a>ビルド 16232
+## <a name="build-16232"></a>ビルド16232
 
-一般的な Windows ビルド 16232 に関する情報を参照してください、 [Windows ブログ](https://blogs.windows.com/windowsexperience/2017/06/28/announcing-windows-10-insider-preview-build-16232-pc-build-15228-mobile/)します。<br/>
+ビルド16232の一般的な Windows 情報については、 [windows のブログ](https://blogs.windows.com/windowsexperience/2017/06/28/announcing-windows-10-insider-preview-build-16232-pc-build-15228-mobile/)を参照してください。<br/>
 
 
 ### <a name="fixed"></a>固定
-- このリリースで変更に関連付けられた WSL がありません。
+- このリリースでは、WSL 関連の変更はありません。
 
 </br>
 
-## <a name="build-16226"></a>ビルド 16226
+## <a name="build-16226"></a>ビルド16226
 
-一般的な Windows ビルド 16226 に関する情報を参照してください、 [Windows ブログ](https://blogs.windows.com/windowsexperience/2017/06/21/announcing-windows-10-insider-preview-build-16226-pc/)します。<br/>
+ビルド16226の一般的な Windows 情報については、 [windows のブログ](https://blogs.windows.com/windowsexperience/2017/06/21/announcing-windows-10-insider-preview-build-16226-pc/)を参照してください。<br/>
 
 
 ### <a name="fixed"></a>固定
-- xattr 関連の syscall のサポート (getxattr、setxattr、listxattr、removexattr)。
-- security.capablity xattr サポートします。
-- 特定のファイル システム フィルター、ミリ秒以外の SMB サーバーを含むと互換性の強化。 [GH #1952]
-- 圧縮されたファイルを OneDrive のプレース ホルダー、GVFS のプレース ホルダー、およびコンパクトな OS のサポートを強化します。
+- xattr 関連の syscall サポート (getxattr、setxattr、listxattr、removexattr)。
+- capablity xattr のサポート。
+- 特定のファイルシステムとフィルター (MS 以外の SMB サーバーを含む) との互換性が向上しました。 [GH #1952]
+- OneDrive プレースホルダー、GVFS プレースホルダー、および圧縮された OS 圧縮ファイルのサポートが強化されました。
 - 追加の機能強化とバグ修正
 
 </br>
 
-## <a name="build-16215"></a>ビルド 16215
+## <a name="build-16215"></a>ビルド16215
 
-一般的な Windows ビルド 16215 に関する情報を参照してください、 [Windows ブログ](https://blogs.windows.com/windowsexperience/2017/06/08/announcing-windows-10-insider-preview-build-16215-pc-build-15222-mobile/)します。<br/>
+ビルド16215の一般的な Windows 情報については、 [windows のブログ](https://blogs.windows.com/windowsexperience/2017/06/08/announcing-windows-10-insider-preview-build-16215-pc-build-15222-mobile/)を参照してください。<br/>
 
 
 ### <a name="fixed"></a>固定
-- WSL では、開発者モードが必要がなくなります。
-- Drvfs でディレクトリ ジャンクションをサポートします。
-- WSL 配布 appx パッケージのアンインストールを処理します。
-- プライベートの表示に詳しい情報の更新プログラムとのマッピングを共有します。
-- 配布が部分的にインストールまたはアンインストールをクリーンアップする wslconfig.exe の機能を追加します。
-- TCP ソケット IP_MTU_DISCOVER のサポートを追加しました。 [GH 1639、2115、2205]
-- AF_INADDR へのルートのプロトコル ファミリを推論します。
-- シリアル デバイスの機能強化 [GH 1929]。
+- WSL には開発者モードが不要になりました。
+- Drvfs のディレクトリの接合をサポートします。
+- WSL distribution appx パッケージのアンインストールを処理します。
+- Procfs を更新して、プライベートと共有のマッピングを表示します。
+- Wslconfig .exe を追加して、部分的にインストールまたはアンインストールされたディストリビューションをクリーンアップします。
+- TCP ソケット用の IP_MTU_DISCOVER のサポートを追加しました。 [GH 1639、2115、2205]
+- AF_INADDR へのルートのプロトコルファミリを推定します。
+- シリアルデバイスの機能強化 [GH 1929]。
 
 </br>
 
-## <a name="build-16199"></a>ビルド 16199
+## <a name="build-16199"></a>ビルド16199
 
-一般的な Windows ビルド 16199 に関する情報を参照してください、 [Windows ブログ](https://blogs.windows.com/windowsexperience/2017/05/17/announcing-windows-10-insider-preview-build-16199-pc-build-15215-mobile/)します。<br/>
+ビルド16199の一般的な Windows 情報については、 [windows のブログ](https://blogs.windows.com/windowsexperience/2017/05/17/announcing-windows-10-insider-preview-build-16199-pc-build-15215-mobile/)を参照してください。<br/>
 
 
 ### <a name="fixed"></a>固定
-- これらのリリースで変更に関連付けられた WSL がありません。
+- これらのリリースでは、WSL 関連の変更はありません。
 
 </br>
 
-## <a name="build-16193"></a>ビルド 16193
+## <a name="build-16193"></a>ビルド16193
 
-一般的な Windows ビルド 16193 に関する情報を参照してください、 [Windows ブログ](https://blogs.windows.com/windowsexperience/2017/05/11/announcing-windows-10-insider-preview-build-16193-pc-build-15213-mobile/)します。<br/>
+ビルド16193の一般的な Windows 情報については、 [windows のブログ](https://blogs.windows.com/windowsexperience/2017/05/11/announcing-windows-10-insider-preview-build-16193-pc-build-15213-mobile/)を参照してください。<br/>
 
 
 ### <a name="fixed"></a>固定
-- 送信 SIGCONT と終了 [GH 1973] threadgroup 間で競合状態
-- レポート FILE_DEVICE_CONSOLE [GH 1840] ではなく FILE_DEVICE_NAMED_PIPE に tty および pty デバイスを変更します。
-- なる用の SSH の修正プログラム
-- Init デーモンに DrvFs マウントを移動する [GH 1862、1968 年に、1767、1933]
-- 次の NT シンボリック リンク DrvFs でサポートが追加されました。
+- 送信 SIGCONT と threadgroup 終了の間の競合状態 [GH 1973]
+- tty および pty デバイスを FILE_DEVICE_CONSOLE ではなくレポート FILE_DEVICE_NAMED_PIPE に変更する [GH 1840]
+- IP_OPTIONS の SSH 修正
+- DrvFs を init デーモンにマウントしました [GH 1862、1968、1767、1933]
+- 次の NT シンボリックリンクに対する DrvFs のサポートが追加されました。
 
 </br>
 
-## <a name="build-16184"></a>ビルド 16184
+## <a name="build-16184"></a>ビルド16184
 
-一般的な Windows ビルド 16184 に関する情報を参照してください、 [Windows ブログ](https://blogs.windows.com/windowsexperience/2017/04/28/announcing-windows-10-insider-preview-build-16184-pc-build-15208-mobile/)します。<br/>
+ビルド16184の一般的な Windows 情報については、 [windows のブログ](https://blogs.windows.com/windowsexperience/2017/04/28/announcing-windows-10-insider-preview-build-16184-pc-build-15208-mobile/)を参照してください。<br/>
 
 
 ### <a name="fixed"></a>固定
-- Removed apt package maintenance task (lxrun.exe /update)
-- 表示されない node.js [GH 1840] で、Windows プロセスから出力を修正
-- Lxcore [GH 1794] のアラインメント要件を緩和します。
-- システム呼び出し数の AT_EMPTY_PATH フラグの処理を修正しました。
-- ハンドルを開いた DrvFs ファイルを削除して未定義の動作 [GH 544,966,1357,1535,1615] ファイルとが、問題を修正しました
-- /etc/ホストは Windows ホスト ファイル (%windir%\system32\drivers\etc\hosts) からエントリを継承ようになりました [GH 1495]
+- Apt パッケージのメンテナンスタスク (lxrun/update) を削除しました
+- Node.js の Windows プロセスからに表示されない修正済みの出力 [GH 1840]
+- Lxcore での調整要件の緩和 [GH 1794]
+- システム呼び出しの数値における AT_EMPTY_PATH フラグの処理を修正した。
+- 開いているハンドルを持つ DrvFs ファイルを削除すると、ファイルに未定義の動作が発生する問題を修正した (GH 544、966、1357、1535、1615)
+- /etc/hosts は Windows hosts ファイル (%windir%\system32\drivers\etc\hosts) からエントリを継承するようになりました [GH 1495]
 
 </br>
 
-## <a name="build-16179"></a>ビルド 16179
+## <a name="build-16179"></a>ビルド16179
 
-一般的な Windows ビルド 16179 に関する情報を参照してください、 [Windows ブログ](https://blogs.windows.com/windowsexperience/2017/04/19/announcing-windows-10-insider-preview-build-16179-pc-build-15205-mobile/)します。<br/>
+ビルド16179の一般的な Windows 情報については、 [windows のブログ](https://blogs.windows.com/windowsexperience/2017/04/19/announcing-windows-10-insider-preview-build-16179-pc-build-15205-mobile/)を参照してください。<br/>
 
 
 ### <a name="fixed"></a>固定
-- WSL 変更はこの 1 週間です。
+- 今週、WSL の変更はありません。
 
 </br>
 
-## <a name="build-16176"></a>ビルド 16176
+## <a name="build-16176"></a>ビルド16176
 
-一般的な Windows ビルド 16176 に関する情報を参照してください、 [Windows ブログ](https://blogs.windows.com/windowsexperience/2017/04/14/announcing-windows-10-insider-preview-build-16176-pc-build-15204-mobile/)します。<br/>
+ビルド16176の一般的な Windows 情報については、 [windows のブログ](https://blogs.windows.com/windowsexperience/2017/04/14/announcing-windows-10-insider-preview-build-16176-pc-build-15204-mobile/)を参照してください。<br/>
 
 
 ### <a name="fixed"></a>固定
 
-- [シリアル サポートを有効になっています。](https://blogs.msdn.microsoft.com/wsl/2017/04/14/serial-support-on-the-windows-subsystem-for-linux/)
-- IP ソケット オプションなる [GH 1116] が追加されました
-- (ファイルのアップロードに nginx/PHP-FPM) 中の pwritev 関数の実装 [GH 1506]
-- IP ソケット オプション IP_MULTICAST_IF & IPV6_MULTICAST_IF の追加 [GH 990]
-- IP_MULTICAST_LOOP & IPV6_MULTICAST_LOOP ソケット オプションのサポート [GH 1678]
-- アプリのノード、traceroute、dig、nslookup、ホストの IP (V6) _MTU ソケット オプションが追加されました
-- IP ソケット オプション IPV6_UNICAST_HOPS が追加されました
-- [ファイル システムの機能強化](https://blogs.msdn.microsoft.com/wsl/2017/04/18/file-system-improvements-to-the-windows-subsystem-for-linux/)
-    * UNC パスをマウントをします。
-    * Drvfs で CDFS サポートを有効にします。
-    * Drvfs でネットワーク ファイル システムのアクセス許可を正しく処理します。
-    * Drvfs にリモート ドライブのサポートを追加します。
-    * FAT を有効にする drvfs のサポート
-- 追加の修正と機能強化
+- [有効なシリアルサポート](https://blogs.msdn.microsoft.com/wsl/2017/04/14/serial-support-on-the-windows-subsystem-for-linux/)
+- 追加された IP ソケットオプション IP_OPTIONS [GH 1116]
+- Pwritev 関数の実装 (nginx/PHP-FPM へのファイルのアップロード) [GH 1506]
+- 追加された IP ソケットオプション IP_MULTICAST_IF & IPV6_MULTICAST_IF [GH 990]
+- ソケットオプション IP_MULTICAST_LOOP & IPV6_MULTICAST_LOOP のサポート [GH 1678]
+- Apps ノード、traceroute、掘り下げ、nslookup、host の IP (V6) MTU socket オプションを追加しました
+- 追加された IP ソケットオプション IPV6_UNICAST_HOPS
+- [ファイルシステムの機能強化](https://blogs.msdn.microsoft.com/wsl/2017/04/18/file-system-improvements-to-the-windows-subsystem-for-linux/)
+    * UNC パスのマウントを許可する
+    * Drvfs で CDF サポートを有効にする
+    * Drvfs でネットワークファイルシステムのアクセス許可を正しく処理する
+    * Drvfs にリモートドライブのサポートを追加する
+    * Drvfs での FAT サポートを有効にする
+- その他の修正プログラムと機能強化
 
-### <a name="ltp-results"></a>成る結果
-15042 以降変更なし
+### <a name="ltp-results"></a>LTP の結果
+15042以降の変更はありません
 
 </br>
 
-## <a name="build-16170"></a>ビルド 16170
+## <a name="build-16170"></a>ビルド16170
 
-一般的な Windows ビルド 16170 に関する情報を参照してください、 [Windows ブログ](https://blogs.windows.com/windowsexperience/2017/04/07/announcing-windows-10-insider-preview-build-16170-pc/)します。<br/>
+ビルド16170の一般的な Windows 情報については、 [windows のブログ](https://blogs.windows.com/windowsexperience/2017/04/07/announcing-windows-10-insider-preview-build-16170-pc/)を参照してください。<br/>
 
-新しいリリースしました[ブログの投稿](https://blogs.msdn.microsoft.com/wsl/2017/04/11/testing-the-windows-subsystem-for-linux/)WSL をテストする取り組みについて説明します。
+WSL のテストの取り組みについて説明する新しい[ブログ投稿](https://blogs.msdn.microsoft.com/wsl/2017/04/11/testing-the-windows-subsystem-for-linux/)をリリースしました。
 
 ### <a name="fixed"></a>固定
 
-- サポートのソケット オプション IP_ADD_MEMBERSHIP & IPV6_ADD_MEMBERSHIP [GH 1678]
+- サポートソケットオプション IP_ADD_MEMBERSHIP & IPV6_ADD_MEMBERSHIP [GH 1678]
 - PTRACE_OLDSETOPTIONS のサポートを追加します。 [GH 1692]
-- 追加の修正と機能強化
+- その他の修正プログラムと機能強化
 
-### <a name="ltp-results"></a>成る結果
-15042 以降変更なし
+### <a name="ltp-results"></a>LTP の結果
+15042以降の変更はありません
 
 </br>
 
-## <a name="build-15046-to-windows-10-creators-update"></a>ビルドを Windows 10 15046 Creators Update
-これ以上の WSL 修正プログラムや Windows 10 Creators Update に含める予定されている機能があります。 WSL のリリース ノートは、次の主要な Windows 更新プログラムを対象とする追加機能を今後数週間で再開されます。 一般的な Windows ビルド 15046 と将来の詳細についてはリリースのアクセス、 [Windows ブログ](https://blogs.windows.com/windowsexperience/2017/02/28/announcing-windows-10-insider-preview-build-15046-pc/)します。 <br/><br/>
+## <a name="build-15046-to-windows-10-creators-update"></a>ビルド15046から Windows 10 の作成者への更新
+Windows 10 の作成者の更新プログラムに含まれるように計画されている WSL 修正プログラムや機能はこれ以上ありません。 WSL のリリースノートは、次の主要な Windows Update を対象とした追加のために、今後数週間にわたって再開されます。 ビルド15046および今後の Insider リリースに関する一般的な Windows 情報については、 [windows のブログ](https://blogs.windows.com/windowsexperience/2017/02/28/announcing-windows-10-insider-preview-build-15046-pc/)を参照してください。 <br/><br/>
  <br/>
 
-## <a name="build-15042"></a>ビルド 15042
+## <a name="build-15042"></a>ビルド15042
 
-一般的な Windows ビルド 15042 に関する情報を参照してください、 [Windows ブログ](https://blogs.windows.com/windowsexperience/2017/02/24/announcing-windows-10-insider-preview-build-15042-pc-build-15043-mobile/)します。<br/>
+ビルド15042の一般的な Windows 情報については、 [windows のブログ](https://blogs.windows.com/windowsexperience/2017/02/24/announcing-windows-10-insider-preview-build-15042-pc-build-15043-mobile/)を参照してください。<br/>
 
 
 ### <a name="fixed"></a>固定
 
-- 終わるパスを削除するときに、デッドロックの解決"..."
-- 問題を修正しました、FIONBIO [GH 1683] 成功した場合に 0 が返されない
-- Inet データグラム ソケットの長さが 0 の読み取りで問題を修正しました
-- Drvfs inode 参照 [GH 1675] 内での競合状態が原因でデッドロックが発生を修正します。
-- Unix ソケット補助的なデータの拡張サポートSCM_CREDENTIALS と SCM_RIGHTS [GH 514、613、1326]
-- 追加の修正と機能強化
+- "." で終わるパスの削除時にデッドロックが発生する問題を修正します。
+- FIONBIO が成功時に0を返さないという問題を修正した [GH 1683]
+- Inet データグラムソケットの長さゼロの読み取りに関する問題を修正した
+- Drvfs inode 参照で競合状態が発生したことが原因でデッドロックが発生する可能性を修正する [GH 1675]
+- Unix ソケットの補助データの拡張サポートSCM_CREDENTIALS および SCM_RIGHTS [GH 514, 613, 1326]
+- その他の修正プログラムと機能強化
 
-### <a name="ltp-results"></a>成る結果:
-テストの成功の数:737</br>
-不合格数 (失敗、スキップされたなど.)。255
+### <a name="ltp-results"></a>LTP の結果:
+成功したテストの数:737</br>
+非パッシング (失敗、スキップされたなど) の数:255
 
 </br>
 
-## <a name="build-15031"></a>ビルド 15031
+## <a name="build-15031"></a>ビルド15031
 
-一般的な Windows ビルド 15031 に関する情報を参照してください、 [Windows ブログ](https://blogs.windows.com/windowsexperience/2017/02/08/announcing-windows-10-insider-preview-build-15031-pc/)します。<br/>
+ビルド15031の一般的な Windows 情報については、 [windows のブログ](https://blogs.windows.com/windowsexperience/2017/02/08/announcing-windows-10-insider-preview-build-15031-pc/)を参照してください。<br/>
 
 
 ### <a name="fixed"></a>固定
 
-- Time(2) が誤動作が散発的バグを修正しました。
-- 修正され、発行場所 * syscall を組み合わせて使用される信号のマスクが破損する可能性があります。
-- WSL プロセスの作成の通知では、完全なコマンドラインの長さを返すようになりました。 [GH 1632]
-- WSL は、今すぐ ptrace を GDB がハングすることによってスレッドの終了を報告します。 [GH 1196]
-- 負荷の高い tmux IO 後 pty がハング、バグを修正しました。 [GH 1358]
-- 多くのシステム コール (futex、semtimedop、参照のこと、sigtimedwait、itimer、timer_create) での固定のタイムアウトの検証
+- Time (2) が散発的に不適切な動作するバグを修正しています。
+- \* SIGSYSCALL MASK がシグナルマスクを破壊する可能性がある問題を修正しました。
+- WSL プロセス作成通知でコマンドラインの完全な長さを返すようになりました。 [GH 1632]
+- WSL は、GDB がハングした場合に ptrace を介してスレッドの終了を報告するようになりました。 [GH 1196]
+- Tmux IO が大量に発生した後に ptys がハングするバグを修正します。 [GH 1358]
+- 多くのシステムコールでタイムアウトの検証を修正 (futex、semtimedop、ppoll、sigtimedwait、itimer、timer_create)
 - 追加された eventfd EFD_SEMAPHORE サポート [GH 452]
-- 追加の修正と機能強化
+- その他の修正プログラムと機能強化
 
-### <a name="ltp-results"></a>成る結果:
-テストの成功の数:737</br>
-不合格数 (失敗、スキップされたなど.)。255 </br>
-[成るテスト実行のログ](https://github.com/Microsoft/CommandLine-Documentation/tree/live/LTP_Results/15031)<br/>
+### <a name="ltp-results"></a>LTP の結果:
+成功したテストの数:737</br>
+非パッシング (失敗、スキップされたなど) の数:255 </br>
+[LTP テストの実行ログ](https://github.com/Microsoft/CommandLine-Documentation/tree/live/LTP_Results/15031)<br/>
 
 <br/>
 
-## <a name="build-15025"></a>ビルド 15025
+## <a name="build-15025"></a>ビルド15025
 
-一般的な Windows ビルド 15025 に関する情報を参照してください、 [Windows ブログ](https://blogs.windows.com/windowsexperience/2017/02/01/announcing-windows-10-insider-preview-build-15025-pc/)します。<br/>
+ビルド15025の一般的な Windows 情報については、 [windows のブログ](https://blogs.windows.com/windowsexperience/2017/02/01/announcing-windows-10-insider-preview-build-15025-pc/)を参照してください。<br/>
 
 
 ### <a name="fixed"></a>固定
 
-- その壊れて grep 2.27 [GH 1578] バグの修正します。
-- 実装された EFD_SEMAPHORE フラグ eventfd2 syscall [GH 452]
-- /Proc/[pid]/net ipv6_route の実装 [GH 1608]
-- シグナル ドリブン unix ストリーム ソケット [GH 393、68] の IO のサポート
-- F_GETPIPE_SZ と F_SETPIPE_SZ [GH 1012] サポートします。
-- Recvmmsg() syscall [GH 1531] の実装します。
-- Epoll_wait() でした [GH 1609] を待っているバグを修正しました
-- /Proc/version_signature を実装します。
-- Tee syscall はエラーを両方のファイル記述子が同じパイプを参照している場合に返すようになりました
-- Unix ソケット SO_PEERCRED に実装されている適切な動作
-- 固定 tkill syscall 無効なパラメーターの処理
-- Drvfs の preformace の増加への変更
-- Ruby の IO のブロックの軽微な修正
-- 固定の recvmsg() MSG_DONTWAIT フラグ inet ソケット [GH 1296] の EINVAL を返す
-- 追加の修正と機能強化
+- Grep 2.27 を破損したバグの修正 [GH 1578]
+- Eventfd2 syscall の EFD_SEMAPHORE フラグの実装 [GH 452]
+- 実装された/proc/[pid]/net/ipv6_route [GH 1608]
+- Unix ストリームソケットに対するシグナル駆動型 IO のサポート [GH 393, 68]
+- F_GETPIPE_SZ と F_SETPIPE_SZ のサポート [GH 1012]
+- Recvmmsg () syscall の実装 [GH 1531]
+- Epoll_wait () が待機していないバグを修正 [GH 1609]
+- /Proc/version_signature を実装する
+- T syscall は、両方のファイル記述子が同じパイプを参照している場合にエラーを返すようになりました
+- Unix ソケット用の SO_PEERCRED の正しい動作を実装しています
+- Tkill syscall の無効なパラメーター処理を修正した
+- Drvfs の preformace を増やすための変更
+- Ruby IO ブロックの軽微な修正
+- Inet sockets の MSG_DONTWAIT フラグの EINVAL を返す recvmsg () を修正した [GH 1296]
+- その他の修正プログラムと機能強化
 
-### <a name="ltp-results"></a>成る結果:
-テストの成功の数:732</br>
-不合格数 (失敗、スキップされたなど.)。255 </br>
-[成るテスト実行のログ](https://github.com/Microsoft/CommandLine-Documentation/tree/live/LTP_Results/15025)<br/>
+### <a name="ltp-results"></a>LTP の結果:
+成功したテストの数:732</br>
+非パッシング (失敗、スキップされたなど) の数:255 </br>
+[LTP テストの実行ログ](https://github.com/Microsoft/CommandLine-Documentation/tree/live/LTP_Results/15025)<br/>
 
 <br/>
 
-## <a name="build-15019"></a>ビルド 15019
+## <a name="build-15019"></a>ビルド15019
 
-一般的な Windows ビルド 15019 に関する情報を参照してください、 [Windows ブログ](https://blogs.windows.com/windowsexperience/2017/01/27/announcing-windows-10-insider-preview-build-15019-pc/)します。<br/>
+ビルド15019の一般的な Windows 情報については、 [windows のブログ](https://blogs.windows.com/windowsexperience/2017/01/27/announcing-windows-10-insider-preview-build-15019-pc/)を参照してください。<br/>
 
 
 ### <a name="fixed"></a>固定
 
-- CPU 使用率を正しく報告されるバグを修正したければ (945、971 は GH 823) などのツールの詳しい情報
-- 既存の O_TRUNC で open() の呼び出し時にファイル inotify ようになりました IN_OPEN 前に、IN_MODIFY が生成されます。
-- Unix ソケット getsockopt SO_ERROR postgress [GH 61、1354] を有効にするための修正します。
-- GO 言語の実装の説明が
-- Apt get パッケージ更新プログラムのバック グラウンド タスク今すぐ表示せずに実行ビューから
-- Ipv6 localhost (Spring-Framework(Java) 失敗) のスコープをクリアします。
-- 追加の修正と機能強化
+- Htop (GH 823、945、971) などのツールに対して procfs の CPU 使用率が誤って報告されたバグを修正しました
+- 既存のファイルに対して O_TRUNC を使用して open () を呼び出すと、IN_OPEN の前に IN_MODIFY が生成されるようになりました。
+- Unix socket getsockopt SO_ERROR で postgress [GH 61, 1354] を有効にするための修正
+- /Proc/sys/net/core/somaxconn を実装する
+- Apt-パッケージ更新のバックグラウンドタスクをビューから非表示にするようになりました
+- Ipv6 localhost のスコープをクリアします (Spring Framework (Java) エラー)。
+- その他の修正プログラムと機能強化
 
-### <a name="ltp-results"></a>成る結果:
-テストの成功の数:714 </br>
-不合格数 (失敗、スキップされたなど.)。249 </br>
-[成るテスト実行のログ](https://github.com/Microsoft/CommandLine-Documentation/tree/live/LTP_Results/15019)<br/>
+### <a name="ltp-results"></a>LTP の結果:
+成功したテストの数:714 </br>
+非パッシング (失敗、スキップされたなど) の数:249 </br>
+[LTP テストの実行ログ](https://github.com/Microsoft/CommandLine-Documentation/tree/live/LTP_Results/15019)<br/>
 
 <br/>
 
-## <a name="build-15014"></a>ビルド 15014
+## <a name="build-15014"></a>ビルド15014
 
-一般的な Windows ビルド 15014 に関する情報を参照してください、 [Windows ブログ](https://blogs.windows.com/windowsexperience/2017/01/19/announcing-windows-10-insider-preview-build-15014-for-pc-and-mobile-hello-windows-insiders-today-we-are-excited-to-be-releasing-windows-10-insider-preview-build-15014-for-pc-and-mobile)します。<br/>
+ビルド15014の一般的な Windows 情報については、 [windows のブログ](https://blogs.windows.com/windowsexperience/2017/01/19/announcing-windows-10-insider-preview-build-15014-for-pc-and-mobile-hello-windows-insiders-today-we-are-excited-to-be-releasing-windows-10-insider-preview-build-15014-for-pc-and-mobile)を参照してください。<br/>
 
 
 ### <a name="fixed"></a>固定
 
-- 意図したようになりました Ctrl + C
-- たければと ps auxw ここで表示する適切なリソース使用率 (GH #516)
-- NT 例外シグナルの基本的な変換です。 (GH #513)
-- EINVAL (GH #1571) ではなく容量が不足した場合、この fallocate は、今すぐ ENOSPC で失敗しました。
-- 追加された/proc/sys/kernel/sem します。
-- 実装された semop と semtimedop システム コール
-- IP_RECVTOS & IPV6_RECVTCLASS ソケット オプション (GH 69) を使用して固定 nslookup のエラー
-- IP_RECVTTL と IPV6_RECVHOPLIMIT ソケット オプションのサポート
-- 追加の修正と機能強化
+- Ctrl + C は意図したとおりに動作するようになりました
+- htop と ps auxw で、正しいリソース使用率 (GH #516) が表示されるようになりました
+- NT 例外からシグナルへの基本的な変換です。 (GH #513)
+- fallocate は、EINVAL (GH #1571) ではなく領域が不足しているときに、ENOSPC で失敗するようになりました。
+- 追加された/proc/sys/kernel/sem.
+- Semop および semtimedop システム呼び出しを実装します。
+- IP_RECVTOS & IPV6_RECVTCLASS socket オプションで nslookup エラーを修正した (GH 69)
+- ソケットオプションの IP_RECVTTL と IPV6_RECVHOPLIMIT のサポート
+- その他の修正プログラムと機能強化
 
-### <a name="ltp-results"></a>成る結果:
-テストの成功の数:709 </br>
-不合格数 (失敗、スキップされたなど.)。255 </br>
-[成るテスト実行のログ](https://github.com/Microsoft/CommandLine-Documentation/tree/live/LTP_Results/15014)<br/>
+### <a name="ltp-results"></a>LTP の結果:
+成功したテストの数:709 </br>
+非パッシング (失敗、スキップされたなど) の数:255 </br>
+[LTP テストの実行ログ](https://github.com/Microsoft/CommandLine-Documentation/tree/live/LTP_Results/15014)<br/>
 
 ### <a name="syscall-summary"></a>Syscall の概要
 合計 Syscall:384 </br>
-実装の合計:235 </br>
-スタブの合計:22 </br>
-合計が実装されていません。127 </br>
+実装された合計:235 </br>
+スタブの合計数:22 </br>
+未実装の合計数:127 </br>
 [詳細な内訳](https://github.com/Microsoft/CommandLine-Documentation/tree/live/LTP_Results/15014/Syscalls.txt)<br/>
 
 <br/>
 
-## <a name="build-15007"></a>ビルド 15007
+## <a name="build-15007"></a>ビルド15007
 
-一般的な Windows ビルド 15007 に関する情報を参照してください、 [Windows ブログ]( https://blogs.windows.com/windowsexperience/2017/01/12/announcing-windows-10-insider-preview-build-15007-pc-mobile)します。<br/>
-
-
-### <a name="known-issue"></a>既知の問題
-
-- コンソールがいくつかの ctrl キーを認識しない既知のバグがある +<key>入力します。  これには、標準の 'c' keypress として機能するを ctrl キーを押しながら c コマンドが含まれます。
-
-  - 対応策 :代替キーを Ctrl キーを押しながら C キーにマップします。 たとえば、マップに Ctrl + C には、Ctrl + K は:`stty intr \^k`します。  このマッピングは、ターミナルごとおよび実行する必要があります*すべて*時間 bash を起動します。 ユーザーを含めるには、このオプションを調べることができます、 `.bashrc`
-
-### <a name="fixed"></a>固定
-
-- WSL を実行して、CPU コアの 100% を消費は、問題を修正しました
-- ソケットのオプション、IP_PKTINFO IPV6_RECVPKTINFO のようになりました。 (987 GH # の 851)
-- Truncate lxcore 16 バイトにネットワーク インターフェイスの物理アドレス (GH #1452、1414、1343、468、308)
-- 追加の修正と機能強化
-
-### <a name="ltp-results"></a>成る結果:
-テストの成功の数:709 </br>
-不合格数 (失敗、スキップされたなど.)。255 </br>
-[成るテスト実行のログ](https://github.com/Microsoft/CommandLine-Documentation/tree/live/LTP_Results/15007)<br/>
-
-<br/>
-
-## <a name="build-15002"></a>ビルド 15002
-
-一般的な Windows ビルド 15002 に関する情報を参照してください、 [Windows ブログ](https://blogs.windows.com/windowsexperience/2017/01/09/announcing-windows-10-insider-preview-build-15002-pc/)します。<br/>
+ビルド15007の一般的な Windows 情報については、 [windows のブログ]( https://blogs.windows.com/windowsexperience/2017/01/12/announcing-windows-10-insider-preview-build-15007-pc-mobile)を参照してください。<br/>
 
 
 ### <a name="known-issue"></a>既知の問題
 
-2 つの既知の問題:
-- コンソールがいくつかの ctrl キーを認識しない既知のバグがある +<key>入力します。  これには、標準の 'c' keypress として機能するを ctrl キーを押しながら c コマンドが含まれます。
+- コンソールが一部の Ctrl + <key>入力を認識しないという既知のバグがあります。  これには、通常の "c" キーの押下として機能する ctrl + c コマンドが含まれます。
 
-  - 対応策 :代替キーを Ctrl キーを押しながら C キーにマップします。 たとえば、マップに Ctrl + C には、Ctrl + K は:`stty intr \^k`します。  このマッピングは、ターミナルごとおよび実行する必要があります*すべて*時間 bash を起動します。 ユーザーを含めるには、このオプションを調べることができます、 `.bashrc`
-
-- WSL の実行中にシステム スレッドは CPU コアの 100% を消費します。  根本原因はアドレス指定され、内部的に固定します。
+  - 回避策:代替キーを Ctrl + C にマップします。 たとえば、ctrl + K を Ctrl + C キーにマップするに`stty intr \^k`は、次のようにします。  このマッピングはターミナル単位で行われ、bash が起動されるたび*に実行さ*れる必要があります。 ユーザーは、オプションを調べて、`.bashrc`
 
 ### <a name="fixed"></a>固定
 
-- すべての bash セッションを同じアクセス許可レベルで作成されましたする必要があります。  さまざまなレベルでセッションを開始しようとしてがブロックされます。  つまり、管理者と管理者以外のコンソールを同時に実行できません。 (GH #626)
+- WSL を実行すると CPU コアの 100% が消費される問題を修正しました
+- ソケットオプション IP_PKTINFO、IPV6_RECVPKTINFO がサポートされるようになりました。 (GH #851、987)
+- Lxcore でネットワークインターフェイスの物理アドレスを16バイトに切り捨てる (GH #1452、1414、1343、468、308)
+- その他の修正プログラムと機能強化
+
+### <a name="ltp-results"></a>LTP の結果:
+成功したテストの数:709 </br>
+非パッシング (失敗、スキップされたなど) の数:255 </br>
+[LTP テストの実行ログ](https://github.com/Microsoft/CommandLine-Documentation/tree/live/LTP_Results/15007)<br/>
+
 <br/>
-- 次の NETLINK_ROUTE メッセージを実装 (Windows の管理者権限が必要)
+
+## <a name="build-15002"></a>ビルド15002
+
+ビルド15002の一般的な Windows 情報については、 [windows のブログ](https://blogs.windows.com/windowsexperience/2017/01/09/announcing-windows-10-insider-preview-build-15002-pc/)を参照してください。<br/>
+
+
+### <a name="known-issue"></a>既知の問題
+
+2つの既知の問題:
+- コンソールが一部の Ctrl + <key>入力を認識しないという既知のバグがあります。  これには、通常の "c" キーの押下として機能する ctrl + c コマンドが含まれます。
+
+  - 回避策:代替キーを Ctrl + C にマップします。 たとえば、ctrl + K を Ctrl + C キーにマップするに`stty intr \^k`は、次のようにします。  このマッピングはターミナル単位で行われ、bash が起動されるたび*に実行さ*れる必要があります。 ユーザーは、オプションを調べて、`.bashrc`
+
+- WSL が実行されている間、システムスレッドは CPU コアの 100% を消費します。  根本原因は、内部的に解決されています。
+
+### <a name="fixed"></a>固定
+
+- すべての bash セッションは、同じアクセス許可レベルで作成する必要があります。  別のレベルでセッションを開始しようとすると、ブロックされます。  つまり、管理者コンソールと管理者以外のコンソールを同時に実行することはできません。 (GH #626)
+<br/>
+- 次の NETLINK_ROUTE メッセージを実装した (Windows 管理者が必要)
      - RTM_NEWADDR (サポート`ip addr add`)
      - RTM_NEWROUTE (サポート`ip route add`)
      - RTM_DELADDR (サポート`ip addr del`)
      - RTM_DELROUTE (サポート`ip route del`)
-- スケジュールされたタスクがパッケージを更新するためのチェックは、従量制課金接続 (GH #1371) では実行されなく
-- パイプの取得が詰まっているつまり bash-c エラーを修正しました"ls alR/"|bash-c"cat"(GH #1214)
-- 実装された TCP_KEEPCNT ソケット オプション (GH #843)
-- 実装された IP_MTU_DISCOVER INET ソケット オプション (GH #720、717, 170, 69)
-- NT パス参照を init から NT バイナリを実行する従来の機能を削除します。 (GH #1325)
-- 開発/グループ/その他の読み取りアクセス (0644) (GH #1321) を許可する kmsg のモードを修正します。
+- 更新するパッケージのスケジュールされたタスクは、従量制課金接続では実行されなくなります (GH #1371)
+- パイプがスタックした場合のエラーを修正します。 bash-c "ls-alR/" |bash-c "cat" (GH #1214)
+- 実装された TCP_KEEPCNT socket オプション (GH #843)
+- IP_MTU_DISCOVER INET socket オプション (GH #720、717、170、69) を実装しています
+- Nt パス参照を使用して init から NT バイナリを実行する従来の機能を削除しました。 (GH #1325)
+- グループまたはその他の読み取りアクセスを許可するように更新モードを修正する (0644) (GH #1321)
 - 実装された/proc/sys/kernel/random/uuid (GH #1092)
-- プロセスの開始時刻が年 2432 (GH #974) を示すエラーを修正しました
-- スイッチの既定環境変数を TERM xterm 256color (GH #1446) を
-- 変更のコミットを処理する方法は、プロセスの分岐の中に計算されます。 (GH #1286)
-- 実装された受け取る可能性があります。 (GH #1286)
+- プロセスの開始時刻が2432年 (GH #974) と表示されたエラーを修正しました
+- 既定の用語環境変数を xterm-256 色に切り替えました (GH #1446)
+- プロセスフォーク中にコミットが計算される方法を変更しました。 (GH #1286)
+- /Proc/sys/vm/overcommit_memory. の実装 (GH #1286)
 - 実装された/proc/net/route ファイル (GH #69)
-- ショートカット名がない正しくエラーを修正しました (GH #696) のローカライズ
-- プログラムのヘッダーが正しく検証ロジックを解析する固定 elf 必要があります (以下に) 設定される。 します。 (GH #1048)
-- 詳しい情報、sysfs、cgroupfs、および binfmtfs (GH #1378) 実装 statfs コールバック
-- (GH #1184 も GH #1193 で説明) を閉じない固定の AptPackageIndexUpdate windows
-- ASLR パーソナリティ ADDR_NO_RANDOMIZE サポートを追加します。 (GH #1148、1128)
-- 強化された PTRACE_GETSIGINFO、AV (GH #875) 中に適切な gdb スタック トレースの SIGSEGV
-- Patchelf バイナリ elf が不要になった解析が失敗します。 (GH #471)
-- /Etc/resolv.conf (GH #416、1350) に VPN DNS が反映されます。
-- TCP の機能強化より信頼性の高いデータの転送を閉じます。 (GH #610 616、1025、1335)
-- 適切なエラーを返すようになりましたコード ファイルが多すぎる場合に、(EMFILE) が開かれます。 (GH #1126、2090)
-- Windows の監査ログから報告プロセスで、イメージの名前は、監査を作成します。
-- Bash ウィンドウ内から bash.exe を起動するときに正常に失敗します。
-- 相互運用機能と、追加のエラー メッセージが LxFs (つまり notepad.exe .bashrc) の下の作業ディレクトリにアクセスできません。
-- Windows のパスが WSL で切り捨てられました問題を修正しました
-- 追加の修正と機能強化
+- ショートカット名が正しくローカライズされていないエラーを修正しました (GH #696)
+- プログラムヘッダーの検証に誤りのある elf 解析ロジックを修正した場合は、PATH_MAX 未満である必要があります。 (GH #1048)
+- Procfs、sysfs、cgroupfs、および binfmtfs (GH #1378) の statfs コールバックを実装します。
+- 閉じることのできない AptPackageIndexUpdate ウィンドウを修正しました (GH #1184、GH #1193 で説明)
+- ASLR パーソナリティ ADDR_NO_RANDOMIZE のサポートを追加しました。 (GH #1148、1128)
+- AV 中に適切な gdb スタックトレースを実現するための PTRACE_GETSIGINFO、SIGSEGV が改善されました (GH #875)
+- Elf の解析は、パッチ elf バイナリでは失敗します。 (GH #471)
+- /Etc/resolv.conf に反映された VPN DNS (GH #416、1350)
+- より信頼性の高いデータ転送のための TCP close の機能強化。 (GH #610、616、1025、1335)
+- 開いているファイルが多すぎる場合 (EMFILE)、適切なエラーコードを返すようになりました。 (GH #1126、2090)
+- Windows 監査ログで、プロセス作成の監査でイメージ名が報告されるようになりました。
+- Bash ウィンドウ内から bash を起動すると、正常に失敗する
+- 相互運用機能が LxFs で作業ディレクトリにアクセスできないときにエラーメッセージが追加されました (例: .bashrc)
+- WSL で Windows パスが切り捨てられた問題を修正しました
+- その他の修正プログラムと機能強化
 
-### <a name="ltp-results"></a>成る結果:
-テストの成功の数:690 </br>
-不合格数 (失敗、スキップされたなど.)。274 </br>
-[成るテスト実行のログ](https://github.com/Microsoft/CommandLine-Documentation/tree/live/LTP_Results/15002)<br/>
+### <a name="ltp-results"></a>LTP の結果:
+成功したテストの数:690 </br>
+非パッシング (失敗、スキップされたなど) の数:274 </br>
+[LTP テストの実行ログ](https://github.com/Microsoft/CommandLine-Documentation/tree/live/LTP_Results/15002)<br/>
 
 <br/>
 
-### <a name="syscall-support"></a>Syscall サポート
-WSL でいくつかの実装を持つ新しいまたは強化された syscall の一覧を以下に示します。 少なくとも 1 つのシナリオではこの一覧に syscall がサポートされているが場合がありますがすべてのパラメーター サポートされていませんこの時点で。
+### <a name="syscall-support"></a>Syscall のサポート
+次に示すのは、WSL でいくつかの実装を持つ新しいまたは強化された syscall の一覧です。 この一覧の syscall は、少なくとも1つのシナリオでサポートされていますが、現時点では一部のパラメーターがサポートされていない可能性があります。
 
 `shmctl`<br/>
 `shmget`<br/>
@@ -1237,34 +1248,34 @@ WSL でいくつかの実装を持つ新しいまたは強化された syscall �
 `shmat`<br/>
 <br/>
 
-## <a name="build-14986"></a>ビルド 14986
+## <a name="build-14986"></a>ビルド14986
 
-一般的な Windows ビルド 14986 に関する情報を参照してください、 [Windows ブログ](https://blogs.windows.com/windowsexperience/2016/12/07/announcing-windows-10-insider-preview-build-14986-pc/)します。<br/>
+ビルド14986の一般的な Windows 情報については、 [windows のブログ](https://blogs.windows.com/windowsexperience/2016/12/07/announcing-windows-10-insider-preview-build-14986-pc/)を参照してください。<br/>
 
 
 ### <a name="fixed"></a>固定
 
-- 固定のバグチェック Netlink と Pty Ioctl
-- カーネルのバージョンが現在 4.4.0-43 Xenial との整合性を報告します。
-- Bash.exe は入力の指示を起動 ' nul:' (GH #1259)
-- 詳しい情報 (GH # の 967) で、スレッド Id を正しく今すぐ報告
-- IN_UNMOUNT |IN_Q_OVERFLOW |IN_IGNORED |IN_ISDIR フラグが inotify_add_watch() (GH #1280) でサポートされています
-- 実装 timer_create と関連するシステムの呼び出し。  これにより、GHC サポート (GH #307)
-- Ping が 0.000ms (GH #1296) の時刻を返す問題を修正しました
-- ファイルが多すぎますが開かれたときに、適切なエラー コードを返します。
-- WSL で Netlink の要求のネットワーク インターフェイスのデータは失敗によって変更できるインターフェイスのハードウェアのアドレスが 32 バイト (など、Teredo インターフェイス) の場合の問題を修正しました
-   - Linux"ip"ユーティリティが WSL が 32 バイトのハードウェアのアドレスを報告する場合、クラッシュがバグを含むことに注意してください。 これは、"ip"、WSL ではないのバグです。 ハードウェアのアドレスを印刷する、"ip"ユーティリティ ハードコード化文字列バッファーの長さが使用し、そのバッファーが小さすぎる 32 バイトのハードウェアのアドレスを印刷します。
-- 追加の修正と機能強化
+- Netlink および Pty Ioctl を使用したバグチェックの修正
+- カーネルのバージョンが Xenial との一貫性のために 4.4.0-43 を報告するようになりました
+- "Nul:" にリダイレクトされたときに Bash が起動するようになりました (GH #1259)
+- Procfs (GH #967) でスレッド Id が正しくレポートされるようになりました
+- IN_UNMOUNT |IN_Q_OVERFLOW |IN_IGNORED |IN_ISDIR フラグが inotify_add_watch () でサポートされるようになりました (GH #1280)
+- Timer_create と関連するシステムコールを実装します。  これにより、GHC サポート (GH #307) が可能になります。
+- Ping によって 0.000 m の時間 (GH #1296) が返された問題を修正しました。
+- 開いているファイルが多すぎる場合は、正しいエラーコードを返します。
+- WSL の Netlink 要求が、インターフェイスのハードウェアアドレスが32バイト (Teredo インターフェイスなど) の場合は EINVAL で失敗する問題を修正した。
+   - Linux の "ip" ユーティリティには、WSL が32バイトのハードウェアアドレスを報告した場合にクラッシュするバグが含まれていることに注意してください。 これは、WSL ではなく、"ip" のバグです。 "Ip" ユーティリティは、ハードウェアアドレスの印刷に使用される文字列バッファーの長さをハードコーディングします。また、32バイトのハードウェアアドレスを出力するには、バッファーが小さすぎます。
+- その他の修正プログラムと機能強化
 
-### <a name="ltp-results"></a>成る結果:
-テストの成功の数:669 </br>
-不合格数 (失敗、スキップされたなど.)。258 </br>
-[成るテスト実行のログ](https://github.com/Microsoft/CommandLine-Documentation/tree/live/LTP_Results/14986)<br/>
+### <a name="ltp-results"></a>LTP の結果:
+成功したテストの数:669 </br>
+非パッシング (失敗、スキップされたなど) の数:258 </br>
+[LTP テストの実行ログ](https://github.com/Microsoft/CommandLine-Documentation/tree/live/LTP_Results/14986)<br/>
 
 <br/>
 
-### <a name="syscall-support"></a>Syscall サポート
-WSL でいくつかの実装を持つ新しいまたは強化された syscall の一覧を以下に示します。 少なくとも 1 つのシナリオではこの一覧に syscall がサポートされているが場合がありますがすべてのパラメーター サポートされていませんこの時点で。
+### <a name="syscall-support"></a>Syscall のサポート
+次に示すのは、WSL でいくつかの実装を持つ新しいまたは強化された syscall の一覧です。 この一覧の syscall は、少なくとも1つのシナリオでサポートされていますが、現時点では一部のパラメーターがサポートされていない可能性があります。
 
 `timer_create`<br/>
 `timer_delete`<br/>
@@ -1272,103 +1283,103 @@ WSL でいくつかの実装を持つ新しいまたは強化された syscall �
 `timer_settime`<br/>
 <br/>
 
-## <a name="build-14971"></a>ビルド 14971
+## <a name="build-14971"></a>ビルド14971
 
-一般的な Windows ビルド 14971 に関する情報を参照してください、 [Windows ブログ](https://blogs.windows.com/windowsexperience/2016/11/17/announcing-windows-10-insider-preview-build-14971-for-pc/)します。<br/>
+ビルド14971の一般的な Windows 情報については、 [windows のブログ](https://blogs.windows.com/windowsexperience/2016/11/17/announcing-windows-10-insider-preview-build-14971-for-pc/)を参照してください。<br/>
 
 
 ### <a name="fixed"></a>固定
 
- - コントロールが及ばないのための更新はありません Windows Subsystem for Linux のビルドでします。  次回のリリースでは、定期的にスケジュールされた更新プログラムが再開されます。
+ - Windows Subsystem for Linux では、コントロールを超える状況により、このビルドには更新プログラムがありません。  定期的にスケジュールされた更新は、次回のリリースで再開されます。
 
-### <a name="ltp-results"></a>成る結果:
-14965 から変更されていません </br>
-テストの成功の数:664 </br>
-不合格数 (失敗、スキップされたなど.)。263 </br>
-[成るテスト実行のログ](https://github.com/Microsoft/CommandLine-Documentation/tree/live/LTP_Results/14965)<br/>
+### <a name="ltp-results"></a>LTP の結果:
+14965から変更されていません </br>
+成功したテストの数:664 </br>
+非パッシング (失敗、スキップされたなど) の数:263 </br>
+[LTP テストの実行ログ](https://github.com/Microsoft/CommandLine-Documentation/tree/live/LTP_Results/14965)<br/>
 
 <br/>
 
-## <a name="build-14965"></a>ビルド 14965
+## <a name="build-14965"></a>ビルド14965
 
-一般的な Windows ビルド 14965 に関する情報を参照してください、 [Windows ブログ](https://blogs.windows.com/windowsexperience/2016/11/09/announcing-windows-10-insider-preview-build-14965-for-mobile-and-pc/)します。<br/>
+ビルド14965の一般的な Windows 情報については、 [windows のブログ](https://blogs.windows.com/windowsexperience/2016/11/09/announcing-windows-10-insider-preview-build-14965-for-mobile-and-pc/)を参照してください。<br/>
 
 
 ### <a name="fixed"></a>固定
 
-- Netlink のサポートはソケット NETLINK_ROUTE プロトコルの RTM_GETLINK と RTM_GETADDR (GH #468)
-  - により、ネットワークの列挙体のコマンドを示している ifconfig と ip
-  - 詳細についてを参照、 [WSL ネットワー キング ブログの投稿](https://blogs.msdn.microsoft.com/wsl/2016/11/08/225/)します。
+- Netlink sockets NETLINK_ROUTE protocol の RTM_GETLINK および RTM_GETADDR (GH #468) のサポート
+  - ネットワーク列挙に対する ifconfig および ip コマンドを有効にします
+  - 詳細については、 [Wsl ネットワークに関するブログ記事](https://blogs.msdn.microsoft.com/wsl/2016/11/08/225/)を参照してください。
 
-- /sbin が既定では、ユーザーの path に追加
-- NT ユーザー パスのようになりました (つまりここで入力できます notepad.exe System32 を Linux パスに追加せずに) 既定で WSL パスに追加
-- /Proc/sys/kernel/cap_last_cap サポートが追加されました
-- 現在の作業ディレクトリには、ansi 以外の文字 (GH #1254) が含まれている場合は NT バイナリ WSL から起動することはようになりました
-- 切断された unix ストリーム ソケットのシャット ダウンを許可します。
-- PR_GET_PDEATHSIG サポートが追加されました。
-- あるサポートが追加されました
-- パイプの取得が詰まっているつまり bash-c エラーを修正しました"ls alR/"|bash-c"cat"(GH #1214)
-- 現在のターミナルに接続する要求の処理。
-- /Proc/のマーク<pid>/oom_score_adj を書き込み可能です。
-- /Sys/fs/cgroup フォルダーを追加します。
-- sched_setaffinity 関係ビット マスクの数を返す必要があります。
-- インタープリターのパスより小さい 64 文字を指定する必要がありますと誤った前提を ELF 検証ロジックを修正します。 (GH #743)
-- 開いているファイル記述子は、コンソール ウィンドウを開いて (GH #1187) を保持できます。
-- 末尾にスラッシュをターゲットの名前 (GH #1008) rename() が失敗しました Fixeed エラー
-- /Proc/net/dev ファイルを実装します。
-- 固定 0.000ms タイマーの解決のために ping を実行します。
+- /sbin がユーザーのパスに既定で含まれるようになりました。
+- NT ユーザーパスが既定で WSL パスに追加されました (つまり、Linux パスに System32 を追加せずに notepad.exe を入力できるようになりました)
+- /Proc/sys/kernel/cap_last_cap のサポートを追加しました
+- 現在の作業ディレクトリに ansi 以外の文字が含まれている場合、WSL から NT バイナリを起動できるようになりました (GH #1254)
+- 切断された unix ストリームソケットでのシャットダウンを許可します。
+- PR_GET_PDEATHSIG のサポートを追加しました。
+- CLONE_PARENT のサポートを追加しました
+- パイプがスタックした場合のエラーを修正します。 bash-c "ls-alR/" |bash-c "cat" (GH #1214)
+- 現在のターミナルに接続するための要求を処理します。
+- /Proc/<pid>/oom_score_adj を書き込み可能としてマークします。
+- /Fs フォルダーを追加します。
+- sched_setaffinity は、関係ビットマスクの数を返す必要があります
+- インタープリターパスの長さが64文字未満であることを誤って想定している ELF 検証ロジックを修正します。 (GH #743)
+- 開いているファイル記述子は、コンソールウィンドウを開いたままにすることができます (GH #1187)
+- 名前の変更 () がターゲット名の末尾のスラッシュで失敗した Fixeed エラー (GH #1008)
+- /Proc/net/dev ファイルを実装する
+- タイマー精度による 0.000 ms ping を修正します。
 - 実装された/proc/self/environ (GH #730)
-- 追加のバグ修正と機能強化
+- その他のバグ修正と機能強化
 
-### <a name="ltp-results"></a>成る結果:
-テストの成功の数:664 </br>
-不合格数 (失敗、スキップされたなど.)。263 </br>
-[成るテスト実行のログ](https://github.com/Microsoft/CommandLine-Documentation/tree/live/LTP_Results/14965)<br/>
+### <a name="ltp-results"></a>LTP の結果:
+成功したテストの数:664 </br>
+非パッシング (失敗、スキップされたなど) の数:263 </br>
+[LTP テストの実行ログ](https://github.com/Microsoft/CommandLine-Documentation/tree/live/LTP_Results/14965)<br/>
 
 <br/>
 
-## <a name="build-14959"></a>ビルド 14959
+## <a name="build-14959"></a>ビルド14959
 
-一般的な Windows ビルド 14959 に関する情報を参照してください、 [Windows ブログ](https://blogs.windows.com/windowsexperience/2016/11/03/announcing-windows-10-insider-preview-build-14959-for-mobile-and-pc/#iI82GufJxMF3POU1.97)します。<br/>
+ビルド14959の一般的な Windows 情報については、 [windows のブログ](https://blogs.windows.com/windowsexperience/2016/11/03/announcing-windows-10-insider-preview-build-14959-for-mobile-and-pc/#iI82GufJxMF3POU1.97)を参照してください。<br/>
 
 
 ### <a name="fixed"></a>固定
 
-- Windows の Pico プロセス通知機能強化。  詳細情報について、 [WSL ブログ](https://blogs.msdn.microsoft.com/wsl/2016/11/01/wsl-antivirus-and-firewall-compatibility/)します。
-- Windows の相互運用性と安定性の向上
-- 0x80070057 エンタープライズ データ保護 (EDP) を有効にすると、bash.exe を起動するときにエラーを修正しました
-- 追加のバグ修正と機能強化
+- Windows の Pico Process 通知が改善されました。  [Wsl ブログ](https://blogs.msdn.microsoft.com/wsl/2016/11/01/wsl-antivirus-and-firewall-compatibility/)に記載されている追加情報。
+- Windows の相互運用性による安定性の向上
+- エンタープライズデータ保護 (EDP) が有効になっている場合に bash を起動したときのエラー0x80070057 を修正しました
+- その他のバグ修正と機能強化
 
-### <a name="ltp-results"></a>成る結果:
-テストの成功の数:665 </br>
-不合格数 (失敗、スキップされたなど.)。263 </br>
-[成るテスト実行のログ](https://github.com/Microsoft/CommandLine-Documentation/tree/live/LTP_Results/14959)<br/>
+### <a name="ltp-results"></a>LTP の結果:
+成功したテストの数:665 </br>
+非パッシング (失敗、スキップされたなど) の数:263 </br>
+[LTP テストの実行ログ](https://github.com/Microsoft/CommandLine-Documentation/tree/live/LTP_Results/14959)<br/>
 
 <br/>
 
-## <a name="build-14955"></a>ビルド 14955
+## <a name="build-14955"></a>ビルド14955
 
-一般的な Windows ビルド 14955 に関する情報を参照してください、 [Windows ブログ](https://blogs.windows.com/windowsexperience/2016/10/25/announcing-windows-10-insider-preview-build-14955-for-mobile-and-pc/#guGXQzKVFrZIDUYR.97)します。<br/>
+ビルド14955の一般的な Windows 情報については、 [windows のブログ](https://blogs.windows.com/windowsexperience/2016/10/25/announcing-windows-10-insider-preview-build-14955-for-mobile-and-pc/#guGXQzKVFrZIDUYR.97)を参照してください。<br/>
 
 
 ### <a name="fixed"></a>固定
 
- - コントロールが及ばないのための更新はありません Windows Subsystem for Linux のビルドでします。  次回のリリースでは、定期的にスケジュールされた更新プログラムが再開されます。
+ - Windows Subsystem for Linux では、コントロールを超える状況により、このビルドには更新プログラムがありません。  定期的にスケジュールされた更新は、次回のリリースで再開されます。
 
-### <a name="ltp-results"></a>成る結果:
-テストの成功の数:665 </br>
-不合格数 (失敗、スキップされたなど.)。263 </br>
-[成るテスト実行のログ](https://github.com/Microsoft/CommandLine-Documentation/tree/live/LTP_Results/14955)<br/>
+### <a name="ltp-results"></a>LTP の結果:
+成功したテストの数:665 </br>
+非パッシング (失敗、スキップされたなど) の数:263 </br>
+[LTP テストの実行ログ](https://github.com/Microsoft/CommandLine-Documentation/tree/live/LTP_Results/14955)<br/>
 
 <br/>
 
-## <a name="build-14951"></a>ビルド 14951
+## <a name="build-14951"></a>ビルド14951
 
-一般的な Windows ビルド 14951 に関する情報を参照してください、 [Windows ブログ](https://blogs.windows.com/windowsexperience/2016/10/19/announcing-windows-10-insider-preview-build-14951-for-mobile-and-pc/)します。<br/>
+ビルド14951の一般的な Windows 情報については、 [windows のブログ](https://blogs.windows.com/windowsexperience/2016/10/19/announcing-windows-10-insider-preview-build-14951-for-mobile-and-pc/)を参照してください。<br/>
 
 
-### <a name="new-feature-windows--ubuntu-interoperability"></a>新機能:Windows または Ubuntu の相互運用性
-WSL のコマンドラインから直接 Windows バイナリを呼び出すようになりましたことができます。  これにより、ユーザーは、Windows 環境と考えられるされていない方法でシステムとやり取りできるようにします。  簡単な例として、次のコマンドを実行することはようになりました。
+### <a name="new-feature-windows--ubuntu-interoperability"></a>新機能:Windows/Ubuntu の相互運用性
+Windows バイナリを WSL コマンドラインから直接呼び出すことができるようになりました。  これにより、ユーザーは Windows 環境とシステムを、不可能な方法で操作できるようになります。  簡単な例として、ユーザーが次のコマンドを実行できるようになりました。
 
     ```
     $ export PATH=$PATH:/mnt/c/Windows/System32
@@ -1378,309 +1389,309 @@ WSL のコマンドラインから直接 Windows バイナリを呼び出すよ�
     $ cmd.exe /c dir
     ```
 
-詳細についてにあります。
+詳細については、以下を参照してください。
 
-- [WSL の相互運用機能チームのブログ](https://blogs.msdn.microsoft.com/wsl/2016/10/19/windows-and-ubuntu-interoperability/)<br/>
-- [相互運用機能の MSDN ドキュメント](https://msdn.microsoft.com/en-us/commandline/wsl/interop)<br/>
+- [相互運用のための WSL チームブログ](https://blogs.msdn.microsoft.com/wsl/2016/10/19/windows-and-ubuntu-interoperability/)<br/>
+- [MSDN Interop のドキュメント](https://msdn.microsoft.com/en-us/commandline/wsl/interop)<br/>
 
 ### <a name="fixed"></a>固定
 
-- WSL のすべての新しいインスタンスを Ubuntu 16.04 (Xenial) がインストールされているようになりました。  14.04 (頼りになる) の既存のインスタンスを持つユーザーは自動的にアップグレードされません。
+- Ubuntu 16.04 (Xenial) が、すべての新しい WSL インスタンスにインストールされるようになりました。  既存の 14.04 (Trusty) インスタンスを持つユーザーは自動的にアップグレードされません。
 - インストール中に設定されたロケールが表示されるようになりました
-- バグが常にではありませんが、WSL プロセスをファイルにリダイレクトする場所のターミナル強化機能します。
-- コンソールの有効期間は bash.exe 有効期間に関連付けられる必要があります。
-- コンソール ウィンドウのサイズがバッファー サイズではなく、表示サイズを使用する必要があります。
-- 追加のバグ修正と機能強化
+- WSL プロセスをファイルにリダイレクトする場合のバグを含むターミナルの機能強化
+- コンソールの有効期間は、bash の有効期間に関連付けられている必要があります
+- コンソールウィンドウのサイズは、バッファーサイズではなく表示サイズを使用する必要があります
+- その他のバグ修正と機能強化
 
-### <a name="ltp-results"></a>成る結果:
-テストの成功の数:665 </br>
-不合格数 (失敗、スキップされたなど.)。263 </br>
-[成るテスト実行のログ](https://github.com/Microsoft/CommandLine-Documentation/tree/live/LTP_Results/14951)<br/>
+### <a name="ltp-results"></a>LTP の結果:
+成功したテストの数:665 </br>
+非パッシング (失敗、スキップされたなど) の数:263 </br>
+[LTP テストの実行ログ](https://github.com/Microsoft/CommandLine-Documentation/tree/live/LTP_Results/14951)<br/>
 
 <br/>
 
-## <a name="build-14946"></a>ビルド 14946
+## <a name="build-14946"></a>ビルド14946
 
-一般的な Windows ビルド 14946 に関する情報を参照してください、 [Windows ブログ](https://blogs.windows.com/windowsexperience/2016/10/13/announcing-windows-10-insider-preview-build-14946-for-pc-and-mobile/#xj8GdVooEqo4H7H7.97)します。<br/>
+ビルド14946の一般的な Windows 情報については、 [windows のブログ](https://blogs.windows.com/windowsexperience/2016/10/13/announcing-windows-10-insider-preview-build-14946-for-pc-and-mobile/#xj8GdVooEqo4H7H7.97)を参照してください。<br/>
 
 
 ### <a name="fixed"></a>固定
 
-- スペースや引用符が含まれている NT ユーザー名とユーザー用の WSL ユーザー アカウントの作成を妨げる問題を修正しました。 
-- Stat でディレクトリのリンク数の場合は 0 を返すには、VolFs と DrvFs を変更します。
-- IPV6_MULTICAST_HOPS ソケット オプションをサポートします。
-- Tty あたりの I/O ループを 1 つのコンソールに制限されます。 例: 次のコマンドは、考えられる。
-  - bash -c "echo data" | bash -c "ssh user@example.com 'cat > foo.txt'"
+- スペースまたは引用符を含む NT ユーザー名を持つユーザーの WSL ユーザーアカウントを作成できない問題を修正しています。 
+- ディレクトリのリンク数が stat で0を返すように、VolFs と DrvFs を変更します。
+- IPV6_MULTICAST_HOPS socket オプションをサポートします。
+- Tty ごとに1つのコンソール i/o ループに制限します。 例: 次のコマンドを実行できます。
+  - bash-c "echo data" |bash-c "ssh user@example.com " cat > foo .txt ""
 
-- /proc/cpuinfo (GH #1115) にタブ スペースに置換します。
-- Windows のマウントされたボリュームに一致する名前を持つ mountinfo に DrvFs が表示されます。
-- /home と/root mountinfo 正しい名前で表示されます。
-- 追加のバグ修正と機能強化
+- /proc/cpuinfo のタブでスペースを置換する (GH #1115)
+- Mountinfo に DrvFs が、マウントされた Windows ボリュームと一致する名前で表示されるようになりました。
+- /home と/root が mountinfo に正しい名前で表示されるようになりました
+- その他のバグ修正と機能強化
 
-### <a name="ltp-results"></a>成る結果:
-テストの成功の数:665 </br>
-不合格数 (失敗、スキップされたなど.)。263 </br>
-[成るテスト実行のログ](https://github.com/Microsoft/CommandLine-Documentation/tree/live/LTP_Results/14946)<br/>
+### <a name="ltp-results"></a>LTP の結果:
+成功したテストの数:665 </br>
+非パッシング (失敗、スキップされたなど) の数:263 </br>
+[LTP テストの実行ログ](https://github.com/Microsoft/CommandLine-Documentation/tree/live/LTP_Results/14946)<br/>
 
 <br/>
 
-## <a name="build-14942"></a>ビルド 14942
+## <a name="build-14942"></a>ビルド14942
 
-一般的な Windows ビルド 14942 に関する情報を参照してください、 [Windows ブログ](https://aka.ms/onefourninefourtwoooooo)します。<br/>
+ビルド14942の一般的な Windows 情報については、 [windows のブログ](https://aka.ms/onefourninefourtwoooooo)を参照してください。<br/>
 
 
 ### <a name="fixed"></a>固定
 
-- メモリを含む、"試行された実行の NOEXECUTE"SSH がブロックしてクラッシュのネットワークのアドレス指定、バグチェック数
-- inotifiy サポート DrvFs 上の Windows アプリケーションから生成された通知がようになりました
-- Mongod の TCP_KEEPIDLE と TCP_KEEPINTVL を実装します。 (GH #695)
-- Pivot_root システム コールを実装します。
-- SO_DONTROUTE のソケット オプションを実装します。
-- 追加のバグ修正と機能強化
+- SSH をブロックしていた "NOEXECUTE MEMORY の実行を試行しました" というネットワーククラッシュを含む、いくつかのバグを解決しました。
+- DrvFs の Windows アプリケーションから生成された通知の inotifiy サポートがになりました。
+- TCP_KEEPIDLE と TCP_KEEPINTVL を mongod 用に実装します。 (GH #695)
+- Pivot_root システムコールを実装する
+- SO_DONTROUTE のソケットの実装オプション
+- その他のバグ修正と機能強化
 
 
-### <a name="ltp-results"></a>成る結果:
-テストの成功の数:665 </br>
-不合格数 (失敗、スキップされたなど.)。263 </br>
-[成るテスト実行のログ](https://github.com/Microsoft/CommandLine-Documentation/tree/live/LTP_Results/14942)<br/>
+### <a name="ltp-results"></a>LTP の結果:
+成功したテストの数:665 </br>
+非パッシング (失敗、スキップされたなど) の数:263 </br>
+[LTP テストの実行ログ](https://github.com/Microsoft/CommandLine-Documentation/tree/live/LTP_Results/14942)<br/>
 
-### <a name="syscall-support"></a>Syscall サポート
-WSL でいくつかの実装を持つ新しいまたは強化された syscall の一覧を以下に示します。 少なくとも 1 つのシナリオではこの一覧に syscall がサポートされているが場合がありますがすべてのパラメーター サポートされていませんこの時点で。
+### <a name="syscall-support"></a>Syscall のサポート
+次に示すのは、WSL でいくつかの実装を持つ新しいまたは強化された syscall の一覧です。 この一覧の syscall は、少なくとも1つのシナリオでサポートされていますが、現時点では一部のパラメーターがサポートされていない可能性があります。
 
 `pivot_root`<br/>
 <br/>
 
-## <a name="build-14936"></a>ビルド 14936
+## <a name="build-14936"></a>ビルド14936
 
-一般的な Windows ビルド 14936 に関する情報を参照してください、 [Windows ブログ](https://blogs.windows.com/windowsexperience/2016/09/28/announcing-windows-10-insider-preview-build-14936-for-pc/)します。<br/>
+ビルド14936の一般的な Windows 情報については、 [windows のブログ](https://blogs.windows.com/windowsexperience/2016/09/28/announcing-windows-10-insider-preview-build-14936-for-pc/)を参照してください。<br/>
 
 
-注:WSL では、Ubuntu バージョン 16.04 (Xenial) Ubuntu 14.04 (信頼性) ではなくを今後のリリースでインストールします。  この変更は、内部関係者が (lxrun.exe/install または bash.exe の最初の実行) の新しいインスタンスのインストールに適用されます。  信頼性と既存のインスタンスは自動的にアップグレードされません。 ユーザーは、do リリース-アップグレード コマンドを使用して Xenial に頼りになる、イメージをアップグレードできます。
+注:WSL は、今後のリリースで Ubuntu 14.04 (Trusty) ではなく、Ubuntu バージョン 16.04 (Xenial) をインストールします。  この変更は、新しいインスタンスをインストールする場合に適用されます (lxrun/install または bash の最初の実行)。  Trusty を使用した既存のインスタンスは自動的にはアップグレードされません。 ユーザーは、Trusty コマンドを使用して、自分のイメージを Xenial にアップグレードできます。
 
 ### <a name="known-issue"></a>既知の問題
-WSL でソケットの実装によって問題が発生します。  バグチェックでは、"試行された実行の NOEXECUTE MEMORY"のエラーでクラッシュとして出現します。  この問題の最も一般的な形では、ssh を使用する場合、クラッシュです。  根本原因は、内部のビルドでは固定され、内部関係者に、できるだけ早い機会にプッシュされます。
+WSL でいくつかのソケット実装に問題が発生しています。  "NOEXECUTE MEMORY の実行を試行しました" というエラーが発生すると、バグチェックはクラッシュします。  この問題の最も一般的な取り組みは、ssh を使用する場合のクラッシュです。  根本原因は内部ビルドで固定されており、最も早い機会に Insider にプッシュされます。
 
 ### <a name="fixed"></a>固定
 
-- Chroot システム コールの実装
-- Inotify 改善~~DrvFs 上の Windows アプリケーションから生成された通知のサポートを含む~~
-  - 修正:Inotify は、この時点ではない Windows アプリケーションから送信された変更のサポートします。
-- ソケットの IPV6 へのバインド::<port n> IPV6_V6ONLY ようになりました (GH #68、#157、#393、#460、#674、#740、#982、#996)
-- Waitid systemcall の WNOWAIT 動作 (GH #638) を実装します。
-- のでおよび IP_TTL IP ソケット オプションをサポートします。
-- 長さ 0 の read() をすぐに返す必要があります (GH #975)
-- .Tar ファイルで、NULL 終端文字が含まれていないファイル名とファイル名のプレフィックスを正しく処理します。
-- /dev/null epoll のサポート
-- /Dev/alarm タイム ソースを修正します。
-- Bash-c をファイルにリダイレクトできるようになりました
-- 追加のバグ修正と機能強化
+- Chroot システム呼び出しを実装します。
+- ~~DrvFs の Windows アプリケーションから生成された通知のサポートを含む~~inotify の機能強化
+  - 量現時点では利用できない Windows アプリケーションからの変更については、Inotify のサポートが提供されています。
+- IPV6 へのソケットバインド:<port n> : で IPV6_V6ONLY (GH #68、#157、#393、#460、#674、#740、#982、#996) がサポートされるようになりました。
+- Waitid systemcall が実装された WNOWAIT 動作 (GH #638)
+- IP ソケットオプション IP_HDRINCL と IP_TTL のサポート
+- 長さ0の読み取り () はすぐに返される必要があります (GH #975)
+- Tar ファイルに NULL 終端文字を含まないファイル名とファイル名プレフィックスを正しく処理します。
+- /dev/null の epoll サポート
+- 更新プログラムのタイムソースを修正する
+- Bash-c がファイルにリダイレクトできるようになりました
+- その他のバグ修正と機能強化
 
-### <a name="ltp-results"></a>成る結果:
-テストの成功の数:664 </br>
-不合格数 (失敗、スキップされたなど.)。264 </br>
-[成るテスト実行のログ](https://github.com/Microsoft/CommandLine-Documentation/tree/live/LTP_Results/14936)<br/>
+### <a name="ltp-results"></a>LTP の結果:
+成功したテストの数:664 </br>
+非パッシング (失敗、スキップされたなど) の数:264 </br>
+[LTP テストの実行ログ](https://github.com/Microsoft/CommandLine-Documentation/tree/live/LTP_Results/14936)<br/>
 
-### <a name="syscall-support"></a>Syscall サポート
-WSL でいくつかの実装を持つ新しいまたは強化された syscall の一覧を以下に示します。 少なくとも 1 つのシナリオではこの一覧に syscall がサポートされているが場合がありますがすべてのパラメーター サポートされていませんこの時点で。
+### <a name="syscall-support"></a>Syscall のサポート
+次に示すのは、WSL でいくつかの実装を持つ新しいまたは強化された syscall の一覧です。 この一覧の syscall は、少なくとも1つのシナリオでサポートされていますが、現時点では一部のパラメーターがサポートされていない可能性があります。
 
 `chroot`<br/>
 <br/>
 
-## <a name="build-14931"></a>ビルド 14931
+## <a name="build-14931"></a>ビルド14931
 
-一般的な Windows ビルド 14931 に関する情報を参照してください、 [Windows ブログ](https://blogs.windows.com/windowsexperience/2016/09/21/announcing-windows-10-insider-preview-build-14931-for-pc/)します。<br/>
+ビルド14931の一般的な Windows 情報については、 [windows のブログ](https://blogs.windows.com/windowsexperience/2016/09/21/announcing-windows-10-insider-preview-build-14931-for-pc/)を参照してください。<br/>
 
 
 ### <a name="fixed"></a>固定
 
- - コントロールが及ばないのための更新はありません Windows Subsystem for Linux のビルドでします。  次のリリースで定期的にスケジュールされた更新プログラムが再開されます。
+ - Windows Subsystem for Linux では、コントロールを超える状況により、このビルドには更新プログラムがありません。  定期的にスケジュールされた更新は、次のリリースで再開されます。
 
 <br/>
 
-## <a name="build-14926"></a>ビルド 14926
+## <a name="build-14926"></a>ビルド14926
 
-一般的な Windows ビルド 14926 に関する情報を参照してください、 [Windows ブログ](https://blogs.windows.com/windowsexperience/2016/09/14/announcing-windows-10-insider-preview-build-14926-for-pc-and-mobile/)します。<br/>
+ビルド14926の一般的な Windows 情報については、 [windows のブログ](https://blogs.windows.com/windowsexperience/2016/09/14/announcing-windows-10-insider-preview-build-14926-for-pc-and-mobile/)を参照してください。<br/>
 
 
 ### <a name="fixed"></a>固定
 
-- Ping は管理者特権がないコンソール
-- 現在サポートされても管理者特権のない Ping6
-- WSL で変更されたファイルの Inotify サポート。 (GH #216)
+- 管理者特権を持たないコンソールで Ping が機能するようになりました。
+- Ping6 がサポートされるようになりました。管理者特権も必要ありません
+- WSL によって変更されたファイルの Inotify サポート。 (GH #216)
   - サポートされているフラグ:
     - inotify_init1:LX_O_CLOEXEC, LX_O_NONBLOCK
     - inotify_add_watch イベント:LX_IN_ACCESS, LX_IN_MODIFY, LX_IN_ATTRIB, LX_IN_CLOSE_WRITE, LX_IN_CLOSE_NOWRITE, LX_IN_OPEN, LX_IN_MOVED_FROM, LX_IN_MOVED_TO, LX_IN_CREATE, LX_IN_DELETE, LX_IN_DELETE_SELF, LX_IN_MOVE_SELF
-    - inotify_add_watch 属性:LX_IN_DONT_FOLLOW, LX_IN_EXCL_UNLINK, LX_IN_MASK_ADD, LX_IN_ONESHOT, LX_IN_ONLYDIR
-    - 出力を参照してください。LX_IN_ISDIR, LX_IN_IGNORED
-  - 既知の問題:Windows アプリケーションからファイルを変更するすべてのイベントを生成しません
-- Unix ソケットになりました SCM_CREDENTIALS
+    - inotify_add_watch 属性 (i):LX_IN_DONT_FOLLOW, LX_IN_EXCL_UNLINK, LX_IN_MASK_ADD, LX_IN_ONESHOT, LX_IN_ONLYDIR
+    - 出力の読み取り:LX_IN_ISDIR, LX_IN_IGNORED
+  - 既知の問題:Windows アプリケーションからファイルを変更してもイベントが生成されない
+- Unix ソケットで SCM_CREDENTIALS がサポートされるようになりました。
 
-### <a name="ltp-results"></a>成る結果:
-テストの成功の数:651 </br>
-不合格数 (失敗、スキップされたなど.)。258 </br>
-[成るテスト実行のログ](https://github.com/Microsoft/CommandLine-Documentation/tree/live/LTP_Results/14926)<br/>
+### <a name="ltp-results"></a>LTP の結果:
+成功したテストの数:651 </br>
+非パッシング (失敗、スキップされたなど) の数:258 </br>
+[LTP テストの実行ログ](https://github.com/Microsoft/CommandLine-Documentation/tree/live/LTP_Results/14926)<br/>
 
 <br/>
 
-## <a name="build-14915"></a>ビルド 14915
+## <a name="build-14915"></a>ビルド14915
 
-一般的な Windows ビルド 14915 に関する情報を参照してください、 [Windows ブログ](https://blogs.windows.com/windowsexperience/2016/08/31/announcing-windows-10-insider-preview-build-14915-for-pc-and-mobile)します。<br/>
+ビルド14915の一般的な Windows 情報については、 [windows のブログ](https://blogs.windows.com/windowsexperience/2016/08/31/announcing-windows-10-insider-preview-build-14915-for-pc-and-mobile)を参照してください。<br/>
 
 
 ### <a name="fixed"></a>固定
--  Socketpair unix データグラム ソケット (GH #262)
-- SO_REUSEADDR の Unix ソケットのサポート
-- UNIX ソケット サポート:so_broadcast (GH #568)
-- 型 (GH #758、#546) の Unix ソケットのサポート
-- Unix データグラム ソケットの送信、受信、およびシャット ダウンのサポートの追加
-- 非固定アドレスに無効な mmap パラメーターの検証のためのバグチェックを修正します。 (GH #847)
-- 中断のサポート]、[ターミナル状態の再開
-- TIOCPKT ioctl 画面ユーティリティ (GH #774) ブロックを解除するためのサポート
+-  Unix データグラムソケットの socketpair (GH #262)
+- SO_REUSEADDR の Unix ソケットサポート
+- SO_BROADCAST の UNIX ソケットサポート (GH #568)
+- SOCK_SEQPACKET の Unix ソケットサポート (GH #758、#546)
+- Unix データグラムソケットの送信、受信、およびシャットダウンのサポートの追加
+- 非固定アドレスに対する mmap パラメーターの検証が無効なため、バグチェックを修正します。 (GH #847)
+- ターミナル状態の中断/再開のサポート
+- 画面ユーティリティのブロックを解除する TIOCPKT ioctl のサポート (GH #774)
     - 既知の問題:関数キーが動作していません
-- 解放されたメンバー 'ReaderReady' へのアクセスを LxpTimerFdWorkerRoutine (GH #814) を引き起こす可能性のある TimerFd するときの競合を修正しました
-- Futex、アンケート、および同様の再開可能なシステムの呼び出しのサポートを有効にします。
-- 追加されたバインド マウントのサポート
-- マウントの名前空間のサポートの共有を解除します。
-    - 既知の問題:新しいマウント名前空間を作成するときに`unshare(CLONE_NEWNS)`現在の作業ディレクトリは引き続き古い名前空間を指す
+- TimerFd の競合を修正しました。これにより、解放されたメンバー ' ReaderReady ' が Lxp Timerfdworkspace Erroutine (GH #814) によってアクセスされる可能性があります
+- Futex、投票、clock_nanosleep の再起動可能なシステムコールのサポートを有効にする
+- バインドマウントサポートを追加しました
+- マウントの名前空間のサポートの共有を解除する
+    - 既知の問題:現在の作業ディレクトリを使用し`unshare(CLONE_NEWNS)`て新しいマウント名前空間を作成すると、引き続き古い名前空間が参照されます。
 - 追加の機能強化とバグ修正
 
 <br/>
 
-## <a name="build-14905"></a>ビルド 14905
+## <a name="build-14905"></a>ビルド14905
 
-一般的な Windows ビルド 14905 に関する情報を参照してください、 [Windows ブログ](https://blogs.windows.com/windowsexperience/2016/08/17/announcing-windows-10-insider-preview-build-14905-for-pc-mobile/)します。<br/>
+ビルド14905の一般的な Windows 情報については、 [windows のブログ](https://blogs.windows.com/windowsexperience/2016/08/17/announcing-windows-10-insider-preview-build-14905-for-pc-mobile/)を参照してください。<br/>
 
 
 ### <a name="fixed"></a>固定
-- 呼び出しは今すぐ再起動可能なシステムには、(GH #349、GH #520) がサポートされています
-- ディレクトリ]、[今すぐに運用を終了 (GH #650) へのシンボリック リンク
-- /Dev/random の実装の RNDGETENTCNT ioctl
-- /Proc/[pid] を実装/マウント、/proc/[pid]/mountinfo と/proc/[pid]/mountstats ファイル
-- 追加のバグ修正と機能強化
+- 再開可能なシステムコールがサポートされるようになりました (GH #349、GH #520)
+- 現在操作中のディレクトリへのシンボリックリンク (GH #650)
+- /Dev/random の RNDGETENTCNT ioctl を実装します。
+- /Proc/[pid]/マウント,/proc/[pid]/mountinfo および/proc/[pid]/mountstats ファイルを実装します。
+- その他のバグ修正と機能強化
 
 </br>
 
-## <a name="build-14901"></a>ビルド 14901
-最初の内部関係者は、Windows 10 Anniversary Update のリリースの投稿に対してビルドします。
+## <a name="build-14901"></a>ビルド14901
+Windows 10 記念日更新リリースの最初の Insider ビルド。
 
-一般的な Windows ビルド 14901 に関する情報を参照してください、 [Windows ブログ](https://blogs.windows.com/windowsexperience/2016/08/11/announcing-windows-10-insider-preview-build-14901-for-pc/)します。<br/>
+ビルド14901の一般的な Windows 情報については、 [windows のブログ](https://blogs.windows.com/windowsexperience/2016/08/11/announcing-windows-10-insider-preview-build-14901-for-pc/)を参照してください。<br/>
 
 
 ### <a name="fixed"></a>固定
-- 末尾のスラッシュの問題を修正しました
-    - などのコマンド`$ mv a/c/ a/b/`作業ようになりました
-- Ubuntu のロケールは、Windows ロケールに設定する必要がある場合に要求をインストールするようになりました
-- Ns フォルダーの詳しい情報のサポート
-- マウントを追加し、tmpfs、詳しい情報と sysfs ファイル システムのマウントを解除
-- [At] の 32 ビットの ABI 署名 mknod を修正します。
-- Unix ソケットのディスパッチ モデルに移動
-- INET ソケットの受信バッファー サイズ、setsockopt を使用して設定を適用する必要があります。
-- 実装 MSG_CMSG_CLOEXEC unix ソケットの受信メッセージのフラグ
-- Linux プロセス stdin と stdout パイプ リダイレクト (GH 2)
-    - Cmd. で bash-c コマンドのパイプ処理では、します。  例: > dir |bash-c"grep foo"
-- Bash は、複数のページファイル (GH #538、#358) をシステムにインストールするようになりましたことができます。
-- INET ソケット バッファーの既定のサイズには、Ubuntu の既定の設定の一致する必要があります。
-- Xattr syscall listxattr に揃える
-- のみ SIOCGIFCONF から有効な IPv4 アドレスとのインターフェイスを返す
-- Ptrace によって挿入されたときに既定のアクションを信号を修正します。
-- implement /proc/sys/vm/min_free_kbytes
-- Sigreturn でコンテキストを復元するときにコンピューター コンテキスト レジスタの値を使用します。
-    - Java と javac に一部のユーザーの分岐がどこで問題が解決します。
-- /Proc/sys/kernel/hostname を実装します。
+- 末尾のスラッシュの問題を修正した
+    - などのコマンドが動作するようになりました`$ mv a/c/ a/b/`
+- Ubuntu ロケールを Windows ロケールに設定するかどうかを確認するメッセージが表示されるようになりました
+- Ns フォルダーの Procfs サポート
+- Tmpfs、procfs、および sysfs ファイルシステムのマウントとマウント解除を追加しました
+- Mknod [at] 32 ビット ABI 署名の修正
+- Unix ソケットをディスパッチモデルに移行
+- Setsockopt を使用して、INET ソケットの recv バッファーサイズを設定する必要があります
+- MSG_CMSG_CLOEXEC unix socket receive message フラグを実装する
+- Linux プロセス stdin/stdout パイプのリダイレクト (GH #2)
+    - CMD で bash-c コマンドのパイプを使用できるようにします。  例: > dir |bash-c "grep foo"
+- Bash を複数のシステムにインストールできるようになりました (GH #538、#358)
+- 既定の INET ソケットバッファーサイズは、既定の Ubuntu セットアップのものと一致している必要があります。
+- Xattr syscall を listxattr に揃える
+- SIOCGIFCONF から有効な IPv4 アドレスを持つインターフェイスのみを返す
+- Ptrace によって挿入されるときのシグナルの既定の動作を修正する
+- /proc/sys/vm/min_free_kbytes を実装する
+- Sigreturn でコンテキストを復元するときにマシンコンテキストレジスタの値を使用する
+    - これにより、一部のユーザーに対して java と javac がハングした問題が解決されます。
+- /Proc/sys/kernel/hostname を実装する
 
-### <a name="syscall-support"></a>Syscall サポート
-WSL でいくつかの実装を持つ新しいまたは強化された syscall の一覧を以下に示します。 少なくとも 1 つのシナリオではこの一覧に syscall がサポートされているが場合がありますがすべてのパラメーター サポートされていませんこの時点で。
+### <a name="syscall-support"></a>Syscall のサポート
+次に示すのは、WSL でいくつかの実装を持つ新しいまたは強化された syscall の一覧です。 この一覧の syscall は、少なくとも1つのシナリオでサポートされていますが、現時点では一部のパラメーターがサポートされていない可能性があります。
 
 `waitid`<br/>
 `epoll_pwait`<br/>
 
 <br/>
 
-## <a name="build-14388-to-windows-10-anniversary-update"></a>Windows 10 Anniversary Update に 14388 をビルドします。
-一般的な Windows ビルド 14388 に関する情報を参照してください、 [Windows ブログ](https://aka.ms/14388wip)します。 <br/>
+## <a name="build-14388-to-windows-10-anniversary-update"></a>14388を Windows 10 記念日更新プログラムにビルドする
+ビルド14388の一般的な Windows 情報については、 [windows のブログ](https://aka.ms/14388wip)を参照してください。 <br/>
 
 ### <a name="fixed"></a>固定
-- 8/2 で、Windows 10 Anniversary Update の準備のための修正します。
-  - WSL Anniversary update の詳細についてを参照できます、[ブログ](https://blogs.msdn.microsoft.com/wsl/)
+- 8/2 で Windows 10 記念日更新プログラムを準備するための修正プログラム
+  - 記念日の更新に関する詳細については、こちらの[ブログ](https://blogs.msdn.microsoft.com/wsl/)を参照してください。
 
 <br/>
 
-## <a name="build-14376"></a>ビルド 14376
-一般的な Windows ビルド 14376 に関する情報を参照してください、 [Windows ブログ](https://blogs.windows.com/windowsexperience/2016/06/28/announcing-windows-10-insider-preview-build-14376-for-pc-and-mobile/)します。 <br/>
+## <a name="build-14376"></a>ビルド14376
+ビルド14376の一般的な Windows 情報については、 [windows のブログ](https://blogs.windows.com/windowsexperience/2016/06/28/announcing-windows-10-insider-preview-build-14376-for-pc-and-mobile/)を参照してください。 <br/>
 
 ### <a name="fixed"></a>固定
-- Apt get が (GH #493) がハングするいくつかのインスタンスの削除
-- 空のマウントが正しく処理されませんが、問題を修正しました
-- 場所 ram ディスクがマウントされていない正しく問題を修正しました
-- 変更の unix ソケットのフラグ (部分的な GH #451) をサポートするために受け入れ
-- 固定の一般的なネットワーク関連のブルー スクリーン
-- /Proc/[pid] にアクセスする場合は、ブルー スクリーンを固定/task (GH #523)
-- 高の固定の CPU 使用率のいくつか pty シナリオ (GH #488、#504)
-- 追加のバグ修正と機能強化
+- Apt-get がハングするインスタンスをいくつか削除しました (GH #493)
+- 空のマウントが正しく処理されない問題を修正しました
+- Ramdisks が正しくマウントされていない問題を修正しました
+- Unix ソケットの受け入れをサポートフラグに変更する (partial GH #451)
+- 一般的なネットワーク関連のブルースクリーンを修正した
+- /Proc/[pid]/task (GH #523) にアクセスするときにブルースクリーンを修正
+- 一部の pty シナリオ (GH #488、#504) の高 CPU 使用率を修正した
+- その他のバグ修正と機能強化
 
 <br/>
 
-## <a name="build-14371"></a>ビルド 14371
-一般的な Windows ビルド 14371 に関する情報を参照してください、 [Windows ブログ](https://blogs.windows.com/windowsexperience/2016/06/22/announcing-windows-10-insider-preview-build-14371-for-pc/)します。 <br/>
+## <a name="build-14371"></a>ビルド14371
+ビルド14371の一般的な Windows 情報については、 [windows のブログ](https://blogs.windows.com/windowsexperience/2016/06/22/announcing-windows-10-insider-preview-build-14371-for-pc/)を参照してください。 <br/>
 
 ### <a name="fixed"></a>固定
-- Ptrace を使用する場合は、SIGCHLD wait() とタイミングの競合を修正しました
-- パスは、末尾がある場合は、いくつかの動作を修正/(GH #432)
-- 名前の変更/リンク解除の子に開いているハンドルのために失敗したと問題を修正しました
-- 追加のバグ修正と機能強化
+- Ptrace を使用するときに SIGCHLD と wait () を使用してタイミングレースを修正しました
+- パスの末尾に/(GH #432) がある場合の動作を修正しました
+- 子へのハンドルが開いているため、名前の変更とリンク解除に失敗する問題を修正した
+- その他のバグ修正と機能強化
 
 <br/>
 
-## <a name="build-14366"></a>ビルド 14366
-一般的な Windows ビルド 14366 に関する情報を参照してください、 [Windows ブログ](https://blogs.windows.com/windowsexperience/2016/06/14/announcing-windows-10-insider-preview-build-14366-mobile-build-14364/)します。 <br/>
+## <a name="build-14366"></a>ビルド14366
+ビルド14366の一般的な Windows 情報については、 [windows のブログ](https://blogs.windows.com/windowsexperience/2016/06/14/announcing-windows-10-insider-preview-build-14366-mobile-build-14364/)を参照してください。 <br/>
 
 ### <a name="fixed"></a>固定
-- シンボリック リンクをファイルの作成を修正します。
--   追加された listxattr for Python (GH 385)
--   追加のバグ修正と機能強化
+- シンボリックリンクを使用したファイル作成時の修正
+-   Python 用 listxattr (GH 385) が追加されました
+-   その他のバグ修正と機能強化
 
-### <a name="syscall-support"></a>Syscall サポート
--   WSL でいくつかの実装を持つ新しいまたは強化された syscall の一覧を以下に示します。 少なくとも 1 つのシナリオではこの一覧に syscall がサポートされているが場合がありますがすべてのパラメーター サポートされていませんこの時点で。
+### <a name="syscall-support"></a>Syscall のサポート
+-   次に示すのは、WSL でいくつかの実装を持つ新しいまたは強化された syscall の一覧です。 この一覧の syscall は、少なくとも1つのシナリオでサポートされていますが、現時点では一部のパラメーターがサポートされていない可能性があります。
 
 `listxattr`<br/>
 <br/>
 
-## <a name="build-14361"></a>ビルド 14361
-一般的な Windows ビルド 14361 に情報を参照してください、 [Windows ブログ](https://aka.ms/wip14361)します。 <br/>
+## <a name="build-14361"></a>ビルド14361
+ビルド14361の一般的な Windows 情報については、 [windows のブログ](https://aka.ms/wip14361)を参照してください。 <br/>
 
 ### <a name="fixed"></a>固定
-- Windows 上の Ubuntu 上で Bash で実行する場合、DrvFs は大文字小文字が区別ようになりました。
-  - ユーザーが case.txt とケース。TXT、/mnt/retention/c ドライブします。
-  - 大文字小文字の区別は、Bash on Ubuntu on Windows 内でのみサポートされます。 NTFS の Bash の外側では、ファイルを正しく報告されますが、予期しない動作には、Windows からファイルとの対話が発生する場合。
-  - 各ボリューム (つまり/mnt/c) のルートは大文字小文字を区別しません。
-  - Windows でこれらのファイルの処理の詳細についてはあります[ここ](https://support.microsoft.com/en-us/kb/100625)します。
-- Pty を大幅に強化/tty をサポートします。  TMUX などのアプリケーションがサポートされています (GH #40)
-- ユーザー アカウントが常にではありません作成の固定のインストールの問題
-- コマンド ライン arg 構造が非常に長い引数リストに最適化されています。 (GH #153)
-- Read_only は、DrvFs からファイルを削除して chmod を行うようになりました
-- ターミナルのハングが (GH #43) を切断するいくつかのインスタンスを修正しました
-- chmod、chown tty を作業ようになりました
-- 0.0.0.0 への接続を許可して:: localhost (GH #388) として
-- Sendmsg/検知の IO ベクターの長さを処理するようになりました > 1 (部分的な GH #376)
-- ユーザーできるようになりましたオプトアウトのホストの自動生成されたファイル (GH #398)
-- 自動的にインストール (GH 11) 中に NT ロケールに Linux ロケールと一致します。
-- /Proc/sys/vm/swappiness ファイル (GH #306) の追加
-- strace が正しく終了ようになりました
-- /Proc/self/fd (GH #222) を再度開くをパイプを許可します。
-- %LOCALAPPDATA%\lxss DrvFs (GH #270) から下のディレクトリを非表示にします。
-- Bash.exe の処理の改善 ~。  などのコマンド"bash ~-c %.ls"(GH #467) をサポートするようになりました
-- ソケットは epoll を通知するようになりました (GH #271) をシャット ダウン中に使用可能な読み取り
-- lxrun/uninstall 的確ファイルとフォルダーを削除します。
-- 修正された ps f (GH #246)
-- X11 のサポート強化 xEmacs (GH #481) などのアプリ
-- Ubuntu の既定の設定と get_rlimit syscall (GH #172、#258) にサイズを正しく報告を照合する最初のスレッドのスタック サイズを更新
-- Pico プロセスのイメージ名 (例: 監査) 用のレポート機能の強化
-- 実装された/proc/mountinfo df コマンド
-- 子の名前のエラー コードのシンボリック リンクを修正しました。 そして。
-- 追加の機能強化のバグ修正と機能強化
+- Windows 上で Bash on Ubuntu を実行すると、DrvFs の大文字と小文字が区別されるようになりました。
+  - ユーザーは .txt と大文字小文字を区別することができます。/Mnt/c ドライブ上の TXT
+  - 大文字小文字の区別は、Bash on Ubuntu on Windows でのみサポートされています。 Bash の外部では、ファイルが正しく報告されますが、予期しない動作が Windows からのファイルの操作で発生する場合があります。
+  - 各ボリュームのルート (つまり/mnt/c) は大文字と小文字が区別されません。
+  - これらのファイルを Windows で処理する方法の詳細については、[こちら](https://support.microsoft.com/en-us/kb/100625)を参照してください。
+- Pty/tty のサポートが大幅に強化されました。  TMUX のようなアプリケーションがサポートされるようになりました (GH #40)
+- ユーザーアカウントが常に作成されていないインストールの問題を修正しました
+- 非常に長い引数リストを許可する最適化されたコマンドライン arg 構造体。 (GH #153)
+- DrvFs からファイルを削除することができるようになりました。
+- 切断時にターミナルがハングする一部のインスタンスを修正した (GH #43)
+- chmod と chown が tty デバイスで動作するようになりました
+- 0\.0.0.0 および:: as localhost (GH #388) への接続を許可します
+- Sendmsg/recvmsg が > 1 (partial GH #376) の IO ベクターの長さを処理するようになりました
+- ユーザーは、自動生成された hosts ファイル (GH #398) をオプトアウトできるようになりました。
+- インストール中に Linux ロケールを NT ロケールに自動的に一致させる (GH #11)
+- /Proc/sys/vm/swappiness ファイル (GH #306) が追加されました。
+- strace が正常に終了するようになりました
+- /Proc/self/fd を使用してパイプを再度開くことを許可する (GH #222)
+- DrvFs から%LOCALAPPDATA%\lxss の下にあるディレクトリを非表示にする (GH #270)
+- Bash の処理の強化 ~.  などのコマンド"bash ~-c %.ls"(GH #467) をサポートするようになりました
+- ソケットはシャットダウン中に使用可能な epoll read を通知するようになりました (GH #271)
+- lxrun/uninstall では、ファイルとフォルダーを削除する機能が改善されています。
+- 修正された ps-f (GH #246)
+- XEmacs (GH #481) などの x11 アプリのサポートの強化
+- 既定の Ubuntu 設定に一致するように初期スレッドスタックサイズを更新し、get_rlimit syscall (GH #172、#258) にサイズを正しく報告しました
+- Pico プロセスのイメージ名 (監査のためなど) のレポートが改善されました。
+- Df コマンドの/proc/mountinfo を実装します。
+- 子名のシンボリックリンクエラーコードを修正した。 そして。
+- 追加の改善バグ修正と改善
 
-### <a name="syscall-support"></a>Syscall サポート
-WSL でいくつかの実装を持つ新しいまたは強化された syscall の一覧を以下に示します。 少なくとも 1 つのシナリオではこの一覧に syscall がサポートされているが場合がありますがすべてのパラメーター サポートされていませんこの時点で。
+### <a name="syscall-support"></a>Syscall のサポート
+次に示すのは、WSL でいくつかの実装を持つ新しいまたは強化された syscall の一覧です。 この一覧の syscall は、少なくとも1つのシナリオでサポートされていますが、現時点では一部のパラメーターがサポートされていない可能性があります。
 
 `GETTIMER`<br/>
 `MKNODAT`<br/>
@@ -1690,26 +1701,26 @@ WSL でいくつかの実装を持つ新しいまたは強化された syscall �
 `SYNC_FILE_RANGE`<br/>
 <br/>
 
-## <a name="build-14352"></a>ビルド 14352
-一般的な Windows ビルド 14352 に関する情報を参照してください、 [Windows ブログ](https://aka.ms/wip14352)します。<br/>
+## <a name="build-14352"></a>ビルド14352
+ビルド14352の一般的な Windows 情報については、 [windows のブログ](https://aka.ms/wip14352)を参照してください。<br/>
 
 
 ### <a name="fixed"></a>固定
-- 大きなファイルが非ダウンロード/正常に作成された問題を修正しました。  これは、npm その他のシナリオ (GH 3、GH #313) ブロックを解除する必要があります。
-- ソケットのハングをいくつかのインスタンスの削除
-- 一部の ptrace エラーを修正しました
-- WSL が 255 文字より長いファイル名を許可すると問題を修正しました
-- 英語以外の文字のサポート強化
-- 現在の Windows タイム ゾーン データを追加し、既定値として設定
-- 一意のデバイス id のそれぞれのマウント ポイント (jre の修正 – GH 番号 49)
-- パスを格納している問題を修正"します"。 および"."
-- Fifo サポートが追加されました (GH #71)
-- Ubuntu のネイティブ形式を一致するように resolv.conf の更新の形式
-- いくつかの詳しい情報のクリーンアップ
-- 管理コンソール (GH #18) の ping を有効になっています。
+- 大きなファイルが正しくダウンロードまたは作成されなかった問題を修正しました。  これにより、npm とその他のシナリオ (GH #3、GH #313) のブロックが解除されます。
+- ソケットがハングする一部のインスタンスを削除しました
+- いくつかの ptrace エラーを修正しました
+- 255文字を超えるファイル名を許可する WSL の問題を修正しました
+- 英語以外の文字のサポートの強化
+- 現在の Windows タイムゾーンデータを追加し、既定として設定する
+- 各マウントポイントの一意のデバイス id (jre fix – GH #49)
+- "." を含むパスの問題を修正してください。 および "."
+- 追加された Fifo サポート (GH #71)
+- ネイティブ Ubuntu 形式に一致するように resolv.conf の形式を更新しました
+- 一部の procfs クリーンアップ
+- 管理者コンソールの ping を有効にする (GH #18)
 
-### <a name="syscall-support"></a>Syscall サポート
-WSL でいくつかの実装を持つ新しいまたは強化された syscall の一覧を以下に示します。 少なくとも 1 つのシナリオではこの一覧に syscall がサポートされているが場合がありますがすべてのパラメーター サポートされていませんこの時点で。
+### <a name="syscall-support"></a>Syscall のサポート
+次に示すのは、WSL でいくつかの実装を持つ新しいまたは強化された syscall の一覧です。 この一覧の syscall は、少なくとも1つのシナリオでサポートされていますが、現時点では一部のパラメーターがサポートされていない可能性があります。
 
 `FALLOCATE`<br/>
 `EXECVE`<br/>
@@ -1717,39 +1728,39 @@ WSL でいくつかの実装を持つ新しいまたは強化された syscall �
 `FGETXATTR`<br/>
 <br/>
 
-## <a name="build-14342"></a>ビルド 14342
-一般的な Windows についてビルド 14342、 [Windows ブログ](https://aka.ms/wip14342)します。 <br/>
+## <a name="build-14342"></a>ビルド14342
+ビルド14342の一般的な Windows 情報については、 [Windows ブログ](https://aka.ms/wip14342)を参照してください。 <br/>
 
-VolFs と DriveFs に関する情報が見つかりません、 [WSL ブログ](https://blogs.msdn.microsoft.com/wsl)します。 <br/>
+VolFs とドライブ Fs に関する情報は、 [Wsl ブログ](https://blogs.msdn.microsoft.com/wsl)を参照してください。 <br/>
 
 ### <a name="fixed"></a>固定
-- Windows ユーザーは、ユーザー名に Unicode 文字がある場合に、インストールの問題を修正しました
-- FAQ の apt-get と更新プログラムの udev 回避策が初回実行時の既定値によって提供されるようになりました
-- DriveFs にシンボリック リンクを有効になっている (/mnt/<drive>) ディレクトリ
-- シンボリック リンクが DriveFs と VolFs 間で作業するようになりました
+- Windows ユーザーのユーザー名に Unicode 文字が含まれている場合のインストールの問題を修正しました
+- FAQ の apt get 更新 udev の回避策は、最初の実行時に既定で提供されるようになりました。
+- ドライブ fs (/mnt/<drive>) ディレクトリでのシンボリックリンクの有効化
+- シンボリックリンクがドライブ Fs と VolFs 間で機能するようになりました
 - 解析の問題、アドレス指定された最上位レベル パス: %.ls/期待どおりに、正しく動作/。
-- DriveFs に npm をインストールし、-g オプションが有効になった
-- PHP サーバーが起動できない問題を修正しました
-- Ubuntu のネイティブに近い一致を $PATH などの最新の既定環境値
-- Apt パッケージ キャッシュを更新する Windows で、毎週のメンテナンス タスクを追加
-- ELF ヘッダーの検証で問題を修正しました、WSL なりました Melkor のすべてのオプション
-- Zsh シェルが機能
-- Go のプリコンパイル済みのバイナリはサポートされています
-- 最初に実行 Bash.exe で入力を求めるは正しくローカライズされています
-- proc/meminfo 返します情報を修正するようになりました
-- ソケットの VFS でサポートされています
-- tempfs として/dev がマウントされました
-- Fifo のようになりました
-- Proc/cpuinfo で正しく表示されて、マルチコア システム
-- さらなる改良とエラー メッセージが最初の実行中にダウンロード
+- npm がドライブ Fs にインストールされ、-g オプションが機能するようになりました。
+- PHP サーバーの起動を妨げている問題を修正した
+- ネイティブ Ubuntu に近い $PATH など、既定の環境値が更新されました
+- Apt パッケージキャッシュを更新するための週単位のメンテナンスタスクが Windows に追加されました
+- ELF ヘッダーの検証に関する問題を修正しました。 WSL ですべての Melkor オプションがサポートされるようになりました
+- Zsh シェルが機能しています
+- プリコンパイル済みのジャンプバイナリがサポートされるようになりました
+- Bash の初回実行時のプロンプトが正しくローカライズされるようになりました
+- /proc/meminfo が正しい情報を返すようになりました
+- VFS でソケットがサポートされるようになりました
+- /dev が tempfs としてマウントされるようになりました
+- Fifo がサポートされるようになりました
+- /Proc/cpuinfo で、マルチコアシステムが正しく表示されるようになりました。
+- 初回実行時の追加の改善とエラーメッセージのダウンロード
 - Syscall の機能強化とバグ修正。 以下のサポートされている syscall 一覧。
-- 追加のバグ修正と機能強化
+- その他のバグ修正と機能強化
 
 ### <a name="known-issues"></a>既知の問題
-- 解決されていません '… ' 場合によっては DriveFs で正しく
+- '. ' を解決できません 場合によっては、ドライブ Fs で正しく動作します。
 
-### <a name="syscall-support"></a>Syscall サポート
-WSL でいくつかの実装を持つ新しいまたは強化された syscall の一覧を以下に示します。 少なくとも 1 つのシナリオではこの一覧に syscall がサポートされているが場合がありますがすべてのパラメーター サポートされていませんこの時点で。
+### <a name="syscall-support"></a>Syscall のサポート
+次に示すのは、WSL でいくつかの実装を持つ新しいまたは強化された syscall の一覧です。 この一覧の syscall は、少なくとも1つのシナリオでサポートされていますが、現時点では一部のパラメーターがサポートされていない可能性があります。
 
 `FCHOWNAT`<br/>
 `GETEUID`<br/>
@@ -1763,49 +1774,49 @@ WSL でいくつかの実装を持つ新しいまたは強化された syscall �
 `SETXATTR`<br/>
 <br/>
 
-## <a name="build-14332"></a>ビルド 14332
+## <a name="build-14332"></a>ビルド14332
 
-一般的な Windows ビルド 14332 に関する情報を参照してください、 [Windows ブログ](https://aka.ms/wip14332)します。 <br/>
+ビルド14332の一般的な Windows 情報については、 [windows のブログ](https://aka.ms/wip14332)を参照してください。 <br/>
 
 
 ### <a name="fixed"></a>固定
-- DNS エントリの優先順位付けを含む resolv.conf 生成の向上
-- /Mnt 間と非ファイルおよびディレクトリの移動に関する問題-mnt ドライブ/
-- Tar ファイル、シンボリック リンクは作成できます。
-- インスタンスの作成時に追加された既定/run/lock ディレクトリ
-- 適切な統計情報を返すこと/dev/null を更新します。
-- 最初の実行中にダウンロードするときにその他のエラー
+- DNS エントリの優先順位を含む resolv.conf の生成の向上
+- /Mnt ドライブと/mnt 以外のドライブの間でファイルとディレクトリを移動する場合の問題
+- シンボリックリンクを使用して Tar ファイルを作成できるようになりました。
+- インスタンスの作成時に既定の/run/lock ディレクトリが追加されました
+- /Dev/null を更新して適切な stat 情報を返す
+- 初回実行時のダウンロード時の追加エラー
 - Syscall の機能強化とバグ修正。 以下のサポートされている syscall 一覧。
-- 追加の機能強化のバグ修正と機能強化
+- 追加の改善バグ修正と改善
 
-### <a name="syscall-support"></a>Syscall サポート
-WSL でいくつかの実装を含む新しい syscall を次に示します。 少なくとも 1 つのシナリオではこの一覧にシステム コールがサポートされているが場合がありますがすべてのパラメーター サポートされていませんこの時点でします。
+### <a name="syscall-support"></a>Syscall のサポート
+以下は、WSL で実装がいくつかある新しい syscall です。 この一覧の syscall は、少なくとも1つのシナリオでサポートされていますが、現時点では一部のパラメーターがサポートされていない可能性があります。
 
 `READLINKAT`<br/>
 <br/>
 
-## <a name="build-14328"></a>ビルド 14328
+## <a name="build-14328"></a>ビルド14328
 
-一般的な Windows ビルド 14332 に関する情報を参照してください、 [Windows ブログ](https://aka.ms/wip14328)します。 <br/>
+ビルド14332の一般的な Windows 情報については、 [windows のブログ](https://aka.ms/wip14328)を参照してください。 <br/>
 
 
 ### <a name="new-features"></a>新機能
-* Linux ユーザーをサポートします。  Ubuntu on Windows での Bash のインストールは、Linux ユーザーの作成を求められます。  詳細については、次を参照してください。 https://aka.ms/wslusers
-* ホスト名がない設定を Windows コンピューター名にようになりました @localhost
-* 詳細については、ビルド 14328 を参照してください。 https://aka.ms/wip14328
+* Linux ユーザーがサポートされるようになりました。  Bash on Ubuntu on Windows をインストールすると、Linux ユーザーの作成を求めるメッセージが表示されます。  詳細については、「」を参照してください。 https://aka.ms/wslusers
+* ホスト名が Windows コンピューター名に設定されました@localhost
+* ビルド14328の詳細については、次を参照してください。 https://aka.ms/wip14328
 
 ### <a name="fixed"></a>固定
-* 非/mnt/のシンボリック リンクの機能強化<drive>ファイル
-    * npm インストール機能
-    * jdk jre を今すぐインストール可能な命令を使用して[ここ](https://xubuntugeek.blogspot.com/2012/09/how-to-install-oracle-jdk-7-manually-in.html)します。
-    * 既知の問題: Windows のマウントのシンボリック リンクが機能しません。  機能は今後のビルドで使用できます。
-* top としたければが表示されます。
-* インストール エラーのいくつかの追加のエラー メッセージ
+* 非/mnt/<drive>ファイルのシンボリックリンクの機能強化
+    * npm のインストールが機能するようになりました
+    * jdk/jre[はここ](https://xubuntugeek.blogspot.com/2012/09/how-to-install-oracle-jdk-7-manually-in.html)に記載されている手順に従ってインストールできるようになりました。
+    * 既知の問題: symlink は Windows マウントでは機能しません。  機能は、後のビルドで使用できるようになります
+* 上部と htop が表示されるようになりました
+* 一部のインストールエラーに関する追加のエラーメッセージ
 * Syscall の機能強化とバグ修正。  以下のサポートされている syscall 一覧。
-* 追加の機能強化のバグ修正と機能強化
+* 追加の改善バグ修正と改善
 
-### <a name="syscall-support"></a>Syscall サポート
-WSL でのいくつかの実装を持って syscall の一覧を次に示します。  Syscall この一覧には少なくとも 1 つのシナリオでサポートされてが可能性がありますがパラメーターをすべてサポートされていませんこの時点でします。
+### <a name="syscall-support"></a>Syscall のサポート
+WSL で実装がいくつかある syscall の一覧を次に示します。  この一覧の syscall は、少なくとも1つのシナリオでサポートされていますが、現時点では一部のパラメーターがサポートされていない可能性があります。
 
 `ACCEPT`<br/>
 `ACCEPT4`<br/>

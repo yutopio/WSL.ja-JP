@@ -1,66 +1,66 @@
 ---
-title: Windows Server で Linux サブシステムをインストールします。
-description: Windows Server で Linux サブシステムのインストール手順。
-keywords: BashOnWindows、bash、wsl、windows、linux、windowssubsystem、ubuntu、windows server 用 windows サブシステム
+title: Windows Server に Linux サブシステムをインストールする
+description: Windows Server 上の Linux サブシステムのインストール手順です。
+keywords: BashOnWindows、bash、wsl、windows、windows subsystem for linux、windowssubsystem、ubuntu、windows server
 author: scooley
 ms.author: scooley
 ms.date: 05/22/2018
 ms.topic: article
 ms.assetid: 9281ffa2-4fa9-4078-bf6f-b51c967617e3
 ms.custom: seodec18
-ms.openlocfilehash: 25723395212575f8fe2dcbfbd30b59de9431816a
-ms.sourcegitcommit: bb88269eb37405192625fa81ff91162393fb491f
+ms.openlocfilehash: d295cf3db99fb45b943369f532f7e807a603061c
+ms.sourcegitcommit: 8b5a8d49b63441478dd540887f534dcc6dd0ba41
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/12/2019
-ms.locfileid: "67035077"
+ms.lasthandoff: 06/21/2019
+ms.locfileid: "67308788"
 ---
-# <a name="windows-server-installation-guide"></a>Windows Server インストール ガイド
+# <a name="windows-server-installation-guide"></a>Windows Server インストールガイド
 
-> Windows Server 2019 以降に適用されます。
+> Windows Server 2019 以降に適用されます
 
-/Build2017、Windows Subsystem for Linux がなります、Microsoft が発表されました/ [Windows Server で使用可能な](https://blogs.technet.microsoft.com/hybridcloud/2017/05/10/windows-server-for-developers-news-from-microsoft-build-2017/)します。  これらの手順は、Windows Server 1709 以降の Linux 用 Windows サブシステムを実行している説明します。
+Microsoft は、windows [Server で](https://blogs.technet.microsoft.com/hybridcloud/2017/05/10/windows-server-for-developers-news-from-microsoft-build-2017/)windows Subsystem for Linux を使用できるようになったことを、build2017 年に発表しました。  これらの手順では、windows Server 1709 以降で Windows Subsystem for Linux を実行する方法について説明します。
 
-## <a name="enable-the-windows-subsystem-for-linux-wsl"></a>Linux (WSL) の Windows サブシステムを有効にします。
+## <a name="enable-the-windows-subsystem-for-linux-wsl"></a>Windows Subsystem for Linux (WSL) を有効にする
 
-を Windows での Linux ディストリビューションを実行する前に、"Windows サブシステムの Linux"の省略可能な機能を有効にし、再起動する必要があります。
+Windows で Linux ディストリビューションを実行するには、[Windows Subsystem for Linux] オプション機能を有効にし、再起動する必要があります。
 
-1. 管理者として PowerShell を開きを実行します。
+1. 管理者として PowerShell を開き、次のように実行します。
     ```powershell
     Enable-WindowsOptionalFeature -Online -FeatureName Microsoft-Windows-Subsystem-Linux
     ```
 
-2. コンピューターが表示されたら再起動します。 **この再起動は必要な**WSL が信頼できる実行環境を開始できることを保証するためにします。
+2. メッセージが表示されたら、コンピューターを再起動します。 **この再起動は**、wsl が信頼された実行環境を開始できるようにするために必要です。
 
-## <a name="download-a-linux-distro"></a>Linux ディストリビューションをダウンロードします。
+## <a name="download-a-linux-distro"></a>Linux ディストリビューションをダウンロードする
 
-次の[手順](install-manual.md)お気に入りの Linux ディストリビューションをダウンロードします。
+お気に入りの Linux ディストリビューションをダウンロードするには、こちら[の手順](install-manual.md)に従ってください。
 
-## <a name="extract-and-install-a-linux-distro"></a>抽出して、Linux ディストリビューションをインストールします。
-これで、ディストリビューションをダウンロードすると、その内容を抽出およびディストリビューションを手動でインストールします。
+## <a name="extract-and-install-a-linux-distro"></a>Linux ディストリビューションを抽出してインストールする
+これで、ディストリビューションをダウンロードしたので、その内容を抽出し、ディストリビューションを手動でインストールします。
 
-1. 抽出、`<distro>.appx`例: PowerShell を使用して、パッケージの内容。
+1. PowerShell を使用して、パッケージの内容を抽出します。`<distro>.appx`
 
     ```powershell
-    Rename-Item ~/Ubuntu.appx ~/Ubuntu.zip
-    Expand-Archive ~/Ubuntu.zip ~/Ubuntu
+    Rename-Item ./Ubuntu.appx ./Ubuntu.zip
+    Expand-Archive ./Ubuntu.zip ./Ubuntu
     ```
 
-2. インストールを完了するには、ディストリビューションのランチャー アプリケーションをターゲット フォルダーで実行ディストリビューション ランチャーをという名前の実行`<distro>.exe`します。 例:`ubuntu.exe`など。
+2. ディストリビューションランチャーを実行してインストールを完了し、という名前`<distro>.exe`のターゲットフォルダーでディストリビューションランチャーアプリケーションを実行します。 例: `ubuntu.exe`、など。
 
-    ![Windows Server での展開の Ubuntu ディストリビューション](media/server-appx-expand.png)
+    ![Windows Server での Ubuntu ディストリビューションの拡張](media/server-appx-expand.png)
 
     > **トラブルシューティング**
-    > * **インストールに失敗しましたエラー 0x8007007e**:WSL をサポートしていないシステムでこのエラーが発生します。 次のことを確認します。
-    >   * 16215 またはそれ以降は、Windows ビルドを実行しています。 [ビルド確認](troubleshooting.md#check-your-build-number)します。
-    >   * Linux の省略可能なコンポーネント用 Windows サブシステムが有効になっており、コンピューターが再起動します。  [WSL が有効になっていることを確認](troubleshooting.md#confirm-wsl-is-enabled)します。
+    > * 次**のエラーによりインストールに失敗しました: 0x8007007e**:このエラーは、システムで WSL がサポートされていない場合に発生します。 次のことを確認します。
+    >   * Windows ビルド16215以降を実行しています。 [ビルドを確認](troubleshooting.md#check-your-build-number)します。
+    >   * Windows Subsystem for Linux のオプションコンポーネントが有効になり、コンピューターが再起動されました。  [WSL が有効になっていることを確認して](troubleshooting.md#confirm-wsl-is-enabled)ください。
     
-3. Windows 環境のパスに、ディストリビューションのパスを追加 (`C:\Users\Administrator\Ubuntu`この例では)、Powershell を使用するなど。
+3. ディストリビューションパスを Windows 環境パス (`C:\Users\Administrator\Ubuntu`この例では) に追加します。たとえば、Powershell を使用します。
         
     ```powershell
     $userenv = [System.Environment]::GetEnvironmentVariable("Path", "User")
     [System.Environment]::SetEnvironmentVariable("PATH", $userenv + ";C:\Users\Administrator\Ubuntu", "User")
     ```
-    」と入力して任意のパスから、ディストリビューションを起動できるようになりました`<distro>.exe`します。 たとえば次のようになります。`ubuntu.exe`
+    を入力`<distro>.exe`して、任意のパスからディストリビューションを起動できるようになりました。 たとえば次のようになります。`ubuntu.exe`
 
-必要があります、Linux ディストリビューションがインストールされた[ディストリビューションの新しいインスタンスを初期化](initialize-distro.md)ディストリビューションを使用する前にします。
+Linux ディストリビューションがインストールされたので、ディストリビューションを使用する前に、[新しいディストリビューションインスタンスを初期化](initialize-distro.md)する必要があります。

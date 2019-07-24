@@ -1,6 +1,6 @@
 ---
-title: Linux 用の Windows Susbystem のトラブルシューティング
-description: 一般的なエラーの詳細について説明し、ユーザーに実行を発行 Linux 用 Windows Susbystem で Linux を実行中にします。
+title: Windows Subsystem for Linux のトラブルシューティング
+description: Linux を Windows Subsystem for Linux で実行しているときに発生する一般的なエラーと問題について詳しく説明します。
 keywords: BashOnWindows、bash、wsl、windows、windowssubsystem、ubuntu
 author: scooley
 ms.author: scooley
@@ -8,163 +8,163 @@ ms.date: 11/15/2017
 ms.topic: article
 ms.assetid: 6753f1b2-200e-49cc-93a5-4323e1117246
 ms.custom: seodec18
-ms.openlocfilehash: feb9e25da73eeb0d7f0cef4014221a42e2ca179b
-ms.sourcegitcommit: db69625e26bc141ea379a830790b329e51ed466b
+ms.openlocfilehash: 0c84fb710eca1b0ffabe437f98d5c17edbd6ea39
+ms.sourcegitcommit: ead64b13501d6cb7170adafbb5624f4984a0af16
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/13/2019
-ms.locfileid: "67040849"
+ms.lasthandoff: 06/21/2019
+ms.locfileid: "67307644"
 ---
-# <a name="troubleshooting-windows-subsystem-for-linux"></a>トラブルシューティングの Windows Subsystem for Linux
+# <a name="troubleshooting-windows-subsystem-for-linux"></a>Windows Subsystem for Linux のトラブルシューティング
 
-### <a name="bash-loses-network-connectivity-once-connected-to-a-vpn"></a>Bash の VPN に接続すれば、ネットワーク接続を失った
+### <a name="bash-loses-network-connectivity-once-connected-to-a-vpn"></a>ネットワーク接続が VPN に接続されると、Bash が切断する
 
-Windows 上の VPN に接続したら、bash にネットワーク接続が切断されると、bash 内からこの回避策をお試しください。 この回避策で DNS 解決を手動でオーバーライドすることが`/etc/resolv.conf`します。
+Windows で VPN に接続した後、bash がネットワーク接続を失った場合は、bash 内からこの回避策を試してください。 この回避策では、を使用して`/etc/resolv.conf`DNS 解決を手動で上書きすることができます。
 
-1. これから VPN の DNS サーバーのメモします。 `ipconfig.exe /all`
-2. Resolv.conf を既存のコピーを作成します。 `sudo cp /etc/resolv.conf /etc/resolv.conf.new`
-3. 現在の resolv.con のリンクを解除します。 `sudo unlink /etc/resolv.conf`
+1. VPN の DNS サーバーを実行しないように注意してください。`ipconfig.exe /all`
+2. 既存の resolv.conf のコピーを作成します。`sudo cp /etc/resolv.conf /etc/resolv.conf.new`
+3. 現在の resolv.conf のリンクを解除します。`sudo unlink /etc/resolv.conf`
 4. `sudo mv /etc/resolv.conf.new /etc/resolv.conf`
-5. 開いている`/etc/resolv.conf`と <br/>
-   a. というファイルから最初の行を削除"\# WSL でのこのファイルを自動的に生成されました。 このファイルの自動生成を停止するには、この行を削除します。"です。 <br/>
-   b. DNS サーバーの一覧で最初のエントリとして (1) から上の DNS エントリを追加します。 <br/>
+5. および`/etc/resolv.conf`を開く <br/>
+   a. ファイルから最初の行を削除します。 "\#このファイルは wsl によって自動的に生成されました。 このファイルの自動生成を停止するには、この行を削除します。 " <br/>
+   b. DNS サーバーの一覧の最初のエントリとして、上記の DNS エントリ (1) を追加します。 <br/>
    c. ファイルを閉じます。 <br/>
 
-変更を元に戻す必要があります、VPN を切断すると、`/etc/resolv.conf`します。 これを行うには、次の操作を行います。
+VPN を切断したら、変更をに`/etc/resolv.conf`戻す必要があります。 これを行うには、次の手順を実行します。
 1. `cd /etc`
 2. `sudo mv resolv.conf resolv.conf.new`
 3. `sudo ln -s ../run/resolvconf/resolv.conf resolv.conf`
 
-### <a name="starting-wsl-or-installing-a-distribution-returns-an-error-code"></a>WSL を開始またはディストリビューションのインストールは、エラー コードを返します
+### <a name="starting-wsl-or-installing-a-distribution-returns-an-error-code"></a>WSL を開始するか、ディストリビューションをインストールするとエラーコードが返される
 
-次の[手順](https://github.com/Microsoft/WSL/blob/master/CONTRIBUTING.md#8-detailed-logs)の詳細なログを収集し、GitHub で問題を報告します。
+こちらの[手順](https://github.com/Microsoft/WSL/blob/master/CONTRIBUTING.md#8-detailed-logs)に従って、詳細なログを収集し、GitHub で問題をファイルに記録してください。
 
-### <a name="updating-bash-on-ubuntu-on-windows"></a>Bash on Ubuntu on Windows を更新しています
+### <a name="updating-bash-on-ubuntu-on-windows"></a>Windows での Bash on Ubuntu の更新
 
-Bash on Ubuntu on Windows の更新が必要になるの 2 つのコンポーネントがあります。 
+Bash on Ubuntu on Windows では、更新が必要な2つのコンポーネントがあります。 
 
 1. Windows Subsystem for Linux
   
-   Bash on Ubuntu on Windows のこの部分をアップグレードするで、新しい修正アウトラインが有効になります、[リリース ノート](https://msdn.microsoft.com/en-us/commandline/wsl/release_notes)します。 Windows Insider Program にサブスクライブしていることと、ビルドが最新であることを確認します。 きめ細かいコントロール、Ubuntu のリセットを含むインスタンスのチェック アウト、[コマンド リファレンスのページ](https://msdn.microsoft.com/en-us/commandline/wsl/reference)します。
+   Bash on Ubuntu on Windows でこの部分をアップグレードすると、[リリースノート](https://msdn.microsoft.com/en-us/commandline/wsl/release_notes)の新しい修正のアウトラインが有効になります。 Windows Insider プログラムをサブスクライブしていること、およびビルドが最新であることを確認します。 Ubuntu インスタンスをリセットするなど、より細かな制御を行うには、[コマンドリファレンスページを参照](https://msdn.microsoft.com/en-us/commandline/wsl/reference)してください。
 
-2. Ubuntu のユーザーのバイナリ 
+2. Ubuntu ユーザーバイナリ 
 
-   Bash on Ubuntu on Windows のこの部分をアップグレードすると、apt get を使用してインストールされているアプリケーションを含む Ubuntu ユーザー バイナリにすべての更新プログラムがインストールされます。 Bash で、次のコマンドの実行を更新します。
+   Bash on Ubuntu on Windows でこの部分をアップグレードすると、apt でインストールしたアプリケーションを含め、Ubuntu ユーザーバイナリに更新プログラムがインストールされます。 更新するには、Bash で次のコマンドを実行します。
   
    1. `apt-get update`
    2. `apt-get upgrade`
   
-### <a name="apt-get-upgrade-errors"></a>Apt get アップグレード エラー
-一部のパッケージはまだ実装されていない機能を使用します。 `udev`、たとえば、はまだサポートされていません、いくつかの原因`apt-get upgrade`エラー。
+### <a name="apt-get-upgrade-errors"></a>Apt-アップグレードエラーの取得
+一部のパッケージでは、まだ実装していない機能が使用されています。 `udev`たとえば、はまだサポートされていない`apt-get upgrade`ため、いくつかのエラーが発生します。
 
-関連する問題を修正する`udev`、次の手順に従います。
+に`udev`関連する問題を修正するには、次の手順に従います。
 
-1. 次のコードを記述`/usr/sbin/policy-rc.d`して変更を保存します。
+1. に次のもの`/usr/sbin/policy-rc.d`を書き込んで、変更を保存します。
   
    ``` BASH
    #!/bin/sh
    exit 101
    ```
   
-2. 追加するアクセス許可を実行 `/usr/sbin/policy-rc.d`
+2. 実行アクセス許可の追加先`/usr/sbin/policy-rc.d`
    ``` BASH
    chmod +x /usr/sbin/policy-rc.d
    ```
   
-3. 次のコマンドを実行します
+3. 次のコマンドを実行します。
    ``` BASH
    dpkg-divert --local --rename --add /sbin/initctl
    ln -s /bin/true /sbin/initctl
    ```
   
-### <a name="error-0x80040306-on-installation"></a>"エラー。0x80040306"のインストール
-これは、従来のコンソールはサポートされていません、という事実とにいます。
-従来のコンソールをオフにするには。
+### <a name="error-0x80040306-on-installation"></a>エラー0x80040306 "インストール時
+これは、従来のコンソールをサポートしていないという点で必要になります。
+レガシコンソールをオフにするには:
 
-1. Cmd.exe を開きます
-1. タイトルを右クリックしてバー]-> [プロパティ]、[従来のコンソールを使用してのオフにします
+1. Cmd.exe を開きます。
+1. タイトルバーを右クリックし > プロパティ-> レガシコンソールを使用する をオフにする
 1. [OK] をクリックします。
 
-### <a name="error-0x80040154-after-windows-update"></a>"エラー。0x80040154"Windows の更新後
-Linux の機能の Windows サブシステムが無効になっている Windows の更新中にします。 このような場合、Windows の機能が再度有効にする必要があります。 Linux が記載されているは、Windows サブシステムを有効にする手順、[インストール ガイド](https://msdn.microsoft.com/en-us/commandline/wsl/install_guide#enable-the-windows-subsystem-for-linux-feature-gui https://msdn.microsoft.com/en-us/commandline/wsl/install_guide#enable-the-windows-subsystem-for-linux-feature-gui)します。
+### <a name="error-0x80040154-after-windows-update"></a>エラーWindows update 後の0x80040154 が
+Windows update で Windows Subsystem for Linux 機能が無効になっている可能性があります。 この問題が発生した場合は、Windows の機能を再度有効にする必要があります。 Windows Subsystem for Linux を有効にする手順については、[インストールガイド](https://msdn.microsoft.com/en-us/commandline/wsl/install_guide#enable-the-windows-subsystem-for-linux-feature-gui https://msdn.microsoft.com/en-us/commandline/wsl/install_guide#enable-the-windows-subsystem-for-linux-feature-gui)を参照してください。
 
-### <a name="changing-the-display-language"></a>表示言語を変更します。
-WSL インストールは自動的に Windows インストールのロケールに一致するように Ubuntu ロケールを変更しようとします。  この動作したくない場合は、インストールが完了した後は、Ubuntu ロケールを変更するには、このコマンドを実行できます。  この変更を有効にする bash.exe を再起動する必要があります。
+### <a name="changing-the-display-language"></a>表示言語の変更
+WSL install は、Windows インストールのロケールに合わせて Ubuntu のロケールを自動的に変更しようとします。  この動作が不要な場合は、このコマンドを実行して、インストールの完了後に Ubuntu のロケールを変更することができます。  この変更を有効にするには、bash を再起動する必要があります。
 
-次の例のロケールを EN-US に変更します。
+次の例では、ロケールを en-us に変更します。
 ``` BASH
 sudo update-locale LANG=en_US.UTF8
 ```
 
-### <a name="installation-issues-after-windows-system-restore"></a>Windows システムの復元後のインストールの問題
-1.  削除、`%windir%\System32\Tasks\Microsoft\Windows\Windows Subsystem for Linux`フォルダー。 <br/>
-  **注:そうしないと、省略可能な機能が完全にインストールされている場合と、操作します。**
-2.  WSL の省略可能な機能を有効にする (まだ行っていない場合)
+### <a name="installation-issues-after-windows-system-restore"></a>Windows システムの復元後のインストールに関する問題
+1.  フォルダーを`%windir%\System32\Tasks\Microsoft\Windows\Windows Subsystem for Linux`削除します。 <br/>
+  **注:オプションの機能が完全にインストールされ、動作している場合は、この操作を行わないでください。**
+2.  WSL オプション機能を有効にします (まだ設定されていない場合)
 3.  再起動します
-4.  lxrun/アンインストール/フル
-5.  Bash をインストールします。
+4.  lxrun/uninstall の場合
+5.  Bash をインストールする
 
-### <a name="no-internet-access-in-wsl"></a>WSL でインターネットにアクセスできません。
-一部のユーザーには、WSL でインターネット アクセスをブロックする特定のファイアウォール アプリケーションで問題が報告します。  報告されるファイアウォールは次のとおりです。
+### <a name="no-internet-access-in-wsl"></a>WSL でインターネットにアクセスできない
+一部のユーザーが、WSL でのインターネットアクセスをブロックする特定のファイアウォールアプリケーションに関する問題を報告しています。  報告されるファイアウォールは次のとおりです。
 
 1. Kaspersky
 1. AVG
 1. Avast
 
-場合によっては、ファイアウォールを無効にすることに対するアクセス許可します。  アクセスをブロックするには、場合によっては、ファイアウォールをインストールしているだけで検索します。
+場合によっては、ファイアウォールをオフにすることでアクセスできます。  場合によっては、ファイアウォールをインストールするだけでアクセスがブロックされます。
 
-### <a name="permission-denied-error-when-using-ping"></a>Ping を使用する場合のアクセス許可の拒否エラー
-#### <a name="anniversary-updatehttpsmsdnmicrosoftcomen-uscommandlinewslreleasenotesbuild-14388-to-windows-10-anniversary-update"></a>[Anniversary Update](https://msdn.microsoft.com/en-us/commandline/wsl/release_notes#build-14388-to-windows-10-anniversary-update) 
+### <a name="permission-denied-error-when-using-ping"></a>Ping の使用時にアクセス許可拒否エラーが発生する
+#### <a name="anniversary-updatehttpsmsdnmicrosoftcomen-uscommandlinewslreleasenotesbuild-14388-to-windows-10-anniversary-update"></a>[記念日の更新](https://msdn.microsoft.com/en-us/commandline/wsl/release_notes#build-14388-to-windows-10-anniversary-update) 
 
-WSL で ping を実行するには、Windows で管理者特権が必要です。  Ping を実行するには、Ubuntu 上で管理者は、Windows で Bash を実行または bash.exe を管理者特権での CMD または PowerShell プロンプトから実行します。
+WSL で ping を実行するには、Windows の管理者特権が必要です。  Ping を実行するには、管理者として Windows 上で Bash on Ubuntu を実行するか、管理者特権を使用して CMD/PowerShell プロンプトから bash を実行します。
 
 #### <a name="build-14926httpsmsdnmicrosoftcomen-uscommandlinewslreleasenotesbuild-14926"></a>[ビルド 14926 +](https://msdn.microsoft.com/en-us/commandline/wsl/release_notes#build-14926)
-  管理者特権が必要なくなりました。
+  管理者特権は不要になりました。
 
-### <a name="bash-is-hung"></a>Bash が停止しています。
-Bash での作業中に見つかった場合、bash がハングしている (またはデッドロック) の入力に応答していない、ご意見をお reporting メモリ ダンプを収集して問題を診断します。 次の手順は、システムがクラッシュすることに注意してください。 これを実行する前に作業内容を保存するに慣れていない場合は、このチェック ボックスを行うにしないでください。  <br/>
-メモリ ダンプを収集するには。
-1. メモリ ダンプの種類を「完全メモリ ダンプ」に変更します。 ダンプの種類を変更するには、中に、現在の型のメモを実行します。
-2. 使用して、[手順](https://blogs.technet.microsoft.com/askpfeplat/2015/04/05/how-to-force-a-diagnostic-memory-dump-when-a-computer-hangs/)クラッシュを構成するキーボード コントロールを使用します。
-3. デッドロック、ハングを再現します。
-4. (2) からのキー シーケンスを使用して、システムがクラッシュします。
-5. システムがクラッシュし、メモリ ダンプを収集します。
-6. システムが再起動すると後のレポートに memory.dmpsecure@microsoft.comします。 ダンプ ファイルの既定の場所は、c: がシステム ドライブの場合は %SystemRoot%\memory.dmp または C:\Windows\memory.dmp します。 電子メールの WSL または Bash のダンプがあることに注意してください Windows チームです。
-7. メモリ ダンプの種類を元の設定に復元します。
+### <a name="bash-is-hung"></a>Bash がハングしています
+Bash を使用しているときに bash がハングしている (またはデッドロックされている) ことが検出され、入力に応答していない場合は、メモリダンプを収集して報告することによって問題を診断してください。 これらの手順はシステムをクラッシュさせることに注意してください。 これに慣れていない場合や、作業を保存する前に作業を保存していない場合は、この操作を行わないでください。  <br/>
+メモリダンプを収集するには:
+1. メモリダンプの種類を "完全なメモリダンプ" に変更します。 ダンプの種類を変更するときに、現在の型をメモしておきます。
+2. キーボードコントロールを使用してクラッシュを構成する[手順](https://blogs.technet.microsoft.com/askpfeplat/2015/04/05/how-to-force-a-diagnostic-memory-dump-when-a-computer-hangs/)を使用します。
+3. ハングまたはデッドロックを再現します。
+4. (2) のキーシーケンスを使用してシステムをクラッシュさせる。
+5. システムはクラッシュし、メモリダンプを収集します。
+6. システムが再起動したら、memory.dmp をにsecure@microsoft.com報告します。 ダンプファイルの既定の場所は、C:\Windows\memory.dmp、または C: がシステムドライブである場合は、になります。 電子メールでは、ダンプは WSL または Bash on Windows チーム用です。
+7. メモリダンプの種類を元の設定に復元します。
 
-### <a name="check-your-build-number"></a>ビルド番号を確認します。
+### <a name="check-your-build-number"></a>ビルド番号を確認する
 
-お客様の PC のアーキテクチャと Windows のビルド番号を見つけるには開きます  
-**設定** > **システム** > **について**
+PC のアーキテクチャと Windows ビルド番号を確認するには、を開きます。  
+**設定** > システムに > **ついて**
 
-探して、 **OS ビルド**と**システム型**フィールド。  
-    ![ビルドのスクリーン ショットとシステムの種類のフィールド](media/system.png) 
+**[OS ビルド]** フィールドと **[システムの種類]** フィールドを探します。  
+    ![ビルドとシステムの種類のフィールドのスクリーンショット](media/system.png) 
 
 
-Windows Server のビルド番号を検索するには、PowerShell で、次を実行します。  
+Windows Server のビルド番号を確認するには、PowerShell で次のように実行します。  
 ``` PowerShell
 systeminfo | Select-String "^OS Name","^OS Version"
 ```
 
-### <a name="confirm-wsl-is-enabled"></a>WSL が有効になっていることを確認します。
-PowerShell で、次を実行して、Windows Subsystem for Linux が有効になっていることを確認できます。  
+### <a name="confirm-wsl-is-enabled"></a>WSL が有効になっていることを確認する
+Windows Subsystem for Linux が有効になっていることを確認するには、PowerShell で次のように実行します。  
 ``` PowerShell
 Get-WindowsOptionalFeature -Online -FeatureName Microsoft-Windows-Subsystem-Linux
 ```
 
-### <a name="openssh-server-connection-issues"></a>OpenSSH サーバー接続の問題
-SSH サーバーを接続しようとは、次のエラーで失敗しました。"接続を終了して 127.0.0.1 でポート 22"。
-1. OpenSSH サーバーで実行されていることを確認します。
+### <a name="openssh-server-connection-issues"></a>OpenSSH-サーバー接続に関する問題
+SSH サーバーに接続しようとしましたが、次のエラーで失敗しました:"127.0.0.1 ポート22によって接続が切断されました。"
+1. OpenSSH サーバーが実行されていることを確認します。
    ``` BASH
    sudo service ssh status
    ```
-   このチュートリアルに従っています。 https://help.ubuntu.com/lts/serverguide/openssh-server.html.en
-2. Sshd サービスを停止し、デバッグ モードで sshd を起動します。
+   次に、このチュートリアルに従っています。 https://help.ubuntu.com/lts/serverguide/openssh-server.html.en
+2. Sshd サービスを停止し、デバッグモードで sshd を開始します。
    ``` BASH
    sudo service ssh stop
    sudo /usr/sbin/sshd -d
    ```
-3. スタートアップ ログを確認し、理由ホストキーに利用をなどのログ メッセージが表示されないかどうかを確認します。
+3. スタートアップログを確認し、HostKeys が使用可能であり、次のようなログメッセージが表示されていないことを確認します。
    ```
    debug1: sshd version OpenSSH_7.2, OpenSSL 1.0.2g  1 Mar 2016
    debug1: key_load_private: incorrect passphrase supplied to decrypt private key
@@ -181,7 +181,7 @@ SSH サーバーを接続しようとは、次のエラーで失敗しました�
    Could not load host key: /etc/ssh/ssh_host_ed25519_key
    ```
 
-このようなメッセージが表示され、キーは 不足している場合`/etc/ssh/`キーを再生成またはだけを消去して openssh サーバーをインストールする必要があります。
+このようなメッセージが表示されていて、 `/etc/ssh/`キーがにない場合は、キーを再生成するか、または & を削除するだけで openssh-server をインストールする必要があります。
 ```BASH
 sudo apt-get purge openssh-server
 sudo apt-get install openssh-server

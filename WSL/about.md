@@ -1,6 +1,6 @@
 ---
-title: Linux 用 Windows サブシステムについて説明します
-description: Windows Subsystem for Linux が動作する方法について説明します。
+title: Windows Subsystem for Linux の詳細
+description: Windows Subsystem for Linux の動作の詳細については、こちらを参照してください。
 keywords: BashOnWindows、bash、wsl、windows、windowssubsystem、gnu、linux
 author: scooley
 ms.author: scooley
@@ -9,45 +9,45 @@ ms.topic: article
 ms.assetid: 3cefe0db-7616-4848-a2b6-9296746a178b
 ms.custom: seodec18
 ms.localizationpriority: High
-ms.openlocfilehash: f2df3c06d6c56aa8bc5a41ea9f075635b70c8685
-ms.sourcegitcommit: db69625e26bc141ea379a830790b329e51ed466b
+ms.openlocfilehash: edff78b1447aa382253417d27df52fe497c58b08
+ms.sourcegitcommit: e17038c166b69f73e593ae3ac351c9d66e2ba64b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/13/2019
-ms.locfileid: "67040808"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67694621"
 ---
-# <a name="windows-subsystem-for-linux-documentation"></a>Linux のドキュメント用の Windows サブシステム
+# <a name="windows-subsystem-for-linux-documentation"></a>Linux 用 Windows サブシステムのドキュメント
 
-Windows Subsystem for Linux では、Windows、未変更の状態で仮想マシンのオーバーヘッドなしで直接開発者のほとんどのコマンド ライン ツール、ユーティリティ、およびアプリケーションを含む--Gnu/linux 環境を実行することができます。  
+Windows Subsystem for Linux を使用すると、開発者は、ほとんどのコマンドラインツール、ユーティリティ、アプリケーションを含む GNU/Linux 環境を、変更されていない状態で、仮想マシンのオーバーヘッドなしで、Windows 上で直接実行できます。  
 
 可能な代替手段としては以下の方法があります。
 
-1. お気に入りの GNU/Linux ディストリビューションを選択[Windows ストアから](https://aka.ms/wslstore)します。
-1. 一般的なコマンド ライン無料のソフトウェアを実行します。 `grep`、 `sed`、 `awk`、またはその他の ELF 64 バイナリ。 
-1. Bash シェル スクリプトとを含む Gnu/linux コマンド ライン アプリケーションを実行します。  
+1. [Microsoft Store から、使い慣れた](https://aka.ms/wslstore)GNU/Linux ディストリビューションを選択します。
+1. 、、 `sed`、またはその他の ELF-64 バイナリなどの一般的なコマンドラインフリーソフトウェアを実行します。 `awk` `grep` 
+1. 次のような Bash シェルスクリプトと GNU/Linux コマンドラインアプリケーションを実行します。  
     * ツール: vim、emacs、tmux
-    * 言語：Javascript/node.js、Ruby、Python、C/C++、 C# & F#、信頼、移動など。
-    * サービス: sshd、MySQL、Apache、lighttpd
-1. 独自の GNU/Linux 配布パッケージ マネージャーを使用して追加のソフトウェアをインストールします。
-1. Unix のようなコマンド ライン シェルを使用して Windows アプリケーションを起動します。
-1. Windows 上の Gnu/linux アプリケーションを呼び出します。
+    * 言語：Javascript/node.js、Ruby、Python、C/C++、 C# & F#、Rust、ゴーなど。
+    * サービス: sshd、MySQL、Apache、ライト tpd
+1. 独自の GNU/Linux ディストリビューションパッケージマネージャーを使用して、追加のソフトウェアをインストールします。
+1. Unix に似たコマンドラインシェルを使用して Windows アプリケーションを起動します。
+1. Windows で GNU/Linux アプリケーションを起動します。
 
 ## <a name="getting-started"></a>作業の開始
 
-* [Windows 10 上の Linux をインストールします。](install-win10.md)
-* [コマンドのリファレンスを参照してください。](reference.md)
-* [読み取りについてよく寄せられる質問](faq.md)
+* [Windows 10 に Linux をインストールする](install-win10.md)
+* [コマンドリファレンスを参照してください。](reference.md)
+* [よく寄せられる質問を読む](faq.md)
 
 ## <a name="team-blogs"></a>チームのブログ
-*  [ビデオとブログのコレクションでの概要の投稿](https://blogs.msdn.microsoft.com/commandline/learn-about-windows-console-and-windows-subsystem-for-linux-wsl/)
-* [コマンド ライン ブログ](https://blogs.msdn.microsoft.com/commandline/)(アクティブ)
-* [Linux ブログ用 Windows サブシステム](https://blogs.msdn.microsoft.com/wsl/)(履歴)
+*  [ビデオとブログのコレクションを使用した投稿の概要](https://blogs.msdn.microsoft.com/commandline/learn-about-windows-console-and-windows-subsystem-for-linux-wsl/)
+* [コマンドラインのブログ](https://blogs.msdn.microsoft.com/commandline/)能動的
+* [Linux 用 Windows サブシステムのブログ](https://blogs.msdn.microsoft.com/wsl/)経緯
 
-## <a name="posts--articles"></a>投稿と記事
-* [実行の Bash on Ubuntu on Windows](https://blogs.windows.com/buildingapps/2016/03/30/run-bash-on-ubuntu-on-windows/)
-* [開発者は Windows 10 の Bash と Usermode Ubuntu Linux のバイナリを実行できます。](https://www.hanselman.com/blog/DevelopersCanRunBashShellAndUsermodeUbuntuLinuxBinariesOnWindows10.aspx)
-* [Ubuntu on Windows: Windows 開発者向けの Ubuntu 空間](https://insights.ubuntu.com/2016/03/30/ubuntu-on-windows-the-ubuntu-userspace-for-windows-developers/) 
+## <a name="posts--articles"></a>投稿 & 記事
+* [Windows で Bash on Ubuntu を実行する](https://blogs.windows.com/buildingapps/2016/03/30/run-bash-on-ubuntu-on-windows/)
+* [開発者は Windows 10 で Bash およびモード Ubuntu Linux バイナリを実行できます。](https://www.hanselman.com/blog/DevelopersCanRunBashShellAndUsermodeUbuntuLinuxBinariesOnWindows10.aspx)
+* [Windows 上の ubuntu – Windows 開発者向けの Ubuntu](https://insights.ubuntu.com/2016/03/30/ubuntu-on-windows-the-ubuntu-userspace-for-windows-developers/) 
 
 ## <a name="provide-feedback"></a>ご意見とご感想
-* [GitHub の issue トラッカー](https://github.com/Microsoft/BashOnWindows/issues)
-* [コマンド ライン UserVoice ポータル](https://wpdev.uservoice.com/forums/266908-command-prompt-console-bash-on-ubuntu-on-windo/category/161892-bash)
+* [GitHub の問題の追跡ツール](https://github.com/Microsoft/BashOnWindows/issues)
+* [コマンドライン UserVoice ポータル](https://wpdev.uservoice.com/forums/266908-command-prompt-console-bash-on-ubuntu-on-windo/category/161892-bash)

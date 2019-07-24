@@ -1,74 +1,76 @@
 ---
-title: インストールまたは Windows 10 Anniversary Update または Creators Update の削除
-description: 従来、Windows 10 Anniversary Update または Creators Update のベータ版のディストリビューションのインストールとアンインストールの手順
-keywords: BashOnWindows、bash、wsl、windows、linux、windowssubsystem、ubuntu、debian、suse、windows 10、レガシ、ベータ版の windows サブシステムのインストール、削除、アンインストール、アンインストール、削除、非推奨とされます
+title: Windows 10 記念日更新プログラムまたは作成者更新プログラムのインストールまたは削除
+description: Windows 10 記念日更新プログラムまたは作成者更新プログラムのインストールとインストール解除の手順 (従来のベータディストリビューション)
+keywords: BashOnWindows、bash、wsl、windows、windows subsystem for linux、windowssubsystem、ubuntu、debian、suse、windows 10、legacy、beta、install、remove、uninstall、un/install、delete、deprecated
 author: taraj
 ms.author: taraj
 ms.date: 07/24/2018
 ms.topic: article
 ms.assetid: 7afaeacf-435a-4e58-bff0-a9f0d75b8a51
 ms.custom: seodec18
-ms.openlocfilehash: fbb5bdc401a013b0853774cff6ad2dc84a36e412
-ms.sourcegitcommit: db69625e26bc141ea379a830790b329e51ed466b
+ms.openlocfilehash: 0d8fdabd61fadbfc58549a220ead23585a3d3656
+ms.sourcegitcommit: 5844c6dbf692780b86b30bd65e11820fff43b3bd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/13/2019
-ms.locfileid: "67040837"
+ms.lasthandoff: 07/02/2019
+ms.locfileid: "67499266"
 ---
-# <a name="guide-to-install-or-uninstall-windows-subsystem-for-linux-on-windows-10-anniversary-update-and-creators-update"></a>インストールまたは Windows 10 Anniversary Update および Creators Update での Linux 用 Windows サブシステムをアンインストール ガイド 
+# <a name="guide-to-install-or-uninstall-windows-subsystem-for-linux-on-windows-10-anniversary-update-and-creators-update"></a>Windows 10 記念日更新プログラムおよび作成者の更新プログラムで Windows Subsystem for Linux をインストールまたはアンインストールするためのガイド 
 
-Windows 10 Creators Update を実行しているか、後で、ください[Windows 10 のインストール手順に従って](install-win10.md)します。
+Windows 10 の作成者の更新プログラムまたはそれ以降を実行している場合は、 [windows 10 のインストール手順に従っ](install-win10.md)てください。
 
-<strong><em><span style="color: #f28014">次の手順は Windows 10 Anniversary Update または Windows 10 Creators Update を実行しているユーザーです。</span></em></strong>
+<strong><em><span style="color: #f28014">次の手順は、Windows 10 周年更新プログラムまたは Windows 10 の作成者更新プログラムを実行しているユーザーを対象としています。</span></em></strong>
 
-Windows 10 Fall Creators Update (バージョン 1709)、前に、WSL は、ベータ機能としてリリースされましたし、"Bash で Ubuntu の Windows"(または Bash.exe) を最初に実行時に、1 つの Ubuntu インスタンスをインストールします。
+Windows 10 秋の更新プログラム (バージョン 1709) より前のバージョンでは、WSL はベータ機能としてリリースされ、"Bash on Ubuntu on Windows" (または Bash) が最初に実行されたときに1つの Ubuntu インスタンスをインストールしました。
 
-> WSL を使用して、以前の Windows 10 リリースでは、このベータ版「レガシ ディストリビューション」を古いと見なされますようになりました。 使用可能な Windows 10 の最新バージョンを実行すること強く勧めします。 新しい Windows 10 リリースには、これまで以上の Linux ツールと WSL では正しく動作するアプリを許可するだけで、WSL で何百も修正プログラムと機能強化にはが含まれています。
+> 以前の Windows 10 リリースでは WSL を使用できますが、このベータ版の "レガシディストリビューション" は廃止されたと見なされるようになりました。 使用可能な Windows 10 の最新バージョンを実行することを強くお勧めします。 新しい Windows 10 のリリースには、WSL 単独で数百の修正と改善が加えられており、WSL でより多くの Linux ツールとアプリが正常に実行できるようになりました。
 
-Fall Creators Update 以降をアップグレードできない場合は、有効にして WSL を使用するのには、次の手順に従います。
+更新プログラムの適用後にアップグレードできない場合は、次の手順に従って、WSL を有効にして使用します。
 
-1. 開発者モード WSL またはで実行する Windows 10 Anniversary Update Creators Update を有効に、開発者モードを有効にする必要があります。
+1. 開発者モードを有効にして、Windows 10 の記念日更新または作成者の更新で WSL を実行するには、開発者モードを有効にする必要があります。
 
-    開いている**設定** -> **更新とセキュリティ** -> **開発者向け**
+    **開発者のための**[**設定** -> ] [**更新とセキュリティ** -> ]
 
-    開発者モードのオプション ボタンを選択します。  
+    [開発者モード] オプションボタンを選択します。  
     ![開発者モードを有効にする](media/updateAndSecurity.png)
 
-    > 開発者モードを有効にするための要件が[Windows 10 Fall Creators Update での削除](https://blogs.msdn.microsoft.com/commandline/2017/06/08/developer-mode-no-longer-required-for-windows-subsystem-for-linux/)
+    > 開発者モードを有効にするための要件は、 [Windows 10 の作成者の更新プログラムで削除](https://blogs.msdn.microsoft.com/commandline/2017/06/08/developer-mode-no-longer-required-for-windows-subsystem-for-linux/)されました
 
-1. コマンド プロンプトを開きます。  型`bash`し、enter キーを押します
+1. コマンド プロンプトを開きます。  「 `bash` 」と入力し、enter キーを押します。
 
-    初めてでは、Windows、Ubuntu 上で Bash を実行する、Canonical のライセンスに同意するよう求めします。 同意すると、WSL はダウンロードして、コンピューター上に Ubuntu インスタンスをインストールし、"Bash で Ubuntu の Windows"ショートカットが [スタート] メニューに追加します。
+    Windows で Bash on Ubuntu を初めて実行すると、正規のライセンスに同意するように求められます。 承諾すると、WSL は Ubuntu インスタンスをコンピューターにダウンロードしてインストールします。また、[Windows の Bash on Ubuntu] ショートカットが [スタート] メニューに追加されます。
 
-    ![Ubuntu をインストールするプロンプト](media/bashShellInstall.png)
+    ![Ubuntu のインストールを確認する](media/bashShellInstall.png)
 
-    初めての Windows、Ubuntu 上で Bash を実行するは促さ UNIX ユーザー名とパスワードを作成します。 に従って、[ディストリビューション インスタンスの新しい命令](initialize-distro.md)インストールを完了するには
+    Windows で Bash on Ubuntu を初めて実行するときに、UNIX ユーザー名とパスワードの作成を求められます。 [新しいディストリビューションインスタンスの指示](initialize-distro.md)に従って、インストールを完了します。
 
-1. いずれかで、新しい Ubuntu シェルを起動します。
-    * 実行している`bash`コマンド プロンプトから
-    * [スタート] メニューの"Bash で Ubuntu の Windows"ショートカットをクリックします。
+1. 次のいずれかの方法で新しい Ubuntu シェルを起動します。
+    * コマンド`bash`プロンプトからの実行
+    * [スタート] メニューの [Bash on Ubuntu on Windows] のショートカット
 
     
-## <a name="uninstallingremoving-the-legacy-distro"></a>従来のディストリビューションをアンインストール/削除
-WSL をインストールした以前の Windows 10 リリースから Windows 10 Fall Creators Update にアップグレードする場合、既存のディストリビューションがそのまま残ります。 ただし、厳密にストアによって提供される新しいディストリビューション至急をインストールすることをお勧めし、必要なファイル、データなどを従来のディストリビューションから、新しいディストリビューションに移行します。
+## <a name="uninstallingremoving-the-legacy-distro"></a>レガシディストリビューションのアンインストール/削除
+WSL をインストールした以前の Windows 10 リリースから Windows 10 にアップグレードすると、既存のディストリビューションはそのまま残ります。 ただし、ストアによって配信される新しいディストリビューションをすぐにインストールし、必要なファイルやデータなどをレガシディストリビューションから新しいディストリビューションに移行することを強くお勧めします。
 
-従来のディストリビューションをコンピューターからを削除するには、コマンドラインまたは PowerShell のインスタンスから、次を実行します。
+レガシディストリビューションをコンピューターから削除するには、コマンドラインまたは PowerShell インスタンスから次のコマンドを実行します。
 
 ```console
-lxrun /uninstall /full
+wsl --unregister Legacy
 ```
 
-### <a name="manually-deleting-the-legacy-distro"></a>従来のディストリビューションを手動で削除します。
-希望されない場合、従来のインスタンスを手動で削除することができます。 これは、必要がありますを使用して、従来のディストリビューションのアンインストールで問題が発生した場合`lxrun.exe`、または Windows 10 のスプリング 2018 Update を実行している (またはそれ以降) でこれを出荷しません`lxrun.exe`します。
+Windows バージョン1903以降を使用していない場合は、代わりにまたは`wslconfig /u Legacy` `lxrun /uninstall /full`を実行する必要があります。 
 
-従来、WSL ディストリビューションを強制的に削除するには、削除、`%localappdata%\lxss\`フォルダー (すべてとサブフォルダーの内容の) Windows のエクスプ ローラーまたはコマンドラインを使用して。
+### <a name="manually-deleting-the-legacy-distro"></a>レガシディストリビューションを手動で削除する
+必要に応じて、レガシインスタンスを手動で削除できます。 これは、を使用して`lxrun.exe`レガシディストリビューションをアンインストールするときに問題が発生した場合、またはに`lxrun.exe`付属していない Windows 10 Spring 2018 Update (またはそれ以降) を実行している場合に必要になることがあります。
+
+従来の wsl ディストリビューションを強制的に削除するに`%localappdata%\lxss\`は、Windows のエクスプローラーまたはコマンドラインを使用して、フォルダー (およびそのすべてのサブコンテンツ) を削除します。
 
 PowerShell を使用する
 ```powershell
 rm -Recurse $env:localappdata/lxss/
 ```
 
-Cmd を使用します。
+Cmd を使用する:
 ```console
 DEL /S %localappdata%\lxss\
 ```

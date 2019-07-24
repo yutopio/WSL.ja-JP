@@ -1,48 +1,48 @@
 ---
-title: Windows 10 での Linux (WSL) 用の Windows サブシステムをインストールします。
-description: Windows 10 での Linux 用 Windows サブシステムのインストール手順。
-keywords: BashOnWindows、bash、wsl、windows、linux、windowssubsystem、ubuntu、debian、suse、windows 10 用 windows サブシステムのインストールします。
+title: Windows 10 に Windows Subsystem for Linux (WSL) をインストールする
+description: Windows 10 の Windows Subsystem for Linux のインストール手順。
+keywords: BashOnWindows、bash、wsl、windows、windows subsystem for linux、windowssubsystem、ubuntu、debian、suse、windows 10、install
 author: taraj
 ms.author: taraj
 ms.date: 07/23/2018
 ms.topic: article
 ms.assetid: 7afaeacf-435a-4e58-bff0-a9f0d75b8a51
 ms.custom: seodec18
-ms.openlocfilehash: d30a5883d648e084193659e997c55d203eb5a735
-ms.sourcegitcommit: bb88269eb37405192625fa81ff91162393fb491f
+ms.openlocfilehash: 82b5c0ccba7a444f13f186a2e33f210ac2cf48da
+ms.sourcegitcommit: 5844c6dbf692780b86b30bd65e11820fff43b3bd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/12/2019
-ms.locfileid: "67035052"
+ms.lasthandoff: 07/02/2019
+ms.locfileid: "67499287"
 ---
-# <a name="windows-subsystem-for-linux-installation-guide-for-windows-10"></a>Windows 10 用の Linux インストール ガイド用 Windows サブシステム
+# <a name="windows-subsystem-for-linux-installation-guide-for-windows-10"></a>Windows 10 用 windows Subsystem for Linux インストールガイド
 
-## <a name="install-the-windows-subsystem-for-linux"></a>Linux 用の Windows サブシステムをインストールします。
+## <a name="install-the-windows-subsystem-for-linux"></a>Windows Subsystem for Linux をインストールする
 
-WSL の任意の Linux ディストリビューションをインストールする前にすることが必要、"Windows サブシステムの Linux"省略可能な機能を有効にします。
+WSL 用の Linux ディストリビューションをインストールする前に、[Windows Subsystem for Linux] オプション機能が有効になっていることを確認する必要があります。
 
-1. 管理者として PowerShell を開きを実行します。
+1. 管理者として PowerShell を開き、次のように実行します。
     ```powershell
     Enable-WindowsOptionalFeature -Online -FeatureName Microsoft-Windows-Subsystem-Linux
     ```
 
-2. コンピューターが表示されたら再起動します。
+2. メッセージが表示されたら、コンピューターを再起動します。
 
-## <a name="install-your-linux-distribution-of-choice"></a>任意の Linux ディストリビューションをインストールします。
-をダウンロードして、優先 distro(s) をインストールするには、次の 3 つの選択肢があります。
-1. Windows ストア (下記参照) からダウンロードしてインストール
-1. コマンドのコマンドライン/スクリプトからダウンロードしてインストール ([手動インストールの指示を読み](install-manual.md))
-1. ダウンロードして手動で展開し、インストール (for Windows Server -[こちら](install-on-server.md))
+## <a name="install-your-linux-distribution-of-choice"></a>選択した Linux ディストリビューションをインストールする
+優先するディストリビューションをダウンロードしてインストールするには、次の3つの選択肢があります。
+1. Microsoft Store からダウンロードしてインストールする (下記参照)
+1. コマンドラインまたはスクリプトからダウンロードしてインストールする ([手動によるインストール手順を参照](install-manual.md))
+1. をダウンロードして手動で展開してインストールする (Windows Server の場合-[手順](install-on-server.md))
 
-### <a name="windows-10-fall-creators-update-and-later-install-from-the-microsoft-store"></a>Windows 10 Fall Creators Update 以降。Microsoft Store からインストールします。
+### <a name="windows-10-fall-creators-update-and-later-install-from-the-microsoft-store"></a>Windows 10 の作成者の更新プログラム以降:Microsoft Store からのインストール
 
-> このセクションでは、Windows ビルド 16215 またはそれ以降は。  以下の手順に従って[ビルド確認](troubleshooting.md#check-your-build-number)します。 
+> このセクションは、Windows ビルド16215以降を対象としています。  [ビルドを確認](troubleshooting.md#check-your-build-number)するには、次の手順に従います。 
 
 1. Microsoft Store を開き、お気に入りの Linux ディストリビューションを選択します。
 
-    ![Windows ストアでの Linux ディストリビューションのビュー](media/store.png)
+    ![Microsoft Store の Linux ディストリビューションのビュー](media/store.png)
 
-    次のリンクには、各ディストリビューションの Windows ストア ページが開きます。
+    次のリンクを使用すると、各ディストリビューションの Microsoft ストアページが開きます。
 
     * [Ubuntu 16.04 LTS](https://www.microsoft.com/store/apps/9pjn388hp8c9)
     * [Ubuntu 18.04 LTS](https://www.microsoft.com/store/apps/9N9TNGVNDL3Q)
@@ -52,28 +52,28 @@ WSL の任意の Linux ディストリビューションをインストールす
     * [SUSE Linux Enterprise Server 15](https://www.microsoft.com/store/apps/9pmw35d7fnlx)
     * [Kali Linux](https://www.microsoft.com/store/apps/9PKR34TNCV07)
     * [Debian GNU/Linux](https://www.microsoft.com/store/apps/9MSVKQC78PK6)
-    * [WSL の fedora Remix](https://www.microsoft.com/store/apps/9n6gdm4k2hnc)
-    * [WLinux](https://www.microsoft.com/store/apps/9NV1GV1PXZ6P)
-    * [WLinux Enterprise](https://www.microsoft.com/store/apps/9N8LP0X93VCP)
+    * [WSL の Fedora Remix](https://www.microsoft.com/store/apps/9n6gdm4k2hnc)
+    * [Pengwin](https://www.microsoft.com/store/apps/9NV1GV1PXZ6P)
+    * [Pengwin Enterprise](https://www.microsoft.com/store/apps/9N8LP0X93VCP)
     * [Alpine WSL](https://www.microsoft.com/store/apps/9p804crf0395)
 
-1. ディストリビューションのページで、"Get"を選択します
+1. ディストリビューションのページで、[Get] を選択します。
 
-    ![Windows ストアでの Linux ディストリビューションのビュー](media/UbuntuStore.png)
+    ![Microsoft ストアの Linux ディストリビューションの表示](media/UbuntuStore.png)
 
-## <a name="complete-initialization-of-your-distro"></a>ディストリビューションの初期化を完了
-必要があります、Linux ディストリビューションがインストールされた[ディストリビューションの新しいインスタンスを初期化](initialize-distro.md)1 回を使用します。
+## <a name="complete-initialization-of-your-distro"></a>ディストリビューションの初期化を完了する
+Linux ディストリビューションがインストールされたので、[新しいディストリビューションインスタンス](initialize-distro.md)を使用するには、一度初期化する必要があります。
 
 ## <a name="troubleshooting"></a>トラブルシューティング: 
 
-関連するエラーと推奨される修正方法を次に示します。 参照してください、 [WSL のトラブルシューティング ページ](troubleshooting.md)の他の一般的なエラーとその解決方法。
+関連するエラーと修正案を以下に示します。 その他の一般的なエラーとその解決策については、 [Wsl トラブルシューティングのページ](troubleshooting.md)を参照してください。
 
-* **インストールに 0x80070003 のエラーで失敗しました**
-    * Windows Subsystem for Linux は、システム ドライブでのみ実行されます (通常、これは、`C:`ドライブ)。 ディストリビューションの場合は、システム ドライブに格納されていることを確認します。  
-    * 開いている**設定** -> **ストレージ** -> **以上の記憶域の設定。新しいコンテンツが保存されている変更**
-    ![c: ドライブにアプリをインストールするシステム設定の画像](media/AppStorage.png)
+* **エラー0x80070003 が発生し、インストールに失敗しました**
+    * Windows Subsystem for Linux はシステムドライブ (通常は`C:`ドライブ) でのみ実行されます。 ディストリビューションがシステムドライブに格納されていることを確認します。  
+    * [**設定** -> ] [**ストレージ** -> ][その他のストレージ設定]を開きます。**新しいコンテンツが保存**
+    ![される場所の変更 C: ドライブにアプリをインストールするためのシステム設定の画像](media/AppStorage.png)
     
     
- * **WslRegisterDistribution 0x8007019e エラーで失敗しました**   
-  * 省略可能なコンポーネントが有効でない Linux 用 Windows サブシステム: 
-   * 開いている**コントロール パネルの**  -> **プログラムと機能**-> * * Windows の機能を有効にする」オンまたはオフ * * チェック->  **Windows Subsystem for Linux**またはを使用して、この記事の冒頭で説明されている PowerShell コマンドレット。
+ * **WslRegisterDistribution がエラー0x8007019e で失敗しました**   
+  * Windows Subsystem for Linux のオプションコンポーネントが有効になっていません。 
+   * [**コントロールパネル** -> の**プログラムと機能**]-> * * [windows の機能の有効化または無効化] * *-> **Linux 用 windows サブシステム**を確認するか、この記事の冒頭に記載されている PowerShell コマンドレットを使用して確認します。

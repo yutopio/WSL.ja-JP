@@ -1,55 +1,59 @@
 ---
-title: WSL 2 についてよく寄せられる質問
-description: Linux 2 用 Windows サブシステムに関するよく寄せられる質問
-keywords: BashOnWindows、bash、wsl、wsl2、windows、linux、windowssubsystem、ubuntu、debian、suse、windows 10 用 windows サブシステムのインストールします。
+title: WSL 2 に関してよく寄せられる質問
+description: Windows Subsystem for Linux 2 に関してよく寄せられる質問
+keywords: BashOnWindows, bash, wsl, wsl2, windows, windows subsystem for linux, windowssubsystem, ubuntu, debian, suse, windows 10, インストール
 author: mscraigloewen
 ms.author: mscraigloewen
 ms.date: 05/30/2019
 ms.topic: article
 ms.assetid: 7afaeacf-435a-4e58-bff0-a9f0d75b8a51
 ms.custom: seodec18
-ms.openlocfilehash: 84805278abaeb6334c662e1dfab1bced3e0ddb0b
-ms.sourcegitcommit: bb88269eb37405192625fa81ff91162393fb491f
+ms.openlocfilehash: a74f5e3f5879d0af274d2e2b10aaf05e95a97a6f
+ms.sourcegitcommit: e16097a3d863bbda8c4655054f154415cdd7f2f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/12/2019
-ms.locfileid: "67038092"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67587141"
 ---
 # <a name="wsl-2-faq"></a>WSL 2 に関する FAQ
 
-よく寄せられる質問 (FAQ)、Windows サブシステム Linux 2 の一覧を以下に示します。
+Windows Subsystem for Linux 2 に関してよく寄せられる質問 (FAQ) の一覧を次に示します。
 
-## <a name="does-wsl-2-use-hyper-v-will-it-be-available-on-windows-10-home"></a>WSL 2 は、HYPER-V を使用しますか。 リリースされる予定の Windows 10 Home でしょうか。
+## <a name="does-wsl-2-use-hyper-v-will-it-be-available-on-windows-10-home"></a>WSL 2 は Hyper-v を使用しますか? Windows 10 Home で使用できるようになりますか。
 
-WSL 2 は、WSL が現在使用可能な Windows 10 Home を含む、すべての Sku で利用可能なであるされます。
+WSL 2 は、WSL が現在利用可能なすべての Sku (Windows 10 Home を含む) で利用できます。
 
-WSL の最新のバージョンでは、仮想化を有効にするのに HYPER-V のアーキテクチャを使用します。 このアーキテクチャは、HYPER-V 機能のサブセットであるオプションのコンポーネントで使用できるになります。 このオプションのコンポーネントは、すべての Sku で利用できるになります。 WSL 2 リリースに近づくにつれてすぐにこのエクスペリエンスについての詳細情報を確認したいことができます。
+最新バージョンの WSL は、Hyper-v アーキテクチャを使用して仮想化を有効にします。 このアーキテクチャは、"仮想マシンプラットフォーム" のオプションコンポーネントで使用できます。 このオプションのコンポーネントは、すべての Sku で使用できます。 WSL 2 リリースに近いほど、このエクスペリエンスの詳細をすぐに確認できます。
 
-## <a name="what-will-happen-to-wsl-1-will-it-be-abandoned"></a>WSL 1 になるか。 その見向きもされなくなりますか。
+## <a name="what-will-happen-to-wsl-1-will-it-be-abandoned"></a>WSL 1 はどうなりますか。 破棄されますか。
 
-います現在ある WSL 1 を廃止する予定はありません。 WSL 1 と 2 の WSL ディストリビューション サイド バイ サイドで実行しできますアップグレードでき、いつでもすべてのディストリビューションをダウン グレードできます。 新しいアーキテクチャとして WSL 2 を追加するには、WSL を驚くような方法で Windows、Linux 環境を実行するようにする機能を提供する、WSL チームに適したプラットフォームについて説明します。
+現在、WSL 1 を廃止する予定はありません。 WSL 1 と WSL 2 ディストリビューションを並行して実行し、任意のディストリビューションをいつでもアップグレードおよびダウングレードできます。 WSL 2 を新しいアーキテクチャとして追加すると、wsl チームが Windows で Linux 環境を実行するための優れた方法を提供する機能を提供できるようになります。
 
-## <a name="will-i-be-able-to-run-wsl-2-and-other-3rd-party-virtualization-tools-such-as-vmware-or-virtualbox"></a>ある WSL 2 と VMware、VirtualBox などその他のサード パーティ製の仮想化ツールを実行するでしょうか。
+## <a name="will-i-be-able-to-run-wsl-2-and-other-3rd-party-virtualization-tools-such-as-vmware-or-virtualbox"></a>WSL 2 およびその他のサードパーティの仮想化ツール (VMware や VirtualBox など) を実行できますか?
 
-HYPER-V が、WSL 2 が有効になっているときに実行できない、使用されている場合、一部のサード パーティ アプリケーションは使用できません。 残念ながら、これは、VMware と VirtualBox VirtualBox 6 以前のバージョン (VirtualBox 2018 の年 12 月にリリースされた 6.0.0 [Windows ホスト上のフォールバック実行コアとして HYPER-V を今すぐサポート][ 1]!)
+Hyper-v が使用されている場合、一部のサードパーティアプリケーションが動作しないことを意味します。これは、WSL 2 が有効になっている場合、これらのアプリケーションを実行できないことを意味します。 残念なことに、これには VMware と、VirtualBox 6 より前の VirtualBox のバージョンが含まれます (2018 年12月にリリースされた VirtualBox 6.0.0 では、 [Windows ホストでのフォールバック実行コアとして hyper-v がサポートされるようになりました][1])。
 
-この問題を解決するための方法を調査しています。 たとえばと呼ばれる Api のセットを公開します[ハイパーバイザー プラットフォーム][ 2]サード パーティ製の仮想化のプロバイダーを使用して、そのソフトウェアと HYPER-V の互換性のあること これにより、アプリケーションなど、エミュレーションの HYPER-V のアーキテクチャを使用して[Google Android Emulator][3]と 6 およびこれを超える VirtualBox の両方の HYPER-V と互換性のあるようになりました。
+この問題を解決するための方法を調査しています。 たとえば、[ハイパーバイザープラットフォーム][2] that third-party virtualization providers can use to make their software compatible with Hyper-V’s. This lets applications use the Hyper-V architecture for their emulation such as [the Google Android Emulator][3]と呼ばれる一連の api を公開しています。 virtualbox 6 以降では、hyper-v と互換性があります。
 
-## <a name="can-i-access-the-gpu-in-wsl-2-are-there-plans-to-increase-hardware-support"></a>WSL 2 での GPU にアクセスできますか。 ハードウェアのサポートを向上する計画はありますか。
+## <a name="can-i-access-the-gpu-in-wsl-2-are-there-plans-to-increase-hardware-support"></a>WSL 2 の GPU にアクセスできますか。 ハードウェアサポートを強化する予定はありますか。
 
-WSL 2 ハードウェアへのアクセスの最初のリリースでサポートが限られておりにある例:: GPU、シリアル アクセスまたは Usb ができないことができます。 ただしより優れたデバイス サポートを追加するは、バックログで高いようにこれらのデバイスとの対話を希望する開発者の多くの複数のユース ケースが開きます。 それまでは、シリアル ポート、および USB のアクセスを持つ WSL 1 を必ず使用することができます。 このブログと内部関係者に、最新の機能について把握する twitter WSL チーム メンバーに引き続き注目がビルドし、対話するにはどのようなデバイスについてフィードバックを提供することにご連絡ください!
+WSL 2 ハードウェアアクセスサポートの初回リリースでは、GPU、serial、USBs にアクセスできなくなる場合があります。 ただし、より優れたデバイスサポートを追加すると、バックログが高くなります。これにより、これらのデバイスとの対話を希望する開発者にとって、より多くのユースケースが開かれます。 それまでの間は、シリアルポートと USB アクセスを持つ WSL 1 をいつでも使用できます。 Twitter でこのブログや WSL チームのメンバーに継続的にご連絡ください。また、対話するデバイスについてのフィードバックをお寄せいただくために、内部で公開されている最新の機能に関する情報を常に入手できます。
 
-## <a name="will-wsl-2-be-able-to-use-networking-applications"></a>WSL 2 はネットワーク アプリケーションを使用できますか。
+## <a name="will-wsl-2-be-able-to-use-networking-applications"></a>WSL 2 がネットワークアプリケーションを使用できるようになりますか。
 
-はい、アプリケーションを一般にネットワークが高速で、互換性を呼び出す完全なシステムがあるために、適しています。 ただし、新しいアーキテクチャは、仮想化されたネットワーク コンポーネントを使用します。 つまり、初期のプレビュー ビルド WSL 2 は、仮想マシンと同様により動作が例。WSL 2 では、ホスト コンピューターは異なる IP アドレスがあります。 WSL 1 と同じと感じる WSL 2 の提供に取り組んでいますが、ネットワーク アジャイル チームのストーリーの向上が含まれます。 Linux または localhost を使用して Windows からネットワークのすべてのアプリへのアクセスなど、することが簡単に機能強化を追加する予定です。 WSL 2 のリリースに近いので、ネットワーク、ストーリーと機能強化についての詳細について掲載する予定です。
+はい。一般的なネットワークアプリケーションでは、システムコールの完全な互換性があるため、より高速で動作します。 ただし、新しいアーキテクチャでは、仮想化されたネットワークコンポーネントが使用されます。 これは、最初のプレビュービルドでは、WSL 2 が仮想マシンに似た動作をすることを意味します。次に例を示します。WSL 2 には、ホストコンピューターとは異なる IP アドレスが割り当てられます。 Wsl 2 を WSL 1 と同じ感覚にすることができます。これには、ネットワークのストーリーの改善が含まれています。 Linux または Windows から localhost を使用してすべてのネットワークアプリにアクセスするなど、可能な限り迅速に機能強化を追加する予定です。 ここでは、WSL 2 のリリースに向けたネットワークの事例と改善点について詳しく説明します。
 
 ## <a name="can-i-run-wsl-2-in-a-virtual-machine"></a>仮想マシンで WSL 2 を実行できますか。
 
-うん！ 仮想マシンに仮想化が有効に入れ子になったことを確認する必要があります。 これは、管理者特権で PowerShell ウィンドウで、次のコマンドを実行して、HYPER-V で有効ことができます。
+はい。 仮想マシンで、入れ子になった仮想化が有効になっていることを確認する必要があります。 Hyper-v でこれを有効にするには、PowerShell ウィンドウで管理者特権を使用して次のコマンドを実行します。
 
 `Set-VMProcessor -VMName <VMName> -ExposeVirtualizationExtensions $true`
 
-置き換えてください '&lt;VMName&gt;' 仮想マシンの名前に置き換えます。
+必ず '&lt;VMName&gt;' を仮想マシンの名前に置き換えてください。
+
+## <a name="can-i-use-wslconf-in-wsl-2"></a>WSL 2 で wsl を使用できますか。
+
+WSL 2 は、WSL 1 が使用するのと同じ wsl conf ファイルをサポートしています。 これは、WSL 1 ディストリビューションで設定されたすべての構成オプション (Windows ドライブの automounting、相互運用の有効化または無効化、Windows ドライブがマウントされるディレクトリの変更など) が wsl 2 の内部で動作することを意味します。 WSL の構成オプションの詳細については、「[ディストリビューション管理](./wsl-config.md)」ページを参照してください。 
 
  [1]: https://www.virtualbox.org/wiki/Changelog-6.0
  [2]: https://docs.microsoft.com/en-us/virtualization/api/

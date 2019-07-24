@@ -1,6 +1,6 @@
-このリポジトリの issue トラッカーが WSL ドキュメントに関する問題の報告ののみであることに注意してください。
+このリポジトリの issue tracker は、WSL ドキュメントに関する問題の報告のみを対象としています。
 
-その他の関連する問題リポジトリの:
+関連するその他の問題のリポジトリ:
 
-* WSL: https://github.com/Microsoft/BashOnWindows/
+* WSL https://github.com/Microsoft/BashOnWindows/
 * Windows コンソール: https://github.com/Microsoft/Console/

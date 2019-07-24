@@ -1,36 +1,38 @@
 ---
 title: WSL 2 について
-description: WSL 2 Windows Subsystem for Linux の新しいアーキテクチャについて
-keywords: BashOnWindows、bash、wsl、wsl2、windows、linux、windowssubsystem、ubuntu、debian、suse、windows 10 用 windows サブシステムのインストールします。
+description: WSL 2 について Windows Subsystem for Linux の新しいアーキテクチャ
+keywords: BashOnWindows, bash, wsl, wsl2, windows, windows subsystem for linux, windowssubsystem, ubuntu, debian, suse, windows 10, インストール
 author: mscraigloewen
 ms.author: mscraigloewen
 ms.date: 05/30/2019
 ms.topic: article
 ms.assetid: 7afaeacf-435a-4e58-bff0-a9f0d75b8a51
 ms.custom: seodec18
-ms.openlocfilehash: b3b0b1ce0f55fed0b4cf223ccc18a509dcf81788
-ms.sourcegitcommit: bb88269eb37405192625fa81ff91162393fb491f
+ms.openlocfilehash: e9c1f043207193a5c00ecf6176f54f240aa48680
+ms.sourcegitcommit: 5844c6dbf692780b86b30bd65e11820fff43b3bd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/12/2019
-ms.locfileid: "67038132"
+ms.lasthandoff: 07/02/2019
+ms.locfileid: "67499251"
 ---
-WSL 2 では、新しいバージョンの Windows で ELF64 Linux バイナリを実行する Linux 用 Windows サブシステムが作動するアーキテクチャです。 その主な目標は、完全なシステムの呼び出しの互換性を追加するとともに、ファイル システムのパフォーマンスを向上させる。 この新しいアーキテクチャでは、これらの Linux バイナリが Windows およびコンピューターのハードウェアとやり取りする方法の変更が、WSL 1 (現在広く普及しているのバージョン) のように、同じユーザー エクスペリエンスが提供されます。 WSL 1 ディストリビューションの場合、または、WSL 2 ディストリビューションでは、ディストリビューションを実行できる個々 の Linux のアップグレードや、いつでもダウン グレードが可能し、サイド バイ サイドの WSL 1 と WSL 2 ディストリビューションを実行することができます。 WSL 2 では、実際の Linux カーネルを使用する、まったく新しいアーキテクチャを使用します。
+# <a name="about-wsl-2"></a>WSL 2 について
 
-## <a name="linux-kernel-in-wsl-2"></a>WSL 2 での Linux カーネル
+WSL 2 は、windows Subsystem for Linux が Windows 上で ELF64 Linux バイナリを実行できるようにする、アーキテクチャの新しいバージョンです。 主な目的は、ファイルシステムのパフォーマンスを向上させたり、システムコールの完全な互換性を追加したりすることです。 この新しいアーキテクチャは、これらの Linux バイナリが Windows とコンピューターのハードウェアとどのように対話するかを変更しますが、WSL 1 (現在幅広く使用可能なバージョン) と同じユーザーエクスペリエンスを提供します。 個々の Linux ディストリビューションは WSL 1 ディストリビューションとして実行するか、WSL 2 ディストリビューションとして実行できます。また、いつでもアップグレードまたはダウングレードできます。 WSL 1 と WSL 2 ディストリビューションを並行して実行できます。 WSL 2 は、実際の Linux カーネルを使用するまったく新しいアーキテクチャを使用します。
 
-WSL 2 での Linux カーネルは kernel.org で使用可能なソースに基づいた最新の安定したブランチから、社内で構築されています。このカーネルは WSL 2 特別に調整されています。 サイズとパフォーマンスを Windows を驚くほどの Linux のエクスペリエンスを提供するために最適化された、Windows 更新プログラムが処理されますので、自分で管理することがなく、最新のセキュリティ修正プログラムとカーネル機能強化が表示されます。
+## <a name="linux-kernel-in-wsl-2"></a>WSL 2 の Linux カーネル
 
-さらにこのカーネルは、オープン ソースになります。 完全なソース コードを検索するには、Linux カーネルの[ここ](https://thirdpartysource.microsoft.com/download/Windows%20Subsystem%20for%20Linux%20v2/May%202019/WSLv2-Linux-Kernel-master.zip)します。 詳細したい場合については、このカーネルをチェック アウトできます[このブログの投稿](https://devblogs.microsoft.com/commandline/shipping-a-linux-kernel-with-windows/)のビルド チームによって書き込まれました。
+WSL 2 の Linux カーネルは、kernel.org で入手できるソースに基づいて、最新の安定したブランチから社内に構築されています。このカーネルは WSL 2 用に特別に調整されています。 サイズとパフォーマンスのために最適化されており、Windows での優れた Linux エクスペリエンスを提供し、Windows の更新プログラムによってサービスを提供します。つまり、自分で管理することなく、最新のセキュリティ修正とカーネルの改善を受けることができます。
+
+さらに、このカーネルはオープンソースになります。 Linux カーネルの完全なソースコードについては、[こちら](https://github.com/microsoft/WSL2-Linux-Kernel)を参照してください。 このカーネルの詳細については、このカーネルを構築したチームによって記述された[このブログ記事](https://devblogs.microsoft.com/commandline/shipping-a-linux-kernel-with-windows/)をご覧ください。
 
 ## <a name="brief-overview-of-the-wsl-2-architecture"></a>WSL 2 アーキテクチャの概要
 
-WSL 2 は、軽量なユーティリティ仮想マシン (VM) 内での Linux カーネルを実行するのに、最新かつ最高の仮想化テクノロジを使用します。 ただし、WSL 2 には、従来の VM エクスペリエンスはできません。 従来の VM のエクスペリエンスは、起動に時間がかかることができます、分離された、多数のリソースを消費、および、時間を管理する必要がありますを。 WSL 2 には、これらの属性はありません。 まだ WSL 1 の非常に大きなメリットが得られます。VM の構成または管理、高レベルの Windows と Linux、非常に高速起動時間、小規模リソースのフット プリント、およびすべての間の統合は必要ありません。 WSL 2 は、VM を使用して、これは、管理され WSL 1 と同じユーザー エクスペリエンスを終了するシーンの背後で実行されます。
+WSL 2 では、仮想化テクノロジの最新で最高のものを使用して、ライトウェイトユーティリティ仮想マシン (VM) 内で Linux カーネルを実行します。 ただし、WSL 2 は従来の VM エクスペリエンスではありません。 従来の VM エクスペリエンスは起動に時間がかかり、分離され、大量のリソースを消費するため、管理に時間がかかることがあります。 WSL 2 には、これらの属性はありません。 WSL 1 には次のような利点があります。Windows と Linux の間の高いレベルの統合、非常に高速な起動時間、小規模なリソースフットプリント、最大限のメリットを実現するには、VM の構成または管理は必要ありません。 WSL 2 では VM を使用しますが、WSL 1 と同じユーザーエクスペリエンスが得られるように、管理され、バックグラウンドで実行されます。
 
-## <a name="increased-file-io-performance"></a>ファイル IO パフォーマンスを向上
+## <a name="increased-file-io-performance"></a>ファイル IO パフォーマンスの向上
 
-ファイルの処理を要する操作などの git クローン、npm のインストール、apt 更新プログラム、apt アップグレード、およびすべて非常に高速です。 どのアプリでは、実行して、ファイル システムとの対話方法をしている実際の速度の増加によって異なります。 WSL 2 の最初のバージョンの実行に最大 20 倍の速さの周りを zip 形式の tarball をアンパックし、WSL 1 と比べて 2 ~ 5 倍高速化するさまざまなプロジェクトで git クローン、npm のインストールおよび cmake を使用します。
+Git clone、npm install、apt update、apt upgrade など、ファイルを多用する操作はすべて、非常に高速になります。 実際の速度の増加は、実行しているアプリとファイルシステムとの対話方法によって異なります。 最初のバージョンの WSL 2 は、zip 圧縮された tar を開梱する場合は WSL 1、git clone を使用する場合は約2倍速、さまざまなプロジェクトでは npm install と cmake の方が、20倍まで高速に実行できます。
 
-## <a name="full-system-call-compatibility"></a>完全なシステムの呼び出しの互換性
+## <a name="full-system-call-compatibility"></a>システムコールの完全な互換性
 
-Linux のバイナリは、ファイルへのアクセス、メモリを要求して、プロセス、および詳細の作成などの多くの機能を実行するのにシステム コールを使用します。 WSL 1 の WSL チームによって構築された変換レイヤーに対して、WSL 2 には、完全なシステムの呼び出しの互換性の独自の Linux カーネルが含まれます。 これには、Docker などの WSL 内で実行できるアプリのまったく新しいセットが導入されています。 さらに、それらを追加、変更を実装し、WSL チームを待つのではなく、Linux カーネルに更新プログラムをすぐに、コンピューターに追加することができます。
+Linux バイナリでは、システム呼び出しを使用して、ファイルへのアクセス、メモリの要求、プロセスの作成など、さまざまな機能を実行します。 Wsl 1 では、WSL チームによって作成された翻訳レイヤーが使用されていましたが、WSL 2 には、システムコールの完全な互換性を備えた独自の Linux カーネルが含まれています。 これにより、Docker などの WSL 内で実行できるアプリの完全なセットが導入されます。 また、Linux カーネルに対する更新は、WSL チームが変更を実装して追加するのを待機するのではなく、すぐにコンピューターに追加することができます。
