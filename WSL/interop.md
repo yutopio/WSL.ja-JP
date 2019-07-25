@@ -1,6 +1,6 @@
 ---
-title: Linux と Windows の相互運用
-description: Linux 用 Windows サブシステムで実行されている Linux ディストリビューションでは、Windows の相互運用性をについて説明します。
+title: Windows と Linux の相互運用性
+description: Windows Subsystem for Linux で実行されている Linux ディストリビューションとの Windows の相互運用性について説明します。
 author: scooley
 ms.author: scooley
 ms.date: 12/20/2017
@@ -8,45 +8,45 @@ ms.topic: article
 ms.assetid: 3cefe0db-7616-4848-a2b6-9296746a178b
 ms.custom: seodec18
 ms.openlocfilehash: e4608c25c6bcc63413d53b2c808c16fe2a62dd5c
-ms.sourcegitcommit: db69625e26bc141ea379a830790b329e51ed466b
+ms.sourcegitcommit: cd239efc5c7c25ffbe5de25b2438d44181a838a9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/13/2019
+ms.lasthandoff: 06/14/2019
 ms.locfileid: "67040819"
 ---
-# <a name="windows-subsystem-for-linux-interoperability-with-windows"></a>Windows と Linux の相互運用性用 Windows サブシステム
+# <a name="windows-subsystem-for-linux-interoperability-with-windows"></a>Windows と Linux の相互運用性のための windows サブシステム
 
-> **For Fall Creators Update が更新されます。**  
-Creators Update または Anniversary Update を実行している場合にジャンプ、 [Creators/Anniversary Update セクション](interop.md#creators-update-and-anniversary-update)します。
+> **秋の作成者の更新に関する情報が更新されました。**  
+作成者の更新プログラムまたは記念日の更新プログラムを実行している場合は、[作成者[/記念日] セクション](interop.md#creators-update-and-anniversary-update)に移動します。
 
-Windows Subsystem for Linux (WSL) は、Windows と Linux 間の統合を継続的に向上です。  可能な代替手段としては以下の方法があります。
+Windows Subsystem for Linux (WSL) は、Windows と Linux 間の統合を継続的に改善しています。  可能な代替手段としては以下の方法があります。
 
 1. Linux コンソールから Windows バイナリを呼び出します。
-1. Windows コンソールから Linux 向けのバイナリを呼び出します。
-1. **Windows Insider のビルド 17063 +** Linux と Windows 環境変数を共有します。
+1. Windows コンソールから Linux バイナリを起動します。
+1. **Windows Insider ビルド 17063 +** Linux と Windows の間で環境変数を共有します。
 
-これは、Windows と WSL の間のシームレスなエクスペリエンスを提供します。  技術的な詳細は、 [WSL ブログ](https://blogs.msdn.microsoft.com/wsl/2016/10/19/windows-and-ubuntu-interoperability/)します。
+これにより、Windows と WSL の間でシームレスなエクスペリエンスが提供されます。  技術的な詳細については、 [Wsl ブログ](https://blogs.msdn.microsoft.com/wsl/2016/10/19/windows-and-ubuntu-interoperability/)をご覧ください。
 
-## <a name="run-linux-tools-from-a-windows-command-line"></a>Windows コマンドラインから Linux ツールを実行します。
+## <a name="run-linux-tools-from-a-windows-command-line"></a>Windows コマンドラインからの Linux ツールの実行
 
-Windows コマンド プロンプト (CMD または PowerShell) を使用して、Linux のバイナリを実行する`wsl.exe <command>`します。
+を使用して`wsl.exe <command>`、Windows コマンドプロンプト (CMD または PowerShell) から Linux バイナリを実行します。
 
-バイナリをこの方法で呼び出されます。
+バイナリは次の方法で呼び出されます。
 
-1. 現在の CMD または PowerShell プロンプトとして同じ作業ディレクトリを使用します。
+1. 現在のコマンドプロンプトまたは PowerShell プロンプトと同じ作業ディレクトリを使用します。
 1. WSL の既定のユーザーとして実行します。
-1. 呼び出し元のプロセスとターミナルとして同じ Windows 管理者権限を持ちます。
+1. 呼び出しプロセスとターミナルと同じ Windows 管理者権限を持っている。
 
-例:
+以下に例を示します。
 
 ```console
 C:\temp> wsl ls -la
 <- contents of C:\temp ->
 ```
 
-Linux コマンド次`wsl.exe`WSL で実行する任意のコマンドのように処理されます。  Sudo、パイプ、およびファイルのリダイレクトなどの機能は、次の動作します。
+次に示す`wsl.exe` Linux コマンドは、wsl でのコマンド実行と同様に処理されます。  Sudo、パイプ、ファイルリダイレクトなどが機能します。
 
-Sudo の使用例:
+Sudo を使用した例:
 
 ```console
 C:\temp> wsl sudo apt-get update
@@ -55,7 +55,7 @@ Hit:1 https://archive.ubuntu.com/ubuntu xenial InRelease
 Get:2 https://security.ubuntu.com/ubuntu xenial-security InRelease [94.5 kB]
 ```
 
-WSL と Windows のコマンドを混在させる例:
+WSL コマンドと Windows コマンドを混在させた例を次に示します。
 
 ```console
 C:\temp> wsl ls -la | findstr "foo"
@@ -67,9 +67,9 @@ C:\temp> dir | wsl grep foo
 C:\temp> wsl ls -la > out.txt
 ```
 
-渡されるコマンド`wsl.exe`変更しなくても、WSL プロセスに転送されます。  WSL 形式でファイル パスを指定する必要があります。
+に`wsl.exe`渡されるコマンドは、変更せずに wsl プロセスに転送されます。  ファイルパスは WSL 形式で指定する必要があります。
 
-パスの例:
+パスを使用した例:
 
 ```console
 C:\temp> wsl ls -la /proc/cpuinfo
@@ -79,26 +79,26 @@ C:\temp> wsl ls -la "/mnt/c/Program Files"
 <- contents of C:\Program Files ->
 ```
 
-## <a name="run-windows-tools-from-wsl"></a>WSL から Windows ツールを実行します。
+## <a name="run-windows-tools-from-wsl"></a>WSL から Windows ツールを実行する
 
-WSL が使用して、WSL コマンドラインから直接 Windows バイナリを呼び出すことができます`[binary name].exe`します。  たとえば、`notepad.exe` と記述します。  Linux の Windows 実行可能ファイルを簡単に実行させるには、Windows のパスが含まれている`$PATH`Fall Creators Update でします。
+WSL は、を使用して`[binary name].exe`、wsl コマンドラインから直接 Windows バイナリを呼び出すことができます。  たとえば、`notepad.exe` のようにします。  Windows の実行可能ファイルの実行を容易にするために、windows `$PATH`のパスは、Linux では、[作成者] の更新プログラムに含まれています。
 
-この方法で実行するアプリケーションでは、次のプロパティがあります。
+この方法で実行されるアプリケーションには、次のプロパティがあります。
 
-1. WSL のコマンド プロンプトとして作業ディレクトリを保持 (ほとんどの場合--例外について以下に説明)。
-1. WSL プロセスと同じアクセス許可権限を持っています。
-1. アクティブな Windows ユーザーとして実行します。
-1. Windows タスク マネージャーに表示される場合に、コマンド プロンプトから直接実行します。
+1. 作業ディレクトリを WSL コマンドプロンプトとして保持します (ほとんどの場合、例外については後述します)。
+1. WSL プロセスと同じ権限が与えられている。
+1. をアクティブな Windows ユーザーとして実行します。
+1. コマンドプロンプトから直接実行されたかのように、Windows タスクマネージャーに表示されます。
 
-以下に例を示します。
+例:
 
 ``` BASH
 $ notepad.exe
 ```
 
-WSL で実行、Windows 実行可能ファイルは、ネイティブの Linux 実行可能ファイル: リダイレクトのパイプとも想定どおりに作業するバック グラウンド処理を同様に処理されます。
+WSL で実行される Windows 実行可能ファイルは、ネイティブの Linux 実行可能ファイルと同様に処理されます (パイプ、リダイレクト、バックグラウンド処理が想定どおりに動作します)。
 
-パイプを使用する例:
+パイプを使用した例:
 
 ``` BASH
 $ ipconfig.exe | grep IPv4 | cut -d: -f2
@@ -106,7 +106,7 @@ $ ipconfig.exe | grep IPv4 | cut -d: -f2
 10.159.21.24
 ```
 
-Windows と WSL の混在のコマンドを使用する例:
+混合ウィンドウと WSL コマンドを使用する例:
 
 ``` BASH
 $ ls -la | findstr.exe foo.txt
@@ -115,9 +115,9 @@ $ cmd.exe /c dir
 <- contents of C:\ ->
 ```
 
-Windows バイナリでは、ファイル拡張子を含める、ファイルの場合も、一致、および実行可能する必要があります。  などの非-実行可能ファイルは、スクリプトをバッチ処理します。  などのネイティブ コマンドを CMD`dir`で実行できる`cmd.exe /C`コマンド。
+Windows バイナリには、ファイル拡張子が含まれている必要があります。また、ファイルの大文字と小文字が一致している必要があります  バッチスクリプトを含む非実行可能ファイル。  コマンドを使用し`dir`て、の`cmd.exe /C`ような CMD ネイティブコマンドを実行できます。
 
-例:
+例 :
 
 ``` BASH
 $ cmd.exe /C dir
@@ -130,18 +130,18 @@ Reply from 2600:1409:a:5a2::747: time=2ms
 
 パラメーターは、変更されていない Windows バイナリに渡されます。
 
-次のコマンドを開く例として、`C:\temp\foo.txt`で`notepad.exe`:
+例として、で`C:\temp\foo.txt` `notepad.exe`は次のコマンドが開きます。
 
 ``` BASH
 $ notepad.exe "C:\temp\foo.txt"
 $ notepad.exe C:\\temp\\foo.txt
 ```
 
-VolFs 上にあるファイルの変更 (ファイルのない`/mnt/<x>`) WSL でのアプリケーションはサポートされていません、Windows とします。
+Wsl の Windows アプリケーションを使用して、 `/mnt/<x>`volfs (下にないファイル) にあるファイルを変更することはサポートされていません。
 
-既定では、WSL バイナリ WSL の現在のディレクトリとして、Windows の作業ディレクトリを保持しようとするは代替インスタンス作成のディレクトリで VolFs 作業ディレクトリがある場合。
+既定では、WSL は Windows バイナリの作業ディレクトリを現在の WSL ディレクトリとして保持しようとしますが、作業ディレクトリが VolFs にある場合はインスタンス作成ディレクトリに戻されます。
 
-たとえば;`wsl.exe`が最初に起動される`C:\temp`され、現在の WSL ディレクトリは、ユーザーのホームに変更されます。  ときに`notepad.exe`と呼ばれますが、ユーザーのホーム ディレクトリから WSL に自動的に戻ります`C:\temp`notepad.exe の作業ディレクトリとして。
+例を次に示します。が最初に`C:\temp`起動され、現在の wsl ディレクトリがユーザーのホームに変更されます。 `wsl.exe`  ユーザー `notepad.exe`のホームディレクトリからが呼び出されると、wsl は notepad.exe 作業`C:\temp`ディレクトリとして自動的にに戻ります。
 
 ``` BASH
 C:\temp> wsl
@@ -155,76 +155,76 @@ C:\temp>dir | findstr foo.txt
 09/27/2016  02:15 PM                14 foo.txt
 ```
 
-## <a name="share-environment-variables-between-windows-and-wsl"></a>Windows と WSL の間の環境変数を共有します。
+## <a name="share-environment-variables-between-windows-and-wsl"></a>Windows と WSL の間で環境変数を共有する
 
-> Windows Insider ビルド 17063 以降で使用できます。
+> Windows Insider ビルド17063以降で使用できます。
 
-WSL にアクセスできる Windows 環境変数のみが 17063、前に`PATH`(したがって、WSL 下から Win32 実行可能ファイルを起動する可能性があります)。
+17063より前では、wsl がアクセスできる Windows 環境変数`PATH`のみが使用されていました (したがって、wsl の下から Win32 実行可能ファイルを起動できます)。
 
-17063 以降、WSL と Windows 共有`WSLENV`、特殊な環境変数が WSL で実行されている Windows と Linux のディストリビューションをブリッジするために作成します。
+17063以降、wsl および windows share `WSLENV`は、wsl で実行される Windows および Linux ディストリビューションをブリッジするために作成された特殊な環境変数です。
 
-プロパティの`WSLENV`:
+次の`WSLENV`プロパティ:
 
-* 共有します。これは、Windows と WSL の両方の環境に存在します。
-* これは、Windows と WSL 間で共有する環境変数の一覧です。
-* Windows と WSL で問題なく動作する環境変数を書式設定できます。
+* これは共有されています。Windows と WSL の両方の環境に存在します。
+* これは、Windows と WSL の間で共有する環境変数の一覧です。
+* 環境変数の書式を設定して、Windows および WSL で適切に動作させることができます。
 
-使用できる 4 つのフラグがあります`WSLENV`その環境変数が変換される方法に影響を与える。
+で`WSLENV`は、環境変数の変換方法に影響を与える4つのフラグが用意されています。
 
-`WSLENV` フラグ:
+`WSLENV`示す
 
-* `/p` -WSL/Linux 形式のパスと Win32 のパスの間のパスを変換します。
-* `/l` -環境変数がパスの一覧を示します。
-* `/u` -Win32 から WSL を実行する場合にこの環境変数を含めるだけあることを示します。
-* `/w` -WSL から Win32 を実行する場合にこの環境変数を含めるだけあることを示します。
+* `/p`-WSL/Linux スタイルパスと Win32 パス間のパスを変換します。
+* `/l`-環境変数がパスのリストであることを示します。
+* `/u`-Win32 から WSL を実行する場合にのみ、この環境変数を含める必要があることを示します。
+* `/w`-WSL から Win32 を実行する場合にのみ、この環境変数を含める必要があることを示します。
 
-必要に応じて、フラグを組み合わせることができます。
+フラグは、必要に応じて組み合わせることができます。
 
-## <a name="disable-interop"></a>相互運用機能を無効にします。
+## <a name="disable-interop"></a>相互運用を無効にする
 
-ユーザーには、ルートとして、次のコマンドを実行して、単一の WSL セッションの Windows バイナリを実行する機能が無効にすることがあります。
+ユーザーは、次のコマンドを root として実行することで、1つの WSL セッションに対して Windows バイナリを実行する機能を無効にすることができます。
 
 ``` BASH
 $ echo 0 > /proc/sys/fs/binfmt_misc/WSLInterop
 ```
 
-Windows を再度有効にするには、バイナリ WSL のすべてのセッションを終了し、bash.exe を再実行またはルートとして次のコマンドを実行します。
+Windows バイナリを再び有効にするには、すべての WSL セッションを終了し、bash を再実行するか、ルートとして次のコマンドを実行します。
 
 ``` BASH
 $ echo 1 > /proc/sys/fs/binfmt_misc/WSLInterop
 ```
 
-WSL セッション間で相互運用機能を無効化は永続化されません--新しいセッションを起動するときに、相互運用機能を再度有効になります。
+相互運用機能の無効化は、WSL セッション間では保持されません。新しいセッションが開始されると、相互運用が再び有効になります。
 
-## <a name="creators-update-and-anniversary-update"></a>Creators Update と Anniversary Update
+## <a name="creators-update-and-anniversary-update"></a>作成者の更新プログラムと記念日の更新
 
-相互運用エクスペリエンスの事前 Fall Creators Update は、相互運用機能の最新のエクスペリエンスに似ていますが、いくつかの主な違いがあります。
+相互運用機能の更新は、より新しい相互運用エクスペリエンスに似ていますが、いくつかの大きな違いがあります。
 
-要約。
+要約すると、以下のようになります。
 
-* `bash.exe` 非推奨とされ、置き換え`wsl.exe`します。
-* `-c` オプションでは必要ありません、1 つのコマンドを実行しているを`wsl.exe`します。
-* Windows のパスが、WSL に含まれる `$PATH`
+* `bash.exe`は非推奨とされ`wsl.exe`、に置き換えられました。
+* `-c`で`wsl.exe`は、単一のコマンドを実行するオプションは必要ありません。
+* Windows パスは WSL に含まれています`$PATH`
 
-相互運用機能を無効にするためのプロセスは変更されません。
+相互運用を無効にするプロセスは変更されていません。
 
-### <a name="invoking-wsl-from-the-windows-command-line"></a>WSL Windows コマンドラインからの呼び出し
+### <a name="invoking-wsl-from-the-windows-command-line"></a>Windows コマンドラインからの WSL の呼び出し
 
-Linux のバイナリは、Windows コマンド プロンプトから、または PowerShell から起動できます。  この方法で呼び出されたバイナリの次のプロパティがあります。
+Linux バイナリは、Windows コマンドプロンプトまたは PowerShell から呼び出すことができます。  この方法で呼び出されるバイナリには、次のプロパティがあります。
 
-1. CMD または PowerShell プロンプトとして同じ作業ディレクトリを使用します。
+1. CMD または PowerShell プロンプトと同じ作業ディレクトリを使用します。
 1. WSL の既定のユーザーとして実行します。
-1. 呼び出し元のプロセスとターミナルとして同じ Windows 管理者権限を持ちます。
+1. 呼び出しプロセスとターミナルと同じ Windows 管理者権限を持っている。
 
-以下に例を示します。
+例:
 
 ```console
 C:\temp> bash -c "ls -la"
 ```
 
-この方法で呼び出す Linux コマンドは、その他の Windows アプリケーションのように処理されます。  入力、パイプ、およびファイルのリダイレクトなどは、期待どおりに動作します。
+この方法で呼び出された Linux コマンドは、他の Windows アプリケーションと同様に処理されます。  入力、パイプ、ファイルリダイレクトなどが想定どおりに動作します。
 
-例:
+例 :
 
 ```console
 C:\temp>bash -c "sudo apt-get update"
@@ -239,7 +239,7 @@ C:\temp> dir | bash -c "grep foo"
 C:\temp> bash -c "ls -la" > out.txt
 ```
 
-渡される WSL コマンド`bash -c`変更しなくても、WSL プロセスに転送されます。  WSL 形式でファイル パスを指定する必要があり、関連する文字をエスケープする注意おく必要があります。 以下に例を示します。
+に`bash -c`渡される wsl コマンドは、変更せずに wsl プロセスに転送されます。  ファイルパスは WSL 形式で指定する必要があり、関連する文字をエスケープするために注意する必要があります。 例:
 
 ```console
 C:\temp> bash -c "ls -la /proc/cpuinfo"
@@ -249,22 +249,22 @@ C:\temp> bash -c "ls -la \"/mnt/c/Program Files\""
 <- contents of C:\Program Files ->
 ```
 
-### <a name="invoking-windows-binaries-from-wsl"></a>WSL から呼び出し元の Windows バイナリ
+### <a name="invoking-windows-binaries-from-wsl"></a>WSL からの Windows バイナリの呼び出し
 
-Windows Subsystem for Linux は、WSL コマンドラインから直接 Windows バイナリを呼び出すことができます。  この方法で実行するアプリケーションでは、次のプロパティがあります。
+Windows Subsystem for Linux は、WSL コマンドラインから直接 Windows バイナリを呼び出すことができます。  この方法で実行されるアプリケーションには、次のプロパティがあります。
 
-1. 以下で説明するシナリオでは除く WSL コマンド プロンプトとして作業ディレクトリを保持します。
-1. 同じアクセス許可権限を持ち、`bash.exe`プロセス。 
-1. アクティブな Windows ユーザーとして実行します。
-1. Windows タスク マネージャーに表示される場合に、コマンド プロンプトから直接実行します。
+1. 以下で説明するシナリオを除き、作業ディレクトリは WSL コマンドプロンプトとして保持してください。
+1. `bash.exe`プロセスと同じ権限を持っている。 
+1. をアクティブな Windows ユーザーとして実行します。
+1. コマンドプロンプトから直接実行されたかのように、Windows タスクマネージャーに表示されます。
 
-以下に例を示します。
+例:
 
 ``` BASH
 $ /mnt/c/Windows/System32/notepad.exe
 ```
 
-WSL では、この実行可能ファイルはネイティブの Linux の実行可能ファイルのような処理されます。  これは、Linux パスにディレクトリを追加して、期待どおりのコマンド間でパイプを意味します。  例:
+WSL では、これらの実行可能ファイルはネイティブの Linux 実行可能ファイルと同様に処理されます。  これは、Linux パスにディレクトリを追加し、コマンド間でパイプを使用して正常に動作することを意味します。  例 :
 
 ``` BASH
 $ export PATH=$PATH:/mnt/c/Windows/System32
@@ -274,9 +274,9 @@ $ ls -la | findstr.exe foo.txt
 $ cmd.exe /c dir
 ```
 
-Windows バイナリは、ファイル拡張子を含めるし、ファイルの場合も、一致、実行可能します。  などの非-実行可能ファイルのバッチのスクリプトおよびコマンドのような`dir`で実行できる`/mnt/c/Windows/System32/cmd.exe /C`コマンド。
+Windows バイナリには、ファイル拡張子が含まれている必要があります。ファイルの大文字と小文字の区別、および実行可能ファイルです。  バッチスクリプトやコマンド`dir`などを含む非実行可能ファイルは、コマンドを使用して`/mnt/c/Windows/System32/cmd.exe /C`実行できます。
 
-例:
+例 :
 
 ``` BASH
 $ /mnt/c/Windows/System32/cmd.exe /C dir
@@ -285,16 +285,16 @@ $ /mnt/c/Windows/System32/PING.EXE www.microsoft.com
 
 パラメーターは、変更されていない Windows バイナリに渡されます。  
 
-次のコマンドを開く例として、`C:\temp\foo.txt`で`notepad.exe`:
+例として、で`C:\temp\foo.txt` `notepad.exe`は次のコマンドが開きます。
 
 ``` BASH
 $ notepad.exe "C:\temp\foo.txt"
 $ notepad.exe C:\\temp\\foo.txt
 ```
 
-VolFs 上にあるファイルの変更 (ファイルのない`/mnt/<x>`)、Windows のアプリケーションはサポートされていません。  既定では、WSL バイナリ WSL の現在のディレクトリとして、Windows の作業ディレクトリを保持しようは代替インスタンス作成のディレクトリの作業ディレクトリが VolFs にある場合。
+Windows アプリケーションを使用して、volfs ( `/mnt/<x>`下にないファイル) にあるファイルを変更することはできません。  既定では、WSL は Windows バイナリの作業ディレクトリを現在の WSL ディレクトリとして保持しようとしますが、作業ディレクトリが VolFs にある場合はインスタンス作成ディレクトリに戻されます。
 
-たとえば;`bash.exe`が最初に起動される`C:\temp`され、現在の WSL ディレクトリは、ユーザーのホームに変更されます。  ときに`notepad.exe`と呼ばれますが、ユーザーのホーム ディレクトリから WSL に自動的に戻ります`C:\temp`notepad.exe の作業ディレクトリとして。
+例を次に示します。が最初に`C:\temp`起動され、現在の wsl ディレクトリがユーザーのホームに変更されます。 `bash.exe`  ユーザー `notepad.exe`のホームディレクトリからが呼び出されると、wsl は notepad.exe 作業`C:\temp`ディレクトリとして自動的にに戻ります。
 
 ``` BASH
 C:\temp> bash
