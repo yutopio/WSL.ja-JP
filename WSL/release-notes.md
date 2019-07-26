@@ -7,15 +7,49 @@ ms.date: 07/31/2017
 ms.topic: article
 ms.assetid: 36ea641e-4d49-4881-84eb-a9ca85b1cdf4
 ms.custom: seodec18
-ms.openlocfilehash: e2d9d5fc70c173e9b516ab7af01599b623b40b39
-ms.sourcegitcommit: cd239efc5c7c25ffbe5de25b2438d44181a838a9
+ms.openlocfilehash: d2d91db24c12fc674d695ccffc79eb5781a0721d
+ms.sourcegitcommit: be00abbb170aa569e008b804f15949344b378999
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/14/2019
-ms.locfileid: "67042426"
+ms.lasthandoff: 07/25/2019
+ms.locfileid: "68501580"
 ---
 # <a name="release-notes-for-windows-subsystem-for-linux"></a>Windows Subsystem for Linux のリリースノート
 
+
+## <a name="build-18947"></a>ビルド18947
+ビルド18947の一般的な Windows 情報については、 [windows のブログ](https://blogs.windows.com/windowsexperience/2019/07/26/announcing-windows-10-insider-preview-build-18947/)を参照してください。
+
+### <a name="wsl"></a>WSL
+* [WSL2]Localhost: port を使用して、WSL2 のリスニング tcp ソケットにホストからアクセスできるようにします
+* [WSL2]インストール/変換エラーの修正と今後の問題を追跡するための追加の診断 [GH 4105] 
+* [WSL2]Diagnosability WSL2 のネットワークの問題を改善する
+* [WSL2]カーネルバージョンを4.19.55 に更新する
+* [WSL2]Docker に必要な構成オプションを使用してカーネルを更新する [GH 4165]
+* [WSL2]ライトウェイトユーティリティ VM に割り当てられた Cpu の数を、ホストと同じになるように増やします (以前はカーネル構成の CONFIG_NR_CPUS によって8個に制限されていました) [GH 4137]
+* [WSL2]WSL2 ライトウェイト VM 用のスワップファイルを作成する
+* [WSL2]Wsl $ \\ \\ディストリビューションを使用してユーザーのマウントを表示できるようにします (例 sshfs) [GH 4172]\\
+* [WSL2]9p ファイルシステムのパフォーマンスの向上
+* [WSL2]Vhd ACL が無制限に拡張されないようにする [GH 4126]
+* [WSL2]Squashfs と xt_conntrack をサポートするようにカーネル構成を更新する [GH 4107, 4123]
+* [WSL2]Interop の修正。 enabled/etc/wsl.conf オプション [GH 4140]
+* [WSL2]ファイルシステムで EAs がサポートされていない場合は、ENOTSUP を返します。
+* [WSL2]Wsl $ で\\CopyFile hang を\\修正します
+* 既定の umask を0022に切り替え、/etc/wsl.conf にファイルシステムの umask 設定を追加します。
+* シンボリックリンクを適切に解決するために wslpath を修正しました。これは19h1 で低下したました [GH 4078]
+* WSL2 設定を調整\.するための% UserProfile% wslconfig ファイルの導入
+```
+[wsl2]
+kernel=<path>              # An absolute Windows path to a custom Linux kernel.
+memory=<size>              # How much memory to assign to the WSL2 VM.
+processors=<number>        # How many processors to assign to the WSL2 VM.
+swap=<size>                # How much swap space to add to the WSL2 VM. 0 for no swap file.
+swapFile=<path>            # An absolute Windows path to the swap vhd.
+localhostForwarding=<bool> # Boolean specifying if ports bound to wildcard or localhost in the WSL2 VM should be connectable from the host via localhost:port (default true).
+
+# <path> entries must be absolute Windows paths with escaped backslashes, for example C:\\Users\\Ben\\kernel
+# <size> entries must be size followed by unit, for example 8GB or 512MB
+```
 
 ## <a name="build-18917"></a>ビルド18917
 ビルド18917の一般的な Windows 情報については、 [windows のブログ](https://blogs.windows.com/windowsexperience/2019/06/12/announcing-windows-10-insider-preview-build-18917/)を参照してください。
@@ -540,7 +574,7 @@ WSL と Windows アプリケーションは、Unix ソケット経由で相互�
   * fmask: すべての標準ファイルに対して除外するアクセス許可の8進数のマスク。
   * dmask: すべてのディレクトリに対して除外するアクセス許可の8進数のマスク。
 
-  例:
+  以下に例を示します。
   ```
   mount -t drvfs C: /mnt/c -o uid=1000,gid=1000,umask=22,fmask=111
   ```
@@ -549,7 +583,7 @@ WSL と Windows アプリケーションは、Unix ソケット経由で相互�
 
 * では、wsl と`WSLENV`Win32 の間で環境変数がどのように流れるかを構成するために、新しい環境変数が導入されました。
 
-  例:
+  以下に例を示します。
 
   ``` bash
   WSLENV=GOPATH/l:USERPROFILE/pu:DISPLAY
