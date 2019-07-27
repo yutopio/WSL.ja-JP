@@ -9,10 +9,10 @@ ms.topic: article
 ms.assetid: 7afaeacf-435a-4e58-bff0-a9f0d75b8a51
 ms.custom: seodec18
 ms.openlocfilehash: a74f5e3f5879d0af274d2e2b10aaf05e95a97a6f
-ms.sourcegitcommit: e16097a3d863bbda8c4655054f154415cdd7f2f5
+ms.sourcegitcommit: 44da0f435986598e6067e36ddca9369d27064793
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/05/2019
+ms.lasthandoff: 07/26/2019
 ms.locfileid: "67587141"
 ---
 # <a name="wsl-2-faq"></a>WSL 2 に関する FAQ
@@ -33,7 +33,7 @@ WSL 2 は、WSL が現在利用可能なすべての Sku (Windows 10 Home を含
 
 Hyper-v が使用されている場合、一部のサードパーティアプリケーションが動作しないことを意味します。これは、WSL 2 が有効になっている場合、これらのアプリケーションを実行できないことを意味します。 残念なことに、これには VMware と、VirtualBox 6 より前の VirtualBox のバージョンが含まれます (2018 年12月にリリースされた VirtualBox 6.0.0 では、 [Windows ホストでのフォールバック実行コアとして hyper-v がサポートされるようになりました][1])。
 
-この問題を解決するための方法を調査しています。 たとえば、[ハイパーバイザープラットフォーム][2] that third-party virtualization providers can use to make their software compatible with Hyper-V’s. This lets applications use the Hyper-V architecture for their emulation such as [the Google Android Emulator][3]と呼ばれる一連の api を公開しています。 virtualbox 6 以降では、hyper-v と互換性があります。
+この問題を解決するための方法を調査しています。 たとえば、サードパーティの仮想化プロバイダーが Hyper-v のと互換性のあるソフトウェアを作成するために使用できる[ハイパーバイザープラットフォーム][2]と呼ばれる一連の api を公開しています。 これにより、アプリケーションは、 [Google Android Emulator][3]、virtualbox 6、およびその両方が hyper-v と互換性があるように、そのエミュレーションに hyper-v アーキテクチャを使用できるようになります。
 
 ## <a name="can-i-access-the-gpu-in-wsl-2-are-there-plans-to-increase-hardware-support"></a>WSL 2 の GPU にアクセスできますか。 ハードウェアサポートを強化する予定はありますか。
 

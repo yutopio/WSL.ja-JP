@@ -7,18 +7,18 @@ ms.date: 07/31/2017
 ms.topic: article
 ms.assetid: 36ea641e-4d49-4881-84eb-a9ca85b1cdf4
 ms.custom: seodec18
-ms.openlocfilehash: d2d91db24c12fc674d695ccffc79eb5781a0721d
-ms.sourcegitcommit: be00abbb170aa569e008b804f15949344b378999
+ms.openlocfilehash: c262ddb359507c1654f0089050bfd15ec16402f9
+ms.sourcegitcommit: 44da0f435986598e6067e36ddca9369d27064793
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/25/2019
-ms.locfileid: "68501580"
+ms.lasthandoff: 07/26/2019
+ms.locfileid: "68523783"
 ---
 # <a name="release-notes-for-windows-subsystem-for-linux"></a>Windows Subsystem for Linux のリリースノート
 
 
-## <a name="build-18947"></a>ビルド18947
-ビルド18947の一般的な Windows 情報については、 [windows のブログ](https://blogs.windows.com/windowsexperience/2019/07/26/announcing-windows-10-insider-preview-build-18947/)を参照してください。
+## <a name="build-18945"></a>ビルド18945
+ビルド18945の一般的な Windows 情報については、 [windows のブログ](https://blogs.windows.com/windowsexperience/2019/07/26/announcing-windows-10-insider-preview-build-18945/)を参照してください。
 
 ### <a name="wsl"></a>WSL
 * [WSL2]Localhost: port を使用して、WSL2 のリスニング tcp ソケットにホストからアクセスできるようにします
@@ -583,7 +583,7 @@ WSL と Windows アプリケーションは、Unix ソケット経由で相互�
 
 * では、wsl と`WSLENV`Win32 の間で環境変数がどのように流れるかを構成するために、新しい環境変数が導入されました。
 
-  以下に例を示します。
+  例:
 
   ``` bash
   WSLENV=GOPATH/l:USERPROFILE/pu:DISPLAY
