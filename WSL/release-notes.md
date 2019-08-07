@@ -7,37 +7,37 @@ ms.date: 07/31/2017
 ms.topic: article
 ms.assetid: 36ea641e-4d49-4881-84eb-a9ca85b1cdf4
 ms.custom: seodec18
-ms.openlocfilehash: c262ddb359507c1654f0089050bfd15ec16402f9
-ms.sourcegitcommit: 44da0f435986598e6067e36ddca9369d27064793
+ms.openlocfilehash: b03d837e0ab3a371fd676e37b5c65a173824f84c
+ms.sourcegitcommit: 9175a28f04573f25338358faf61d73b1a5d1ade6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/26/2019
-ms.locfileid: "68523783"
+ms.lasthandoff: 08/06/2019
+ms.locfileid: "68832116"
 ---
-# <a name="release-notes-for-windows-subsystem-for-linux"></a><span data-ttu-id="3c169-105">Windows Subsystem for Linux のリリースノート</span><span class="sxs-lookup"><span data-stu-id="3c169-105">Release Notes for Windows Subsystem for Linux</span></span>
+# <a name="release-notes-for-windows-subsystem-for-linux"></a><span data-ttu-id="dea41-105">Windows Subsystem for Linux のリリースノート</span><span class="sxs-lookup"><span data-stu-id="dea41-105">Release Notes for Windows Subsystem for Linux</span></span>
 
 
-## <a name="build-18945"></a><span data-ttu-id="3c169-106">ビルド18945</span><span class="sxs-lookup"><span data-stu-id="3c169-106">Build 18945</span></span>
-<span data-ttu-id="3c169-107">ビルド18945の一般的な Windows 情報については、 [windows のブログ](https://blogs.windows.com/windowsexperience/2019/07/26/announcing-windows-10-insider-preview-build-18945/)を参照してください。</span><span class="sxs-lookup"><span data-stu-id="3c169-107">For general Windows information on build 18945 visit the [Windows blog](https://blogs.windows.com/windowsexperience/2019/07/26/announcing-windows-10-insider-preview-build-18945/).</span></span>
+## <a name="build-18945"></a><span data-ttu-id="dea41-106">ビルド18945</span><span class="sxs-lookup"><span data-stu-id="dea41-106">Build 18945</span></span>
+<span data-ttu-id="dea41-107">ビルド18945の一般的な Windows 情報については、 [windows のブログ](https://blogs.windows.com/windowsexperience/2019/07/26/announcing-windows-10-insider-preview-build-18945/)を参照してください。</span><span class="sxs-lookup"><span data-stu-id="dea41-107">For general Windows information on build 18945 visit the [Windows blog](https://blogs.windows.com/windowsexperience/2019/07/26/announcing-windows-10-insider-preview-build-18945/).</span></span>
 
-### <a name="wsl"></a><span data-ttu-id="3c169-108">WSL</span><span class="sxs-lookup"><span data-stu-id="3c169-108">WSL</span></span>
-* <span data-ttu-id="3c169-109">[WSL2]Localhost: port を使用して、WSL2 のリスニング tcp ソケットにホストからアクセスできるようにします</span><span class="sxs-lookup"><span data-stu-id="3c169-109">[WSL2] Allow listening tcp sockets in WSL2 to be accessible from the host by using localhost:port</span></span>
-* <span data-ttu-id="3c169-110">[WSL2]インストール/変換エラーの修正と今後の問題を追跡するための追加の診断 [GH 4105]</span><span class="sxs-lookup"><span data-stu-id="3c169-110">[WSL2] Fixes for install / conversion failures and additional diagnostics to track down future issues [GH 4105]</span></span> 
-* <span data-ttu-id="3c169-111">[WSL2]Diagnosability WSL2 のネットワークの問題を改善する</span><span class="sxs-lookup"><span data-stu-id="3c169-111">[WSL2] Improve diagnosability of WSL2 network issues</span></span>
-* <span data-ttu-id="3c169-112">[WSL2]カーネルバージョンを4.19.55 に更新する</span><span class="sxs-lookup"><span data-stu-id="3c169-112">[WSL2] Update kernel version to 4.19.55</span></span>
-* <span data-ttu-id="3c169-113">[WSL2]Docker に必要な構成オプションを使用してカーネルを更新する [GH 4165]</span><span class="sxs-lookup"><span data-stu-id="3c169-113">[WSL2] Update kernel with config options required for docker [GH 4165]</span></span>
-* <span data-ttu-id="3c169-114">[WSL2]ライトウェイトユーティリティ VM に割り当てられた Cpu の数を、ホストと同じになるように増やします (以前はカーネル構成の CONFIG_NR_CPUS によって8個に制限されていました) [GH 4137]</span><span class="sxs-lookup"><span data-stu-id="3c169-114">[WSL2] Increase the number of CPUs assigned to the lightweight utility VM to be the same as the host (was previously capped at 8 by CONFIG_NR_CPUS in the kernel config) [GH 4137]</span></span>
-* <span data-ttu-id="3c169-115">[WSL2]WSL2 ライトウェイト VM 用のスワップファイルを作成する</span><span class="sxs-lookup"><span data-stu-id="3c169-115">[WSL2] Create a swap file for the WSL2 lightweight VM</span></span>
-* <span data-ttu-id="3c169-116">[WSL2]Wsl $ \\ \\ディストリビューションを使用してユーザーのマウントを表示できるようにします (例 sshfs) [GH 4172]\\</span><span class="sxs-lookup"><span data-stu-id="3c169-116">[WSL2] Allow user mounts to be visible via \\\\wsl$\\distro (for example sshfs) [GH 4172]</span></span>
-* <span data-ttu-id="3c169-117">[WSL2]9p ファイルシステムのパフォーマンスの向上</span><span class="sxs-lookup"><span data-stu-id="3c169-117">[WSL2] Improve 9p filesystem performance</span></span>
-* <span data-ttu-id="3c169-118">[WSL2]Vhd ACL が無制限に拡張されないようにする [GH 4126]</span><span class="sxs-lookup"><span data-stu-id="3c169-118">[WSL2] Ensure vhd ACL does not grow unbounded [GH 4126]</span></span>
-* <span data-ttu-id="3c169-119">[WSL2]Squashfs と xt_conntrack をサポートするようにカーネル構成を更新する [GH 4107, 4123]</span><span class="sxs-lookup"><span data-stu-id="3c169-119">[WSL2] Update kernel config to support squashfs and xt_conntrack [GH 4107, 4123]</span></span>
-* <span data-ttu-id="3c169-120">[WSL2]Interop の修正。 enabled/etc/wsl.conf オプション [GH 4140]</span><span class="sxs-lookup"><span data-stu-id="3c169-120">[WSL2] Fix for interop.enabled /etc/wsl.conf option [GH 4140]</span></span>
-* <span data-ttu-id="3c169-121">[WSL2]ファイルシステムで EAs がサポートされていない場合は、ENOTSUP を返します。</span><span class="sxs-lookup"><span data-stu-id="3c169-121">[WSL2] Return ENOTSUP if the file system does not support EAs</span></span>
-* <span data-ttu-id="3c169-122">[WSL2]Wsl $ で\\CopyFile hang を\\修正します</span><span class="sxs-lookup"><span data-stu-id="3c169-122">[WSL2] Fix CopyFile hang with \\\\wsl$</span></span>
-* <span data-ttu-id="3c169-123">既定の umask を0022に切り替え、/etc/wsl.conf にファイルシステムの umask 設定を追加します。</span><span class="sxs-lookup"><span data-stu-id="3c169-123">Switch default umask to 0022 and add filesystem.umask setting to /etc/wsl.conf</span></span>
-* <span data-ttu-id="3c169-124">シンボリックリンクを適切に解決するために wslpath を修正しました。これは19h1 で低下したました [GH 4078]</span><span class="sxs-lookup"><span data-stu-id="3c169-124">Fix wslpath to properly resolve symlinks, this was regressed in 19h1 [GH 4078]</span></span>
-* <span data-ttu-id="3c169-125">WSL2 設定を調整\.するための% UserProfile% wslconfig ファイルの導入</span><span class="sxs-lookup"><span data-stu-id="3c169-125">Introduce %UserProfile%\.wslconfig file for tweaking WSL2 settings</span></span>
+### <a name="wsl"></a><span data-ttu-id="dea41-108">WSL</span><span class="sxs-lookup"><span data-stu-id="dea41-108">WSL</span></span>
+* <span data-ttu-id="dea41-109">[WSL2]Localhost: port を使用して、WSL2 のリスニング tcp ソケットにホストからアクセスできるようにします</span><span class="sxs-lookup"><span data-stu-id="dea41-109">[WSL2] Allow listening tcp sockets in WSL2 to be accessible from the host by using localhost:port</span></span>
+* <span data-ttu-id="dea41-110">[WSL2]インストール/変換エラーの修正と今後の問題を追跡するための追加の診断 [GH 4105]</span><span class="sxs-lookup"><span data-stu-id="dea41-110">[WSL2] Fixes for install / conversion failures and additional diagnostics to track down future issues [GH 4105]</span></span> 
+* <span data-ttu-id="dea41-111">[WSL2]Diagnosability WSL2 のネットワークの問題を改善する</span><span class="sxs-lookup"><span data-stu-id="dea41-111">[WSL2] Improve diagnosability of WSL2 network issues</span></span>
+* <span data-ttu-id="dea41-112">[WSL2]カーネルバージョンを4.19.55 に更新する</span><span class="sxs-lookup"><span data-stu-id="dea41-112">[WSL2] Update kernel version to 4.19.55</span></span>
+* <span data-ttu-id="dea41-113">[WSL2]Docker に必要な構成オプションを使用してカーネルを更新する [GH 4165]</span><span class="sxs-lookup"><span data-stu-id="dea41-113">[WSL2] Update kernel with config options required for docker [GH 4165]</span></span>
+* <span data-ttu-id="dea41-114">[WSL2]ライトウェイトユーティリティ VM に割り当てられた Cpu の数を、ホストと同じになるように増やします (以前はカーネル構成の CONFIG_NR_CPUS によって8個に制限されていました) [GH 4137]</span><span class="sxs-lookup"><span data-stu-id="dea41-114">[WSL2] Increase the number of CPUs assigned to the lightweight utility VM to be the same as the host (was previously capped at 8 by CONFIG_NR_CPUS in the kernel config) [GH 4137]</span></span>
+* <span data-ttu-id="dea41-115">[WSL2]WSL2 ライトウェイト VM 用のスワップファイルを作成する</span><span class="sxs-lookup"><span data-stu-id="dea41-115">[WSL2] Create a swap file for the WSL2 lightweight VM</span></span>
+* <span data-ttu-id="dea41-116">[WSL2]Wsl $ \\ \\ディストリビューションを使用してユーザーのマウントを表示できるようにします (例 sshfs) [GH 4172]\\</span><span class="sxs-lookup"><span data-stu-id="dea41-116">[WSL2] Allow user mounts to be visible via \\\\wsl$\\distro (for example sshfs) [GH 4172]</span></span>
+* <span data-ttu-id="dea41-117">[WSL2]9p ファイルシステムのパフォーマンスの向上</span><span class="sxs-lookup"><span data-stu-id="dea41-117">[WSL2] Improve 9p filesystem performance</span></span>
+* <span data-ttu-id="dea41-118">[WSL2]Vhd ACL が無制限に拡張されないようにする [GH 4126]</span><span class="sxs-lookup"><span data-stu-id="dea41-118">[WSL2] Ensure vhd ACL does not grow unbounded [GH 4126]</span></span>
+* <span data-ttu-id="dea41-119">[WSL2]Squashfs と xt_conntrack をサポートするようにカーネル構成を更新する [GH 4107, 4123]</span><span class="sxs-lookup"><span data-stu-id="dea41-119">[WSL2] Update kernel config to support squashfs and xt_conntrack [GH 4107, 4123]</span></span>
+* <span data-ttu-id="dea41-120">[WSL2]Interop の修正。 enabled/etc/wsl.conf オプション [GH 4140]</span><span class="sxs-lookup"><span data-stu-id="dea41-120">[WSL2] Fix for interop.enabled /etc/wsl.conf option [GH 4140]</span></span>
+* <span data-ttu-id="dea41-121">[WSL2]ファイルシステムで EAs がサポートされていない場合は、ENOTSUP を返します。</span><span class="sxs-lookup"><span data-stu-id="dea41-121">[WSL2] Return ENOTSUP if the file system does not support EAs</span></span>
+* <span data-ttu-id="dea41-122">[WSL2]Wsl $ で\\CopyFile hang を\\修正します</span><span class="sxs-lookup"><span data-stu-id="dea41-122">[WSL2] Fix CopyFile hang with \\\\wsl$</span></span>
+* <span data-ttu-id="dea41-123">既定の umask を0022に切り替え、/etc/wsl.conf にファイルシステムの umask 設定を追加します。</span><span class="sxs-lookup"><span data-stu-id="dea41-123">Switch default umask to 0022 and add filesystem.umask setting to /etc/wsl.conf</span></span>
+* <span data-ttu-id="dea41-124">シンボリックリンクを適切に解決するために wslpath を修正しました。これは19h1 で低下したました [GH 4078]</span><span class="sxs-lookup"><span data-stu-id="dea41-124">Fix wslpath to properly resolve symlinks, this was regressed in 19h1 [GH 4078]</span></span>
+* <span data-ttu-id="dea41-125">WSL2 設定を調整\\するための% UserProfile%. wslconfig ファイルの導入</span><span class="sxs-lookup"><span data-stu-id="dea41-125">Introduce %UserProfile%\\.wslconfig file for tweaking WSL2 settings</span></span>
 ```
 [wsl2]
 kernel=<path>              # An absolute Windows path to a custom Linux kernel.
@@ -51,58 +51,58 @@ localhostForwarding=<bool> # Boolean specifying if ports bound to wildcard or lo
 # <size> entries must be size followed by unit, for example 8GB or 512MB
 ```
 
-## <a name="build-18917"></a><span data-ttu-id="3c169-126">ビルド18917</span><span class="sxs-lookup"><span data-stu-id="3c169-126">Build 18917</span></span>
-<span data-ttu-id="3c169-127">ビルド18917の一般的な Windows 情報については、 [windows のブログ](https://blogs.windows.com/windowsexperience/2019/06/12/announcing-windows-10-insider-preview-build-18917/)を参照してください。</span><span class="sxs-lookup"><span data-stu-id="3c169-127">For general Windows information on build 18917 visit the [Windows blog](https://blogs.windows.com/windowsexperience/2019/06/12/announcing-windows-10-insider-preview-build-18917/).</span></span>
+## <a name="build-18917"></a><span data-ttu-id="dea41-126">ビルド18917</span><span class="sxs-lookup"><span data-stu-id="dea41-126">Build 18917</span></span>
+<span data-ttu-id="dea41-127">ビルド18917の一般的な Windows 情報については、 [windows のブログ](https://blogs.windows.com/windowsexperience/2019/06/12/announcing-windows-10-insider-preview-build-18917/)を参照してください。</span><span class="sxs-lookup"><span data-stu-id="dea41-127">For general Windows information on build 18917 visit the [Windows blog](https://blogs.windows.com/windowsexperience/2019/06/12/announcing-windows-10-insider-preview-build-18917/).</span></span>
 
-### <a name="wsl"></a><span data-ttu-id="3c169-128">WSL</span><span class="sxs-lookup"><span data-stu-id="3c169-128">WSL</span></span>
-* <span data-ttu-id="3c169-129">WSL 2 が利用可能になりました。</span><span class="sxs-lookup"><span data-stu-id="3c169-129">WSL 2 is now available!</span></span> <span data-ttu-id="3c169-130">詳細については、[ブログ](https://devblogs.microsoft.com/commandline/wsl-2-is-now-available-in-windows-insiders/)を参照してください。</span><span class="sxs-lookup"><span data-stu-id="3c169-130">Please see [blog](https://devblogs.microsoft.com/commandline/wsl-2-is-now-available-in-windows-insiders/) for more details.</span></span>
-* <span data-ttu-id="3c169-131">シンボリックリンクを使用した Windows プロセスの起動が正常に機能しない回帰を修正する [GH 3999]</span><span class="sxs-lookup"><span data-stu-id="3c169-131">Fix a regression where launching Windows processes via symlinks did not work correctly [GH 3999]</span></span>
-* <span data-ttu-id="3c169-132">Wsl--list--verbose, wsl--list--quiet, および wsl .exe--import--version オプションを wsl に追加します。</span><span class="sxs-lookup"><span data-stu-id="3c169-132">Add wsl.exe --list --verbose, wsl.exe --list --quiet, and wsl.exe --import --version options to wsl.exe</span></span>
-* <span data-ttu-id="3c169-133">Wsl--shutdown オプションを追加します。</span><span class="sxs-lookup"><span data-stu-id="3c169-133">Add wsl.exe --shutdown option</span></span>
-* <span data-ttu-id="3c169-134">プラン 9:書き込み用のディレクトリを開くことを成功させる</span><span class="sxs-lookup"><span data-stu-id="3c169-134">Plan 9: Allow opening a directory for write to succeed</span></span>
+### <a name="wsl"></a><span data-ttu-id="dea41-128">WSL</span><span class="sxs-lookup"><span data-stu-id="dea41-128">WSL</span></span>
+* <span data-ttu-id="dea41-129">WSL 2 が利用可能になりました。</span><span class="sxs-lookup"><span data-stu-id="dea41-129">WSL 2 is now available!</span></span> <span data-ttu-id="dea41-130">詳細については、[ブログ](https://devblogs.microsoft.com/commandline/wsl-2-is-now-available-in-windows-insiders/)を参照してください。</span><span class="sxs-lookup"><span data-stu-id="dea41-130">Please see [blog](https://devblogs.microsoft.com/commandline/wsl-2-is-now-available-in-windows-insiders/) for more details.</span></span>
+* <span data-ttu-id="dea41-131">シンボリックリンクを使用した Windows プロセスの起動が正常に機能しない回帰を修正する [GH 3999]</span><span class="sxs-lookup"><span data-stu-id="dea41-131">Fix a regression where launching Windows processes via symlinks did not work correctly [GH 3999]</span></span>
+* <span data-ttu-id="dea41-132">Wsl--list--verbose, wsl--list--quiet, および wsl .exe--import--version オプションを wsl に追加します。</span><span class="sxs-lookup"><span data-stu-id="dea41-132">Add wsl.exe --list --verbose, wsl.exe --list --quiet, and wsl.exe --import --version options to wsl.exe</span></span>
+* <span data-ttu-id="dea41-133">Wsl--shutdown オプションを追加します。</span><span class="sxs-lookup"><span data-stu-id="dea41-133">Add wsl.exe --shutdown option</span></span>
+* <span data-ttu-id="dea41-134">プラン 9:書き込み用のディレクトリを開くことを成功させる</span><span class="sxs-lookup"><span data-stu-id="dea41-134">Plan 9: Allow opening a directory for write to succeed</span></span>
 
-## <a name="build-18890"></a><span data-ttu-id="3c169-135">ビルド18890</span><span class="sxs-lookup"><span data-stu-id="3c169-135">Build 18890</span></span>
-<span data-ttu-id="3c169-136">ビルド18890の一般的な Windows 情報については、 [windows のブログ](https://blogs.windows.com/windowsexperience/2019/05/01/announcing-windows-10-insider-preview-build-18890/)を参照してください。</span><span class="sxs-lookup"><span data-stu-id="3c169-136">For general Windows information on build 18890 visit the [Windows blog](https://blogs.windows.com/windowsexperience/2019/05/01/announcing-windows-10-insider-preview-build-18890/).</span></span>
+## <a name="build-18890"></a><span data-ttu-id="dea41-135">ビルド18890</span><span class="sxs-lookup"><span data-stu-id="dea41-135">Build 18890</span></span>
+<span data-ttu-id="dea41-136">ビルド18890の一般的な Windows 情報については、 [windows のブログ](https://blogs.windows.com/windowsexperience/2019/05/01/announcing-windows-10-insider-preview-build-18890/)を参照してください。</span><span class="sxs-lookup"><span data-stu-id="dea41-136">For general Windows information on build 18890 visit the [Windows blog](https://blogs.windows.com/windowsexperience/2019/05/01/announcing-windows-10-insider-preview-build-18890/).</span></span>
 
-### <a name="wsl"></a><span data-ttu-id="3c169-137">WSL</span><span class="sxs-lookup"><span data-stu-id="3c169-137">WSL</span></span>
-* <span data-ttu-id="3c169-138">非ブロッキングソケットリーク [GH 2913]</span><span class="sxs-lookup"><span data-stu-id="3c169-138">Non-blocking socket leak [GH 2913]</span></span>
-* <span data-ttu-id="3c169-139">ターミナルへの EOF 入力が後続の読み取りをブロックする可能性がある [GH 3421]</span><span class="sxs-lookup"><span data-stu-id="3c169-139">EOF input to terminal can block subsequent reads [GH 3421]</span></span>
-* <span data-ttu-id="3c169-140">Resolv.conf を参照するようにを更新する (GH 3928 で説明)</span><span class="sxs-lookup"><span data-stu-id="3c169-140">Update resolv.conf header to refer to wsl.conf [discussed in GH 3928]</span></span>
-* <span data-ttu-id="3c169-141">Epoll delete コードでのデッドロック [GH 3922]</span><span class="sxs-lookup"><span data-stu-id="3c169-141">Deadlock in epoll delete code [GH 3922]</span></span>
-* <span data-ttu-id="3c169-142">--Import および– export の引数内のスペースを処理する [GH 3932]</span><span class="sxs-lookup"><span data-stu-id="3c169-142">Handle spaces in arguments to --import and –export [GH 3932]</span></span>
-* <span data-ttu-id="3c169-143">Mmap ファイルの拡張が正しく機能しない [GH 3939]</span><span class="sxs-lookup"><span data-stu-id="3c169-143">Extending mmap’d files does not work properly [GH 3939]</span></span>
-* <span data-ttu-id="3c169-144">ARM64 \\wsl $ アクセスが正常に動作しない問題を修正します</span><span class="sxs-lookup"><span data-stu-id="3c169-144">Fix issue with ARM64 \\wsl$ access not working properly</span></span>
-* <span data-ttu-id="3c169-145">Wsl のより適切な既定のアイコンを追加する</span><span class="sxs-lookup"><span data-stu-id="3c169-145">Add better default icon for wsl.exe</span></span>
+### <a name="wsl"></a><span data-ttu-id="dea41-137">WSL</span><span class="sxs-lookup"><span data-stu-id="dea41-137">WSL</span></span>
+* <span data-ttu-id="dea41-138">非ブロッキングソケットリーク [GH 2913]</span><span class="sxs-lookup"><span data-stu-id="dea41-138">Non-blocking socket leak [GH 2913]</span></span>
+* <span data-ttu-id="dea41-139">ターミナルへの EOF 入力が後続の読み取りをブロックする可能性がある [GH 3421]</span><span class="sxs-lookup"><span data-stu-id="dea41-139">EOF input to terminal can block subsequent reads [GH 3421]</span></span>
+* <span data-ttu-id="dea41-140">Resolv.conf を参照するようにを更新する (GH 3928 で説明)</span><span class="sxs-lookup"><span data-stu-id="dea41-140">Update resolv.conf header to refer to wsl.conf [discussed in GH 3928]</span></span>
+* <span data-ttu-id="dea41-141">Epoll delete コードでのデッドロック [GH 3922]</span><span class="sxs-lookup"><span data-stu-id="dea41-141">Deadlock in epoll delete code [GH 3922]</span></span>
+* <span data-ttu-id="dea41-142">--Import および– export の引数内のスペースを処理する [GH 3932]</span><span class="sxs-lookup"><span data-stu-id="dea41-142">Handle spaces in arguments to --import and –export [GH 3932]</span></span>
+* <span data-ttu-id="dea41-143">Mmap ファイルの拡張が正しく機能しない [GH 3939]</span><span class="sxs-lookup"><span data-stu-id="dea41-143">Extending mmap’d files does not work properly [GH 3939]</span></span>
+* <span data-ttu-id="dea41-144">ARM64 \\wsl $ アクセスが正常に動作しない問題を修正します</span><span class="sxs-lookup"><span data-stu-id="dea41-144">Fix issue with ARM64 \\wsl$ access not working properly</span></span>
+* <span data-ttu-id="dea41-145">Wsl のより適切な既定のアイコンを追加する</span><span class="sxs-lookup"><span data-stu-id="dea41-145">Add better default icon for wsl.exe</span></span>
 
-## <a name="build-18342"></a><span data-ttu-id="3c169-146">ビルド18342</span><span class="sxs-lookup"><span data-stu-id="3c169-146">Build 18342</span></span>
-<span data-ttu-id="3c169-147">ビルド18342の一般的な Windows 情報については、 [windows のブログ](https://blogs.windows.com/windowsexperience/2019/02/20/announcing-windows-10-insider-preview-build-18342/)を参照してください。</span><span class="sxs-lookup"><span data-stu-id="3c169-147">For general Windows information on build 18342 visit the [Windows blog](https://blogs.windows.com/windowsexperience/2019/02/20/announcing-windows-10-insider-preview-build-18342/).</span></span>
+## <a name="build-18342"></a><span data-ttu-id="dea41-146">ビルド18342</span><span class="sxs-lookup"><span data-stu-id="dea41-146">Build 18342</span></span>
+<span data-ttu-id="dea41-147">ビルド18342の一般的な Windows 情報については、 [windows のブログ](https://blogs.windows.com/windowsexperience/2019/02/20/announcing-windows-10-insider-preview-build-18342/)を参照してください。</span><span class="sxs-lookup"><span data-stu-id="dea41-147">For general Windows information on build 18342 visit the [Windows blog](https://blogs.windows.com/windowsexperience/2019/02/20/announcing-windows-10-insider-preview-build-18342/).</span></span>
 
-### <a name="wsl"></a><span data-ttu-id="3c169-148">WSL</span><span class="sxs-lookup"><span data-stu-id="3c169-148">WSL</span></span>
-* <span data-ttu-id="3c169-149">Windows から WSL ディストリビューションの Linux ファイルにユーザーがアクセスできる機能が追加されました。</span><span class="sxs-lookup"><span data-stu-id="3c169-149">We've added the ability for users to access Linux files in a WSL distro from Windows.</span></span> <span data-ttu-id="3c169-150">これらのファイルには、コマンドラインを使用してアクセスできます。また、ファイルエクスプローラーや VSCode などの Windows アプリもこれらのファイルと対話できます。</span><span class="sxs-lookup"><span data-stu-id="3c169-150">These files can be accessed through the command line, and also Windows apps, like file explorer, VSCode, etc. can interact with these files.</span></span> <span data-ttu-id="3c169-151">\\Wsl $ \\ \\ \\< distro_name > に移動してファイルにアクセスするか、wsl $ に移動して実行中のディストリビューションの一覧を表示します。\\</span><span class="sxs-lookup"><span data-stu-id="3c169-151">Access your files by navigating to \\\\wsl$\\<distro_name>, or see a list of running distributions by navigating to \\\\wsl$</span></span>
-* <span data-ttu-id="3c169-152">CPU 情報タグを追加し、Cpus_allowed [リスト] の値を修正する [GH 2234]</span><span class="sxs-lookup"><span data-stu-id="3c169-152">Add additional CPU info tags and fix Cpus_allowed[_list] values [GH 2234]</span></span>
-* <span data-ttu-id="3c169-153">リーダー以外のスレッドからの exec のサポート [GH 3800]</span><span class="sxs-lookup"><span data-stu-id="3c169-153">Support exec from non-leader thread [GH 3800]</span></span>
-* <span data-ttu-id="3c169-154">構成の更新エラーを致命的でないものとして扱う [GH 3785]</span><span class="sxs-lookup"><span data-stu-id="3c169-154">Treat configuration update failures as non-fatal [GH 3785]</span></span>
-* <span data-ttu-id="3c169-155">オフセットを正しく処理するように binfmt を更新する [GH 3768]</span><span class="sxs-lookup"><span data-stu-id="3c169-155">Update binfmt to properly handle offsets [GH 3768]</span></span>
-* <span data-ttu-id="3c169-156">プラン9のネットワークドライブのマッピングを有効にする [GH 3854]</span><span class="sxs-lookup"><span data-stu-id="3c169-156">Enable mapping network drives for Plan 9 [GH 3854]</span></span>
-* <span data-ttu-id="3c169-157">Windows > Linux および Linux をサポートする-bind マウント用の Windows パス変換 ></span><span class="sxs-lookup"><span data-stu-id="3c169-157">Support Windows -> Linux and Linux -> Windows path translation for bind mounts</span></span>
-* <span data-ttu-id="3c169-158">読み取り専用で開かれたファイルのマッピングの読み取り専用セクションを作成する</span><span class="sxs-lookup"><span data-stu-id="3c169-158">Create read-only sections for mappings on files opened read-only</span></span>
+### <a name="wsl"></a><span data-ttu-id="dea41-148">WSL</span><span class="sxs-lookup"><span data-stu-id="dea41-148">WSL</span></span>
+* <span data-ttu-id="dea41-149">Windows から WSL ディストリビューションの Linux ファイルにユーザーがアクセスできる機能が追加されました。</span><span class="sxs-lookup"><span data-stu-id="dea41-149">We've added the ability for users to access Linux files in a WSL distro from Windows.</span></span> <span data-ttu-id="dea41-150">これらのファイルには、コマンドラインを使用してアクセスできます。また、ファイルエクスプローラーや VSCode などの Windows アプリもこれらのファイルと対話できます。</span><span class="sxs-lookup"><span data-stu-id="dea41-150">These files can be accessed through the command line, and also Windows apps, like file explorer, VSCode, etc. can interact with these files.</span></span> <span data-ttu-id="dea41-151">\\Wsl $ \\ \\ \\< distro_name > に移動してファイルにアクセスするか、wsl $ に移動して実行中のディストリビューションの一覧を表示します。\\</span><span class="sxs-lookup"><span data-stu-id="dea41-151">Access your files by navigating to \\\\wsl$\\<distro_name>, or see a list of running distributions by navigating to \\\\wsl$</span></span>
+* <span data-ttu-id="dea41-152">CPU 情報タグを追加し、Cpus_allowed [リスト] の値を修正する [GH 2234]</span><span class="sxs-lookup"><span data-stu-id="dea41-152">Add additional CPU info tags and fix Cpus_allowed[_list] values [GH 2234]</span></span>
+* <span data-ttu-id="dea41-153">リーダー以外のスレッドからの exec のサポート [GH 3800]</span><span class="sxs-lookup"><span data-stu-id="dea41-153">Support exec from non-leader thread [GH 3800]</span></span>
+* <span data-ttu-id="dea41-154">構成の更新エラーを致命的でないものとして扱う [GH 3785]</span><span class="sxs-lookup"><span data-stu-id="dea41-154">Treat configuration update failures as non-fatal [GH 3785]</span></span>
+* <span data-ttu-id="dea41-155">オフセットを正しく処理するように binfmt を更新する [GH 3768]</span><span class="sxs-lookup"><span data-stu-id="dea41-155">Update binfmt to properly handle offsets [GH 3768]</span></span>
+* <span data-ttu-id="dea41-156">プラン9のネットワークドライブのマッピングを有効にする [GH 3854]</span><span class="sxs-lookup"><span data-stu-id="dea41-156">Enable mapping network drives for Plan 9 [GH 3854]</span></span>
+* <span data-ttu-id="dea41-157">Windows > Linux および Linux をサポートする-bind マウント用の Windows パス変換 ></span><span class="sxs-lookup"><span data-stu-id="dea41-157">Support Windows -> Linux and Linux -> Windows path translation for bind mounts</span></span>
+* <span data-ttu-id="dea41-158">読み取り専用で開かれたファイルのマッピングの読み取り専用セクションを作成する</span><span class="sxs-lookup"><span data-stu-id="dea41-158">Create read-only sections for mappings on files opened read-only</span></span>
 
-## <a name="build-18334"></a><span data-ttu-id="3c169-159">ビルド18334</span><span class="sxs-lookup"><span data-stu-id="3c169-159">Build 18334</span></span>
-<span data-ttu-id="3c169-160">ビルド18334の一般的な Windows 情報については、 [windows のブログ](https://blogs.windows.com/windowsexperience/2019/02/08/announcing-windows-10-insider-preview-build-18334/)を参照してください。</span><span class="sxs-lookup"><span data-stu-id="3c169-160">For general Windows information on build 18334 visit the [Windows blog](https://blogs.windows.com/windowsexperience/2019/02/08/announcing-windows-10-insider-preview-build-18334/).</span></span>
+## <a name="build-18334"></a><span data-ttu-id="dea41-159">ビルド18334</span><span class="sxs-lookup"><span data-stu-id="dea41-159">Build 18334</span></span>
+<span data-ttu-id="dea41-160">ビルド18334の一般的な Windows 情報については、 [windows のブログ](https://blogs.windows.com/windowsexperience/2019/02/08/announcing-windows-10-insider-preview-build-18334/)を参照してください。</span><span class="sxs-lookup"><span data-stu-id="dea41-160">For general Windows information on build 18334 visit the [Windows blog](https://blogs.windows.com/windowsexperience/2019/02/08/announcing-windows-10-insider-preview-build-18334/).</span></span>
 
-### <a name="wsl"></a><span data-ttu-id="3c169-161">WSL</span><span class="sxs-lookup"><span data-stu-id="3c169-161">WSL</span></span>
-* <span data-ttu-id="3c169-162">Windows タイムゾーンを Linux タイムゾーンにマップする方法の設計 [GH 3747]</span><span class="sxs-lookup"><span data-stu-id="3c169-162">Redesign the way that Windows time zone is mapped to a  Linux time zone [GH 3747]</span></span>
-* <span data-ttu-id="3c169-163">メモリリークを修正し、新しい文字列変換関数を追加する [GH 3746]</span><span class="sxs-lookup"><span data-stu-id="3c169-163">Fix memory leaks and add new string translation functions [GH 3746]</span></span>
-* <span data-ttu-id="3c169-164">スレッドのない threadgroup の SIGCONT は、no op [GH 3741]</span><span class="sxs-lookup"><span data-stu-id="3c169-164">SIGCONT on a threadgroup with no threads is a no-op [GH 3741]</span></span> 
-* <span data-ttu-id="3c169-165">/Proc/self/fd にソケットと epoll ファイル記述子を正しく表示する</span><span class="sxs-lookup"><span data-stu-id="3c169-165">Correctly display socket and epoll file descriptors in /proc/self/fd</span></span>
+### <a name="wsl"></a><span data-ttu-id="dea41-161">WSL</span><span class="sxs-lookup"><span data-stu-id="dea41-161">WSL</span></span>
+* <span data-ttu-id="dea41-162">Windows タイムゾーンを Linux タイムゾーンにマップする方法の設計 [GH 3747]</span><span class="sxs-lookup"><span data-stu-id="dea41-162">Redesign the way that Windows time zone is mapped to a  Linux time zone [GH 3747]</span></span>
+* <span data-ttu-id="dea41-163">メモリリークを修正し、新しい文字列変換関数を追加する [GH 3746]</span><span class="sxs-lookup"><span data-stu-id="dea41-163">Fix memory leaks and add new string translation functions [GH 3746]</span></span>
+* <span data-ttu-id="dea41-164">スレッドのない threadgroup の SIGCONT は、no op [GH 3741]</span><span class="sxs-lookup"><span data-stu-id="dea41-164">SIGCONT on a threadgroup with no threads is a no-op [GH 3741]</span></span> 
+* <span data-ttu-id="dea41-165">/Proc/self/fd にソケットと epoll ファイル記述子を正しく表示する</span><span class="sxs-lookup"><span data-stu-id="dea41-165">Correctly display socket and epoll file descriptors in /proc/self/fd</span></span>
 
-## <a name="build-18305"></a><span data-ttu-id="3c169-166">ビルド18305</span><span class="sxs-lookup"><span data-stu-id="3c169-166">Build 18305</span></span>
-<span data-ttu-id="3c169-167">ビルド18305の一般的な Windows 情報については、 [windows のブログ](https://blogs.windows.com/windowsexperience/2018/12/19/announcing-windows-10-insider-preview-build-18305/)を参照してください。</span><span class="sxs-lookup"><span data-stu-id="3c169-167">For general Windows information on build 18305 visit the [Windows blog](https://blogs.windows.com/windowsexperience/2018/12/19/announcing-windows-10-insider-preview-build-18305/).</span></span>
+## <a name="build-18305"></a><span data-ttu-id="dea41-166">ビルド18305</span><span class="sxs-lookup"><span data-stu-id="dea41-166">Build 18305</span></span>
+<span data-ttu-id="dea41-167">ビルド18305の一般的な Windows 情報については、 [windows のブログ](https://blogs.windows.com/windowsexperience/2018/12/19/announcing-windows-10-insider-preview-build-18305/)を参照してください。</span><span class="sxs-lookup"><span data-stu-id="dea41-167">For general Windows information on build 18305 visit the [Windows blog](https://blogs.windows.com/windowsexperience/2018/12/19/announcing-windows-10-insider-preview-build-18305/).</span></span>
 
-### <a name="wsl"></a><span data-ttu-id="3c169-168">WSL</span><span class="sxs-lookup"><span data-stu-id="3c169-168">WSL</span></span>
-* <span data-ttu-id="3c169-169">pthreads プライマリスレッドが終了したときにファイルへのアクセスが失われる [GH 3589]</span><span class="sxs-lookup"><span data-stu-id="3c169-169">pthreads lose access to files when the primary thread exits [GH 3589]</span></span>
-* <span data-ttu-id="3c169-170">TIOCSCTTY は、必要な場合を除き、"force" パラメーターを無視する必要があります [GH 3652]</span><span class="sxs-lookup"><span data-stu-id="3c169-170">TIOCSCTTY should ignore the “force” parameter unless it is required [GH 3652]</span></span>
-* <span data-ttu-id="3c169-171">wsl コマンドラインの機能強化とインポート/エクスポート機能の追加。</span><span class="sxs-lookup"><span data-stu-id="3c169-171">wsl.exe command line improvements and addition of import / export functionality.</span></span>
+### <a name="wsl"></a><span data-ttu-id="dea41-168">WSL</span><span class="sxs-lookup"><span data-stu-id="dea41-168">WSL</span></span>
+* <span data-ttu-id="dea41-169">pthreads プライマリスレッドが終了したときにファイルへのアクセスが失われる [GH 3589]</span><span class="sxs-lookup"><span data-stu-id="dea41-169">pthreads lose access to files when the primary thread exits [GH 3589]</span></span>
+* <span data-ttu-id="dea41-170">TIOCSCTTY は、必要な場合を除き、"force" パラメーターを無視する必要があります [GH 3652]</span><span class="sxs-lookup"><span data-stu-id="dea41-170">TIOCSCTTY should ignore the “force” parameter unless it is required [GH 3652]</span></span>
+* <span data-ttu-id="dea41-171">wsl コマンドラインの機能強化とインポート/エクスポート機能の追加。</span><span class="sxs-lookup"><span data-stu-id="dea41-171">wsl.exe command line improvements and addition of import / export functionality.</span></span>
 ```
 Usage: wsl.exe [Argument] [Options...] [CommandLine]
 
@@ -160,54 +160,54 @@ Arguments to manage Windows Subsystem for Linux:
         Display usage information.
 ```
 
-## <a name="build-18277"></a><span data-ttu-id="3c169-172">ビルド18277</span><span class="sxs-lookup"><span data-stu-id="3c169-172">Build 18277</span></span>
-<span data-ttu-id="3c169-173">ビルド18277の一般的な Windows 情報については、 [windows のブログ](https://blogs.windows.com/windowsexperience/2018/11/07/announcing-windows-10-insider-preview-build-18277/)を参照してください。</span><span class="sxs-lookup"><span data-stu-id="3c169-173">For general Windows information on build 18277 visit the [Windows blog](https://blogs.windows.com/windowsexperience/2018/11/07/announcing-windows-10-insider-preview-build-18277/).</span></span>
+## <a name="build-18277"></a><span data-ttu-id="dea41-172">ビルド18277</span><span class="sxs-lookup"><span data-stu-id="dea41-172">Build 18277</span></span>
+<span data-ttu-id="dea41-173">ビルド18277の一般的な Windows 情報については、 [windows のブログ](https://blogs.windows.com/windowsexperience/2018/11/07/announcing-windows-10-insider-preview-build-18277/)を参照してください。</span><span class="sxs-lookup"><span data-stu-id="dea41-173">For general Windows information on build 18277 visit the [Windows blog](https://blogs.windows.com/windowsexperience/2018/11/07/announcing-windows-10-insider-preview-build-18277/).</span></span>
 
-### <a name="wsl"></a><span data-ttu-id="3c169-174">WSL</span><span class="sxs-lookup"><span data-stu-id="3c169-174">WSL</span></span>
-* <span data-ttu-id="3c169-175">ビルド18272で導入された "そのようなインターフェイスがサポートされていません" というエラーを修正する [GH 3645]</span><span class="sxs-lookup"><span data-stu-id="3c169-175">Fix "no such interface supported" error introduced in build 18272 [GH 3645]</span></span>
-* <span data-ttu-id="3c169-176">Umount syscall の MNT_FORCE フラグを無視する [GH 3605]</span><span class="sxs-lookup"><span data-stu-id="3c169-176">Ignore the MNT_FORCE flag for umount syscall [GH 3605]</span></span>
-* <span data-ttu-id="3c169-177">WSL 相互運用機能を切り替えて、正式な Create擬似コンソール API を使用する</span><span class="sxs-lookup"><span data-stu-id="3c169-177">Switch WSL interop to use the official CreatePseudoConsole API</span></span>
-* <span data-ttu-id="3c169-178">FUTEX_WAIT の再起動時にタイムアウト値を保持しない</span><span class="sxs-lookup"><span data-stu-id="3c169-178">Maintain no timeout value when FUTEX_WAIT restarts</span></span>
+### <a name="wsl"></a><span data-ttu-id="dea41-174">WSL</span><span class="sxs-lookup"><span data-stu-id="dea41-174">WSL</span></span>
+* <span data-ttu-id="dea41-175">ビルド18272で導入された "そのようなインターフェイスがサポートされていません" というエラーを修正する [GH 3645]</span><span class="sxs-lookup"><span data-stu-id="dea41-175">Fix "no such interface supported" error introduced in build 18272 [GH 3645]</span></span>
+* <span data-ttu-id="dea41-176">Umount syscall の MNT_FORCE フラグを無視する [GH 3605]</span><span class="sxs-lookup"><span data-stu-id="dea41-176">Ignore the MNT_FORCE flag for umount syscall [GH 3605]</span></span>
+* <span data-ttu-id="dea41-177">WSL 相互運用機能を切り替えて、正式な Create擬似コンソール API を使用する</span><span class="sxs-lookup"><span data-stu-id="dea41-177">Switch WSL interop to use the official CreatePseudoConsole API</span></span>
+* <span data-ttu-id="dea41-178">FUTEX_WAIT の再起動時にタイムアウト値を保持しない</span><span class="sxs-lookup"><span data-stu-id="dea41-178">Maintain no timeout value when FUTEX_WAIT restarts</span></span>
 
-## <a name="build-18272"></a><span data-ttu-id="3c169-179">ビルド18272</span><span class="sxs-lookup"><span data-stu-id="3c169-179">Build 18272</span></span>
-<span data-ttu-id="3c169-180">ビルド18272の一般的な Windows 情報については、 [windows のブログ](https://blogs.windows.com/windowsexperience/2018/10/31/announcing-windows-10-insider-preview-build-18272/)を参照してください。</span><span class="sxs-lookup"><span data-stu-id="3c169-180">For general Windows information on build 18272 visit the [Windows blog](https://blogs.windows.com/windowsexperience/2018/10/31/announcing-windows-10-insider-preview-build-18272/).</span></span>
+## <a name="build-18272"></a><span data-ttu-id="dea41-179">ビルド18272</span><span class="sxs-lookup"><span data-stu-id="dea41-179">Build 18272</span></span>
+<span data-ttu-id="dea41-180">ビルド18272の一般的な Windows 情報については、 [windows のブログ](https://blogs.windows.com/windowsexperience/2018/10/31/announcing-windows-10-insider-preview-build-18272/)を参照してください。</span><span class="sxs-lookup"><span data-stu-id="dea41-180">For general Windows information on build 18272 visit the [Windows blog](https://blogs.windows.com/windowsexperience/2018/10/31/announcing-windows-10-insider-preview-build-18272/).</span></span>
 
-### <a name="wsl"></a><span data-ttu-id="3c169-181">WSL</span><span class="sxs-lookup"><span data-stu-id="3c169-181">WSL</span></span>
-* <span data-ttu-id="3c169-182">**要する**このビルドには、WSL が動作しなくなる問題があります。</span><span class="sxs-lookup"><span data-stu-id="3c169-182">**WARNING:** There is an issue in this build that makes WSL inoperable.</span></span> <span data-ttu-id="3c169-183">ディストリビューションを起動しようとすると、"そのようなインターフェイスはサポートされていません" というエラーが表示されます。</span><span class="sxs-lookup"><span data-stu-id="3c169-183">When trying to launch your distribution you will see a “No such interface supported” error.</span></span> <span data-ttu-id="3c169-184">この問題は修正され、来週の Insider Fast ビルドに含まれるようになりました。</span><span class="sxs-lookup"><span data-stu-id="3c169-184">The issue has been fixed and will be in next week's Insider Fast build.</span></span> <span data-ttu-id="3c169-185">このビルドがインストールされている場合は、「設定-> Update & Security-> Recovery」の「以前のバージョンの Windows 10 に戻る」を使用して、以前の Windows ビルドにロールバックできます。</span><span class="sxs-lookup"><span data-stu-id="3c169-185">If you've installed this build you can roll back to the previous Windows build using “Go back to the previous version of Windows 10” in Settings->Update & Security->Recovery.</span></span>
+### <a name="wsl"></a><span data-ttu-id="dea41-181">WSL</span><span class="sxs-lookup"><span data-stu-id="dea41-181">WSL</span></span>
+* <span data-ttu-id="dea41-182">**要する**このビルドには、WSL が動作しなくなる問題があります。</span><span class="sxs-lookup"><span data-stu-id="dea41-182">**WARNING:** There is an issue in this build that makes WSL inoperable.</span></span> <span data-ttu-id="dea41-183">ディストリビューションを起動しようとすると、"そのようなインターフェイスはサポートされていません" というエラーが表示されます。</span><span class="sxs-lookup"><span data-stu-id="dea41-183">When trying to launch your distribution you will see a “No such interface supported” error.</span></span> <span data-ttu-id="dea41-184">この問題は修正され、来週の Insider Fast ビルドに含まれるようになりました。</span><span class="sxs-lookup"><span data-stu-id="dea41-184">The issue has been fixed and will be in next week's Insider Fast build.</span></span> <span data-ttu-id="dea41-185">このビルドがインストールされている場合は、「設定-> Update & Security-> Recovery」の「以前のバージョンの Windows 10 に戻る」を使用して、以前の Windows ビルドにロールバックできます。</span><span class="sxs-lookup"><span data-stu-id="dea41-185">If you've installed this build you can roll back to the previous Windows build using “Go back to the previous version of Windows 10” in Settings->Update & Security->Recovery.</span></span>
 
-## <a name="build-18267"></a><span data-ttu-id="3c169-186">ビルド18267</span><span class="sxs-lookup"><span data-stu-id="3c169-186">Build 18267</span></span>
-<span data-ttu-id="3c169-187">ビルド18267の一般的な Windows 情報については、 [windows のブログ](https://blogs.windows.com/windowsexperience/2018/10/24/announcing-windows-10-insider-preview-build-18267/)を参照してください。</span><span class="sxs-lookup"><span data-stu-id="3c169-187">For general Windows information on build 18267 visit the [Windows blog](https://blogs.windows.com/windowsexperience/2018/10/24/announcing-windows-10-insider-preview-build-18267/).</span></span>
+## <a name="build-18267"></a><span data-ttu-id="dea41-186">ビルド18267</span><span class="sxs-lookup"><span data-stu-id="dea41-186">Build 18267</span></span>
+<span data-ttu-id="dea41-187">ビルド18267の一般的な Windows 情報については、 [windows のブログ](https://blogs.windows.com/windowsexperience/2018/10/24/announcing-windows-10-insider-preview-build-18267/)を参照してください。</span><span class="sxs-lookup"><span data-stu-id="dea41-187">For general Windows information on build 18267 visit the [Windows blog](https://blogs.windows.com/windowsexperience/2018/10/24/announcing-windows-10-insider-preview-build-18267/).</span></span>
 
-### <a name="wsl"></a><span data-ttu-id="3c169-188">WSL</span><span class="sxs-lookup"><span data-stu-id="3c169-188">WSL</span></span>
-* <span data-ttu-id="3c169-189">ゾンビプロセスが reaped されず、無期限に保持される問題を修正します。</span><span class="sxs-lookup"><span data-stu-id="3c169-189">Fix issue where zombie process may not be reaped and remain indefinitely.</span></span>
-* <span data-ttu-id="3c169-190">エラーメッセージが最大長を超えた場合、WslRegisterDistribution がハングする [GH 3592]</span><span class="sxs-lookup"><span data-stu-id="3c169-190">WslRegisterDistribution hangs if error message exceeds max length [GH 3592]</span></span>
-* <span data-ttu-id="3c169-191">DrvFs で読み取り専用ファイルの fsync を正常に実行できるようにする [GH 3556]</span><span class="sxs-lookup"><span data-stu-id="3c169-191">Allow fsync to succeed for read-only files on DrvFs [GH 3556]</span></span>
-* <span data-ttu-id="3c169-192">[GH 3584] 内にシンボリックリンクを作成する前に、/bin と/sbin ディレクトリが存在することを確認します。</span><span class="sxs-lookup"><span data-stu-id="3c169-192">Ensure that /bin and /sbin directories exist before creating symlinks inside [GH 3584]</span></span>
-* <span data-ttu-id="3c169-193">WSL インスタンスのインスタンス終了タイムアウトメカニズムが追加されました。</span><span class="sxs-lookup"><span data-stu-id="3c169-193">Added an instance termination timeout mechanism for WSL instances.</span></span> <span data-ttu-id="3c169-194">タイムアウトは現在15秒に設定されています。つまり、最後の WSL プロセスが終了してから15秒後にインスタンスが終了します。</span><span class="sxs-lookup"><span data-stu-id="3c169-194">The timeout is currently set to 15 seconds, meaning the instance will terminate 15 seconds after the last WSL process exits.</span></span> <span data-ttu-id="3c169-195">ディストリビューションをすぐに終了するには、次のように使用します。</span><span class="sxs-lookup"><span data-stu-id="3c169-195">To terminate a distribution immediately, use:</span></span>
+### <a name="wsl"></a><span data-ttu-id="dea41-188">WSL</span><span class="sxs-lookup"><span data-stu-id="dea41-188">WSL</span></span>
+* <span data-ttu-id="dea41-189">ゾンビプロセスが reaped されず、無期限に保持される問題を修正します。</span><span class="sxs-lookup"><span data-stu-id="dea41-189">Fix issue where zombie process may not be reaped and remain indefinitely.</span></span>
+* <span data-ttu-id="dea41-190">エラーメッセージが最大長を超えた場合、WslRegisterDistribution がハングする [GH 3592]</span><span class="sxs-lookup"><span data-stu-id="dea41-190">WslRegisterDistribution hangs if error message exceeds max length [GH 3592]</span></span>
+* <span data-ttu-id="dea41-191">DrvFs で読み取り専用ファイルの fsync を正常に実行できるようにする [GH 3556]</span><span class="sxs-lookup"><span data-stu-id="dea41-191">Allow fsync to succeed for read-only files on DrvFs [GH 3556]</span></span>
+* <span data-ttu-id="dea41-192">[GH 3584] 内にシンボリックリンクを作成する前に、/bin と/sbin ディレクトリが存在することを確認します。</span><span class="sxs-lookup"><span data-stu-id="dea41-192">Ensure that /bin and /sbin directories exist before creating symlinks inside [GH 3584]</span></span>
+* <span data-ttu-id="dea41-193">WSL インスタンスのインスタンス終了タイムアウトメカニズムが追加されました。</span><span class="sxs-lookup"><span data-stu-id="dea41-193">Added an instance termination timeout mechanism for WSL instances.</span></span> <span data-ttu-id="dea41-194">タイムアウトは現在15秒に設定されています。つまり、最後の WSL プロセスが終了してから15秒後にインスタンスが終了します。</span><span class="sxs-lookup"><span data-stu-id="dea41-194">The timeout is currently set to 15 seconds, meaning the instance will terminate 15 seconds after the last WSL process exits.</span></span> <span data-ttu-id="dea41-195">ディストリビューションをすぐに終了するには、次のように使用します。</span><span class="sxs-lookup"><span data-stu-id="dea41-195">To terminate a distribution immediately, use:</span></span>
 ```
 wslconfig.exe /terminate <DistributionName>
 ```
 
-## <a name="build-17763-1809"></a><span data-ttu-id="3c169-196">ビルド 17763 (1809)</span><span class="sxs-lookup"><span data-stu-id="3c169-196">Build 17763 (1809)</span></span>
-<span data-ttu-id="3c169-197">ビルド17763の一般的な Windows 情報については、 [windows のブログ](https://blogs.windows.com/windowsexperience/2018/10/02/how-to-get-the-windows-10-october-2018-update/)を参照してください。</span><span class="sxs-lookup"><span data-stu-id="3c169-197">For general Windows information on build 17763 visit the [Windows blog](https://blogs.windows.com/windowsexperience/2018/10/02/how-to-get-the-windows-10-october-2018-update/).</span></span>
+## <a name="build-17763-1809"></a><span data-ttu-id="dea41-196">ビルド 17763 (1809)</span><span class="sxs-lookup"><span data-stu-id="dea41-196">Build 17763 (1809)</span></span>
+<span data-ttu-id="dea41-197">ビルド17763の一般的な Windows 情報については、 [windows のブログ](https://blogs.windows.com/windowsexperience/2018/10/02/how-to-get-the-windows-10-october-2018-update/)を参照してください。</span><span class="sxs-lookup"><span data-stu-id="dea41-197">For general Windows information on build 17763 visit the [Windows blog](https://blogs.windows.com/windowsexperience/2018/10/02/how-to-get-the-windows-10-october-2018-update/).</span></span>
 
-### <a name="wsl"></a><span data-ttu-id="3c169-198">WSL</span><span class="sxs-lookup"><span data-stu-id="3c169-198">WSL</span></span>
-* <span data-ttu-id="3c169-199">同じスレッド優先順位を変更するための setpriority syscall アクセス許可チェックが strict すぎます [GH 1838]</span><span class="sxs-lookup"><span data-stu-id="3c169-199">Setpriority syscall permission check too strict for changing same thread priority [GH 1838]</span></span>
-* <span data-ttu-id="3c169-200">Clock_gettime (CLOCK_BOOTTIME) の負の値が返されないように、起動時間にバイアスをかけない割り込み時間を使用することを確認してください () [GH 3434]</span><span class="sxs-lookup"><span data-stu-id="3c169-200">Ensure that unbiased interrupt time is used for boot time to avoid returning negative values for clock_gettime(CLOCK_BOOTTIME) [GH 3434]</span></span>
-* <span data-ttu-id="3c169-201">WSL binfmt インタープリターでのシンボリックリンクの処理 [GH 3424]</span><span class="sxs-lookup"><span data-stu-id="3c169-201">Handle symlinks in the WSL binfmt interpreter [GH 3424]</span></span>
-* <span data-ttu-id="3c169-202">Threadgroup リーダーファイル記述子のクリーンアップをより適切に処理します。</span><span class="sxs-lookup"><span data-stu-id="3c169-202">Better handling of threadgroup leader file descriptor cleanup.</span></span>
-* <span data-ttu-id="3c169-203">KeQueryPerformanceCounter ではなく KeQueryInterruptTimePrecise を使用してオーバーフローを回避するように WSL を切り替える [GH 3252]</span><span class="sxs-lookup"><span data-stu-id="3c169-203">Switch WSL to use KeQueryInterruptTimePrecise instead of KeQueryPerformanceCounter to avoid overflow [GH 3252]</span></span>
-* <span data-ttu-id="3c169-204">Ptrace をアタッチすると、システムコールから無効な戻り値が返される [GH 1731]</span><span class="sxs-lookup"><span data-stu-id="3c169-204">Ptrace attach may cause bad return value from system calls [GH 1731]</span></span>
-* <span data-ttu-id="3c169-205">AF_UNIX 関連のいくつかの問題を修正する [GH 3371]</span><span class="sxs-lookup"><span data-stu-id="3c169-205">Fix several AF_UNIX related issues [GH 3371]</span></span>
-* <span data-ttu-id="3c169-206">現在の作業ディレクトリの長さが5文字未満の場合に WSL 相互運用機能が失敗する原因となる問題を修正しました [GH 3379]</span><span class="sxs-lookup"><span data-stu-id="3c169-206">Fix issue that could cause WSL interop to fail if the current working directory is less than 5 characters long [GH 3379]</span></span>
-* <span data-ttu-id="3c169-207">存在しないポートへのループバック接続で1秒間の遅延が発生しないようにする [GH 3286]</span><span class="sxs-lookup"><span data-stu-id="3c169-207">Avoid one second delay failing loopback connections to non-existent ports [GH 3286]</span></span>
-* <span data-ttu-id="3c169-208">/Proc/sys/fs/file-max スタブファイルの追加 [GH 2893]</span><span class="sxs-lookup"><span data-stu-id="3c169-208">Add /proc/sys/fs/file-max stub file [GH 2893]</span></span>
-* <span data-ttu-id="3c169-209">より正確な IPV6 スコープ情報。</span><span class="sxs-lookup"><span data-stu-id="3c169-209">More accurate IPV6 scope information.</span></span>
-* <span data-ttu-id="3c169-210">PR_SET_PTRACER のサポート [GH 3053]</span><span class="sxs-lookup"><span data-stu-id="3c169-210">PR_SET_PTRACER support [GH 3053]</span></span>
-* <span data-ttu-id="3c169-211">パイプファイルシステムがエッジトリガーの epoll イベントを誤って消去しています [GH 3276]</span><span class="sxs-lookup"><span data-stu-id="3c169-211">Pipe filesystem inadvertently clearing edge-triggered epoll event [GH 3276]</span></span>
-* <span data-ttu-id="3c169-212">NTFS シンボリックリンクによって起動された Win32 実行可能ファイルがシンボリックリンク名を尊重しない [GH 2909]</span><span class="sxs-lookup"><span data-stu-id="3c169-212">Win32 executable launched via NTFS symlink doesn't respect symlink name [GH 2909]</span></span>
-* <span data-ttu-id="3c169-213">強化されたゾンビサポート [GH 1353]</span><span class="sxs-lookup"><span data-stu-id="3c169-213">Improved zombie support [GH 1353]</span></span>
-* <span data-ttu-id="3c169-214">Windows 相互運用機能の動作を制御するための wsl のエントリを追加する [GH 1493]</span><span class="sxs-lookup"><span data-stu-id="3c169-214">Add wsl.conf entries for controlling Windows interop behavior [GH 1493]</span></span>
+### <a name="wsl"></a><span data-ttu-id="dea41-198">WSL</span><span class="sxs-lookup"><span data-stu-id="dea41-198">WSL</span></span>
+* <span data-ttu-id="dea41-199">同じスレッド優先順位を変更するための setpriority syscall アクセス許可チェックが strict すぎます [GH 1838]</span><span class="sxs-lookup"><span data-stu-id="dea41-199">Setpriority syscall permission check too strict for changing same thread priority [GH 1838]</span></span>
+* <span data-ttu-id="dea41-200">Clock_gettime (CLOCK_BOOTTIME) の負の値が返されないように、起動時間にバイアスをかけない割り込み時間を使用することを確認してください () [GH 3434]</span><span class="sxs-lookup"><span data-stu-id="dea41-200">Ensure that unbiased interrupt time is used for boot time to avoid returning negative values for clock_gettime(CLOCK_BOOTTIME) [GH 3434]</span></span>
+* <span data-ttu-id="dea41-201">WSL binfmt インタープリターでのシンボリックリンクの処理 [GH 3424]</span><span class="sxs-lookup"><span data-stu-id="dea41-201">Handle symlinks in the WSL binfmt interpreter [GH 3424]</span></span>
+* <span data-ttu-id="dea41-202">Threadgroup リーダーファイル記述子のクリーンアップをより適切に処理します。</span><span class="sxs-lookup"><span data-stu-id="dea41-202">Better handling of threadgroup leader file descriptor cleanup.</span></span>
+* <span data-ttu-id="dea41-203">KeQueryPerformanceCounter ではなく KeQueryInterruptTimePrecise を使用してオーバーフローを回避するように WSL を切り替える [GH 3252]</span><span class="sxs-lookup"><span data-stu-id="dea41-203">Switch WSL to use KeQueryInterruptTimePrecise instead of KeQueryPerformanceCounter to avoid overflow [GH 3252]</span></span>
+* <span data-ttu-id="dea41-204">Ptrace をアタッチすると、システムコールから無効な戻り値が返される [GH 1731]</span><span class="sxs-lookup"><span data-stu-id="dea41-204">Ptrace attach may cause bad return value from system calls [GH 1731]</span></span>
+* <span data-ttu-id="dea41-205">AF_UNIX 関連のいくつかの問題を修正する [GH 3371]</span><span class="sxs-lookup"><span data-stu-id="dea41-205">Fix several AF_UNIX related issues [GH 3371]</span></span>
+* <span data-ttu-id="dea41-206">現在の作業ディレクトリの長さが5文字未満の場合に WSL 相互運用機能が失敗する原因となる問題を修正しました [GH 3379]</span><span class="sxs-lookup"><span data-stu-id="dea41-206">Fix issue that could cause WSL interop to fail if the current working directory is less than 5 characters long [GH 3379]</span></span>
+* <span data-ttu-id="dea41-207">存在しないポートへのループバック接続で1秒間の遅延が発生しないようにする [GH 3286]</span><span class="sxs-lookup"><span data-stu-id="dea41-207">Avoid one second delay failing loopback connections to non-existent ports [GH 3286]</span></span>
+* <span data-ttu-id="dea41-208">/Proc/sys/fs/file-max スタブファイルの追加 [GH 2893]</span><span class="sxs-lookup"><span data-stu-id="dea41-208">Add /proc/sys/fs/file-max stub file [GH 2893]</span></span>
+* <span data-ttu-id="dea41-209">より正確な IPV6 スコープ情報。</span><span class="sxs-lookup"><span data-stu-id="dea41-209">More accurate IPV6 scope information.</span></span>
+* <span data-ttu-id="dea41-210">PR_SET_PTRACER のサポート [GH 3053]</span><span class="sxs-lookup"><span data-stu-id="dea41-210">PR_SET_PTRACER support [GH 3053]</span></span>
+* <span data-ttu-id="dea41-211">パイプファイルシステムがエッジトリガーの epoll イベントを誤って消去しています [GH 3276]</span><span class="sxs-lookup"><span data-stu-id="dea41-211">Pipe filesystem inadvertently clearing edge-triggered epoll event [GH 3276]</span></span>
+* <span data-ttu-id="dea41-212">NTFS シンボリックリンクによって起動された Win32 実行可能ファイルがシンボリックリンク名を尊重しない [GH 2909]</span><span class="sxs-lookup"><span data-stu-id="dea41-212">Win32 executable launched via NTFS symlink doesn't respect symlink name [GH 2909]</span></span>
+* <span data-ttu-id="dea41-213">強化されたゾンビサポート [GH 1353]</span><span class="sxs-lookup"><span data-stu-id="dea41-213">Improved zombie support [GH 1353]</span></span>
+* <span data-ttu-id="dea41-214">Windows 相互運用機能の動作を制御するための wsl のエントリを追加する [GH 1493]</span><span class="sxs-lookup"><span data-stu-id="dea41-214">Add wsl.conf entries for controlling Windows interop behavior [GH 1493]</span></span>
   ```
     [interop]
 
@@ -215,98 +215,98 @@ wslconfig.exe /terminate <DistributionName>
 
     appendWindowsPath=false # append Windows path to $PATH variable; default is true
   ```
-* <span data-ttu-id="3c169-215">常に UNIX ソケットファミリの種類を返す getsockname でないことを修正する [GH 1774]</span><span class="sxs-lookup"><span data-stu-id="3c169-215">Fix for getsockname not always returning UNIX socket family type [GH 1774]</span></span>
-* <span data-ttu-id="3c169-216">TIOCSTI のサポートを追加する [GH 1863]</span><span class="sxs-lookup"><span data-stu-id="3c169-216">Add support for TIOCSTI [GH 1863]</span></span>
-* <span data-ttu-id="3c169-217">接続処理中の非ブロッキングソケットは、書き込み試行に EAGAIN を返します [GH 2846]</span><span class="sxs-lookup"><span data-stu-id="3c169-217">Non-blocking sockets in the process of connecting should return EAGAIN for write attempts [GH 2846]</span></span>
-* <span data-ttu-id="3c169-218">マウントされた Vhd での相互運用のサポート [GH 3246, 3291]</span><span class="sxs-lookup"><span data-stu-id="3c169-218">Support interop on mounted VHDs [GH 3246, 3291]</span></span>
-* <span data-ttu-id="3c169-219">ルートフォルダーでのアクセス許可チェックの問題の修正 [GH 3304]</span><span class="sxs-lookup"><span data-stu-id="3c169-219">Fix permission checking issue on root folder [GH 3304]</span></span>
-* <span data-ttu-id="3c169-220">TTY キーボード ioctl KDGKBTYPE、KDGKBMODE、および KDSKBMODE のサポートが制限されています。</span><span class="sxs-lookup"><span data-stu-id="3c169-220">Limited support for TTY keyboard ioctls KDGKBTYPE, KDGKBMODE and KDSKBMODE.</span></span>
-* <span data-ttu-id="3c169-221">Windows UI アプリは、バックグラウンドで起動した場合でも実行する必要があります。</span><span class="sxs-lookup"><span data-stu-id="3c169-221">Windows UI apps should execute even when launched in the background.</span></span>
-* <span data-ttu-id="3c169-222">Wsl-u または--user オプションを追加する [GH 1203]</span><span class="sxs-lookup"><span data-stu-id="3c169-222">Add wsl -u or --user option [GH 1203]</span></span>
-* <span data-ttu-id="3c169-223">高速スタートアップが有効になっているときの WSL 起動の問題を修正する [GH 2576]</span><span class="sxs-lookup"><span data-stu-id="3c169-223">Fix WSL launch issues when fast startup is enabled [GH 2576]</span></span>
-* <span data-ttu-id="3c169-224">Unix ソケットが切断されたピア資格情報を保持する必要がある [GH 3183]</span><span class="sxs-lookup"><span data-stu-id="3c169-224">Unix sockets need to retain disconnected peer credentials [GH 3183]</span></span>
-* <span data-ttu-id="3c169-225">EAGAIN で無制限の非ブロッキング Unix ソケットが失敗する [GH 3191]</span><span class="sxs-lookup"><span data-stu-id="3c169-225">Non-blocking Unix sockets failing indefinitely with EAGAIN [GH 3191]</span></span>
-* <span data-ttu-id="3c169-226">case = off は新しい既定の drvfs マウントの種類 [GH 2937, 3212, 3328]</span><span class="sxs-lookup"><span data-stu-id="3c169-226">case=off is the new default drvfs mount type [GH 2937, 3212, 3328]</span></span>
-    * <span data-ttu-id="3c169-227">詳細については、[ブログ](https://blogs.msdn.microsoft.com/commandline/2018/06/14/improved-per-directory-case-sensitivity-support-in-wsl/)を参照してください。</span><span class="sxs-lookup"><span data-stu-id="3c169-227">See [blog](https://blogs.msdn.microsoft.com/commandline/2018/06/14/improved-per-directory-case-sensitivity-support-in-wsl/) for more information.</span></span>
-* <span data-ttu-id="3c169-228">Wslconfig/terminate を追加して、実行中のディストリビューションを停止します。</span><span class="sxs-lookup"><span data-stu-id="3c169-228">Add wslconfig /terminate to stop running distributions.</span></span>
-* <span data-ttu-id="3c169-229">スペースを含むパスを正しく処理しない WSL シェルコンテキストメニューエントリの問題を修正します。</span><span class="sxs-lookup"><span data-stu-id="3c169-229">Fix issue with the WSL shell context menu entries that do not correctly handle paths with spaces.</span></span>
-* <span data-ttu-id="3c169-230">ディレクトリごとの大文字と小文字の区別を拡張属性として公開する</span><span class="sxs-lookup"><span data-stu-id="3c169-230">Expose per-directory case sensitivity as an extended attribute</span></span>
-* <span data-ttu-id="3c169-231">ARM64: キャッシュメンテナンス操作をエミュレートします。</span><span class="sxs-lookup"><span data-stu-id="3c169-231">ARM64: Emulate cache maintenance operations.</span></span> <span data-ttu-id="3c169-232">[Dotnet の問題](https://github.com/dotnet/core/issues/1561)を解決します。</span><span class="sxs-lookup"><span data-stu-id="3c169-232">Resolve [dotnet issue](https://github.com/dotnet/core/issues/1561).</span></span>
-* <span data-ttu-id="3c169-233">DrvFs: エスケープされた文字に対応するプライベート範囲内の文字のみを unescape します。</span><span class="sxs-lookup"><span data-stu-id="3c169-233">DrvFs: only unescape characters in the private range that correspond to an escaped character.</span></span>
-* <span data-ttu-id="3c169-234">ELF パーサーインタープリターの長さの検証での1つずつのエラーの修正 [GH 3154]</span><span class="sxs-lookup"><span data-stu-id="3c169-234">Fix off-by-one error in ELF parser interpreter length validation [GH 3154]</span></span>
-* <span data-ttu-id="3c169-235">過去の時間を持つ WSL 絶対タイマーが起動しない [GH 3091]</span><span class="sxs-lookup"><span data-stu-id="3c169-235">WSL absolute timers with a time in the past do not fire [GH 3091]</span></span>
-* <span data-ttu-id="3c169-236">新しく作成された再解析ポイントが親ディレクトリに表示されていることを確認します。</span><span class="sxs-lookup"><span data-stu-id="3c169-236">Ensure newly created reparse points are listed as such in the parent directory.</span></span>
-* <span data-ttu-id="3c169-237">DrvFs に大文字と小文字を区別するディレクトリをアトミックに作成します。</span><span class="sxs-lookup"><span data-stu-id="3c169-237">Atomically create case sensitive directories in DrvFs.</span></span>
-* <span data-ttu-id="3c169-238">ファイルが存在する場合でも、マルチスレッド操作が ENOENT を返す可能性のある追加の問題を修正しました。</span><span class="sxs-lookup"><span data-stu-id="3c169-238">Fixed an additional issue where multithreaded operations could return ENOENT even though the file exists.</span></span> <span data-ttu-id="3c169-239">[GH 2712]</span><span class="sxs-lookup"><span data-stu-id="3c169-239">[GH 2712]</span></span>
-* <span data-ttu-id="3c169-240">UMCI が有効になっているときの WSL 起動エラーを修正しました。</span><span class="sxs-lookup"><span data-stu-id="3c169-240">Fixed WSL launch failure when UMCI is enabled.</span></span> <span data-ttu-id="3c169-241">[GH 3020]</span><span class="sxs-lookup"><span data-stu-id="3c169-241">[GH 3020]</span></span>
-* <span data-ttu-id="3c169-242">WSL [GH 437, 603, 1836] を起動するには、エクスプローラーのコンテキストメニューを追加します。</span><span class="sxs-lookup"><span data-stu-id="3c169-242">Add explorer context menu to launch WSL [GH 437, 603, 1836].</span></span> <span data-ttu-id="3c169-243">を使用するには、エクスプローラーウィンドウで、shift キーを押しながら右クリックします。</span><span class="sxs-lookup"><span data-stu-id="3c169-243">To use, hold shift and right-click when in an explorer window.</span></span>
-* <span data-ttu-id="3c169-244">Unix ソケットの非ブロッキング動作の修正 [GH 2822、3100]</span><span class="sxs-lookup"><span data-stu-id="3c169-244">Fix Unix socket non-blocking behavior [GH 2822, 3100]</span></span>
-* <span data-ttu-id="3c169-245">GH 2026 で報告されているように、ハングしている NETLINK コマンドを修正しました。</span><span class="sxs-lookup"><span data-stu-id="3c169-245">Fix hanging NETLINK command as reported in GH 2026.</span></span>
-* <span data-ttu-id="3c169-246">マウント伝達フラグ [GH 2911] のサポートを追加します。</span><span class="sxs-lookup"><span data-stu-id="3c169-246">Add support for mount propagation flags [GH 2911].</span></span>
-* <span data-ttu-id="3c169-247">Truncate で inotify イベントが発生しない問題を修正する [GH 2978]。</span><span class="sxs-lookup"><span data-stu-id="3c169-247">Fix issue with truncate not causing inotify events [GH 2978].</span></span>
-* <span data-ttu-id="3c169-248">シェルを使用せずに1つのバイナリを呼び出すには、wsl の--exec オプションを追加します。</span><span class="sxs-lookup"><span data-stu-id="3c169-248">Add --exec option for wsl.exe to invoke a single binary without a shell.</span></span>
-* <span data-ttu-id="3c169-249">特定のディストリビューションを選択するには、wsl のディストリビューションオプションを追加します。</span><span class="sxs-lookup"><span data-stu-id="3c169-249">Add --distribution option for wsl.exe to select a specific distro.</span></span>
-* <span data-ttu-id="3c169-250">Dmesg のサポートが制限されています。</span><span class="sxs-lookup"><span data-stu-id="3c169-250">Limited support for dmesg.</span></span> <span data-ttu-id="3c169-251">アプリケーションは、dmesg にログを記録できるようになりました。</span><span class="sxs-lookup"><span data-stu-id="3c169-251">Applications can now log to dmesg.</span></span> <span data-ttu-id="3c169-252">WSL ドライバーは、制限された情報を dmesg に記録します。</span><span class="sxs-lookup"><span data-stu-id="3c169-252">WSL driver logs limited information to dmesg.</span></span> <span data-ttu-id="3c169-253">将来は、この機能を拡張して、ドライバーから他の情報や診断情報を伝達することができます。</span><span class="sxs-lookup"><span data-stu-id="3c169-253">In future, this can be extended to carry other information/diagnostics from the driver.</span></span>
-    * <span data-ttu-id="3c169-254">注: 現在、 `/dev/kmsg` dmesg はデバイスインターフェイスでサポートされています。</span><span class="sxs-lookup"><span data-stu-id="3c169-254">Note: dmesg is currently supported through the `/dev/kmsg` device interface.</span></span> <span data-ttu-id="3c169-255">`syslog`syscall インターフェイスはまだサポートされていません。</span><span class="sxs-lookup"><span data-stu-id="3c169-255">`syslog` syscall interface is not yet supported.</span></span> <span data-ttu-id="3c169-256">そのため、などの一部の`dmesg`コマンドラインオプション`-S` `-C`は機能しません。</span><span class="sxs-lookup"><span data-stu-id="3c169-256">And, so, some of the `dmesg` command line options such as `-S`, `-C` don't work.</span></span>
-* <span data-ttu-id="3c169-257">ネイティブと一致するように既定の gid とシリアルデバイスのモードを変更する [GH 3042]</span><span class="sxs-lookup"><span data-stu-id="3c169-257">Change default gid and mode of serial devices to match native [GH 3042]</span></span>
-* <span data-ttu-id="3c169-258">DrvFs は拡張属性をサポートするようになりました。</span><span class="sxs-lookup"><span data-stu-id="3c169-258">DrvFs now supports extended attributes.</span></span>
-    * <span data-ttu-id="3c169-259">注:DrvFs では、拡張属性の名前にいくつかの制限があります。</span><span class="sxs-lookup"><span data-stu-id="3c169-259">Note: DrvFs has some limitations on the name of extended attributes.</span></span> <span data-ttu-id="3c169-260">一部の文字 ('/'、': '、'\*' など) は使用できません。また、拡張属性名は、drvfs では大文字と小文字が区別されません。</span><span class="sxs-lookup"><span data-stu-id="3c169-260">Some characters (like '/', ':' and '\*') are not allowed, and extended attribute names are not case sensitive on DrvFs</span></span>
+* <span data-ttu-id="dea41-215">常に UNIX ソケットファミリの種類を返す getsockname でないことを修正する [GH 1774]</span><span class="sxs-lookup"><span data-stu-id="dea41-215">Fix for getsockname not always returning UNIX socket family type [GH 1774]</span></span>
+* <span data-ttu-id="dea41-216">TIOCSTI のサポートを追加する [GH 1863]</span><span class="sxs-lookup"><span data-stu-id="dea41-216">Add support for TIOCSTI [GH 1863]</span></span>
+* <span data-ttu-id="dea41-217">接続処理中の非ブロッキングソケットは、書き込み試行に EAGAIN を返します [GH 2846]</span><span class="sxs-lookup"><span data-stu-id="dea41-217">Non-blocking sockets in the process of connecting should return EAGAIN for write attempts [GH 2846]</span></span>
+* <span data-ttu-id="dea41-218">マウントされた Vhd での相互運用のサポート [GH 3246, 3291]</span><span class="sxs-lookup"><span data-stu-id="dea41-218">Support interop on mounted VHDs [GH 3246, 3291]</span></span>
+* <span data-ttu-id="dea41-219">ルートフォルダーでのアクセス許可チェックの問題の修正 [GH 3304]</span><span class="sxs-lookup"><span data-stu-id="dea41-219">Fix permission checking issue on root folder [GH 3304]</span></span>
+* <span data-ttu-id="dea41-220">TTY キーボード ioctl KDGKBTYPE、KDGKBMODE、および KDSKBMODE のサポートが制限されています。</span><span class="sxs-lookup"><span data-stu-id="dea41-220">Limited support for TTY keyboard ioctls KDGKBTYPE, KDGKBMODE and KDSKBMODE.</span></span>
+* <span data-ttu-id="dea41-221">Windows UI アプリは、バックグラウンドで起動した場合でも実行する必要があります。</span><span class="sxs-lookup"><span data-stu-id="dea41-221">Windows UI apps should execute even when launched in the background.</span></span>
+* <span data-ttu-id="dea41-222">Wsl-u または--user オプションを追加する [GH 1203]</span><span class="sxs-lookup"><span data-stu-id="dea41-222">Add wsl -u or --user option [GH 1203]</span></span>
+* <span data-ttu-id="dea41-223">高速スタートアップが有効になっているときの WSL 起動の問題を修正する [GH 2576]</span><span class="sxs-lookup"><span data-stu-id="dea41-223">Fix WSL launch issues when fast startup is enabled [GH 2576]</span></span>
+* <span data-ttu-id="dea41-224">Unix ソケットが切断されたピア資格情報を保持する必要がある [GH 3183]</span><span class="sxs-lookup"><span data-stu-id="dea41-224">Unix sockets need to retain disconnected peer credentials [GH 3183]</span></span>
+* <span data-ttu-id="dea41-225">EAGAIN で無制限の非ブロッキング Unix ソケットが失敗する [GH 3191]</span><span class="sxs-lookup"><span data-stu-id="dea41-225">Non-blocking Unix sockets failing indefinitely with EAGAIN [GH 3191]</span></span>
+* <span data-ttu-id="dea41-226">case = off は新しい既定の drvfs マウントの種類 [GH 2937, 3212, 3328]</span><span class="sxs-lookup"><span data-stu-id="dea41-226">case=off is the new default drvfs mount type [GH 2937, 3212, 3328]</span></span>
+    * <span data-ttu-id="dea41-227">詳細については、[ブログ](https://blogs.msdn.microsoft.com/commandline/2018/06/14/improved-per-directory-case-sensitivity-support-in-wsl/)を参照してください。</span><span class="sxs-lookup"><span data-stu-id="dea41-227">See [blog](https://blogs.msdn.microsoft.com/commandline/2018/06/14/improved-per-directory-case-sensitivity-support-in-wsl/) for more information.</span></span>
+* <span data-ttu-id="dea41-228">Wslconfig/terminate を追加して、実行中のディストリビューションを停止します。</span><span class="sxs-lookup"><span data-stu-id="dea41-228">Add wslconfig /terminate to stop running distributions.</span></span>
+* <span data-ttu-id="dea41-229">スペースを含むパスを正しく処理しない WSL シェルコンテキストメニューエントリの問題を修正します。</span><span class="sxs-lookup"><span data-stu-id="dea41-229">Fix issue with the WSL shell context menu entries that do not correctly handle paths with spaces.</span></span>
+* <span data-ttu-id="dea41-230">ディレクトリごとの大文字と小文字の区別を拡張属性として公開する</span><span class="sxs-lookup"><span data-stu-id="dea41-230">Expose per-directory case sensitivity as an extended attribute</span></span>
+* <span data-ttu-id="dea41-231">ARM64: キャッシュメンテナンス操作をエミュレートします。</span><span class="sxs-lookup"><span data-stu-id="dea41-231">ARM64: Emulate cache maintenance operations.</span></span> <span data-ttu-id="dea41-232">[Dotnet の問題](https://github.com/dotnet/core/issues/1561)を解決します。</span><span class="sxs-lookup"><span data-stu-id="dea41-232">Resolve [dotnet issue](https://github.com/dotnet/core/issues/1561).</span></span>
+* <span data-ttu-id="dea41-233">DrvFs: エスケープされた文字に対応するプライベート範囲内の文字のみを unescape します。</span><span class="sxs-lookup"><span data-stu-id="dea41-233">DrvFs: only unescape characters in the private range that correspond to an escaped character.</span></span>
+* <span data-ttu-id="dea41-234">ELF パーサーインタープリターの長さの検証での1つずつのエラーの修正 [GH 3154]</span><span class="sxs-lookup"><span data-stu-id="dea41-234">Fix off-by-one error in ELF parser interpreter length validation [GH 3154]</span></span>
+* <span data-ttu-id="dea41-235">過去の時間を持つ WSL 絶対タイマーが起動しない [GH 3091]</span><span class="sxs-lookup"><span data-stu-id="dea41-235">WSL absolute timers with a time in the past do not fire [GH 3091]</span></span>
+* <span data-ttu-id="dea41-236">新しく作成された再解析ポイントが親ディレクトリに表示されていることを確認します。</span><span class="sxs-lookup"><span data-stu-id="dea41-236">Ensure newly created reparse points are listed as such in the parent directory.</span></span>
+* <span data-ttu-id="dea41-237">DrvFs に大文字と小文字を区別するディレクトリをアトミックに作成します。</span><span class="sxs-lookup"><span data-stu-id="dea41-237">Atomically create case sensitive directories in DrvFs.</span></span>
+* <span data-ttu-id="dea41-238">ファイルが存在する場合でも、マルチスレッド操作が ENOENT を返す可能性のある追加の問題を修正しました。</span><span class="sxs-lookup"><span data-stu-id="dea41-238">Fixed an additional issue where multithreaded operations could return ENOENT even though the file exists.</span></span> <span data-ttu-id="dea41-239">[GH 2712]</span><span class="sxs-lookup"><span data-stu-id="dea41-239">[GH 2712]</span></span>
+* <span data-ttu-id="dea41-240">UMCI が有効になっているときの WSL 起動エラーを修正しました。</span><span class="sxs-lookup"><span data-stu-id="dea41-240">Fixed WSL launch failure when UMCI is enabled.</span></span> <span data-ttu-id="dea41-241">[GH 3020]</span><span class="sxs-lookup"><span data-stu-id="dea41-241">[GH 3020]</span></span>
+* <span data-ttu-id="dea41-242">WSL [GH 437, 603, 1836] を起動するには、エクスプローラーのコンテキストメニューを追加します。</span><span class="sxs-lookup"><span data-stu-id="dea41-242">Add explorer context menu to launch WSL [GH 437, 603, 1836].</span></span> <span data-ttu-id="dea41-243">を使用するには、エクスプローラーウィンドウで、shift キーを押しながら右クリックします。</span><span class="sxs-lookup"><span data-stu-id="dea41-243">To use, hold shift and right-click when in an explorer window.</span></span>
+* <span data-ttu-id="dea41-244">Unix ソケットの非ブロッキング動作の修正 [GH 2822、3100]</span><span class="sxs-lookup"><span data-stu-id="dea41-244">Fix Unix socket non-blocking behavior [GH 2822, 3100]</span></span>
+* <span data-ttu-id="dea41-245">GH 2026 で報告されているように、ハングしている NETLINK コマンドを修正しました。</span><span class="sxs-lookup"><span data-stu-id="dea41-245">Fix hanging NETLINK command as reported in GH 2026.</span></span>
+* <span data-ttu-id="dea41-246">マウント伝達フラグ [GH 2911] のサポートを追加します。</span><span class="sxs-lookup"><span data-stu-id="dea41-246">Add support for mount propagation flags [GH 2911].</span></span>
+* <span data-ttu-id="dea41-247">Truncate で inotify イベントが発生しない問題を修正する [GH 2978]。</span><span class="sxs-lookup"><span data-stu-id="dea41-247">Fix issue with truncate not causing inotify events [GH 2978].</span></span>
+* <span data-ttu-id="dea41-248">シェルを使用せずに1つのバイナリを呼び出すには、wsl の--exec オプションを追加します。</span><span class="sxs-lookup"><span data-stu-id="dea41-248">Add --exec option for wsl.exe to invoke a single binary without a shell.</span></span>
+* <span data-ttu-id="dea41-249">特定のディストリビューションを選択するには、wsl のディストリビューションオプションを追加します。</span><span class="sxs-lookup"><span data-stu-id="dea41-249">Add --distribution option for wsl.exe to select a specific distro.</span></span>
+* <span data-ttu-id="dea41-250">Dmesg のサポートが制限されています。</span><span class="sxs-lookup"><span data-stu-id="dea41-250">Limited support for dmesg.</span></span> <span data-ttu-id="dea41-251">アプリケーションは、dmesg にログを記録できるようになりました。</span><span class="sxs-lookup"><span data-stu-id="dea41-251">Applications can now log to dmesg.</span></span> <span data-ttu-id="dea41-252">WSL ドライバーは、制限された情報を dmesg に記録します。</span><span class="sxs-lookup"><span data-stu-id="dea41-252">WSL driver logs limited information to dmesg.</span></span> <span data-ttu-id="dea41-253">将来は、この機能を拡張して、ドライバーから他の情報や診断情報を伝達することができます。</span><span class="sxs-lookup"><span data-stu-id="dea41-253">In future, this can be extended to carry other information/diagnostics from the driver.</span></span>
+    * <span data-ttu-id="dea41-254">注: 現在、 `/dev/kmsg` dmesg はデバイスインターフェイスでサポートされています。</span><span class="sxs-lookup"><span data-stu-id="dea41-254">Note: dmesg is currently supported through the `/dev/kmsg` device interface.</span></span> <span data-ttu-id="dea41-255">`syslog`syscall インターフェイスはまだサポートされていません。</span><span class="sxs-lookup"><span data-stu-id="dea41-255">`syslog` syscall interface is not yet supported.</span></span> <span data-ttu-id="dea41-256">そのため、などの一部の`dmesg`コマンドラインオプション`-S` `-C`は機能しません。</span><span class="sxs-lookup"><span data-stu-id="dea41-256">And, so, some of the `dmesg` command line options such as `-S`, `-C` don't work.</span></span>
+* <span data-ttu-id="dea41-257">ネイティブと一致するように既定の gid とシリアルデバイスのモードを変更する [GH 3042]</span><span class="sxs-lookup"><span data-stu-id="dea41-257">Change default gid and mode of serial devices to match native [GH 3042]</span></span>
+* <span data-ttu-id="dea41-258">DrvFs は拡張属性をサポートするようになりました。</span><span class="sxs-lookup"><span data-stu-id="dea41-258">DrvFs now supports extended attributes.</span></span>
+    * <span data-ttu-id="dea41-259">注:DrvFs では、拡張属性の名前にいくつかの制限があります。</span><span class="sxs-lookup"><span data-stu-id="dea41-259">Note: DrvFs has some limitations on the name of extended attributes.</span></span> <span data-ttu-id="dea41-260">一部の文字 ('/'、': '、'\*' など) は使用できません。また、拡張属性名は、drvfs では大文字と小文字が区別されません。</span><span class="sxs-lookup"><span data-stu-id="dea41-260">Some characters (like '/', ':' and '\*') are not allowed, and extended attribute names are not case sensitive on DrvFs</span></span>
 
-## <a name="build-18252-skip-ahead"></a><span data-ttu-id="3c169-261">ビルド 18252 (前へスキップ)</span><span class="sxs-lookup"><span data-stu-id="3c169-261">Build 18252 (Skip Ahead)</span></span>
-<span data-ttu-id="3c169-262">ビルド18252の一般的な Windows 情報については、 [windows のブログ](https://blogs.windows.com/windowsexperience/2018/10/03/announcing-windows-10-insider-preview-build-18252/)を参照してください。</span><span class="sxs-lookup"><span data-stu-id="3c169-262">For general Windows information on build 18252 visit the [Windows Blog](https://blogs.windows.com/windowsexperience/2018/10/03/announcing-windows-10-insider-preview-build-18252/).</span></span>
+## <a name="build-18252-skip-ahead"></a><span data-ttu-id="dea41-261">ビルド 18252 (前へスキップ)</span><span class="sxs-lookup"><span data-stu-id="dea41-261">Build 18252 (Skip Ahead)</span></span>
+<span data-ttu-id="dea41-262">ビルド18252の一般的な Windows 情報については、 [windows のブログ](https://blogs.windows.com/windowsexperience/2018/10/03/announcing-windows-10-insider-preview-build-18252/)を参照してください。</span><span class="sxs-lookup"><span data-stu-id="dea41-262">For general Windows information on build 18252 visit the [Windows Blog](https://blogs.windows.com/windowsexperience/2018/10/03/announcing-windows-10-insider-preview-build-18252/).</span></span>
 
-### <a name="wsl"></a><span data-ttu-id="3c169-263">WSL</span><span class="sxs-lookup"><span data-stu-id="3c169-263">WSL</span></span>
-* <span data-ttu-id="3c169-264">Init と bsdtar のバイナリを lxssmanager dll から別のツールフォルダーに移動する</span><span class="sxs-lookup"><span data-stu-id="3c169-264">Move init and bsdtar binaries out of lxssmanager dll and into a separate tools folder</span></span>
-* <span data-ttu-id="3c169-265">CLONE_FILES を使用するときのファイル記述子の終了に関する競合を修正します。</span><span class="sxs-lookup"><span data-stu-id="3c169-265">Fix race around closing file descriptor when using CLONE_FILES</span></span>
-* <span data-ttu-id="3c169-266">DrvFs パスを変換するときに/proc/pid/mountinfo の省略可能なフィールドを処理する</span><span class="sxs-lookup"><span data-stu-id="3c169-266">Handle optional fields in /proc/pid/mountinfo when translating DrvFs paths</span></span>
-* <span data-ttu-id="3c169-267">S_IFREG のメタデータをサポートせずに DrvFs mknod を正常に実行できるようにする</span><span class="sxs-lookup"><span data-stu-id="3c169-267">Allow DrvFs mknod to succeed without metadata support for S_IFREG</span></span>
-* <span data-ttu-id="3c169-268">DrvFs で作成される readonly ファイルは、readonly 属性セットを持つ必要があります [GH 3411]</span><span class="sxs-lookup"><span data-stu-id="3c169-268">Readonly files created on DrvFs should have the readonly attribute set [GH 3411]</span></span>
-* <span data-ttu-id="3c169-269">DrvFs のマウントを処理する/sbin/mount.drvfs helper を追加する</span><span class="sxs-lookup"><span data-stu-id="3c169-269">Add /sbin/mount.drvfs helper to handle DrvFs mounting</span></span>
-* <span data-ttu-id="3c169-270">DrvFs で POSIX 名の変更を使用します。</span><span class="sxs-lookup"><span data-stu-id="3c169-270">Use POSIX rename in DrvFs.</span></span>
-* <span data-ttu-id="3c169-271">ボリューム GUID がないボリュームでパスの変換を許可します。</span><span class="sxs-lookup"><span data-stu-id="3c169-271">Allow path translation on volumes without a volume GUID.</span></span>
+### <a name="wsl"></a><span data-ttu-id="dea41-263">WSL</span><span class="sxs-lookup"><span data-stu-id="dea41-263">WSL</span></span>
+* <span data-ttu-id="dea41-264">Init と bsdtar のバイナリを lxssmanager dll から別のツールフォルダーに移動する</span><span class="sxs-lookup"><span data-stu-id="dea41-264">Move init and bsdtar binaries out of lxssmanager dll and into a separate tools folder</span></span>
+* <span data-ttu-id="dea41-265">CLONE_FILES を使用するときのファイル記述子の終了に関する競合を修正します。</span><span class="sxs-lookup"><span data-stu-id="dea41-265">Fix race around closing file descriptor when using CLONE_FILES</span></span>
+* <span data-ttu-id="dea41-266">DrvFs パスを変換するときに/proc/pid/mountinfo の省略可能なフィールドを処理する</span><span class="sxs-lookup"><span data-stu-id="dea41-266">Handle optional fields in /proc/pid/mountinfo when translating DrvFs paths</span></span>
+* <span data-ttu-id="dea41-267">S_IFREG のメタデータをサポートせずに DrvFs mknod を正常に実行できるようにする</span><span class="sxs-lookup"><span data-stu-id="dea41-267">Allow DrvFs mknod to succeed without metadata support for S_IFREG</span></span>
+* <span data-ttu-id="dea41-268">DrvFs で作成される readonly ファイルは、readonly 属性セットを持つ必要があります [GH 3411]</span><span class="sxs-lookup"><span data-stu-id="dea41-268">Readonly files created on DrvFs should have the readonly attribute set [GH 3411]</span></span>
+* <span data-ttu-id="dea41-269">DrvFs のマウントを処理する/sbin/mount.drvfs helper を追加する</span><span class="sxs-lookup"><span data-stu-id="dea41-269">Add /sbin/mount.drvfs helper to handle DrvFs mounting</span></span>
+* <span data-ttu-id="dea41-270">DrvFs で POSIX 名の変更を使用します。</span><span class="sxs-lookup"><span data-stu-id="dea41-270">Use POSIX rename in DrvFs.</span></span>
+* <span data-ttu-id="dea41-271">ボリューム GUID がないボリュームでパスの変換を許可します。</span><span class="sxs-lookup"><span data-stu-id="dea41-271">Allow path translation on volumes without a volume GUID.</span></span>
 
-## <a name="build-17738-fast"></a><span data-ttu-id="3c169-272">ビルド 17738 (高速)</span><span class="sxs-lookup"><span data-stu-id="3c169-272">Build 17738 (Fast)</span></span>
-<span data-ttu-id="3c169-273">ビルド17738の一般的な Windows 情報については、 [windows のブログ](https://blogs.windows.com/windowsexperience/2018/08/14/announcing-windows-10-insider-preview-build-17738/)を参照してください。</span><span class="sxs-lookup"><span data-stu-id="3c169-273">For general Windows information on build 17738 visit the [Windows Blog](https://blogs.windows.com/windowsexperience/2018/08/14/announcing-windows-10-insider-preview-build-17738/).</span></span>
+## <a name="build-17738-fast"></a><span data-ttu-id="dea41-272">ビルド 17738 (高速)</span><span class="sxs-lookup"><span data-stu-id="dea41-272">Build 17738 (Fast)</span></span>
+<span data-ttu-id="dea41-273">ビルド17738の一般的な Windows 情報については、 [windows のブログ](https://blogs.windows.com/windowsexperience/2018/08/14/announcing-windows-10-insider-preview-build-17738/)を参照してください。</span><span class="sxs-lookup"><span data-stu-id="dea41-273">For general Windows information on build 17738 visit the [Windows Blog](https://blogs.windows.com/windowsexperience/2018/08/14/announcing-windows-10-insider-preview-build-17738/).</span></span>
 
-### <a name="wsl"></a><span data-ttu-id="3c169-274">WSL</span><span class="sxs-lookup"><span data-stu-id="3c169-274">WSL</span></span>
-* <span data-ttu-id="3c169-275">同じスレッド優先順位を変更するための setpriority syscall アクセス許可チェックが strict すぎます [GH 1838]</span><span class="sxs-lookup"><span data-stu-id="3c169-275">Setpriority syscall permission check too strict for changing same thread priority [GH 1838]</span></span>
-* <span data-ttu-id="3c169-276">Clock_gettime (CLOCK_BOOTTIME) の負の値が返されないように、起動時間にバイアスをかけない割り込み時間を使用することを確認してください () [GH 3434]</span><span class="sxs-lookup"><span data-stu-id="3c169-276">Ensure that unbiased interrupt time is used for boot time to avoid returning negative values for clock_gettime(CLOCK_BOOTTIME) [GH 3434]</span></span>
-* <span data-ttu-id="3c169-277">WSL binfmt インタープリターでのシンボリックリンクの処理 [GH 3424]</span><span class="sxs-lookup"><span data-stu-id="3c169-277">Handle symlinks in the WSL binfmt interpreter [GH 3424]</span></span>
-* <span data-ttu-id="3c169-278">Threadgroup リーダーファイル記述子のクリーンアップをより適切に処理します。</span><span class="sxs-lookup"><span data-stu-id="3c169-278">Better handling of threadgroup leader file descriptor cleanup.</span></span>
+### <a name="wsl"></a><span data-ttu-id="dea41-274">WSL</span><span class="sxs-lookup"><span data-stu-id="dea41-274">WSL</span></span>
+* <span data-ttu-id="dea41-275">同じスレッド優先順位を変更するための setpriority syscall アクセス許可チェックが strict すぎます [GH 1838]</span><span class="sxs-lookup"><span data-stu-id="dea41-275">Setpriority syscall permission check too strict for changing same thread priority [GH 1838]</span></span>
+* <span data-ttu-id="dea41-276">Clock_gettime (CLOCK_BOOTTIME) の負の値が返されないように、起動時間にバイアスをかけない割り込み時間を使用することを確認してください () [GH 3434]</span><span class="sxs-lookup"><span data-stu-id="dea41-276">Ensure that unbiased interrupt time is used for boot time to avoid returning negative values for clock_gettime(CLOCK_BOOTTIME) [GH 3434]</span></span>
+* <span data-ttu-id="dea41-277">WSL binfmt インタープリターでのシンボリックリンクの処理 [GH 3424]</span><span class="sxs-lookup"><span data-stu-id="dea41-277">Handle symlinks in the WSL binfmt interpreter [GH 3424]</span></span>
+* <span data-ttu-id="dea41-278">Threadgroup リーダーファイル記述子のクリーンアップをより適切に処理します。</span><span class="sxs-lookup"><span data-stu-id="dea41-278">Better handling of threadgroup leader file descriptor cleanup.</span></span>
 
-## <a name="build-17728-fast"></a><span data-ttu-id="3c169-279">ビルド 17728 (高速)</span><span class="sxs-lookup"><span data-stu-id="3c169-279">Build 17728 (Fast)</span></span>
-<span data-ttu-id="3c169-280">ビルド17728の一般的な Windows 情報については、 [windows のブログ](https://blogs.windows.com/windowsexperience/2018/07/31/announcing-windows-10-insider-preview-build-17728/)を参照してください。</span><span class="sxs-lookup"><span data-stu-id="3c169-280">For general Windows information on build 17728 visit the [Windows Blog](https://blogs.windows.com/windowsexperience/2018/07/31/announcing-windows-10-insider-preview-build-17728/).</span></span>
+## <a name="build-17728-fast"></a><span data-ttu-id="dea41-279">ビルド 17728 (高速)</span><span class="sxs-lookup"><span data-stu-id="dea41-279">Build 17728 (Fast)</span></span>
+<span data-ttu-id="dea41-280">ビルド17728の一般的な Windows 情報については、 [windows のブログ](https://blogs.windows.com/windowsexperience/2018/07/31/announcing-windows-10-insider-preview-build-17728/)を参照してください。</span><span class="sxs-lookup"><span data-stu-id="dea41-280">For general Windows information on build 17728 visit the [Windows Blog](https://blogs.windows.com/windowsexperience/2018/07/31/announcing-windows-10-insider-preview-build-17728/).</span></span>
 
-### <a name="wsl"></a><span data-ttu-id="3c169-281">WSL</span><span class="sxs-lookup"><span data-stu-id="3c169-281">WSL</span></span>
-* <span data-ttu-id="3c169-282">KeQueryPerformanceCounter ではなく KeQueryInterruptTimePrecise を使用してオーバーフローを回避するように WSL を切り替える [GH 3252]</span><span class="sxs-lookup"><span data-stu-id="3c169-282">Switch WSL to use KeQueryInterruptTimePrecise instead of KeQueryPerformanceCounter to avoid overflow [GH 3252]</span></span>
-* <span data-ttu-id="3c169-283">Ptrace をアタッチすると、システムコールから無効な戻り値が返される [GH 1731]</span><span class="sxs-lookup"><span data-stu-id="3c169-283">Ptrace attach may cause bad return value from system calls [GH 1731]</span></span>
-* <span data-ttu-id="3c169-284">AF_UNIX 関連のさまざまな問題を修正する [GH 3371]</span><span class="sxs-lookup"><span data-stu-id="3c169-284">Fix a number of AF_UNIX related issues [GH 3371]</span></span>
-* <span data-ttu-id="3c169-285">現在の作業ディレクトリの長さが5文字未満の場合に WSL 相互運用機能が失敗する原因となる問題を修正しました [GH 3379]</span><span class="sxs-lookup"><span data-stu-id="3c169-285">Fix issue that could cause WSL interop to fail if the current working directory is less than 5 characters long [GH 3379]</span></span>
+### <a name="wsl"></a><span data-ttu-id="dea41-281">WSL</span><span class="sxs-lookup"><span data-stu-id="dea41-281">WSL</span></span>
+* <span data-ttu-id="dea41-282">KeQueryPerformanceCounter ではなく KeQueryInterruptTimePrecise を使用してオーバーフローを回避するように WSL を切り替える [GH 3252]</span><span class="sxs-lookup"><span data-stu-id="dea41-282">Switch WSL to use KeQueryInterruptTimePrecise instead of KeQueryPerformanceCounter to avoid overflow [GH 3252]</span></span>
+* <span data-ttu-id="dea41-283">Ptrace をアタッチすると、システムコールから無効な戻り値が返される [GH 1731]</span><span class="sxs-lookup"><span data-stu-id="dea41-283">Ptrace attach may cause bad return value from system calls [GH 1731]</span></span>
+* <span data-ttu-id="dea41-284">AF_UNIX 関連のさまざまな問題を修正する [GH 3371]</span><span class="sxs-lookup"><span data-stu-id="dea41-284">Fix a number of AF_UNIX related issues [GH 3371]</span></span>
+* <span data-ttu-id="dea41-285">現在の作業ディレクトリの長さが5文字未満の場合に WSL 相互運用機能が失敗する原因となる問題を修正しました [GH 3379]</span><span class="sxs-lookup"><span data-stu-id="dea41-285">Fix issue that could cause WSL interop to fail if the current working directory is less than 5 characters long [GH 3379]</span></span>
 
-## <a name="build-18204-skip-ahead"></a><span data-ttu-id="3c169-286">ビルド 18204 (前へスキップ)</span><span class="sxs-lookup"><span data-stu-id="3c169-286">Build 18204 (Skip Ahead)</span></span>
-<span data-ttu-id="3c169-287">ビルド18204の一般的な Windows 情報については、 [windows のブログ](https://blogs.windows.com/windowsexperience/2018/07/25/announcing-windows-10-insider-preview-build-17723-and-build-18204/)を参照してください。</span><span class="sxs-lookup"><span data-stu-id="3c169-287">For general Windows information on build 18204 visit the [Windows Blog](https://blogs.windows.com/windowsexperience/2018/07/25/announcing-windows-10-insider-preview-build-17723-and-build-18204/).</span></span>
+## <a name="build-18204-skip-ahead"></a><span data-ttu-id="dea41-286">ビルド 18204 (前へスキップ)</span><span class="sxs-lookup"><span data-stu-id="dea41-286">Build 18204 (Skip Ahead)</span></span>
+<span data-ttu-id="dea41-287">ビルド18204の一般的な Windows 情報については、 [windows のブログ](https://blogs.windows.com/windowsexperience/2018/07/25/announcing-windows-10-insider-preview-build-17723-and-build-18204/)を参照してください。</span><span class="sxs-lookup"><span data-stu-id="dea41-287">For general Windows information on build 18204 visit the [Windows Blog](https://blogs.windows.com/windowsexperience/2018/07/25/announcing-windows-10-insider-preview-build-17723-and-build-18204/).</span></span>
 
-### <a name="wsl"></a><span data-ttu-id="3c169-288">WSL</span><span class="sxs-lookup"><span data-stu-id="3c169-288">WSL</span></span>
-* <span data-ttu-id="3c169-289">パイプファイルシステム inadvertenly によるエッジトリガー epoll イベントの消去 [GH 3276]</span><span class="sxs-lookup"><span data-stu-id="3c169-289">Pipe filesystem inadvertenly clearing edge-triggered epoll event [GH 3276]</span></span>
-* <span data-ttu-id="3c169-290">NTFS シンボリックリンクによって起動された Win32 実行可能ファイルがシンボリックリンク名を尊重しない [GH 2909]</span><span class="sxs-lookup"><span data-stu-id="3c169-290">Win32 executable launched via NTFS symlink doesn't respect symlink name [GH 2909]</span></span>
+### <a name="wsl"></a><span data-ttu-id="dea41-288">WSL</span><span class="sxs-lookup"><span data-stu-id="dea41-288">WSL</span></span>
+* <span data-ttu-id="dea41-289">パイプファイルシステム inadvertenly によるエッジトリガー epoll イベントの消去 [GH 3276]</span><span class="sxs-lookup"><span data-stu-id="dea41-289">Pipe filesystem inadvertenly clearing edge-triggered epoll event [GH 3276]</span></span>
+* <span data-ttu-id="dea41-290">NTFS シンボリックリンクによって起動された Win32 実行可能ファイルがシンボリックリンク名を尊重しない [GH 2909]</span><span class="sxs-lookup"><span data-stu-id="dea41-290">Win32 executable launched via NTFS symlink doesn't respect symlink name [GH 2909]</span></span>
 
-## <a name="build-17723-fast"></a><span data-ttu-id="3c169-291">ビルド 17723 (高速)</span><span class="sxs-lookup"><span data-stu-id="3c169-291">Build 17723 (Fast)</span></span>
-<span data-ttu-id="3c169-292">ビルド17723の一般的な Windows 情報については、 [windows のブログ](https://blogs.windows.com/windowsexperience/2018/07/25/announcing-windows-10-insider-preview-build-17723-and-build-18204/)を参照してください。</span><span class="sxs-lookup"><span data-stu-id="3c169-292">For general Windows information on build 17723 visit the [Windows Blog](https://blogs.windows.com/windowsexperience/2018/07/25/announcing-windows-10-insider-preview-build-17723-and-build-18204/).</span></span>
+## <a name="build-17723-fast"></a><span data-ttu-id="dea41-291">ビルド 17723 (高速)</span><span class="sxs-lookup"><span data-stu-id="dea41-291">Build 17723 (Fast)</span></span>
+<span data-ttu-id="dea41-292">ビルド17723の一般的な Windows 情報については、 [windows のブログ](https://blogs.windows.com/windowsexperience/2018/07/25/announcing-windows-10-insider-preview-build-17723-and-build-18204/)を参照してください。</span><span class="sxs-lookup"><span data-stu-id="dea41-292">For general Windows information on build 17723 visit the [Windows Blog](https://blogs.windows.com/windowsexperience/2018/07/25/announcing-windows-10-insider-preview-build-17723-and-build-18204/).</span></span>
 
-### <a name="wsl"></a><span data-ttu-id="3c169-293">WSL</span><span class="sxs-lookup"><span data-stu-id="3c169-293">WSL</span></span>
-* <span data-ttu-id="3c169-294">存在しないポートへのループバック接続で1秒間の遅延が発生しないようにする [GH 3286]</span><span class="sxs-lookup"><span data-stu-id="3c169-294">Avoid one second delay failing loopback connections to non-existent ports [GH 3286]</span></span>
-* <span data-ttu-id="3c169-295">/Proc/sys/fs/file-max スタブファイルの追加 [GH 2893]</span><span class="sxs-lookup"><span data-stu-id="3c169-295">Add /proc/sys/fs/file-max stub file [GH 2893]</span></span>
-* <span data-ttu-id="3c169-296">より正確な IPV6 スコープ情報。</span><span class="sxs-lookup"><span data-stu-id="3c169-296">More accurate IPV6 scope information.</span></span>
-* <span data-ttu-id="3c169-297">PR_SET_PTRACER のサポート [GH 3053]</span><span class="sxs-lookup"><span data-stu-id="3c169-297">PR_SET_PTRACER support [GH 3053]</span></span>
-* <span data-ttu-id="3c169-298">パイプファイルシステム inadvertenly によるエッジトリガー epoll イベントの消去 [GH 3276]</span><span class="sxs-lookup"><span data-stu-id="3c169-298">Pipe filesystem inadvertenly clearing edge-triggered epoll event [GH 3276]</span></span>
-* <span data-ttu-id="3c169-299">NTFS シンボリックリンクによって起動された Win32 実行可能ファイルがシンボリックリンク名を尊重しない [GH 2909]</span><span class="sxs-lookup"><span data-stu-id="3c169-299">Win32 executable launched via NTFS symlink doesn't respect symlink name [GH 2909]</span></span>
+### <a name="wsl"></a><span data-ttu-id="dea41-293">WSL</span><span class="sxs-lookup"><span data-stu-id="dea41-293">WSL</span></span>
+* <span data-ttu-id="dea41-294">存在しないポートへのループバック接続で1秒間の遅延が発生しないようにする [GH 3286]</span><span class="sxs-lookup"><span data-stu-id="dea41-294">Avoid one second delay failing loopback connections to non-existent ports [GH 3286]</span></span>
+* <span data-ttu-id="dea41-295">/Proc/sys/fs/file-max スタブファイルの追加 [GH 2893]</span><span class="sxs-lookup"><span data-stu-id="dea41-295">Add /proc/sys/fs/file-max stub file [GH 2893]</span></span>
+* <span data-ttu-id="dea41-296">より正確な IPV6 スコープ情報。</span><span class="sxs-lookup"><span data-stu-id="dea41-296">More accurate IPV6 scope information.</span></span>
+* <span data-ttu-id="dea41-297">PR_SET_PTRACER のサポート [GH 3053]</span><span class="sxs-lookup"><span data-stu-id="dea41-297">PR_SET_PTRACER support [GH 3053]</span></span>
+* <span data-ttu-id="dea41-298">パイプファイルシステム inadvertenly によるエッジトリガー epoll イベントの消去 [GH 3276]</span><span class="sxs-lookup"><span data-stu-id="dea41-298">Pipe filesystem inadvertenly clearing edge-triggered epoll event [GH 3276]</span></span>
+* <span data-ttu-id="dea41-299">NTFS シンボリックリンクによって起動された Win32 実行可能ファイルがシンボリックリンク名を尊重しない [GH 2909]</span><span class="sxs-lookup"><span data-stu-id="dea41-299">Win32 executable launched via NTFS symlink doesn't respect symlink name [GH 2909]</span></span>
 
-## <a name="build-17713"></a><span data-ttu-id="3c169-300">ビルド17713</span><span class="sxs-lookup"><span data-stu-id="3c169-300">Build 17713</span></span>
-<span data-ttu-id="3c169-301">ビルド17713の一般的な Windows 情報については、 [windows のブログ](https://blogs.windows.com/windowsexperience/2018/07/11/announcing-windows-10-insider-preview-build-17713/)を参照してください。</span><span class="sxs-lookup"><span data-stu-id="3c169-301">For general Windows information on build 17713 visit the [Windows Blog](https://blogs.windows.com/windowsexperience/2018/07/11/announcing-windows-10-insider-preview-build-17713/).</span></span>
+## <a name="build-17713"></a><span data-ttu-id="dea41-300">ビルド17713</span><span class="sxs-lookup"><span data-stu-id="dea41-300">Build 17713</span></span>
+<span data-ttu-id="dea41-301">ビルド17713の一般的な Windows 情報については、 [windows のブログ](https://blogs.windows.com/windowsexperience/2018/07/11/announcing-windows-10-insider-preview-build-17713/)を参照してください。</span><span class="sxs-lookup"><span data-stu-id="dea41-301">For general Windows information on build 17713 visit the [Windows Blog](https://blogs.windows.com/windowsexperience/2018/07/11/announcing-windows-10-insider-preview-build-17713/).</span></span>
 
-### <a name="wsl"></a><span data-ttu-id="3c169-302">WSL</span><span class="sxs-lookup"><span data-stu-id="3c169-302">WSL</span></span>
-* <span data-ttu-id="3c169-303">強化されたゾンビサポート [GH 1353]</span><span class="sxs-lookup"><span data-stu-id="3c169-303">Improved zombie support [GH 1353]</span></span>
-* <span data-ttu-id="3c169-304">Windows 相互運用機能の動作を制御するための wsl のエントリを追加する [GH 1493]</span><span class="sxs-lookup"><span data-stu-id="3c169-304">Add wsl.conf entries for controlling Windows interop behavior [GH 1493]</span></span>
+### <a name="wsl"></a><span data-ttu-id="dea41-302">WSL</span><span class="sxs-lookup"><span data-stu-id="dea41-302">WSL</span></span>
+* <span data-ttu-id="dea41-303">強化されたゾンビサポート [GH 1353]</span><span class="sxs-lookup"><span data-stu-id="dea41-303">Improved zombie support [GH 1353]</span></span>
+* <span data-ttu-id="dea41-304">Windows 相互運用機能の動作を制御するための wsl のエントリを追加する [GH 1493]</span><span class="sxs-lookup"><span data-stu-id="dea41-304">Add wsl.conf entries for controlling Windows interop behavior [GH 1493]</span></span>
   ```
     [interop]
 
@@ -314,335 +314,335 @@ wslconfig.exe /terminate <DistributionName>
 
     appendWindowsPath=false # append Windows path to $PATH variable; default is true
   ```
-* <span data-ttu-id="3c169-305">常に UNIX ソケットファミリの種類を返す getsockname でないことを修正する [GH 1774]</span><span class="sxs-lookup"><span data-stu-id="3c169-305">Fix for getsockname not always returning UNIX socket family type [GH 1774]</span></span>
-* <span data-ttu-id="3c169-306">TIOCSTI のサポートを追加する [GH 1863]</span><span class="sxs-lookup"><span data-stu-id="3c169-306">Add support for TIOCSTI [GH 1863]</span></span>
-* <span data-ttu-id="3c169-307">接続処理中の非ブロッキングソケットは、書き込み試行に EAGAIN を返します [GH 2846]</span><span class="sxs-lookup"><span data-stu-id="3c169-307">Non-blocking sockets in the process of connecting should return EAGAIN for write attempts [GH 2846]</span></span>
-* <span data-ttu-id="3c169-308">マウントされた Vhd での相互運用のサポート [GH 3246, 3291]</span><span class="sxs-lookup"><span data-stu-id="3c169-308">Support interop on mounted VHDs [GH 3246, 3291]</span></span>
-* <span data-ttu-id="3c169-309">ルートフォルダーでのアクセス許可チェックの問題の修正 [GH 3304]</span><span class="sxs-lookup"><span data-stu-id="3c169-309">Fix permission checking issue on root folder [GH 3304]</span></span>
-* <span data-ttu-id="3c169-310">TTY キーボード ioctl KDGKBTYPE、KDGKBMODE、および KDSKBMODE のサポートが制限されています。</span><span class="sxs-lookup"><span data-stu-id="3c169-310">Limited support for TTY keyboard ioctls KDGKBTYPE, KDGKBMODE and KDSKBMODE.</span></span>
-* <span data-ttu-id="3c169-311">Windows UI アプリは、バックグラウンドで起動した場合でも実行する必要があります。</span><span class="sxs-lookup"><span data-stu-id="3c169-311">Windows UI apps should execute even when launched in the background.</span></span>
+* <span data-ttu-id="dea41-305">常に UNIX ソケットファミリの種類を返す getsockname でないことを修正する [GH 1774]</span><span class="sxs-lookup"><span data-stu-id="dea41-305">Fix for getsockname not always returning UNIX socket family type [GH 1774]</span></span>
+* <span data-ttu-id="dea41-306">TIOCSTI のサポートを追加する [GH 1863]</span><span class="sxs-lookup"><span data-stu-id="dea41-306">Add support for TIOCSTI [GH 1863]</span></span>
+* <span data-ttu-id="dea41-307">接続処理中の非ブロッキングソケットは、書き込み試行に EAGAIN を返します [GH 2846]</span><span class="sxs-lookup"><span data-stu-id="dea41-307">Non-blocking sockets in the process of connecting should return EAGAIN for write attempts [GH 2846]</span></span>
+* <span data-ttu-id="dea41-308">マウントされた Vhd での相互運用のサポート [GH 3246, 3291]</span><span class="sxs-lookup"><span data-stu-id="dea41-308">Support interop on mounted VHDs [GH 3246, 3291]</span></span>
+* <span data-ttu-id="dea41-309">ルートフォルダーでのアクセス許可チェックの問題の修正 [GH 3304]</span><span class="sxs-lookup"><span data-stu-id="dea41-309">Fix permission checking issue on root folder [GH 3304]</span></span>
+* <span data-ttu-id="dea41-310">TTY キーボード ioctl KDGKBTYPE、KDGKBMODE、および KDSKBMODE のサポートが制限されています。</span><span class="sxs-lookup"><span data-stu-id="dea41-310">Limited support for TTY keyboard ioctls KDGKBTYPE, KDGKBMODE and KDSKBMODE.</span></span>
+* <span data-ttu-id="dea41-311">Windows UI アプリは、バックグラウンドで起動した場合でも実行する必要があります。</span><span class="sxs-lookup"><span data-stu-id="dea41-311">Windows UI apps should execute even when launched in the background.</span></span>
 
-## <a name="build-17704"></a><span data-ttu-id="3c169-312">ビルド17704</span><span class="sxs-lookup"><span data-stu-id="3c169-312">Build 17704</span></span>
-<span data-ttu-id="3c169-313">ビルド17704の一般的な Windows 情報については、 [windows のブログ](https://blogs.windows.com/windowsexperience/2018/06/27/announcing-windows-10-insider-preview-build-17704/)を参照してください。</span><span class="sxs-lookup"><span data-stu-id="3c169-313">For general Windows information on build 17704 visit the [Windows Blog](https://blogs.windows.com/windowsexperience/2018/06/27/announcing-windows-10-insider-preview-build-17704/).</span></span>
+## <a name="build-17704"></a><span data-ttu-id="dea41-312">ビルド17704</span><span class="sxs-lookup"><span data-stu-id="dea41-312">Build 17704</span></span>
+<span data-ttu-id="dea41-313">ビルド17704の一般的な Windows 情報については、 [windows のブログ](https://blogs.windows.com/windowsexperience/2018/06/27/announcing-windows-10-insider-preview-build-17704/)を参照してください。</span><span class="sxs-lookup"><span data-stu-id="dea41-313">For general Windows information on build 17704 visit the [Windows Blog](https://blogs.windows.com/windowsexperience/2018/06/27/announcing-windows-10-insider-preview-build-17704/).</span></span>
 
-### <a name="wsl"></a><span data-ttu-id="3c169-314">WSL</span><span class="sxs-lookup"><span data-stu-id="3c169-314">WSL</span></span>
-* <span data-ttu-id="3c169-315">Wsl-u または--user オプションを追加する [GH 1203]</span><span class="sxs-lookup"><span data-stu-id="3c169-315">Add wsl -u or --user option [GH 1203]</span></span>
-* <span data-ttu-id="3c169-316">高速スタートアップが有効になっているときの WSL 起動の問題を修正する [GH 2576]</span><span class="sxs-lookup"><span data-stu-id="3c169-316">Fix WSL launch issues when fast startup is enabled [GH 2576]</span></span>
-* <span data-ttu-id="3c169-317">Unix ソケットが切断されたピア資格情報を保持する必要がある [GH 3183]</span><span class="sxs-lookup"><span data-stu-id="3c169-317">Unix sockets need to retain disconnected peer credentials [GH 3183]</span></span>
-* <span data-ttu-id="3c169-318">EAGAIN で無制限の非ブロッキング Unix ソケットが失敗する [GH 3191]</span><span class="sxs-lookup"><span data-stu-id="3c169-318">Non-blocking Unix sockets failing indefinitely with EAGAIN [GH 3191]</span></span>
-* <span data-ttu-id="3c169-319">case = off は新しい既定の drvfs マウントの種類 [GH 2937, 3212, 3328]</span><span class="sxs-lookup"><span data-stu-id="3c169-319">case=off is the new default drvfs mount type [GH 2937, 3212, 3328]</span></span>
-    * <span data-ttu-id="3c169-320">詳細については、[ブログ](https://blogs.msdn.microsoft.com/commandline/2018/06/14/improved-per-directory-case-sensitivity-support-in-wsl/)を参照してください。</span><span class="sxs-lookup"><span data-stu-id="3c169-320">See [blog](https://blogs.msdn.microsoft.com/commandline/2018/06/14/improved-per-directory-case-sensitivity-support-in-wsl/) for more information.</span></span>
-* <span data-ttu-id="3c169-321">Wslconfig/terminate を追加して、実行中のディストリビューションを停止します。</span><span class="sxs-lookup"><span data-stu-id="3c169-321">Add wslconfig /terminate to stop running distributions.</span></span>
+### <a name="wsl"></a><span data-ttu-id="dea41-314">WSL</span><span class="sxs-lookup"><span data-stu-id="dea41-314">WSL</span></span>
+* <span data-ttu-id="dea41-315">Wsl-u または--user オプションを追加する [GH 1203]</span><span class="sxs-lookup"><span data-stu-id="dea41-315">Add wsl -u or --user option [GH 1203]</span></span>
+* <span data-ttu-id="dea41-316">高速スタートアップが有効になっているときの WSL 起動の問題を修正する [GH 2576]</span><span class="sxs-lookup"><span data-stu-id="dea41-316">Fix WSL launch issues when fast startup is enabled [GH 2576]</span></span>
+* <span data-ttu-id="dea41-317">Unix ソケットが切断されたピア資格情報を保持する必要がある [GH 3183]</span><span class="sxs-lookup"><span data-stu-id="dea41-317">Unix sockets need to retain disconnected peer credentials [GH 3183]</span></span>
+* <span data-ttu-id="dea41-318">EAGAIN で無制限の非ブロッキング Unix ソケットが失敗する [GH 3191]</span><span class="sxs-lookup"><span data-stu-id="dea41-318">Non-blocking Unix sockets failing indefinitely with EAGAIN [GH 3191]</span></span>
+* <span data-ttu-id="dea41-319">case = off は新しい既定の drvfs マウントの種類 [GH 2937, 3212, 3328]</span><span class="sxs-lookup"><span data-stu-id="dea41-319">case=off is the new default drvfs mount type [GH 2937, 3212, 3328]</span></span>
+    * <span data-ttu-id="dea41-320">詳細については、[ブログ](https://blogs.msdn.microsoft.com/commandline/2018/06/14/improved-per-directory-case-sensitivity-support-in-wsl/)を参照してください。</span><span class="sxs-lookup"><span data-stu-id="dea41-320">See [blog](https://blogs.msdn.microsoft.com/commandline/2018/06/14/improved-per-directory-case-sensitivity-support-in-wsl/) for more information.</span></span>
+* <span data-ttu-id="dea41-321">Wslconfig/terminate を追加して、実行中のディストリビューションを停止します。</span><span class="sxs-lookup"><span data-stu-id="dea41-321">Add wslconfig /terminate to stop running distributions.</span></span>
 
-## <a name="build-17692"></a><span data-ttu-id="3c169-322">ビルド 17692</span><span class="sxs-lookup"><span data-stu-id="3c169-322">Build 17692</span></span>
-<span data-ttu-id="3c169-323">ビルド17692の一般的な Windows 情報については、 [windows のブログ](https://blogs.windows.com/windowsexperience/2018/06/14/announcing-windows-10-insider-preview-build-17692)を参照してください。</span><span class="sxs-lookup"><span data-stu-id="3c169-323">For general Windows information on build 17692 visit the [Windows Blog](https://blogs.windows.com/windowsexperience/2018/06/14/announcing-windows-10-insider-preview-build-17692).</span></span>
+## <a name="build-17692"></a><span data-ttu-id="dea41-322">ビルド 17692</span><span class="sxs-lookup"><span data-stu-id="dea41-322">Build 17692</span></span>
+<span data-ttu-id="dea41-323">ビルド17692の一般的な Windows 情報については、 [windows のブログ](https://blogs.windows.com/windowsexperience/2018/06/14/announcing-windows-10-insider-preview-build-17692)を参照してください。</span><span class="sxs-lookup"><span data-stu-id="dea41-323">For general Windows information on build 17692 visit the [Windows Blog](https://blogs.windows.com/windowsexperience/2018/06/14/announcing-windows-10-insider-preview-build-17692).</span></span>
 
-### <a name="wsl"></a><span data-ttu-id="3c169-324">WSL</span><span class="sxs-lookup"><span data-stu-id="3c169-324">WSL</span></span>
-* <span data-ttu-id="3c169-325">スペースを含むパスを正しく処理しない WSL シェルコンテキストメニューエントリの問題を修正します。</span><span class="sxs-lookup"><span data-stu-id="3c169-325">Fix issue with the WSL shell context menu entries that do not correctly handle paths with spaces.</span></span>
-* <span data-ttu-id="3c169-326">ディレクトリごとの大文字と小文字の区別を拡張属性として公開する</span><span class="sxs-lookup"><span data-stu-id="3c169-326">Expose per-directory case sensitivity as an extended attribute</span></span>
-* <span data-ttu-id="3c169-327">ARM64: キャッシュメンテナンス操作をエミュレートします。</span><span class="sxs-lookup"><span data-stu-id="3c169-327">ARM64: Emulate cache maintenance operations.</span></span> <span data-ttu-id="3c169-328">[Dotnet の問題](https://github.com/dotnet/core/issues/1561)を解決します。</span><span class="sxs-lookup"><span data-stu-id="3c169-328">Resolve [dotnet issue](https://github.com/dotnet/core/issues/1561).</span></span>
-* <span data-ttu-id="3c169-329">DrvFs: エスケープされた文字に対応するプライベート範囲内の文字のみを unescape します。</span><span class="sxs-lookup"><span data-stu-id="3c169-329">DrvFs: only unescape characters in the private range that correspond to an escaped character.</span></span>
+### <a name="wsl"></a><span data-ttu-id="dea41-324">WSL</span><span class="sxs-lookup"><span data-stu-id="dea41-324">WSL</span></span>
+* <span data-ttu-id="dea41-325">スペースを含むパスを正しく処理しない WSL シェルコンテキストメニューエントリの問題を修正します。</span><span class="sxs-lookup"><span data-stu-id="dea41-325">Fix issue with the WSL shell context menu entries that do not correctly handle paths with spaces.</span></span>
+* <span data-ttu-id="dea41-326">ディレクトリごとの大文字と小文字の区別を拡張属性として公開する</span><span class="sxs-lookup"><span data-stu-id="dea41-326">Expose per-directory case sensitivity as an extended attribute</span></span>
+* <span data-ttu-id="dea41-327">ARM64: キャッシュメンテナンス操作をエミュレートします。</span><span class="sxs-lookup"><span data-stu-id="dea41-327">ARM64: Emulate cache maintenance operations.</span></span> <span data-ttu-id="dea41-328">[Dotnet の問題](https://github.com/dotnet/core/issues/1561)を解決します。</span><span class="sxs-lookup"><span data-stu-id="dea41-328">Resolve [dotnet issue](https://github.com/dotnet/core/issues/1561).</span></span>
+* <span data-ttu-id="dea41-329">DrvFs: エスケープされた文字に対応するプライベート範囲内の文字のみを unescape します。</span><span class="sxs-lookup"><span data-stu-id="dea41-329">DrvFs: only unescape characters in the private range that correspond to an escaped character.</span></span>
 
-## <a name="build-17686"></a><span data-ttu-id="3c169-330">ビルド 17686</span><span class="sxs-lookup"><span data-stu-id="3c169-330">Build 17686</span></span>
-<span data-ttu-id="3c169-331">ビルド17686の一般的な Windows 情報については、 [windows のブログ](https://blogs.windows.com/windowsexperience/2018/06/06/announcing-windows-10-insider-preview-build-17686)を参照してください。</span><span class="sxs-lookup"><span data-stu-id="3c169-331">For general Windows information on build 17686 visit the [Windows Blog](https://blogs.windows.com/windowsexperience/2018/06/06/announcing-windows-10-insider-preview-build-17686).</span></span>
+## <a name="build-17686"></a><span data-ttu-id="dea41-330">ビルド 17686</span><span class="sxs-lookup"><span data-stu-id="dea41-330">Build 17686</span></span>
+<span data-ttu-id="dea41-331">ビルド17686の一般的な Windows 情報については、 [windows のブログ](https://blogs.windows.com/windowsexperience/2018/06/06/announcing-windows-10-insider-preview-build-17686)を参照してください。</span><span class="sxs-lookup"><span data-stu-id="dea41-331">For general Windows information on build 17686 visit the [Windows Blog](https://blogs.windows.com/windowsexperience/2018/06/06/announcing-windows-10-insider-preview-build-17686).</span></span>
 
-### <a name="wsl"></a><span data-ttu-id="3c169-332">WSL</span><span class="sxs-lookup"><span data-stu-id="3c169-332">WSL</span></span>
-* <span data-ttu-id="3c169-333">ELF パーサーインタープリターの長さの検証での1つずつのエラーの修正 [GH 3154]</span><span class="sxs-lookup"><span data-stu-id="3c169-333">Fix off-by-one error in ELF parser interpreter length validation [GH 3154]</span></span>
-* <span data-ttu-id="3c169-334">過去の時間を持つ WSL 絶対タイマーが起動しない [GH 3091]</span><span class="sxs-lookup"><span data-stu-id="3c169-334">WSL absolute timers with a time in the past do not fire [GH 3091]</span></span>
-* <span data-ttu-id="3c169-335">新しく作成された再解析ポイントが親ディレクトリに表示されていることを確認します。</span><span class="sxs-lookup"><span data-stu-id="3c169-335">Ensure newly created reparse points are listed as such in the parent directory.</span></span>
-* <span data-ttu-id="3c169-336">DrvFs に大文字と小文字を区別するディレクトリをアトミックに作成します。</span><span class="sxs-lookup"><span data-stu-id="3c169-336">Atomically create case sensitive directories in DrvFs.</span></span>
+### <a name="wsl"></a><span data-ttu-id="dea41-332">WSL</span><span class="sxs-lookup"><span data-stu-id="dea41-332">WSL</span></span>
+* <span data-ttu-id="dea41-333">ELF パーサーインタープリターの長さの検証での1つずつのエラーの修正 [GH 3154]</span><span class="sxs-lookup"><span data-stu-id="dea41-333">Fix off-by-one error in ELF parser interpreter length validation [GH 3154]</span></span>
+* <span data-ttu-id="dea41-334">過去の時間を持つ WSL 絶対タイマーが起動しない [GH 3091]</span><span class="sxs-lookup"><span data-stu-id="dea41-334">WSL absolute timers with a time in the past do not fire [GH 3091]</span></span>
+* <span data-ttu-id="dea41-335">新しく作成された再解析ポイントが親ディレクトリに表示されていることを確認します。</span><span class="sxs-lookup"><span data-stu-id="dea41-335">Ensure newly created reparse points are listed as such in the parent directory.</span></span>
+* <span data-ttu-id="dea41-336">DrvFs に大文字と小文字を区別するディレクトリをアトミックに作成します。</span><span class="sxs-lookup"><span data-stu-id="dea41-336">Atomically create case sensitive directories in DrvFs.</span></span>
 
-## <a name="build-17677"></a><span data-ttu-id="3c169-337">ビルド17677</span><span class="sxs-lookup"><span data-stu-id="3c169-337">Build 17677</span></span>
-<span data-ttu-id="3c169-338">ビルド17677の一般的な Windows 情報については、 [windows のブログ](https://blogs.windows.com/windowsexperience/2018/05/24/announcing-windows-10-insider-preview-build-17677/)を参照してください。</span><span class="sxs-lookup"><span data-stu-id="3c169-338">For general Windows information on build 17677 visit the [Windows Blog](https://blogs.windows.com/windowsexperience/2018/05/24/announcing-windows-10-insider-preview-build-17677/).</span></span>
+## <a name="build-17677"></a><span data-ttu-id="dea41-337">ビルド17677</span><span class="sxs-lookup"><span data-stu-id="dea41-337">Build 17677</span></span>
+<span data-ttu-id="dea41-338">ビルド17677の一般的な Windows 情報については、 [windows のブログ](https://blogs.windows.com/windowsexperience/2018/05/24/announcing-windows-10-insider-preview-build-17677/)を参照してください。</span><span class="sxs-lookup"><span data-stu-id="dea41-338">For general Windows information on build 17677 visit the [Windows Blog](https://blogs.windows.com/windowsexperience/2018/05/24/announcing-windows-10-insider-preview-build-17677/).</span></span>
 
-### <a name="wsl"></a><span data-ttu-id="3c169-339">WSL</span><span class="sxs-lookup"><span data-stu-id="3c169-339">WSL</span></span>
-* <span data-ttu-id="3c169-340">ファイルが存在する場合でも、マルチスレッド操作が ENOENT を返す可能性のある追加の問題を修正しました。</span><span class="sxs-lookup"><span data-stu-id="3c169-340">Fixed an additional issue where multithreaded operations could return ENOENT even though the file exists.</span></span> <span data-ttu-id="3c169-341">[GH 2712]</span><span class="sxs-lookup"><span data-stu-id="3c169-341">[GH 2712]</span></span>
-* <span data-ttu-id="3c169-342">UMCI が有効になっているときの WSL 起動エラーを修正しました。</span><span class="sxs-lookup"><span data-stu-id="3c169-342">Fixed WSL launch failure when UMCI is enabled.</span></span> <span data-ttu-id="3c169-343">[GH 3020]</span><span class="sxs-lookup"><span data-stu-id="3c169-343">[GH 3020]</span></span>
+### <a name="wsl"></a><span data-ttu-id="dea41-339">WSL</span><span class="sxs-lookup"><span data-stu-id="dea41-339">WSL</span></span>
+* <span data-ttu-id="dea41-340">ファイルが存在する場合でも、マルチスレッド操作が ENOENT を返す可能性のある追加の問題を修正しました。</span><span class="sxs-lookup"><span data-stu-id="dea41-340">Fixed an additional issue where multithreaded operations could return ENOENT even though the file exists.</span></span> <span data-ttu-id="dea41-341">[GH 2712]</span><span class="sxs-lookup"><span data-stu-id="dea41-341">[GH 2712]</span></span>
+* <span data-ttu-id="dea41-342">UMCI が有効になっているときの WSL 起動エラーを修正しました。</span><span class="sxs-lookup"><span data-stu-id="dea41-342">Fixed WSL launch failure when UMCI is enabled.</span></span> <span data-ttu-id="dea41-343">[GH 3020]</span><span class="sxs-lookup"><span data-stu-id="dea41-343">[GH 3020]</span></span>
 
-## <a name="build-17666"></a><span data-ttu-id="3c169-344">ビルド17666</span><span class="sxs-lookup"><span data-stu-id="3c169-344">Build 17666</span></span>
-<span data-ttu-id="3c169-345">ビルド17666の一般的な Windows 情報については、 [windows のブログ](https://blogs.windows.com/windowsexperience/2018/05/09/announcing-windows-10-insider-preview-build-17666/)を参照してください。</span><span class="sxs-lookup"><span data-stu-id="3c169-345">For general Windows information on build 17666 visit the [Windows Blog](https://blogs.windows.com/windowsexperience/2018/05/09/announcing-windows-10-insider-preview-build-17666/).</span></span>
+## <a name="build-17666"></a><span data-ttu-id="dea41-344">ビルド17666</span><span class="sxs-lookup"><span data-stu-id="dea41-344">Build 17666</span></span>
+<span data-ttu-id="dea41-345">ビルド17666の一般的な Windows 情報については、 [windows のブログ](https://blogs.windows.com/windowsexperience/2018/05/09/announcing-windows-10-insider-preview-build-17666/)を参照してください。</span><span class="sxs-lookup"><span data-stu-id="dea41-345">For general Windows information on build 17666 visit the [Windows Blog](https://blogs.windows.com/windowsexperience/2018/05/09/announcing-windows-10-insider-preview-build-17666/).</span></span>
 
-### <a name="wsl"></a><span data-ttu-id="3c169-346">WSL</span><span class="sxs-lookup"><span data-stu-id="3c169-346">WSL</span></span>
-#### <a name="warning-there-is-an-issue-preventing-wsl-from-running-on-some-amd-chipsets-gh-3134-a-fix-is-ready-and-making-its-way-to-the-insider-build-branch"></a><span data-ttu-id="3c169-347">警告:一部の AMD チップセットで WSL の実行を妨げる問題があります [GH 3134]。</span><span class="sxs-lookup"><span data-stu-id="3c169-347">WARNING: There is an issue preventing WSL from running on some AMD chipsets [GH 3134].</span></span> <span data-ttu-id="3c169-348">修正の準備ができました。 Insider Build 分岐に変更することができます。</span><span class="sxs-lookup"><span data-stu-id="3c169-348">A fix is ready and making its way to the Insider Build branch.</span></span>
-* <span data-ttu-id="3c169-349">WSL [GH 437, 603, 1836] を起動するには、エクスプローラーのコンテキストメニューを追加します。</span><span class="sxs-lookup"><span data-stu-id="3c169-349">Add explorer context menu to launch WSL [GH 437, 603, 1836].</span></span> <span data-ttu-id="3c169-350">[エクスプローラー] ウィンドウで [保留] をクリックして右クリックします。</span><span class="sxs-lookup"><span data-stu-id="3c169-350">To use hold shift and right-click when in an explorer window.</span></span>
-* <span data-ttu-id="3c169-351">Unix ソケットの非ブロッキング動作の修正 [GH 2822、3100]</span><span class="sxs-lookup"><span data-stu-id="3c169-351">Fix unix socket non-blocking behavior [GH 2822, 3100]</span></span>
-* <span data-ttu-id="3c169-352">GH 2026 で報告されているように、ハングしている NETLINK コマンドを修正しました。</span><span class="sxs-lookup"><span data-stu-id="3c169-352">Fix hanging NETLINK command as reported in GH 2026.</span></span>
-* <span data-ttu-id="3c169-353">マウント伝達フラグ [GH 2911] のサポートを追加します。</span><span class="sxs-lookup"><span data-stu-id="3c169-353">Add support for mount propagation flags [GH 2911].</span></span>
-* <span data-ttu-id="3c169-354">Truncate で inotify イベントが発生しない問題を修正する [GH 2978]。</span><span class="sxs-lookup"><span data-stu-id="3c169-354">Fix issue with truncate not causing inotify events [GH 2978].</span></span>
-* <span data-ttu-id="3c169-355">シェルを使用せずに1つのバイナリを呼び出すには、wsl の--exec オプションを追加します。</span><span class="sxs-lookup"><span data-stu-id="3c169-355">Add --exec option for wsl.exe to invoke a single binary without a shell.</span></span>
-* <span data-ttu-id="3c169-356">特定のディストリビューションを選択するには、wsl のディストリビューションオプションを追加します。</span><span class="sxs-lookup"><span data-stu-id="3c169-356">Add --distribution option for wsl.exe to select a specific distro.</span></span>
+### <a name="wsl"></a><span data-ttu-id="dea41-346">WSL</span><span class="sxs-lookup"><span data-stu-id="dea41-346">WSL</span></span>
+#### <a name="warning-there-is-an-issue-preventing-wsl-from-running-on-some-amd-chipsets-gh-3134-a-fix-is-ready-and-making-its-way-to-the-insider-build-branch"></a><span data-ttu-id="dea41-347">警告:一部の AMD チップセットで WSL の実行を妨げる問題があります [GH 3134]。</span><span class="sxs-lookup"><span data-stu-id="dea41-347">WARNING: There is an issue preventing WSL from running on some AMD chipsets [GH 3134].</span></span> <span data-ttu-id="dea41-348">修正の準備ができました。 Insider Build 分岐に変更することができます。</span><span class="sxs-lookup"><span data-stu-id="dea41-348">A fix is ready and making its way to the Insider Build branch.</span></span>
+* <span data-ttu-id="dea41-349">WSL [GH 437, 603, 1836] を起動するには、エクスプローラーのコンテキストメニューを追加します。</span><span class="sxs-lookup"><span data-stu-id="dea41-349">Add explorer context menu to launch WSL [GH 437, 603, 1836].</span></span> <span data-ttu-id="dea41-350">[エクスプローラー] ウィンドウで [保留] をクリックして右クリックします。</span><span class="sxs-lookup"><span data-stu-id="dea41-350">To use hold shift and right-click when in an explorer window.</span></span>
+* <span data-ttu-id="dea41-351">Unix ソケットの非ブロッキング動作の修正 [GH 2822、3100]</span><span class="sxs-lookup"><span data-stu-id="dea41-351">Fix unix socket non-blocking behavior [GH 2822, 3100]</span></span>
+* <span data-ttu-id="dea41-352">GH 2026 で報告されているように、ハングしている NETLINK コマンドを修正しました。</span><span class="sxs-lookup"><span data-stu-id="dea41-352">Fix hanging NETLINK command as reported in GH 2026.</span></span>
+* <span data-ttu-id="dea41-353">マウント伝達フラグ [GH 2911] のサポートを追加します。</span><span class="sxs-lookup"><span data-stu-id="dea41-353">Add support for mount propagation flags [GH 2911].</span></span>
+* <span data-ttu-id="dea41-354">Truncate で inotify イベントが発生しない問題を修正する [GH 2978]。</span><span class="sxs-lookup"><span data-stu-id="dea41-354">Fix issue with truncate not causing inotify events [GH 2978].</span></span>
+* <span data-ttu-id="dea41-355">シェルを使用せずに1つのバイナリを呼び出すには、wsl の--exec オプションを追加します。</span><span class="sxs-lookup"><span data-stu-id="dea41-355">Add --exec option for wsl.exe to invoke a single binary without a shell.</span></span>
+* <span data-ttu-id="dea41-356">特定のディストリビューションを選択するには、wsl のディストリビューションオプションを追加します。</span><span class="sxs-lookup"><span data-stu-id="dea41-356">Add --distribution option for wsl.exe to select a specific distro.</span></span>
 
-## <a name="build-17655-skip-ahead"></a><span data-ttu-id="3c169-357">ビルド 17655 (前へスキップ)</span><span class="sxs-lookup"><span data-stu-id="3c169-357">Build 17655 (Skip Ahead)</span></span>
-<span data-ttu-id="3c169-358">ビルド17655の一般的な Windows 情報については、 [windows のブログ](https://blogs.windows.com/windowsexperience/2018/04/25/announcing-windows-10-insider-preview-build-17655-for-skip-ahead/)を参照してください。</span><span class="sxs-lookup"><span data-stu-id="3c169-358">For general Windows information on build 17655 visit the [Windows Blog](https://blogs.windows.com/windowsexperience/2018/04/25/announcing-windows-10-insider-preview-build-17655-for-skip-ahead/).</span></span>
+## <a name="build-17655-skip-ahead"></a><span data-ttu-id="dea41-357">ビルド 17655 (前へスキップ)</span><span class="sxs-lookup"><span data-stu-id="dea41-357">Build 17655 (Skip Ahead)</span></span>
+<span data-ttu-id="dea41-358">ビルド17655の一般的な Windows 情報については、 [windows のブログ](https://blogs.windows.com/windowsexperience/2018/04/25/announcing-windows-10-insider-preview-build-17655-for-skip-ahead/)を参照してください。</span><span class="sxs-lookup"><span data-stu-id="dea41-358">For general Windows information on build 17655 visit the [Windows Blog](https://blogs.windows.com/windowsexperience/2018/04/25/announcing-windows-10-insider-preview-build-17655-for-skip-ahead/).</span></span>
 
-### <a name="wsl"></a><span data-ttu-id="3c169-359">WSL</span><span class="sxs-lookup"><span data-stu-id="3c169-359">WSL</span></span>
-* <span data-ttu-id="3c169-360">Dmesg のサポートが制限されています。</span><span class="sxs-lookup"><span data-stu-id="3c169-360">Limited support for dmesg.</span></span> <span data-ttu-id="3c169-361">アプリケーションは、dmesg にログを記録できるようになりました。</span><span class="sxs-lookup"><span data-stu-id="3c169-361">Applications can now log to dmesg.</span></span> <span data-ttu-id="3c169-362">WSL ドライバーは、制限された情報を dmesg に記録します。</span><span class="sxs-lookup"><span data-stu-id="3c169-362">WSL driver logs limited information to dmesg.</span></span> <span data-ttu-id="3c169-363">将来は、この機能を拡張して、ドライバーから他の情報や診断情報を伝達することができます。</span><span class="sxs-lookup"><span data-stu-id="3c169-363">In future, this can be extended to carry other information/diagnostics from the driver.</span></span>
-    * <span data-ttu-id="3c169-364">注: 現在、 `/dev/kmsg` dmesg はデバイスインターフェイスでサポートされています。</span><span class="sxs-lookup"><span data-stu-id="3c169-364">Note: dmesg is currently supported through the `/dev/kmsg` device interface.</span></span> <span data-ttu-id="3c169-365">`syslog`sycall インターフェイスは、まだサポートされていません。</span><span class="sxs-lookup"><span data-stu-id="3c169-365">`syslog` sycall interface is not yet supported.</span></span> <span data-ttu-id="3c169-366">そのため、などの一部の`dmesg`コマンドラインオプション`-S` `-C`は機能しません。</span><span class="sxs-lookup"><span data-stu-id="3c169-366">And, so, some of the `dmesg` command line options such as `-S`, `-C` don't work.</span></span>
-* <span data-ttu-id="3c169-367">ファイルが存在する場合でも、マルチスレッド操作で ENOENT が返される問題を修正しました。</span><span class="sxs-lookup"><span data-stu-id="3c169-367">Fixed an issue where multithreaded operations could return ENOENT even though the file exists.</span></span> <span data-ttu-id="3c169-368">[GH 2712]</span><span class="sxs-lookup"><span data-stu-id="3c169-368">[GH 2712]</span></span>
+### <a name="wsl"></a><span data-ttu-id="dea41-359">WSL</span><span class="sxs-lookup"><span data-stu-id="dea41-359">WSL</span></span>
+* <span data-ttu-id="dea41-360">Dmesg のサポートが制限されています。</span><span class="sxs-lookup"><span data-stu-id="dea41-360">Limited support for dmesg.</span></span> <span data-ttu-id="dea41-361">アプリケーションは、dmesg にログを記録できるようになりました。</span><span class="sxs-lookup"><span data-stu-id="dea41-361">Applications can now log to dmesg.</span></span> <span data-ttu-id="dea41-362">WSL ドライバーは、制限された情報を dmesg に記録します。</span><span class="sxs-lookup"><span data-stu-id="dea41-362">WSL driver logs limited information to dmesg.</span></span> <span data-ttu-id="dea41-363">将来は、この機能を拡張して、ドライバーから他の情報や診断情報を伝達することができます。</span><span class="sxs-lookup"><span data-stu-id="dea41-363">In future, this can be extended to carry other information/diagnostics from the driver.</span></span>
+    * <span data-ttu-id="dea41-364">注: 現在、 `/dev/kmsg` dmesg はデバイスインターフェイスでサポートされています。</span><span class="sxs-lookup"><span data-stu-id="dea41-364">Note: dmesg is currently supported through the `/dev/kmsg` device interface.</span></span> <span data-ttu-id="dea41-365">`syslog`sycall インターフェイスは、まだサポートされていません。</span><span class="sxs-lookup"><span data-stu-id="dea41-365">`syslog` sycall interface is not yet supported.</span></span> <span data-ttu-id="dea41-366">そのため、などの一部の`dmesg`コマンドラインオプション`-S` `-C`は機能しません。</span><span class="sxs-lookup"><span data-stu-id="dea41-366">And, so, some of the `dmesg` command line options such as `-S`, `-C` don't work.</span></span>
+* <span data-ttu-id="dea41-367">ファイルが存在する場合でも、マルチスレッド操作で ENOENT が返される問題を修正しました。</span><span class="sxs-lookup"><span data-stu-id="dea41-367">Fixed an issue where multithreaded operations could return ENOENT even though the file exists.</span></span> <span data-ttu-id="dea41-368">[GH 2712]</span><span class="sxs-lookup"><span data-stu-id="dea41-368">[GH 2712]</span></span>
 
-## <a name="build-17639-skip-ahead"></a><span data-ttu-id="3c169-369">ビルド 17639 (前へスキップ)</span><span class="sxs-lookup"><span data-stu-id="3c169-369">Build 17639 (Skip Ahead)</span></span>
-<span data-ttu-id="3c169-370">ビルド17639の一般的な Windows 情報については、 [windows のブログ](https://blogs.windows.com/windowsexperience/2018/04/04/announcing-windows-10-insider-preview-build-17639-for-skip-ahead/)を参照してください。</span><span class="sxs-lookup"><span data-stu-id="3c169-370">For general Windows information on build 17639 visit the [Windows Blog](https://blogs.windows.com/windowsexperience/2018/04/04/announcing-windows-10-insider-preview-build-17639-for-skip-ahead/).</span></span>
+## <a name="build-17639-skip-ahead"></a><span data-ttu-id="dea41-369">ビルド 17639 (前へスキップ)</span><span class="sxs-lookup"><span data-stu-id="dea41-369">Build 17639 (Skip Ahead)</span></span>
+<span data-ttu-id="dea41-370">ビルド17639の一般的な Windows 情報については、 [windows のブログ](https://blogs.windows.com/windowsexperience/2018/04/04/announcing-windows-10-insider-preview-build-17639-for-skip-ahead/)を参照してください。</span><span class="sxs-lookup"><span data-stu-id="dea41-370">For general Windows information on build 17639 visit the [Windows Blog](https://blogs.windows.com/windowsexperience/2018/04/04/announcing-windows-10-insider-preview-build-17639-for-skip-ahead/).</span></span>
 
-### <a name="wsl"></a><span data-ttu-id="3c169-371">WSL</span><span class="sxs-lookup"><span data-stu-id="3c169-371">WSL</span></span>
-* <span data-ttu-id="3c169-372">ネイティブと一致するように既定の gid とシリアルデバイスのモードを変更する [GH 3042]</span><span class="sxs-lookup"><span data-stu-id="3c169-372">Change default gid and mode of serial devices to match native [GH 3042]</span></span>
-* <span data-ttu-id="3c169-373">DrvFs は拡張属性をサポートするようになりました。</span><span class="sxs-lookup"><span data-stu-id="3c169-373">DrvFs now supports extended attributes.</span></span>
-    * <span data-ttu-id="3c169-374">注:DrvFs では、拡張属性の名前にいくつかの制限があります。</span><span class="sxs-lookup"><span data-stu-id="3c169-374">Note: DrvFs has some limitations on the name of extended attributes.</span></span> <span data-ttu-id="3c169-375">特に、一部の文字 ('/'、': '、'\*' など) は使用できません。また、拡張属性名は、drvfs では大文字と小文字が区別されません。</span><span class="sxs-lookup"><span data-stu-id="3c169-375">In particular, some characters (like '/', ':' and '\*') are not allowed, and extended attribute names are not case sensitive on DrvFs</span></span>
+### <a name="wsl"></a><span data-ttu-id="dea41-371">WSL</span><span class="sxs-lookup"><span data-stu-id="dea41-371">WSL</span></span>
+* <span data-ttu-id="dea41-372">ネイティブと一致するように既定の gid とシリアルデバイスのモードを変更する [GH 3042]</span><span class="sxs-lookup"><span data-stu-id="dea41-372">Change default gid and mode of serial devices to match native [GH 3042]</span></span>
+* <span data-ttu-id="dea41-373">DrvFs は拡張属性をサポートするようになりました。</span><span class="sxs-lookup"><span data-stu-id="dea41-373">DrvFs now supports extended attributes.</span></span>
+    * <span data-ttu-id="dea41-374">注:DrvFs では、拡張属性の名前にいくつかの制限があります。</span><span class="sxs-lookup"><span data-stu-id="dea41-374">Note: DrvFs has some limitations on the name of extended attributes.</span></span> <span data-ttu-id="dea41-375">特に、一部の文字 ('/'、': '、'\*' など) は使用できません。また、拡張属性名は、drvfs では大文字と小文字が区別されません。</span><span class="sxs-lookup"><span data-stu-id="dea41-375">In particular, some characters (like '/', ':' and '\*') are not allowed, and extended attribute names are not case sensitive on DrvFs</span></span>
 
-## <a name="build-17133-fast"></a><span data-ttu-id="3c169-376">ビルド 17133 (高速)</span><span class="sxs-lookup"><span data-stu-id="3c169-376">Build 17133 (Fast)</span></span>
-<span data-ttu-id="3c169-377">ビルド17133の一般的な Windows 情報については、 [windows のブログ](https://blogs.windows.com/windowsexperience/2018/03/27/announcing-windows-10-insider-preview-build-17133-for-fast/)を参照してください。</span><span class="sxs-lookup"><span data-stu-id="3c169-377">For general Windows information on build 17133 visit the [Windows Blog](https://blogs.windows.com/windowsexperience/2018/03/27/announcing-windows-10-insider-preview-build-17133-for-fast/).</span></span>
+## <a name="build-17133-fast"></a><span data-ttu-id="dea41-376">ビルド 17133 (高速)</span><span class="sxs-lookup"><span data-stu-id="dea41-376">Build 17133 (Fast)</span></span>
+<span data-ttu-id="dea41-377">ビルド17133の一般的な Windows 情報については、 [windows のブログ](https://blogs.windows.com/windowsexperience/2018/03/27/announcing-windows-10-insider-preview-build-17133-for-fast/)を参照してください。</span><span class="sxs-lookup"><span data-stu-id="dea41-377">For general Windows information on build 17133 visit the [Windows Blog](https://blogs.windows.com/windowsexperience/2018/03/27/announcing-windows-10-insider-preview-build-17133-for-fast/).</span></span>
 
-### <a name="wsl"></a><span data-ttu-id="3c169-378">WSL</span><span class="sxs-lookup"><span data-stu-id="3c169-378">WSL</span></span>
-* <span data-ttu-id="3c169-379">WSL のハングを修正します。</span><span class="sxs-lookup"><span data-stu-id="3c169-379">Fix for hang in WSL.</span></span> <span data-ttu-id="3c169-380">[GH 3039、3034]</span><span class="sxs-lookup"><span data-stu-id="3c169-380">[GH 3039, 3034]</span></span>
+### <a name="wsl"></a><span data-ttu-id="dea41-378">WSL</span><span class="sxs-lookup"><span data-stu-id="dea41-378">WSL</span></span>
+* <span data-ttu-id="dea41-379">WSL のハングを修正します。</span><span class="sxs-lookup"><span data-stu-id="dea41-379">Fix for hang in WSL.</span></span> <span data-ttu-id="dea41-380">[GH 3039、3034]</span><span class="sxs-lookup"><span data-stu-id="dea41-380">[GH 3039, 3034]</span></span>
 
-## <a name="build-17128-fast"></a><span data-ttu-id="3c169-381">ビルド 17128 (高速)</span><span class="sxs-lookup"><span data-stu-id="3c169-381">Build 17128 (Fast)</span></span>
-<span data-ttu-id="3c169-382">ビルド17128の一般的な Windows 情報については、 [windows のブログ](https://blogs.windows.com/windowsexperience/2018/03/23/announcing-windows-10-insider-preview-build-17128-for-fast/)を参照してください。</span><span class="sxs-lookup"><span data-stu-id="3c169-382">For general Windows information on build 17128 visit the [Windows Blog](https://blogs.windows.com/windowsexperience/2018/03/23/announcing-windows-10-insider-preview-build-17128-for-fast/).</span></span>
+## <a name="build-17128-fast"></a><span data-ttu-id="dea41-381">ビルド 17128 (高速)</span><span class="sxs-lookup"><span data-stu-id="dea41-381">Build 17128 (Fast)</span></span>
+<span data-ttu-id="dea41-382">ビルド17128の一般的な Windows 情報については、 [windows のブログ](https://blogs.windows.com/windowsexperience/2018/03/23/announcing-windows-10-insider-preview-build-17128-for-fast/)を参照してください。</span><span class="sxs-lookup"><span data-stu-id="dea41-382">For general Windows information on build 17128 visit the [Windows Blog](https://blogs.windows.com/windowsexperience/2018/03/23/announcing-windows-10-insider-preview-build-17128-for-fast/).</span></span>
 
-### <a name="wsl"></a><span data-ttu-id="3c169-383">WSL</span><span class="sxs-lookup"><span data-stu-id="3c169-383">WSL</span></span>
-* <span data-ttu-id="3c169-384">なし</span><span class="sxs-lookup"><span data-stu-id="3c169-384">None</span></span>
+### <a name="wsl"></a><span data-ttu-id="dea41-383">WSL</span><span class="sxs-lookup"><span data-stu-id="dea41-383">WSL</span></span>
+* <span data-ttu-id="dea41-384">なし</span><span class="sxs-lookup"><span data-stu-id="dea41-384">None</span></span>
 
-## <a name="build-17627-skip-ahead"></a><span data-ttu-id="3c169-385">ビルド 17627 (前へスキップ)</span><span class="sxs-lookup"><span data-stu-id="3c169-385">Build 17627 (Skip Ahead)</span></span>
-<span data-ttu-id="3c169-386">ビルド17627の一般的な Windows 情報については、 [windows のブログ](https://blogs.windows.com/windowsexperience/2018/03/21/announcing-windows-10-insider-preview-build-17627-for-skip-ahead/)を参照してください。</span><span class="sxs-lookup"><span data-stu-id="3c169-386">For general Windows information on build 17627 visit the [Windows Blog](https://blogs.windows.com/windowsexperience/2018/03/21/announcing-windows-10-insider-preview-build-17627-for-skip-ahead/).</span></span>
+## <a name="build-17627-skip-ahead"></a><span data-ttu-id="dea41-385">ビルド 17627 (前へスキップ)</span><span class="sxs-lookup"><span data-stu-id="dea41-385">Build 17627 (Skip Ahead)</span></span>
+<span data-ttu-id="dea41-386">ビルド17627の一般的な Windows 情報については、 [windows のブログ](https://blogs.windows.com/windowsexperience/2018/03/21/announcing-windows-10-insider-preview-build-17627-for-skip-ahead/)を参照してください。</span><span class="sxs-lookup"><span data-stu-id="dea41-386">For general Windows information on build 17627 visit the [Windows Blog](https://blogs.windows.com/windowsexperience/2018/03/21/announcing-windows-10-insider-preview-build-17627-for-skip-ahead/).</span></span>
 
-### <a name="wsl"></a><span data-ttu-id="3c169-387">WSL</span><span class="sxs-lookup"><span data-stu-id="3c169-387">WSL</span></span>
-* <span data-ttu-id="3c169-388">Futex pi 対応の操作のサポートを追加します。</span><span class="sxs-lookup"><span data-stu-id="3c169-388">Add support for the futex pi-aware operations.</span></span> <span data-ttu-id="3c169-389">[GH 1006]</span><span class="sxs-lookup"><span data-stu-id="3c169-389">[GH 1006]</span></span>
-    * <span data-ttu-id="3c169-390">優先順位は現在サポートされている WSL 機能ではないため、制限がありますが、標準の使用をブロック解除する必要があります。</span><span class="sxs-lookup"><span data-stu-id="3c169-390">Note that priorities are not currently a supported WSL feature so there are limitations, but standard usage should be unblocked.</span></span>
-* <span data-ttu-id="3c169-391">WSL プロセス用の Windows ファイアウォールのサポート。</span><span class="sxs-lookup"><span data-stu-id="3c169-391">Windows firewall support for WSL processes.</span></span> <span data-ttu-id="3c169-392">[GH 1852]</span><span class="sxs-lookup"><span data-stu-id="3c169-392">[GH 1852]</span></span>
-    * <span data-ttu-id="3c169-393">たとえば、WSL python プロセスが任意のポートでリッスンできるようにするには、管理者特権の Windows cmd を使用します。```netsh.exe advfirewall firewall add rule name=wsl_python dir=in action=allow program="C:\users\<username>\appdata\local\packages\canonicalgrouplimited.ubuntuonwindows_79rhkp1fndgsc\localstate\rootfs\usr\bin\python2.7" enable=yes```</span><span class="sxs-lookup"><span data-stu-id="3c169-393">For example, to allow the WSL python process to listen on any port, use the elevated Windows cmd: ```netsh.exe advfirewall firewall add rule name=wsl_python dir=in action=allow program="C:\users\<username>\appdata\local\packages\canonicalgrouplimited.ubuntuonwindows_79rhkp1fndgsc\localstate\rootfs\usr\bin\python2.7" enable=yes```</span></span>
-    * <span data-ttu-id="3c169-394">ファイアウォール規則を追加する方法の詳細については、「[リンク](https://support.microsoft.com/en-us/help/947709/how-to-use-the-netsh-advfirewall-firewall-context-instead-of-the-netsh)」を参照してください。</span><span class="sxs-lookup"><span data-stu-id="3c169-394">For additional details on how to add firewall rules, see [link](https://support.microsoft.com/en-us/help/947709/how-to-use-the-netsh-advfirewall-firewall-context-instead-of-the-netsh)</span></span>
-* <span data-ttu-id="3c169-395">Wsl を使用するときのユーザーの既定のシェルを尊重します。</span><span class="sxs-lookup"><span data-stu-id="3c169-395">Respect user's default shell when using wsl.exe.</span></span> <span data-ttu-id="3c169-396">[GH 2372]</span><span class="sxs-lookup"><span data-stu-id="3c169-396">[GH 2372]</span></span>
-* <span data-ttu-id="3c169-397">すべてのネットワークインターフェイスをイーサネットとして報告します。</span><span class="sxs-lookup"><span data-stu-id="3c169-397">Report all network interfaces as ethernet.</span></span> <span data-ttu-id="3c169-398">[GH 2996]</span><span class="sxs-lookup"><span data-stu-id="3c169-398">[GH 2996]</span></span>
-* <span data-ttu-id="3c169-399">破損した/etc/passwd ファイルの処理が改善されます。</span><span class="sxs-lookup"><span data-stu-id="3c169-399">Better handling of corrupt /etc/passwd file.</span></span> <span data-ttu-id="3c169-400">[GH 3001]</span><span class="sxs-lookup"><span data-stu-id="3c169-400">[GH 3001]</span></span>
+### <a name="wsl"></a><span data-ttu-id="dea41-387">WSL</span><span class="sxs-lookup"><span data-stu-id="dea41-387">WSL</span></span>
+* <span data-ttu-id="dea41-388">Futex pi 対応の操作のサポートを追加します。</span><span class="sxs-lookup"><span data-stu-id="dea41-388">Add support for the futex pi-aware operations.</span></span> <span data-ttu-id="dea41-389">[GH 1006]</span><span class="sxs-lookup"><span data-stu-id="dea41-389">[GH 1006]</span></span>
+    * <span data-ttu-id="dea41-390">優先順位は現在サポートされている WSL 機能ではないため、制限がありますが、標準の使用をブロック解除する必要があります。</span><span class="sxs-lookup"><span data-stu-id="dea41-390">Note that priorities are not currently a supported WSL feature so there are limitations, but standard usage should be unblocked.</span></span>
+* <span data-ttu-id="dea41-391">WSL プロセス用の Windows ファイアウォールのサポート。</span><span class="sxs-lookup"><span data-stu-id="dea41-391">Windows firewall support for WSL processes.</span></span> <span data-ttu-id="dea41-392">[GH 1852]</span><span class="sxs-lookup"><span data-stu-id="dea41-392">[GH 1852]</span></span>
+    * <span data-ttu-id="dea41-393">たとえば、WSL python プロセスが任意のポートでリッスンできるようにするには、管理者特権の Windows cmd を使用します。```netsh.exe advfirewall firewall add rule name=wsl_python dir=in action=allow program="C:\users\<username>\appdata\local\packages\canonicalgrouplimited.ubuntuonwindows_79rhkp1fndgsc\localstate\rootfs\usr\bin\python2.7" enable=yes```</span><span class="sxs-lookup"><span data-stu-id="dea41-393">For example, to allow the WSL python process to listen on any port, use the elevated Windows cmd: ```netsh.exe advfirewall firewall add rule name=wsl_python dir=in action=allow program="C:\users\<username>\appdata\local\packages\canonicalgrouplimited.ubuntuonwindows_79rhkp1fndgsc\localstate\rootfs\usr\bin\python2.7" enable=yes```</span></span>
+    * <span data-ttu-id="dea41-394">ファイアウォール規則を追加する方法の詳細については、「[リンク](https://support.microsoft.com/en-us/help/947709/how-to-use-the-netsh-advfirewall-firewall-context-instead-of-the-netsh)」を参照してください。</span><span class="sxs-lookup"><span data-stu-id="dea41-394">For additional details on how to add firewall rules, see [link](https://support.microsoft.com/en-us/help/947709/how-to-use-the-netsh-advfirewall-firewall-context-instead-of-the-netsh)</span></span>
+* <span data-ttu-id="dea41-395">Wsl を使用するときのユーザーの既定のシェルを尊重します。</span><span class="sxs-lookup"><span data-stu-id="dea41-395">Respect user's default shell when using wsl.exe.</span></span> <span data-ttu-id="dea41-396">[GH 2372]</span><span class="sxs-lookup"><span data-stu-id="dea41-396">[GH 2372]</span></span>
+* <span data-ttu-id="dea41-397">すべてのネットワークインターフェイスをイーサネットとして報告します。</span><span class="sxs-lookup"><span data-stu-id="dea41-397">Report all network interfaces as ethernet.</span></span> <span data-ttu-id="dea41-398">[GH 2996]</span><span class="sxs-lookup"><span data-stu-id="dea41-398">[GH 2996]</span></span>
+* <span data-ttu-id="dea41-399">破損した/etc/passwd ファイルの処理が改善されます。</span><span class="sxs-lookup"><span data-stu-id="dea41-399">Better handling of corrupt /etc/passwd file.</span></span> <span data-ttu-id="dea41-400">[GH 3001]</span><span class="sxs-lookup"><span data-stu-id="dea41-400">[GH 3001]</span></span>
 
-### <a name="console"></a><span data-ttu-id="3c169-401">Console</span><span class="sxs-lookup"><span data-stu-id="3c169-401">Console</span></span>
-* <span data-ttu-id="3c169-402">修正はありません。</span><span class="sxs-lookup"><span data-stu-id="3c169-402">No fixes.</span></span>
+### <a name="console"></a><span data-ttu-id="dea41-401">Console</span><span class="sxs-lookup"><span data-stu-id="dea41-401">Console</span></span>
+* <span data-ttu-id="dea41-402">修正はありません。</span><span class="sxs-lookup"><span data-stu-id="dea41-402">No fixes.</span></span>
 
-### <a name="ltp-results"></a><span data-ttu-id="3c169-403">LTP の結果:</span><span class="sxs-lookup"><span data-stu-id="3c169-403">LTP Results:</span></span>
-<span data-ttu-id="3c169-404">テストを実行中です。</span><span class="sxs-lookup"><span data-stu-id="3c169-404">Testing in progress.</span></span>
+### <a name="ltp-results"></a><span data-ttu-id="dea41-403">LTP の結果:</span><span class="sxs-lookup"><span data-stu-id="dea41-403">LTP Results:</span></span>
+<span data-ttu-id="dea41-404">テストを実行中です。</span><span class="sxs-lookup"><span data-stu-id="dea41-404">Testing in progress.</span></span>
 
-## <a name="build-17618-skip-ahead"></a><span data-ttu-id="3c169-405">ビルド 17618 (前へスキップ)</span><span class="sxs-lookup"><span data-stu-id="3c169-405">Build 17618 (Skip Ahead)</span></span>
-<span data-ttu-id="3c169-406">ビルド17618の一般的な Windows 情報については、 [windows のブログ](https://blogs.windows.com/windowsexperience/2018/03/07/announcing-windows-10-insider-preview-build-17618-skip-ahead/)を参照してください。</span><span class="sxs-lookup"><span data-stu-id="3c169-406">For general Windows information on build 17618 visit the [Windows Blog](https://blogs.windows.com/windowsexperience/2018/03/07/announcing-windows-10-insider-preview-build-17618-skip-ahead/).</span></span>
+## <a name="build-17618-skip-ahead"></a><span data-ttu-id="dea41-405">ビルド 17618 (前へスキップ)</span><span class="sxs-lookup"><span data-stu-id="dea41-405">Build 17618 (Skip Ahead)</span></span>
+<span data-ttu-id="dea41-406">ビルド17618の一般的な Windows 情報については、 [windows のブログ](https://blogs.windows.com/windowsexperience/2018/03/07/announcing-windows-10-insider-preview-build-17618-skip-ahead/)を参照してください。</span><span class="sxs-lookup"><span data-stu-id="dea41-406">For general Windows information on build 17618 visit the [Windows Blog](https://blogs.windows.com/windowsexperience/2018/03/07/announcing-windows-10-insider-preview-build-17618-skip-ahead/).</span></span>
 
-### <a name="wsl"></a><span data-ttu-id="3c169-407">WSL</span><span class="sxs-lookup"><span data-stu-id="3c169-407">WSL</span></span>
-* <span data-ttu-id="3c169-408">NT interop の擬似コンソール機能の導入 [GH 988、1366、1433、1542、2370、2406]。</span><span class="sxs-lookup"><span data-stu-id="3c169-408">Introduce pseudoconsole functionality for NT interop [GH 988, 1366, 1433, 1542, 2370, 2406].</span></span>
-* <span data-ttu-id="3c169-409">レガシインストールメカニズム (lxrun) は非推奨となりました。</span><span class="sxs-lookup"><span data-stu-id="3c169-409">The legacy install mechanism (lxrun.exe) has been deprecated.</span></span> <span data-ttu-id="3c169-410">ディストリビューションのインストールに関してサポートされているメカニズムは、Microsoft Store を使用することです。</span><span class="sxs-lookup"><span data-stu-id="3c169-410">The supported mechanism for installing distributions is through the Microsoft Store.</span></span>
+### <a name="wsl"></a><span data-ttu-id="dea41-407">WSL</span><span class="sxs-lookup"><span data-stu-id="dea41-407">WSL</span></span>
+* <span data-ttu-id="dea41-408">NT interop の擬似コンソール機能の導入 [GH 988、1366、1433、1542、2370、2406]。</span><span class="sxs-lookup"><span data-stu-id="dea41-408">Introduce pseudoconsole functionality for NT interop [GH 988, 1366, 1433, 1542, 2370, 2406].</span></span>
+* <span data-ttu-id="dea41-409">レガシインストールメカニズム (lxrun) は非推奨となりました。</span><span class="sxs-lookup"><span data-stu-id="dea41-409">The legacy install mechanism (lxrun.exe) has been deprecated.</span></span> <span data-ttu-id="dea41-410">ディストリビューションのインストールに関してサポートされているメカニズムは、Microsoft Store を使用することです。</span><span class="sxs-lookup"><span data-stu-id="dea41-410">The supported mechanism for installing distributions is through the Microsoft Store.</span></span>
 
-### <a name="console"></a><span data-ttu-id="3c169-411">Console</span><span class="sxs-lookup"><span data-stu-id="3c169-411">Console</span></span>
-* <span data-ttu-id="3c169-412">修正はありません。</span><span class="sxs-lookup"><span data-stu-id="3c169-412">No fixes.</span></span>
+### <a name="console"></a><span data-ttu-id="dea41-411">Console</span><span class="sxs-lookup"><span data-stu-id="dea41-411">Console</span></span>
+* <span data-ttu-id="dea41-412">修正はありません。</span><span class="sxs-lookup"><span data-stu-id="dea41-412">No fixes.</span></span>
 
-### <a name="ltp-results"></a><span data-ttu-id="3c169-413">LTP の結果:</span><span class="sxs-lookup"><span data-stu-id="3c169-413">LTP Results:</span></span>
-<span data-ttu-id="3c169-414">テストを実行中です。</span><span class="sxs-lookup"><span data-stu-id="3c169-414">Testing in progress.</span></span>
+### <a name="ltp-results"></a><span data-ttu-id="dea41-413">LTP の結果:</span><span class="sxs-lookup"><span data-stu-id="dea41-413">LTP Results:</span></span>
+<span data-ttu-id="dea41-414">テストを実行中です。</span><span class="sxs-lookup"><span data-stu-id="dea41-414">Testing in progress.</span></span>
 
-## <a name="build-17110"></a><span data-ttu-id="3c169-415">ビルド 17110</span><span class="sxs-lookup"><span data-stu-id="3c169-415">Build 17110</span></span>
-<span data-ttu-id="3c169-416">ビルド17110の一般的な Windows 情報については、 [windows のブログ](https://blogs.windows.com/windowsexperience/2018/02/27/announcing-windows-10-insider-preview-build-17110-fast/)を参照してください。</span><span class="sxs-lookup"><span data-stu-id="3c169-416">For general Windows information on build 17110 visit the [Windows Blog](https://blogs.windows.com/windowsexperience/2018/02/27/announcing-windows-10-insider-preview-build-17110-fast/).</span></span>
+## <a name="build-17110"></a><span data-ttu-id="dea41-415">ビルド 17110</span><span class="sxs-lookup"><span data-stu-id="dea41-415">Build 17110</span></span>
+<span data-ttu-id="dea41-416">ビルド17110の一般的な Windows 情報については、 [windows のブログ](https://blogs.windows.com/windowsexperience/2018/02/27/announcing-windows-10-insider-preview-build-17110-fast/)を参照してください。</span><span class="sxs-lookup"><span data-stu-id="dea41-416">For general Windows information on build 17110 visit the [Windows Blog](https://blogs.windows.com/windowsexperience/2018/02/27/announcing-windows-10-insider-preview-build-17110-fast/).</span></span>
 
-### <a name="wsl"></a><span data-ttu-id="3c169-417">WSL</span><span class="sxs-lookup"><span data-stu-id="3c169-417">WSL</span></span>
-* <span data-ttu-id="3c169-418">/Init を Windows から終了することを許可します [GH 2928]。</span><span class="sxs-lookup"><span data-stu-id="3c169-418">Allow /init to be terminated from Windows [GH 2928].</span></span>
-* <span data-ttu-id="3c169-419">DrvFs では、既定でディレクトリごとの大文字小文字の区別が使用されるようになりました ("case = dir" マウントオプションと同等)。</span><span class="sxs-lookup"><span data-stu-id="3c169-419">DrvFs now uses per-directory case sensitivity by default (equivalent to the “case=dir” mount option).</span></span>
-    * <span data-ttu-id="3c169-420">"Case = force" (以前の動作) を使用するには、レジストリキーを設定する必要があります。</span><span class="sxs-lookup"><span data-stu-id="3c169-420">Using “case=force” (the old behavior) requires setting a registry key.</span></span> <span data-ttu-id="3c169-421">次のコマンドを実行して、使用する必要がある場合は "case = force" を有効にします。 reg add HKLM\SYSTEM\CurrentControlSet\Services\lxss/v DrvFsAllowForceCaseSensitivity/t REG_DWORD/d 1</span><span class="sxs-lookup"><span data-stu-id="3c169-421">Run the following command to enable “case=force” if you need to use it: reg add HKLM\SYSTEM\CurrentControlSet\Services\lxss /v DrvFsAllowForceCaseSensitivity /t REG_DWORD /d 1</span></span>
-    * <span data-ttu-id="3c169-422">以前のバージョンの Windows で wsl で作成された既存のディレクトリがあり、大文字と小文字を区別する必要がある場合は、fsutil を使用し<path>て大文字と小文字を区別するように指定します。 fsutil .exe ファイル setcasesensitiveinfo enable</span><span class="sxs-lookup"><span data-stu-id="3c169-422">If you have existing directories created with WSL in older version of Windows which need to be case sensitive, use fsutil.exe to mark them as case sensitive: fsutil.exe file setcasesensitiveinfo <path> enable</span></span>
-* <span data-ttu-id="3c169-423">Uname syscall から返された NULL の終了文字列。</span><span class="sxs-lookup"><span data-stu-id="3c169-423">NULL terminate strings returned from the uname syscall.</span></span>
+### <a name="wsl"></a><span data-ttu-id="dea41-417">WSL</span><span class="sxs-lookup"><span data-stu-id="dea41-417">WSL</span></span>
+* <span data-ttu-id="dea41-418">/Init を Windows から終了することを許可します [GH 2928]。</span><span class="sxs-lookup"><span data-stu-id="dea41-418">Allow /init to be terminated from Windows [GH 2928].</span></span>
+* <span data-ttu-id="dea41-419">DrvFs では、既定でディレクトリごとの大文字小文字の区別が使用されるようになりました ("case = dir" マウントオプションと同等)。</span><span class="sxs-lookup"><span data-stu-id="dea41-419">DrvFs now uses per-directory case sensitivity by default (equivalent to the “case=dir” mount option).</span></span>
+    * <span data-ttu-id="dea41-420">"Case = force" (以前の動作) を使用するには、レジストリキーを設定する必要があります。</span><span class="sxs-lookup"><span data-stu-id="dea41-420">Using “case=force” (the old behavior) requires setting a registry key.</span></span> <span data-ttu-id="dea41-421">次のコマンドを実行して、使用する必要がある場合は "case = force" を有効にします。 reg add HKLM\SYSTEM\CurrentControlSet\Services\lxss/v DrvFsAllowForceCaseSensitivity/t REG_DWORD/d 1</span><span class="sxs-lookup"><span data-stu-id="dea41-421">Run the following command to enable “case=force” if you need to use it: reg add HKLM\SYSTEM\CurrentControlSet\Services\lxss /v DrvFsAllowForceCaseSensitivity /t REG_DWORD /d 1</span></span>
+    * <span data-ttu-id="dea41-422">以前のバージョンの Windows で wsl で作成された既存のディレクトリがあり、大文字と小文字を区別する必要がある場合は、fsutil を使用し<path>て大文字と小文字を区別するように指定します。 fsutil .exe ファイル setcasesensitiveinfo enable</span><span class="sxs-lookup"><span data-stu-id="dea41-422">If you have existing directories created with WSL in older version of Windows which need to be case sensitive, use fsutil.exe to mark them as case sensitive: fsutil.exe file setcasesensitiveinfo <path> enable</span></span>
+* <span data-ttu-id="dea41-423">Uname syscall から返された NULL の終了文字列。</span><span class="sxs-lookup"><span data-stu-id="dea41-423">NULL terminate strings returned from the uname syscall.</span></span>
 
-### <a name="console"></a><span data-ttu-id="3c169-424">Console</span><span class="sxs-lookup"><span data-stu-id="3c169-424">Console</span></span>
-* <span data-ttu-id="3c169-425">修正はありません。</span><span class="sxs-lookup"><span data-stu-id="3c169-425">No fixes.</span></span>
+### <a name="console"></a><span data-ttu-id="dea41-424">Console</span><span class="sxs-lookup"><span data-stu-id="dea41-424">Console</span></span>
+* <span data-ttu-id="dea41-425">修正はありません。</span><span class="sxs-lookup"><span data-stu-id="dea41-425">No fixes.</span></span>
 
-### <a name="ltp-results"></a><span data-ttu-id="3c169-426">LTP の結果:</span><span class="sxs-lookup"><span data-stu-id="3c169-426">LTP Results:</span></span>
-<span data-ttu-id="3c169-427">テストを実行中です。</span><span class="sxs-lookup"><span data-stu-id="3c169-427">Testing in progress.</span></span>
+### <a name="ltp-results"></a><span data-ttu-id="dea41-426">LTP の結果:</span><span class="sxs-lookup"><span data-stu-id="dea41-426">LTP Results:</span></span>
+<span data-ttu-id="dea41-427">テストを実行中です。</span><span class="sxs-lookup"><span data-stu-id="dea41-427">Testing in progress.</span></span>
 
-## <a name="build-17107"></a><span data-ttu-id="3c169-428">ビルド17107</span><span class="sxs-lookup"><span data-stu-id="3c169-428">Build 17107</span></span>
-<span data-ttu-id="3c169-429">ビルド17107の一般的な Windows 情報については、 [windows のブログ](https://blogs.windows.com/windowsexperience/2018/02/23/announcing-windows-10-insider-preview-build-17107-fast-ring/)を参照してください。</span><span class="sxs-lookup"><span data-stu-id="3c169-429">For general Windows information on build 17107 visit the [Windows Blog](https://blogs.windows.com/windowsexperience/2018/02/23/announcing-windows-10-insider-preview-build-17107-fast-ring/).</span></span>
+## <a name="build-17107"></a><span data-ttu-id="dea41-428">ビルド17107</span><span class="sxs-lookup"><span data-stu-id="dea41-428">Build 17107</span></span>
+<span data-ttu-id="dea41-429">ビルド17107の一般的な Windows 情報については、 [windows のブログ](https://blogs.windows.com/windowsexperience/2018/02/23/announcing-windows-10-insider-preview-build-17107-fast-ring/)を参照してください。</span><span class="sxs-lookup"><span data-stu-id="dea41-429">For general Windows information on build 17107 visit the [Windows Blog](https://blogs.windows.com/windowsexperience/2018/02/23/announcing-windows-10-insider-preview-build-17107-fast-ring/).</span></span>
 
-### <a name="wsl"></a><span data-ttu-id="3c169-430">WSL</span><span class="sxs-lookup"><span data-stu-id="3c169-430">WSL</span></span>
-* <span data-ttu-id="3c169-431">マスター pty エンドポイントで TCSETSF と TCSETSF をサポートする [GH 2552]。</span><span class="sxs-lookup"><span data-stu-id="3c169-431">Support TCSETSF and TCSETSW on master pty endpoints [GH 2552].</span></span>
-* <span data-ttu-id="3c169-432">相互運用プロセスを同時に開始すると、EINVAL [GH 2813] になります。</span><span class="sxs-lookup"><span data-stu-id="3c169-432">Starting simultaneous interop processes can result in EINVAL [GH 2813].</span></span>
-* <span data-ttu-id="3c169-433">/Proc/pid/status. に適切なトレースの状態を表示するように PTRACE_ATTACH を修正します。</span><span class="sxs-lookup"><span data-stu-id="3c169-433">Fix PTRACE_ATTACH to show proper tracing status in /proc/pid/status.</span></span>
-* <span data-ttu-id="3c169-434">CLEARTID フラグと SETTID フラグの両方で複製された短い有効期間のプロセスが、TID アドレスをクリアせずに終了する可能性がある競合を修正しました。</span><span class="sxs-lookup"><span data-stu-id="3c169-434">Fix race where short-lived processes cloned with both the CLEARTID and SETTID flags could exit without clearing the TID address.</span></span>
-* <span data-ttu-id="3c169-435">17093より前のビルドから移動するときに、Linux ファイルシステムディレクトリをアップグレードするときにメッセージを表示します。</span><span class="sxs-lookup"><span data-stu-id="3c169-435">Display a message when upgrading the Linux file system directories when moving from a pre-17093 build.</span></span> <span data-ttu-id="3c169-436">17093ファイルシステムの変更の詳細については、 [17093](https://github.com/MicrosoftDocs/WSL/blob/live/WSL/release-notes.md#build-17093)のリリースノートを参照してください。</span><span class="sxs-lookup"><span data-stu-id="3c169-436">For more details on the 17093 file system changes, see the release notes for [17093](https://github.com/MicrosoftDocs/WSL/blob/live/WSL/release-notes.md#build-17093).</span></span>
+### <a name="wsl"></a><span data-ttu-id="dea41-430">WSL</span><span class="sxs-lookup"><span data-stu-id="dea41-430">WSL</span></span>
+* <span data-ttu-id="dea41-431">マスター pty エンドポイントで TCSETSF と TCSETSF をサポートする [GH 2552]。</span><span class="sxs-lookup"><span data-stu-id="dea41-431">Support TCSETSF and TCSETSW on master pty endpoints [GH 2552].</span></span>
+* <span data-ttu-id="dea41-432">相互運用プロセスを同時に開始すると、EINVAL [GH 2813] になります。</span><span class="sxs-lookup"><span data-stu-id="dea41-432">Starting simultaneous interop processes can result in EINVAL [GH 2813].</span></span>
+* <span data-ttu-id="dea41-433">/Proc/pid/status. に適切なトレースの状態を表示するように PTRACE_ATTACH を修正します。</span><span class="sxs-lookup"><span data-stu-id="dea41-433">Fix PTRACE_ATTACH to show proper tracing status in /proc/pid/status.</span></span>
+* <span data-ttu-id="dea41-434">CLEARTID フラグと SETTID フラグの両方で複製された短い有効期間のプロセスが、TID アドレスをクリアせずに終了する可能性がある競合を修正しました。</span><span class="sxs-lookup"><span data-stu-id="dea41-434">Fix race where short-lived processes cloned with both the CLEARTID and SETTID flags could exit without clearing the TID address.</span></span>
+* <span data-ttu-id="dea41-435">17093より前のビルドから移動するときに、Linux ファイルシステムディレクトリをアップグレードするときにメッセージを表示します。</span><span class="sxs-lookup"><span data-stu-id="dea41-435">Display a message when upgrading the Linux file system directories when moving from a pre-17093 build.</span></span> <span data-ttu-id="dea41-436">17093ファイルシステムの変更の詳細については、 [17093](https://github.com/MicrosoftDocs/WSL/blob/live/WSL/release-notes.md#build-17093)のリリースノートを参照してください。</span><span class="sxs-lookup"><span data-stu-id="dea41-436">For more details on the 17093 file system changes, see the release notes for [17093](https://github.com/MicrosoftDocs/WSL/blob/live/WSL/release-notes.md#build-17093).</span></span>
 
-### <a name="console"></a><span data-ttu-id="3c169-437">Console</span><span class="sxs-lookup"><span data-stu-id="3c169-437">Console</span></span>
-* <span data-ttu-id="3c169-438">修正はありません。</span><span class="sxs-lookup"><span data-stu-id="3c169-438">No fixes.</span></span>
+### <a name="console"></a><span data-ttu-id="dea41-437">Console</span><span class="sxs-lookup"><span data-stu-id="dea41-437">Console</span></span>
+* <span data-ttu-id="dea41-438">修正はありません。</span><span class="sxs-lookup"><span data-stu-id="dea41-438">No fixes.</span></span>
 
-### <a name="ltp-results"></a><span data-ttu-id="3c169-439">LTP の結果:</span><span class="sxs-lookup"><span data-stu-id="3c169-439">LTP Results:</span></span>
-<span data-ttu-id="3c169-440">テストを実行中です。</span><span class="sxs-lookup"><span data-stu-id="3c169-440">Testing in progress.</span></span>
+### <a name="ltp-results"></a><span data-ttu-id="dea41-439">LTP の結果:</span><span class="sxs-lookup"><span data-stu-id="dea41-439">LTP Results:</span></span>
+<span data-ttu-id="dea41-440">テストを実行中です。</span><span class="sxs-lookup"><span data-stu-id="dea41-440">Testing in progress.</span></span>
 
-## <a name="build-17101"></a><span data-ttu-id="3c169-441">ビルド17101</span><span class="sxs-lookup"><span data-stu-id="3c169-441">Build 17101</span></span>
-<span data-ttu-id="3c169-442">ビルド17101の一般的な Windows 情報については、 [windows のブログ](https://blogs.windows.com/windowsexperience/2018/02/14/announcing-windows-10-insider-preview-build-17101-fast-build-17604-skip-ahead/)を参照してください。</span><span class="sxs-lookup"><span data-stu-id="3c169-442">For general Windows information on build 17101 visit the [Windows Blog](https://blogs.windows.com/windowsexperience/2018/02/14/announcing-windows-10-insider-preview-build-17101-fast-build-17604-skip-ahead/).</span></span>
+## <a name="build-17101"></a><span data-ttu-id="dea41-441">ビルド17101</span><span class="sxs-lookup"><span data-stu-id="dea41-441">Build 17101</span></span>
+<span data-ttu-id="dea41-442">ビルド17101の一般的な Windows 情報については、 [windows のブログ](https://blogs.windows.com/windowsexperience/2018/02/14/announcing-windows-10-insider-preview-build-17101-fast-build-17604-skip-ahead/)を参照してください。</span><span class="sxs-lookup"><span data-stu-id="dea41-442">For general Windows information on build 17101 visit the [Windows Blog](https://blogs.windows.com/windowsexperience/2018/02/14/announcing-windows-10-insider-preview-build-17101-fast-build-17604-skip-ahead/).</span></span>
 
-### <a name="wsl"></a><span data-ttu-id="3c169-443">WSL</span><span class="sxs-lookup"><span data-stu-id="3c169-443">WSL</span></span>
-* <span data-ttu-id="3c169-444">Signalfd のサポート。</span><span class="sxs-lookup"><span data-stu-id="3c169-444">Support for signalfd.</span></span> <span data-ttu-id="3c169-445">[GH 129]</span><span class="sxs-lookup"><span data-stu-id="3c169-445">[GH 129]</span></span>
-* <span data-ttu-id="3c169-446">ファイル名に無効な NTFS 文字を含むファイル名は、プライベート Unicode 文字としてエンコードすることによってサポートされます。</span><span class="sxs-lookup"><span data-stu-id="3c169-446">Support file-names containing illegal NTFS characters by encoding them as private Unicode characters.</span></span> <span data-ttu-id="3c169-447">[GH 1514]</span><span class="sxs-lookup"><span data-stu-id="3c169-447">[GH 1514]</span></span>
-* <span data-ttu-id="3c169-448">書き込みがサポートされていない場合、自動マウントは読み取り専用にフォールバックします。</span><span class="sxs-lookup"><span data-stu-id="3c169-448">Auto mount will fallback to read-only when write is not supported.</span></span> <span data-ttu-id="3c169-449">[GH 2603]</span><span class="sxs-lookup"><span data-stu-id="3c169-449">[GH 2603]</span></span>
-* <span data-ttu-id="3c169-450">Unicode サロゲートペア (絵文字文字など) の貼り付けを許可します。</span><span class="sxs-lookup"><span data-stu-id="3c169-450">Allow pasting of Unicode surrogate pairs (like emoji characters).</span></span> <span data-ttu-id="3c169-451">[GH 2765]</span><span class="sxs-lookup"><span data-stu-id="3c169-451">[GH 2765]</span></span>
-* <span data-ttu-id="3c169-452">/Proc および/sys の疑似ファイルは、select、poll、epoll、et al から読み取りおよび書き込み準備を返す必要があります。 [GH 2838]</span><span class="sxs-lookup"><span data-stu-id="3c169-452">Pseudo-files in /proc and /sys should return read and write ready from select, poll, epoll, et al. [GH 2838]</span></span>
-* <span data-ttu-id="3c169-453">レジストリが改ざんされているか、または破損している場合に、サービスが無限ループに入る可能性のある問題を修正しました。</span><span class="sxs-lookup"><span data-stu-id="3c169-453">Fix issue that could cause service to go into infinite loop when the registry has been tampered with or is corrupt.</span></span>
-* <span data-ttu-id="3c169-454">Iproute2 の新しい (アップストリーム 4.14) バージョンで動作するように netlink メッセージを修正します。</span><span class="sxs-lookup"><span data-stu-id="3c169-454">Fix netlink messages to work with newer (upstream 4.14) version of iproute2.</span></span>
+### <a name="wsl"></a><span data-ttu-id="dea41-443">WSL</span><span class="sxs-lookup"><span data-stu-id="dea41-443">WSL</span></span>
+* <span data-ttu-id="dea41-444">Signalfd のサポート。</span><span class="sxs-lookup"><span data-stu-id="dea41-444">Support for signalfd.</span></span> <span data-ttu-id="dea41-445">[GH 129]</span><span class="sxs-lookup"><span data-stu-id="dea41-445">[GH 129]</span></span>
+* <span data-ttu-id="dea41-446">ファイル名に無効な NTFS 文字を含むファイル名は、プライベート Unicode 文字としてエンコードすることによってサポートされます。</span><span class="sxs-lookup"><span data-stu-id="dea41-446">Support file-names containing illegal NTFS characters by encoding them as private Unicode characters.</span></span> <span data-ttu-id="dea41-447">[GH 1514]</span><span class="sxs-lookup"><span data-stu-id="dea41-447">[GH 1514]</span></span>
+* <span data-ttu-id="dea41-448">書き込みがサポートされていない場合、自動マウントは読み取り専用にフォールバックします。</span><span class="sxs-lookup"><span data-stu-id="dea41-448">Auto mount will fallback to read-only when write is not supported.</span></span> <span data-ttu-id="dea41-449">[GH 2603]</span><span class="sxs-lookup"><span data-stu-id="dea41-449">[GH 2603]</span></span>
+* <span data-ttu-id="dea41-450">Unicode サロゲートペア (絵文字文字など) の貼り付けを許可します。</span><span class="sxs-lookup"><span data-stu-id="dea41-450">Allow pasting of Unicode surrogate pairs (like emoji characters).</span></span> <span data-ttu-id="dea41-451">[GH 2765]</span><span class="sxs-lookup"><span data-stu-id="dea41-451">[GH 2765]</span></span>
+* <span data-ttu-id="dea41-452">/Proc および/sys の疑似ファイルは、select、poll、epoll、et al から読み取りおよび書き込み準備を返す必要があります。 [GH 2838]</span><span class="sxs-lookup"><span data-stu-id="dea41-452">Pseudo-files in /proc and /sys should return read and write ready from select, poll, epoll, et al. [GH 2838]</span></span>
+* <span data-ttu-id="dea41-453">レジストリが改ざんされているか、または破損している場合に、サービスが無限ループに入る可能性のある問題を修正しました。</span><span class="sxs-lookup"><span data-stu-id="dea41-453">Fix issue that could cause service to go into infinite loop when the registry has been tampered with or is corrupt.</span></span>
+* <span data-ttu-id="dea41-454">Iproute2 の新しい (アップストリーム 4.14) バージョンで動作するように netlink メッセージを修正します。</span><span class="sxs-lookup"><span data-stu-id="dea41-454">Fix netlink messages to work with newer (upstream 4.14) version of iproute2.</span></span>
 
-### <a name="console"></a><span data-ttu-id="3c169-455">Console</span><span class="sxs-lookup"><span data-stu-id="3c169-455">Console</span></span>
-* <span data-ttu-id="3c169-456">修正はありません。</span><span class="sxs-lookup"><span data-stu-id="3c169-456">No fixes.</span></span>
+### <a name="console"></a><span data-ttu-id="dea41-455">Console</span><span class="sxs-lookup"><span data-stu-id="dea41-455">Console</span></span>
+* <span data-ttu-id="dea41-456">修正はありません。</span><span class="sxs-lookup"><span data-stu-id="dea41-456">No fixes.</span></span>
 
-### <a name="ltp-results"></a><span data-ttu-id="3c169-457">LTP の結果:</span><span class="sxs-lookup"><span data-stu-id="3c169-457">LTP Results:</span></span>
-<span data-ttu-id="3c169-458">テストを実行中です。</span><span class="sxs-lookup"><span data-stu-id="3c169-458">Testing in progress.</span></span>
+### <a name="ltp-results"></a><span data-ttu-id="dea41-457">LTP の結果:</span><span class="sxs-lookup"><span data-stu-id="dea41-457">LTP Results:</span></span>
+<span data-ttu-id="dea41-458">テストを実行中です。</span><span class="sxs-lookup"><span data-stu-id="dea41-458">Testing in progress.</span></span>
 
-## <a name="build-17093"></a><span data-ttu-id="3c169-459">ビルド17093</span><span class="sxs-lookup"><span data-stu-id="3c169-459">Build 17093</span></span>
-<span data-ttu-id="3c169-460">ビルド17093の一般的な Windows 情報については、 [windows のブログ](https://blogs.windows.com/windowsexperience/2018/02/07/announcing-windows-10-insider-preview-build-17093-pc/)を参照してください。</span><span class="sxs-lookup"><span data-stu-id="3c169-460">For general Windows information on build 17093 visit the [Windows Blog](https://blogs.windows.com/windowsexperience/2018/02/07/announcing-windows-10-insider-preview-build-17093-pc/).</span></span>
+## <a name="build-17093"></a><span data-ttu-id="dea41-459">ビルド17093</span><span class="sxs-lookup"><span data-stu-id="dea41-459">Build 17093</span></span>
+<span data-ttu-id="dea41-460">ビルド17093の一般的な Windows 情報については、 [windows のブログ](https://blogs.windows.com/windowsexperience/2018/02/07/announcing-windows-10-insider-preview-build-17093-pc/)を参照してください。</span><span class="sxs-lookup"><span data-stu-id="dea41-460">For general Windows information on build 17093 visit the [Windows Blog](https://blogs.windows.com/windowsexperience/2018/02/07/announcing-windows-10-insider-preview-build-17093-pc/).</span></span>
 
-#### <a name="important"></a><span data-ttu-id="3c169-461">重要:</span><span class="sxs-lookup"><span data-stu-id="3c169-461">Important:</span></span>
-<span data-ttu-id="3c169-462">このビルドにアップグレードした後に初めて WSL を開始するときは、Linux ファイルシステムディレクトリをアップグレードする作業を実行する必要があります。</span><span class="sxs-lookup"><span data-stu-id="3c169-462">When starting WSL for the first time after upgrading to this build, it needs to perform some work upgrading the Linux file system directories.</span></span> <span data-ttu-id="3c169-463">この処理には数分かかる場合があるため、WSL の開始に時間がかかることがあります。</span><span class="sxs-lookup"><span data-stu-id="3c169-463">This may take up to several minutes, so WSL may appear to start slowly.</span></span> <span data-ttu-id="3c169-464">これは、ストアからインストールされた各ディストリビューションにつき1回のみ発生します。</span><span class="sxs-lookup"><span data-stu-id="3c169-464">This should only happen once for each distribution you have installed from the store.</span></span>
-* <span data-ttu-id="3c169-465">DrvFs での大文字と小文字の区別のサポートが向上しました。</span><span class="sxs-lookup"><span data-stu-id="3c169-465">Improved case sensitivity support in DrvFs.</span></span>
-    * <span data-ttu-id="3c169-466">DrvFs では、ディレクトリごとの大文字小文字の区別がサポートされるようになりました。</span><span class="sxs-lookup"><span data-stu-id="3c169-466">DrvFs now supports per-directory case sensitivity.</span></span> <span data-ttu-id="3c169-467">これは、ディレクトリに設定できる新しいフラグで、これらのディレクトリ内のすべての操作を大文字と小文字を区別して扱う必要があることを示します。これにより、Windows アプリケーションでも大文字と小文字のみが異なるファイルを正しく開くことができます。</span><span class="sxs-lookup"><span data-stu-id="3c169-467">This is a new flag that can be set on directories to indicate all operations in those directories should be treated as case sensitive, which allows even Windows applications to correctly open files that differ only by case.</span></span>
-    * <span data-ttu-id="3c169-468">DrvFs には、ディレクトリごとに大文字と小文字の区別を制御する新しいマウントオプションがあります。</span><span class="sxs-lookup"><span data-stu-id="3c169-468">DrvFs has new mount options controlling case sensitivity on a per-directory basis</span></span>
-        * <span data-ttu-id="3c169-469">case = force: すべてのディレクトリは大文字と小文字を区別して処理されます (ドライブのルートを除く)。</span><span class="sxs-lookup"><span data-stu-id="3c169-469">case=force: all directories are treated as case sensitive (except for the drive root).</span></span> <span data-ttu-id="3c169-470">WSL で作成された新しいディレクトリは、大文字と小文字が区別されます。</span><span class="sxs-lookup"><span data-stu-id="3c169-470">New directories created with WSL are marked as case sensitive.</span></span> <span data-ttu-id="3c169-471">これは、新しいディレクトリの大文字小文字の区別をマークする場合を除き、従来の動作です。</span><span class="sxs-lookup"><span data-stu-id="3c169-471">This is the legacy behavior except for marking new directories case sensitive.</span></span>
-        * <span data-ttu-id="3c169-472">case = dir: ディレクトリごとの大文字小文字の区別フラグを持つディレクトリのみが、大文字と小文字を区別して扱われます。他のディレクトリでは大文字と小文字が区別されます。</span><span class="sxs-lookup"><span data-stu-id="3c169-472">case=dir: only directories with the per-directory case sensitivity flag are treated as case sensitive; other directories are case insensitive.</span></span> <span data-ttu-id="3c169-473">WSL で作成された新しいディレクトリは、大文字と小文字が区別されます。</span><span class="sxs-lookup"><span data-stu-id="3c169-473">New directories created with WSL are marked as case sensitive.</span></span>
-        * <span data-ttu-id="3c169-474">case = off: ディレクトリごとの大文字小文字の区別フラグを持つディレクトリのみが、大文字と小文字を区別して扱われます。他のディレクトリでは大文字と小文字が区別されます。</span><span class="sxs-lookup"><span data-stu-id="3c169-474">case=off: only directories with the per-directory case sensitivity flag are treated as case sensitive; other directories are case insensitive.</span></span> <span data-ttu-id="3c169-475">WSL で作成された新しいディレクトリは、大文字と小文字が区別されません。</span><span class="sxs-lookup"><span data-stu-id="3c169-475">New directories created with WSL are marked as case insensitive.</span></span>
-    * <span data-ttu-id="3c169-476">注: 以前のリリースで WSL によって作成されたディレクトリには、このフラグが設定されていないため、"case = dir" オプションを使用した場合、は大文字と小文字が区別されません。</span><span class="sxs-lookup"><span data-stu-id="3c169-476">Note: directories created by WSL in previous releases do not have this flag set, so will not be treated as case sensitive if you use the “case=dir” option.</span></span> <span data-ttu-id="3c169-477">既存のディレクトリにこのフラグを設定する方法は近日中に予定されています。</span><span class="sxs-lookup"><span data-stu-id="3c169-477">A way to set this flag on existing directories is coming soon.</span></span>
-    * <span data-ttu-id="3c169-478">これらのオプションを使用してマウントする例 (既存のドライブの場合は、別のオプションでマウントする前にマウントを解除する必要があります): sudo mount-t drvfs C:/mnt/c case = dir</span><span class="sxs-lookup"><span data-stu-id="3c169-478">Example of mounting with these options (for existing drives, you must first unmount before you can mount with different options): sudo mount -t drvfs C: /mnt/c -o case=dir</span></span>
-    * <span data-ttu-id="3c169-479">ここでは、case = force は引き続き既定のオプションです。</span><span class="sxs-lookup"><span data-stu-id="3c169-479">For now, case=force is still the default option.</span></span> <span data-ttu-id="3c169-480">これは、将来、case = dir に変更されます。</span><span class="sxs-lookup"><span data-stu-id="3c169-480">This will be changed to case=dir in the future.</span></span>
-* <span data-ttu-id="3c169-481">DrvFs をマウントするときに Windows パスでスラッシュを使用できるようになりました。例: sudo mount-t drvfs/server/mnt/share</span><span class="sxs-lookup"><span data-stu-id="3c169-481">You can now use forward slashes in Windows paths when mounting DrvFs, e.g.: sudo mount -t drvfs //server/share /mnt/share</span></span>
-* <span data-ttu-id="3c169-482">WSL は、インスタンスの開始時に/etc/fstab ファイルを処理するようになりました [GH 2636]。</span><span class="sxs-lookup"><span data-stu-id="3c169-482">WSL now processes the /etc/fstab file during instance start [GH 2636].</span></span>
-    * <span data-ttu-id="3c169-483">これは、DrvFs ドライブを自動的にマウントする前に行われます。fstab によって既にマウントされているドライブは自動的には再マウントされないため、特定のドライブのマウントポイントを変更することができます。</span><span class="sxs-lookup"><span data-stu-id="3c169-483">This is done prior to automatically mounting DrvFs drives; any drives that were already mounted by fstab will not be remounted automatically, allowing you to change the mount point for specific drives.</span></span>
-    * <span data-ttu-id="3c169-484">この動作は、wsl を使用して無効にすることができます。</span><span class="sxs-lookup"><span data-stu-id="3c169-484">This behavior can be turned off using wsl.conf.</span></span>
-* <span data-ttu-id="3c169-485">Mount、mountinfo、および mountstats の各ファイルは、円記号やスペースなどの特殊文字を正しくエスケープします [GH 2799]</span><span class="sxs-lookup"><span data-stu-id="3c169-485">The mount, mountinfo and mountstats files in /proc properly escape special characters like backslashes and spaces [GH 2799]</span></span>
-* <span data-ttu-id="3c169-486">WSL シンボリックリンクなどの DrvFs を使用して作成された特殊なファイル、またはメタデータが有効になっている場合は、fifo とソケットを使用して、Windows からコピーおよび移動できるようになりました。</span><span class="sxs-lookup"><span data-stu-id="3c169-486">Special files created with DrvFs such as WSL symbolic links, or fifos and sockets when metadata is enabled, can now be copied and moved from Windows.</span></span>
+#### <a name="important"></a><span data-ttu-id="dea41-461">重要:</span><span class="sxs-lookup"><span data-stu-id="dea41-461">Important:</span></span>
+<span data-ttu-id="dea41-462">このビルドにアップグレードした後に初めて WSL を開始するときは、Linux ファイルシステムディレクトリをアップグレードする作業を実行する必要があります。</span><span class="sxs-lookup"><span data-stu-id="dea41-462">When starting WSL for the first time after upgrading to this build, it needs to perform some work upgrading the Linux file system directories.</span></span> <span data-ttu-id="dea41-463">この処理には数分かかる場合があるため、WSL の開始に時間がかかることがあります。</span><span class="sxs-lookup"><span data-stu-id="dea41-463">This may take up to several minutes, so WSL may appear to start slowly.</span></span> <span data-ttu-id="dea41-464">これは、ストアからインストールされた各ディストリビューションにつき1回のみ発生します。</span><span class="sxs-lookup"><span data-stu-id="dea41-464">This should only happen once for each distribution you have installed from the store.</span></span>
+* <span data-ttu-id="dea41-465">DrvFs での大文字と小文字の区別のサポートが向上しました。</span><span class="sxs-lookup"><span data-stu-id="dea41-465">Improved case sensitivity support in DrvFs.</span></span>
+    * <span data-ttu-id="dea41-466">DrvFs では、ディレクトリごとの大文字小文字の区別がサポートされるようになりました。</span><span class="sxs-lookup"><span data-stu-id="dea41-466">DrvFs now supports per-directory case sensitivity.</span></span> <span data-ttu-id="dea41-467">これは、ディレクトリに設定できる新しいフラグで、これらのディレクトリ内のすべての操作を大文字と小文字を区別して扱う必要があることを示します。これにより、Windows アプリケーションでも大文字と小文字のみが異なるファイルを正しく開くことができます。</span><span class="sxs-lookup"><span data-stu-id="dea41-467">This is a new flag that can be set on directories to indicate all operations in those directories should be treated as case sensitive, which allows even Windows applications to correctly open files that differ only by case.</span></span>
+    * <span data-ttu-id="dea41-468">DrvFs には、ディレクトリごとに大文字と小文字の区別を制御する新しいマウントオプションがあります。</span><span class="sxs-lookup"><span data-stu-id="dea41-468">DrvFs has new mount options controlling case sensitivity on a per-directory basis</span></span>
+        * <span data-ttu-id="dea41-469">case = force: すべてのディレクトリは大文字と小文字を区別して処理されます (ドライブのルートを除く)。</span><span class="sxs-lookup"><span data-stu-id="dea41-469">case=force: all directories are treated as case sensitive (except for the drive root).</span></span> <span data-ttu-id="dea41-470">WSL で作成された新しいディレクトリは、大文字と小文字が区別されます。</span><span class="sxs-lookup"><span data-stu-id="dea41-470">New directories created with WSL are marked as case sensitive.</span></span> <span data-ttu-id="dea41-471">これは、新しいディレクトリの大文字小文字の区別をマークする場合を除き、従来の動作です。</span><span class="sxs-lookup"><span data-stu-id="dea41-471">This is the legacy behavior except for marking new directories case sensitive.</span></span>
+        * <span data-ttu-id="dea41-472">case = dir: ディレクトリごとの大文字小文字の区別フラグを持つディレクトリのみが、大文字と小文字を区別して扱われます。他のディレクトリでは大文字と小文字が区別されます。</span><span class="sxs-lookup"><span data-stu-id="dea41-472">case=dir: only directories with the per-directory case sensitivity flag are treated as case sensitive; other directories are case insensitive.</span></span> <span data-ttu-id="dea41-473">WSL で作成された新しいディレクトリは、大文字と小文字が区別されます。</span><span class="sxs-lookup"><span data-stu-id="dea41-473">New directories created with WSL are marked as case sensitive.</span></span>
+        * <span data-ttu-id="dea41-474">case = off: ディレクトリごとの大文字小文字の区別フラグを持つディレクトリのみが、大文字と小文字を区別して扱われます。他のディレクトリでは大文字と小文字が区別されます。</span><span class="sxs-lookup"><span data-stu-id="dea41-474">case=off: only directories with the per-directory case sensitivity flag are treated as case sensitive; other directories are case insensitive.</span></span> <span data-ttu-id="dea41-475">WSL で作成された新しいディレクトリは、大文字と小文字が区別されません。</span><span class="sxs-lookup"><span data-stu-id="dea41-475">New directories created with WSL are marked as case insensitive.</span></span>
+    * <span data-ttu-id="dea41-476">注: 以前のリリースで WSL によって作成されたディレクトリには、このフラグが設定されていないため、"case = dir" オプションを使用した場合、は大文字と小文字が区別されません。</span><span class="sxs-lookup"><span data-stu-id="dea41-476">Note: directories created by WSL in previous releases do not have this flag set, so will not be treated as case sensitive if you use the “case=dir” option.</span></span> <span data-ttu-id="dea41-477">既存のディレクトリにこのフラグを設定する方法は近日中に予定されています。</span><span class="sxs-lookup"><span data-stu-id="dea41-477">A way to set this flag on existing directories is coming soon.</span></span>
+    * <span data-ttu-id="dea41-478">これらのオプションを使用してマウントする例 (既存のドライブの場合は、別のオプションでマウントする前にマウントを解除する必要があります): sudo mount-t drvfs C:/mnt/c case = dir</span><span class="sxs-lookup"><span data-stu-id="dea41-478">Example of mounting with these options (for existing drives, you must first unmount before you can mount with different options): sudo mount -t drvfs C: /mnt/c -o case=dir</span></span>
+    * <span data-ttu-id="dea41-479">ここでは、case = force は引き続き既定のオプションです。</span><span class="sxs-lookup"><span data-stu-id="dea41-479">For now, case=force is still the default option.</span></span> <span data-ttu-id="dea41-480">これは、将来、case = dir に変更されます。</span><span class="sxs-lookup"><span data-stu-id="dea41-480">This will be changed to case=dir in the future.</span></span>
+* <span data-ttu-id="dea41-481">DrvFs をマウントするときに Windows パスでスラッシュを使用できるようになりました。例: sudo mount-t drvfs/server/mnt/share</span><span class="sxs-lookup"><span data-stu-id="dea41-481">You can now use forward slashes in Windows paths when mounting DrvFs, e.g.: sudo mount -t drvfs //server/share /mnt/share</span></span>
+* <span data-ttu-id="dea41-482">WSL は、インスタンスの開始時に/etc/fstab ファイルを処理するようになりました [GH 2636]。</span><span class="sxs-lookup"><span data-stu-id="dea41-482">WSL now processes the /etc/fstab file during instance start [GH 2636].</span></span>
+    * <span data-ttu-id="dea41-483">これは、DrvFs ドライブを自動的にマウントする前に行われます。fstab によって既にマウントされているドライブは自動的には再マウントされないため、特定のドライブのマウントポイントを変更することができます。</span><span class="sxs-lookup"><span data-stu-id="dea41-483">This is done prior to automatically mounting DrvFs drives; any drives that were already mounted by fstab will not be remounted automatically, allowing you to change the mount point for specific drives.</span></span>
+    * <span data-ttu-id="dea41-484">この動作は、wsl を使用して無効にすることができます。</span><span class="sxs-lookup"><span data-stu-id="dea41-484">This behavior can be turned off using wsl.conf.</span></span>
+* <span data-ttu-id="dea41-485">Mount、mountinfo、および mountstats の各ファイルは、円記号やスペースなどの特殊文字を正しくエスケープします [GH 2799]</span><span class="sxs-lookup"><span data-stu-id="dea41-485">The mount, mountinfo and mountstats files in /proc properly escape special characters like backslashes and spaces [GH 2799]</span></span>
+* <span data-ttu-id="dea41-486">WSL シンボリックリンクなどの DrvFs を使用して作成された特殊なファイル、またはメタデータが有効になっている場合は、fifo とソケットを使用して、Windows からコピーおよび移動できるようになりました。</span><span class="sxs-lookup"><span data-stu-id="dea41-486">Special files created with DrvFs such as WSL symbolic links, or fifos and sockets when metadata is enabled, can now be copied and moved from Windows.</span></span>
 
-#### <a name="wsl-is-more-configurable-with-wslconf"></a><span data-ttu-id="3c169-487">WSL は wsl. conf で構成可能</span><span class="sxs-lookup"><span data-stu-id="3c169-487">WSL is more configurable with wsl.conf</span></span>
-<span data-ttu-id="3c169-488">WSL で特定の機能を自動的に構成するためのメソッドを追加しました。これは、サブシステムを起動するたびに適用されます。</span><span class="sxs-lookup"><span data-stu-id="3c169-488">We added a method for you to automatically configure certain functionality in WSL that will be applied every time you launch the subsystem.</span></span> <span data-ttu-id="3c169-489">これには、自動マウントオプションとネットワーク構成が含まれます。</span><span class="sxs-lookup"><span data-stu-id="3c169-489">This includes automount options and network configuration.</span></span> <span data-ttu-id="3c169-490">詳細については、次のブログ投稿を参照してください。 https://aka.ms/wslconf</span><span class="sxs-lookup"><span data-stu-id="3c169-490">Learn more about it in our blog post at: https://aka.ms/wslconf</span></span>
+#### <a name="wsl-is-more-configurable-with-wslconf"></a><span data-ttu-id="dea41-487">WSL は wsl. conf で構成可能</span><span class="sxs-lookup"><span data-stu-id="dea41-487">WSL is more configurable with wsl.conf</span></span>
+<span data-ttu-id="dea41-488">WSL で特定の機能を自動的に構成するためのメソッドを追加しました。これは、サブシステムを起動するたびに適用されます。</span><span class="sxs-lookup"><span data-stu-id="dea41-488">We added a method for you to automatically configure certain functionality in WSL that will be applied every time you launch the subsystem.</span></span> <span data-ttu-id="dea41-489">これには、自動マウントオプションとネットワーク構成が含まれます。</span><span class="sxs-lookup"><span data-stu-id="dea41-489">This includes automount options and network configuration.</span></span> <span data-ttu-id="dea41-490">詳細については、次のブログ投稿を参照してください。 https://aka.ms/wslconf</span><span class="sxs-lookup"><span data-stu-id="dea41-490">Learn more about it in our blog post at: https://aka.ms/wslconf</span></span>
 
-#### <a name="afunix-allows-socket-connections-between-linux-processes-on-wsl-and-windows-native-processes"></a><span data-ttu-id="3c169-491">AF_UNIX は、WSL および Windows ネイティブプロセスでの Linux プロセス間のソケット接続を許可します。</span><span class="sxs-lookup"><span data-stu-id="3c169-491">AF_UNIX allows socket connections between Linux processes on WSL and Windows native processes</span></span>
-<span data-ttu-id="3c169-492">WSL と Windows アプリケーションは、Unix ソケット経由で相互に通信できるようになりました。</span><span class="sxs-lookup"><span data-stu-id="3c169-492">WSL and Windows applications can now communicate with each other over Unix sockets.</span></span> <span data-ttu-id="3c169-493">Windows でサービスを実行し、Windows と WSL アプリの両方で使用できるようにする場合を考えてみましょう。</span><span class="sxs-lookup"><span data-stu-id="3c169-493">Imagine you want to run a service in Windows and make it available to both Windows and WSL apps.</span></span> <span data-ttu-id="3c169-494">これは、Unix ソケットで可能です。</span><span class="sxs-lookup"><span data-stu-id="3c169-494">Now, that’s possible with Unix sockets.</span></span> <span data-ttu-id="3c169-495">詳細については、ブログの投稿の「」を参照してください。 https://aka.ms/afunixinterop</span><span class="sxs-lookup"><span data-stu-id="3c169-495">Read more in our blog post at https://aka.ms/afunixinterop</span></span>
+#### <a name="af_unix-allows-socket-connections-between-linux-processes-on-wsl-and-windows-native-processes"></a><span data-ttu-id="dea41-491">AF_UNIX は、WSL および Windows ネイティブプロセスでの Linux プロセス間のソケット接続を許可します。</span><span class="sxs-lookup"><span data-stu-id="dea41-491">AF_UNIX allows socket connections between Linux processes on WSL and Windows native processes</span></span>
+<span data-ttu-id="dea41-492">WSL と Windows アプリケーションは、Unix ソケット経由で相互に通信できるようになりました。</span><span class="sxs-lookup"><span data-stu-id="dea41-492">WSL and Windows applications can now communicate with each other over Unix sockets.</span></span> <span data-ttu-id="dea41-493">Windows でサービスを実行し、Windows と WSL アプリの両方で使用できるようにする場合を考えてみましょう。</span><span class="sxs-lookup"><span data-stu-id="dea41-493">Imagine you want to run a service in Windows and make it available to both Windows and WSL apps.</span></span> <span data-ttu-id="dea41-494">これは、Unix ソケットで可能です。</span><span class="sxs-lookup"><span data-stu-id="dea41-494">Now, that’s possible with Unix sockets.</span></span> <span data-ttu-id="dea41-495">詳細については、ブログの投稿の「」を参照してください。 https://aka.ms/afunixinterop</span><span class="sxs-lookup"><span data-stu-id="dea41-495">Read more in our blog post at https://aka.ms/afunixinterop</span></span>
 
-### <a name="wsl"></a><span data-ttu-id="3c169-496">WSL</span><span class="sxs-lookup"><span data-stu-id="3c169-496">WSL</span></span>
-* <span data-ttu-id="3c169-497">MAP_NORESERVE を使用した mmap () のサポート [GH 121、2784]</span><span class="sxs-lookup"><span data-stu-id="3c169-497">Support mmap() with MAP_NORESERVE [GH 121, 2784]</span></span>
-* <span data-ttu-id="3c169-498">Support CLONE_PTRACE and CLONE_UNTRACED [GH 121, 2781]</span><span class="sxs-lookup"><span data-stu-id="3c169-498">Support CLONE_PTRACE and CLONE_UNTRACED [GH 121, 2781]</span></span>
-* <span data-ttu-id="3c169-499">複製で SIGCHLD 以外の終了シグナルを処理する [GH 121, 2781]</span><span class="sxs-lookup"><span data-stu-id="3c169-499">Handle non-SIGCHLD termination signal in clone [GH 121, 2781]</span></span>
-* <span data-ttu-id="3c169-500">スタブ/proc/sys/fs/inotify/max_user_instances と/proc/sys/fs/inotify/max_user_watches [GH 1705]</span><span class="sxs-lookup"><span data-stu-id="3c169-500">Stub /proc/sys/fs/inotify/max_user_instances and /proc/sys/fs/inotify/max_user_watches [GH 1705]</span></span>
-* <span data-ttu-id="3c169-501">0以外のオフセットで読み込みヘッダーを含む ELF バイナリの読み込み中にエラーが発生した [GH 1884]</span><span class="sxs-lookup"><span data-stu-id="3c169-501">Error loading ELF binaries that contain load headers with non-zero offsets [GH 1884]</span></span>
-* <span data-ttu-id="3c169-502">イメージの読み込み時に、ページの末尾のバイトをゼロアウトします。</span><span class="sxs-lookup"><span data-stu-id="3c169-502">Zero out trailing page bytes when loading images.</span></span>
-* <span data-ttu-id="3c169-503">Execve がサイレントモードでプロセスを終了するケースを減らす</span><span class="sxs-lookup"><span data-stu-id="3c169-503">Reduce cases where execve silently terminates process</span></span>
+### <a name="wsl"></a><span data-ttu-id="dea41-496">WSL</span><span class="sxs-lookup"><span data-stu-id="dea41-496">WSL</span></span>
+* <span data-ttu-id="dea41-497">MAP_NORESERVE を使用した mmap () のサポート [GH 121、2784]</span><span class="sxs-lookup"><span data-stu-id="dea41-497">Support mmap() with MAP_NORESERVE [GH 121, 2784]</span></span>
+* <span data-ttu-id="dea41-498">Support CLONE_PTRACE and CLONE_UNTRACED [GH 121, 2781]</span><span class="sxs-lookup"><span data-stu-id="dea41-498">Support CLONE_PTRACE and CLONE_UNTRACED [GH 121, 2781]</span></span>
+* <span data-ttu-id="dea41-499">複製で SIGCHLD 以外の終了シグナルを処理する [GH 121, 2781]</span><span class="sxs-lookup"><span data-stu-id="dea41-499">Handle non-SIGCHLD termination signal in clone [GH 121, 2781]</span></span>
+* <span data-ttu-id="dea41-500">スタブ/proc/sys/fs/inotify/max_user_instances と/proc/sys/fs/inotify/max_user_watches [GH 1705]</span><span class="sxs-lookup"><span data-stu-id="dea41-500">Stub /proc/sys/fs/inotify/max_user_instances and /proc/sys/fs/inotify/max_user_watches [GH 1705]</span></span>
+* <span data-ttu-id="dea41-501">0以外のオフセットで読み込みヘッダーを含む ELF バイナリの読み込み中にエラーが発生した [GH 1884]</span><span class="sxs-lookup"><span data-stu-id="dea41-501">Error loading ELF binaries that contain load headers with non-zero offsets [GH 1884]</span></span>
+* <span data-ttu-id="dea41-502">イメージの読み込み時に、ページの末尾のバイトをゼロアウトします。</span><span class="sxs-lookup"><span data-stu-id="dea41-502">Zero out trailing page bytes when loading images.</span></span>
+* <span data-ttu-id="dea41-503">Execve がサイレントモードでプロセスを終了するケースを減らす</span><span class="sxs-lookup"><span data-stu-id="dea41-503">Reduce cases where execve silently terminates process</span></span>
 
-### <a name="console"></a><span data-ttu-id="3c169-504">Console</span><span class="sxs-lookup"><span data-stu-id="3c169-504">Console</span></span>
-* <span data-ttu-id="3c169-505">修正はありません。</span><span class="sxs-lookup"><span data-stu-id="3c169-505">No fixes.</span></span>
+### <a name="console"></a><span data-ttu-id="dea41-504">Console</span><span class="sxs-lookup"><span data-stu-id="dea41-504">Console</span></span>
+* <span data-ttu-id="dea41-505">修正はありません。</span><span class="sxs-lookup"><span data-stu-id="dea41-505">No fixes.</span></span>
 
-### <a name="ltp-results"></a><span data-ttu-id="3c169-506">LTP の結果:</span><span class="sxs-lookup"><span data-stu-id="3c169-506">LTP Results:</span></span>
-<span data-ttu-id="3c169-507">テストを実行中です。</span><span class="sxs-lookup"><span data-stu-id="3c169-507">Testing in progress.</span></span>
+### <a name="ltp-results"></a><span data-ttu-id="dea41-506">LTP の結果:</span><span class="sxs-lookup"><span data-stu-id="dea41-506">LTP Results:</span></span>
+<span data-ttu-id="dea41-507">テストを実行中です。</span><span class="sxs-lookup"><span data-stu-id="dea41-507">Testing in progress.</span></span>
 
-## <a name="build-17083"></a><span data-ttu-id="3c169-508">ビルド 17083</span><span class="sxs-lookup"><span data-stu-id="3c169-508">Build 17083</span></span>
-<span data-ttu-id="3c169-509">ビルド17083の一般的な Windows 情報については、 [windows のブログ](https://blogs.windows.com/windowsexperience/2018/01/24/announcing-windows-10-insider-preview-build-17083-for-pc/)を参照してください。</span><span class="sxs-lookup"><span data-stu-id="3c169-509">For general Windows information on build 17083 visit the [Windows Blog](https://blogs.windows.com/windowsexperience/2018/01/24/announcing-windows-10-insider-preview-build-17083-for-pc/).</span></span>
+## <a name="build-17083"></a><span data-ttu-id="dea41-508">ビルド 17083</span><span class="sxs-lookup"><span data-stu-id="dea41-508">Build 17083</span></span>
+<span data-ttu-id="dea41-509">ビルド17083の一般的な Windows 情報については、 [windows のブログ](https://blogs.windows.com/windowsexperience/2018/01/24/announcing-windows-10-insider-preview-build-17083-for-pc/)を参照してください。</span><span class="sxs-lookup"><span data-stu-id="dea41-509">For general Windows information on build 17083 visit the [Windows Blog](https://blogs.windows.com/windowsexperience/2018/01/24/announcing-windows-10-insider-preview-build-17083-for-pc/).</span></span>
 
-### <a name="wsl"></a><span data-ttu-id="3c169-510">WSL</span><span class="sxs-lookup"><span data-stu-id="3c169-510">WSL</span></span>
-* <span data-ttu-id="3c169-511">Epoll に関連するバグチェック (GH 2798、2801、2857) を修正します。</span><span class="sxs-lookup"><span data-stu-id="3c169-511">Fixed bugcheck related to epoll [GH 2798, 2801, 2857]</span></span>
-* <span data-ttu-id="3c169-512">ASLR をオフにするとハングを修正する [GH 1185, 2870]</span><span class="sxs-lookup"><span data-stu-id="3c169-512">Fixed hangs when turning off ASLR [GH 1185, 2870]</span></span>
-* <span data-ttu-id="3c169-513">Mmap 操作がアトミックとして表示されることを確認する [GH 2732]</span><span class="sxs-lookup"><span data-stu-id="3c169-513">Ensure mmap operations appear atomic [GH 2732]</span></span>
+### <a name="wsl"></a><span data-ttu-id="dea41-510">WSL</span><span class="sxs-lookup"><span data-stu-id="dea41-510">WSL</span></span>
+* <span data-ttu-id="dea41-511">Epoll に関連するバグチェック (GH 2798、2801、2857) を修正します。</span><span class="sxs-lookup"><span data-stu-id="dea41-511">Fixed bugcheck related to epoll [GH 2798, 2801, 2857]</span></span>
+* <span data-ttu-id="dea41-512">ASLR をオフにするとハングを修正する [GH 1185, 2870]</span><span class="sxs-lookup"><span data-stu-id="dea41-512">Fixed hangs when turning off ASLR [GH 1185, 2870]</span></span>
+* <span data-ttu-id="dea41-513">Mmap 操作がアトミックとして表示されることを確認する [GH 2732]</span><span class="sxs-lookup"><span data-stu-id="dea41-513">Ensure mmap operations appear atomic [GH 2732]</span></span>
 
-### <a name="console"></a><span data-ttu-id="3c169-514">Console</span><span class="sxs-lookup"><span data-stu-id="3c169-514">Console</span></span>
-* <span data-ttu-id="3c169-515">修正はありません。</span><span class="sxs-lookup"><span data-stu-id="3c169-515">No fixes.</span></span>
+### <a name="console"></a><span data-ttu-id="dea41-514">Console</span><span class="sxs-lookup"><span data-stu-id="dea41-514">Console</span></span>
+* <span data-ttu-id="dea41-515">修正はありません。</span><span class="sxs-lookup"><span data-stu-id="dea41-515">No fixes.</span></span>
 
-### <a name="ltp-results"></a><span data-ttu-id="3c169-516">LTP の結果:</span><span class="sxs-lookup"><span data-stu-id="3c169-516">LTP Results:</span></span>
-<span data-ttu-id="3c169-517">テストを実行中です。</span><span class="sxs-lookup"><span data-stu-id="3c169-517">Testing in progress.</span></span>
+### <a name="ltp-results"></a><span data-ttu-id="dea41-516">LTP の結果:</span><span class="sxs-lookup"><span data-stu-id="dea41-516">LTP Results:</span></span>
+<span data-ttu-id="dea41-517">テストを実行中です。</span><span class="sxs-lookup"><span data-stu-id="dea41-517">Testing in progress.</span></span>
 
-## <a name="build-17074"></a><span data-ttu-id="3c169-518">ビルド17074</span><span class="sxs-lookup"><span data-stu-id="3c169-518">Build 17074</span></span>
-<span data-ttu-id="3c169-519">ビルド17074の一般的な Windows 情報については、 [windows のブログ](https://blogs.windows.com/windowsexperience/2018/01/11/announcing-windows-10-insider-preview-build-17074-pc/)を参照してください。</span><span class="sxs-lookup"><span data-stu-id="3c169-519">For general Windows information on build 17074 visit the [Windows Blog](https://blogs.windows.com/windowsexperience/2018/01/11/announcing-windows-10-insider-preview-build-17074-pc/).</span></span>
+## <a name="build-17074"></a><span data-ttu-id="dea41-518">ビルド17074</span><span class="sxs-lookup"><span data-stu-id="dea41-518">Build 17074</span></span>
+<span data-ttu-id="dea41-519">ビルド17074の一般的な Windows 情報については、 [windows のブログ](https://blogs.windows.com/windowsexperience/2018/01/11/announcing-windows-10-insider-preview-build-17074-pc/)を参照してください。</span><span class="sxs-lookup"><span data-stu-id="dea41-519">For general Windows information on build 17074 visit the [Windows Blog](https://blogs.windows.com/windowsexperience/2018/01/11/announcing-windows-10-insider-preview-build-17074-pc/).</span></span>
 
-### <a name="wsl"></a><span data-ttu-id="3c169-520">WSL</span><span class="sxs-lookup"><span data-stu-id="3c169-520">WSL</span></span>
-* <span data-ttu-id="3c169-521">DrvFs メタデータの固定ストレージ形式 [GH 2777]</span><span class="sxs-lookup"><span data-stu-id="3c169-521">Fixed storage format of DrvFs metadata [GH 2777]</span></span> </br>
-<span data-ttu-id="3c169-522">**重要:** このビルドの前に作成された DrvFs メタデータは、正しく表示されないか、まったく表示されません。</span><span class="sxs-lookup"><span data-stu-id="3c169-522">**Important:** DrvFs metadata created before this build will show up incorrectly or not at all.</span></span> <span data-ttu-id="3c169-523">影響を受けるファイルを修正するには、chmod と chown を使用してメタデータを再適用します。</span><span class="sxs-lookup"><span data-stu-id="3c169-523">To fix affected files, use chmod and chown to re-apply the metadata.</span></span>
-* <span data-ttu-id="3c169-524">複数のシグナルと再開可能な syscall の問題を修正した。</span><span class="sxs-lookup"><span data-stu-id="3c169-524">Fixed issue with multiple signals and restartable syscalls.</span></span>
+### <a name="wsl"></a><span data-ttu-id="dea41-520">WSL</span><span class="sxs-lookup"><span data-stu-id="dea41-520">WSL</span></span>
+* <span data-ttu-id="dea41-521">DrvFs メタデータの固定ストレージ形式 [GH 2777]</span><span class="sxs-lookup"><span data-stu-id="dea41-521">Fixed storage format of DrvFs metadata [GH 2777]</span></span> </br>
+<span data-ttu-id="dea41-522">**重要:** このビルドの前に作成された DrvFs メタデータは、正しく表示されないか、まったく表示されません。</span><span class="sxs-lookup"><span data-stu-id="dea41-522">**Important:** DrvFs metadata created before this build will show up incorrectly or not at all.</span></span> <span data-ttu-id="dea41-523">影響を受けるファイルを修正するには、chmod と chown を使用してメタデータを再適用します。</span><span class="sxs-lookup"><span data-stu-id="dea41-523">To fix affected files, use chmod and chown to re-apply the metadata.</span></span>
+* <span data-ttu-id="dea41-524">複数のシグナルと再開可能な syscall の問題を修正した。</span><span class="sxs-lookup"><span data-stu-id="dea41-524">Fixed issue with multiple signals and restartable syscalls.</span></span>
 
-### <a name="console"></a><span data-ttu-id="3c169-525">Console</span><span class="sxs-lookup"><span data-stu-id="3c169-525">Console</span></span>
-* <span data-ttu-id="3c169-526">修正はありません。</span><span class="sxs-lookup"><span data-stu-id="3c169-526">No fixes.</span></span>
+### <a name="console"></a><span data-ttu-id="dea41-525">Console</span><span class="sxs-lookup"><span data-stu-id="dea41-525">Console</span></span>
+* <span data-ttu-id="dea41-526">修正はありません。</span><span class="sxs-lookup"><span data-stu-id="dea41-526">No fixes.</span></span>
 
-### <a name="ltp-results"></a><span data-ttu-id="3c169-527">LTP の結果:</span><span class="sxs-lookup"><span data-stu-id="3c169-527">LTP Results:</span></span>
-<span data-ttu-id="3c169-528">テストを実行中です。</span><span class="sxs-lookup"><span data-stu-id="3c169-528">Testing in progress.</span></span>
+### <a name="ltp-results"></a><span data-ttu-id="dea41-527">LTP の結果:</span><span class="sxs-lookup"><span data-stu-id="dea41-527">LTP Results:</span></span>
+<span data-ttu-id="dea41-528">テストを実行中です。</span><span class="sxs-lookup"><span data-stu-id="dea41-528">Testing in progress.</span></span>
 
-## <a name="build-17063"></a><span data-ttu-id="3c169-529">ビルド17063</span><span class="sxs-lookup"><span data-stu-id="3c169-529">Build 17063</span></span>
-<span data-ttu-id="3c169-530">ビルド17063の一般的な Windows 情報については、 [windows のブログ](https://blogs.windows.com/windowsexperience/2017/12/19/announcing-windows-10-insider-preview-build-17063-pc/)を参照してください。</span><span class="sxs-lookup"><span data-stu-id="3c169-530">For general Windows information on build 17063 visit the [Windows Blog](https://blogs.windows.com/windowsexperience/2017/12/19/announcing-windows-10-insider-preview-build-17063-pc/).</span></span>
+## <a name="build-17063"></a><span data-ttu-id="dea41-529">ビルド17063</span><span class="sxs-lookup"><span data-stu-id="dea41-529">Build 17063</span></span>
+<span data-ttu-id="dea41-530">ビルド17063の一般的な Windows 情報については、 [windows のブログ](https://blogs.windows.com/windowsexperience/2017/12/19/announcing-windows-10-insider-preview-build-17063-pc/)を参照してください。</span><span class="sxs-lookup"><span data-stu-id="dea41-530">For general Windows information on build 17063 visit the [Windows Blog](https://blogs.windows.com/windowsexperience/2017/12/19/announcing-windows-10-insider-preview-build-17063-pc/).</span></span>
 
-### <a name="wsl"></a><span data-ttu-id="3c169-531">WSL</span><span class="sxs-lookup"><span data-stu-id="3c169-531">WSL</span></span>
-* <span data-ttu-id="3c169-532">DrvFs は、追加の Linux メタデータをサポートします。</span><span class="sxs-lookup"><span data-stu-id="3c169-532">DrvFs supports additional Linux metadata.</span></span> <span data-ttu-id="3c169-533">これにより、chmod/chown を使用してファイルの所有者とモードを設定できるほか、fifo、unix ソケット、デバイスファイルなどの特殊なファイルを作成することもできます。</span><span class="sxs-lookup"><span data-stu-id="3c169-533">This allows setting the owner and mode of files using chmod/chown, and also the creation of special files such as fifos, unix sockets and device files.</span></span> <span data-ttu-id="3c169-534">現時点では、これはまだ試験段階であるため、既定では無効になっています。</span><span class="sxs-lookup"><span data-stu-id="3c169-534">This is disabled by default for now since it's still experimental.</span></span>
-<span data-ttu-id="3c169-535">**注:** DrvFs で使用されるメタデータ形式のバグを修正しています。</span><span class="sxs-lookup"><span data-stu-id="3c169-535">**Note:**  We fixed a bug in the metadata format used by DrvFs.</span></span> <span data-ttu-id="3c169-536">メタデータは実験のためにこのビルドで機能しますが、今後のビルドでは、このビルドによって作成されたメタデータを正しく読み取ることができません。</span><span class="sxs-lookup"><span data-stu-id="3c169-536">While metadata works on this build for experimentation, future builds will not correctly read metadata created by this build.</span></span>  <span data-ttu-id="3c169-537">変更したファイルの所有者を手動で更新しなければならない場合があります。カスタムデバイス ID を持つデバイスを再作成する必要があります。</span><span class="sxs-lookup"><span data-stu-id="3c169-537">You might need to manually update owner for modified files and devices with a custom device ID will have to be recreated.</span></span>
+### <a name="wsl"></a><span data-ttu-id="dea41-531">WSL</span><span class="sxs-lookup"><span data-stu-id="dea41-531">WSL</span></span>
+* <span data-ttu-id="dea41-532">DrvFs は、追加の Linux メタデータをサポートします。</span><span class="sxs-lookup"><span data-stu-id="dea41-532">DrvFs supports additional Linux metadata.</span></span> <span data-ttu-id="dea41-533">これにより、chmod/chown を使用してファイルの所有者とモードを設定できるほか、fifo、unix ソケット、デバイスファイルなどの特殊なファイルを作成することもできます。</span><span class="sxs-lookup"><span data-stu-id="dea41-533">This allows setting the owner and mode of files using chmod/chown, and also the creation of special files such as fifos, unix sockets and device files.</span></span> <span data-ttu-id="dea41-534">現時点では、これはまだ試験段階であるため、既定では無効になっています。</span><span class="sxs-lookup"><span data-stu-id="dea41-534">This is disabled by default for now since it's still experimental.</span></span>
+<span data-ttu-id="dea41-535">**注:** DrvFs で使用されるメタデータ形式のバグを修正しています。</span><span class="sxs-lookup"><span data-stu-id="dea41-535">**Note:**  We fixed a bug in the metadata format used by DrvFs.</span></span> <span data-ttu-id="dea41-536">メタデータは実験のためにこのビルドで機能しますが、今後のビルドでは、このビルドによって作成されたメタデータを正しく読み取ることができません。</span><span class="sxs-lookup"><span data-stu-id="dea41-536">While metadata works on this build for experimentation, future builds will not correctly read metadata created by this build.</span></span>  <span data-ttu-id="dea41-537">変更したファイルの所有者を手動で更新しなければならない場合があります。カスタムデバイス ID を持つデバイスを再作成する必要があります。</span><span class="sxs-lookup"><span data-stu-id="dea41-537">You might need to manually update owner for modified files and devices with a custom device ID will have to be recreated.</span></span>
 
-  <span data-ttu-id="3c169-538">有効にするには、メタデータオプションを使用して DrvFs をマウントします (既存のマウントで有効にするには、最初にマウントを解除する必要があります)。</span><span class="sxs-lookup"><span data-stu-id="3c169-538">To enable, mount DrvFs with the metadata option (to enable it on an existing mount, you must first unmount it):</span></span>
+  <span data-ttu-id="dea41-538">有効にするには、メタデータオプションを使用して DrvFs をマウントします (既存のマウントで有効にするには、最初にマウントを解除する必要があります)。</span><span class="sxs-lookup"><span data-stu-id="dea41-538">To enable, mount DrvFs with the metadata option (to enable it on an existing mount, you must first unmount it):</span></span>
 
   ```bash
   mount -t drvfs C: /mnt/c -o metadata
   ```
 
-  <span data-ttu-id="3c169-539">Linux のアクセス許可は、ファイルに追加のメタデータとして追加されます。Windows のアクセス許可には影響しません。</span><span class="sxs-lookup"><span data-stu-id="3c169-539">Linux permissions are added as additional metadata to the file; they do not affect the Windows permissions.</span></span>  <span data-ttu-id="3c169-540">Windows エディターを使用してファイルを編集すると、メタデータが削除される場合があることに注意してください。</span><span class="sxs-lookup"><span data-stu-id="3c169-540">Remember, editing a file using a Windows editor may remove the metadata.</span></span> <span data-ttu-id="3c169-541">この場合、ファイルは既定のアクセス許可に戻ります。</span><span class="sxs-lookup"><span data-stu-id="3c169-541">In this case, the file will revert to its default permissions.</span></span>
+  <span data-ttu-id="dea41-539">Linux のアクセス許可は、ファイルに追加のメタデータとして追加されます。Windows のアクセス許可には影響しません。</span><span class="sxs-lookup"><span data-stu-id="dea41-539">Linux permissions are added as additional metadata to the file; they do not affect the Windows permissions.</span></span>  <span data-ttu-id="dea41-540">Windows エディターを使用してファイルを編集すると、メタデータが削除される場合があることに注意してください。</span><span class="sxs-lookup"><span data-stu-id="dea41-540">Remember, editing a file using a Windows editor may remove the metadata.</span></span> <span data-ttu-id="dea41-541">この場合、ファイルは既定のアクセス許可に戻ります。</span><span class="sxs-lookup"><span data-stu-id="dea41-541">In this case, the file will revert to its default permissions.</span></span>
 
-* <span data-ttu-id="3c169-542">メタデータなしでファイルを制御するための、DrvFs にマウントオプションを追加しました。</span><span class="sxs-lookup"><span data-stu-id="3c169-542">Added mount options to DrvFs to control files without metadata.</span></span>
-  * <span data-ttu-id="3c169-543">uid: すべてのファイルの所有者に使用されるユーザー ID。</span><span class="sxs-lookup"><span data-stu-id="3c169-543">uid: the user ID used for the owner of all files.</span></span>
-  * <span data-ttu-id="3c169-544">gid: すべてのファイルの所有者に使用されるグループ ID。</span><span class="sxs-lookup"><span data-stu-id="3c169-544">gid: the group ID used for the owner of all files.</span></span>
-  * <span data-ttu-id="3c169-545">umask: すべてのファイルとディレクトリに対して除外するアクセス許可の8進数のマスク。</span><span class="sxs-lookup"><span data-stu-id="3c169-545">umask: an octal mask of permissions to exclude for all files and directories.</span></span>
-  * <span data-ttu-id="3c169-546">fmask: すべての標準ファイルに対して除外するアクセス許可の8進数のマスク。</span><span class="sxs-lookup"><span data-stu-id="3c169-546">fmask: an octal mask of permissions to exclude for all regular files.</span></span>
-  * <span data-ttu-id="3c169-547">dmask: すべてのディレクトリに対して除外するアクセス許可の8進数のマスク。</span><span class="sxs-lookup"><span data-stu-id="3c169-547">dmask: an octal mask of permissions to exclude for all directories.</span></span>
+* <span data-ttu-id="dea41-542">メタデータなしでファイルを制御するための、DrvFs にマウントオプションを追加しました。</span><span class="sxs-lookup"><span data-stu-id="dea41-542">Added mount options to DrvFs to control files without metadata.</span></span>
+  * <span data-ttu-id="dea41-543">uid: すべてのファイルの所有者に使用されるユーザー ID。</span><span class="sxs-lookup"><span data-stu-id="dea41-543">uid: the user ID used for the owner of all files.</span></span>
+  * <span data-ttu-id="dea41-544">gid: すべてのファイルの所有者に使用されるグループ ID。</span><span class="sxs-lookup"><span data-stu-id="dea41-544">gid: the group ID used for the owner of all files.</span></span>
+  * <span data-ttu-id="dea41-545">umask: すべてのファイルとディレクトリに対して除外するアクセス許可の8進数のマスク。</span><span class="sxs-lookup"><span data-stu-id="dea41-545">umask: an octal mask of permissions to exclude for all files and directories.</span></span>
+  * <span data-ttu-id="dea41-546">fmask: すべての標準ファイルに対して除外するアクセス許可の8進数のマスク。</span><span class="sxs-lookup"><span data-stu-id="dea41-546">fmask: an octal mask of permissions to exclude for all regular files.</span></span>
+  * <span data-ttu-id="dea41-547">dmask: すべてのディレクトリに対して除外するアクセス許可の8進数のマスク。</span><span class="sxs-lookup"><span data-stu-id="dea41-547">dmask: an octal mask of permissions to exclude for all directories.</span></span>
 
-  <span data-ttu-id="3c169-548">以下に例を示します。</span><span class="sxs-lookup"><span data-stu-id="3c169-548">For example:</span></span>
+  <span data-ttu-id="dea41-548">例:</span><span class="sxs-lookup"><span data-stu-id="dea41-548">For example:</span></span>
   ```
   mount -t drvfs C: /mnt/c -o uid=1000,gid=1000,umask=22,fmask=111
   ```
 
-  <span data-ttu-id="3c169-549">メタデータオプションと組み合わせて、メタデータのないファイルに対する既定のアクセス許可を指定します。</span><span class="sxs-lookup"><span data-stu-id="3c169-549">Combine with the metadata option to specify default permissions for files without metadata.</span></span>
+  <span data-ttu-id="dea41-549">メタデータオプションと組み合わせて、メタデータのないファイルに対する既定のアクセス許可を指定します。</span><span class="sxs-lookup"><span data-stu-id="dea41-549">Combine with the metadata option to specify default permissions for files without metadata.</span></span>
 
-* <span data-ttu-id="3c169-550">では、wsl と`WSLENV`Win32 の間で環境変数がどのように流れるかを構成するために、新しい環境変数が導入されました。</span><span class="sxs-lookup"><span data-stu-id="3c169-550">Introduced a new environment variable, `WSLENV`, to configure how environment variables flow between WSL and Win32.</span></span>
+* <span data-ttu-id="dea41-550">では、wsl と`WSLENV`Win32 の間で環境変数がどのように流れるかを構成するために、新しい環境変数が導入されました。</span><span class="sxs-lookup"><span data-stu-id="dea41-550">Introduced a new environment variable, `WSLENV`, to configure how environment variables flow between WSL and Win32.</span></span>
 
-  <span data-ttu-id="3c169-551">例:</span><span class="sxs-lookup"><span data-stu-id="3c169-551">For example:</span></span>
+  <span data-ttu-id="dea41-551">以下に例を示します。</span><span class="sxs-lookup"><span data-stu-id="dea41-551">For example:</span></span>
 
   ``` bash
   WSLENV=GOPATH/l:USERPROFILE/pu:DISPLAY
   ```
 
-  <span data-ttu-id="3c169-552">`WSLENV`は、wsl から Win32 または Win32 プロセスから WSL プロセスを起動するときに含めることができる環境変数のコロン区切りの一覧です。</span><span class="sxs-lookup"><span data-stu-id="3c169-552">`WSLENV` is a colon-delimited list of environment variables that can be included when launching WSL processes from Win32 or Win32 processes from WSL.</span></span>  <span data-ttu-id="3c169-553">各変数には、スラッシュとその後に続くフラグを付けて、変換方法を指定できます。</span><span class="sxs-lookup"><span data-stu-id="3c169-553">Each variable can be suffixed with a slash followed by flags to specify how it is translated.</span></span>
-  * <span data-ttu-id="3c169-554">irtran-p値は、WSL パスと Win32 パスの間で変換されるパスです。</span><span class="sxs-lookup"><span data-stu-id="3c169-554">p: The value is a path that should be translated between WSL paths and Win32 paths.</span></span>
-  * <span data-ttu-id="3c169-555">左右値はパスの一覧です。</span><span class="sxs-lookup"><span data-stu-id="3c169-555">l: The value is a list of paths.</span></span> <span data-ttu-id="3c169-556">WSL では、コロンで区切られたリストです。</span><span class="sxs-lookup"><span data-stu-id="3c169-556">In WSL, it is a colon-delimited list.</span></span> <span data-ttu-id="3c169-557">Win32 では、セミコロンで区切られたリストです。</span><span class="sxs-lookup"><span data-stu-id="3c169-557">In Win32, it is a semicolon-delimited list.</span></span>
-  * <span data-ttu-id="3c169-558">u値は、Win32 から WSL を呼び出すときにのみ含める必要があります</span><span class="sxs-lookup"><span data-stu-id="3c169-558">u: The value should only be included when invoking WSL from Win32</span></span>
-  * <span data-ttu-id="3c169-559">リダイレクト値は、WSL から Win32 を呼び出すときにのみ含める必要があります</span><span class="sxs-lookup"><span data-stu-id="3c169-559">w: The value should only be included when invoking Win32 from WSL</span></span>
+  <span data-ttu-id="dea41-552">`WSLENV`は、wsl から Win32 または Win32 プロセスから WSL プロセスを起動するときに含めることができる環境変数のコロン区切りの一覧です。</span><span class="sxs-lookup"><span data-stu-id="dea41-552">`WSLENV` is a colon-delimited list of environment variables that can be included when launching WSL processes from Win32 or Win32 processes from WSL.</span></span>  <span data-ttu-id="dea41-553">各変数には、スラッシュとその後に続くフラグを付けて、変換方法を指定できます。</span><span class="sxs-lookup"><span data-stu-id="dea41-553">Each variable can be suffixed with a slash followed by flags to specify how it is translated.</span></span>
+  * <span data-ttu-id="dea41-554">irtran-p値は、WSL パスと Win32 パスの間で変換されるパスです。</span><span class="sxs-lookup"><span data-stu-id="dea41-554">p: The value is a path that should be translated between WSL paths and Win32 paths.</span></span>
+  * <span data-ttu-id="dea41-555">左右値はパスの一覧です。</span><span class="sxs-lookup"><span data-stu-id="dea41-555">l: The value is a list of paths.</span></span> <span data-ttu-id="dea41-556">WSL では、コロンで区切られたリストです。</span><span class="sxs-lookup"><span data-stu-id="dea41-556">In WSL, it is a colon-delimited list.</span></span> <span data-ttu-id="dea41-557">Win32 では、セミコロンで区切られたリストです。</span><span class="sxs-lookup"><span data-stu-id="dea41-557">In Win32, it is a semicolon-delimited list.</span></span>
+  * <span data-ttu-id="dea41-558">u値は、Win32 から WSL を呼び出すときにのみ含める必要があります</span><span class="sxs-lookup"><span data-stu-id="dea41-558">u: The value should only be included when invoking WSL from Win32</span></span>
+  * <span data-ttu-id="dea41-559">リダイレクト値は、WSL から Win32 を呼び出すときにのみ含める必要があります</span><span class="sxs-lookup"><span data-stu-id="dea41-559">w: The value should only be included when invoking Win32 from WSL</span></span>
 
-  <span data-ttu-id="3c169-560">ユーザーのカスタム`WSLENV` Windows 環境では、.bashrc またはを設定できます。</span><span class="sxs-lookup"><span data-stu-id="3c169-560">You can set `WSLENV` in .bashrc or in the custom Windows environment for your user.</span></span>
+  <span data-ttu-id="dea41-560">ユーザーのカスタム`WSLENV` Windows 環境では、.bashrc またはを設定できます。</span><span class="sxs-lookup"><span data-stu-id="dea41-560">You can set `WSLENV` in .bashrc or in the custom Windows environment for your user.</span></span>
 
-* <span data-ttu-id="3c169-561">drvfs マウントによって tar、cp-p からのタイムスタンプが正しく保持される (GH 1939)</span><span class="sxs-lookup"><span data-stu-id="3c169-561">drvfs mounts correctly preserves timestamps from tar, cp -p (GH 1939)</span></span>
-* <span data-ttu-id="3c169-562">drvfs symlink は正しいサイズを報告します (GH 2641)</span><span class="sxs-lookup"><span data-stu-id="3c169-562">drvfs symlinks report the correct size (GH 2641)</span></span>
-* <span data-ttu-id="3c169-563">I/O サイズが非常に大きい場合の読み取り/書き込みの機能 (GH 2653)</span><span class="sxs-lookup"><span data-stu-id="3c169-563">read/write works for very large IO sizes (GH 2653)</span></span>
-* <span data-ttu-id="3c169-564">waitpid はプロセスグループ Id と連動します (GH 2534)</span><span class="sxs-lookup"><span data-stu-id="3c169-564">waitpid works with process group IDs (GH 2534)</span></span>
-* <span data-ttu-id="3c169-565">大きな予約領域での mmap パフォーマンスが大幅に向上しました。ghc のパフォーマンスを向上させます (GH 1671)</span><span class="sxs-lookup"><span data-stu-id="3c169-565">significantly improved mmap performance for large reserve regions; improves ghc performance (GH 1671)</span></span>
-* <span data-ttu-id="3c169-566">READ_IMPLIES_EXEC でのパーソナリティのサポート最大化 a と clisp (GH 1185) を修正します。</span><span class="sxs-lookup"><span data-stu-id="3c169-566">personality supports for READ_IMPLIES_EXEC; fixes maxima and clisp (GH 1185)</span></span>
-* <span data-ttu-id="3c169-567">mprotect は PROT_GROWSDOWN をサポートしています。clisp (GH 1128) を修正します。</span><span class="sxs-lookup"><span data-stu-id="3c169-567">mprotect supports PROT_GROWSDOWN; fixes clisp (GH 1128)</span></span>
-* <span data-ttu-id="3c169-568">過剰コミットモードでのページフォールトの修正sbcl (GH 1128) を修正します。</span><span class="sxs-lookup"><span data-stu-id="3c169-568">page fault fixes in overcommit mode; fixes sbcl (GH 1128)</span></span>
-* <span data-ttu-id="3c169-569">複製では、より多くのフラグの組み合わせがサポートされます</span><span class="sxs-lookup"><span data-stu-id="3c169-569">clone supports more flags combinations</span></span>
-* <span data-ttu-id="3c169-570">Epoll ファイルの select/epoll (以前は no op) をサポートします。</span><span class="sxs-lookup"><span data-stu-id="3c169-570">Support select/epoll of epoll files (previously a no-op).</span></span>
-* <span data-ttu-id="3c169-571">未実装の syscall の ptrace を通知します。</span><span class="sxs-lookup"><span data-stu-id="3c169-571">Notify ptrace of unimplemented syscalls.</span></span>
-* <span data-ttu-id="3c169-572">Resolv.conf を生成するときにアップしていないインターフェイスを無視する [GH 2694]</span><span class="sxs-lookup"><span data-stu-id="3c169-572">Ignore interfaces that are not up when generating resolv.conf nameservers [GH 2694]</span></span>
-* <span data-ttu-id="3c169-573">物理アドレスのないネットワークインターフェイスを列挙します。</span><span class="sxs-lookup"><span data-stu-id="3c169-573">Enumerate network interfaces with no physical address.</span></span> <span data-ttu-id="3c169-574">[GH 2685]</span><span class="sxs-lookup"><span data-stu-id="3c169-574">[GH 2685]</span></span>
-* <span data-ttu-id="3c169-575">追加のバグの修正と改善。</span><span class="sxs-lookup"><span data-stu-id="3c169-575">Additional bug fixes and improvements.</span></span>
+* <span data-ttu-id="dea41-561">drvfs マウントによって tar、cp-p からのタイムスタンプが正しく保持される (GH 1939)</span><span class="sxs-lookup"><span data-stu-id="dea41-561">drvfs mounts correctly preserves timestamps from tar, cp -p (GH 1939)</span></span>
+* <span data-ttu-id="dea41-562">drvfs symlink は正しいサイズを報告します (GH 2641)</span><span class="sxs-lookup"><span data-stu-id="dea41-562">drvfs symlinks report the correct size (GH 2641)</span></span>
+* <span data-ttu-id="dea41-563">I/O サイズが非常に大きい場合の読み取り/書き込みの機能 (GH 2653)</span><span class="sxs-lookup"><span data-stu-id="dea41-563">read/write works for very large IO sizes (GH 2653)</span></span>
+* <span data-ttu-id="dea41-564">waitpid はプロセスグループ Id と連動します (GH 2534)</span><span class="sxs-lookup"><span data-stu-id="dea41-564">waitpid works with process group IDs (GH 2534)</span></span>
+* <span data-ttu-id="dea41-565">大きな予約領域での mmap パフォーマンスが大幅に向上しました。ghc のパフォーマンスを向上させます (GH 1671)</span><span class="sxs-lookup"><span data-stu-id="dea41-565">significantly improved mmap performance for large reserve regions; improves ghc performance (GH 1671)</span></span>
+* <span data-ttu-id="dea41-566">READ_IMPLIES_EXEC でのパーソナリティのサポート最大化 a と clisp (GH 1185) を修正します。</span><span class="sxs-lookup"><span data-stu-id="dea41-566">personality supports for READ_IMPLIES_EXEC; fixes maxima and clisp (GH 1185)</span></span>
+* <span data-ttu-id="dea41-567">mprotect は PROT_GROWSDOWN をサポートしています。clisp (GH 1128) を修正します。</span><span class="sxs-lookup"><span data-stu-id="dea41-567">mprotect supports PROT_GROWSDOWN; fixes clisp (GH 1128)</span></span>
+* <span data-ttu-id="dea41-568">過剰コミットモードでのページフォールトの修正sbcl (GH 1128) を修正します。</span><span class="sxs-lookup"><span data-stu-id="dea41-568">page fault fixes in overcommit mode; fixes sbcl (GH 1128)</span></span>
+* <span data-ttu-id="dea41-569">複製では、より多くのフラグの組み合わせがサポートされます</span><span class="sxs-lookup"><span data-stu-id="dea41-569">clone supports more flags combinations</span></span>
+* <span data-ttu-id="dea41-570">Epoll ファイルの select/epoll (以前は no op) をサポートします。</span><span class="sxs-lookup"><span data-stu-id="dea41-570">Support select/epoll of epoll files (previously a no-op).</span></span>
+* <span data-ttu-id="dea41-571">未実装の syscall の ptrace を通知します。</span><span class="sxs-lookup"><span data-stu-id="dea41-571">Notify ptrace of unimplemented syscalls.</span></span>
+* <span data-ttu-id="dea41-572">Resolv.conf を生成するときにアップしていないインターフェイスを無視する [GH 2694]</span><span class="sxs-lookup"><span data-stu-id="dea41-572">Ignore interfaces that are not up when generating resolv.conf nameservers [GH 2694]</span></span>
+* <span data-ttu-id="dea41-573">物理アドレスのないネットワークインターフェイスを列挙します。</span><span class="sxs-lookup"><span data-stu-id="dea41-573">Enumerate network interfaces with no physical address.</span></span> <span data-ttu-id="dea41-574">[GH 2685]</span><span class="sxs-lookup"><span data-stu-id="dea41-574">[GH 2685]</span></span>
+* <span data-ttu-id="dea41-575">追加のバグの修正と改善。</span><span class="sxs-lookup"><span data-stu-id="dea41-575">Additional bug fixes and improvements.</span></span>
 
-### <a name="linux-tools-available-to-developers-on-windows"></a><span data-ttu-id="3c169-576">Windows の開発者が使用できる Linux ツール</span><span class="sxs-lookup"><span data-stu-id="3c169-576">Linux tools available to developers on Windows</span></span>
+### <a name="linux-tools-available-to-developers-on-windows"></a><span data-ttu-id="dea41-576">Windows の開発者が使用できる Linux ツール</span><span class="sxs-lookup"><span data-stu-id="dea41-576">Linux tools available to developers on Windows</span></span>
 
-* <span data-ttu-id="3c169-577">Windows コマンドラインツールチェーンには、bsdtar (tar) と curl が含まれています。</span><span class="sxs-lookup"><span data-stu-id="3c169-577">Windows Command line Toolchain includes bsdtar (tar) and curl.</span></span>
-  <span data-ttu-id="3c169-578">この2つの新しいツールの追加の詳細と、Windows での開発者エクスペリエンスの整形方法を確認するには、[このブログ](https://aka.ms/tarcurlwindows)を参照してください。</span><span class="sxs-lookup"><span data-stu-id="3c169-578">Read [this blog](https://aka.ms/tarcurlwindows) to learn more about the addition of these two new tools and see how they’re shaping the developer experience on Windows.</span></span>
+* <span data-ttu-id="dea41-577">Windows コマンドラインツールチェーンには、bsdtar (tar) と curl が含まれています。</span><span class="sxs-lookup"><span data-stu-id="dea41-577">Windows Command line Toolchain includes bsdtar (tar) and curl.</span></span>
+  <span data-ttu-id="dea41-578">この2つの新しいツールの追加の詳細と、Windows での開発者エクスペリエンスの整形方法を確認するには、[このブログ](https://aka.ms/tarcurlwindows)を参照してください。</span><span class="sxs-lookup"><span data-stu-id="dea41-578">Read [this blog](https://aka.ms/tarcurlwindows) to learn more about the addition of these two new tools and see how they’re shaping the developer experience on Windows.</span></span>
 
-*   <span data-ttu-id="3c169-579">`AF_UNIX`は、Windows Insider SDK (17061 +) で利用できます。</span><span class="sxs-lookup"><span data-stu-id="3c169-579">`AF_UNIX` is available in the Windows Insider SDK (17061+).</span></span>
-  <span data-ttu-id="3c169-580">の詳細と、Windows 上の`AF_UNIX`開発者が使用する方法については、[このブログ](https://blogs.msdn.microsoft.com/commandline/2017/12/19/af_unix-comes-to-windows/)を参照してください。</span><span class="sxs-lookup"><span data-stu-id="3c169-580">Read [this blog](https://blogs.msdn.microsoft.com/commandline/2017/12/19/af_unix-comes-to-windows/) to learn more about `AF_UNIX` and how developers on Windows can use it.</span></span>
+*   <span data-ttu-id="dea41-579">`AF_UNIX`は、Windows Insider SDK (17061 +) で利用できます。</span><span class="sxs-lookup"><span data-stu-id="dea41-579">`AF_UNIX` is available in the Windows Insider SDK (17061+).</span></span>
+  <span data-ttu-id="dea41-580">の詳細と、Windows 上の`AF_UNIX`開発者が使用する方法については、[このブログ](https://blogs.msdn.microsoft.com/commandline/2017/12/19/af_unix-comes-to-windows/)を参照してください。</span><span class="sxs-lookup"><span data-stu-id="dea41-580">Read [this blog](https://blogs.msdn.microsoft.com/commandline/2017/12/19/af_unix-comes-to-windows/) to learn more about `AF_UNIX` and how developers on Windows can use it.</span></span>
 
-### <a name="console"></a><span data-ttu-id="3c169-581">Console</span><span class="sxs-lookup"><span data-stu-id="3c169-581">Console</span></span>
-* <span data-ttu-id="3c169-582">修正はありません。</span><span class="sxs-lookup"><span data-stu-id="3c169-582">No fixes.</span></span>
+### <a name="console"></a><span data-ttu-id="dea41-581">Console</span><span class="sxs-lookup"><span data-stu-id="dea41-581">Console</span></span>
+* <span data-ttu-id="dea41-582">修正はありません。</span><span class="sxs-lookup"><span data-stu-id="dea41-582">No fixes.</span></span>
 
-### <a name="ltp-results"></a><span data-ttu-id="3c169-583">LTP の結果:</span><span class="sxs-lookup"><span data-stu-id="3c169-583">LTP Results:</span></span>
-<span data-ttu-id="3c169-584">テストを実行中です。</span><span class="sxs-lookup"><span data-stu-id="3c169-584">Testing in progress.</span></span>
+### <a name="ltp-results"></a><span data-ttu-id="dea41-583">LTP の結果:</span><span class="sxs-lookup"><span data-stu-id="dea41-583">LTP Results:</span></span>
+<span data-ttu-id="dea41-584">テストを実行中です。</span><span class="sxs-lookup"><span data-stu-id="dea41-584">Testing in progress.</span></span>
 
 
-## <a name="build-17046"></a><span data-ttu-id="3c169-585">ビルド17046</span><span class="sxs-lookup"><span data-stu-id="3c169-585">Build 17046</span></span>
+## <a name="build-17046"></a><span data-ttu-id="dea41-585">ビルド17046</span><span class="sxs-lookup"><span data-stu-id="dea41-585">Build 17046</span></span>
 
-<span data-ttu-id="3c169-586">ビルド17046の一般的な Windows 情報については、 [windows のブログ](https://blogs.windows.com/windowsexperience/2017/11/22/announcing-windows-10-insider-preview-build-17046-pc)を参照してください。</span><span class="sxs-lookup"><span data-stu-id="3c169-586">For general Windows information on build 17046 visit the [Windows Blog](https://blogs.windows.com/windowsexperience/2017/11/22/announcing-windows-10-insider-preview-build-17046-pc).</span></span>
+<span data-ttu-id="dea41-586">ビルド17046の一般的な Windows 情報については、 [windows のブログ](https://blogs.windows.com/windowsexperience/2017/11/22/announcing-windows-10-insider-preview-build-17046-pc)を参照してください。</span><span class="sxs-lookup"><span data-stu-id="dea41-586">For general Windows information on build 17046 visit the [Windows Blog](https://blogs.windows.com/windowsexperience/2017/11/22/announcing-windows-10-insider-preview-build-17046-pc).</span></span>
 
-### <a name="fixed"></a><span data-ttu-id="3c169-587">固定</span><span class="sxs-lookup"><span data-stu-id="3c169-587">Fixed</span></span>
-#### <a name="wsl"></a><span data-ttu-id="3c169-588">WSL</span><span class="sxs-lookup"><span data-stu-id="3c169-588">WSL</span></span>
-- <span data-ttu-id="3c169-589">アクティブなターミナルを使用せずにプロセスを実行できるようにします。</span><span class="sxs-lookup"><span data-stu-id="3c169-589">Allow processes to run without an active terminal.</span></span> <span data-ttu-id="3c169-590">[GH 709、1007、1511、2252、2391、et al.]</span><span class="sxs-lookup"><span data-stu-id="3c169-590">[GH 709, 1007, 1511, 2252, 2391, et al.]</span></span>
-- <span data-ttu-id="3c169-591">CLONE_VFORK と CLONE_VM のサポートの強化。</span><span class="sxs-lookup"><span data-stu-id="3c169-591">Better support of CLONE_VFORK and CLONE_VM.</span></span> <span data-ttu-id="3c169-592">[GH 1878、2615]</span><span class="sxs-lookup"><span data-stu-id="3c169-592">[GH 1878, 2615]</span></span>
-- <span data-ttu-id="3c169-593">WSL ネットワーク操作の TDI フィルタードライバーをスキップします。</span><span class="sxs-lookup"><span data-stu-id="3c169-593">Skip TDI filter drivers for WSL networking operations.</span></span> <span data-ttu-id="3c169-594">[GH 1554]</span><span class="sxs-lookup"><span data-stu-id="3c169-594">[GH 1554]</span></span>
-- <span data-ttu-id="3c169-595">DrvFs は、特定の条件が満たされたときに NT シンボリックリンクを作成します。</span><span class="sxs-lookup"><span data-stu-id="3c169-595">DrvFs creates NT symlinks when certain conditions are met.</span></span> <span data-ttu-id="3c169-596">[GH 353、1475、2602]</span><span class="sxs-lookup"><span data-stu-id="3c169-596">[GH 353, 1475, 2602]</span></span>
-    - <span data-ttu-id="3c169-597">リンク先は相対パスである必要があり、マウントポイントやシンボリックリンクを越えることはできず、存在する必要があります。</span><span class="sxs-lookup"><span data-stu-id="3c169-597">The link target must be relative, must not cross any mount points or symlinks, and must exist.</span></span>
-    - <span data-ttu-id="3c169-598">開発者モードが有効になっていない場合は、ユーザーは SE_CREATE_SYMBOLIC_LINK_PRIVILEGE を持っている必要があります (通常は、管理者特権で起動する必要があります)。</span><span class="sxs-lookup"><span data-stu-id="3c169-598">The user must have SE_CREATE_SYMBOLIC_LINK_PRIVILEGE (this normally requires you to launch wsl.exe elevated), unless Developer Mode is turned on.</span></span>
-    - <span data-ttu-id="3c169-599">それ以外の状況でも、DrvFs は WSL シンボリックリンクを作成します。</span><span class="sxs-lookup"><span data-stu-id="3c169-599">In all other situations, DrvFs still creates WSL symlinks.</span></span>
-- <span data-ttu-id="3c169-600">昇格および昇格されていない WSL インスタンスの同時実行を許可します。</span><span class="sxs-lookup"><span data-stu-id="3c169-600">Allow running elevated and non-elevated WSL instances simultaneously.</span></span>
-- <span data-ttu-id="3c169-601">/Proc/sys/kernel/yama/ptrace_scope のサポート</span><span class="sxs-lookup"><span data-stu-id="3c169-601">Support /proc/sys/kernel/yama/ptrace_scope</span></span>
-- <span data-ttu-id="3c169-602">Wslpath を追加して、WSL <-> Windows パス変換を実行します。</span><span class="sxs-lookup"><span data-stu-id="3c169-602">Add wslpath to do WSL<->Windows path conversions.</span></span> <span data-ttu-id="3c169-603">[GH 522、1243、1834、2327、et al]</span><span class="sxs-lookup"><span data-stu-id="3c169-603">[GH 522, 1243, 1834, 2327, et al.]</span></span>
+### <a name="fixed"></a><span data-ttu-id="dea41-587">固定</span><span class="sxs-lookup"><span data-stu-id="dea41-587">Fixed</span></span>
+#### <a name="wsl"></a><span data-ttu-id="dea41-588">WSL</span><span class="sxs-lookup"><span data-stu-id="dea41-588">WSL</span></span>
+- <span data-ttu-id="dea41-589">アクティブなターミナルを使用せずにプロセスを実行できるようにします。</span><span class="sxs-lookup"><span data-stu-id="dea41-589">Allow processes to run without an active terminal.</span></span> <span data-ttu-id="dea41-590">[GH 709、1007、1511、2252、2391、et al.]</span><span class="sxs-lookup"><span data-stu-id="dea41-590">[GH 709, 1007, 1511, 2252, 2391, et al.]</span></span>
+- <span data-ttu-id="dea41-591">CLONE_VFORK と CLONE_VM のサポートの強化。</span><span class="sxs-lookup"><span data-stu-id="dea41-591">Better support of CLONE_VFORK and CLONE_VM.</span></span> <span data-ttu-id="dea41-592">[GH 1878、2615]</span><span class="sxs-lookup"><span data-stu-id="dea41-592">[GH 1878, 2615]</span></span>
+- <span data-ttu-id="dea41-593">WSL ネットワーク操作の TDI フィルタードライバーをスキップします。</span><span class="sxs-lookup"><span data-stu-id="dea41-593">Skip TDI filter drivers for WSL networking operations.</span></span> <span data-ttu-id="dea41-594">[GH 1554]</span><span class="sxs-lookup"><span data-stu-id="dea41-594">[GH 1554]</span></span>
+- <span data-ttu-id="dea41-595">DrvFs は、特定の条件が満たされたときに NT シンボリックリンクを作成します。</span><span class="sxs-lookup"><span data-stu-id="dea41-595">DrvFs creates NT symlinks when certain conditions are met.</span></span> <span data-ttu-id="dea41-596">[GH 353、1475、2602]</span><span class="sxs-lookup"><span data-stu-id="dea41-596">[GH 353, 1475, 2602]</span></span>
+    - <span data-ttu-id="dea41-597">リンク先は相対パスである必要があり、マウントポイントやシンボリックリンクを越えることはできず、存在する必要があります。</span><span class="sxs-lookup"><span data-stu-id="dea41-597">The link target must be relative, must not cross any mount points or symlinks, and must exist.</span></span>
+    - <span data-ttu-id="dea41-598">開発者モードが有効になっていない場合は、ユーザーは SE_CREATE_SYMBOLIC_LINK_PRIVILEGE を持っている必要があります (通常は、管理者特権で起動する必要があります)。</span><span class="sxs-lookup"><span data-stu-id="dea41-598">The user must have SE_CREATE_SYMBOLIC_LINK_PRIVILEGE (this normally requires you to launch wsl.exe elevated), unless Developer Mode is turned on.</span></span>
+    - <span data-ttu-id="dea41-599">それ以外の状況でも、DrvFs は WSL シンボリックリンクを作成します。</span><span class="sxs-lookup"><span data-stu-id="dea41-599">In all other situations, DrvFs still creates WSL symlinks.</span></span>
+- <span data-ttu-id="dea41-600">昇格および昇格されていない WSL インスタンスの同時実行を許可します。</span><span class="sxs-lookup"><span data-stu-id="dea41-600">Allow running elevated and non-elevated WSL instances simultaneously.</span></span>
+- <span data-ttu-id="dea41-601">/Proc/sys/kernel/yama/ptrace_scope のサポート</span><span class="sxs-lookup"><span data-stu-id="dea41-601">Support /proc/sys/kernel/yama/ptrace_scope</span></span>
+- <span data-ttu-id="dea41-602">Wslpath を追加して、WSL <-> Windows パス変換を実行します。</span><span class="sxs-lookup"><span data-stu-id="dea41-602">Add wslpath to do WSL<->Windows path conversions.</span></span> <span data-ttu-id="dea41-603">[GH 522、1243、1834、2327、et al]</span><span class="sxs-lookup"><span data-stu-id="dea41-603">[GH 522, 1243, 1834, 2327, et al.]</span></span>
   ```
     wslpath usage:
       -a    force result to absolute path format
@@ -652,629 +652,629 @@ wslconfig.exe /terminate <DistributionName>
 
       EX: wslpath ‘c:\users’
   ```
-  #### <a name="console"></a><span data-ttu-id="3c169-604">Console</span><span class="sxs-lookup"><span data-stu-id="3c169-604">Console</span></span>
-- <span data-ttu-id="3c169-605">修正はありません。</span><span class="sxs-lookup"><span data-stu-id="3c169-605">No fixes.</span></span>
+  #### <a name="console"></a><span data-ttu-id="dea41-604">Console</span><span class="sxs-lookup"><span data-stu-id="dea41-604">Console</span></span>
+- <span data-ttu-id="dea41-605">修正はありません。</span><span class="sxs-lookup"><span data-stu-id="dea41-605">No fixes.</span></span>
 
-### <a name="ltp-results"></a><span data-ttu-id="3c169-606">LTP の結果:</span><span class="sxs-lookup"><span data-stu-id="3c169-606">LTP Results:</span></span>
-<span data-ttu-id="3c169-607">テストを実行中です。</span><span class="sxs-lookup"><span data-stu-id="3c169-607">Testing in progress.</span></span>
-
-
-## <a name="build-17040"></a><span data-ttu-id="3c169-608">ビルド17040</span><span class="sxs-lookup"><span data-stu-id="3c169-608">Build 17040</span></span>
-
-<span data-ttu-id="3c169-609">ビルド17040の一般的な Windows 情報については、 [windows のブログ](https://blogs.windows.com/windowsexperience/2017/11/16/announcing-windows-10-insider-preview-build-17040-pc)を参照してください。</span><span class="sxs-lookup"><span data-stu-id="3c169-609">For general Windows information on build 17040 visit the [Windows Blog](https://blogs.windows.com/windowsexperience/2017/11/16/announcing-windows-10-insider-preview-build-17040-pc).</span></span><br/>
+### <a name="ltp-results"></a><span data-ttu-id="dea41-606">LTP の結果:</span><span class="sxs-lookup"><span data-stu-id="dea41-606">LTP Results:</span></span>
+<span data-ttu-id="dea41-607">テストを実行中です。</span><span class="sxs-lookup"><span data-stu-id="dea41-607">Testing in progress.</span></span>
 
 
-### <a name="fixed"></a><span data-ttu-id="3c169-610">固定</span><span class="sxs-lookup"><span data-stu-id="3c169-610">Fixed</span></span>
-#### <a name="wsl"></a><span data-ttu-id="3c169-611">WSL</span><span class="sxs-lookup"><span data-stu-id="3c169-611">WSL</span></span>
-- <span data-ttu-id="3c169-612">17035以降の修正プログラムはありません。</span><span class="sxs-lookup"><span data-stu-id="3c169-612">No fixes since 17035.</span></span>
+## <a name="build-17040"></a><span data-ttu-id="dea41-608">ビルド17040</span><span class="sxs-lookup"><span data-stu-id="dea41-608">Build 17040</span></span>
 
-#### <a name="console"></a><span data-ttu-id="3c169-613">Console</span><span class="sxs-lookup"><span data-stu-id="3c169-613">Console</span></span>
-- <span data-ttu-id="3c169-614">17035以降の修正プログラムはありません。</span><span class="sxs-lookup"><span data-stu-id="3c169-614">No fixes since 17035.</span></span>
-
-### <a name="ltp-results"></a><span data-ttu-id="3c169-615">LTP の結果:</span><span class="sxs-lookup"><span data-stu-id="3c169-615">LTP Results:</span></span>
-<span data-ttu-id="3c169-616">テストを実行中です。</span><span class="sxs-lookup"><span data-stu-id="3c169-616">Testing in progress.</span></span>
-
-## <a name="build-17035"></a><span data-ttu-id="3c169-617">ビルド17035</span><span class="sxs-lookup"><span data-stu-id="3c169-617">Build 17035</span></span>
-
-<span data-ttu-id="3c169-618">ビルド17035の一般的な Windows 情報については、 [windows のブログ](https://blogs.windows.com/windowsexperience/2017/11/08/announcing-windows-10-insider-preview-build-17035-pc)を参照してください。</span><span class="sxs-lookup"><span data-stu-id="3c169-618">For general Windows information on build 17035 visit the [Windows Blog](https://blogs.windows.com/windowsexperience/2017/11/08/announcing-windows-10-insider-preview-build-17035-pc).</span></span><br/>
+<span data-ttu-id="dea41-609">ビルド17040の一般的な Windows 情報については、 [windows のブログ](https://blogs.windows.com/windowsexperience/2017/11/16/announcing-windows-10-insider-preview-build-17040-pc)を参照してください。</span><span class="sxs-lookup"><span data-stu-id="dea41-609">For general Windows information on build 17040 visit the [Windows Blog](https://blogs.windows.com/windowsexperience/2017/11/16/announcing-windows-10-insider-preview-build-17040-pc).</span></span><br/>
 
 
-### <a name="fixed"></a><span data-ttu-id="3c169-619">固定</span><span class="sxs-lookup"><span data-stu-id="3c169-619">Fixed</span></span>
-#### <a name="wsl"></a><span data-ttu-id="3c169-620">WSL</span><span class="sxs-lookup"><span data-stu-id="3c169-620">WSL</span></span>
-- <span data-ttu-id="3c169-621">DrvFs 上のファイルへのアクセスは、場合によっては、EINVAL で失敗することがあります。</span><span class="sxs-lookup"><span data-stu-id="3c169-621">Accessing files on DrvFs could occasionally fail with EINVAL.</span></span> <span data-ttu-id="3c169-622">[GH 2448]</span><span class="sxs-lookup"><span data-stu-id="3c169-622">[GH 2448]</span></span>
+### <a name="fixed"></a><span data-ttu-id="dea41-610">固定</span><span class="sxs-lookup"><span data-stu-id="dea41-610">Fixed</span></span>
+#### <a name="wsl"></a><span data-ttu-id="dea41-611">WSL</span><span class="sxs-lookup"><span data-stu-id="dea41-611">WSL</span></span>
+- <span data-ttu-id="dea41-612">17035以降の修正プログラムはありません。</span><span class="sxs-lookup"><span data-stu-id="dea41-612">No fixes since 17035.</span></span>
 
-#### <a name="console"></a><span data-ttu-id="3c169-623">Console</span><span class="sxs-lookup"><span data-stu-id="3c169-623">Console</span></span>
-- <span data-ttu-id="3c169-624">VT モードで行を挿入または削除するときに色が失われることがあります。</span><span class="sxs-lookup"><span data-stu-id="3c169-624">Some color loss when inserting/deleting lines in VT mode.</span></span>
+#### <a name="console"></a><span data-ttu-id="dea41-613">Console</span><span class="sxs-lookup"><span data-stu-id="dea41-613">Console</span></span>
+- <span data-ttu-id="dea41-614">17035以降の修正プログラムはありません。</span><span class="sxs-lookup"><span data-stu-id="dea41-614">No fixes since 17035.</span></span>
 
-### <a name="ltp-results"></a><span data-ttu-id="3c169-625">LTP の結果:</span><span class="sxs-lookup"><span data-stu-id="3c169-625">LTP Results:</span></span>
-<span data-ttu-id="3c169-626">テストを実行中です。</span><span class="sxs-lookup"><span data-stu-id="3c169-626">Testing in progress.</span></span>
+### <a name="ltp-results"></a><span data-ttu-id="dea41-615">LTP の結果:</span><span class="sxs-lookup"><span data-stu-id="dea41-615">LTP Results:</span></span>
+<span data-ttu-id="dea41-616">テストを実行中です。</span><span class="sxs-lookup"><span data-stu-id="dea41-616">Testing in progress.</span></span>
 
-## <a name="build-17025"></a><span data-ttu-id="3c169-627">ビルド17025</span><span class="sxs-lookup"><span data-stu-id="3c169-627">Build 17025</span></span>
+## <a name="build-17035"></a><span data-ttu-id="dea41-617">ビルド17035</span><span class="sxs-lookup"><span data-stu-id="dea41-617">Build 17035</span></span>
 
-<span data-ttu-id="3c169-628">ビルド17025の一般的な Windows 情報については、 [windows のブログ](https://blogs.windows.com/windowsexperience/2017/10/25/announcing-windows-10-insider-preview-build-17025-pc)を参照してください。</span><span class="sxs-lookup"><span data-stu-id="3c169-628">For general Windows information on build 17025 visit the [Windows Blog](https://blogs.windows.com/windowsexperience/2017/10/25/announcing-windows-10-insider-preview-build-17025-pc).</span></span><br/>
-
-
-### <a name="fixed"></a><span data-ttu-id="3c169-629">固定</span><span class="sxs-lookup"><span data-stu-id="3c169-629">Fixed</span></span>
-#### <a name="wsl"></a><span data-ttu-id="3c169-630">WSL</span><span class="sxs-lookup"><span data-stu-id="3c169-630">WSL</span></span>
-- <span data-ttu-id="3c169-631">新しいフォアグラウンドプロセスグループで初期プロセスを開始します [GH 1653, 2510]。</span><span class="sxs-lookup"><span data-stu-id="3c169-631">Start initial processes in a new foreground process group [GH 1653, 2510].</span></span>
-- <span data-ttu-id="3c169-632">SIGHUP 配信の修正プログラム [GH 2496]。</span><span class="sxs-lookup"><span data-stu-id="3c169-632">SIGHUP delivery fixes [GH 2496].</span></span>
-- <span data-ttu-id="3c169-633">[GH 2497] が指定されていない場合は、既定の仮想ブリッジ名を生成します。</span><span class="sxs-lookup"><span data-stu-id="3c169-633">Generate default virtual bridge name if none provided [GH 2497].</span></span>
-- <span data-ttu-id="3c169-634">/Proc/sys/kernel/random/boot_id [GH 2518] を実装します。</span><span class="sxs-lookup"><span data-stu-id="3c169-634">Implement /proc/sys/kernel/random/boot_id [GH 2518].</span></span>
-- <span data-ttu-id="3c169-635">相互運用機能の stdout/stderr パイプの修正。</span><span class="sxs-lookup"><span data-stu-id="3c169-635">More interop stdout/stderr pipe fixes.</span></span>
-- <span data-ttu-id="3c169-636">Syncfs システム呼び出しをスタブします。</span><span class="sxs-lookup"><span data-stu-id="3c169-636">Stub syncfs system call.</span></span>
-
-#### <a name="console"></a><span data-ttu-id="3c169-637">Console</span><span class="sxs-lookup"><span data-stu-id="3c169-637">Console</span></span>
-- <span data-ttu-id="3c169-638">サードパーティコンソールの入力 VT translation の修正 [GH 111]</span><span class="sxs-lookup"><span data-stu-id="3c169-638">Fix input VT translation for third party consoles [GH 111]</span></span>
-
-### <a name="ltp-results"></a><span data-ttu-id="3c169-639">LTP の結果:</span><span class="sxs-lookup"><span data-stu-id="3c169-639">LTP Results:</span></span>
-<span data-ttu-id="3c169-640">テストを実行中です。</span><span class="sxs-lookup"><span data-stu-id="3c169-640">Testing in progress.</span></span>
-
-## <a name="build-17017"></a><span data-ttu-id="3c169-641">ビルド17017</span><span class="sxs-lookup"><span data-stu-id="3c169-641">Build 17017</span></span>
-
-<span data-ttu-id="3c169-642">ビルド17017の一般的な Windows 情報については、 [windows のブログ](https://blogs.windows.com/windowsexperience/2017/10/13/announcing-windows-10-insider-preview-build-17017-pc)を参照してください。</span><span class="sxs-lookup"><span data-stu-id="3c169-642">For general Windows information on build 17017 visit the [Windows Blog](https://blogs.windows.com/windowsexperience/2017/10/13/announcing-windows-10-insider-preview-build-17017-pc).</span></span><br/>
+<span data-ttu-id="dea41-618">ビルド17035の一般的な Windows 情報については、 [windows のブログ](https://blogs.windows.com/windowsexperience/2017/11/08/announcing-windows-10-insider-preview-build-17035-pc)を参照してください。</span><span class="sxs-lookup"><span data-stu-id="dea41-618">For general Windows information on build 17035 visit the [Windows Blog](https://blogs.windows.com/windowsexperience/2017/11/08/announcing-windows-10-insider-preview-build-17035-pc).</span></span><br/>
 
 
-### <a name="fixed"></a><span data-ttu-id="3c169-643">固定</span><span class="sxs-lookup"><span data-stu-id="3c169-643">Fixed</span></span>
-#### <a name="wsl"></a><span data-ttu-id="3c169-644">WSL</span><span class="sxs-lookup"><span data-stu-id="3c169-644">WSL</span></span>
-- <span data-ttu-id="3c169-645">空の ELF プログラムヘッダー [GH 330] を無視します。</span><span class="sxs-lookup"><span data-stu-id="3c169-645">Ignore empty ELF program headers [GH 330].</span></span>
-- <span data-ttu-id="3c169-646">LxssManager が非対話型ユーザーの WSL インスタンスを作成できるようにします (ssh およびスケジュールされたタスクのサポート) [GH 777, 1602]。</span><span class="sxs-lookup"><span data-stu-id="3c169-646">Allow LxssManager to create WSL instances for non-interactive users (ssh and scheduled task support) [GH 777, 1602].</span></span>
-- <span data-ttu-id="3c169-647">WSL-> Win32 > WSL ("設立") シナリオのサポート [GH 1228]。</span><span class="sxs-lookup"><span data-stu-id="3c169-647">Support WSL->Win32->WSL ("inception") scenarios [GH 1228].</span></span>
-- <span data-ttu-id="3c169-648">相互運用機能によって起動されるコンソールアプリの終了の制限付きサポート [GH 1614]。</span><span class="sxs-lookup"><span data-stu-id="3c169-648">Limited support for termination of console apps invoked via interop [GH 1614].</span></span>
-- <span data-ttu-id="3c169-649">Devpts のマウントオプション [GH 1948] をサポートします。</span><span class="sxs-lookup"><span data-stu-id="3c169-649">Support mount options for devpts [GH 1948].</span></span>
-- <span data-ttu-id="3c169-650">Ptrace が子スタートアップをブロックしています [GH 2333]。</span><span class="sxs-lookup"><span data-stu-id="3c169-650">Ptrace blocking child startup [GH 2333].</span></span>
-- <span data-ttu-id="3c169-651">EPOLLET には、一部のイベント [GH 2462] がありません。</span><span class="sxs-lookup"><span data-stu-id="3c169-651">EPOLLET missing some events [GH 2462].</span></span>
-- <span data-ttu-id="3c169-652">PTRACE_GETSIGINFO の他のデータを返します。</span><span class="sxs-lookup"><span data-stu-id="3c169-652">Return more data for PTRACE_GETSIGINFO.</span></span>
-- <span data-ttu-id="3c169-653">Getdents と lseek では、正しくない結果が得られます。</span><span class="sxs-lookup"><span data-stu-id="3c169-653">Getdents with lseek gives incorrect results.</span></span>
-- <span data-ttu-id="3c169-654">いくつかの Win32 相互運用アプリのハングを修正しました。これ以上データのないパイプで入力を待機しています。</span><span class="sxs-lookup"><span data-stu-id="3c169-654">Fix some Win32 interop app hangs, waiting for input on a pipe that has no more data.</span></span>
-- <span data-ttu-id="3c169-655">O_ASYNC は、tty/pty ファイルをサポートしています。</span><span class="sxs-lookup"><span data-stu-id="3c169-655">O_ASYNC support for tty/pty files.</span></span>
-- <span data-ttu-id="3c169-656">追加の機能強化とバグ修正</span><span class="sxs-lookup"><span data-stu-id="3c169-656">Additional improvements and bug fixes</span></span>
+### <a name="fixed"></a><span data-ttu-id="dea41-619">固定</span><span class="sxs-lookup"><span data-stu-id="dea41-619">Fixed</span></span>
+#### <a name="wsl"></a><span data-ttu-id="dea41-620">WSL</span><span class="sxs-lookup"><span data-stu-id="dea41-620">WSL</span></span>
+- <span data-ttu-id="dea41-621">DrvFs 上のファイルへのアクセスは、場合によっては、EINVAL で失敗することがあります。</span><span class="sxs-lookup"><span data-stu-id="dea41-621">Accessing files on DrvFs could occasionally fail with EINVAL.</span></span> <span data-ttu-id="dea41-622">[GH 2448]</span><span class="sxs-lookup"><span data-stu-id="dea41-622">[GH 2448]</span></span>
 
-#### <a name="console"></a><span data-ttu-id="3c169-657">Console</span><span class="sxs-lookup"><span data-stu-id="3c169-657">Console</span></span>
-- <span data-ttu-id="3c169-658">このリリースでは、コンソールに関連する変更はありません。</span><span class="sxs-lookup"><span data-stu-id="3c169-658">No Console related changes in this release.</span></span>
+#### <a name="console"></a><span data-ttu-id="dea41-623">Console</span><span class="sxs-lookup"><span data-stu-id="dea41-623">Console</span></span>
+- <span data-ttu-id="dea41-624">VT モードで行を挿入または削除するときに色が失われることがあります。</span><span class="sxs-lookup"><span data-stu-id="dea41-624">Some color loss when inserting/deleting lines in VT mode.</span></span>
 
-### <a name="ltp-results"></a><span data-ttu-id="3c169-659">LTP の結果:</span><span class="sxs-lookup"><span data-stu-id="3c169-659">LTP Results:</span></span>
-<span data-ttu-id="3c169-660">テストを実行中です。</span><span class="sxs-lookup"><span data-stu-id="3c169-660">Testing in progress.</span></span>
+### <a name="ltp-results"></a><span data-ttu-id="dea41-625">LTP の結果:</span><span class="sxs-lookup"><span data-stu-id="dea41-625">LTP Results:</span></span>
+<span data-ttu-id="dea41-626">テストを実行中です。</span><span class="sxs-lookup"><span data-stu-id="dea41-626">Testing in progress.</span></span>
 
-## <a name="fall-creators-update"></a><span data-ttu-id="3c169-661">Fall Creators Update</span><span class="sxs-lookup"><span data-stu-id="3c169-661">Fall Creators Update</span></span>
+## <a name="build-17025"></a><span data-ttu-id="dea41-627">ビルド17025</span><span class="sxs-lookup"><span data-stu-id="dea41-627">Build 17025</span></span>
 
-## <a name="build-16288"></a><span data-ttu-id="3c169-662">ビルド16288</span><span class="sxs-lookup"><span data-stu-id="3c169-662">Build 16288</span></span>
-
-<span data-ttu-id="3c169-663">ビルド16288の一般的な Windows 情報については、 [windows のブログ](https://blogs.windows.com/windowsexperience/2017/09/12/announcing-windows-10-insider-preview-build-16288-pc-build-15250-mobile/#7pLWQbj23JisfzV5.97/)を参照してください。</span><span class="sxs-lookup"><span data-stu-id="3c169-663">For general Windows information on build 16288 visit the [Windows Blog](https://blogs.windows.com/windowsexperience/2017/09/12/announcing-windows-10-insider-preview-build-16288-pc-build-15250-mobile/#7pLWQbj23JisfzV5.97/).</span></span><br/>
+<span data-ttu-id="dea41-628">ビルド17025の一般的な Windows 情報については、 [windows のブログ](https://blogs.windows.com/windowsexperience/2017/10/25/announcing-windows-10-insider-preview-build-17025-pc)を参照してください。</span><span class="sxs-lookup"><span data-stu-id="dea41-628">For general Windows information on build 17025 visit the [Windows Blog](https://blogs.windows.com/windowsexperience/2017/10/25/announcing-windows-10-insider-preview-build-17025-pc).</span></span><br/>
 
 
-### <a name="fixed"></a><span data-ttu-id="3c169-664">固定</span><span class="sxs-lookup"><span data-stu-id="3c169-664">Fixed</span></span>
-#### <a name="wsl"></a><span data-ttu-id="3c169-665">WSL</span><span class="sxs-lookup"><span data-stu-id="3c169-665">WSL</span></span>
-- <span data-ttu-id="3c169-666">ソケットファイル記述子の uid、gid、およびモードを正しく初期化して報告する [GH 2490]</span><span class="sxs-lookup"><span data-stu-id="3c169-666">Correctly initialize and report uid, gid, and mode for socket file descriptors [GH 2490]</span></span>
-- <span data-ttu-id="3c169-667">追加の機能強化とバグ修正</span><span class="sxs-lookup"><span data-stu-id="3c169-667">Additional improvements and bug fixes</span></span>
+### <a name="fixed"></a><span data-ttu-id="dea41-629">固定</span><span class="sxs-lookup"><span data-stu-id="dea41-629">Fixed</span></span>
+#### <a name="wsl"></a><span data-ttu-id="dea41-630">WSL</span><span class="sxs-lookup"><span data-stu-id="dea41-630">WSL</span></span>
+- <span data-ttu-id="dea41-631">新しいフォアグラウンドプロセスグループで初期プロセスを開始します [GH 1653, 2510]。</span><span class="sxs-lookup"><span data-stu-id="dea41-631">Start initial processes in a new foreground process group [GH 1653, 2510].</span></span>
+- <span data-ttu-id="dea41-632">SIGHUP 配信の修正プログラム [GH 2496]。</span><span class="sxs-lookup"><span data-stu-id="dea41-632">SIGHUP delivery fixes [GH 2496].</span></span>
+- <span data-ttu-id="dea41-633">[GH 2497] が指定されていない場合は、既定の仮想ブリッジ名を生成します。</span><span class="sxs-lookup"><span data-stu-id="dea41-633">Generate default virtual bridge name if none provided [GH 2497].</span></span>
+- <span data-ttu-id="dea41-634">/Proc/sys/kernel/random/boot_id [GH 2518] を実装します。</span><span class="sxs-lookup"><span data-stu-id="dea41-634">Implement /proc/sys/kernel/random/boot_id [GH 2518].</span></span>
+- <span data-ttu-id="dea41-635">相互運用機能の stdout/stderr パイプの修正。</span><span class="sxs-lookup"><span data-stu-id="dea41-635">More interop stdout/stderr pipe fixes.</span></span>
+- <span data-ttu-id="dea41-636">Syncfs システム呼び出しをスタブします。</span><span class="sxs-lookup"><span data-stu-id="dea41-636">Stub syncfs system call.</span></span>
 
-#### <a name="console"></a><span data-ttu-id="3c169-668">Console</span><span class="sxs-lookup"><span data-stu-id="3c169-668">Console</span></span>
-- <span data-ttu-id="3c169-669">このリリースでは、コンソールに関連する変更はありません。</span><span class="sxs-lookup"><span data-stu-id="3c169-669">No Console related changes in this release.</span></span>
+#### <a name="console"></a><span data-ttu-id="dea41-637">Console</span><span class="sxs-lookup"><span data-stu-id="dea41-637">Console</span></span>
+- <span data-ttu-id="dea41-638">サードパーティコンソールの入力 VT translation の修正 [GH 111]</span><span class="sxs-lookup"><span data-stu-id="dea41-638">Fix input VT translation for third party consoles [GH 111]</span></span>
 
-### <a name="ltp-results"></a><span data-ttu-id="3c169-670">LTP の結果:</span><span class="sxs-lookup"><span data-stu-id="3c169-670">LTP Results:</span></span>
-<span data-ttu-id="3c169-671">16273以降の変更はありません</span><span class="sxs-lookup"><span data-stu-id="3c169-671">No change since 16273</span></span>
+### <a name="ltp-results"></a><span data-ttu-id="dea41-639">LTP の結果:</span><span class="sxs-lookup"><span data-stu-id="dea41-639">LTP Results:</span></span>
+<span data-ttu-id="dea41-640">テストを実行中です。</span><span class="sxs-lookup"><span data-stu-id="dea41-640">Testing in progress.</span></span>
 
-## <a name="build-16278"></a><span data-ttu-id="3c169-672">ビルド16278</span><span class="sxs-lookup"><span data-stu-id="3c169-672">Build 16278</span></span>
+## <a name="build-17017"></a><span data-ttu-id="dea41-641">ビルド17017</span><span class="sxs-lookup"><span data-stu-id="dea41-641">Build 17017</span></span>
 
-<span data-ttu-id="3c169-673">ビルド162738の一般的な Windows 情報については、 [windows のブログ](https://blogs.windows.com/windowsexperience/2017/08/29/announcing-windows-10-insider-preview-build-16278-pc/#HMz6Xq7Su68WKi0t.97/)を参照してください。</span><span class="sxs-lookup"><span data-stu-id="3c169-673">For general Windows information on build 162738 visit the [Windows Blog](https://blogs.windows.com/windowsexperience/2017/08/29/announcing-windows-10-insider-preview-build-16278-pc/#HMz6Xq7Su68WKi0t.97/).</span></span><br/>
-
-
-### <a name="fixed"></a><span data-ttu-id="3c169-674">固定</span><span class="sxs-lookup"><span data-stu-id="3c169-674">Fixed</span></span>
-#### <a name="wsl"></a><span data-ttu-id="3c169-675">WSL</span><span class="sxs-lookup"><span data-stu-id="3c169-675">WSL</span></span>
-- <span data-ttu-id="3c169-676">LX MM 状態を解除するときに、ファイルによってサポートされるセクションのマップされたビューを明示的にマップ解除する [GH 2415]</span><span class="sxs-lookup"><span data-stu-id="3c169-676">Explicitly unmap mapped views of file backed sections when tearing down LX MM state [GH 2415]</span></span>
-- <span data-ttu-id="3c169-677">追加の機能強化とバグ修正</span><span class="sxs-lookup"><span data-stu-id="3c169-677">Additional improvements and bug fixes</span></span>
-
-#### <a name="console"></a><span data-ttu-id="3c169-678">Console</span><span class="sxs-lookup"><span data-stu-id="3c169-678">Console</span></span>
-- <span data-ttu-id="3c169-679">このリリースでは、コンソールに関連する変更はありません。</span><span class="sxs-lookup"><span data-stu-id="3c169-679">No Console related changes in this release.</span></span>
-
-### <a name="ltp-results"></a><span data-ttu-id="3c169-680">LTP の結果:</span><span class="sxs-lookup"><span data-stu-id="3c169-680">LTP Results:</span></span>
-<span data-ttu-id="3c169-681">16273以降の変更はありません</span><span class="sxs-lookup"><span data-stu-id="3c169-681">No change since 16273</span></span>
-
-## <a name="build-16275"></a><span data-ttu-id="3c169-682">ビルド16275</span><span class="sxs-lookup"><span data-stu-id="3c169-682">Build 16275</span></span>
-
-<span data-ttu-id="3c169-683">ビルド162735の一般的な Windows 情報については、 [windows のブログ](https://blogs.windows.com/windowsexperience/2017/08/25/announcing-windows-10-insider-preview-build-16275-pc-build-15245-mobile/#8QkxWqQbY37yZslV.97/)を参照してください。</span><span class="sxs-lookup"><span data-stu-id="3c169-683">For general Windows information on build 162735 visit the [Windows Blog](https://blogs.windows.com/windowsexperience/2017/08/25/announcing-windows-10-insider-preview-build-16275-pc-build-15245-mobile/#8QkxWqQbY37yZslV.97/).</span></span><br/>
+<span data-ttu-id="dea41-642">ビルド17017の一般的な Windows 情報については、 [windows のブログ](https://blogs.windows.com/windowsexperience/2017/10/13/announcing-windows-10-insider-preview-build-17017-pc)を参照してください。</span><span class="sxs-lookup"><span data-stu-id="dea41-642">For general Windows information on build 17017 visit the [Windows Blog](https://blogs.windows.com/windowsexperience/2017/10/13/announcing-windows-10-insider-preview-build-17017-pc).</span></span><br/>
 
 
-### <a name="fixed"></a><span data-ttu-id="3c169-684">固定</span><span class="sxs-lookup"><span data-stu-id="3c169-684">Fixed</span></span>
-#### <a name="wsl"></a><span data-ttu-id="3c169-685">WSL</span><span class="sxs-lookup"><span data-stu-id="3c169-685">WSL</span></span>
-- <span data-ttu-id="3c169-686">このリリースでは、WSL 関連の変更はありません。</span><span class="sxs-lookup"><span data-stu-id="3c169-686">No WSL related changes in this release.</span></span>
+### <a name="fixed"></a><span data-ttu-id="dea41-643">固定</span><span class="sxs-lookup"><span data-stu-id="dea41-643">Fixed</span></span>
+#### <a name="wsl"></a><span data-ttu-id="dea41-644">WSL</span><span class="sxs-lookup"><span data-stu-id="dea41-644">WSL</span></span>
+- <span data-ttu-id="dea41-645">空の ELF プログラムヘッダー [GH 330] を無視します。</span><span class="sxs-lookup"><span data-stu-id="dea41-645">Ignore empty ELF program headers [GH 330].</span></span>
+- <span data-ttu-id="dea41-646">LxssManager が非対話型ユーザーの WSL インスタンスを作成できるようにします (ssh およびスケジュールされたタスクのサポート) [GH 777, 1602]。</span><span class="sxs-lookup"><span data-stu-id="dea41-646">Allow LxssManager to create WSL instances for non-interactive users (ssh and scheduled task support) [GH 777, 1602].</span></span>
+- <span data-ttu-id="dea41-647">WSL-> Win32 > WSL ("設立") シナリオのサポート [GH 1228]。</span><span class="sxs-lookup"><span data-stu-id="dea41-647">Support WSL->Win32->WSL ("inception") scenarios [GH 1228].</span></span>
+- <span data-ttu-id="dea41-648">相互運用機能によって起動されるコンソールアプリの終了の制限付きサポート [GH 1614]。</span><span class="sxs-lookup"><span data-stu-id="dea41-648">Limited support for termination of console apps invoked via interop [GH 1614].</span></span>
+- <span data-ttu-id="dea41-649">Devpts のマウントオプション [GH 1948] をサポートします。</span><span class="sxs-lookup"><span data-stu-id="dea41-649">Support mount options for devpts [GH 1948].</span></span>
+- <span data-ttu-id="dea41-650">Ptrace が子スタートアップをブロックしています [GH 2333]。</span><span class="sxs-lookup"><span data-stu-id="dea41-650">Ptrace blocking child startup [GH 2333].</span></span>
+- <span data-ttu-id="dea41-651">EPOLLET には、一部のイベント [GH 2462] がありません。</span><span class="sxs-lookup"><span data-stu-id="dea41-651">EPOLLET missing some events [GH 2462].</span></span>
+- <span data-ttu-id="dea41-652">PTRACE_GETSIGINFO の他のデータを返します。</span><span class="sxs-lookup"><span data-stu-id="dea41-652">Return more data for PTRACE_GETSIGINFO.</span></span>
+- <span data-ttu-id="dea41-653">Getdents と lseek では、正しくない結果が得られます。</span><span class="sxs-lookup"><span data-stu-id="dea41-653">Getdents with lseek gives incorrect results.</span></span>
+- <span data-ttu-id="dea41-654">いくつかの Win32 相互運用アプリのハングを修正しました。これ以上データのないパイプで入力を待機しています。</span><span class="sxs-lookup"><span data-stu-id="dea41-654">Fix some Win32 interop app hangs, waiting for input on a pipe that has no more data.</span></span>
+- <span data-ttu-id="dea41-655">O_ASYNC は、tty/pty ファイルをサポートしています。</span><span class="sxs-lookup"><span data-stu-id="dea41-655">O_ASYNC support for tty/pty files.</span></span>
+- <span data-ttu-id="dea41-656">追加の機能強化とバグ修正</span><span class="sxs-lookup"><span data-stu-id="dea41-656">Additional improvements and bug fixes</span></span>
 
-#### <a name="console"></a><span data-ttu-id="3c169-687">Console</span><span class="sxs-lookup"><span data-stu-id="3c169-687">Console</span></span>
-- <span data-ttu-id="3c169-688">このリリースでは、コンソールに関連する変更はありません。</span><span class="sxs-lookup"><span data-stu-id="3c169-688">No Console related changes in this release.</span></span>
+#### <a name="console"></a><span data-ttu-id="dea41-657">Console</span><span class="sxs-lookup"><span data-stu-id="dea41-657">Console</span></span>
+- <span data-ttu-id="dea41-658">このリリースでは、コンソールに関連する変更はありません。</span><span class="sxs-lookup"><span data-stu-id="dea41-658">No Console related changes in this release.</span></span>
 
-### <a name="ltp-results"></a><span data-ttu-id="3c169-689">LTP の結果:</span><span class="sxs-lookup"><span data-stu-id="3c169-689">LTP Results:</span></span>
-<span data-ttu-id="3c169-690">16273以降の変更はありません</span><span class="sxs-lookup"><span data-stu-id="3c169-690">No change since 16273</span></span>
+### <a name="ltp-results"></a><span data-ttu-id="dea41-659">LTP の結果:</span><span class="sxs-lookup"><span data-stu-id="dea41-659">LTP Results:</span></span>
+<span data-ttu-id="dea41-660">テストを実行中です。</span><span class="sxs-lookup"><span data-stu-id="dea41-660">Testing in progress.</span></span>
 
-## <a name="build-16273"></a><span data-ttu-id="3c169-691">ビルド16273</span><span class="sxs-lookup"><span data-stu-id="3c169-691">Build 16273</span></span>
+## <a name="fall-creators-update"></a><span data-ttu-id="dea41-661">Fall Creators Update</span><span class="sxs-lookup"><span data-stu-id="dea41-661">Fall Creators Update</span></span>
 
-<span data-ttu-id="3c169-692">ビルド16273の一般的な Windows 情報については、 [windows のブログ](https://blogs.windows.com/windowsexperience/2017/08/23/announcing-windows-10-insider-preview-build-16273-pc/)を参照してください。</span><span class="sxs-lookup"><span data-stu-id="3c169-692">For general Windows information on build 16273 visit the [Windows Blog](https://blogs.windows.com/windowsexperience/2017/08/23/announcing-windows-10-insider-preview-build-16273-pc/).</span></span><br/>
+## <a name="build-16288"></a><span data-ttu-id="dea41-662">ビルド16288</span><span class="sxs-lookup"><span data-stu-id="dea41-662">Build 16288</span></span>
 
-
-### <a name="fixed"></a><span data-ttu-id="3c169-693">固定</span><span class="sxs-lookup"><span data-stu-id="3c169-693">Fixed</span></span>
-#### <a name="wsl"></a><span data-ttu-id="3c169-694">WSL</span><span class="sxs-lookup"><span data-stu-id="3c169-694">WSL</span></span>
-- <span data-ttu-id="3c169-695">DrvFs がディレクトリに対して正しくないファイルの種類を報告する場合があるという問題を修正しました [GH 2392]</span><span class="sxs-lookup"><span data-stu-id="3c169-695">Fixed an issue where DrvFs sometimes reported the wrong file type for directories [GH 2392]</span></span>
-- <span data-ttu-id="3c169-696">Uevent [GH 1121、2293、2242、2295、2235、648、637] を使用するプログラムのブロックを解除するための NETLINK_KOBJECT_UEVENT sockets の作成を許可します</span><span class="sxs-lookup"><span data-stu-id="3c169-696">Allow creation of NETLINK_KOBJECT_UEVENT sockets to unblock programs that use uevent [GH 1121, 2293, 2242, 2295, 2235, 648, 637]</span></span>
-- <span data-ttu-id="3c169-697">非ブロッキング接続のサポートを追加する [GH 903、1391、1584、1585、1829、2290、2314]</span><span class="sxs-lookup"><span data-stu-id="3c169-697">Add support for non-blocking connect [GH 903, 1391, 1584, 1585, 1829, 2290, 2314]</span></span>
-- <span data-ttu-id="3c169-698">CLONE_FS CLONE システム呼び出しフラグを実装する [GH 2242]</span><span class="sxs-lookup"><span data-stu-id="3c169-698">Implement CLONE_FS clone system call flag [GH 2242]</span></span>
-- <span data-ttu-id="3c169-699">NT interop でタブまたは引用符を正しく処理しない問題を修正する [GH 1625, 2164]</span><span class="sxs-lookup"><span data-stu-id="3c169-699">Fix issues around not handling tabs or quotes correctly in NT interop [GH 1625, 2164]</span></span>
-- <span data-ttu-id="3c169-700">WSL インスタンスを再起動しようとしたときにアクセス拒否エラーを解決する [GH 651、2095]</span><span class="sxs-lookup"><span data-stu-id="3c169-700">Resolve access denied error when trying to re-launch WSL instances [GH 651, 2095]</span></span>
-- <span data-ttu-id="3c169-701">Futex FUTEX_REQUEUE と FUTEX_CMP_REQUEUE 操作の実装 [GH 2242]</span><span class="sxs-lookup"><span data-stu-id="3c169-701">Implement futex FUTEX_REQUEUE and FUTEX_CMP_REQUEUE operations [GH 2242]</span></span>
-- <span data-ttu-id="3c169-702">さまざまな SysFs ファイルのアクセス許可を修正する [GH 2214]</span><span class="sxs-lookup"><span data-stu-id="3c169-702">Fix permissions for various SysFs files [GH 2214]</span></span>
-- <span data-ttu-id="3c169-703">セットアップ中に Haskell stack のハングを修正する [GH 2290]</span><span class="sxs-lookup"><span data-stu-id="3c169-703">Fix Haskell stack hang during setup [GH 2290]</span></span>
-- <span data-ttu-id="3c169-704">Binfmt_misc ' C ' ' O ' および ' P ' フラグを実装する [GH 2103]</span><span class="sxs-lookup"><span data-stu-id="3c169-704">Implement binfmt_misc 'C' 'O' and 'P' flags [GH 2103]</span></span>
-- <span data-ttu-id="3c169-705">/Proc/sys/kernel/shmmax/shmmni & 追加する [GH 1753]</span><span class="sxs-lookup"><span data-stu-id="3c169-705">Add /proc/sys/kernel /shmmax /shmmni & /threads-max [GH 1753]</span></span>
-- <span data-ttu-id="3c169-706">Ioprio_set システム呼び出しの部分的なサポートを追加する [GH 498]</span><span class="sxs-lookup"><span data-stu-id="3c169-706">Add partial support for ioprio_set system call [GH 498]</span></span>
-- <span data-ttu-id="3c169-707">スタブ SO_REUSEPORT & SO_PASSCRED for netlink sockets のサポートの追加 [GH 69]</span><span class="sxs-lookup"><span data-stu-id="3c169-707">Stub SO_REUSEPORT & adding support for SO_PASSCRED for netlink sockets [GH 69]</span></span>
-- <span data-ttu-id="3c169-708">ディストリビューションが現在インストールまたはアンインストールされている場合は、RegisterDistribuiton から別のエラーコードを返します。</span><span class="sxs-lookup"><span data-stu-id="3c169-708">Return different error codes from RegisterDistribuiton if a distribution is currently being installed or uninstalled.</span></span>
-- <span data-ttu-id="3c169-709">Wslconfig .exe 経由で部分的にインストールされた WSL ディストリビューションの登録解除を許可する</span><span class="sxs-lookup"><span data-stu-id="3c169-709">Allow unregistration of partially installed WSL distributions via wslconfig.exe</span></span>
-- <span data-ttu-id="3c169-710">Udp:: msg_peek から python ソケットテストハングを修正します。</span><span class="sxs-lookup"><span data-stu-id="3c169-710">Fix python socket test hang from udp::msg_peek</span></span>
-- <span data-ttu-id="3c169-711">追加の機能強化とバグ修正</span><span class="sxs-lookup"><span data-stu-id="3c169-711">Additional improvements and bug fixes</span></span>
-
-#### <a name="console"></a><span data-ttu-id="3c169-712">Console</span><span class="sxs-lookup"><span data-stu-id="3c169-712">Console</span></span>
-- <span data-ttu-id="3c169-713">このリリースでは、コンソールに関連する変更はありません。</span><span class="sxs-lookup"><span data-stu-id="3c169-713">No Console related changes in this release.</span></span>
-
-### <a name="ltp-results"></a><span data-ttu-id="3c169-714">LTP の結果:</span><span class="sxs-lookup"><span data-stu-id="3c169-714">LTP Results:</span></span>
-<span data-ttu-id="3c169-715">テストの合計:1904</span><span class="sxs-lookup"><span data-stu-id="3c169-715">Total Tests: 1904</span></span><br/>
-<span data-ttu-id="3c169-716">スキップされたテストの合計数:209</span><span class="sxs-lookup"><span data-stu-id="3c169-716">Total Skipped Tests: 209</span></span><br/>
-<span data-ttu-id="3c169-717">合計エラー数:229</span><span class="sxs-lookup"><span data-stu-id="3c169-717">Total Failures: 229</span></span><br/>
-[<span data-ttu-id="3c169-718">LTP テストの実行ログ</span><span class="sxs-lookup"><span data-stu-id="3c169-718">LTP Test Run Logs</span></span>](https://github.com/Microsoft/CommandLine-Documentation/tree/live/LTP_Results/16273)<br/>
-
-## <a name="build-16257"></a><span data-ttu-id="3c169-719">ビルド 16257</span><span class="sxs-lookup"><span data-stu-id="3c169-719">Build 16257</span></span>
-
-<span data-ttu-id="3c169-720">ビルド16257の一般的な Windows 情報については、 [windows のブログ](https://blogs.windows.com/windowsexperience/2017/08/02/announcing-windows-10-insider-preview-build-16257-pc-build-15237-mobile/)を参照してください。</span><span class="sxs-lookup"><span data-stu-id="3c169-720">For general Windows information on build 16257 visit the [Windows Blog](https://blogs.windows.com/windowsexperience/2017/08/02/announcing-windows-10-insider-preview-build-16257-pc-build-15237-mobile/).</span></span><br/>
+<span data-ttu-id="dea41-663">ビルド16288の一般的な Windows 情報については、 [windows のブログ](https://blogs.windows.com/windowsexperience/2017/09/12/announcing-windows-10-insider-preview-build-16288-pc-build-15250-mobile/#7pLWQbj23JisfzV5.97/)を参照してください。</span><span class="sxs-lookup"><span data-stu-id="dea41-663">For general Windows information on build 16288 visit the [Windows Blog](https://blogs.windows.com/windowsexperience/2017/09/12/announcing-windows-10-insider-preview-build-16288-pc-build-15250-mobile/#7pLWQbj23JisfzV5.97/).</span></span><br/>
 
 
-### <a name="fixed"></a><span data-ttu-id="3c169-721">固定</span><span class="sxs-lookup"><span data-stu-id="3c169-721">Fixed</span></span>
-#### <a name="wsl"></a><span data-ttu-id="3c169-722">WSL</span><span class="sxs-lookup"><span data-stu-id="3c169-722">WSL</span></span>
-- <span data-ttu-id="3c169-723">Prlimit64 システム呼び出しを実装する</span><span class="sxs-lookup"><span data-stu-id="3c169-723">Implement prlimit64 system call</span></span>
-- <span data-ttu-id="3c169-724">Ulimit-n (setrlimit RLIMIT_NOFILE) のサポートを追加する [GH 1688]</span><span class="sxs-lookup"><span data-stu-id="3c169-724">Add support for ulimit -n (setrlimit RLIMIT_NOFILE) [GH 1688]</span></span>
-- <span data-ttu-id="3c169-725">TCP ソケットのスタブ MSG_MORE [GH 2351]</span><span class="sxs-lookup"><span data-stu-id="3c169-725">Stub MSG_MORE for TCP sockets [GH 2351]</span></span>
-- <span data-ttu-id="3c169-726">無効な AT_EXECFN 補助ベクター動作の修正 [GH 2133]</span><span class="sxs-lookup"><span data-stu-id="3c169-726">Fix invalid AT_EXECFN auxiliary vector behavior [GH 2133]</span></span>
-- <span data-ttu-id="3c169-727">コンソール/tty のコピー/貼り付け動作を修正し、完全なバッファー処理をさらに追加する [GH 2204, 2131]</span><span class="sxs-lookup"><span data-stu-id="3c169-727">Fix copy/paste behavior for console/tty, and add better full buffer handling [GH 2204, 2131]</span></span>
-- <span data-ttu-id="3c169-728">AT_SECURE プログラムと set-group-ID プログラムの補助ベクターでの設定 [GH 2031]</span><span class="sxs-lookup"><span data-stu-id="3c169-728">Set AT_SECURE in auxiliary vector for set-user-ID and set-group-ID programs [GH 2031]</span></span>
-- <span data-ttu-id="3c169-729">Psuedo-ターミナルマスターエンドポイントが TIOCPGRP を処理しない [GH 1063]</span><span class="sxs-lookup"><span data-stu-id="3c169-729">Psuedo-terminal master endpoint not handling TIOCPGRP [GH 1063]</span></span>
-- <span data-ttu-id="3c169-730">Lseek が LxFs のディレクトリを巻き戻していることを修正する [GH 2310]</span><span class="sxs-lookup"><span data-stu-id="3c169-730">Fix lseek does to rewind directories in LxFs [GH 2310]</span></span>
-- <span data-ttu-id="3c169-731">大きな使用率が高くなった後の GH のロック [1882]</span><span class="sxs-lookup"><span data-stu-id="3c169-731">/dev/ptmx locks up after heavy usage [GH 1882]</span></span>
-- <span data-ttu-id="3c169-732">追加の機能強化とバグ修正</span><span class="sxs-lookup"><span data-stu-id="3c169-732">Additional improvements and bug fixes</span></span>
+### <a name="fixed"></a><span data-ttu-id="dea41-664">固定</span><span class="sxs-lookup"><span data-stu-id="dea41-664">Fixed</span></span>
+#### <a name="wsl"></a><span data-ttu-id="dea41-665">WSL</span><span class="sxs-lookup"><span data-stu-id="dea41-665">WSL</span></span>
+- <span data-ttu-id="dea41-666">ソケットファイル記述子の uid、gid、およびモードを正しく初期化して報告する [GH 2490]</span><span class="sxs-lookup"><span data-stu-id="dea41-666">Correctly initialize and report uid, gid, and mode for socket file descriptors [GH 2490]</span></span>
+- <span data-ttu-id="dea41-667">追加の機能強化とバグ修正</span><span class="sxs-lookup"><span data-stu-id="dea41-667">Additional improvements and bug fixes</span></span>
 
-#### <a name="console"></a><span data-ttu-id="3c169-733">Console</span><span class="sxs-lookup"><span data-stu-id="3c169-733">Console</span></span>
-- <span data-ttu-id="3c169-734">すべての場所で水平線/アンダースコアを修正する [GH 2168]</span><span class="sxs-lookup"><span data-stu-id="3c169-734">Fix for horizontal Lines/Underscores Everywhere [GH 2168]</span></span>
-- <span data-ttu-id="3c169-735">プロセスの順序が変更されたことを修正し、NPM を閉じることが困難になる [GH 2170]</span><span class="sxs-lookup"><span data-stu-id="3c169-735">Fix for process order changed making NPM harder to close [GH 2170]</span></span>
-- <span data-ttu-id="3c169-736">新しい配色を追加しました。 https://blogs.msdn.microsoft.com/commandline/2017/08/02/updating-the-windows-console-colors/</span><span class="sxs-lookup"><span data-stu-id="3c169-736">Added our new color scheme: https://blogs.msdn.microsoft.com/commandline/2017/08/02/updating-the-windows-console-colors/</span></span>
+#### <a name="console"></a><span data-ttu-id="dea41-668">Console</span><span class="sxs-lookup"><span data-stu-id="dea41-668">Console</span></span>
+- <span data-ttu-id="dea41-669">このリリースでは、コンソールに関連する変更はありません。</span><span class="sxs-lookup"><span data-stu-id="dea41-669">No Console related changes in this release.</span></span>
 
-### <a name="ltp-results"></a><span data-ttu-id="3c169-737">LTP の結果:</span><span class="sxs-lookup"><span data-stu-id="3c169-737">LTP Results:</span></span>
-<span data-ttu-id="3c169-738">16251以降の変更はありません</span><span class="sxs-lookup"><span data-stu-id="3c169-738">No change since 16251</span></span>
+### <a name="ltp-results"></a><span data-ttu-id="dea41-670">LTP の結果:</span><span class="sxs-lookup"><span data-stu-id="dea41-670">LTP Results:</span></span>
+<span data-ttu-id="dea41-671">16273以降の変更はありません</span><span class="sxs-lookup"><span data-stu-id="dea41-671">No change since 16273</span></span>
 
-### <a name="syscall-support"></a><span data-ttu-id="3c169-739">Syscall のサポート</span><span class="sxs-lookup"><span data-stu-id="3c169-739">Syscall Support</span></span>
-<span data-ttu-id="3c169-740">次に示すのは、WSL でいくつかの実装を持つ新しいまたは強化された syscall の一覧です。</span><span class="sxs-lookup"><span data-stu-id="3c169-740">Below are a list of new or enhanced syscalls that have some implementation in WSL.</span></span> <span data-ttu-id="3c169-741">この一覧の syscall は、少なくとも1つのシナリオでサポートされていますが、現時点では一部のパラメーターがサポートされていない可能性があります。</span><span class="sxs-lookup"><span data-stu-id="3c169-741">The syscalls on this list are supported in at least one scenario, but may not have all parameters supported at this time.</span></span>
+## <a name="build-16278"></a><span data-ttu-id="dea41-672">ビルド16278</span><span class="sxs-lookup"><span data-stu-id="dea41-672">Build 16278</span></span>
+
+<span data-ttu-id="dea41-673">ビルド162738の一般的な Windows 情報については、 [windows のブログ](https://blogs.windows.com/windowsexperience/2017/08/29/announcing-windows-10-insider-preview-build-16278-pc/#HMz6Xq7Su68WKi0t.97/)を参照してください。</span><span class="sxs-lookup"><span data-stu-id="dea41-673">For general Windows information on build 162738 visit the [Windows Blog](https://blogs.windows.com/windowsexperience/2017/08/29/announcing-windows-10-insider-preview-build-16278-pc/#HMz6Xq7Su68WKi0t.97/).</span></span><br/>
+
+
+### <a name="fixed"></a><span data-ttu-id="dea41-674">固定</span><span class="sxs-lookup"><span data-stu-id="dea41-674">Fixed</span></span>
+#### <a name="wsl"></a><span data-ttu-id="dea41-675">WSL</span><span class="sxs-lookup"><span data-stu-id="dea41-675">WSL</span></span>
+- <span data-ttu-id="dea41-676">LX MM 状態を解除するときに、ファイルによってサポートされるセクションのマップされたビューを明示的にマップ解除する [GH 2415]</span><span class="sxs-lookup"><span data-stu-id="dea41-676">Explicitly unmap mapped views of file backed sections when tearing down LX MM state [GH 2415]</span></span>
+- <span data-ttu-id="dea41-677">追加の機能強化とバグ修正</span><span class="sxs-lookup"><span data-stu-id="dea41-677">Additional improvements and bug fixes</span></span>
+
+#### <a name="console"></a><span data-ttu-id="dea41-678">Console</span><span class="sxs-lookup"><span data-stu-id="dea41-678">Console</span></span>
+- <span data-ttu-id="dea41-679">このリリースでは、コンソールに関連する変更はありません。</span><span class="sxs-lookup"><span data-stu-id="dea41-679">No Console related changes in this release.</span></span>
+
+### <a name="ltp-results"></a><span data-ttu-id="dea41-680">LTP の結果:</span><span class="sxs-lookup"><span data-stu-id="dea41-680">LTP Results:</span></span>
+<span data-ttu-id="dea41-681">16273以降の変更はありません</span><span class="sxs-lookup"><span data-stu-id="dea41-681">No change since 16273</span></span>
+
+## <a name="build-16275"></a><span data-ttu-id="dea41-682">ビルド16275</span><span class="sxs-lookup"><span data-stu-id="dea41-682">Build 16275</span></span>
+
+<span data-ttu-id="dea41-683">ビルド162735の一般的な Windows 情報については、 [windows のブログ](https://blogs.windows.com/windowsexperience/2017/08/25/announcing-windows-10-insider-preview-build-16275-pc-build-15245-mobile/#8QkxWqQbY37yZslV.97/)を参照してください。</span><span class="sxs-lookup"><span data-stu-id="dea41-683">For general Windows information on build 162735 visit the [Windows Blog](https://blogs.windows.com/windowsexperience/2017/08/25/announcing-windows-10-insider-preview-build-16275-pc-build-15245-mobile/#8QkxWqQbY37yZslV.97/).</span></span><br/>
+
+
+### <a name="fixed"></a><span data-ttu-id="dea41-684">固定</span><span class="sxs-lookup"><span data-stu-id="dea41-684">Fixed</span></span>
+#### <a name="wsl"></a><span data-ttu-id="dea41-685">WSL</span><span class="sxs-lookup"><span data-stu-id="dea41-685">WSL</span></span>
+- <span data-ttu-id="dea41-686">このリリースでは、WSL 関連の変更はありません。</span><span class="sxs-lookup"><span data-stu-id="dea41-686">No WSL related changes in this release.</span></span>
+
+#### <a name="console"></a><span data-ttu-id="dea41-687">Console</span><span class="sxs-lookup"><span data-stu-id="dea41-687">Console</span></span>
+- <span data-ttu-id="dea41-688">このリリースでは、コンソールに関連する変更はありません。</span><span class="sxs-lookup"><span data-stu-id="dea41-688">No Console related changes in this release.</span></span>
+
+### <a name="ltp-results"></a><span data-ttu-id="dea41-689">LTP の結果:</span><span class="sxs-lookup"><span data-stu-id="dea41-689">LTP Results:</span></span>
+<span data-ttu-id="dea41-690">16273以降の変更はありません</span><span class="sxs-lookup"><span data-stu-id="dea41-690">No change since 16273</span></span>
+
+## <a name="build-16273"></a><span data-ttu-id="dea41-691">ビルド16273</span><span class="sxs-lookup"><span data-stu-id="dea41-691">Build 16273</span></span>
+
+<span data-ttu-id="dea41-692">ビルド16273の一般的な Windows 情報については、 [windows のブログ](https://blogs.windows.com/windowsexperience/2017/08/23/announcing-windows-10-insider-preview-build-16273-pc/)を参照してください。</span><span class="sxs-lookup"><span data-stu-id="dea41-692">For general Windows information on build 16273 visit the [Windows Blog](https://blogs.windows.com/windowsexperience/2017/08/23/announcing-windows-10-insider-preview-build-16273-pc/).</span></span><br/>
+
+
+### <a name="fixed"></a><span data-ttu-id="dea41-693">固定</span><span class="sxs-lookup"><span data-stu-id="dea41-693">Fixed</span></span>
+#### <a name="wsl"></a><span data-ttu-id="dea41-694">WSL</span><span class="sxs-lookup"><span data-stu-id="dea41-694">WSL</span></span>
+- <span data-ttu-id="dea41-695">DrvFs がディレクトリに対して正しくないファイルの種類を報告する場合があるという問題を修正しました [GH 2392]</span><span class="sxs-lookup"><span data-stu-id="dea41-695">Fixed an issue where DrvFs sometimes reported the wrong file type for directories [GH 2392]</span></span>
+- <span data-ttu-id="dea41-696">Uevent [GH 1121、2293、2242、2295、2235、648、637] を使用するプログラムのブロックを解除するための NETLINK_KOBJECT_UEVENT sockets の作成を許可します</span><span class="sxs-lookup"><span data-stu-id="dea41-696">Allow creation of NETLINK_KOBJECT_UEVENT sockets to unblock programs that use uevent [GH 1121, 2293, 2242, 2295, 2235, 648, 637]</span></span>
+- <span data-ttu-id="dea41-697">非ブロッキング接続のサポートを追加する [GH 903、1391、1584、1585、1829、2290、2314]</span><span class="sxs-lookup"><span data-stu-id="dea41-697">Add support for non-blocking connect [GH 903, 1391, 1584, 1585, 1829, 2290, 2314]</span></span>
+- <span data-ttu-id="dea41-698">CLONE_FS CLONE システム呼び出しフラグを実装する [GH 2242]</span><span class="sxs-lookup"><span data-stu-id="dea41-698">Implement CLONE_FS clone system call flag [GH 2242]</span></span>
+- <span data-ttu-id="dea41-699">NT interop でタブまたは引用符を正しく処理しない問題を修正する [GH 1625, 2164]</span><span class="sxs-lookup"><span data-stu-id="dea41-699">Fix issues around not handling tabs or quotes correctly in NT interop [GH 1625, 2164]</span></span>
+- <span data-ttu-id="dea41-700">WSL インスタンスを再起動しようとしたときにアクセス拒否エラーを解決する [GH 651、2095]</span><span class="sxs-lookup"><span data-stu-id="dea41-700">Resolve access denied error when trying to re-launch WSL instances [GH 651, 2095]</span></span>
+- <span data-ttu-id="dea41-701">Futex FUTEX_REQUEUE と FUTEX_CMP_REQUEUE 操作の実装 [GH 2242]</span><span class="sxs-lookup"><span data-stu-id="dea41-701">Implement futex FUTEX_REQUEUE and FUTEX_CMP_REQUEUE operations [GH 2242]</span></span>
+- <span data-ttu-id="dea41-702">さまざまな SysFs ファイルのアクセス許可を修正する [GH 2214]</span><span class="sxs-lookup"><span data-stu-id="dea41-702">Fix permissions for various SysFs files [GH 2214]</span></span>
+- <span data-ttu-id="dea41-703">セットアップ中に Haskell stack のハングを修正する [GH 2290]</span><span class="sxs-lookup"><span data-stu-id="dea41-703">Fix Haskell stack hang during setup [GH 2290]</span></span>
+- <span data-ttu-id="dea41-704">Binfmt_misc ' C ' ' O ' および ' P ' フラグを実装する [GH 2103]</span><span class="sxs-lookup"><span data-stu-id="dea41-704">Implement binfmt_misc 'C' 'O' and 'P' flags [GH 2103]</span></span>
+- <span data-ttu-id="dea41-705">/Proc/sys/kernel/shmmax/shmmni & 追加する [GH 1753]</span><span class="sxs-lookup"><span data-stu-id="dea41-705">Add /proc/sys/kernel /shmmax /shmmni & /threads-max [GH 1753]</span></span>
+- <span data-ttu-id="dea41-706">Ioprio_set システム呼び出しの部分的なサポートを追加する [GH 498]</span><span class="sxs-lookup"><span data-stu-id="dea41-706">Add partial support for ioprio_set system call [GH 498]</span></span>
+- <span data-ttu-id="dea41-707">スタブ SO_REUSEPORT & SO_PASSCRED for netlink sockets のサポートの追加 [GH 69]</span><span class="sxs-lookup"><span data-stu-id="dea41-707">Stub SO_REUSEPORT & adding support for SO_PASSCRED for netlink sockets [GH 69]</span></span>
+- <span data-ttu-id="dea41-708">ディストリビューションが現在インストールまたはアンインストールされている場合は、RegisterDistribuiton から別のエラーコードを返します。</span><span class="sxs-lookup"><span data-stu-id="dea41-708">Return different error codes from RegisterDistribuiton if a distribution is currently being installed or uninstalled.</span></span>
+- <span data-ttu-id="dea41-709">Wslconfig .exe 経由で部分的にインストールされた WSL ディストリビューションの登録解除を許可する</span><span class="sxs-lookup"><span data-stu-id="dea41-709">Allow unregistration of partially installed WSL distributions via wslconfig.exe</span></span>
+- <span data-ttu-id="dea41-710">Udp:: msg_peek から python ソケットテストハングを修正します。</span><span class="sxs-lookup"><span data-stu-id="dea41-710">Fix python socket test hang from udp::msg_peek</span></span>
+- <span data-ttu-id="dea41-711">追加の機能強化とバグ修正</span><span class="sxs-lookup"><span data-stu-id="dea41-711">Additional improvements and bug fixes</span></span>
+
+#### <a name="console"></a><span data-ttu-id="dea41-712">Console</span><span class="sxs-lookup"><span data-stu-id="dea41-712">Console</span></span>
+- <span data-ttu-id="dea41-713">このリリースでは、コンソールに関連する変更はありません。</span><span class="sxs-lookup"><span data-stu-id="dea41-713">No Console related changes in this release.</span></span>
+
+### <a name="ltp-results"></a><span data-ttu-id="dea41-714">LTP の結果:</span><span class="sxs-lookup"><span data-stu-id="dea41-714">LTP Results:</span></span>
+<span data-ttu-id="dea41-715">テストの合計:1904</span><span class="sxs-lookup"><span data-stu-id="dea41-715">Total Tests: 1904</span></span><br/>
+<span data-ttu-id="dea41-716">スキップされたテストの合計数:209</span><span class="sxs-lookup"><span data-stu-id="dea41-716">Total Skipped Tests: 209</span></span><br/>
+<span data-ttu-id="dea41-717">合計エラー数:229</span><span class="sxs-lookup"><span data-stu-id="dea41-717">Total Failures: 229</span></span><br/>
+[<span data-ttu-id="dea41-718">LTP テストの実行ログ</span><span class="sxs-lookup"><span data-stu-id="dea41-718">LTP Test Run Logs</span></span>](https://github.com/Microsoft/CommandLine-Documentation/tree/live/LTP_Results/16273)<br/>
+
+## <a name="build-16257"></a><span data-ttu-id="dea41-719">ビルド 16257</span><span class="sxs-lookup"><span data-stu-id="dea41-719">Build 16257</span></span>
+
+<span data-ttu-id="dea41-720">ビルド16257の一般的な Windows 情報については、 [windows のブログ](https://blogs.windows.com/windowsexperience/2017/08/02/announcing-windows-10-insider-preview-build-16257-pc-build-15237-mobile/)を参照してください。</span><span class="sxs-lookup"><span data-stu-id="dea41-720">For general Windows information on build 16257 visit the [Windows Blog](https://blogs.windows.com/windowsexperience/2017/08/02/announcing-windows-10-insider-preview-build-16257-pc-build-15237-mobile/).</span></span><br/>
+
+
+### <a name="fixed"></a><span data-ttu-id="dea41-721">固定</span><span class="sxs-lookup"><span data-stu-id="dea41-721">Fixed</span></span>
+#### <a name="wsl"></a><span data-ttu-id="dea41-722">WSL</span><span class="sxs-lookup"><span data-stu-id="dea41-722">WSL</span></span>
+- <span data-ttu-id="dea41-723">Prlimit64 システム呼び出しを実装する</span><span class="sxs-lookup"><span data-stu-id="dea41-723">Implement prlimit64 system call</span></span>
+- <span data-ttu-id="dea41-724">Ulimit-n (setrlimit RLIMIT_NOFILE) のサポートを追加する [GH 1688]</span><span class="sxs-lookup"><span data-stu-id="dea41-724">Add support for ulimit -n (setrlimit RLIMIT_NOFILE) [GH 1688]</span></span>
+- <span data-ttu-id="dea41-725">TCP ソケットのスタブ MSG_MORE [GH 2351]</span><span class="sxs-lookup"><span data-stu-id="dea41-725">Stub MSG_MORE for TCP sockets [GH 2351]</span></span>
+- <span data-ttu-id="dea41-726">無効な AT_EXECFN 補助ベクター動作の修正 [GH 2133]</span><span class="sxs-lookup"><span data-stu-id="dea41-726">Fix invalid AT_EXECFN auxiliary vector behavior [GH 2133]</span></span>
+- <span data-ttu-id="dea41-727">コンソール/tty のコピー/貼り付け動作を修正し、完全なバッファー処理をさらに追加する [GH 2204, 2131]</span><span class="sxs-lookup"><span data-stu-id="dea41-727">Fix copy/paste behavior for console/tty, and add better full buffer handling [GH 2204, 2131]</span></span>
+- <span data-ttu-id="dea41-728">AT_SECURE プログラムと set-group-ID プログラムの補助ベクターでの設定 [GH 2031]</span><span class="sxs-lookup"><span data-stu-id="dea41-728">Set AT_SECURE in auxiliary vector for set-user-ID and set-group-ID programs [GH 2031]</span></span>
+- <span data-ttu-id="dea41-729">Psuedo-ターミナルマスターエンドポイントが TIOCPGRP を処理しない [GH 1063]</span><span class="sxs-lookup"><span data-stu-id="dea41-729">Psuedo-terminal master endpoint not handling TIOCPGRP [GH 1063]</span></span>
+- <span data-ttu-id="dea41-730">Lseek が LxFs のディレクトリを巻き戻していることを修正する [GH 2310]</span><span class="sxs-lookup"><span data-stu-id="dea41-730">Fix lseek does to rewind directories in LxFs [GH 2310]</span></span>
+- <span data-ttu-id="dea41-731">大きな使用率が高くなった後の GH のロック [1882]</span><span class="sxs-lookup"><span data-stu-id="dea41-731">/dev/ptmx locks up after heavy usage [GH 1882]</span></span>
+- <span data-ttu-id="dea41-732">追加の機能強化とバグ修正</span><span class="sxs-lookup"><span data-stu-id="dea41-732">Additional improvements and bug fixes</span></span>
+
+#### <a name="console"></a><span data-ttu-id="dea41-733">Console</span><span class="sxs-lookup"><span data-stu-id="dea41-733">Console</span></span>
+- <span data-ttu-id="dea41-734">すべての場所で水平線/アンダースコアを修正する [GH 2168]</span><span class="sxs-lookup"><span data-stu-id="dea41-734">Fix for horizontal Lines/Underscores Everywhere [GH 2168]</span></span>
+- <span data-ttu-id="dea41-735">プロセスの順序が変更されたことを修正し、NPM を閉じることが困難になる [GH 2170]</span><span class="sxs-lookup"><span data-stu-id="dea41-735">Fix for process order changed making NPM harder to close [GH 2170]</span></span>
+- <span data-ttu-id="dea41-736">新しい配色を追加しました。 https://blogs.msdn.microsoft.com/commandline/2017/08/02/updating-the-windows-console-colors/</span><span class="sxs-lookup"><span data-stu-id="dea41-736">Added our new color scheme: https://blogs.msdn.microsoft.com/commandline/2017/08/02/updating-the-windows-console-colors/</span></span>
+
+### <a name="ltp-results"></a><span data-ttu-id="dea41-737">LTP の結果:</span><span class="sxs-lookup"><span data-stu-id="dea41-737">LTP Results:</span></span>
+<span data-ttu-id="dea41-738">16251以降の変更はありません</span><span class="sxs-lookup"><span data-stu-id="dea41-738">No change since 16251</span></span>
+
+### <a name="syscall-support"></a><span data-ttu-id="dea41-739">Syscall のサポート</span><span class="sxs-lookup"><span data-stu-id="dea41-739">Syscall Support</span></span>
+<span data-ttu-id="dea41-740">次に示すのは、WSL でいくつかの実装を持つ新しいまたは強化された syscall の一覧です。</span><span class="sxs-lookup"><span data-stu-id="dea41-740">Below are a list of new or enhanced syscalls that have some implementation in WSL.</span></span> <span data-ttu-id="dea41-741">この一覧の syscall は、少なくとも1つのシナリオでサポートされていますが、現時点では一部のパラメーターがサポートされていない可能性があります。</span><span class="sxs-lookup"><span data-stu-id="dea41-741">The syscalls on this list are supported in at least one scenario, but may not have all parameters supported at this time.</span></span>
 
 `prlimit64`<br/>
 
-### <a name="known-issues"></a><span data-ttu-id="3c169-742">既知の問題</span><span class="sxs-lookup"><span data-stu-id="3c169-742">Known Issues</span></span>
-#### <a name="github-issue-2392-windows-folders-not-recognized-by-wsl-httpsgithubcommicrosoftbashonwindowsissues2392"></a>[<span data-ttu-id="3c169-743">GitHub の問題 2392:Windows フォルダーは WSL によって認識されません...</span><span class="sxs-lookup"><span data-stu-id="3c169-743">GitHub Issue 2392: Windows Folders not recognized by WSL ...</span></span>](https://github.com/Microsoft/BashOnWindows/issues/2392)
-<span data-ttu-id="3c169-744">ビルド16257では、を介し`/mnt/c/...`て Windows ファイル/フォルダーを列挙するときに、wsl に問題があります。</span><span class="sxs-lookup"><span data-stu-id="3c169-744">In build 16257, WSL has issues when enumerating Windows files/folders via `/mnt/c/...`.</span></span>
-<span data-ttu-id="3c169-745">この問題は修正されており、8/14/2017 の実行時に、Insider ビルドでリリースされる必要があります。</span><span class="sxs-lookup"><span data-stu-id="3c169-745">This issue has been fixed and should be released in Insiders build during week commencing 8/14/2017.</span></span>
+### <a name="known-issues"></a><span data-ttu-id="dea41-742">既知の問題</span><span class="sxs-lookup"><span data-stu-id="dea41-742">Known Issues</span></span>
+#### <a name="github-issue-2392-windows-folders-not-recognized-by-wsl-httpsgithubcommicrosoftbashonwindowsissues2392"></a>[<span data-ttu-id="dea41-743">GitHub の問題 2392:Windows フォルダーは WSL によって認識されません...</span><span class="sxs-lookup"><span data-stu-id="dea41-743">GitHub Issue 2392: Windows Folders not recognized by WSL ...</span></span>](https://github.com/Microsoft/BashOnWindows/issues/2392)
+<span data-ttu-id="dea41-744">ビルド16257では、を介し`/mnt/c/...`て Windows ファイル/フォルダーを列挙するときに、wsl に問題があります。</span><span class="sxs-lookup"><span data-stu-id="dea41-744">In build 16257, WSL has issues when enumerating Windows files/folders via `/mnt/c/...`.</span></span>
+<span data-ttu-id="dea41-745">この問題は修正されており、8/14/2017 の実行時に、Insider ビルドでリリースされる必要があります。</span><span class="sxs-lookup"><span data-stu-id="dea41-745">This issue has been fixed and should be released in Insiders build during week commencing 8/14/2017.</span></span>
 
 <br/>
 
-## <a name="build-16251"></a><span data-ttu-id="3c169-746">ビルド16251</span><span class="sxs-lookup"><span data-stu-id="3c169-746">Build 16251</span></span>
+## <a name="build-16251"></a><span data-ttu-id="dea41-746">ビルド16251</span><span class="sxs-lookup"><span data-stu-id="dea41-746">Build 16251</span></span>
 
-<span data-ttu-id="3c169-747">ビルド16251の一般的な Windows 情報については、 [windows のブログ](https://blogs.windows.com/windowsexperience/2017/07/26/announcing-windows-10-insider-preview-build-16251-pc-build-15235-mobile/)を参照してください。</span><span class="sxs-lookup"><span data-stu-id="3c169-747">For general Windows information on build 16251 visit the [Windows Blog](https://blogs.windows.com/windowsexperience/2017/07/26/announcing-windows-10-insider-preview-build-16251-pc-build-15235-mobile/).</span></span><br/>
-
-
-### <a name="fixed"></a><span data-ttu-id="3c169-748">固定</span><span class="sxs-lookup"><span data-stu-id="3c169-748">Fixed</span></span>
-#### <a name="wsl"></a><span data-ttu-id="3c169-749">WSL</span><span class="sxs-lookup"><span data-stu-id="3c169-749">WSL</span></span>
-- <span data-ttu-id="3c169-750">WSL オプションコンポーネントからベータタグを削除します。詳細については、[ブログの投稿](https://blogs.msdn.microsoft.com/commandline/2017/07/28/windows-subsystem-for-linux-out-of-beta/)を参照してください。</span><span class="sxs-lookup"><span data-stu-id="3c169-750">Remove beta tag from WSL optional component, see [blog post](https://blogs.msdn.microsoft.com/commandline/2017/07/28/windows-subsystem-for-linux-out-of-beta/) for details.</span></span>
-- <span data-ttu-id="3c169-751">Set-ユーザー ID および set-ID バイナリが exec で正しく初期化されました。 exec [GH 962, 1415, 2072]</span><span class="sxs-lookup"><span data-stu-id="3c169-751">Correctly initialize saved-set uid and gid for set-user-ID and set-group-ID binaries on exec [GH 962, 1415, 2072]</span></span>
-- <span data-ttu-id="3c169-752">Ptrace PTRACE_O_TRACEEXIT のサポートを追加しました [GH 555]</span><span class="sxs-lookup"><span data-stu-id="3c169-752">Added support for ptrace PTRACE_O_TRACEEXIT [GH 555]</span></span>
-- <span data-ttu-id="3c169-753">NT_FPREGSET を使用した ptrace PTRACE_GETFPREGS と PTRACE_GETREGSET のサポートを追加しました [GH 555]</span><span class="sxs-lookup"><span data-stu-id="3c169-753">Added support for ptrace PTRACE_GETFPREGS and PTRACE_GETREGSET with NT_FPREGSET [GH 555]</span></span>
-- <span data-ttu-id="3c169-754">無視されたシグナルで停止する ptrace を修正しました</span><span class="sxs-lookup"><span data-stu-id="3c169-754">Fixed ptrace to stop on ignored signals</span></span>
-- <span data-ttu-id="3c169-755">追加の機能強化とバグ修正</span><span class="sxs-lookup"><span data-stu-id="3c169-755">Additional improvements and bug fixes</span></span>
-
-#### <a name="console"></a><span data-ttu-id="3c169-756">Console</span><span class="sxs-lookup"><span data-stu-id="3c169-756">Console</span></span>
-- <span data-ttu-id="3c169-757">このリリースでは、コンソールに関連する変更はありません。</span><span class="sxs-lookup"><span data-stu-id="3c169-757">No Console related changes in this release.</span></span>
-
-### <a name="ltp-results"></a><span data-ttu-id="3c169-758">LTP の結果:</span><span class="sxs-lookup"><span data-stu-id="3c169-758">LTP Results:</span></span>
-<span data-ttu-id="3c169-759">成功したテストの数:768</span><span class="sxs-lookup"><span data-stu-id="3c169-759">Number of Passing Tests: 768</span></span></br>
-<span data-ttu-id="3c169-760">失敗したテストの数:244</span><span class="sxs-lookup"><span data-stu-id="3c169-760">Number of Failing Tests: 244</span></span></br>
-<span data-ttu-id="3c169-761">スキップされたテストの数:96</span><span class="sxs-lookup"><span data-stu-id="3c169-761">Number of Skipped Tests: 96</span></span></br>
-[<span data-ttu-id="3c169-762">LTP テストの実行ログ</span><span class="sxs-lookup"><span data-stu-id="3c169-762">LTP Test Run Logs</span></span>](https://github.com/Microsoft/CommandLine-Documentation/tree/live/LTP_Results/16251)<br/>
-
-</br>
-
-## <a name="build-16241"></a><span data-ttu-id="3c169-763">ビルド16241</span><span class="sxs-lookup"><span data-stu-id="3c169-763">Build 16241</span></span>
-
-<span data-ttu-id="3c169-764">ビルド16241の一般的な Windows 情報については、 [windows のブログ](https://blogs.windows.com/windowsexperience/2017/07/13/announcing-windows-10-insider-preview-build-16241-pc-build-15230-mobile/)を参照してください。</span><span class="sxs-lookup"><span data-stu-id="3c169-764">For general Windows information on build 16241 visit the [Windows Blog](https://blogs.windows.com/windowsexperience/2017/07/13/announcing-windows-10-insider-preview-build-16241-pc-build-15230-mobile/).</span></span><br/>
+<span data-ttu-id="dea41-747">ビルド16251の一般的な Windows 情報については、 [windows のブログ](https://blogs.windows.com/windowsexperience/2017/07/26/announcing-windows-10-insider-preview-build-16251-pc-build-15235-mobile/)を参照してください。</span><span class="sxs-lookup"><span data-stu-id="dea41-747">For general Windows information on build 16251 visit the [Windows Blog](https://blogs.windows.com/windowsexperience/2017/07/26/announcing-windows-10-insider-preview-build-16251-pc-build-15235-mobile/).</span></span><br/>
 
 
-### <a name="fixed"></a><span data-ttu-id="3c169-765">固定</span><span class="sxs-lookup"><span data-stu-id="3c169-765">Fixed</span></span>
-#### <a name="wsl"></a><span data-ttu-id="3c169-766">WSL</span><span class="sxs-lookup"><span data-stu-id="3c169-766">WSL</span></span>
-- <span data-ttu-id="3c169-767">このリリースでは、WSL 関連の変更はありません。</span><span class="sxs-lookup"><span data-stu-id="3c169-767">No WSL related changes in this release.</span></span>
+### <a name="fixed"></a><span data-ttu-id="dea41-748">固定</span><span class="sxs-lookup"><span data-stu-id="dea41-748">Fixed</span></span>
+#### <a name="wsl"></a><span data-ttu-id="dea41-749">WSL</span><span class="sxs-lookup"><span data-stu-id="dea41-749">WSL</span></span>
+- <span data-ttu-id="dea41-750">WSL オプションコンポーネントからベータタグを削除します。詳細については、[ブログの投稿](https://blogs.msdn.microsoft.com/commandline/2017/07/28/windows-subsystem-for-linux-out-of-beta/)を参照してください。</span><span class="sxs-lookup"><span data-stu-id="dea41-750">Remove beta tag from WSL optional component, see [blog post](https://blogs.msdn.microsoft.com/commandline/2017/07/28/windows-subsystem-for-linux-out-of-beta/) for details.</span></span>
+- <span data-ttu-id="dea41-751">Set-ユーザー ID および set-ID バイナリが exec で正しく初期化されました。 exec [GH 962, 1415, 2072]</span><span class="sxs-lookup"><span data-stu-id="dea41-751">Correctly initialize saved-set uid and gid for set-user-ID and set-group-ID binaries on exec [GH 962, 1415, 2072]</span></span>
+- <span data-ttu-id="dea41-752">Ptrace PTRACE_O_TRACEEXIT のサポートを追加しました [GH 555]</span><span class="sxs-lookup"><span data-stu-id="dea41-752">Added support for ptrace PTRACE_O_TRACEEXIT [GH 555]</span></span>
+- <span data-ttu-id="dea41-753">NT_FPREGSET を使用した ptrace PTRACE_GETFPREGS と PTRACE_GETREGSET のサポートを追加しました [GH 555]</span><span class="sxs-lookup"><span data-stu-id="dea41-753">Added support for ptrace PTRACE_GETFPREGS and PTRACE_GETREGSET with NT_FPREGSET [GH 555]</span></span>
+- <span data-ttu-id="dea41-754">無視されたシグナルで停止する ptrace を修正しました</span><span class="sxs-lookup"><span data-stu-id="dea41-754">Fixed ptrace to stop on ignored signals</span></span>
+- <span data-ttu-id="dea41-755">追加の機能強化とバグ修正</span><span class="sxs-lookup"><span data-stu-id="dea41-755">Additional improvements and bug fixes</span></span>
 
-#### <a name="console"></a><span data-ttu-id="3c169-768">Console</span><span class="sxs-lookup"><span data-stu-id="3c169-768">Console</span></span>
-- <span data-ttu-id="3c169-769">[ここで](https://www.reddit.com/r/Windows10/comments/6in82t/i_believe_ive_found_the_most_obscure_bug_ever/)最初に報告された、10進線に誤った文字を出力するように修正しました。</span><span class="sxs-lookup"><span data-stu-id="3c169-769">Fix for outputting the wrong character for the crossing-lines DEC, originally reported [here](https://www.reddit.com/r/Windows10/comments/6in82t/i_believe_ive_found_the_most_obscure_bug_ever/)</span></span>
-- <span data-ttu-id="3c169-770">コードページ 65001 (utf8) に出力テキストが表示されないように修正します。</span><span class="sxs-lookup"><span data-stu-id="3c169-770">Fix for no output text being displayed in codepage 65001 (utf8)</span></span>
-- <span data-ttu-id="3c169-771">ある色の RGB 値に対して行われた変更を、選択の変更時にパレットの他の部分に転送しないでください。</span><span class="sxs-lookup"><span data-stu-id="3c169-771">Do not transfer changes made to one color's RGB values to other parts of the palette on selection change.</span></span> <span data-ttu-id="3c169-772">これにより、コンソールプロパティシートが非常に使いやすいようになります。</span><span class="sxs-lookup"><span data-stu-id="3c169-772">This will make the console properties sheet a lot easier to use.</span></span>
-- <span data-ttu-id="3c169-773">Ctrl + S が正しく動作していません</span><span class="sxs-lookup"><span data-stu-id="3c169-773">Ctrl+S doesn't appear to work correctly</span></span>
-- <span data-ttu-id="3c169-774">ANSI エスケープコードに完全に存在しない太字/-Dim [GH 2174]</span><span class="sxs-lookup"><span data-stu-id="3c169-774">Un-Bold/-Dim completely absent from ANSI escape codes [GH 2174]</span></span>
-- <span data-ttu-id="3c169-775">コンソールが Vim 色のテーマを正しくサポートしていない [GH 1706]</span><span class="sxs-lookup"><span data-stu-id="3c169-775">Console doesn't correctly support Vim color themes [GH 1706]</span></span>
-- <span data-ttu-id="3c169-776">特定の文字を貼り付けることはできません [GH 2149]</span><span class="sxs-lookup"><span data-stu-id="3c169-776">Cannot paste particular characters [GH 2149]</span></span>
-- <span data-ttu-id="3c169-777">編集/コマンドライン上にあるときに bash ウィンドウのサイズを変更すると、リフローサイズの変更がおかしくなる [GH ConEmu 1123]</span><span class="sxs-lookup"><span data-stu-id="3c169-777">Reflow resize interacts strangely with resizing a bash window when stuff is on the edit/command line [GH ConEmu 1123]</span></span>
-- <span data-ttu-id="3c169-778">Ctrl + L を押したまま画面をダーティにする [GH 1978]</span><span class="sxs-lookup"><span data-stu-id="3c169-778">Ctrl-L leaves the screen dirty [GH 1978]</span></span>
-- <span data-ttu-id="3c169-779">HDPI で VT を表示するときのコンソールレンダリングのバグ [GH 1907]</span><span class="sxs-lookup"><span data-stu-id="3c169-779">Console rendering bug when displaying VT on HDPI [GH 1907]</span></span>
-- <span data-ttu-id="3c169-780">Unicode 文字 U + 30FB で Japansese 文字が奇妙に見える [GH 2146]</span><span class="sxs-lookup"><span data-stu-id="3c169-780">Japansese characters look strange with Unicode Character U+30FB [GH 2146]</span></span>
-- <span data-ttu-id="3c169-781">追加の機能強化とバグ修正</span><span class="sxs-lookup"><span data-stu-id="3c169-781">Additional improvements and bug fixes</span></span>
+#### <a name="console"></a><span data-ttu-id="dea41-756">Console</span><span class="sxs-lookup"><span data-stu-id="dea41-756">Console</span></span>
+- <span data-ttu-id="dea41-757">このリリースでは、コンソールに関連する変更はありません。</span><span class="sxs-lookup"><span data-stu-id="dea41-757">No Console related changes in this release.</span></span>
+
+### <a name="ltp-results"></a><span data-ttu-id="dea41-758">LTP の結果:</span><span class="sxs-lookup"><span data-stu-id="dea41-758">LTP Results:</span></span>
+<span data-ttu-id="dea41-759">成功したテストの数:768</span><span class="sxs-lookup"><span data-stu-id="dea41-759">Number of Passing Tests: 768</span></span></br>
+<span data-ttu-id="dea41-760">失敗したテストの数:244</span><span class="sxs-lookup"><span data-stu-id="dea41-760">Number of Failing Tests: 244</span></span></br>
+<span data-ttu-id="dea41-761">スキップされたテストの数:96</span><span class="sxs-lookup"><span data-stu-id="dea41-761">Number of Skipped Tests: 96</span></span></br>
+[<span data-ttu-id="dea41-762">LTP テストの実行ログ</span><span class="sxs-lookup"><span data-stu-id="dea41-762">LTP Test Run Logs</span></span>](https://github.com/Microsoft/CommandLine-Documentation/tree/live/LTP_Results/16251)<br/>
 
 </br>
 
-## <a name="build-16237"></a><span data-ttu-id="3c169-782">ビルド 16237</span><span class="sxs-lookup"><span data-stu-id="3c169-782">Build 16237</span></span>
+## <a name="build-16241"></a><span data-ttu-id="dea41-763">ビルド16241</span><span class="sxs-lookup"><span data-stu-id="dea41-763">Build 16241</span></span>
 
-<span data-ttu-id="3c169-783">ビルド16237の一般的な Windows 情報については、 [windows のブログ](https://blogs.windows.com/windowsexperience/2017/07/07/announcing-windows-10-insider-preview-build-16237-pc/)を参照してください。</span><span class="sxs-lookup"><span data-stu-id="3c169-783">For general Windows information on build 16237 visit the [Windows Blog](https://blogs.windows.com/windowsexperience/2017/07/07/announcing-windows-10-insider-preview-build-16237-pc/).</span></span><br/>
-
-
-### <a name="fixed"></a><span data-ttu-id="3c169-784">固定</span><span class="sxs-lookup"><span data-stu-id="3c169-784">Fixed</span></span>
-- <span data-ttu-id="3c169-785">Lxfs に EAs がないファイルの既定の属性を使用する (ルート、ルート、0000)</span><span class="sxs-lookup"><span data-stu-id="3c169-785">Use default attributes for files without EAs in lxfs (root, root, 0000)</span></span>
-- <span data-ttu-id="3c169-786">拡張属性を使用するディストリビューションのサポートを追加しました</span><span class="sxs-lookup"><span data-stu-id="3c169-786">Added support for distributions that use extended attributes</span></span>
-- <span data-ttu-id="3c169-787">Getdents と getdents64 によって返されるエントリの埋め込みを修正する</span><span class="sxs-lookup"><span data-stu-id="3c169-787">Fix padding for entries returned by getdents and getdents64</span></span>
-- <span data-ttu-id="3c169-788">Shmctl SHM_STAT システム呼び出しのアクセス許可チェックを修正する [GH 2068]</span><span class="sxs-lookup"><span data-stu-id="3c169-788">Fix permissions check for the shmctl SHM_STAT system call [GH 2068]</span></span>
-- <span data-ttu-id="3c169-789">Tty の初期 epoll 状態が正しくないことを修正した [GH 2231]</span><span class="sxs-lookup"><span data-stu-id="3c169-789">Fixed incorrect initial epoll state for ttys [GH 2231]</span></span>
-- <span data-ttu-id="3c169-790">すべてのエントリを返さないように DrvFs readdir を修正する [GH 2077]</span><span class="sxs-lookup"><span data-stu-id="3c169-790">Fix DrvFs readdir not returning all entries [GH 2077]</span></span>
-- <span data-ttu-id="3c169-791">ファイルのリンクが解除されたときに LxFs readdir を修正する [GH 2077]</span><span class="sxs-lookup"><span data-stu-id="3c169-791">Fix LxFs readdir when files are unlinked [GH 2077]</span></span>
-- <span data-ttu-id="3c169-792">Procfs を使用して、リンクされていない drvfs ファイルを再び開くことを許可する</span><span class="sxs-lookup"><span data-stu-id="3c169-792">Allow unlinked drvfs files to be reopened through procfs</span></span>
-- <span data-ttu-id="3c169-793">WSL 機能を無効にするためのグローバルレジストリキーの上書き (相互運用/ドライブのマウント) を追加しました</span><span class="sxs-lookup"><span data-stu-id="3c169-793">Added global registry key override for disabling WSL features (interop / drive mounting)</span></span>
-- <span data-ttu-id="3c169-794">DrvFs (および LxFs) の "stat" で間違ったブロックカウントを修正する [GH 1894]</span><span class="sxs-lookup"><span data-stu-id="3c169-794">Fix incorrect block count in "stat" for DrvFs (and LxFs) [GH 1894]</span></span>
-- <span data-ttu-id="3c169-795">追加の機能強化とバグ修正</span><span class="sxs-lookup"><span data-stu-id="3c169-795">Additional improvements and bug fixes</span></span>
-
-</br>
-
-## <a name="build-16232"></a><span data-ttu-id="3c169-796">ビルド16232</span><span class="sxs-lookup"><span data-stu-id="3c169-796">Build 16232</span></span>
-
-<span data-ttu-id="3c169-797">ビルド16232の一般的な Windows 情報については、 [windows のブログ](https://blogs.windows.com/windowsexperience/2017/06/28/announcing-windows-10-insider-preview-build-16232-pc-build-15228-mobile/)を参照してください。</span><span class="sxs-lookup"><span data-stu-id="3c169-797">For general Windows information on build 16232 visit the [Windows Blog](https://blogs.windows.com/windowsexperience/2017/06/28/announcing-windows-10-insider-preview-build-16232-pc-build-15228-mobile/).</span></span><br/>
+<span data-ttu-id="dea41-764">ビルド16241の一般的な Windows 情報については、 [windows のブログ](https://blogs.windows.com/windowsexperience/2017/07/13/announcing-windows-10-insider-preview-build-16241-pc-build-15230-mobile/)を参照してください。</span><span class="sxs-lookup"><span data-stu-id="dea41-764">For general Windows information on build 16241 visit the [Windows Blog](https://blogs.windows.com/windowsexperience/2017/07/13/announcing-windows-10-insider-preview-build-16241-pc-build-15230-mobile/).</span></span><br/>
 
 
-### <a name="fixed"></a><span data-ttu-id="3c169-798">固定</span><span class="sxs-lookup"><span data-stu-id="3c169-798">Fixed</span></span>
-- <span data-ttu-id="3c169-799">このリリースでは、WSL 関連の変更はありません。</span><span class="sxs-lookup"><span data-stu-id="3c169-799">No WSL related changes in this release.</span></span>
+### <a name="fixed"></a><span data-ttu-id="dea41-765">固定</span><span class="sxs-lookup"><span data-stu-id="dea41-765">Fixed</span></span>
+#### <a name="wsl"></a><span data-ttu-id="dea41-766">WSL</span><span class="sxs-lookup"><span data-stu-id="dea41-766">WSL</span></span>
+- <span data-ttu-id="dea41-767">このリリースでは、WSL 関連の変更はありません。</span><span class="sxs-lookup"><span data-stu-id="dea41-767">No WSL related changes in this release.</span></span>
+
+#### <a name="console"></a><span data-ttu-id="dea41-768">Console</span><span class="sxs-lookup"><span data-stu-id="dea41-768">Console</span></span>
+- <span data-ttu-id="dea41-769">[ここで](https://www.reddit.com/r/Windows10/comments/6in82t/i_believe_ive_found_the_most_obscure_bug_ever/)最初に報告された、10進線に誤った文字を出力するように修正しました。</span><span class="sxs-lookup"><span data-stu-id="dea41-769">Fix for outputting the wrong character for the crossing-lines DEC, originally reported [here](https://www.reddit.com/r/Windows10/comments/6in82t/i_believe_ive_found_the_most_obscure_bug_ever/)</span></span>
+- <span data-ttu-id="dea41-770">コードページ 65001 (utf8) に出力テキストが表示されないように修正します。</span><span class="sxs-lookup"><span data-stu-id="dea41-770">Fix for no output text being displayed in codepage 65001 (utf8)</span></span>
+- <span data-ttu-id="dea41-771">ある色の RGB 値に対して行われた変更を、選択の変更時にパレットの他の部分に転送しないでください。</span><span class="sxs-lookup"><span data-stu-id="dea41-771">Do not transfer changes made to one color's RGB values to other parts of the palette on selection change.</span></span> <span data-ttu-id="dea41-772">これにより、コンソールプロパティシートが非常に使いやすいようになります。</span><span class="sxs-lookup"><span data-stu-id="dea41-772">This will make the console properties sheet a lot easier to use.</span></span>
+- <span data-ttu-id="dea41-773">Ctrl + S が正しく動作していません</span><span class="sxs-lookup"><span data-stu-id="dea41-773">Ctrl+S doesn't appear to work correctly</span></span>
+- <span data-ttu-id="dea41-774">ANSI エスケープコードに完全に存在しない太字/-Dim [GH 2174]</span><span class="sxs-lookup"><span data-stu-id="dea41-774">Un-Bold/-Dim completely absent from ANSI escape codes [GH 2174]</span></span>
+- <span data-ttu-id="dea41-775">コンソールが Vim 色のテーマを正しくサポートしていない [GH 1706]</span><span class="sxs-lookup"><span data-stu-id="dea41-775">Console doesn't correctly support Vim color themes [GH 1706]</span></span>
+- <span data-ttu-id="dea41-776">特定の文字を貼り付けることはできません [GH 2149]</span><span class="sxs-lookup"><span data-stu-id="dea41-776">Cannot paste particular characters [GH 2149]</span></span>
+- <span data-ttu-id="dea41-777">編集/コマンドライン上にあるときに bash ウィンドウのサイズを変更すると、リフローサイズの変更がおかしくなる [GH ConEmu 1123]</span><span class="sxs-lookup"><span data-stu-id="dea41-777">Reflow resize interacts strangely with resizing a bash window when stuff is on the edit/command line [GH ConEmu 1123]</span></span>
+- <span data-ttu-id="dea41-778">Ctrl + L を押したまま画面をダーティにする [GH 1978]</span><span class="sxs-lookup"><span data-stu-id="dea41-778">Ctrl-L leaves the screen dirty [GH 1978]</span></span>
+- <span data-ttu-id="dea41-779">HDPI で VT を表示するときのコンソールレンダリングのバグ [GH 1907]</span><span class="sxs-lookup"><span data-stu-id="dea41-779">Console rendering bug when displaying VT on HDPI [GH 1907]</span></span>
+- <span data-ttu-id="dea41-780">Unicode 文字 U + 30FB で Japansese 文字が奇妙に見える [GH 2146]</span><span class="sxs-lookup"><span data-stu-id="dea41-780">Japansese characters look strange with Unicode Character U+30FB [GH 2146]</span></span>
+- <span data-ttu-id="dea41-781">追加の機能強化とバグ修正</span><span class="sxs-lookup"><span data-stu-id="dea41-781">Additional improvements and bug fixes</span></span>
 
 </br>
 
-## <a name="build-16226"></a><span data-ttu-id="3c169-800">ビルド16226</span><span class="sxs-lookup"><span data-stu-id="3c169-800">Build 16226</span></span>
+## <a name="build-16237"></a><span data-ttu-id="dea41-782">ビルド 16237</span><span class="sxs-lookup"><span data-stu-id="dea41-782">Build 16237</span></span>
 
-<span data-ttu-id="3c169-801">ビルド16226の一般的な Windows 情報については、 [windows のブログ](https://blogs.windows.com/windowsexperience/2017/06/21/announcing-windows-10-insider-preview-build-16226-pc/)を参照してください。</span><span class="sxs-lookup"><span data-stu-id="3c169-801">For general Windows information on build 16226 visit the [Windows Blog](https://blogs.windows.com/windowsexperience/2017/06/21/announcing-windows-10-insider-preview-build-16226-pc/).</span></span><br/>
-
-
-### <a name="fixed"></a><span data-ttu-id="3c169-802">固定</span><span class="sxs-lookup"><span data-stu-id="3c169-802">Fixed</span></span>
-- <span data-ttu-id="3c169-803">xattr 関連の syscall サポート (getxattr、setxattr、listxattr、removexattr)。</span><span class="sxs-lookup"><span data-stu-id="3c169-803">xattr related syscalls support (getxattr, setxattr, listxattr, removexattr).</span></span>
-- <span data-ttu-id="3c169-804">capablity xattr のサポート。</span><span class="sxs-lookup"><span data-stu-id="3c169-804">security.capablity xattr support.</span></span>
-- <span data-ttu-id="3c169-805">特定のファイルシステムとフィルター (MS 以外の SMB サーバーを含む) との互換性が向上しました。</span><span class="sxs-lookup"><span data-stu-id="3c169-805">Improved compatibility with certain file systems and filters, including non-MS SMB servers.</span></span> <span data-ttu-id="3c169-806">[GH #1952]</span><span class="sxs-lookup"><span data-stu-id="3c169-806">[GH #1952]</span></span>
-- <span data-ttu-id="3c169-807">OneDrive プレースホルダー、GVFS プレースホルダー、および圧縮された OS 圧縮ファイルのサポートが強化されました。</span><span class="sxs-lookup"><span data-stu-id="3c169-807">Improved support for OneDrive placeholders, GVFS placeholders, and Compact OS compressed files.</span></span>
-- <span data-ttu-id="3c169-808">追加の機能強化とバグ修正</span><span class="sxs-lookup"><span data-stu-id="3c169-808">Additional improvements and bug fixes</span></span>
-
-</br>
-
-## <a name="build-16215"></a><span data-ttu-id="3c169-809">ビルド16215</span><span class="sxs-lookup"><span data-stu-id="3c169-809">Build 16215</span></span>
-
-<span data-ttu-id="3c169-810">ビルド16215の一般的な Windows 情報については、 [windows のブログ](https://blogs.windows.com/windowsexperience/2017/06/08/announcing-windows-10-insider-preview-build-16215-pc-build-15222-mobile/)を参照してください。</span><span class="sxs-lookup"><span data-stu-id="3c169-810">For general Windows information on build 16215 visit the [Windows Blog](https://blogs.windows.com/windowsexperience/2017/06/08/announcing-windows-10-insider-preview-build-16215-pc-build-15222-mobile/).</span></span><br/>
+<span data-ttu-id="dea41-783">ビルド16237の一般的な Windows 情報については、 [windows のブログ](https://blogs.windows.com/windowsexperience/2017/07/07/announcing-windows-10-insider-preview-build-16237-pc/)を参照してください。</span><span class="sxs-lookup"><span data-stu-id="dea41-783">For general Windows information on build 16237 visit the [Windows Blog](https://blogs.windows.com/windowsexperience/2017/07/07/announcing-windows-10-insider-preview-build-16237-pc/).</span></span><br/>
 
 
-### <a name="fixed"></a><span data-ttu-id="3c169-811">固定</span><span class="sxs-lookup"><span data-stu-id="3c169-811">Fixed</span></span>
-- <span data-ttu-id="3c169-812">WSL には開発者モードが不要になりました。</span><span class="sxs-lookup"><span data-stu-id="3c169-812">WSL no longer requires developer mode.</span></span>
-- <span data-ttu-id="3c169-813">Drvfs のディレクトリの接合をサポートします。</span><span class="sxs-lookup"><span data-stu-id="3c169-813">Support directory junctions in drvfs.</span></span>
-- <span data-ttu-id="3c169-814">WSL distribution appx パッケージのアンインストールを処理します。</span><span class="sxs-lookup"><span data-stu-id="3c169-814">Handle uninstalling of WSL distribution appx packages.</span></span>
-- <span data-ttu-id="3c169-815">Procfs を更新して、プライベートと共有のマッピングを表示します。</span><span class="sxs-lookup"><span data-stu-id="3c169-815">Update procfs to show private and shared mappings.</span></span>
-- <span data-ttu-id="3c169-816">Wslconfig .exe を追加して、部分的にインストールまたはアンインストールされたディストリビューションをクリーンアップします。</span><span class="sxs-lookup"><span data-stu-id="3c169-816">Add ability for wslconfig.exe to clean up distributions that are partially installed or uninstalled.</span></span>
-- <span data-ttu-id="3c169-817">TCP ソケット用の IP_MTU_DISCOVER のサポートを追加しました。</span><span class="sxs-lookup"><span data-stu-id="3c169-817">Added support for IP_MTU_DISCOVER for TCP sockets.</span></span> <span data-ttu-id="3c169-818">[GH 1639、2115、2205]</span><span class="sxs-lookup"><span data-stu-id="3c169-818">[GH 1639, 2115, 2205]</span></span>
-- <span data-ttu-id="3c169-819">AF_INADDR へのルートのプロトコルファミリを推定します。</span><span class="sxs-lookup"><span data-stu-id="3c169-819">Infer protocol family for routes to AF_INADDR.</span></span>
-- <span data-ttu-id="3c169-820">シリアルデバイスの機能強化 [GH 1929]。</span><span class="sxs-lookup"><span data-stu-id="3c169-820">Serial device improvements [GH 1929].</span></span>
+### <a name="fixed"></a><span data-ttu-id="dea41-784">固定</span><span class="sxs-lookup"><span data-stu-id="dea41-784">Fixed</span></span>
+- <span data-ttu-id="dea41-785">Lxfs に EAs がないファイルの既定の属性を使用する (ルート、ルート、0000)</span><span class="sxs-lookup"><span data-stu-id="dea41-785">Use default attributes for files without EAs in lxfs (root, root, 0000)</span></span>
+- <span data-ttu-id="dea41-786">拡張属性を使用するディストリビューションのサポートを追加しました</span><span class="sxs-lookup"><span data-stu-id="dea41-786">Added support for distributions that use extended attributes</span></span>
+- <span data-ttu-id="dea41-787">Getdents と getdents64 によって返されるエントリの埋め込みを修正する</span><span class="sxs-lookup"><span data-stu-id="dea41-787">Fix padding for entries returned by getdents and getdents64</span></span>
+- <span data-ttu-id="dea41-788">Shmctl SHM_STAT システム呼び出しのアクセス許可チェックを修正する [GH 2068]</span><span class="sxs-lookup"><span data-stu-id="dea41-788">Fix permissions check for the shmctl SHM_STAT system call [GH 2068]</span></span>
+- <span data-ttu-id="dea41-789">Tty の初期 epoll 状態が正しくないことを修正した [GH 2231]</span><span class="sxs-lookup"><span data-stu-id="dea41-789">Fixed incorrect initial epoll state for ttys [GH 2231]</span></span>
+- <span data-ttu-id="dea41-790">すべてのエントリを返さないように DrvFs readdir を修正する [GH 2077]</span><span class="sxs-lookup"><span data-stu-id="dea41-790">Fix DrvFs readdir not returning all entries [GH 2077]</span></span>
+- <span data-ttu-id="dea41-791">ファイルのリンクが解除されたときに LxFs readdir を修正する [GH 2077]</span><span class="sxs-lookup"><span data-stu-id="dea41-791">Fix LxFs readdir when files are unlinked [GH 2077]</span></span>
+- <span data-ttu-id="dea41-792">Procfs を使用して、リンクされていない drvfs ファイルを再び開くことを許可する</span><span class="sxs-lookup"><span data-stu-id="dea41-792">Allow unlinked drvfs files to be reopened through procfs</span></span>
+- <span data-ttu-id="dea41-793">WSL 機能を無効にするためのグローバルレジストリキーの上書き (相互運用/ドライブのマウント) を追加しました</span><span class="sxs-lookup"><span data-stu-id="dea41-793">Added global registry key override for disabling WSL features (interop / drive mounting)</span></span>
+- <span data-ttu-id="dea41-794">DrvFs (および LxFs) の "stat" で間違ったブロックカウントを修正する [GH 1894]</span><span class="sxs-lookup"><span data-stu-id="dea41-794">Fix incorrect block count in "stat" for DrvFs (and LxFs) [GH 1894]</span></span>
+- <span data-ttu-id="dea41-795">追加の機能強化とバグ修正</span><span class="sxs-lookup"><span data-stu-id="dea41-795">Additional improvements and bug fixes</span></span>
 
 </br>
 
-## <a name="build-16199"></a><span data-ttu-id="3c169-821">ビルド16199</span><span class="sxs-lookup"><span data-stu-id="3c169-821">Build 16199</span></span>
+## <a name="build-16232"></a><span data-ttu-id="dea41-796">ビルド16232</span><span class="sxs-lookup"><span data-stu-id="dea41-796">Build 16232</span></span>
 
-<span data-ttu-id="3c169-822">ビルド16199の一般的な Windows 情報については、 [windows のブログ](https://blogs.windows.com/windowsexperience/2017/05/17/announcing-windows-10-insider-preview-build-16199-pc-build-15215-mobile/)を参照してください。</span><span class="sxs-lookup"><span data-stu-id="3c169-822">For general Windows information on build 16199 visit the [Windows Blog](https://blogs.windows.com/windowsexperience/2017/05/17/announcing-windows-10-insider-preview-build-16199-pc-build-15215-mobile/).</span></span><br/>
-
-
-### <a name="fixed"></a><span data-ttu-id="3c169-823">固定</span><span class="sxs-lookup"><span data-stu-id="3c169-823">Fixed</span></span>
-- <span data-ttu-id="3c169-824">これらのリリースでは、WSL 関連の変更はありません。</span><span class="sxs-lookup"><span data-stu-id="3c169-824">No WSL related changes in these releases.</span></span>
-
-</br>
-
-## <a name="build-16193"></a><span data-ttu-id="3c169-825">ビルド16193</span><span class="sxs-lookup"><span data-stu-id="3c169-825">Build 16193</span></span>
-
-<span data-ttu-id="3c169-826">ビルド16193の一般的な Windows 情報については、 [windows のブログ](https://blogs.windows.com/windowsexperience/2017/05/11/announcing-windows-10-insider-preview-build-16193-pc-build-15213-mobile/)を参照してください。</span><span class="sxs-lookup"><span data-stu-id="3c169-826">For general Windows information on build 16193 visit the [Windows Blog](https://blogs.windows.com/windowsexperience/2017/05/11/announcing-windows-10-insider-preview-build-16193-pc-build-15213-mobile/).</span></span><br/>
+<span data-ttu-id="dea41-797">ビルド16232の一般的な Windows 情報については、 [windows のブログ](https://blogs.windows.com/windowsexperience/2017/06/28/announcing-windows-10-insider-preview-build-16232-pc-build-15228-mobile/)を参照してください。</span><span class="sxs-lookup"><span data-stu-id="dea41-797">For general Windows information on build 16232 visit the [Windows Blog](https://blogs.windows.com/windowsexperience/2017/06/28/announcing-windows-10-insider-preview-build-16232-pc-build-15228-mobile/).</span></span><br/>
 
 
-### <a name="fixed"></a><span data-ttu-id="3c169-827">固定</span><span class="sxs-lookup"><span data-stu-id="3c169-827">Fixed</span></span>
-- <span data-ttu-id="3c169-828">送信 SIGCONT と threadgroup 終了の間の競合状態 [GH 1973]</span><span class="sxs-lookup"><span data-stu-id="3c169-828">Race condition between sending SIGCONT and a threadgroup terminating [GH 1973]</span></span>
-- <span data-ttu-id="3c169-829">tty および pty デバイスを FILE_DEVICE_CONSOLE ではなくレポート FILE_DEVICE_NAMED_PIPE に変更する [GH 1840]</span><span class="sxs-lookup"><span data-stu-id="3c169-829">change tty and pty devices to report FILE_DEVICE_NAMED_PIPE instead of FILE_DEVICE_CONSOLE [GH 1840]</span></span>
-- <span data-ttu-id="3c169-830">IP_OPTIONS の SSH 修正</span><span class="sxs-lookup"><span data-stu-id="3c169-830">SSH fix for IP_OPTIONS</span></span>
-- <span data-ttu-id="3c169-831">DrvFs を init デーモンにマウントしました [GH 1862、1968、1767、1933]</span><span class="sxs-lookup"><span data-stu-id="3c169-831">Moved DrvFs mounting to init daemon [GH 1862, 1968, 1767, 1933]</span></span>
-- <span data-ttu-id="3c169-832">次の NT シンボリックリンクに対する DrvFs のサポートが追加されました。</span><span class="sxs-lookup"><span data-stu-id="3c169-832">Added support in DrvFs for following NT symlinks.</span></span>
+### <a name="fixed"></a><span data-ttu-id="dea41-798">固定</span><span class="sxs-lookup"><span data-stu-id="dea41-798">Fixed</span></span>
+- <span data-ttu-id="dea41-799">このリリースでは、WSL 関連の変更はありません。</span><span class="sxs-lookup"><span data-stu-id="dea41-799">No WSL related changes in this release.</span></span>
 
 </br>
 
-## <a name="build-16184"></a><span data-ttu-id="3c169-833">ビルド16184</span><span class="sxs-lookup"><span data-stu-id="3c169-833">Build 16184</span></span>
+## <a name="build-16226"></a><span data-ttu-id="dea41-800">ビルド16226</span><span class="sxs-lookup"><span data-stu-id="dea41-800">Build 16226</span></span>
 
-<span data-ttu-id="3c169-834">ビルド16184の一般的な Windows 情報については、 [windows のブログ](https://blogs.windows.com/windowsexperience/2017/04/28/announcing-windows-10-insider-preview-build-16184-pc-build-15208-mobile/)を参照してください。</span><span class="sxs-lookup"><span data-stu-id="3c169-834">For general Windows information on build 16184 visit the [Windows Blog](https://blogs.windows.com/windowsexperience/2017/04/28/announcing-windows-10-insider-preview-build-16184-pc-build-15208-mobile/).</span></span><br/>
-
-
-### <a name="fixed"></a><span data-ttu-id="3c169-835">固定</span><span class="sxs-lookup"><span data-stu-id="3c169-835">Fixed</span></span>
-- <span data-ttu-id="3c169-836">Apt パッケージのメンテナンスタスク (lxrun/update) を削除しました</span><span class="sxs-lookup"><span data-stu-id="3c169-836">Removed apt package maintenance task (lxrun.exe /update)</span></span>
-- <span data-ttu-id="3c169-837">Node.js の Windows プロセスからに表示されない修正済みの出力 [GH 1840]</span><span class="sxs-lookup"><span data-stu-id="3c169-837">Fixed output not showing up in from Windows processes in node.js [GH 1840]</span></span>
-- <span data-ttu-id="3c169-838">Lxcore での調整要件の緩和 [GH 1794]</span><span class="sxs-lookup"><span data-stu-id="3c169-838">Relax alignment requirements in lxcore [GH 1794]</span></span>
-- <span data-ttu-id="3c169-839">システム呼び出しの数値における AT_EMPTY_PATH フラグの処理を修正した。</span><span class="sxs-lookup"><span data-stu-id="3c169-839">Fixed handling of the AT_EMPTY_PATH flag in a numer of system calls.</span></span>
-- <span data-ttu-id="3c169-840">開いているハンドルを持つ DrvFs ファイルを削除すると、ファイルに未定義の動作が発生する問題を修正した (GH 544、966、1357、1535、1615)</span><span class="sxs-lookup"><span data-stu-id="3c169-840">Fixed issue where deleting DrvFs files with open handles will cause the file to exhibit undefined behavior [GH 544,966,1357,1535,1615]</span></span>
-- <span data-ttu-id="3c169-841">/etc/hosts は Windows hosts ファイル (%windir%\system32\drivers\etc\hosts) からエントリを継承するようになりました [GH 1495]</span><span class="sxs-lookup"><span data-stu-id="3c169-841">/etc/hosts will now inherit entries from the Windows hosts file (%windir%\system32\drivers\etc\hosts) [GH 1495]</span></span>
-
-</br>
-
-## <a name="build-16179"></a><span data-ttu-id="3c169-842">ビルド16179</span><span class="sxs-lookup"><span data-stu-id="3c169-842">Build 16179</span></span>
-
-<span data-ttu-id="3c169-843">ビルド16179の一般的な Windows 情報については、 [windows のブログ](https://blogs.windows.com/windowsexperience/2017/04/19/announcing-windows-10-insider-preview-build-16179-pc-build-15205-mobile/)を参照してください。</span><span class="sxs-lookup"><span data-stu-id="3c169-843">For general Windows information on build 16179 visit the [Windows Blog](https://blogs.windows.com/windowsexperience/2017/04/19/announcing-windows-10-insider-preview-build-16179-pc-build-15205-mobile/).</span></span><br/>
+<span data-ttu-id="dea41-801">ビルド16226の一般的な Windows 情報については、 [windows のブログ](https://blogs.windows.com/windowsexperience/2017/06/21/announcing-windows-10-insider-preview-build-16226-pc/)を参照してください。</span><span class="sxs-lookup"><span data-stu-id="dea41-801">For general Windows information on build 16226 visit the [Windows Blog](https://blogs.windows.com/windowsexperience/2017/06/21/announcing-windows-10-insider-preview-build-16226-pc/).</span></span><br/>
 
 
-### <a name="fixed"></a><span data-ttu-id="3c169-844">固定</span><span class="sxs-lookup"><span data-stu-id="3c169-844">Fixed</span></span>
-- <span data-ttu-id="3c169-845">今週、WSL の変更はありません。</span><span class="sxs-lookup"><span data-stu-id="3c169-845">No WSL changes this week.</span></span>
+### <a name="fixed"></a><span data-ttu-id="dea41-802">固定</span><span class="sxs-lookup"><span data-stu-id="dea41-802">Fixed</span></span>
+- <span data-ttu-id="dea41-803">xattr 関連の syscall サポート (getxattr、setxattr、listxattr、removexattr)。</span><span class="sxs-lookup"><span data-stu-id="dea41-803">xattr related syscalls support (getxattr, setxattr, listxattr, removexattr).</span></span>
+- <span data-ttu-id="dea41-804">capablity xattr のサポート。</span><span class="sxs-lookup"><span data-stu-id="dea41-804">security.capablity xattr support.</span></span>
+- <span data-ttu-id="dea41-805">特定のファイルシステムとフィルター (MS 以外の SMB サーバーを含む) との互換性が向上しました。</span><span class="sxs-lookup"><span data-stu-id="dea41-805">Improved compatibility with certain file systems and filters, including non-MS SMB servers.</span></span> <span data-ttu-id="dea41-806">[GH #1952]</span><span class="sxs-lookup"><span data-stu-id="dea41-806">[GH #1952]</span></span>
+- <span data-ttu-id="dea41-807">OneDrive プレースホルダー、GVFS プレースホルダー、および圧縮された OS 圧縮ファイルのサポートが強化されました。</span><span class="sxs-lookup"><span data-stu-id="dea41-807">Improved support for OneDrive placeholders, GVFS placeholders, and Compact OS compressed files.</span></span>
+- <span data-ttu-id="dea41-808">追加の機能強化とバグ修正</span><span class="sxs-lookup"><span data-stu-id="dea41-808">Additional improvements and bug fixes</span></span>
 
 </br>
 
-## <a name="build-16176"></a><span data-ttu-id="3c169-846">ビルド16176</span><span class="sxs-lookup"><span data-stu-id="3c169-846">Build 16176</span></span>
+## <a name="build-16215"></a><span data-ttu-id="dea41-809">ビルド16215</span><span class="sxs-lookup"><span data-stu-id="dea41-809">Build 16215</span></span>
 
-<span data-ttu-id="3c169-847">ビルド16176の一般的な Windows 情報については、 [windows のブログ](https://blogs.windows.com/windowsexperience/2017/04/14/announcing-windows-10-insider-preview-build-16176-pc-build-15204-mobile/)を参照してください。</span><span class="sxs-lookup"><span data-stu-id="3c169-847">For general Windows information on build 16176 visit the [Windows Blog](https://blogs.windows.com/windowsexperience/2017/04/14/announcing-windows-10-insider-preview-build-16176-pc-build-15204-mobile/).</span></span><br/>
+<span data-ttu-id="dea41-810">ビルド16215の一般的な Windows 情報については、 [windows のブログ](https://blogs.windows.com/windowsexperience/2017/06/08/announcing-windows-10-insider-preview-build-16215-pc-build-15222-mobile/)を参照してください。</span><span class="sxs-lookup"><span data-stu-id="dea41-810">For general Windows information on build 16215 visit the [Windows Blog](https://blogs.windows.com/windowsexperience/2017/06/08/announcing-windows-10-insider-preview-build-16215-pc-build-15222-mobile/).</span></span><br/>
 
 
-### <a name="fixed"></a><span data-ttu-id="3c169-848">固定</span><span class="sxs-lookup"><span data-stu-id="3c169-848">Fixed</span></span>
-
-- [<span data-ttu-id="3c169-849">有効なシリアルサポート</span><span class="sxs-lookup"><span data-stu-id="3c169-849">Enabled serial support</span></span>](https://blogs.msdn.microsoft.com/wsl/2017/04/14/serial-support-on-the-windows-subsystem-for-linux/)
-- <span data-ttu-id="3c169-850">追加された IP ソケットオプション IP_OPTIONS [GH 1116]</span><span class="sxs-lookup"><span data-stu-id="3c169-850">Added IP socket option IP_OPTIONS [GH 1116]</span></span>
-- <span data-ttu-id="3c169-851">Pwritev 関数の実装 (nginx/PHP-FPM へのファイルのアップロード) [GH 1506]</span><span class="sxs-lookup"><span data-stu-id="3c169-851">Implemented pwritev function (while uploading file to nginx/PHP-FPM) [GH 1506]</span></span>
-- <span data-ttu-id="3c169-852">追加された IP ソケットオプション IP_MULTICAST_IF & IPV6_MULTICAST_IF [GH 990]</span><span class="sxs-lookup"><span data-stu-id="3c169-852">Added IP socket options IP_MULTICAST_IF & IPV6_MULTICAST_IF [GH 990]</span></span>
-- <span data-ttu-id="3c169-853">ソケットオプション IP_MULTICAST_LOOP & IPV6_MULTICAST_LOOP のサポート [GH 1678]</span><span class="sxs-lookup"><span data-stu-id="3c169-853">Support for socket option IP_MULTICAST_LOOP & IPV6_MULTICAST_LOOP [GH 1678]</span></span>
-- <span data-ttu-id="3c169-854">Apps ノード、traceroute、掘り下げ、nslookup、host の IP (V6) MTU socket オプションを追加しました</span><span class="sxs-lookup"><span data-stu-id="3c169-854">Added IP(V6)_MTU socket option for apps node, traceroute, dig, nslookup, host</span></span>
-- <span data-ttu-id="3c169-855">追加された IP ソケットオプション IPV6_UNICAST_HOPS</span><span class="sxs-lookup"><span data-stu-id="3c169-855">Added IP socket option IPV6_UNICAST_HOPS</span></span>
-- [<span data-ttu-id="3c169-856">ファイルシステムの機能強化</span><span class="sxs-lookup"><span data-stu-id="3c169-856">Filesystem Improvements</span></span>](https://blogs.msdn.microsoft.com/wsl/2017/04/18/file-system-improvements-to-the-windows-subsystem-for-linux/)
-    * <span data-ttu-id="3c169-857">UNC パスのマウントを許可する</span><span class="sxs-lookup"><span data-stu-id="3c169-857">Allow mounting of UNC paths</span></span>
-    * <span data-ttu-id="3c169-858">Drvfs で CDF サポートを有効にする</span><span class="sxs-lookup"><span data-stu-id="3c169-858">Enable CDFS support in drvfs</span></span>
-    * <span data-ttu-id="3c169-859">Drvfs でネットワークファイルシステムのアクセス許可を正しく処理する</span><span class="sxs-lookup"><span data-stu-id="3c169-859">Correctly handle permissions for network file systems in drvfs</span></span>
-    * <span data-ttu-id="3c169-860">Drvfs にリモートドライブのサポートを追加する</span><span class="sxs-lookup"><span data-stu-id="3c169-860">Add support for remote drives to drvfs</span></span>
-    * <span data-ttu-id="3c169-861">Drvfs での FAT サポートを有効にする</span><span class="sxs-lookup"><span data-stu-id="3c169-861">Enable FAT support in drvfs</span></span>
-- <span data-ttu-id="3c169-862">その他の修正プログラムと機能強化</span><span class="sxs-lookup"><span data-stu-id="3c169-862">Additional fixes and Improvements</span></span>
-
-### <a name="ltp-results"></a><span data-ttu-id="3c169-863">LTP の結果</span><span class="sxs-lookup"><span data-stu-id="3c169-863">LTP Results</span></span>
-<span data-ttu-id="3c169-864">15042以降の変更はありません</span><span class="sxs-lookup"><span data-stu-id="3c169-864">No changes since 15042</span></span>
+### <a name="fixed"></a><span data-ttu-id="dea41-811">固定</span><span class="sxs-lookup"><span data-stu-id="dea41-811">Fixed</span></span>
+- <span data-ttu-id="dea41-812">WSL には開発者モードが不要になりました。</span><span class="sxs-lookup"><span data-stu-id="dea41-812">WSL no longer requires developer mode.</span></span>
+- <span data-ttu-id="dea41-813">Drvfs のディレクトリの接合をサポートします。</span><span class="sxs-lookup"><span data-stu-id="dea41-813">Support directory junctions in drvfs.</span></span>
+- <span data-ttu-id="dea41-814">WSL distribution appx パッケージのアンインストールを処理します。</span><span class="sxs-lookup"><span data-stu-id="dea41-814">Handle uninstalling of WSL distribution appx packages.</span></span>
+- <span data-ttu-id="dea41-815">Procfs を更新して、プライベートと共有のマッピングを表示します。</span><span class="sxs-lookup"><span data-stu-id="dea41-815">Update procfs to show private and shared mappings.</span></span>
+- <span data-ttu-id="dea41-816">Wslconfig .exe を追加して、部分的にインストールまたはアンインストールされたディストリビューションをクリーンアップします。</span><span class="sxs-lookup"><span data-stu-id="dea41-816">Add ability for wslconfig.exe to clean up distributions that are partially installed or uninstalled.</span></span>
+- <span data-ttu-id="dea41-817">TCP ソケット用の IP_MTU_DISCOVER のサポートを追加しました。</span><span class="sxs-lookup"><span data-stu-id="dea41-817">Added support for IP_MTU_DISCOVER for TCP sockets.</span></span> <span data-ttu-id="dea41-818">[GH 1639、2115、2205]</span><span class="sxs-lookup"><span data-stu-id="dea41-818">[GH 1639, 2115, 2205]</span></span>
+- <span data-ttu-id="dea41-819">AF_INADDR へのルートのプロトコルファミリを推定します。</span><span class="sxs-lookup"><span data-stu-id="dea41-819">Infer protocol family for routes to AF_INADDR.</span></span>
+- <span data-ttu-id="dea41-820">シリアルデバイスの機能強化 [GH 1929]。</span><span class="sxs-lookup"><span data-stu-id="dea41-820">Serial device improvements [GH 1929].</span></span>
 
 </br>
 
-## <a name="build-16170"></a><span data-ttu-id="3c169-865">ビルド16170</span><span class="sxs-lookup"><span data-stu-id="3c169-865">Build 16170</span></span>
+## <a name="build-16199"></a><span data-ttu-id="dea41-821">ビルド16199</span><span class="sxs-lookup"><span data-stu-id="dea41-821">Build 16199</span></span>
 
-<span data-ttu-id="3c169-866">ビルド16170の一般的な Windows 情報については、 [windows のブログ](https://blogs.windows.com/windowsexperience/2017/04/07/announcing-windows-10-insider-preview-build-16170-pc/)を参照してください。</span><span class="sxs-lookup"><span data-stu-id="3c169-866">For general Windows information on build 16170 visit the [Windows Blog](https://blogs.windows.com/windowsexperience/2017/04/07/announcing-windows-10-insider-preview-build-16170-pc/).</span></span><br/>
+<span data-ttu-id="dea41-822">ビルド16199の一般的な Windows 情報については、 [windows のブログ](https://blogs.windows.com/windowsexperience/2017/05/17/announcing-windows-10-insider-preview-build-16199-pc-build-15215-mobile/)を参照してください。</span><span class="sxs-lookup"><span data-stu-id="dea41-822">For general Windows information on build 16199 visit the [Windows Blog](https://blogs.windows.com/windowsexperience/2017/05/17/announcing-windows-10-insider-preview-build-16199-pc-build-15215-mobile/).</span></span><br/>
 
-<span data-ttu-id="3c169-867">WSL のテストの取り組みについて説明する新しい[ブログ投稿](https://blogs.msdn.microsoft.com/wsl/2017/04/11/testing-the-windows-subsystem-for-linux/)をリリースしました。</span><span class="sxs-lookup"><span data-stu-id="3c169-867">We released a new [blog post](https://blogs.msdn.microsoft.com/wsl/2017/04/11/testing-the-windows-subsystem-for-linux/) discussing our efforts to test WSL.</span></span>
 
-### <a name="fixed"></a><span data-ttu-id="3c169-868">固定</span><span class="sxs-lookup"><span data-stu-id="3c169-868">Fixed</span></span>
-
-- <span data-ttu-id="3c169-869">サポートソケットオプション IP_ADD_MEMBERSHIP & IPV6_ADD_MEMBERSHIP [GH 1678]</span><span class="sxs-lookup"><span data-stu-id="3c169-869">Support socket option IP_ADD_MEMBERSHIP & IPV6_ADD_MEMBERSHIP [GH 1678]</span></span>
-- <span data-ttu-id="3c169-870">PTRACE_OLDSETOPTIONS のサポートを追加します。</span><span class="sxs-lookup"><span data-stu-id="3c169-870">Add support for PTRACE_OLDSETOPTIONS.</span></span> <span data-ttu-id="3c169-871">[GH 1692]</span><span class="sxs-lookup"><span data-stu-id="3c169-871">[GH 1692]</span></span>
-- <span data-ttu-id="3c169-872">その他の修正プログラムと機能強化</span><span class="sxs-lookup"><span data-stu-id="3c169-872">Additional fixes and improvements</span></span>
-
-### <a name="ltp-results"></a><span data-ttu-id="3c169-873">LTP の結果</span><span class="sxs-lookup"><span data-stu-id="3c169-873">LTP Results</span></span>
-<span data-ttu-id="3c169-874">15042以降の変更はありません</span><span class="sxs-lookup"><span data-stu-id="3c169-874">No changes since 15042</span></span>
+### <a name="fixed"></a><span data-ttu-id="dea41-823">固定</span><span class="sxs-lookup"><span data-stu-id="dea41-823">Fixed</span></span>
+- <span data-ttu-id="dea41-824">これらのリリースでは、WSL 関連の変更はありません。</span><span class="sxs-lookup"><span data-stu-id="dea41-824">No WSL related changes in these releases.</span></span>
 
 </br>
 
-## <a name="build-15046-to-windows-10-creators-update"></a><span data-ttu-id="3c169-875">ビルド15046から Windows 10 の作成者への更新</span><span class="sxs-lookup"><span data-stu-id="3c169-875">Build 15046 to Windows 10 Creators Update</span></span>
-<span data-ttu-id="3c169-876">Windows 10 の作成者の更新プログラムに含まれるように計画されている WSL 修正プログラムや機能はこれ以上ありません。</span><span class="sxs-lookup"><span data-stu-id="3c169-876">There are no more WSL fixes or features planned for inclusion in the Creators Update to Windows 10.</span></span> <span data-ttu-id="3c169-877">WSL のリリースノートは、次の主要な Windows Update を対象とした追加のために、今後数週間にわたって再開されます。</span><span class="sxs-lookup"><span data-stu-id="3c169-877">Release notes for WSL will resume in the coming weeks for additions targeting the next major Windows Update.</span></span> <span data-ttu-id="3c169-878">ビルド15046および今後の Insider リリースに関する一般的な Windows 情報については、 [windows のブログ](https://blogs.windows.com/windowsexperience/2017/02/28/announcing-windows-10-insider-preview-build-15046-pc/)を参照してください。</span><span class="sxs-lookup"><span data-stu-id="3c169-878">For general Windows information on build 15046 and future Insider releases visit the [Windows Blog](https://blogs.windows.com/windowsexperience/2017/02/28/announcing-windows-10-insider-preview-build-15046-pc/).</span></span> <br/><br/>
+## <a name="build-16193"></a><span data-ttu-id="dea41-825">ビルド16193</span><span class="sxs-lookup"><span data-stu-id="dea41-825">Build 16193</span></span>
+
+<span data-ttu-id="dea41-826">ビルド16193の一般的な Windows 情報については、 [windows のブログ](https://blogs.windows.com/windowsexperience/2017/05/11/announcing-windows-10-insider-preview-build-16193-pc-build-15213-mobile/)を参照してください。</span><span class="sxs-lookup"><span data-stu-id="dea41-826">For general Windows information on build 16193 visit the [Windows Blog](https://blogs.windows.com/windowsexperience/2017/05/11/announcing-windows-10-insider-preview-build-16193-pc-build-15213-mobile/).</span></span><br/>
+
+
+### <a name="fixed"></a><span data-ttu-id="dea41-827">固定</span><span class="sxs-lookup"><span data-stu-id="dea41-827">Fixed</span></span>
+- <span data-ttu-id="dea41-828">送信 SIGCONT と threadgroup 終了の間の競合状態 [GH 1973]</span><span class="sxs-lookup"><span data-stu-id="dea41-828">Race condition between sending SIGCONT and a threadgroup terminating [GH 1973]</span></span>
+- <span data-ttu-id="dea41-829">tty および pty デバイスを FILE_DEVICE_CONSOLE ではなくレポート FILE_DEVICE_NAMED_PIPE に変更する [GH 1840]</span><span class="sxs-lookup"><span data-stu-id="dea41-829">change tty and pty devices to report FILE_DEVICE_NAMED_PIPE instead of FILE_DEVICE_CONSOLE [GH 1840]</span></span>
+- <span data-ttu-id="dea41-830">IP_OPTIONS の SSH 修正</span><span class="sxs-lookup"><span data-stu-id="dea41-830">SSH fix for IP_OPTIONS</span></span>
+- <span data-ttu-id="dea41-831">DrvFs を init デーモンにマウントしました [GH 1862、1968、1767、1933]</span><span class="sxs-lookup"><span data-stu-id="dea41-831">Moved DrvFs mounting to init daemon [GH 1862, 1968, 1767, 1933]</span></span>
+- <span data-ttu-id="dea41-832">次の NT シンボリックリンクに対する DrvFs のサポートが追加されました。</span><span class="sxs-lookup"><span data-stu-id="dea41-832">Added support in DrvFs for following NT symlinks.</span></span>
+
+</br>
+
+## <a name="build-16184"></a><span data-ttu-id="dea41-833">ビルド16184</span><span class="sxs-lookup"><span data-stu-id="dea41-833">Build 16184</span></span>
+
+<span data-ttu-id="dea41-834">ビルド16184の一般的な Windows 情報については、 [windows のブログ](https://blogs.windows.com/windowsexperience/2017/04/28/announcing-windows-10-insider-preview-build-16184-pc-build-15208-mobile/)を参照してください。</span><span class="sxs-lookup"><span data-stu-id="dea41-834">For general Windows information on build 16184 visit the [Windows Blog](https://blogs.windows.com/windowsexperience/2017/04/28/announcing-windows-10-insider-preview-build-16184-pc-build-15208-mobile/).</span></span><br/>
+
+
+### <a name="fixed"></a><span data-ttu-id="dea41-835">固定</span><span class="sxs-lookup"><span data-stu-id="dea41-835">Fixed</span></span>
+- <span data-ttu-id="dea41-836">Apt パッケージのメンテナンスタスク (lxrun/update) を削除しました</span><span class="sxs-lookup"><span data-stu-id="dea41-836">Removed apt package maintenance task (lxrun.exe /update)</span></span>
+- <span data-ttu-id="dea41-837">Node.js の Windows プロセスからに表示されない修正済みの出力 [GH 1840]</span><span class="sxs-lookup"><span data-stu-id="dea41-837">Fixed output not showing up in from Windows processes in node.js [GH 1840]</span></span>
+- <span data-ttu-id="dea41-838">Lxcore での調整要件の緩和 [GH 1794]</span><span class="sxs-lookup"><span data-stu-id="dea41-838">Relax alignment requirements in lxcore [GH 1794]</span></span>
+- <span data-ttu-id="dea41-839">システム呼び出しの数値における AT_EMPTY_PATH フラグの処理を修正した。</span><span class="sxs-lookup"><span data-stu-id="dea41-839">Fixed handling of the AT_EMPTY_PATH flag in a numer of system calls.</span></span>
+- <span data-ttu-id="dea41-840">開いているハンドルを持つ DrvFs ファイルを削除すると、ファイルに未定義の動作が発生する問題を修正した (GH 544、966、1357、1535、1615)</span><span class="sxs-lookup"><span data-stu-id="dea41-840">Fixed issue where deleting DrvFs files with open handles will cause the file to exhibit undefined behavior [GH 544,966,1357,1535,1615]</span></span>
+- <span data-ttu-id="dea41-841">/etc/hosts は Windows hosts ファイル (%windir%\system32\drivers\etc\hosts) からエントリを継承するようになりました [GH 1495]</span><span class="sxs-lookup"><span data-stu-id="dea41-841">/etc/hosts will now inherit entries from the Windows hosts file (%windir%\system32\drivers\etc\hosts) [GH 1495]</span></span>
+
+</br>
+
+## <a name="build-16179"></a><span data-ttu-id="dea41-842">ビルド16179</span><span class="sxs-lookup"><span data-stu-id="dea41-842">Build 16179</span></span>
+
+<span data-ttu-id="dea41-843">ビルド16179の一般的な Windows 情報については、 [windows のブログ](https://blogs.windows.com/windowsexperience/2017/04/19/announcing-windows-10-insider-preview-build-16179-pc-build-15205-mobile/)を参照してください。</span><span class="sxs-lookup"><span data-stu-id="dea41-843">For general Windows information on build 16179 visit the [Windows Blog](https://blogs.windows.com/windowsexperience/2017/04/19/announcing-windows-10-insider-preview-build-16179-pc-build-15205-mobile/).</span></span><br/>
+
+
+### <a name="fixed"></a><span data-ttu-id="dea41-844">固定</span><span class="sxs-lookup"><span data-stu-id="dea41-844">Fixed</span></span>
+- <span data-ttu-id="dea41-845">今週、WSL の変更はありません。</span><span class="sxs-lookup"><span data-stu-id="dea41-845">No WSL changes this week.</span></span>
+
+</br>
+
+## <a name="build-16176"></a><span data-ttu-id="dea41-846">ビルド16176</span><span class="sxs-lookup"><span data-stu-id="dea41-846">Build 16176</span></span>
+
+<span data-ttu-id="dea41-847">ビルド16176の一般的な Windows 情報については、 [windows のブログ](https://blogs.windows.com/windowsexperience/2017/04/14/announcing-windows-10-insider-preview-build-16176-pc-build-15204-mobile/)を参照してください。</span><span class="sxs-lookup"><span data-stu-id="dea41-847">For general Windows information on build 16176 visit the [Windows Blog](https://blogs.windows.com/windowsexperience/2017/04/14/announcing-windows-10-insider-preview-build-16176-pc-build-15204-mobile/).</span></span><br/>
+
+
+### <a name="fixed"></a><span data-ttu-id="dea41-848">固定</span><span class="sxs-lookup"><span data-stu-id="dea41-848">Fixed</span></span>
+
+- [<span data-ttu-id="dea41-849">有効なシリアルサポート</span><span class="sxs-lookup"><span data-stu-id="dea41-849">Enabled serial support</span></span>](https://blogs.msdn.microsoft.com/wsl/2017/04/14/serial-support-on-the-windows-subsystem-for-linux/)
+- <span data-ttu-id="dea41-850">追加された IP ソケットオプション IP_OPTIONS [GH 1116]</span><span class="sxs-lookup"><span data-stu-id="dea41-850">Added IP socket option IP_OPTIONS [GH 1116]</span></span>
+- <span data-ttu-id="dea41-851">Pwritev 関数の実装 (nginx/PHP-FPM へのファイルのアップロード) [GH 1506]</span><span class="sxs-lookup"><span data-stu-id="dea41-851">Implemented pwritev function (while uploading file to nginx/PHP-FPM) [GH 1506]</span></span>
+- <span data-ttu-id="dea41-852">追加された IP ソケットオプション IP_MULTICAST_IF & IPV6_MULTICAST_IF [GH 990]</span><span class="sxs-lookup"><span data-stu-id="dea41-852">Added IP socket options IP_MULTICAST_IF & IPV6_MULTICAST_IF [GH 990]</span></span>
+- <span data-ttu-id="dea41-853">ソケットオプション IP_MULTICAST_LOOP & IPV6_MULTICAST_LOOP のサポート [GH 1678]</span><span class="sxs-lookup"><span data-stu-id="dea41-853">Support for socket option IP_MULTICAST_LOOP & IPV6_MULTICAST_LOOP [GH 1678]</span></span>
+- <span data-ttu-id="dea41-854">Apps ノード、traceroute、掘り下げ、nslookup、host の IP (V6) MTU socket オプションを追加しました</span><span class="sxs-lookup"><span data-stu-id="dea41-854">Added IP(V6)_MTU socket option for apps node, traceroute, dig, nslookup, host</span></span>
+- <span data-ttu-id="dea41-855">追加された IP ソケットオプション IPV6_UNICAST_HOPS</span><span class="sxs-lookup"><span data-stu-id="dea41-855">Added IP socket option IPV6_UNICAST_HOPS</span></span>
+- [<span data-ttu-id="dea41-856">ファイルシステムの機能強化</span><span class="sxs-lookup"><span data-stu-id="dea41-856">Filesystem Improvements</span></span>](https://blogs.msdn.microsoft.com/wsl/2017/04/18/file-system-improvements-to-the-windows-subsystem-for-linux/)
+    * <span data-ttu-id="dea41-857">UNC パスのマウントを許可する</span><span class="sxs-lookup"><span data-stu-id="dea41-857">Allow mounting of UNC paths</span></span>
+    * <span data-ttu-id="dea41-858">Drvfs で CDF サポートを有効にする</span><span class="sxs-lookup"><span data-stu-id="dea41-858">Enable CDFS support in drvfs</span></span>
+    * <span data-ttu-id="dea41-859">Drvfs でネットワークファイルシステムのアクセス許可を正しく処理する</span><span class="sxs-lookup"><span data-stu-id="dea41-859">Correctly handle permissions for network file systems in drvfs</span></span>
+    * <span data-ttu-id="dea41-860">Drvfs にリモートドライブのサポートを追加する</span><span class="sxs-lookup"><span data-stu-id="dea41-860">Add support for remote drives to drvfs</span></span>
+    * <span data-ttu-id="dea41-861">Drvfs での FAT サポートを有効にする</span><span class="sxs-lookup"><span data-stu-id="dea41-861">Enable FAT support in drvfs</span></span>
+- <span data-ttu-id="dea41-862">その他の修正プログラムと機能強化</span><span class="sxs-lookup"><span data-stu-id="dea41-862">Additional fixes and Improvements</span></span>
+
+### <a name="ltp-results"></a><span data-ttu-id="dea41-863">LTP の結果</span><span class="sxs-lookup"><span data-stu-id="dea41-863">LTP Results</span></span>
+<span data-ttu-id="dea41-864">15042以降の変更はありません</span><span class="sxs-lookup"><span data-stu-id="dea41-864">No changes since 15042</span></span>
+
+</br>
+
+## <a name="build-16170"></a><span data-ttu-id="dea41-865">ビルド16170</span><span class="sxs-lookup"><span data-stu-id="dea41-865">Build 16170</span></span>
+
+<span data-ttu-id="dea41-866">ビルド16170の一般的な Windows 情報については、 [windows のブログ](https://blogs.windows.com/windowsexperience/2017/04/07/announcing-windows-10-insider-preview-build-16170-pc/)を参照してください。</span><span class="sxs-lookup"><span data-stu-id="dea41-866">For general Windows information on build 16170 visit the [Windows Blog](https://blogs.windows.com/windowsexperience/2017/04/07/announcing-windows-10-insider-preview-build-16170-pc/).</span></span><br/>
+
+<span data-ttu-id="dea41-867">WSL のテストの取り組みについて説明する新しい[ブログ投稿](https://blogs.msdn.microsoft.com/wsl/2017/04/11/testing-the-windows-subsystem-for-linux/)をリリースしました。</span><span class="sxs-lookup"><span data-stu-id="dea41-867">We released a new [blog post](https://blogs.msdn.microsoft.com/wsl/2017/04/11/testing-the-windows-subsystem-for-linux/) discussing our efforts to test WSL.</span></span>
+
+### <a name="fixed"></a><span data-ttu-id="dea41-868">固定</span><span class="sxs-lookup"><span data-stu-id="dea41-868">Fixed</span></span>
+
+- <span data-ttu-id="dea41-869">サポートソケットオプション IP_ADD_MEMBERSHIP & IPV6_ADD_MEMBERSHIP [GH 1678]</span><span class="sxs-lookup"><span data-stu-id="dea41-869">Support socket option IP_ADD_MEMBERSHIP & IPV6_ADD_MEMBERSHIP [GH 1678]</span></span>
+- <span data-ttu-id="dea41-870">PTRACE_OLDSETOPTIONS のサポートを追加します。</span><span class="sxs-lookup"><span data-stu-id="dea41-870">Add support for PTRACE_OLDSETOPTIONS.</span></span> <span data-ttu-id="dea41-871">[GH 1692]</span><span class="sxs-lookup"><span data-stu-id="dea41-871">[GH 1692]</span></span>
+- <span data-ttu-id="dea41-872">その他の修正プログラムと機能強化</span><span class="sxs-lookup"><span data-stu-id="dea41-872">Additional fixes and improvements</span></span>
+
+### <a name="ltp-results"></a><span data-ttu-id="dea41-873">LTP の結果</span><span class="sxs-lookup"><span data-stu-id="dea41-873">LTP Results</span></span>
+<span data-ttu-id="dea41-874">15042以降の変更はありません</span><span class="sxs-lookup"><span data-stu-id="dea41-874">No changes since 15042</span></span>
+
+</br>
+
+## <a name="build-15046-to-windows-10-creators-update"></a><span data-ttu-id="dea41-875">ビルド15046から Windows 10 の作成者への更新</span><span class="sxs-lookup"><span data-stu-id="dea41-875">Build 15046 to Windows 10 Creators Update</span></span>
+<span data-ttu-id="dea41-876">Windows 10 の作成者の更新プログラムに含まれるように計画されている WSL 修正プログラムや機能はこれ以上ありません。</span><span class="sxs-lookup"><span data-stu-id="dea41-876">There are no more WSL fixes or features planned for inclusion in the Creators Update to Windows 10.</span></span> <span data-ttu-id="dea41-877">WSL のリリースノートは、次の主要な Windows Update を対象とした追加のために、今後数週間にわたって再開されます。</span><span class="sxs-lookup"><span data-stu-id="dea41-877">Release notes for WSL will resume in the coming weeks for additions targeting the next major Windows Update.</span></span> <span data-ttu-id="dea41-878">ビルド15046および今後の Insider リリースに関する一般的な Windows 情報については、 [windows のブログ](https://blogs.windows.com/windowsexperience/2017/02/28/announcing-windows-10-insider-preview-build-15046-pc/)を参照してください。</span><span class="sxs-lookup"><span data-stu-id="dea41-878">For general Windows information on build 15046 and future Insider releases visit the [Windows Blog](https://blogs.windows.com/windowsexperience/2017/02/28/announcing-windows-10-insider-preview-build-15046-pc/).</span></span> <br/><br/>
  <br/>
 
-## <a name="build-15042"></a><span data-ttu-id="3c169-879">ビルド15042</span><span class="sxs-lookup"><span data-stu-id="3c169-879">Build 15042</span></span>
+## <a name="build-15042"></a><span data-ttu-id="dea41-879">ビルド15042</span><span class="sxs-lookup"><span data-stu-id="dea41-879">Build 15042</span></span>
 
-<span data-ttu-id="3c169-880">ビルド15042の一般的な Windows 情報については、 [windows のブログ](https://blogs.windows.com/windowsexperience/2017/02/24/announcing-windows-10-insider-preview-build-15042-pc-build-15043-mobile/)を参照してください。</span><span class="sxs-lookup"><span data-stu-id="3c169-880">For general Windows information on build 15042 visit the [Windows Blog](https://blogs.windows.com/windowsexperience/2017/02/24/announcing-windows-10-insider-preview-build-15042-pc-build-15043-mobile/).</span></span><br/>
+<span data-ttu-id="dea41-880">ビルド15042の一般的な Windows 情報については、 [windows のブログ](https://blogs.windows.com/windowsexperience/2017/02/24/announcing-windows-10-insider-preview-build-15042-pc-build-15043-mobile/)を参照してください。</span><span class="sxs-lookup"><span data-stu-id="dea41-880">For general Windows information on build 15042 visit the [Windows Blog](https://blogs.windows.com/windowsexperience/2017/02/24/announcing-windows-10-insider-preview-build-15042-pc-build-15043-mobile/).</span></span><br/>
 
 
-### <a name="fixed"></a><span data-ttu-id="3c169-881">固定</span><span class="sxs-lookup"><span data-stu-id="3c169-881">Fixed</span></span>
+### <a name="fixed"></a><span data-ttu-id="dea41-881">固定</span><span class="sxs-lookup"><span data-stu-id="dea41-881">Fixed</span></span>
 
-- <span data-ttu-id="3c169-882">"." で終わるパスの削除時にデッドロックが発生する問題を修正します。</span><span class="sxs-lookup"><span data-stu-id="3c169-882">Fix for a deadlock when removing a path ending in ".."</span></span>
-- <span data-ttu-id="3c169-883">FIONBIO が成功時に0を返さないという問題を修正した [GH 1683]</span><span class="sxs-lookup"><span data-stu-id="3c169-883">Fixed an issue where FIONBIO not returning 0 on success [GH 1683]</span></span>
-- <span data-ttu-id="3c169-884">Inet データグラムソケットの長さゼロの読み取りに関する問題を修正した</span><span class="sxs-lookup"><span data-stu-id="3c169-884">Fixed issue with zero-length reads of inet datagram sockets</span></span>
-- <span data-ttu-id="3c169-885">Drvfs inode 参照で競合状態が発生したことが原因でデッドロックが発生する可能性を修正する [GH 1675]</span><span class="sxs-lookup"><span data-stu-id="3c169-885">Fix possible deadlock due to race condition in drvfs inode lookup [GH 1675]</span></span>
-- <span data-ttu-id="3c169-886">Unix ソケットの補助データの拡張サポートSCM_CREDENTIALS および SCM_RIGHTS [GH 514, 613, 1326]</span><span class="sxs-lookup"><span data-stu-id="3c169-886">Extended support for unix socket ancillary data; SCM_CREDENTIALS and SCM_RIGHTS [GH 514, 613, 1326]</span></span>
-- <span data-ttu-id="3c169-887">その他の修正プログラムと機能強化</span><span class="sxs-lookup"><span data-stu-id="3c169-887">Additional fixes and improvements</span></span>
+- <span data-ttu-id="dea41-882">"." で終わるパスの削除時にデッドロックが発生する問題を修正します。</span><span class="sxs-lookup"><span data-stu-id="dea41-882">Fix for a deadlock when removing a path ending in ".."</span></span>
+- <span data-ttu-id="dea41-883">FIONBIO が成功時に0を返さないという問題を修正した [GH 1683]</span><span class="sxs-lookup"><span data-stu-id="dea41-883">Fixed an issue where FIONBIO not returning 0 on success [GH 1683]</span></span>
+- <span data-ttu-id="dea41-884">Inet データグラムソケットの長さゼロの読み取りに関する問題を修正した</span><span class="sxs-lookup"><span data-stu-id="dea41-884">Fixed issue with zero-length reads of inet datagram sockets</span></span>
+- <span data-ttu-id="dea41-885">Drvfs inode 参照で競合状態が発生したことが原因でデッドロックが発生する可能性を修正する [GH 1675]</span><span class="sxs-lookup"><span data-stu-id="dea41-885">Fix possible deadlock due to race condition in drvfs inode lookup [GH 1675]</span></span>
+- <span data-ttu-id="dea41-886">Unix ソケットの補助データの拡張サポートSCM_CREDENTIALS および SCM_RIGHTS [GH 514, 613, 1326]</span><span class="sxs-lookup"><span data-stu-id="dea41-886">Extended support for unix socket ancillary data; SCM_CREDENTIALS and SCM_RIGHTS [GH 514, 613, 1326]</span></span>
+- <span data-ttu-id="dea41-887">その他の修正プログラムと機能強化</span><span class="sxs-lookup"><span data-stu-id="dea41-887">Additional fixes and improvements</span></span>
 
-### <a name="ltp-results"></a><span data-ttu-id="3c169-888">LTP の結果:</span><span class="sxs-lookup"><span data-stu-id="3c169-888">LTP Results:</span></span>
-<span data-ttu-id="3c169-889">成功したテストの数:737</span><span class="sxs-lookup"><span data-stu-id="3c169-889">Number of Passing Test: 737</span></span></br>
-<span data-ttu-id="3c169-890">非パッシング (失敗、スキップされたなど) の数:255</span><span class="sxs-lookup"><span data-stu-id="3c169-890">Number of non-Passing (failing, skipped, etc…): 255</span></span>
+### <a name="ltp-results"></a><span data-ttu-id="dea41-888">LTP の結果:</span><span class="sxs-lookup"><span data-stu-id="dea41-888">LTP Results:</span></span>
+<span data-ttu-id="dea41-889">成功したテストの数:737</span><span class="sxs-lookup"><span data-stu-id="dea41-889">Number of Passing Test: 737</span></span></br>
+<span data-ttu-id="dea41-890">非パッシング (失敗、スキップされたなど) の数:255</span><span class="sxs-lookup"><span data-stu-id="dea41-890">Number of non-Passing (failing, skipped, etc…): 255</span></span>
 
 </br>
 
-## <a name="build-15031"></a><span data-ttu-id="3c169-891">ビルド15031</span><span class="sxs-lookup"><span data-stu-id="3c169-891">Build 15031</span></span>
+## <a name="build-15031"></a><span data-ttu-id="dea41-891">ビルド15031</span><span class="sxs-lookup"><span data-stu-id="dea41-891">Build 15031</span></span>
 
-<span data-ttu-id="3c169-892">ビルド15031の一般的な Windows 情報については、 [windows のブログ](https://blogs.windows.com/windowsexperience/2017/02/08/announcing-windows-10-insider-preview-build-15031-pc/)を参照してください。</span><span class="sxs-lookup"><span data-stu-id="3c169-892">For general Windows information on build 15031 visit the [Windows Blog](https://blogs.windows.com/windowsexperience/2017/02/08/announcing-windows-10-insider-preview-build-15031-pc/).</span></span><br/>
-
-
-### <a name="fixed"></a><span data-ttu-id="3c169-893">固定</span><span class="sxs-lookup"><span data-stu-id="3c169-893">Fixed</span></span>
-
-- <span data-ttu-id="3c169-894">Time (2) が散発的に不適切な動作するバグを修正しています。</span><span class="sxs-lookup"><span data-stu-id="3c169-894">Fixed a bug where time(2) would sporadically misbehave.</span></span>
-- <span data-ttu-id="3c169-895">\* SIGSYSCALL MASK がシグナルマスクを破壊する可能性がある問題を修正しました。</span><span class="sxs-lookup"><span data-stu-id="3c169-895">Fixed and issue where \*SIGPROCMASK syscalls could corrupt signal mask.</span></span>
-- <span data-ttu-id="3c169-896">WSL プロセス作成通知でコマンドラインの完全な長さを返すようになりました。</span><span class="sxs-lookup"><span data-stu-id="3c169-896">Now return full command line length in WSL process creation notification.</span></span> <span data-ttu-id="3c169-897">[GH 1632]</span><span class="sxs-lookup"><span data-stu-id="3c169-897">[GH 1632]</span></span>
-- <span data-ttu-id="3c169-898">WSL は、GDB がハングした場合に ptrace を介してスレッドの終了を報告するようになりました。</span><span class="sxs-lookup"><span data-stu-id="3c169-898">WSL now reports thread exit through ptrace for GDB hangs.</span></span> <span data-ttu-id="3c169-899">[GH 1196]</span><span class="sxs-lookup"><span data-stu-id="3c169-899">[GH 1196]</span></span>
-- <span data-ttu-id="3c169-900">Tmux IO が大量に発生した後に ptys がハングするバグを修正します。</span><span class="sxs-lookup"><span data-stu-id="3c169-900">Fixed bug where ptys would hang after heavy tmux IO.</span></span> <span data-ttu-id="3c169-901">[GH 1358]</span><span class="sxs-lookup"><span data-stu-id="3c169-901">[GH 1358]</span></span>
-- <span data-ttu-id="3c169-902">多くのシステムコールでタイムアウトの検証を修正 (futex、semtimedop、ppoll、sigtimedwait、itimer、timer_create)</span><span class="sxs-lookup"><span data-stu-id="3c169-902">Fixed timeout validation in many system calls (futex, semtimedop, ppoll, sigtimedwait, itimer, timer_create)</span></span>
-- <span data-ttu-id="3c169-903">追加された eventfd EFD_SEMAPHORE サポート [GH 452]</span><span class="sxs-lookup"><span data-stu-id="3c169-903">Added eventfd EFD_SEMAPHORE support [GH 452]</span></span>
-- <span data-ttu-id="3c169-904">その他の修正プログラムと機能強化</span><span class="sxs-lookup"><span data-stu-id="3c169-904">Additional fixes and improvements</span></span>
-
-### <a name="ltp-results"></a><span data-ttu-id="3c169-905">LTP の結果:</span><span class="sxs-lookup"><span data-stu-id="3c169-905">LTP Results:</span></span>
-<span data-ttu-id="3c169-906">成功したテストの数:737</span><span class="sxs-lookup"><span data-stu-id="3c169-906">Number of Passing Test: 737</span></span></br>
-<span data-ttu-id="3c169-907">非パッシング (失敗、スキップされたなど) の数:255</span><span class="sxs-lookup"><span data-stu-id="3c169-907">Number of non-Passing (failing, skipped, etc…): 255</span></span> </br>
-[<span data-ttu-id="3c169-908">LTP テストの実行ログ</span><span class="sxs-lookup"><span data-stu-id="3c169-908">LTP Test Run Logs</span></span>](https://github.com/Microsoft/CommandLine-Documentation/tree/live/LTP_Results/15031)<br/>
-
-<br/>
-
-## <a name="build-15025"></a><span data-ttu-id="3c169-909">ビルド15025</span><span class="sxs-lookup"><span data-stu-id="3c169-909">Build 15025</span></span>
-
-<span data-ttu-id="3c169-910">ビルド15025の一般的な Windows 情報については、 [windows のブログ](https://blogs.windows.com/windowsexperience/2017/02/01/announcing-windows-10-insider-preview-build-15025-pc/)を参照してください。</span><span class="sxs-lookup"><span data-stu-id="3c169-910">For general Windows information on build 15025 visit the [Windows Blog](https://blogs.windows.com/windowsexperience/2017/02/01/announcing-windows-10-insider-preview-build-15025-pc/).</span></span><br/>
+<span data-ttu-id="dea41-892">ビルド15031の一般的な Windows 情報については、 [windows のブログ](https://blogs.windows.com/windowsexperience/2017/02/08/announcing-windows-10-insider-preview-build-15031-pc/)を参照してください。</span><span class="sxs-lookup"><span data-stu-id="dea41-892">For general Windows information on build 15031 visit the [Windows Blog](https://blogs.windows.com/windowsexperience/2017/02/08/announcing-windows-10-insider-preview-build-15031-pc/).</span></span><br/>
 
 
-### <a name="fixed"></a><span data-ttu-id="3c169-911">固定</span><span class="sxs-lookup"><span data-stu-id="3c169-911">Fixed</span></span>
+### <a name="fixed"></a><span data-ttu-id="dea41-893">固定</span><span class="sxs-lookup"><span data-stu-id="dea41-893">Fixed</span></span>
 
-- <span data-ttu-id="3c169-912">Grep 2.27 を破損したバグの修正 [GH 1578]</span><span class="sxs-lookup"><span data-stu-id="3c169-912">Fix for bug that broke grep 2.27 [GH 1578]</span></span>
-- <span data-ttu-id="3c169-913">Eventfd2 syscall の EFD_SEMAPHORE フラグの実装 [GH 452]</span><span class="sxs-lookup"><span data-stu-id="3c169-913">Implemented EFD_SEMAPHORE flag for eventfd2 syscall [GH 452]</span></span>
-- <span data-ttu-id="3c169-914">実装された/proc/[pid]/net/ipv6_route [GH 1608]</span><span class="sxs-lookup"><span data-stu-id="3c169-914">Implemented /proc/[pid]/net/ipv6_route [GH 1608]</span></span>
-- <span data-ttu-id="3c169-915">Unix ストリームソケットに対するシグナル駆動型 IO のサポート [GH 393, 68]</span><span class="sxs-lookup"><span data-stu-id="3c169-915">Signal driven IO support for unix stream sockets [GH 393, 68]</span></span>
-- <span data-ttu-id="3c169-916">F_GETPIPE_SZ と F_SETPIPE_SZ のサポート [GH 1012]</span><span class="sxs-lookup"><span data-stu-id="3c169-916">Support F_GETPIPE_SZ and F_SETPIPE_SZ [GH 1012]</span></span>
-- <span data-ttu-id="3c169-917">Recvmmsg () syscall の実装 [GH 1531]</span><span class="sxs-lookup"><span data-stu-id="3c169-917">Implement recvmmsg() syscall [GH 1531]</span></span>
-- <span data-ttu-id="3c169-918">Epoll_wait () が待機していないバグを修正 [GH 1609]</span><span class="sxs-lookup"><span data-stu-id="3c169-918">Fixed bug where epoll_wait() wasn't waiting [GH 1609]</span></span>
-- <span data-ttu-id="3c169-919">/Proc/version_signature を実装する</span><span class="sxs-lookup"><span data-stu-id="3c169-919">Implement /proc/version_signature</span></span>
-- <span data-ttu-id="3c169-920">T syscall は、両方のファイル記述子が同じパイプを参照している場合にエラーを返すようになりました</span><span class="sxs-lookup"><span data-stu-id="3c169-920">Tee syscall now returns failure if both file descriptors refer to the same pipe</span></span>
-- <span data-ttu-id="3c169-921">Unix ソケット用の SO_PEERCRED の正しい動作を実装しています</span><span class="sxs-lookup"><span data-stu-id="3c169-921">Implemented correct behavior for SO_PEERCRED for Unix sockets</span></span>
-- <span data-ttu-id="3c169-922">Tkill syscall の無効なパラメーター処理を修正した</span><span class="sxs-lookup"><span data-stu-id="3c169-922">Fixed tkill syscall invalid parameter handling</span></span>
-- <span data-ttu-id="3c169-923">Drvfs の preformace を増やすための変更</span><span class="sxs-lookup"><span data-stu-id="3c169-923">Changes to increase the preformace of drvfs</span></span>
-- <span data-ttu-id="3c169-924">Ruby IO ブロックの軽微な修正</span><span class="sxs-lookup"><span data-stu-id="3c169-924">Minor fix for Ruby IO blocking</span></span>
-- <span data-ttu-id="3c169-925">Inet sockets の MSG_DONTWAIT フラグの EINVAL を返す recvmsg () を修正した [GH 1296]</span><span class="sxs-lookup"><span data-stu-id="3c169-925">Fixed recvmsg() returning EINVAL for the MSG_DONTWAIT flag for inet sockets [GH 1296]</span></span>
-- <span data-ttu-id="3c169-926">その他の修正プログラムと機能強化</span><span class="sxs-lookup"><span data-stu-id="3c169-926">Additional fixes and improvements</span></span>
+- <span data-ttu-id="dea41-894">Time (2) が散発的に不適切な動作するバグを修正しています。</span><span class="sxs-lookup"><span data-stu-id="dea41-894">Fixed a bug where time(2) would sporadically misbehave.</span></span>
+- <span data-ttu-id="dea41-895">\* SIGSYSCALL MASK がシグナルマスクを破壊する可能性がある問題を修正しました。</span><span class="sxs-lookup"><span data-stu-id="dea41-895">Fixed and issue where \*SIGPROCMASK syscalls could corrupt signal mask.</span></span>
+- <span data-ttu-id="dea41-896">WSL プロセス作成通知でコマンドラインの完全な長さを返すようになりました。</span><span class="sxs-lookup"><span data-stu-id="dea41-896">Now return full command line length in WSL process creation notification.</span></span> <span data-ttu-id="dea41-897">[GH 1632]</span><span class="sxs-lookup"><span data-stu-id="dea41-897">[GH 1632]</span></span>
+- <span data-ttu-id="dea41-898">WSL は、GDB がハングした場合に ptrace を介してスレッドの終了を報告するようになりました。</span><span class="sxs-lookup"><span data-stu-id="dea41-898">WSL now reports thread exit through ptrace for GDB hangs.</span></span> <span data-ttu-id="dea41-899">[GH 1196]</span><span class="sxs-lookup"><span data-stu-id="dea41-899">[GH 1196]</span></span>
+- <span data-ttu-id="dea41-900">Tmux IO が大量に発生した後に ptys がハングするバグを修正します。</span><span class="sxs-lookup"><span data-stu-id="dea41-900">Fixed bug where ptys would hang after heavy tmux IO.</span></span> <span data-ttu-id="dea41-901">[GH 1358]</span><span class="sxs-lookup"><span data-stu-id="dea41-901">[GH 1358]</span></span>
+- <span data-ttu-id="dea41-902">多くのシステムコールでタイムアウトの検証を修正 (futex、semtimedop、ppoll、sigtimedwait、itimer、timer_create)</span><span class="sxs-lookup"><span data-stu-id="dea41-902">Fixed timeout validation in many system calls (futex, semtimedop, ppoll, sigtimedwait, itimer, timer_create)</span></span>
+- <span data-ttu-id="dea41-903">追加された eventfd EFD_SEMAPHORE サポート [GH 452]</span><span class="sxs-lookup"><span data-stu-id="dea41-903">Added eventfd EFD_SEMAPHORE support [GH 452]</span></span>
+- <span data-ttu-id="dea41-904">その他の修正プログラムと機能強化</span><span class="sxs-lookup"><span data-stu-id="dea41-904">Additional fixes and improvements</span></span>
 
-### <a name="ltp-results"></a><span data-ttu-id="3c169-927">LTP の結果:</span><span class="sxs-lookup"><span data-stu-id="3c169-927">LTP Results:</span></span>
-<span data-ttu-id="3c169-928">成功したテストの数:732</span><span class="sxs-lookup"><span data-stu-id="3c169-928">Number of Passing Test: 732</span></span></br>
-<span data-ttu-id="3c169-929">非パッシング (失敗、スキップされたなど) の数:255</span><span class="sxs-lookup"><span data-stu-id="3c169-929">Number of non-Passing (failing, skipped, etc…): 255</span></span> </br>
-[<span data-ttu-id="3c169-930">LTP テストの実行ログ</span><span class="sxs-lookup"><span data-stu-id="3c169-930">LTP Test Run Logs</span></span>](https://github.com/Microsoft/CommandLine-Documentation/tree/live/LTP_Results/15025)<br/>
+### <a name="ltp-results"></a><span data-ttu-id="dea41-905">LTP の結果:</span><span class="sxs-lookup"><span data-stu-id="dea41-905">LTP Results:</span></span>
+<span data-ttu-id="dea41-906">成功したテストの数:737</span><span class="sxs-lookup"><span data-stu-id="dea41-906">Number of Passing Test: 737</span></span></br>
+<span data-ttu-id="dea41-907">非パッシング (失敗、スキップされたなど) の数:255</span><span class="sxs-lookup"><span data-stu-id="dea41-907">Number of non-Passing (failing, skipped, etc…): 255</span></span> </br>
+[<span data-ttu-id="dea41-908">LTP テストの実行ログ</span><span class="sxs-lookup"><span data-stu-id="dea41-908">LTP Test Run Logs</span></span>](https://github.com/Microsoft/CommandLine-Documentation/tree/live/LTP_Results/15031)<br/>
 
 <br/>
 
-## <a name="build-15019"></a><span data-ttu-id="3c169-931">ビルド15019</span><span class="sxs-lookup"><span data-stu-id="3c169-931">Build 15019</span></span>
+## <a name="build-15025"></a><span data-ttu-id="dea41-909">ビルド15025</span><span class="sxs-lookup"><span data-stu-id="dea41-909">Build 15025</span></span>
 
-<span data-ttu-id="3c169-932">ビルド15019の一般的な Windows 情報については、 [windows のブログ](https://blogs.windows.com/windowsexperience/2017/01/27/announcing-windows-10-insider-preview-build-15019-pc/)を参照してください。</span><span class="sxs-lookup"><span data-stu-id="3c169-932">For general Windows information on build 15019 visit the [Windows Blog](https://blogs.windows.com/windowsexperience/2017/01/27/announcing-windows-10-insider-preview-build-15019-pc/).</span></span><br/>
-
-
-### <a name="fixed"></a><span data-ttu-id="3c169-933">固定</span><span class="sxs-lookup"><span data-stu-id="3c169-933">Fixed</span></span>
-
-- <span data-ttu-id="3c169-934">Htop (GH 823、945、971) などのツールに対して procfs の CPU 使用率が誤って報告されたバグを修正しました</span><span class="sxs-lookup"><span data-stu-id="3c169-934">Fixed bug that incorrectly reported CPU usage in procfs for tools like htop (GH 823, 945, 971)</span></span>
-- <span data-ttu-id="3c169-935">既存のファイルに対して O_TRUNC を使用して open () を呼び出すと、IN_OPEN の前に IN_MODIFY が生成されるようになりました。</span><span class="sxs-lookup"><span data-stu-id="3c169-935">When calling open() with O_TRUNC on an existing file inotify now generates IN_MODIFY before IN_OPEN</span></span>
-- <span data-ttu-id="3c169-936">Unix socket getsockopt SO_ERROR で postgress [GH 61, 1354] を有効にするための修正</span><span class="sxs-lookup"><span data-stu-id="3c169-936">Fixes to unix socket getsockopt SO_ERROR to enable postgress [GH 61, 1354]</span></span>
-- <span data-ttu-id="3c169-937">/Proc/sys/net/core/somaxconn を実装する</span><span class="sxs-lookup"><span data-stu-id="3c169-937">Implement /proc/sys/net/core/somaxconn for the GO language</span></span>
-- <span data-ttu-id="3c169-938">Apt-パッケージ更新のバックグラウンドタスクをビューから非表示にするようになりました</span><span class="sxs-lookup"><span data-stu-id="3c169-938">Apt-get package update background task now runs hidden from view</span></span>
-- <span data-ttu-id="3c169-939">Ipv6 localhost のスコープをクリアします (Spring Framework (Java) エラー)。</span><span class="sxs-lookup"><span data-stu-id="3c169-939">Clear scope for ipv6 localhost (Spring-Framework(Java) failure).</span></span>
-- <span data-ttu-id="3c169-940">その他の修正プログラムと機能強化</span><span class="sxs-lookup"><span data-stu-id="3c169-940">Additional fixes and improvements</span></span>
-
-### <a name="ltp-results"></a><span data-ttu-id="3c169-941">LTP の結果:</span><span class="sxs-lookup"><span data-stu-id="3c169-941">LTP Results:</span></span>
-<span data-ttu-id="3c169-942">成功したテストの数:714</span><span class="sxs-lookup"><span data-stu-id="3c169-942">Number of Passing Test: 714</span></span> </br>
-<span data-ttu-id="3c169-943">非パッシング (失敗、スキップされたなど) の数:249</span><span class="sxs-lookup"><span data-stu-id="3c169-943">Number of non-Passing (failing, skipped, etc…): 249</span></span> </br>
-[<span data-ttu-id="3c169-944">LTP テストの実行ログ</span><span class="sxs-lookup"><span data-stu-id="3c169-944">LTP Test Run Logs</span></span>](https://github.com/Microsoft/CommandLine-Documentation/tree/live/LTP_Results/15019)<br/>
-
-<br/>
-
-## <a name="build-15014"></a><span data-ttu-id="3c169-945">ビルド15014</span><span class="sxs-lookup"><span data-stu-id="3c169-945">Build 15014</span></span>
-
-<span data-ttu-id="3c169-946">ビルド15014の一般的な Windows 情報については、 [windows のブログ](https://blogs.windows.com/windowsexperience/2017/01/19/announcing-windows-10-insider-preview-build-15014-for-pc-and-mobile-hello-windows-insiders-today-we-are-excited-to-be-releasing-windows-10-insider-preview-build-15014-for-pc-and-mobile)を参照してください。</span><span class="sxs-lookup"><span data-stu-id="3c169-946">For general Windows information on build 15014 visit the [Windows Blog](https://blogs.windows.com/windowsexperience/2017/01/19/announcing-windows-10-insider-preview-build-15014-for-pc-and-mobile-hello-windows-insiders-today-we-are-excited-to-be-releasing-windows-10-insider-preview-build-15014-for-pc-and-mobile).</span></span><br/>
+<span data-ttu-id="dea41-910">ビルド15025の一般的な Windows 情報については、 [windows のブログ](https://blogs.windows.com/windowsexperience/2017/02/01/announcing-windows-10-insider-preview-build-15025-pc/)を参照してください。</span><span class="sxs-lookup"><span data-stu-id="dea41-910">For general Windows information on build 15025 visit the [Windows Blog](https://blogs.windows.com/windowsexperience/2017/02/01/announcing-windows-10-insider-preview-build-15025-pc/).</span></span><br/>
 
 
-### <a name="fixed"></a><span data-ttu-id="3c169-947">固定</span><span class="sxs-lookup"><span data-stu-id="3c169-947">Fixed</span></span>
+### <a name="fixed"></a><span data-ttu-id="dea41-911">固定</span><span class="sxs-lookup"><span data-stu-id="dea41-911">Fixed</span></span>
 
-- <span data-ttu-id="3c169-948">Ctrl + C は意図したとおりに動作するようになりました</span><span class="sxs-lookup"><span data-stu-id="3c169-948">Ctrl+C now works as intended</span></span>
-- <span data-ttu-id="3c169-949">htop と ps auxw で、正しいリソース使用率 (GH #516) が表示されるようになりました</span><span class="sxs-lookup"><span data-stu-id="3c169-949">htop and ps auxw now show correct resource utilization (GH #516)</span></span>
-- <span data-ttu-id="3c169-950">NT 例外からシグナルへの基本的な変換です。</span><span class="sxs-lookup"><span data-stu-id="3c169-950">Basic translation of NT exceptions to signals.</span></span> <span data-ttu-id="3c169-951">(GH #513)</span><span class="sxs-lookup"><span data-stu-id="3c169-951">(GH #513)</span></span>
-- <span data-ttu-id="3c169-952">fallocate は、EINVAL (GH #1571) ではなく領域が不足しているときに、ENOSPC で失敗するようになりました。</span><span class="sxs-lookup"><span data-stu-id="3c169-952">fallocate now fails with ENOSPC  when running out of space instead of EINVAL (GH #1571)</span></span>
-- <span data-ttu-id="3c169-953">追加された/proc/sys/kernel/sem.</span><span class="sxs-lookup"><span data-stu-id="3c169-953">Added /proc/sys/kernel/sem.</span></span>
-- <span data-ttu-id="3c169-954">Semop および semtimedop システム呼び出しを実装します。</span><span class="sxs-lookup"><span data-stu-id="3c169-954">Implemented semop and semtimedop system calls</span></span>
-- <span data-ttu-id="3c169-955">IP_RECVTOS & IPV6_RECVTCLASS socket オプションで nslookup エラーを修正した (GH 69)</span><span class="sxs-lookup"><span data-stu-id="3c169-955">Fixed nslookup errors with IP_RECVTOS & IPV6_RECVTCLASS socket option (GH 69)</span></span>
-- <span data-ttu-id="3c169-956">ソケットオプションの IP_RECVTTL と IPV6_RECVHOPLIMIT のサポート</span><span class="sxs-lookup"><span data-stu-id="3c169-956">Support for socket options IP_RECVTTL and IPV6_RECVHOPLIMIT</span></span>
-- <span data-ttu-id="3c169-957">その他の修正プログラムと機能強化</span><span class="sxs-lookup"><span data-stu-id="3c169-957">Additional fixes and improvements</span></span>
+- <span data-ttu-id="dea41-912">Grep 2.27 を破損したバグの修正 [GH 1578]</span><span class="sxs-lookup"><span data-stu-id="dea41-912">Fix for bug that broke grep 2.27 [GH 1578]</span></span>
+- <span data-ttu-id="dea41-913">Eventfd2 syscall の EFD_SEMAPHORE フラグの実装 [GH 452]</span><span class="sxs-lookup"><span data-stu-id="dea41-913">Implemented EFD_SEMAPHORE flag for eventfd2 syscall [GH 452]</span></span>
+- <span data-ttu-id="dea41-914">実装された/proc/[pid]/net/ipv6_route [GH 1608]</span><span class="sxs-lookup"><span data-stu-id="dea41-914">Implemented /proc/[pid]/net/ipv6_route [GH 1608]</span></span>
+- <span data-ttu-id="dea41-915">Unix ストリームソケットに対するシグナル駆動型 IO のサポート [GH 393, 68]</span><span class="sxs-lookup"><span data-stu-id="dea41-915">Signal driven IO support for unix stream sockets [GH 393, 68]</span></span>
+- <span data-ttu-id="dea41-916">F_GETPIPE_SZ と F_SETPIPE_SZ のサポート [GH 1012]</span><span class="sxs-lookup"><span data-stu-id="dea41-916">Support F_GETPIPE_SZ and F_SETPIPE_SZ [GH 1012]</span></span>
+- <span data-ttu-id="dea41-917">Recvmmsg () syscall の実装 [GH 1531]</span><span class="sxs-lookup"><span data-stu-id="dea41-917">Implement recvmmsg() syscall [GH 1531]</span></span>
+- <span data-ttu-id="dea41-918">Epoll_wait () が待機していないバグを修正 [GH 1609]</span><span class="sxs-lookup"><span data-stu-id="dea41-918">Fixed bug where epoll_wait() wasn't waiting [GH 1609]</span></span>
+- <span data-ttu-id="dea41-919">/Proc/version_signature を実装する</span><span class="sxs-lookup"><span data-stu-id="dea41-919">Implement /proc/version_signature</span></span>
+- <span data-ttu-id="dea41-920">T syscall は、両方のファイル記述子が同じパイプを参照している場合にエラーを返すようになりました</span><span class="sxs-lookup"><span data-stu-id="dea41-920">Tee syscall now returns failure if both file descriptors refer to the same pipe</span></span>
+- <span data-ttu-id="dea41-921">Unix ソケット用の SO_PEERCRED の正しい動作を実装しています</span><span class="sxs-lookup"><span data-stu-id="dea41-921">Implemented correct behavior for SO_PEERCRED for Unix sockets</span></span>
+- <span data-ttu-id="dea41-922">Tkill syscall の無効なパラメーター処理を修正した</span><span class="sxs-lookup"><span data-stu-id="dea41-922">Fixed tkill syscall invalid parameter handling</span></span>
+- <span data-ttu-id="dea41-923">Drvfs の preformace を増やすための変更</span><span class="sxs-lookup"><span data-stu-id="dea41-923">Changes to increase the preformace of drvfs</span></span>
+- <span data-ttu-id="dea41-924">Ruby IO ブロックの軽微な修正</span><span class="sxs-lookup"><span data-stu-id="dea41-924">Minor fix for Ruby IO blocking</span></span>
+- <span data-ttu-id="dea41-925">Inet sockets の MSG_DONTWAIT フラグの EINVAL を返す recvmsg () を修正した [GH 1296]</span><span class="sxs-lookup"><span data-stu-id="dea41-925">Fixed recvmsg() returning EINVAL for the MSG_DONTWAIT flag for inet sockets [GH 1296]</span></span>
+- <span data-ttu-id="dea41-926">その他の修正プログラムと機能強化</span><span class="sxs-lookup"><span data-stu-id="dea41-926">Additional fixes and improvements</span></span>
 
-### <a name="ltp-results"></a><span data-ttu-id="3c169-958">LTP の結果:</span><span class="sxs-lookup"><span data-stu-id="3c169-958">LTP Results:</span></span>
-<span data-ttu-id="3c169-959">成功したテストの数:709</span><span class="sxs-lookup"><span data-stu-id="3c169-959">Number of Passing Test: 709</span></span> </br>
-<span data-ttu-id="3c169-960">非パッシング (失敗、スキップされたなど) の数:255</span><span class="sxs-lookup"><span data-stu-id="3c169-960">Number of non-Passing (failing, skipped, etc…): 255</span></span> </br>
-[<span data-ttu-id="3c169-961">LTP テストの実行ログ</span><span class="sxs-lookup"><span data-stu-id="3c169-961">LTP Test Run Logs</span></span>](https://github.com/Microsoft/CommandLine-Documentation/tree/live/LTP_Results/15014)<br/>
-
-### <a name="syscall-summary"></a><span data-ttu-id="3c169-962">Syscall の概要</span><span class="sxs-lookup"><span data-stu-id="3c169-962">Syscall Summary</span></span>
-<span data-ttu-id="3c169-963">合計 Syscall:384</span><span class="sxs-lookup"><span data-stu-id="3c169-963">Total Syscalls: 384</span></span> </br>
-<span data-ttu-id="3c169-964">実装された合計:235</span><span class="sxs-lookup"><span data-stu-id="3c169-964">Total Implemented: 235</span></span> </br>
-<span data-ttu-id="3c169-965">スタブの合計数:22</span><span class="sxs-lookup"><span data-stu-id="3c169-965">Total Stubbed: 22</span></span> </br>
-<span data-ttu-id="3c169-966">未実装の合計数:127</span><span class="sxs-lookup"><span data-stu-id="3c169-966">Total Unimplemented: 127</span></span> </br>
-[<span data-ttu-id="3c169-967">詳細な内訳</span><span class="sxs-lookup"><span data-stu-id="3c169-967">Detailed Breakdown</span></span>](https://github.com/Microsoft/CommandLine-Documentation/tree/live/LTP_Results/15014/Syscalls.txt)<br/>
+### <a name="ltp-results"></a><span data-ttu-id="dea41-927">LTP の結果:</span><span class="sxs-lookup"><span data-stu-id="dea41-927">LTP Results:</span></span>
+<span data-ttu-id="dea41-928">成功したテストの数:732</span><span class="sxs-lookup"><span data-stu-id="dea41-928">Number of Passing Test: 732</span></span></br>
+<span data-ttu-id="dea41-929">非パッシング (失敗、スキップされたなど) の数:255</span><span class="sxs-lookup"><span data-stu-id="dea41-929">Number of non-Passing (failing, skipped, etc…): 255</span></span> </br>
+[<span data-ttu-id="dea41-930">LTP テストの実行ログ</span><span class="sxs-lookup"><span data-stu-id="dea41-930">LTP Test Run Logs</span></span>](https://github.com/Microsoft/CommandLine-Documentation/tree/live/LTP_Results/15025)<br/>
 
 <br/>
 
-## <a name="build-15007"></a><span data-ttu-id="3c169-968">ビルド15007</span><span class="sxs-lookup"><span data-stu-id="3c169-968">Build 15007</span></span>
+## <a name="build-15019"></a><span data-ttu-id="dea41-931">ビルド15019</span><span class="sxs-lookup"><span data-stu-id="dea41-931">Build 15019</span></span>
 
-<span data-ttu-id="3c169-969">ビルド15007の一般的な Windows 情報については、 [windows のブログ]( https://blogs.windows.com/windowsexperience/2017/01/12/announcing-windows-10-insider-preview-build-15007-pc-mobile)を参照してください。</span><span class="sxs-lookup"><span data-stu-id="3c169-969">For general Windows information on build 15007 visit the [Windows Blog]( https://blogs.windows.com/windowsexperience/2017/01/12/announcing-windows-10-insider-preview-build-15007-pc-mobile).</span></span><br/>
+<span data-ttu-id="dea41-932">ビルド15019の一般的な Windows 情報については、 [windows のブログ](https://blogs.windows.com/windowsexperience/2017/01/27/announcing-windows-10-insider-preview-build-15019-pc/)を参照してください。</span><span class="sxs-lookup"><span data-stu-id="dea41-932">For general Windows information on build 15019 visit the [Windows Blog](https://blogs.windows.com/windowsexperience/2017/01/27/announcing-windows-10-insider-preview-build-15019-pc/).</span></span><br/>
 
 
-### <a name="known-issue"></a><span data-ttu-id="3c169-970">既知の問題</span><span class="sxs-lookup"><span data-stu-id="3c169-970">Known Issue</span></span>
+### <a name="fixed"></a><span data-ttu-id="dea41-933">固定</span><span class="sxs-lookup"><span data-stu-id="dea41-933">Fixed</span></span>
 
-- <span data-ttu-id="3c169-971">コンソールが一部の Ctrl + <key>入力を認識しないという既知のバグがあります。</span><span class="sxs-lookup"><span data-stu-id="3c169-971">There is a known bug where the console does not recognize some Ctrl + <key> input.</span></span>  <span data-ttu-id="3c169-972">これには、通常の "c" キーの押下として機能する ctrl + c コマンドが含まれます。</span><span class="sxs-lookup"><span data-stu-id="3c169-972">This includes the ctrl-c command which will act as a normal ‘c’ keypress.</span></span>
+- <span data-ttu-id="dea41-934">Htop (GH 823、945、971) などのツールに対して procfs の CPU 使用率が誤って報告されたバグを修正しました</span><span class="sxs-lookup"><span data-stu-id="dea41-934">Fixed bug that incorrectly reported CPU usage in procfs for tools like htop (GH 823, 945, 971)</span></span>
+- <span data-ttu-id="dea41-935">既存のファイルに対して O_TRUNC を使用して open () を呼び出すと、IN_OPEN の前に IN_MODIFY が生成されるようになりました。</span><span class="sxs-lookup"><span data-stu-id="dea41-935">When calling open() with O_TRUNC on an existing file inotify now generates IN_MODIFY before IN_OPEN</span></span>
+- <span data-ttu-id="dea41-936">Unix socket getsockopt SO_ERROR で postgress [GH 61, 1354] を有効にするための修正</span><span class="sxs-lookup"><span data-stu-id="dea41-936">Fixes to unix socket getsockopt SO_ERROR to enable postgress [GH 61, 1354]</span></span>
+- <span data-ttu-id="dea41-937">/Proc/sys/net/core/somaxconn を実装する</span><span class="sxs-lookup"><span data-stu-id="dea41-937">Implement /proc/sys/net/core/somaxconn for the GO language</span></span>
+- <span data-ttu-id="dea41-938">Apt-パッケージ更新のバックグラウンドタスクをビューから非表示にするようになりました</span><span class="sxs-lookup"><span data-stu-id="dea41-938">Apt-get package update background task now runs hidden from view</span></span>
+- <span data-ttu-id="dea41-939">Ipv6 localhost のスコープをクリアします (Spring Framework (Java) エラー)。</span><span class="sxs-lookup"><span data-stu-id="dea41-939">Clear scope for ipv6 localhost (Spring-Framework(Java) failure).</span></span>
+- <span data-ttu-id="dea41-940">その他の修正プログラムと機能強化</span><span class="sxs-lookup"><span data-stu-id="dea41-940">Additional fixes and improvements</span></span>
 
-  - <span data-ttu-id="3c169-973">回避策:代替キーを Ctrl + C にマップします。</span><span class="sxs-lookup"><span data-stu-id="3c169-973">Workaround: Map an alternate key to Ctrl+C.</span></span> <span data-ttu-id="3c169-974">たとえば、ctrl + K を Ctrl + C キーにマップするに`stty intr \^k`は、次のようにします。</span><span class="sxs-lookup"><span data-stu-id="3c169-974">For example, to map Ctrl+K to Ctrl+C do: `stty intr \^k`.</span></span>  <span data-ttu-id="3c169-975">このマッピングはターミナル単位で行われ、bash が起動されるたび*に実行さ*れる必要があります。</span><span class="sxs-lookup"><span data-stu-id="3c169-975">This mapping is per terminal and will have to be done *every* time bash is launched.</span></span> <span data-ttu-id="3c169-976">ユーザーは、オプションを調べて、`.bashrc`</span><span class="sxs-lookup"><span data-stu-id="3c169-976">Users can explore the option to include this in their `.bashrc`</span></span>
-
-### <a name="fixed"></a><span data-ttu-id="3c169-977">固定</span><span class="sxs-lookup"><span data-stu-id="3c169-977">Fixed</span></span>
-
-- <span data-ttu-id="3c169-978">WSL を実行すると CPU コアの 100% が消費される問題を修正しました</span><span class="sxs-lookup"><span data-stu-id="3c169-978">Corrected the issue where running WSL would consume 100% of a CPU core</span></span>
-- <span data-ttu-id="3c169-979">ソケットオプション IP_PKTINFO、IPV6_RECVPKTINFO がサポートされるようになりました。</span><span class="sxs-lookup"><span data-stu-id="3c169-979">Socket option IP_PKTINFO, IPV6_RECVPKTINFO now supported.</span></span> <span data-ttu-id="3c169-980">(GH #851、987)</span><span class="sxs-lookup"><span data-stu-id="3c169-980">(GH #851, 987)</span></span>
-- <span data-ttu-id="3c169-981">Lxcore でネットワークインターフェイスの物理アドレスを16バイトに切り捨てる (GH #1452、1414、1343、468、308)</span><span class="sxs-lookup"><span data-stu-id="3c169-981">Truncate network interface physical address to 16 bytes in lxcore (GH #1452, 1414, 1343, 468, 308)</span></span>
-- <span data-ttu-id="3c169-982">その他の修正プログラムと機能強化</span><span class="sxs-lookup"><span data-stu-id="3c169-982">Additional fixes and improvements</span></span>
-
-### <a name="ltp-results"></a><span data-ttu-id="3c169-983">LTP の結果:</span><span class="sxs-lookup"><span data-stu-id="3c169-983">LTP Results:</span></span>
-<span data-ttu-id="3c169-984">成功したテストの数:709</span><span class="sxs-lookup"><span data-stu-id="3c169-984">Number of Passing Test: 709</span></span> </br>
-<span data-ttu-id="3c169-985">非パッシング (失敗、スキップされたなど) の数:255</span><span class="sxs-lookup"><span data-stu-id="3c169-985">Number of non-Passing (failing, skipped, etc…): 255</span></span> </br>
-[<span data-ttu-id="3c169-986">LTP テストの実行ログ</span><span class="sxs-lookup"><span data-stu-id="3c169-986">LTP Test Run Logs</span></span>](https://github.com/Microsoft/CommandLine-Documentation/tree/live/LTP_Results/15007)<br/>
+### <a name="ltp-results"></a><span data-ttu-id="dea41-941">LTP の結果:</span><span class="sxs-lookup"><span data-stu-id="dea41-941">LTP Results:</span></span>
+<span data-ttu-id="dea41-942">成功したテストの数:714</span><span class="sxs-lookup"><span data-stu-id="dea41-942">Number of Passing Test: 714</span></span> </br>
+<span data-ttu-id="dea41-943">非パッシング (失敗、スキップされたなど) の数:249</span><span class="sxs-lookup"><span data-stu-id="dea41-943">Number of non-Passing (failing, skipped, etc…): 249</span></span> </br>
+[<span data-ttu-id="dea41-944">LTP テストの実行ログ</span><span class="sxs-lookup"><span data-stu-id="dea41-944">LTP Test Run Logs</span></span>](https://github.com/Microsoft/CommandLine-Documentation/tree/live/LTP_Results/15019)<br/>
 
 <br/>
 
-## <a name="build-15002"></a><span data-ttu-id="3c169-987">ビルド15002</span><span class="sxs-lookup"><span data-stu-id="3c169-987">Build 15002</span></span>
+## <a name="build-15014"></a><span data-ttu-id="dea41-945">ビルド15014</span><span class="sxs-lookup"><span data-stu-id="dea41-945">Build 15014</span></span>
 
-<span data-ttu-id="3c169-988">ビルド15002の一般的な Windows 情報については、 [windows のブログ](https://blogs.windows.com/windowsexperience/2017/01/09/announcing-windows-10-insider-preview-build-15002-pc/)を参照してください。</span><span class="sxs-lookup"><span data-stu-id="3c169-988">For general Windows information on build 15002 visit the [Windows Blog](https://blogs.windows.com/windowsexperience/2017/01/09/announcing-windows-10-insider-preview-build-15002-pc/).</span></span><br/>
+<span data-ttu-id="dea41-946">ビルド15014の一般的な Windows 情報については、 [windows のブログ](https://blogs.windows.com/windowsexperience/2017/01/19/announcing-windows-10-insider-preview-build-15014-for-pc-and-mobile-hello-windows-insiders-today-we-are-excited-to-be-releasing-windows-10-insider-preview-build-15014-for-pc-and-mobile)を参照してください。</span><span class="sxs-lookup"><span data-stu-id="dea41-946">For general Windows information on build 15014 visit the [Windows Blog](https://blogs.windows.com/windowsexperience/2017/01/19/announcing-windows-10-insider-preview-build-15014-for-pc-and-mobile-hello-windows-insiders-today-we-are-excited-to-be-releasing-windows-10-insider-preview-build-15014-for-pc-and-mobile).</span></span><br/>
 
 
-### <a name="known-issue"></a><span data-ttu-id="3c169-989">既知の問題</span><span class="sxs-lookup"><span data-stu-id="3c169-989">Known Issue</span></span>
+### <a name="fixed"></a><span data-ttu-id="dea41-947">固定</span><span class="sxs-lookup"><span data-stu-id="dea41-947">Fixed</span></span>
 
-<span data-ttu-id="3c169-990">2つの既知の問題:</span><span class="sxs-lookup"><span data-stu-id="3c169-990">Two known issues:</span></span>
-- <span data-ttu-id="3c169-991">コンソールが一部の Ctrl + <key>入力を認識しないという既知のバグがあります。</span><span class="sxs-lookup"><span data-stu-id="3c169-991">There is a known bug where the console does not recognize some Ctrl + <key> input.</span></span>  <span data-ttu-id="3c169-992">これには、通常の "c" キーの押下として機能する ctrl + c コマンドが含まれます。</span><span class="sxs-lookup"><span data-stu-id="3c169-992">This includes the ctrl-c command which will act as a normal ‘c’ keypress.</span></span>
+- <span data-ttu-id="dea41-948">Ctrl + C は意図したとおりに動作するようになりました</span><span class="sxs-lookup"><span data-stu-id="dea41-948">Ctrl+C now works as intended</span></span>
+- <span data-ttu-id="dea41-949">htop と ps auxw で、正しいリソース使用率 (GH #516) が表示されるようになりました</span><span class="sxs-lookup"><span data-stu-id="dea41-949">htop and ps auxw now show correct resource utilization (GH #516)</span></span>
+- <span data-ttu-id="dea41-950">NT 例外からシグナルへの基本的な変換です。</span><span class="sxs-lookup"><span data-stu-id="dea41-950">Basic translation of NT exceptions to signals.</span></span> <span data-ttu-id="dea41-951">(GH #513)</span><span class="sxs-lookup"><span data-stu-id="dea41-951">(GH #513)</span></span>
+- <span data-ttu-id="dea41-952">fallocate は、EINVAL (GH #1571) ではなく領域が不足しているときに、ENOSPC で失敗するようになりました。</span><span class="sxs-lookup"><span data-stu-id="dea41-952">fallocate now fails with ENOSPC  when running out of space instead of EINVAL (GH #1571)</span></span>
+- <span data-ttu-id="dea41-953">追加された/proc/sys/kernel/sem.</span><span class="sxs-lookup"><span data-stu-id="dea41-953">Added /proc/sys/kernel/sem.</span></span>
+- <span data-ttu-id="dea41-954">Semop および semtimedop システム呼び出しを実装します。</span><span class="sxs-lookup"><span data-stu-id="dea41-954">Implemented semop and semtimedop system calls</span></span>
+- <span data-ttu-id="dea41-955">IP_RECVTOS & IPV6_RECVTCLASS socket オプションで nslookup エラーを修正した (GH 69)</span><span class="sxs-lookup"><span data-stu-id="dea41-955">Fixed nslookup errors with IP_RECVTOS & IPV6_RECVTCLASS socket option (GH 69)</span></span>
+- <span data-ttu-id="dea41-956">ソケットオプションの IP_RECVTTL と IPV6_RECVHOPLIMIT のサポート</span><span class="sxs-lookup"><span data-stu-id="dea41-956">Support for socket options IP_RECVTTL and IPV6_RECVHOPLIMIT</span></span>
+- <span data-ttu-id="dea41-957">その他の修正プログラムと機能強化</span><span class="sxs-lookup"><span data-stu-id="dea41-957">Additional fixes and improvements</span></span>
 
-  - <span data-ttu-id="3c169-993">回避策:代替キーを Ctrl + C にマップします。</span><span class="sxs-lookup"><span data-stu-id="3c169-993">Workaround: Map an alternate key to Ctrl+C.</span></span> <span data-ttu-id="3c169-994">たとえば、ctrl + K を Ctrl + C キーにマップするに`stty intr \^k`は、次のようにします。</span><span class="sxs-lookup"><span data-stu-id="3c169-994">For example, to map Ctrl+K to Ctrl+C do: `stty intr \^k`.</span></span>  <span data-ttu-id="3c169-995">このマッピングはターミナル単位で行われ、bash が起動されるたび*に実行さ*れる必要があります。</span><span class="sxs-lookup"><span data-stu-id="3c169-995">This mapping is per terminal and will have to be done *every* time bash is launched.</span></span> <span data-ttu-id="3c169-996">ユーザーは、オプションを調べて、`.bashrc`</span><span class="sxs-lookup"><span data-stu-id="3c169-996">Users can explore the option to include this in their `.bashrc`</span></span>
+### <a name="ltp-results"></a><span data-ttu-id="dea41-958">LTP の結果:</span><span class="sxs-lookup"><span data-stu-id="dea41-958">LTP Results:</span></span>
+<span data-ttu-id="dea41-959">成功したテストの数:709</span><span class="sxs-lookup"><span data-stu-id="dea41-959">Number of Passing Test: 709</span></span> </br>
+<span data-ttu-id="dea41-960">非パッシング (失敗、スキップされたなど) の数:255</span><span class="sxs-lookup"><span data-stu-id="dea41-960">Number of non-Passing (failing, skipped, etc…): 255</span></span> </br>
+[<span data-ttu-id="dea41-961">LTP テストの実行ログ</span><span class="sxs-lookup"><span data-stu-id="dea41-961">LTP Test Run Logs</span></span>](https://github.com/Microsoft/CommandLine-Documentation/tree/live/LTP_Results/15014)<br/>
 
-- <span data-ttu-id="3c169-997">WSL が実行されている間、システムスレッドは CPU コアの 100% を消費します。</span><span class="sxs-lookup"><span data-stu-id="3c169-997">While WSL is running a system thread will consume 100% of a CPU core.</span></span>  <span data-ttu-id="3c169-998">根本原因は、内部的に解決されています。</span><span class="sxs-lookup"><span data-stu-id="3c169-998">The root cause has been addressed and fixed internally.</span></span>
-
-### <a name="fixed"></a><span data-ttu-id="3c169-999">固定</span><span class="sxs-lookup"><span data-stu-id="3c169-999">Fixed</span></span>
-
-- <span data-ttu-id="3c169-1000">すべての bash セッションは、同じアクセス許可レベルで作成する必要があります。</span><span class="sxs-lookup"><span data-stu-id="3c169-1000">All bash sessions must now be created at the same permission level.</span></span>  <span data-ttu-id="3c169-1001">別のレベルでセッションを開始しようとすると、ブロックされます。</span><span class="sxs-lookup"><span data-stu-id="3c169-1001">Attempting to start a session at a different level will be blocked.</span></span>  <span data-ttu-id="3c169-1002">つまり、管理者コンソールと管理者以外のコンソールを同時に実行することはできません。</span><span class="sxs-lookup"><span data-stu-id="3c169-1002">This means admin and non-admin consoles cannot run at the same time.</span></span> <span data-ttu-id="3c169-1003">(GH #626)</span><span class="sxs-lookup"><span data-stu-id="3c169-1003">(GH #626)</span></span>
-<br/>
-- <span data-ttu-id="3c169-1004">次の NETLINK_ROUTE メッセージを実装した (Windows 管理者が必要)</span><span class="sxs-lookup"><span data-stu-id="3c169-1004">Implemented the following NETLINK_ROUTE messages (requires Windows admin)</span></span>
-     - <span data-ttu-id="3c169-1005">RTM_NEWADDR (サポート`ip addr add`)</span><span class="sxs-lookup"><span data-stu-id="3c169-1005">RTM_NEWADDR (supports `ip addr add`)</span></span>
-     - <span data-ttu-id="3c169-1006">RTM_NEWROUTE (サポート`ip route add`)</span><span class="sxs-lookup"><span data-stu-id="3c169-1006">RTM_NEWROUTE (supports `ip route add`)</span></span>
-     - <span data-ttu-id="3c169-1007">RTM_DELADDR (サポート`ip addr del`)</span><span class="sxs-lookup"><span data-stu-id="3c169-1007">RTM_DELADDR (supports `ip addr del`)</span></span>
-     - <span data-ttu-id="3c169-1008">RTM_DELROUTE (サポート`ip route del`)</span><span class="sxs-lookup"><span data-stu-id="3c169-1008">RTM_DELROUTE (supports `ip route del`)</span></span>
-- <span data-ttu-id="3c169-1009">更新するパッケージのスケジュールされたタスクは、従量制課金接続では実行されなくなります (GH #1371)</span><span class="sxs-lookup"><span data-stu-id="3c169-1009">Scheduled task checking for packages to update will no longer run on a metered connection (GH #1371)</span></span>
-- <span data-ttu-id="3c169-1010">パイプがスタックした場合のエラーを修正します。 bash-c "ls-alR/" |bash-c "cat" (GH #1214)</span><span class="sxs-lookup"><span data-stu-id="3c169-1010">Fixed error where piping gets stuck i.e. bash -c "ls -alR /" | bash -c "cat" (GH #1214)</span></span>
-- <span data-ttu-id="3c169-1011">実装された TCP_KEEPCNT socket オプション (GH #843)</span><span class="sxs-lookup"><span data-stu-id="3c169-1011">Implemented TCP_KEEPCNT socket option (GH #843)</span></span>
-- <span data-ttu-id="3c169-1012">IP_MTU_DISCOVER INET socket オプション (GH #720、717、170、69) を実装しています</span><span class="sxs-lookup"><span data-stu-id="3c169-1012">Implemented IP_MTU_DISCOVER INET socket option (GH #720, 717, 170, 69)</span></span>
-- <span data-ttu-id="3c169-1013">Nt パス参照を使用して init から NT バイナリを実行する従来の機能を削除しました。</span><span class="sxs-lookup"><span data-stu-id="3c169-1013">Removed legacy functionality to run NT binaries from init with NT path lookup.</span></span> <span data-ttu-id="3c169-1014">(GH #1325)</span><span class="sxs-lookup"><span data-stu-id="3c169-1014">(GH #1325)</span></span>
-- <span data-ttu-id="3c169-1015">グループまたはその他の読み取りアクセスを許可するように更新モードを修正する (0644) (GH #1321)</span><span class="sxs-lookup"><span data-stu-id="3c169-1015">Fix mode of /dev/kmsg to allow group / other read access (0644) (GH #1321)</span></span>
-- <span data-ttu-id="3c169-1016">実装された/proc/sys/kernel/random/uuid (GH #1092)</span><span class="sxs-lookup"><span data-stu-id="3c169-1016">Implemented /proc/sys/kernel/random/uuid  (GH #1092)</span></span>
-- <span data-ttu-id="3c169-1017">プロセスの開始時刻が2432年 (GH #974) と表示されたエラーを修正しました</span><span class="sxs-lookup"><span data-stu-id="3c169-1017">Corrected error where process start time was showing as year 2432 (GH #974)</span></span>
-- <span data-ttu-id="3c169-1018">既定の用語環境変数を xterm-256 色に切り替えました (GH #1446)</span><span class="sxs-lookup"><span data-stu-id="3c169-1018">Switched default TERM environment variable to xterm-256color (GH #1446)</span></span>
-- <span data-ttu-id="3c169-1019">プロセスフォーク中にコミットが計算される方法を変更しました。</span><span class="sxs-lookup"><span data-stu-id="3c169-1019">Modified the way that process commit is calculated during process fork.</span></span> <span data-ttu-id="3c169-1020">(GH #1286)</span><span class="sxs-lookup"><span data-stu-id="3c169-1020">(GH #1286)</span></span>
-- <span data-ttu-id="3c169-1021">/Proc/sys/vm/overcommit_memory. の実装</span><span class="sxs-lookup"><span data-stu-id="3c169-1021">Implemented /proc/sys/vm/overcommit_memory.</span></span> <span data-ttu-id="3c169-1022">(GH #1286)</span><span class="sxs-lookup"><span data-stu-id="3c169-1022">(GH #1286)</span></span>
-- <span data-ttu-id="3c169-1023">実装された/proc/net/route ファイル (GH #69)</span><span class="sxs-lookup"><span data-stu-id="3c169-1023">Implemented /proc/net/route file (GH #69)</span></span>
-- <span data-ttu-id="3c169-1024">ショートカット名が正しくローカライズされていないエラーを修正しました (GH #696)</span><span class="sxs-lookup"><span data-stu-id="3c169-1024">Fixed error where shortcut name was incorrectly localized (GH #696)</span></span>
-- <span data-ttu-id="3c169-1025">プログラムヘッダーの検証に誤りのある elf 解析ロジックを修正した場合は、PATH_MAX 未満である必要があります。</span><span class="sxs-lookup"><span data-stu-id="3c169-1025">Fixed elf parsing logic that is incorrectly validating the program headers must be less than (or equal to) PATH_MAX.</span></span> <span data-ttu-id="3c169-1026">(GH #1048)</span><span class="sxs-lookup"><span data-stu-id="3c169-1026">(GH #1048)</span></span>
-- <span data-ttu-id="3c169-1027">Procfs、sysfs、cgroupfs、および binfmtfs (GH #1378) の statfs コールバックを実装します。</span><span class="sxs-lookup"><span data-stu-id="3c169-1027">Implemented statfs callback for procfs, sysfs, cgroupfs, and binfmtfs (GH #1378)</span></span>
-- <span data-ttu-id="3c169-1028">閉じることのできない AptPackageIndexUpdate ウィンドウを修正しました (GH #1184、GH #1193 で説明)</span><span class="sxs-lookup"><span data-stu-id="3c169-1028">Fixed AptPackageIndexUpdate windows that won’t close (GH #1184, also discussed in GH #1193)</span></span>
-- <span data-ttu-id="3c169-1029">ASLR パーソナリティ ADDR_NO_RANDOMIZE のサポートを追加しました。</span><span class="sxs-lookup"><span data-stu-id="3c169-1029">Added ASLR personality  ADDR_NO_RANDOMIZE support.</span></span> <span data-ttu-id="3c169-1030">(GH #1148、1128)</span><span class="sxs-lookup"><span data-stu-id="3c169-1030">(GH #1148, 1128)</span></span>
-- <span data-ttu-id="3c169-1031">AV 中に適切な gdb スタックトレースを実現するための PTRACE_GETSIGINFO、SIGSEGV が改善されました (GH #875)</span><span class="sxs-lookup"><span data-stu-id="3c169-1031">Improved PTRACE_GETSIGINFO, SIGSEGV, for proper gdb stack traces during AV (GH #875)</span></span>
-- <span data-ttu-id="3c169-1032">Elf の解析は、パッチ elf バイナリでは失敗します。</span><span class="sxs-lookup"><span data-stu-id="3c169-1032">Elf parsing no longer fails for patchelf binaries.</span></span> <span data-ttu-id="3c169-1033">(GH #471)</span><span class="sxs-lookup"><span data-stu-id="3c169-1033">(GH #471)</span></span>
-- <span data-ttu-id="3c169-1034">/Etc/resolv.conf に反映された VPN DNS (GH #416、1350)</span><span class="sxs-lookup"><span data-stu-id="3c169-1034">VPN DNS propagated to /etc/resolv.conf (GH #416, 1350)</span></span>
-- <span data-ttu-id="3c169-1035">より信頼性の高いデータ転送のための TCP close の機能強化。</span><span class="sxs-lookup"><span data-stu-id="3c169-1035">Improvements to TCP close for more reliable data transfer.</span></span> <span data-ttu-id="3c169-1036">(GH #610、616、1025、1335)</span><span class="sxs-lookup"><span data-stu-id="3c169-1036">(GH #610, 616, 1025, 1335)</span></span>
-- <span data-ttu-id="3c169-1037">開いているファイルが多すぎる場合 (EMFILE)、適切なエラーコードを返すようになりました。</span><span class="sxs-lookup"><span data-stu-id="3c169-1037">Now return correct error code when too many files are opened (EMFILE).</span></span> <span data-ttu-id="3c169-1038">(GH #1126、2090)</span><span class="sxs-lookup"><span data-stu-id="3c169-1038">(GH #1126, 2090)</span></span>
-- <span data-ttu-id="3c169-1039">Windows 監査ログで、プロセス作成の監査でイメージ名が報告されるようになりました。</span><span class="sxs-lookup"><span data-stu-id="3c169-1039">Windows Audit log now reports the image name in process create audit.</span></span>
-- <span data-ttu-id="3c169-1040">Bash ウィンドウ内から bash を起動すると、正常に失敗する</span><span class="sxs-lookup"><span data-stu-id="3c169-1040">Now gracefully fail when launching bash.exe from within a bash window</span></span>
-- <span data-ttu-id="3c169-1041">相互運用機能が LxFs で作業ディレクトリにアクセスできないときにエラーメッセージが追加されました (例: .bashrc)</span><span class="sxs-lookup"><span data-stu-id="3c169-1041">Added error message when interop is unable to access a working directory under LxFs (i.e. notepad.exe .bashrc)</span></span>
-- <span data-ttu-id="3c169-1042">WSL で Windows パスが切り捨てられた問題を修正しました</span><span class="sxs-lookup"><span data-stu-id="3c169-1042">Fixed issue where Windows path was truncated in WSL</span></span>
-- <span data-ttu-id="3c169-1043">その他の修正プログラムと機能強化</span><span class="sxs-lookup"><span data-stu-id="3c169-1043">Additional fixes and improvements</span></span>
-
-### <a name="ltp-results"></a><span data-ttu-id="3c169-1044">LTP の結果:</span><span class="sxs-lookup"><span data-stu-id="3c169-1044">LTP Results:</span></span>
-<span data-ttu-id="3c169-1045">成功したテストの数:690</span><span class="sxs-lookup"><span data-stu-id="3c169-1045">Number of Passing Test: 690</span></span> </br>
-<span data-ttu-id="3c169-1046">非パッシング (失敗、スキップされたなど) の数:274</span><span class="sxs-lookup"><span data-stu-id="3c169-1046">Number of non-Passing (failing, skipped, etc…): 274</span></span> </br>
-[<span data-ttu-id="3c169-1047">LTP テストの実行ログ</span><span class="sxs-lookup"><span data-stu-id="3c169-1047">LTP Test Run Logs</span></span>](https://github.com/Microsoft/CommandLine-Documentation/tree/live/LTP_Results/15002)<br/>
+### <a name="syscall-summary"></a><span data-ttu-id="dea41-962">Syscall の概要</span><span class="sxs-lookup"><span data-stu-id="dea41-962">Syscall Summary</span></span>
+<span data-ttu-id="dea41-963">合計 Syscall:384</span><span class="sxs-lookup"><span data-stu-id="dea41-963">Total Syscalls: 384</span></span> </br>
+<span data-ttu-id="dea41-964">実装された合計:235</span><span class="sxs-lookup"><span data-stu-id="dea41-964">Total Implemented: 235</span></span> </br>
+<span data-ttu-id="dea41-965">スタブの合計数:22</span><span class="sxs-lookup"><span data-stu-id="dea41-965">Total Stubbed: 22</span></span> </br>
+<span data-ttu-id="dea41-966">未実装の合計数:127</span><span class="sxs-lookup"><span data-stu-id="dea41-966">Total Unimplemented: 127</span></span> </br>
+[<span data-ttu-id="dea41-967">詳細な内訳</span><span class="sxs-lookup"><span data-stu-id="dea41-967">Detailed Breakdown</span></span>](https://github.com/Microsoft/CommandLine-Documentation/tree/live/LTP_Results/15014/Syscalls.txt)<br/>
 
 <br/>
 
-### <a name="syscall-support"></a><span data-ttu-id="3c169-1048">Syscall のサポート</span><span class="sxs-lookup"><span data-stu-id="3c169-1048">Syscall Support</span></span>
-<span data-ttu-id="3c169-1049">次に示すのは、WSL でいくつかの実装を持つ新しいまたは強化された syscall の一覧です。</span><span class="sxs-lookup"><span data-stu-id="3c169-1049">Below are a list of new or enhanced syscalls that have some implementation in WSL.</span></span> <span data-ttu-id="3c169-1050">この一覧の syscall は、少なくとも1つのシナリオでサポートされていますが、現時点では一部のパラメーターがサポートされていない可能性があります。</span><span class="sxs-lookup"><span data-stu-id="3c169-1050">The syscalls on this list are supported in at least one scenario, but may not have all parameters supported at this time.</span></span>
+## <a name="build-15007"></a><span data-ttu-id="dea41-968">ビルド15007</span><span class="sxs-lookup"><span data-stu-id="dea41-968">Build 15007</span></span>
+
+<span data-ttu-id="dea41-969">ビルド15007の一般的な Windows 情報については、 [windows のブログ]( https://blogs.windows.com/windowsexperience/2017/01/12/announcing-windows-10-insider-preview-build-15007-pc-mobile)を参照してください。</span><span class="sxs-lookup"><span data-stu-id="dea41-969">For general Windows information on build 15007 visit the [Windows Blog]( https://blogs.windows.com/windowsexperience/2017/01/12/announcing-windows-10-insider-preview-build-15007-pc-mobile).</span></span><br/>
+
+
+### <a name="known-issue"></a><span data-ttu-id="dea41-970">既知の問題</span><span class="sxs-lookup"><span data-stu-id="dea41-970">Known Issue</span></span>
+
+- <span data-ttu-id="dea41-971">コンソールが一部の Ctrl + <key>入力を認識しないという既知のバグがあります。</span><span class="sxs-lookup"><span data-stu-id="dea41-971">There is a known bug where the console does not recognize some Ctrl + <key> input.</span></span>  <span data-ttu-id="dea41-972">これには、通常の "c" キーの押下として機能する ctrl + c コマンドが含まれます。</span><span class="sxs-lookup"><span data-stu-id="dea41-972">This includes the ctrl-c command which will act as a normal ‘c’ keypress.</span></span>
+
+  - <span data-ttu-id="dea41-973">回避策:代替キーを Ctrl + C にマップします。</span><span class="sxs-lookup"><span data-stu-id="dea41-973">Workaround: Map an alternate key to Ctrl+C.</span></span> <span data-ttu-id="dea41-974">たとえば、ctrl + K を Ctrl + C キーにマップするに`stty intr \^k`は、次のようにします。</span><span class="sxs-lookup"><span data-stu-id="dea41-974">For example, to map Ctrl+K to Ctrl+C do: `stty intr \^k`.</span></span>  <span data-ttu-id="dea41-975">このマッピングはターミナル単位で行われ、bash が起動されるたびに実行される必要があります。</span><span class="sxs-lookup"><span data-stu-id="dea41-975">This mapping is per terminal and will have to be done *every* time bash is launched.</span></span> <span data-ttu-id="dea41-976">ユーザーは、オプションを調べて、`.bashrc`</span><span class="sxs-lookup"><span data-stu-id="dea41-976">Users can explore the option to include this in their `.bashrc`</span></span>
+
+### <a name="fixed"></a><span data-ttu-id="dea41-977">固定</span><span class="sxs-lookup"><span data-stu-id="dea41-977">Fixed</span></span>
+
+- <span data-ttu-id="dea41-978">WSL を実行すると CPU コアの 100% が消費される問題を修正しました</span><span class="sxs-lookup"><span data-stu-id="dea41-978">Corrected the issue where running WSL would consume 100% of a CPU core</span></span>
+- <span data-ttu-id="dea41-979">ソケットオプション IP_PKTINFO、IPV6_RECVPKTINFO がサポートされるようになりました。</span><span class="sxs-lookup"><span data-stu-id="dea41-979">Socket option IP_PKTINFO, IPV6_RECVPKTINFO now supported.</span></span> <span data-ttu-id="dea41-980">(GH #851、987)</span><span class="sxs-lookup"><span data-stu-id="dea41-980">(GH #851, 987)</span></span>
+- <span data-ttu-id="dea41-981">Lxcore でネットワークインターフェイスの物理アドレスを16バイトに切り捨てる (GH #1452、1414、1343、468、308)</span><span class="sxs-lookup"><span data-stu-id="dea41-981">Truncate network interface physical address to 16 bytes in lxcore (GH #1452, 1414, 1343, 468, 308)</span></span>
+- <span data-ttu-id="dea41-982">その他の修正プログラムと機能強化</span><span class="sxs-lookup"><span data-stu-id="dea41-982">Additional fixes and improvements</span></span>
+
+### <a name="ltp-results"></a><span data-ttu-id="dea41-983">LTP の結果:</span><span class="sxs-lookup"><span data-stu-id="dea41-983">LTP Results:</span></span>
+<span data-ttu-id="dea41-984">成功したテストの数:709</span><span class="sxs-lookup"><span data-stu-id="dea41-984">Number of Passing Test: 709</span></span> </br>
+<span data-ttu-id="dea41-985">非パッシング (失敗、スキップされたなど) の数:255</span><span class="sxs-lookup"><span data-stu-id="dea41-985">Number of non-Passing (failing, skipped, etc…): 255</span></span> </br>
+[<span data-ttu-id="dea41-986">LTP テストの実行ログ</span><span class="sxs-lookup"><span data-stu-id="dea41-986">LTP Test Run Logs</span></span>](https://github.com/Microsoft/CommandLine-Documentation/tree/live/LTP_Results/15007)<br/>
+
+<br/>
+
+## <a name="build-15002"></a><span data-ttu-id="dea41-987">ビルド15002</span><span class="sxs-lookup"><span data-stu-id="dea41-987">Build 15002</span></span>
+
+<span data-ttu-id="dea41-988">ビルド15002の一般的な Windows 情報については、 [windows のブログ](https://blogs.windows.com/windowsexperience/2017/01/09/announcing-windows-10-insider-preview-build-15002-pc/)を参照してください。</span><span class="sxs-lookup"><span data-stu-id="dea41-988">For general Windows information on build 15002 visit the [Windows Blog](https://blogs.windows.com/windowsexperience/2017/01/09/announcing-windows-10-insider-preview-build-15002-pc/).</span></span><br/>
+
+
+### <a name="known-issue"></a><span data-ttu-id="dea41-989">既知の問題</span><span class="sxs-lookup"><span data-stu-id="dea41-989">Known Issue</span></span>
+
+<span data-ttu-id="dea41-990">2つの既知の問題:</span><span class="sxs-lookup"><span data-stu-id="dea41-990">Two known issues:</span></span>
+- <span data-ttu-id="dea41-991">コンソールが一部の Ctrl + <key>入力を認識しないという既知のバグがあります。</span><span class="sxs-lookup"><span data-stu-id="dea41-991">There is a known bug where the console does not recognize some Ctrl + <key> input.</span></span>  <span data-ttu-id="dea41-992">これには、通常の "c" キーの押下として機能する ctrl + c コマンドが含まれます。</span><span class="sxs-lookup"><span data-stu-id="dea41-992">This includes the ctrl-c command which will act as a normal ‘c’ keypress.</span></span>
+
+  - <span data-ttu-id="dea41-993">回避策:代替キーを Ctrl + C にマップします。</span><span class="sxs-lookup"><span data-stu-id="dea41-993">Workaround: Map an alternate key to Ctrl+C.</span></span> <span data-ttu-id="dea41-994">たとえば、ctrl + K を Ctrl + C キーにマップするに`stty intr \^k`は、次のようにします。</span><span class="sxs-lookup"><span data-stu-id="dea41-994">For example, to map Ctrl+K to Ctrl+C do: `stty intr \^k`.</span></span>  <span data-ttu-id="dea41-995">このマッピングはターミナル単位で行われ、bash が起動されるたびに実行される必要があります。</span><span class="sxs-lookup"><span data-stu-id="dea41-995">This mapping is per terminal and will have to be done *every* time bash is launched.</span></span> <span data-ttu-id="dea41-996">ユーザーは、オプションを調べて、`.bashrc`</span><span class="sxs-lookup"><span data-stu-id="dea41-996">Users can explore the option to include this in their `.bashrc`</span></span>
+
+- <span data-ttu-id="dea41-997">WSL が実行されている間、システムスレッドは CPU コアの 100% を消費します。</span><span class="sxs-lookup"><span data-stu-id="dea41-997">While WSL is running a system thread will consume 100% of a CPU core.</span></span>  <span data-ttu-id="dea41-998">根本原因は、内部的に解決されています。</span><span class="sxs-lookup"><span data-stu-id="dea41-998">The root cause has been addressed and fixed internally.</span></span>
+
+### <a name="fixed"></a><span data-ttu-id="dea41-999">固定</span><span class="sxs-lookup"><span data-stu-id="dea41-999">Fixed</span></span>
+
+- <span data-ttu-id="dea41-1000">すべての bash セッションは、同じアクセス許可レベルで作成する必要があります。</span><span class="sxs-lookup"><span data-stu-id="dea41-1000">All bash sessions must now be created at the same permission level.</span></span>  <span data-ttu-id="dea41-1001">別のレベルでセッションを開始しようとすると、ブロックされます。</span><span class="sxs-lookup"><span data-stu-id="dea41-1001">Attempting to start a session at a different level will be blocked.</span></span>  <span data-ttu-id="dea41-1002">つまり、管理者コンソールと管理者以外のコンソールを同時に実行することはできません。</span><span class="sxs-lookup"><span data-stu-id="dea41-1002">This means admin and non-admin consoles cannot run at the same time.</span></span> <span data-ttu-id="dea41-1003">(GH #626)</span><span class="sxs-lookup"><span data-stu-id="dea41-1003">(GH #626)</span></span>
+<br/>
+- <span data-ttu-id="dea41-1004">次の NETLINK_ROUTE メッセージを実装した (Windows 管理者が必要)</span><span class="sxs-lookup"><span data-stu-id="dea41-1004">Implemented the following NETLINK_ROUTE messages (requires Windows admin)</span></span>
+     - <span data-ttu-id="dea41-1005">RTM_NEWADDR (サポート`ip addr add`)</span><span class="sxs-lookup"><span data-stu-id="dea41-1005">RTM_NEWADDR (supports `ip addr add`)</span></span>
+     - <span data-ttu-id="dea41-1006">RTM_NEWROUTE (サポート`ip route add`)</span><span class="sxs-lookup"><span data-stu-id="dea41-1006">RTM_NEWROUTE (supports `ip route add`)</span></span>
+     - <span data-ttu-id="dea41-1007">RTM_DELADDR (サポート`ip addr del`)</span><span class="sxs-lookup"><span data-stu-id="dea41-1007">RTM_DELADDR (supports `ip addr del`)</span></span>
+     - <span data-ttu-id="dea41-1008">RTM_DELROUTE (サポート`ip route del`)</span><span class="sxs-lookup"><span data-stu-id="dea41-1008">RTM_DELROUTE (supports `ip route del`)</span></span>
+- <span data-ttu-id="dea41-1009">更新するパッケージのスケジュールされたタスクは、従量制課金接続では実行されなくなります (GH #1371)</span><span class="sxs-lookup"><span data-stu-id="dea41-1009">Scheduled task checking for packages to update will no longer run on a metered connection (GH #1371)</span></span>
+- <span data-ttu-id="dea41-1010">パイプがスタックした場合のエラーを修正します。 bash-c "ls-alR/" |bash-c "cat" (GH #1214)</span><span class="sxs-lookup"><span data-stu-id="dea41-1010">Fixed error where piping gets stuck i.e. bash -c "ls -alR /" | bash -c "cat" (GH #1214)</span></span>
+- <span data-ttu-id="dea41-1011">実装された TCP_KEEPCNT socket オプション (GH #843)</span><span class="sxs-lookup"><span data-stu-id="dea41-1011">Implemented TCP_KEEPCNT socket option (GH #843)</span></span>
+- <span data-ttu-id="dea41-1012">IP_MTU_DISCOVER INET socket オプション (GH #720、717、170、69) を実装しています</span><span class="sxs-lookup"><span data-stu-id="dea41-1012">Implemented IP_MTU_DISCOVER INET socket option (GH #720, 717, 170, 69)</span></span>
+- <span data-ttu-id="dea41-1013">Nt パス参照を使用して init から NT バイナリを実行する従来の機能を削除しました。</span><span class="sxs-lookup"><span data-stu-id="dea41-1013">Removed legacy functionality to run NT binaries from init with NT path lookup.</span></span> <span data-ttu-id="dea41-1014">(GH #1325)</span><span class="sxs-lookup"><span data-stu-id="dea41-1014">(GH #1325)</span></span>
+- <span data-ttu-id="dea41-1015">グループまたはその他の読み取りアクセスを許可するように更新モードを修正する (0644) (GH #1321)</span><span class="sxs-lookup"><span data-stu-id="dea41-1015">Fix mode of /dev/kmsg to allow group / other read access (0644) (GH #1321)</span></span>
+- <span data-ttu-id="dea41-1016">実装された/proc/sys/kernel/random/uuid (GH #1092)</span><span class="sxs-lookup"><span data-stu-id="dea41-1016">Implemented /proc/sys/kernel/random/uuid  (GH #1092)</span></span>
+- <span data-ttu-id="dea41-1017">プロセスの開始時刻が2432年 (GH #974) と表示されたエラーを修正しました</span><span class="sxs-lookup"><span data-stu-id="dea41-1017">Corrected error where process start time was showing as year 2432 (GH #974)</span></span>
+- <span data-ttu-id="dea41-1018">既定の用語環境変数を xterm-256 色に切り替えました (GH #1446)</span><span class="sxs-lookup"><span data-stu-id="dea41-1018">Switched default TERM environment variable to xterm-256color (GH #1446)</span></span>
+- <span data-ttu-id="dea41-1019">プロセスフォーク中にコミットが計算される方法を変更しました。</span><span class="sxs-lookup"><span data-stu-id="dea41-1019">Modified the way that process commit is calculated during process fork.</span></span> <span data-ttu-id="dea41-1020">(GH #1286)</span><span class="sxs-lookup"><span data-stu-id="dea41-1020">(GH #1286)</span></span>
+- <span data-ttu-id="dea41-1021">/Proc/sys/vm/overcommit_memory. の実装</span><span class="sxs-lookup"><span data-stu-id="dea41-1021">Implemented /proc/sys/vm/overcommit_memory.</span></span> <span data-ttu-id="dea41-1022">(GH #1286)</span><span class="sxs-lookup"><span data-stu-id="dea41-1022">(GH #1286)</span></span>
+- <span data-ttu-id="dea41-1023">実装された/proc/net/route ファイル (GH #69)</span><span class="sxs-lookup"><span data-stu-id="dea41-1023">Implemented /proc/net/route file (GH #69)</span></span>
+- <span data-ttu-id="dea41-1024">ショートカット名が正しくローカライズされていないエラーを修正しました (GH #696)</span><span class="sxs-lookup"><span data-stu-id="dea41-1024">Fixed error where shortcut name was incorrectly localized (GH #696)</span></span>
+- <span data-ttu-id="dea41-1025">プログラムヘッダーの検証に誤りのある elf 解析ロジックを修正した場合は、PATH_MAX 未満である必要があります。</span><span class="sxs-lookup"><span data-stu-id="dea41-1025">Fixed elf parsing logic that is incorrectly validating the program headers must be less than (or equal to) PATH_MAX.</span></span> <span data-ttu-id="dea41-1026">(GH #1048)</span><span class="sxs-lookup"><span data-stu-id="dea41-1026">(GH #1048)</span></span>
+- <span data-ttu-id="dea41-1027">Procfs、sysfs、cgroupfs、および binfmtfs (GH #1378) の statfs コールバックを実装します。</span><span class="sxs-lookup"><span data-stu-id="dea41-1027">Implemented statfs callback for procfs, sysfs, cgroupfs, and binfmtfs (GH #1378)</span></span>
+- <span data-ttu-id="dea41-1028">閉じることのできない AptPackageIndexUpdate ウィンドウを修正しました (GH #1184、GH #1193 で説明)</span><span class="sxs-lookup"><span data-stu-id="dea41-1028">Fixed AptPackageIndexUpdate windows that won’t close (GH #1184, also discussed in GH #1193)</span></span>
+- <span data-ttu-id="dea41-1029">ASLR パーソナリティ ADDR_NO_RANDOMIZE のサポートを追加しました。</span><span class="sxs-lookup"><span data-stu-id="dea41-1029">Added ASLR personality  ADDR_NO_RANDOMIZE support.</span></span> <span data-ttu-id="dea41-1030">(GH #1148、1128)</span><span class="sxs-lookup"><span data-stu-id="dea41-1030">(GH #1148, 1128)</span></span>
+- <span data-ttu-id="dea41-1031">AV 中に適切な gdb スタックトレースを実現するための PTRACE_GETSIGINFO、SIGSEGV が改善されました (GH #875)</span><span class="sxs-lookup"><span data-stu-id="dea41-1031">Improved PTRACE_GETSIGINFO, SIGSEGV, for proper gdb stack traces during AV (GH #875)</span></span>
+- <span data-ttu-id="dea41-1032">Elf の解析は、パッチ elf バイナリでは失敗します。</span><span class="sxs-lookup"><span data-stu-id="dea41-1032">Elf parsing no longer fails for patchelf binaries.</span></span> <span data-ttu-id="dea41-1033">(GH #471)</span><span class="sxs-lookup"><span data-stu-id="dea41-1033">(GH #471)</span></span>
+- <span data-ttu-id="dea41-1034">/Etc/resolv.conf に反映された VPN DNS (GH #416、1350)</span><span class="sxs-lookup"><span data-stu-id="dea41-1034">VPN DNS propagated to /etc/resolv.conf (GH #416, 1350)</span></span>
+- <span data-ttu-id="dea41-1035">より信頼性の高いデータ転送のための TCP close の機能強化。</span><span class="sxs-lookup"><span data-stu-id="dea41-1035">Improvements to TCP close for more reliable data transfer.</span></span> <span data-ttu-id="dea41-1036">(GH #610、616、1025、1335)</span><span class="sxs-lookup"><span data-stu-id="dea41-1036">(GH #610, 616, 1025, 1335)</span></span>
+- <span data-ttu-id="dea41-1037">開いているファイルが多すぎる場合 (EMFILE)、適切なエラーコードを返すようになりました。</span><span class="sxs-lookup"><span data-stu-id="dea41-1037">Now return correct error code when too many files are opened (EMFILE).</span></span> <span data-ttu-id="dea41-1038">(GH #1126、2090)</span><span class="sxs-lookup"><span data-stu-id="dea41-1038">(GH #1126, 2090)</span></span>
+- <span data-ttu-id="dea41-1039">Windows 監査ログで、プロセス作成の監査でイメージ名が報告されるようになりました。</span><span class="sxs-lookup"><span data-stu-id="dea41-1039">Windows Audit log now reports the image name in process create audit.</span></span>
+- <span data-ttu-id="dea41-1040">Bash ウィンドウ内から bash を起動すると、正常に失敗する</span><span class="sxs-lookup"><span data-stu-id="dea41-1040">Now gracefully fail when launching bash.exe from within a bash window</span></span>
+- <span data-ttu-id="dea41-1041">相互運用機能が LxFs で作業ディレクトリにアクセスできないときにエラーメッセージが追加されました (例: .bashrc)</span><span class="sxs-lookup"><span data-stu-id="dea41-1041">Added error message when interop is unable to access a working directory under LxFs (i.e. notepad.exe .bashrc)</span></span>
+- <span data-ttu-id="dea41-1042">WSL で Windows パスが切り捨てられた問題を修正しました</span><span class="sxs-lookup"><span data-stu-id="dea41-1042">Fixed issue where Windows path was truncated in WSL</span></span>
+- <span data-ttu-id="dea41-1043">その他の修正プログラムと機能強化</span><span class="sxs-lookup"><span data-stu-id="dea41-1043">Additional fixes and improvements</span></span>
+
+### <a name="ltp-results"></a><span data-ttu-id="dea41-1044">LTP の結果:</span><span class="sxs-lookup"><span data-stu-id="dea41-1044">LTP Results:</span></span>
+<span data-ttu-id="dea41-1045">成功したテストの数:690</span><span class="sxs-lookup"><span data-stu-id="dea41-1045">Number of Passing Test: 690</span></span> </br>
+<span data-ttu-id="dea41-1046">非パッシング (失敗、スキップされたなど) の数:274</span><span class="sxs-lookup"><span data-stu-id="dea41-1046">Number of non-Passing (failing, skipped, etc…): 274</span></span> </br>
+[<span data-ttu-id="dea41-1047">LTP テストの実行ログ</span><span class="sxs-lookup"><span data-stu-id="dea41-1047">LTP Test Run Logs</span></span>](https://github.com/Microsoft/CommandLine-Documentation/tree/live/LTP_Results/15002)<br/>
+
+<br/>
+
+### <a name="syscall-support"></a><span data-ttu-id="dea41-1048">Syscall のサポート</span><span class="sxs-lookup"><span data-stu-id="dea41-1048">Syscall Support</span></span>
+<span data-ttu-id="dea41-1049">次に示すのは、WSL でいくつかの実装を持つ新しいまたは強化された syscall の一覧です。</span><span class="sxs-lookup"><span data-stu-id="dea41-1049">Below are a list of new or enhanced syscalls that have some implementation in WSL.</span></span> <span data-ttu-id="dea41-1050">この一覧の syscall は、少なくとも1つのシナリオでサポートされていますが、現時点では一部のパラメーターがサポートされていない可能性があります。</span><span class="sxs-lookup"><span data-stu-id="dea41-1050">The syscalls on this list are supported in at least one scenario, but may not have all parameters supported at this time.</span></span>
 
 `shmctl`<br/>
 `shmget`<br/>
@@ -1282,34 +1282,34 @@ wslconfig.exe /terminate <DistributionName>
 `shmat`<br/>
 <br/>
 
-## <a name="build-14986"></a><span data-ttu-id="3c169-1051">ビルド14986</span><span class="sxs-lookup"><span data-stu-id="3c169-1051">Build 14986</span></span>
+## <a name="build-14986"></a><span data-ttu-id="dea41-1051">ビルド14986</span><span class="sxs-lookup"><span data-stu-id="dea41-1051">Build 14986</span></span>
 
-<span data-ttu-id="3c169-1052">ビルド14986の一般的な Windows 情報については、 [windows のブログ](https://blogs.windows.com/windowsexperience/2016/12/07/announcing-windows-10-insider-preview-build-14986-pc/)を参照してください。</span><span class="sxs-lookup"><span data-stu-id="3c169-1052">For general Windows information on build 14986 visit the [Windows Blog](https://blogs.windows.com/windowsexperience/2016/12/07/announcing-windows-10-insider-preview-build-14986-pc/).</span></span><br/>
+<span data-ttu-id="dea41-1052">ビルド14986の一般的な Windows 情報については、 [windows のブログ](https://blogs.windows.com/windowsexperience/2016/12/07/announcing-windows-10-insider-preview-build-14986-pc/)を参照してください。</span><span class="sxs-lookup"><span data-stu-id="dea41-1052">For general Windows information on build 14986 visit the [Windows Blog](https://blogs.windows.com/windowsexperience/2016/12/07/announcing-windows-10-insider-preview-build-14986-pc/).</span></span><br/>
 
 
-### <a name="fixed"></a><span data-ttu-id="3c169-1053">固定</span><span class="sxs-lookup"><span data-stu-id="3c169-1053">Fixed</span></span>
+### <a name="fixed"></a><span data-ttu-id="dea41-1053">固定</span><span class="sxs-lookup"><span data-stu-id="dea41-1053">Fixed</span></span>
 
-- <span data-ttu-id="3c169-1054">Netlink および Pty Ioctl を使用したバグチェックの修正</span><span class="sxs-lookup"><span data-stu-id="3c169-1054">Fixed bugchecks with Netlink and Pty IOCTLs</span></span>
-- <span data-ttu-id="3c169-1055">カーネルのバージョンが Xenial との一貫性のために 4.4.0-43 を報告するようになりました</span><span class="sxs-lookup"><span data-stu-id="3c169-1055">Kernel version now reports 4.4.0-43 for consistency with Xenial</span></span>
-- <span data-ttu-id="3c169-1056">"Nul:" にリダイレクトされたときに Bash が起動するようになりました (GH #1259)</span><span class="sxs-lookup"><span data-stu-id="3c169-1056">Bash.exe now launches when input directed to 'nul:' (GH #1259)</span></span>
-- <span data-ttu-id="3c169-1057">Procfs (GH #967) でスレッド Id が正しくレポートされるようになりました</span><span class="sxs-lookup"><span data-stu-id="3c169-1057">Thread IDs now reported correctly in procfs (GH #967)</span></span>
-- <span data-ttu-id="3c169-1058">IN_UNMOUNT |IN_Q_OVERFLOW |IN_IGNORED |IN_ISDIR フラグが inotify_add_watch () でサポートされるようになりました (GH #1280)</span><span class="sxs-lookup"><span data-stu-id="3c169-1058">IN_UNMOUNT | IN_Q_OVERFLOW | IN_IGNORED | IN_ISDIR flags now supported in inotify_add_watch() (GH #1280)</span></span>
-- <span data-ttu-id="3c169-1059">Timer_create と関連するシステムコールを実装します。</span><span class="sxs-lookup"><span data-stu-id="3c169-1059">Implement timer_create and related system calls.</span></span>  <span data-ttu-id="3c169-1060">これにより、GHC サポート (GH #307) が可能になります。</span><span class="sxs-lookup"><span data-stu-id="3c169-1060">This enables GHC support (GH #307)</span></span>
-- <span data-ttu-id="3c169-1061">Ping によって 0.000 m の時間 (GH #1296) が返された問題を修正しました。</span><span class="sxs-lookup"><span data-stu-id="3c169-1061">Fixed issue where ping returned a time of 0.000ms (GH #1296)</span></span>
-- <span data-ttu-id="3c169-1062">開いているファイルが多すぎる場合は、正しいエラーコードを返します。</span><span class="sxs-lookup"><span data-stu-id="3c169-1062">Return correct error code when too many files are opened.</span></span>
-- <span data-ttu-id="3c169-1063">WSL の Netlink 要求が、インターフェイスのハードウェアアドレスが32バイト (Teredo インターフェイスなど) の場合は EINVAL で失敗する問題を修正した。</span><span class="sxs-lookup"><span data-stu-id="3c169-1063">Fixed issue in WSL where Netlink request for network interface data would fail with EINVAL if the interface's hardware address is 32-bytes (such as the Teredo interface)</span></span>
-   - <span data-ttu-id="3c169-1064">Linux の "ip" ユーティリティには、WSL が32バイトのハードウェアアドレスを報告した場合にクラッシュするバグが含まれていることに注意してください。</span><span class="sxs-lookup"><span data-stu-id="3c169-1064">Note that the Linux "ip" utility contains a bug where it will crash if WSL reports a 32-byte hardware address.</span></span> <span data-ttu-id="3c169-1065">これは、WSL ではなく、"ip" のバグです。</span><span class="sxs-lookup"><span data-stu-id="3c169-1065">This is a bug in "ip", not WSL.</span></span> <span data-ttu-id="3c169-1066">"Ip" ユーティリティは、ハードウェアアドレスの印刷に使用される文字列バッファーの長さをハードコーディングします。また、32バイトのハードウェアアドレスを出力するには、バッファーが小さすぎます。</span><span class="sxs-lookup"><span data-stu-id="3c169-1066">The “ip” utility hard-codes the length of the string buffer used to print the hardware address, and that buffer is too small to print a 32-byte hardware address.</span></span>
-- <span data-ttu-id="3c169-1067">その他の修正プログラムと機能強化</span><span class="sxs-lookup"><span data-stu-id="3c169-1067">Additional fixes and improvements</span></span>
+- <span data-ttu-id="dea41-1054">Netlink および Pty Ioctl を使用したバグチェックの修正</span><span class="sxs-lookup"><span data-stu-id="dea41-1054">Fixed bugchecks with Netlink and Pty IOCTLs</span></span>
+- <span data-ttu-id="dea41-1055">カーネルのバージョンが Xenial との一貫性のために 4.4.0-43 を報告するようになりました</span><span class="sxs-lookup"><span data-stu-id="dea41-1055">Kernel version now reports 4.4.0-43 for consistency with Xenial</span></span>
+- <span data-ttu-id="dea41-1056">"Nul:" にリダイレクトされたときに Bash が起動するようになりました (GH #1259)</span><span class="sxs-lookup"><span data-stu-id="dea41-1056">Bash.exe now launches when input directed to 'nul:' (GH #1259)</span></span>
+- <span data-ttu-id="dea41-1057">Procfs (GH #967) でスレッド Id が正しくレポートされるようになりました</span><span class="sxs-lookup"><span data-stu-id="dea41-1057">Thread IDs now reported correctly in procfs (GH #967)</span></span>
+- <span data-ttu-id="dea41-1058">IN_UNMOUNT |IN_Q_OVERFLOW |IN_IGNORED |IN_ISDIR フラグが inotify_add_watch () でサポートされるようになりました (GH #1280)</span><span class="sxs-lookup"><span data-stu-id="dea41-1058">IN_UNMOUNT | IN_Q_OVERFLOW | IN_IGNORED | IN_ISDIR flags now supported in inotify_add_watch() (GH #1280)</span></span>
+- <span data-ttu-id="dea41-1059">Timer_create と関連するシステムコールを実装します。</span><span class="sxs-lookup"><span data-stu-id="dea41-1059">Implement timer_create and related system calls.</span></span>  <span data-ttu-id="dea41-1060">これにより、GHC サポート (GH #307) が可能になります。</span><span class="sxs-lookup"><span data-stu-id="dea41-1060">This enables GHC support (GH #307)</span></span>
+- <span data-ttu-id="dea41-1061">Ping によって 0.000 m の時間 (GH #1296) が返された問題を修正しました。</span><span class="sxs-lookup"><span data-stu-id="dea41-1061">Fixed issue where ping returned a time of 0.000ms (GH #1296)</span></span>
+- <span data-ttu-id="dea41-1062">開いているファイルが多すぎる場合は、正しいエラーコードを返します。</span><span class="sxs-lookup"><span data-stu-id="dea41-1062">Return correct error code when too many files are opened.</span></span>
+- <span data-ttu-id="dea41-1063">WSL の Netlink 要求が、インターフェイスのハードウェアアドレスが32バイト (Teredo インターフェイスなど) の場合は EINVAL で失敗する問題を修正した。</span><span class="sxs-lookup"><span data-stu-id="dea41-1063">Fixed issue in WSL where Netlink request for network interface data would fail with EINVAL if the interface's hardware address is 32-bytes (such as the Teredo interface)</span></span>
+   - <span data-ttu-id="dea41-1064">Linux の "ip" ユーティリティには、WSL が32バイトのハードウェアアドレスを報告した場合にクラッシュするバグが含まれていることに注意してください。</span><span class="sxs-lookup"><span data-stu-id="dea41-1064">Note that the Linux "ip" utility contains a bug where it will crash if WSL reports a 32-byte hardware address.</span></span> <span data-ttu-id="dea41-1065">これは、WSL ではなく、"ip" のバグです。</span><span class="sxs-lookup"><span data-stu-id="dea41-1065">This is a bug in "ip", not WSL.</span></span> <span data-ttu-id="dea41-1066">"Ip" ユーティリティは、ハードウェアアドレスの印刷に使用される文字列バッファーの長さをハードコーディングします。また、32バイトのハードウェアアドレスを出力するには、バッファーが小さすぎます。</span><span class="sxs-lookup"><span data-stu-id="dea41-1066">The “ip” utility hard-codes the length of the string buffer used to print the hardware address, and that buffer is too small to print a 32-byte hardware address.</span></span>
+- <span data-ttu-id="dea41-1067">その他の修正プログラムと機能強化</span><span class="sxs-lookup"><span data-stu-id="dea41-1067">Additional fixes and improvements</span></span>
 
-### <a name="ltp-results"></a><span data-ttu-id="3c169-1068">LTP の結果:</span><span class="sxs-lookup"><span data-stu-id="3c169-1068">LTP Results:</span></span>
-<span data-ttu-id="3c169-1069">成功したテストの数:669</span><span class="sxs-lookup"><span data-stu-id="3c169-1069">Number of Passing Test: 669</span></span> </br>
-<span data-ttu-id="3c169-1070">非パッシング (失敗、スキップされたなど) の数:258</span><span class="sxs-lookup"><span data-stu-id="3c169-1070">Number of non-Passing (failing, skipped, etc…): 258</span></span> </br>
-[<span data-ttu-id="3c169-1071">LTP テストの実行ログ</span><span class="sxs-lookup"><span data-stu-id="3c169-1071">LTP Test Run Logs</span></span>](https://github.com/Microsoft/CommandLine-Documentation/tree/live/LTP_Results/14986)<br/>
+### <a name="ltp-results"></a><span data-ttu-id="dea41-1068">LTP の結果:</span><span class="sxs-lookup"><span data-stu-id="dea41-1068">LTP Results:</span></span>
+<span data-ttu-id="dea41-1069">成功したテストの数:669</span><span class="sxs-lookup"><span data-stu-id="dea41-1069">Number of Passing Test: 669</span></span> </br>
+<span data-ttu-id="dea41-1070">非パッシング (失敗、スキップされたなど) の数:258</span><span class="sxs-lookup"><span data-stu-id="dea41-1070">Number of non-Passing (failing, skipped, etc…): 258</span></span> </br>
+[<span data-ttu-id="dea41-1071">LTP テストの実行ログ</span><span class="sxs-lookup"><span data-stu-id="dea41-1071">LTP Test Run Logs</span></span>](https://github.com/Microsoft/CommandLine-Documentation/tree/live/LTP_Results/14986)<br/>
 
 <br/>
 
-### <a name="syscall-support"></a><span data-ttu-id="3c169-1072">Syscall のサポート</span><span class="sxs-lookup"><span data-stu-id="3c169-1072">Syscall Support</span></span>
-<span data-ttu-id="3c169-1073">次に示すのは、WSL でいくつかの実装を持つ新しいまたは強化された syscall の一覧です。</span><span class="sxs-lookup"><span data-stu-id="3c169-1073">Below are a list of new or enhanced syscalls that have some implementation in WSL.</span></span> <span data-ttu-id="3c169-1074">この一覧の syscall は、少なくとも1つのシナリオでサポートされていますが、現時点では一部のパラメーターがサポートされていない可能性があります。</span><span class="sxs-lookup"><span data-stu-id="3c169-1074">The syscalls on this list are supported in at least one scenario, but may not have all parameters supported at this time.</span></span>
+### <a name="syscall-support"></a><span data-ttu-id="dea41-1072">Syscall のサポート</span><span class="sxs-lookup"><span data-stu-id="dea41-1072">Syscall Support</span></span>
+<span data-ttu-id="dea41-1073">次に示すのは、WSL でいくつかの実装を持つ新しいまたは強化された syscall の一覧です。</span><span class="sxs-lookup"><span data-stu-id="dea41-1073">Below are a list of new or enhanced syscalls that have some implementation in WSL.</span></span> <span data-ttu-id="dea41-1074">この一覧の syscall は、少なくとも1つのシナリオでサポートされていますが、現時点では一部のパラメーターがサポートされていない可能性があります。</span><span class="sxs-lookup"><span data-stu-id="dea41-1074">The syscalls on this list are supported in at least one scenario, but may not have all parameters supported at this time.</span></span>
 
 `timer_create`<br/>
 `timer_delete`<br/>
@@ -1317,103 +1317,103 @@ wslconfig.exe /terminate <DistributionName>
 `timer_settime`<br/>
 <br/>
 
-## <a name="build-14971"></a><span data-ttu-id="3c169-1075">ビルド14971</span><span class="sxs-lookup"><span data-stu-id="3c169-1075">Build 14971</span></span>
+## <a name="build-14971"></a><span data-ttu-id="dea41-1075">ビルド14971</span><span class="sxs-lookup"><span data-stu-id="dea41-1075">Build 14971</span></span>
 
-<span data-ttu-id="3c169-1076">ビルド14971の一般的な Windows 情報については、 [windows のブログ](https://blogs.windows.com/windowsexperience/2016/11/17/announcing-windows-10-insider-preview-build-14971-for-pc/)を参照してください。</span><span class="sxs-lookup"><span data-stu-id="3c169-1076">For general Windows information on build 14971 visit the [Windows Blog](https://blogs.windows.com/windowsexperience/2016/11/17/announcing-windows-10-insider-preview-build-14971-for-pc/).</span></span><br/>
-
-
-### <a name="fixed"></a><span data-ttu-id="3c169-1077">固定</span><span class="sxs-lookup"><span data-stu-id="3c169-1077">Fixed</span></span>
-
- - <span data-ttu-id="3c169-1078">Windows Subsystem for Linux では、コントロールを超える状況により、このビルドには更新プログラムがありません。</span><span class="sxs-lookup"><span data-stu-id="3c169-1078">Due to circumstances beyond our control there are no updates in this build for the Windows Subsystem for Linux.</span></span>  <span data-ttu-id="3c169-1079">定期的にスケジュールされた更新は、次回のリリースで再開されます。</span><span class="sxs-lookup"><span data-stu-id="3c169-1079">Regularly scheduled updates will resume on the next release.</span></span>
-
-### <a name="ltp-results"></a><span data-ttu-id="3c169-1080">LTP の結果:</span><span class="sxs-lookup"><span data-stu-id="3c169-1080">LTP Results:</span></span>
-<span data-ttu-id="3c169-1081">14965から変更されていません</span><span class="sxs-lookup"><span data-stu-id="3c169-1081">Unchanged from 14965</span></span> </br>
-<span data-ttu-id="3c169-1082">成功したテストの数:664</span><span class="sxs-lookup"><span data-stu-id="3c169-1082">Number of Passing Test: 664</span></span> </br>
-<span data-ttu-id="3c169-1083">非パッシング (失敗、スキップされたなど) の数:263</span><span class="sxs-lookup"><span data-stu-id="3c169-1083">Number of non-Passing (failing, skipped, etc…): 263</span></span> </br>
-[<span data-ttu-id="3c169-1084">LTP テストの実行ログ</span><span class="sxs-lookup"><span data-stu-id="3c169-1084">LTP Test Run Logs</span></span>](https://github.com/Microsoft/CommandLine-Documentation/tree/live/LTP_Results/14965)<br/>
-
-<br/>
-
-## <a name="build-14965"></a><span data-ttu-id="3c169-1085">ビルド14965</span><span class="sxs-lookup"><span data-stu-id="3c169-1085">Build 14965</span></span>
-
-<span data-ttu-id="3c169-1086">ビルド14965の一般的な Windows 情報については、 [windows のブログ](https://blogs.windows.com/windowsexperience/2016/11/09/announcing-windows-10-insider-preview-build-14965-for-mobile-and-pc/)を参照してください。</span><span class="sxs-lookup"><span data-stu-id="3c169-1086">For general Windows information on build 14965 visit the [Windows Blog](https://blogs.windows.com/windowsexperience/2016/11/09/announcing-windows-10-insider-preview-build-14965-for-mobile-and-pc/).</span></span><br/>
+<span data-ttu-id="dea41-1076">ビルド14971の一般的な Windows 情報については、 [windows のブログ](https://blogs.windows.com/windowsexperience/2016/11/17/announcing-windows-10-insider-preview-build-14971-for-pc/)を参照してください。</span><span class="sxs-lookup"><span data-stu-id="dea41-1076">For general Windows information on build 14971 visit the [Windows Blog](https://blogs.windows.com/windowsexperience/2016/11/17/announcing-windows-10-insider-preview-build-14971-for-pc/).</span></span><br/>
 
 
-### <a name="fixed"></a><span data-ttu-id="3c169-1087">固定</span><span class="sxs-lookup"><span data-stu-id="3c169-1087">Fixed</span></span>
+### <a name="fixed"></a><span data-ttu-id="dea41-1077">固定</span><span class="sxs-lookup"><span data-stu-id="dea41-1077">Fixed</span></span>
 
-- <span data-ttu-id="3c169-1088">Netlink sockets NETLINK_ROUTE protocol の RTM_GETLINK および RTM_GETADDR (GH #468) のサポート</span><span class="sxs-lookup"><span data-stu-id="3c169-1088">Support for Netlink sockets NETLINK_ROUTE protocol's RTM_GETLINK and RTM_GETADDR (GH #468)</span></span>
-  - <span data-ttu-id="3c169-1089">ネットワーク列挙に対する ifconfig および ip コマンドを有効にします</span><span class="sxs-lookup"><span data-stu-id="3c169-1089">Enables ifconfig and ip commands for network enumeration</span></span>
-  - <span data-ttu-id="3c169-1090">詳細については、 [Wsl ネットワークに関するブログ記事](https://blogs.msdn.microsoft.com/wsl/2016/11/08/225/)を参照してください。</span><span class="sxs-lookup"><span data-stu-id="3c169-1090">More information can be found in our [WSL Networking blog post](https://blogs.msdn.microsoft.com/wsl/2016/11/08/225/).</span></span>
+ - <span data-ttu-id="dea41-1078">Windows Subsystem for Linux では、コントロールを超える状況により、このビルドには更新プログラムがありません。</span><span class="sxs-lookup"><span data-stu-id="dea41-1078">Due to circumstances beyond our control there are no updates in this build for the Windows Subsystem for Linux.</span></span>  <span data-ttu-id="dea41-1079">定期的にスケジュールされた更新は、次回のリリースで再開されます。</span><span class="sxs-lookup"><span data-stu-id="dea41-1079">Regularly scheduled updates will resume on the next release.</span></span>
 
-- <span data-ttu-id="3c169-1091">/sbin がユーザーのパスに既定で含まれるようになりました。</span><span class="sxs-lookup"><span data-stu-id="3c169-1091">/sbin is now in the user's path by default</span></span>
-- <span data-ttu-id="3c169-1092">NT ユーザーパスが既定で WSL パスに追加されました (つまり、Linux パスに System32 を追加せずに notepad.exe を入力できるようになりました)</span><span class="sxs-lookup"><span data-stu-id="3c169-1092">NT user path now appended to the WSL path by default (i.e. you can now type notepad.exe without adding System32 to the Linux path)</span></span>
-- <span data-ttu-id="3c169-1093">/Proc/sys/kernel/cap_last_cap のサポートを追加しました</span><span class="sxs-lookup"><span data-stu-id="3c169-1093">Added support for /proc/sys/kernel/cap_last_cap</span></span>
-- <span data-ttu-id="3c169-1094">現在の作業ディレクトリに ansi 以外の文字が含まれている場合、WSL から NT バイナリを起動できるようになりました (GH #1254)</span><span class="sxs-lookup"><span data-stu-id="3c169-1094">NT Binaries can now be launched from WSL when the current working directory contains non-ansi characters (GH #1254)</span></span>
-- <span data-ttu-id="3c169-1095">切断された unix ストリームソケットでのシャットダウンを許可します。</span><span class="sxs-lookup"><span data-stu-id="3c169-1095">Allow shutdown on disconnected unix stream socket.</span></span>
-- <span data-ttu-id="3c169-1096">PR_GET_PDEATHSIG のサポートを追加しました。</span><span class="sxs-lookup"><span data-stu-id="3c169-1096">Added support for PR_GET_PDEATHSIG.</span></span>
-- <span data-ttu-id="3c169-1097">CLONE_PARENT のサポートを追加しました</span><span class="sxs-lookup"><span data-stu-id="3c169-1097">Added support for CLONE_PARENT</span></span>
-- <span data-ttu-id="3c169-1098">パイプがスタックした場合のエラーを修正します。 bash-c "ls-alR/" |bash-c "cat" (GH #1214)</span><span class="sxs-lookup"><span data-stu-id="3c169-1098">Fixed error where piping gets stuck i.e. bash -c "ls -alR /" | bash -c "cat" (GH #1214)</span></span>
-- <span data-ttu-id="3c169-1099">現在のターミナルに接続するための要求を処理します。</span><span class="sxs-lookup"><span data-stu-id="3c169-1099">Handle requests to connect to the current terminal.</span></span>
-- <span data-ttu-id="3c169-1100">/Proc/<pid>/oom_score_adj を書き込み可能としてマークします。</span><span class="sxs-lookup"><span data-stu-id="3c169-1100">Mark /proc/<pid>/oom_score_adj as writable.</span></span>
-- <span data-ttu-id="3c169-1101">/Fs フォルダーを追加します。</span><span class="sxs-lookup"><span data-stu-id="3c169-1101">Add /sys/fs/cgroup folder.</span></span>
-- <span data-ttu-id="3c169-1102">sched_setaffinity は、関係ビットマスクの数を返す必要があります</span><span class="sxs-lookup"><span data-stu-id="3c169-1102">sched_setaffinity should return number of affinity bits mask</span></span>
-- <span data-ttu-id="3c169-1103">インタープリターパスの長さが64文字未満であることを誤って想定している ELF 検証ロジックを修正します。</span><span class="sxs-lookup"><span data-stu-id="3c169-1103">Fix ELF validation logic which incorrectly assumes interpreter paths must be less than 64 characters long.</span></span> <span data-ttu-id="3c169-1104">(GH #743)</span><span class="sxs-lookup"><span data-stu-id="3c169-1104">(GH #743)</span></span>
-- <span data-ttu-id="3c169-1105">開いているファイル記述子は、コンソールウィンドウを開いたままにすることができます (GH #1187)</span><span class="sxs-lookup"><span data-stu-id="3c169-1105">Open file descriptors can keep console window open (GH #1187)</span></span>
-- <span data-ttu-id="3c169-1106">名前の変更 () がターゲット名の末尾のスラッシュで失敗した Fixeed エラー (GH #1008)</span><span class="sxs-lookup"><span data-stu-id="3c169-1106">Fixeed error where rename() failed with trailing slash on target name (GH #1008)</span></span>
-- <span data-ttu-id="3c169-1107">/Proc/net/dev ファイルを実装する</span><span class="sxs-lookup"><span data-stu-id="3c169-1107">Implement /proc/net/dev file</span></span>
-- <span data-ttu-id="3c169-1108">タイマー精度による 0.000 ms ping を修正します。</span><span class="sxs-lookup"><span data-stu-id="3c169-1108">Fixed 0.000ms pings due to timer resolution.</span></span>
-- <span data-ttu-id="3c169-1109">実装された/proc/self/environ (GH #730)</span><span class="sxs-lookup"><span data-stu-id="3c169-1109">Implemented /proc/self/environ (GH #730)</span></span>
-- <span data-ttu-id="3c169-1110">その他のバグ修正と機能強化</span><span class="sxs-lookup"><span data-stu-id="3c169-1110">Additional bugfixes and improvements</span></span>
-
-### <a name="ltp-results"></a><span data-ttu-id="3c169-1111">LTP の結果:</span><span class="sxs-lookup"><span data-stu-id="3c169-1111">LTP Results:</span></span>
-<span data-ttu-id="3c169-1112">成功したテストの数:664</span><span class="sxs-lookup"><span data-stu-id="3c169-1112">Number of Passing Test: 664</span></span> </br>
-<span data-ttu-id="3c169-1113">非パッシング (失敗、スキップされたなど) の数:263</span><span class="sxs-lookup"><span data-stu-id="3c169-1113">Number of non-Passing (failing, skipped, etc…): 263</span></span> </br>
-[<span data-ttu-id="3c169-1114">LTP テストの実行ログ</span><span class="sxs-lookup"><span data-stu-id="3c169-1114">LTP Test Run Logs</span></span>](https://github.com/Microsoft/CommandLine-Documentation/tree/live/LTP_Results/14965)<br/>
+### <a name="ltp-results"></a><span data-ttu-id="dea41-1080">LTP の結果:</span><span class="sxs-lookup"><span data-stu-id="dea41-1080">LTP Results:</span></span>
+<span data-ttu-id="dea41-1081">14965から変更されていません</span><span class="sxs-lookup"><span data-stu-id="dea41-1081">Unchanged from 14965</span></span> </br>
+<span data-ttu-id="dea41-1082">成功したテストの数:664</span><span class="sxs-lookup"><span data-stu-id="dea41-1082">Number of Passing Test: 664</span></span> </br>
+<span data-ttu-id="dea41-1083">非パッシング (失敗、スキップされたなど) の数:263</span><span class="sxs-lookup"><span data-stu-id="dea41-1083">Number of non-Passing (failing, skipped, etc…): 263</span></span> </br>
+[<span data-ttu-id="dea41-1084">LTP テストの実行ログ</span><span class="sxs-lookup"><span data-stu-id="dea41-1084">LTP Test Run Logs</span></span>](https://github.com/Microsoft/CommandLine-Documentation/tree/live/LTP_Results/14965)<br/>
 
 <br/>
 
-## <a name="build-14959"></a><span data-ttu-id="3c169-1115">ビルド14959</span><span class="sxs-lookup"><span data-stu-id="3c169-1115">Build 14959</span></span>
+## <a name="build-14965"></a><span data-ttu-id="dea41-1085">ビルド14965</span><span class="sxs-lookup"><span data-stu-id="dea41-1085">Build 14965</span></span>
 
-<span data-ttu-id="3c169-1116">ビルド14959の一般的な Windows 情報については、 [windows のブログ](https://blogs.windows.com/windowsexperience/2016/11/03/announcing-windows-10-insider-preview-build-14959-for-mobile-and-pc/#iI82GufJxMF3POU1.97)を参照してください。</span><span class="sxs-lookup"><span data-stu-id="3c169-1116">For general Windows information on build 14959 visit the [Windows Blog](https://blogs.windows.com/windowsexperience/2016/11/03/announcing-windows-10-insider-preview-build-14959-for-mobile-and-pc/#iI82GufJxMF3POU1.97).</span></span><br/>
+<span data-ttu-id="dea41-1086">ビルド14965の一般的な Windows 情報については、 [windows のブログ](https://blogs.windows.com/windowsexperience/2016/11/09/announcing-windows-10-insider-preview-build-14965-for-mobile-and-pc/)を参照してください。</span><span class="sxs-lookup"><span data-stu-id="dea41-1086">For general Windows information on build 14965 visit the [Windows Blog](https://blogs.windows.com/windowsexperience/2016/11/09/announcing-windows-10-insider-preview-build-14965-for-mobile-and-pc/).</span></span><br/>
 
 
-### <a name="fixed"></a><span data-ttu-id="3c169-1117">固定</span><span class="sxs-lookup"><span data-stu-id="3c169-1117">Fixed</span></span>
+### <a name="fixed"></a><span data-ttu-id="dea41-1087">固定</span><span class="sxs-lookup"><span data-stu-id="dea41-1087">Fixed</span></span>
 
-- <span data-ttu-id="3c169-1118">Windows の Pico Process 通知が改善されました。</span><span class="sxs-lookup"><span data-stu-id="3c169-1118">Improved Pico Process notification for Windows.</span></span>  <span data-ttu-id="3c169-1119">[Wsl ブログ](https://blogs.msdn.microsoft.com/wsl/2016/11/01/wsl-antivirus-and-firewall-compatibility/)に記載されている追加情報。</span><span class="sxs-lookup"><span data-stu-id="3c169-1119">Additional information found on the [WSL Blog](https://blogs.msdn.microsoft.com/wsl/2016/11/01/wsl-antivirus-and-firewall-compatibility/).</span></span>
-- <span data-ttu-id="3c169-1120">Windows の相互運用性による安定性の向上</span><span class="sxs-lookup"><span data-stu-id="3c169-1120">Improved stability with Windows interoperability</span></span>
-- <span data-ttu-id="3c169-1121">エンタープライズデータ保護 (EDP) が有効になっている場合に bash を起動したときのエラー0x80070057 を修正しました</span><span class="sxs-lookup"><span data-stu-id="3c169-1121">Fixed error 0x80070057 when launching bash.exe when Enterprise Data Protection (EDP) is enabled</span></span>
-- <span data-ttu-id="3c169-1122">その他のバグ修正と機能強化</span><span class="sxs-lookup"><span data-stu-id="3c169-1122">Additional bugfixes and improvements</span></span>
+- <span data-ttu-id="dea41-1088">Netlink sockets NETLINK_ROUTE protocol の RTM_GETLINK および RTM_GETADDR (GH #468) のサポート</span><span class="sxs-lookup"><span data-stu-id="dea41-1088">Support for Netlink sockets NETLINK_ROUTE protocol's RTM_GETLINK and RTM_GETADDR (GH #468)</span></span>
+  - <span data-ttu-id="dea41-1089">ネットワーク列挙に対する ifconfig および ip コマンドを有効にします</span><span class="sxs-lookup"><span data-stu-id="dea41-1089">Enables ifconfig and ip commands for network enumeration</span></span>
+  - <span data-ttu-id="dea41-1090">詳細については、 [Wsl ネットワークに関するブログ記事](https://blogs.msdn.microsoft.com/wsl/2016/11/08/225/)を参照してください。</span><span class="sxs-lookup"><span data-stu-id="dea41-1090">More information can be found in our [WSL Networking blog post](https://blogs.msdn.microsoft.com/wsl/2016/11/08/225/).</span></span>
 
-### <a name="ltp-results"></a><span data-ttu-id="3c169-1123">LTP の結果:</span><span class="sxs-lookup"><span data-stu-id="3c169-1123">LTP Results:</span></span>
-<span data-ttu-id="3c169-1124">成功したテストの数:665</span><span class="sxs-lookup"><span data-stu-id="3c169-1124">Number of Passing Test: 665</span></span> </br>
-<span data-ttu-id="3c169-1125">非パッシング (失敗、スキップされたなど) の数:263</span><span class="sxs-lookup"><span data-stu-id="3c169-1125">Number of non-Passing (failing, skipped, etc…): 263</span></span> </br>
-[<span data-ttu-id="3c169-1126">LTP テストの実行ログ</span><span class="sxs-lookup"><span data-stu-id="3c169-1126">LTP Test Run Logs</span></span>](https://github.com/Microsoft/CommandLine-Documentation/tree/live/LTP_Results/14959)<br/>
+- <span data-ttu-id="dea41-1091">/sbin がユーザーのパスに既定で含まれるようになりました。</span><span class="sxs-lookup"><span data-stu-id="dea41-1091">/sbin is now in the user's path by default</span></span>
+- <span data-ttu-id="dea41-1092">NT ユーザーパスが既定で WSL パスに追加されました (つまり、Linux パスに System32 を追加せずに notepad.exe を入力できるようになりました)</span><span class="sxs-lookup"><span data-stu-id="dea41-1092">NT user path now appended to the WSL path by default (i.e. you can now type notepad.exe without adding System32 to the Linux path)</span></span>
+- <span data-ttu-id="dea41-1093">/Proc/sys/kernel/cap_last_cap のサポートを追加しました</span><span class="sxs-lookup"><span data-stu-id="dea41-1093">Added support for /proc/sys/kernel/cap_last_cap</span></span>
+- <span data-ttu-id="dea41-1094">現在の作業ディレクトリに ansi 以外の文字が含まれている場合、WSL から NT バイナリを起動できるようになりました (GH #1254)</span><span class="sxs-lookup"><span data-stu-id="dea41-1094">NT Binaries can now be launched from WSL when the current working directory contains non-ansi characters (GH #1254)</span></span>
+- <span data-ttu-id="dea41-1095">切断された unix ストリームソケットでのシャットダウンを許可します。</span><span class="sxs-lookup"><span data-stu-id="dea41-1095">Allow shutdown on disconnected unix stream socket.</span></span>
+- <span data-ttu-id="dea41-1096">PR_GET_PDEATHSIG のサポートを追加しました。</span><span class="sxs-lookup"><span data-stu-id="dea41-1096">Added support for PR_GET_PDEATHSIG.</span></span>
+- <span data-ttu-id="dea41-1097">CLONE_PARENT のサポートを追加しました</span><span class="sxs-lookup"><span data-stu-id="dea41-1097">Added support for CLONE_PARENT</span></span>
+- <span data-ttu-id="dea41-1098">パイプがスタックした場合のエラーを修正します。 bash-c "ls-alR/" |bash-c "cat" (GH #1214)</span><span class="sxs-lookup"><span data-stu-id="dea41-1098">Fixed error where piping gets stuck i.e. bash -c "ls -alR /" | bash -c "cat" (GH #1214)</span></span>
+- <span data-ttu-id="dea41-1099">現在のターミナルに接続するための要求を処理します。</span><span class="sxs-lookup"><span data-stu-id="dea41-1099">Handle requests to connect to the current terminal.</span></span>
+- <span data-ttu-id="dea41-1100">/Proc/<pid>/oom_score_adj を書き込み可能としてマークします。</span><span class="sxs-lookup"><span data-stu-id="dea41-1100">Mark /proc/<pid>/oom_score_adj as writable.</span></span>
+- <span data-ttu-id="dea41-1101">/Fs フォルダーを追加します。</span><span class="sxs-lookup"><span data-stu-id="dea41-1101">Add /sys/fs/cgroup folder.</span></span>
+- <span data-ttu-id="dea41-1102">sched_setaffinity は、関係ビットマスクの数を返す必要があります</span><span class="sxs-lookup"><span data-stu-id="dea41-1102">sched_setaffinity should return number of affinity bits mask</span></span>
+- <span data-ttu-id="dea41-1103">インタープリターパスの長さが64文字未満であることを誤って想定している ELF 検証ロジックを修正します。</span><span class="sxs-lookup"><span data-stu-id="dea41-1103">Fix ELF validation logic which incorrectly assumes interpreter paths must be less than 64 characters long.</span></span> <span data-ttu-id="dea41-1104">(GH #743)</span><span class="sxs-lookup"><span data-stu-id="dea41-1104">(GH #743)</span></span>
+- <span data-ttu-id="dea41-1105">開いているファイル記述子は、コンソールウィンドウを開いたままにすることができます (GH #1187)</span><span class="sxs-lookup"><span data-stu-id="dea41-1105">Open file descriptors can keep console window open (GH #1187)</span></span>
+- <span data-ttu-id="dea41-1106">名前の変更 () がターゲット名の末尾のスラッシュで失敗した Fixeed エラー (GH #1008)</span><span class="sxs-lookup"><span data-stu-id="dea41-1106">Fixeed error where rename() failed with trailing slash on target name (GH #1008)</span></span>
+- <span data-ttu-id="dea41-1107">/Proc/net/dev ファイルを実装する</span><span class="sxs-lookup"><span data-stu-id="dea41-1107">Implement /proc/net/dev file</span></span>
+- <span data-ttu-id="dea41-1108">タイマー精度による 0.000 ms ping を修正します。</span><span class="sxs-lookup"><span data-stu-id="dea41-1108">Fixed 0.000ms pings due to timer resolution.</span></span>
+- <span data-ttu-id="dea41-1109">実装された/proc/self/environ (GH #730)</span><span class="sxs-lookup"><span data-stu-id="dea41-1109">Implemented /proc/self/environ (GH #730)</span></span>
+- <span data-ttu-id="dea41-1110">その他のバグ修正と機能強化</span><span class="sxs-lookup"><span data-stu-id="dea41-1110">Additional bugfixes and improvements</span></span>
+
+### <a name="ltp-results"></a><span data-ttu-id="dea41-1111">LTP の結果:</span><span class="sxs-lookup"><span data-stu-id="dea41-1111">LTP Results:</span></span>
+<span data-ttu-id="dea41-1112">成功したテストの数:664</span><span class="sxs-lookup"><span data-stu-id="dea41-1112">Number of Passing Test: 664</span></span> </br>
+<span data-ttu-id="dea41-1113">非パッシング (失敗、スキップされたなど) の数:263</span><span class="sxs-lookup"><span data-stu-id="dea41-1113">Number of non-Passing (failing, skipped, etc…): 263</span></span> </br>
+[<span data-ttu-id="dea41-1114">LTP テストの実行ログ</span><span class="sxs-lookup"><span data-stu-id="dea41-1114">LTP Test Run Logs</span></span>](https://github.com/Microsoft/CommandLine-Documentation/tree/live/LTP_Results/14965)<br/>
 
 <br/>
 
-## <a name="build-14955"></a><span data-ttu-id="3c169-1127">ビルド14955</span><span class="sxs-lookup"><span data-stu-id="3c169-1127">Build 14955</span></span>
+## <a name="build-14959"></a><span data-ttu-id="dea41-1115">ビルド14959</span><span class="sxs-lookup"><span data-stu-id="dea41-1115">Build 14959</span></span>
 
-<span data-ttu-id="3c169-1128">ビルド14955の一般的な Windows 情報については、 [windows のブログ](https://blogs.windows.com/windowsexperience/2016/10/25/announcing-windows-10-insider-preview-build-14955-for-mobile-and-pc/#guGXQzKVFrZIDUYR.97)を参照してください。</span><span class="sxs-lookup"><span data-stu-id="3c169-1128">For general Windows information on build 14955 visit the [Windows Blog](https://blogs.windows.com/windowsexperience/2016/10/25/announcing-windows-10-insider-preview-build-14955-for-mobile-and-pc/#guGXQzKVFrZIDUYR.97).</span></span><br/>
+<span data-ttu-id="dea41-1116">ビルド14959の一般的な Windows 情報については、 [windows のブログ](https://blogs.windows.com/windowsexperience/2016/11/03/announcing-windows-10-insider-preview-build-14959-for-mobile-and-pc/#iI82GufJxMF3POU1.97)を参照してください。</span><span class="sxs-lookup"><span data-stu-id="dea41-1116">For general Windows information on build 14959 visit the [Windows Blog](https://blogs.windows.com/windowsexperience/2016/11/03/announcing-windows-10-insider-preview-build-14959-for-mobile-and-pc/#iI82GufJxMF3POU1.97).</span></span><br/>
 
 
-### <a name="fixed"></a><span data-ttu-id="3c169-1129">固定</span><span class="sxs-lookup"><span data-stu-id="3c169-1129">Fixed</span></span>
+### <a name="fixed"></a><span data-ttu-id="dea41-1117">固定</span><span class="sxs-lookup"><span data-stu-id="dea41-1117">Fixed</span></span>
 
- - <span data-ttu-id="3c169-1130">Windows Subsystem for Linux では、コントロールを超える状況により、このビルドには更新プログラムがありません。</span><span class="sxs-lookup"><span data-stu-id="3c169-1130">Due to circumstances beyond our control there are no updates in this build for the Windows Subsystem for Linux.</span></span>  <span data-ttu-id="3c169-1131">定期的にスケジュールされた更新は、次回のリリースで再開されます。</span><span class="sxs-lookup"><span data-stu-id="3c169-1131">Regularly scheduled updates will resume on the next release.</span></span>
+- <span data-ttu-id="dea41-1118">Windows の Pico Process 通知が改善されました。</span><span class="sxs-lookup"><span data-stu-id="dea41-1118">Improved Pico Process notification for Windows.</span></span>  <span data-ttu-id="dea41-1119">[Wsl ブログ](https://blogs.msdn.microsoft.com/wsl/2016/11/01/wsl-antivirus-and-firewall-compatibility/)に記載されている追加情報。</span><span class="sxs-lookup"><span data-stu-id="dea41-1119">Additional information found on the [WSL Blog](https://blogs.msdn.microsoft.com/wsl/2016/11/01/wsl-antivirus-and-firewall-compatibility/).</span></span>
+- <span data-ttu-id="dea41-1120">Windows の相互運用性による安定性の向上</span><span class="sxs-lookup"><span data-stu-id="dea41-1120">Improved stability with Windows interoperability</span></span>
+- <span data-ttu-id="dea41-1121">エンタープライズデータ保護 (EDP) が有効になっている場合に bash を起動したときのエラー0x80070057 を修正しました</span><span class="sxs-lookup"><span data-stu-id="dea41-1121">Fixed error 0x80070057 when launching bash.exe when Enterprise Data Protection (EDP) is enabled</span></span>
+- <span data-ttu-id="dea41-1122">その他のバグ修正と機能強化</span><span class="sxs-lookup"><span data-stu-id="dea41-1122">Additional bugfixes and improvements</span></span>
 
-### <a name="ltp-results"></a><span data-ttu-id="3c169-1132">LTP の結果:</span><span class="sxs-lookup"><span data-stu-id="3c169-1132">LTP Results:</span></span>
-<span data-ttu-id="3c169-1133">成功したテストの数:665</span><span class="sxs-lookup"><span data-stu-id="3c169-1133">Number of Passing Test: 665</span></span> </br>
-<span data-ttu-id="3c169-1134">非パッシング (失敗、スキップされたなど) の数:263</span><span class="sxs-lookup"><span data-stu-id="3c169-1134">Number of non-Passing (failing, skipped, etc…): 263</span></span> </br>
-[<span data-ttu-id="3c169-1135">LTP テストの実行ログ</span><span class="sxs-lookup"><span data-stu-id="3c169-1135">LTP Test Run Logs</span></span>](https://github.com/Microsoft/CommandLine-Documentation/tree/live/LTP_Results/14955)<br/>
+### <a name="ltp-results"></a><span data-ttu-id="dea41-1123">LTP の結果:</span><span class="sxs-lookup"><span data-stu-id="dea41-1123">LTP Results:</span></span>
+<span data-ttu-id="dea41-1124">成功したテストの数:665</span><span class="sxs-lookup"><span data-stu-id="dea41-1124">Number of Passing Test: 665</span></span> </br>
+<span data-ttu-id="dea41-1125">非パッシング (失敗、スキップされたなど) の数:263</span><span class="sxs-lookup"><span data-stu-id="dea41-1125">Number of non-Passing (failing, skipped, etc…): 263</span></span> </br>
+[<span data-ttu-id="dea41-1126">LTP テストの実行ログ</span><span class="sxs-lookup"><span data-stu-id="dea41-1126">LTP Test Run Logs</span></span>](https://github.com/Microsoft/CommandLine-Documentation/tree/live/LTP_Results/14959)<br/>
 
 <br/>
 
-## <a name="build-14951"></a><span data-ttu-id="3c169-1136">ビルド14951</span><span class="sxs-lookup"><span data-stu-id="3c169-1136">Build 14951</span></span>
+## <a name="build-14955"></a><span data-ttu-id="dea41-1127">ビルド14955</span><span class="sxs-lookup"><span data-stu-id="dea41-1127">Build 14955</span></span>
 
-<span data-ttu-id="3c169-1137">ビルド14951の一般的な Windows 情報については、 [windows のブログ](https://blogs.windows.com/windowsexperience/2016/10/19/announcing-windows-10-insider-preview-build-14951-for-mobile-and-pc/)を参照してください。</span><span class="sxs-lookup"><span data-stu-id="3c169-1137">For general Windows information on build 14951 visit the [Windows Blog](https://blogs.windows.com/windowsexperience/2016/10/19/announcing-windows-10-insider-preview-build-14951-for-mobile-and-pc/).</span></span><br/>
+<span data-ttu-id="dea41-1128">ビルド14955の一般的な Windows 情報については、 [windows のブログ](https://blogs.windows.com/windowsexperience/2016/10/25/announcing-windows-10-insider-preview-build-14955-for-mobile-and-pc/#guGXQzKVFrZIDUYR.97)を参照してください。</span><span class="sxs-lookup"><span data-stu-id="dea41-1128">For general Windows information on build 14955 visit the [Windows Blog](https://blogs.windows.com/windowsexperience/2016/10/25/announcing-windows-10-insider-preview-build-14955-for-mobile-and-pc/#guGXQzKVFrZIDUYR.97).</span></span><br/>
 
 
-### <a name="new-feature-windows--ubuntu-interoperability"></a><span data-ttu-id="3c169-1138">新機能:Windows/Ubuntu の相互運用性</span><span class="sxs-lookup"><span data-stu-id="3c169-1138">New Feature: Windows / Ubuntu Interoperability</span></span>
-<span data-ttu-id="3c169-1139">Windows バイナリを WSL コマンドラインから直接呼び出すことができるようになりました。</span><span class="sxs-lookup"><span data-stu-id="3c169-1139">Windows binaries can now be invoked directly from the WSL command line.</span></span>  <span data-ttu-id="3c169-1140">これにより、ユーザーは Windows 環境とシステムを、不可能な方法で操作できるようになります。</span><span class="sxs-lookup"><span data-stu-id="3c169-1140">This gives users the ability to interact with their Windows environment and system in a way that has not been possible.</span></span>  <span data-ttu-id="3c169-1141">簡単な例として、ユーザーが次のコマンドを実行できるようになりました。</span><span class="sxs-lookup"><span data-stu-id="3c169-1141">As a quick example, it is now possible for users to run the following commands:</span></span>
+### <a name="fixed"></a><span data-ttu-id="dea41-1129">固定</span><span class="sxs-lookup"><span data-stu-id="dea41-1129">Fixed</span></span>
+
+ - <span data-ttu-id="dea41-1130">Windows Subsystem for Linux では、コントロールを超える状況により、このビルドには更新プログラムがありません。</span><span class="sxs-lookup"><span data-stu-id="dea41-1130">Due to circumstances beyond our control there are no updates in this build for the Windows Subsystem for Linux.</span></span>  <span data-ttu-id="dea41-1131">定期的にスケジュールされた更新は、次回のリリースで再開されます。</span><span class="sxs-lookup"><span data-stu-id="dea41-1131">Regularly scheduled updates will resume on the next release.</span></span>
+
+### <a name="ltp-results"></a><span data-ttu-id="dea41-1132">LTP の結果:</span><span class="sxs-lookup"><span data-stu-id="dea41-1132">LTP Results:</span></span>
+<span data-ttu-id="dea41-1133">成功したテストの数:665</span><span class="sxs-lookup"><span data-stu-id="dea41-1133">Number of Passing Test: 665</span></span> </br>
+<span data-ttu-id="dea41-1134">非パッシング (失敗、スキップされたなど) の数:263</span><span class="sxs-lookup"><span data-stu-id="dea41-1134">Number of non-Passing (failing, skipped, etc…): 263</span></span> </br>
+[<span data-ttu-id="dea41-1135">LTP テストの実行ログ</span><span class="sxs-lookup"><span data-stu-id="dea41-1135">LTP Test Run Logs</span></span>](https://github.com/Microsoft/CommandLine-Documentation/tree/live/LTP_Results/14955)<br/>
+
+<br/>
+
+## <a name="build-14951"></a><span data-ttu-id="dea41-1136">ビルド14951</span><span class="sxs-lookup"><span data-stu-id="dea41-1136">Build 14951</span></span>
+
+<span data-ttu-id="dea41-1137">ビルド14951の一般的な Windows 情報については、 [windows のブログ](https://blogs.windows.com/windowsexperience/2016/10/19/announcing-windows-10-insider-preview-build-14951-for-mobile-and-pc/)を参照してください。</span><span class="sxs-lookup"><span data-stu-id="dea41-1137">For general Windows information on build 14951 visit the [Windows Blog](https://blogs.windows.com/windowsexperience/2016/10/19/announcing-windows-10-insider-preview-build-14951-for-mobile-and-pc/).</span></span><br/>
+
+
+### <a name="new-feature-windows--ubuntu-interoperability"></a><span data-ttu-id="dea41-1138">新機能:Windows/Ubuntu の相互運用性</span><span class="sxs-lookup"><span data-stu-id="dea41-1138">New Feature: Windows / Ubuntu Interoperability</span></span>
+<span data-ttu-id="dea41-1139">Windows バイナリを WSL コマンドラインから直接呼び出すことができるようになりました。</span><span class="sxs-lookup"><span data-stu-id="dea41-1139">Windows binaries can now be invoked directly from the WSL command line.</span></span>  <span data-ttu-id="dea41-1140">これにより、ユーザーは Windows 環境とシステムを、不可能な方法で操作できるようになります。</span><span class="sxs-lookup"><span data-stu-id="dea41-1140">This gives users the ability to interact with their Windows environment and system in a way that has not been possible.</span></span>  <span data-ttu-id="dea41-1141">簡単な例として、ユーザーが次のコマンドを実行できるようになりました。</span><span class="sxs-lookup"><span data-stu-id="dea41-1141">As a quick example, it is now possible for users to run the following commands:</span></span>
 
     ```
     $ export PATH=$PATH:/mnt/c/Windows/System32
@@ -1423,309 +1423,309 @@ wslconfig.exe /terminate <DistributionName>
     $ cmd.exe /c dir
     ```
 
-<span data-ttu-id="3c169-1142">詳細については、以下を参照してください。</span><span class="sxs-lookup"><span data-stu-id="3c169-1142">More information can be found at:</span></span>
+<span data-ttu-id="dea41-1142">詳細については、以下を参照してください。</span><span class="sxs-lookup"><span data-stu-id="dea41-1142">More information can be found at:</span></span>
 
-- [<span data-ttu-id="3c169-1143">相互運用のための WSL チームブログ</span><span class="sxs-lookup"><span data-stu-id="3c169-1143">WSL Team Blog for Interop</span></span>](https://blogs.msdn.microsoft.com/wsl/2016/10/19/windows-and-ubuntu-interoperability/)<br/>
-- [<span data-ttu-id="3c169-1144">MSDN Interop のドキュメント</span><span class="sxs-lookup"><span data-stu-id="3c169-1144">MSDN Interop Documentation</span></span>](https://msdn.microsoft.com/en-us/commandline/wsl/interop)<br/>
+- [<span data-ttu-id="dea41-1143">相互運用のための WSL チームブログ</span><span class="sxs-lookup"><span data-stu-id="dea41-1143">WSL Team Blog for Interop</span></span>](https://blogs.msdn.microsoft.com/wsl/2016/10/19/windows-and-ubuntu-interoperability/)<br/>
+- [<span data-ttu-id="dea41-1144">MSDN Interop のドキュメント</span><span class="sxs-lookup"><span data-stu-id="dea41-1144">MSDN Interop Documentation</span></span>](https://msdn.microsoft.com/en-us/commandline/wsl/interop)<br/>
 
-### <a name="fixed"></a><span data-ttu-id="3c169-1145">固定</span><span class="sxs-lookup"><span data-stu-id="3c169-1145">Fixed</span></span>
+### <a name="fixed"></a><span data-ttu-id="dea41-1145">固定</span><span class="sxs-lookup"><span data-stu-id="dea41-1145">Fixed</span></span>
 
-- <span data-ttu-id="3c169-1146">Ubuntu 16.04 (Xenial) が、すべての新しい WSL インスタンスにインストールされるようになりました。</span><span class="sxs-lookup"><span data-stu-id="3c169-1146">Ubuntu 16.04 (Xenial) is now installed for all new WSL instances.</span></span>  <span data-ttu-id="3c169-1147">既存の 14.04 (Trusty) インスタンスを持つユーザーは自動的にアップグレードされません。</span><span class="sxs-lookup"><span data-stu-id="3c169-1147">Users with existing 14.04 (Trusty) instances will not be automatically upgraded.</span></span>
-- <span data-ttu-id="3c169-1148">インストール中に設定されたロケールが表示されるようになりました</span><span class="sxs-lookup"><span data-stu-id="3c169-1148">Locale set during install is now displayed</span></span>
-- <span data-ttu-id="3c169-1149">WSL プロセスをファイルにリダイレクトする場合のバグを含むターミナルの機能強化</span><span class="sxs-lookup"><span data-stu-id="3c169-1149">Terminal improvements including bug where redirecting a WSL process to a file does not always work</span></span>
-- <span data-ttu-id="3c169-1150">コンソールの有効期間は、bash の有効期間に関連付けられている必要があります</span><span class="sxs-lookup"><span data-stu-id="3c169-1150">Console lifetime should be tied to bash.exe lifetime</span></span>
-- <span data-ttu-id="3c169-1151">コンソールウィンドウのサイズは、バッファーサイズではなく表示サイズを使用する必要があります</span><span class="sxs-lookup"><span data-stu-id="3c169-1151">Console window size should use visible size, not buffer size</span></span>
-- <span data-ttu-id="3c169-1152">その他のバグ修正と機能強化</span><span class="sxs-lookup"><span data-stu-id="3c169-1152">Additional bugfixes and improvements</span></span>
+- <span data-ttu-id="dea41-1146">Ubuntu 16.04 (Xenial) が、すべての新しい WSL インスタンスにインストールされるようになりました。</span><span class="sxs-lookup"><span data-stu-id="dea41-1146">Ubuntu 16.04 (Xenial) is now installed for all new WSL instances.</span></span>  <span data-ttu-id="dea41-1147">既存の 14.04 (Trusty) インスタンスを持つユーザーは自動的にアップグレードされません。</span><span class="sxs-lookup"><span data-stu-id="dea41-1147">Users with existing 14.04 (Trusty) instances will not be automatically upgraded.</span></span>
+- <span data-ttu-id="dea41-1148">インストール中に設定されたロケールが表示されるようになりました</span><span class="sxs-lookup"><span data-stu-id="dea41-1148">Locale set during install is now displayed</span></span>
+- <span data-ttu-id="dea41-1149">WSL プロセスをファイルにリダイレクトする場合のバグを含むターミナルの機能強化</span><span class="sxs-lookup"><span data-stu-id="dea41-1149">Terminal improvements including bug where redirecting a WSL process to a file does not always work</span></span>
+- <span data-ttu-id="dea41-1150">コンソールの有効期間は、bash の有効期間に関連付けられている必要があります</span><span class="sxs-lookup"><span data-stu-id="dea41-1150">Console lifetime should be tied to bash.exe lifetime</span></span>
+- <span data-ttu-id="dea41-1151">コンソールウィンドウのサイズは、バッファーサイズではなく表示サイズを使用する必要があります</span><span class="sxs-lookup"><span data-stu-id="dea41-1151">Console window size should use visible size, not buffer size</span></span>
+- <span data-ttu-id="dea41-1152">その他のバグ修正と機能強化</span><span class="sxs-lookup"><span data-stu-id="dea41-1152">Additional bugfixes and improvements</span></span>
 
-### <a name="ltp-results"></a><span data-ttu-id="3c169-1153">LTP の結果:</span><span class="sxs-lookup"><span data-stu-id="3c169-1153">LTP Results:</span></span>
-<span data-ttu-id="3c169-1154">成功したテストの数:665</span><span class="sxs-lookup"><span data-stu-id="3c169-1154">Number of Passing Test: 665</span></span> </br>
-<span data-ttu-id="3c169-1155">非パッシング (失敗、スキップされたなど) の数:263</span><span class="sxs-lookup"><span data-stu-id="3c169-1155">Number of non-Passing (failing, skipped, etc…): 263</span></span> </br>
-[<span data-ttu-id="3c169-1156">LTP テストの実行ログ</span><span class="sxs-lookup"><span data-stu-id="3c169-1156">LTP Test Run Logs</span></span>](https://github.com/Microsoft/CommandLine-Documentation/tree/live/LTP_Results/14951)<br/>
-
-<br/>
-
-## <a name="build-14946"></a><span data-ttu-id="3c169-1157">ビルド14946</span><span class="sxs-lookup"><span data-stu-id="3c169-1157">Build 14946</span></span>
-
-<span data-ttu-id="3c169-1158">ビルド14946の一般的な Windows 情報については、 [windows のブログ](https://blogs.windows.com/windowsexperience/2016/10/13/announcing-windows-10-insider-preview-build-14946-for-pc-and-mobile/#xj8GdVooEqo4H7H7.97)を参照してください。</span><span class="sxs-lookup"><span data-stu-id="3c169-1158">For general Windows information on build 14946 visit the [Windows Blog](https://blogs.windows.com/windowsexperience/2016/10/13/announcing-windows-10-insider-preview-build-14946-for-pc-and-mobile/#xj8GdVooEqo4H7H7.97).</span></span><br/>
-
-
-### <a name="fixed"></a><span data-ttu-id="3c169-1159">固定</span><span class="sxs-lookup"><span data-stu-id="3c169-1159">Fixed</span></span>
-
-- <span data-ttu-id="3c169-1160">スペースまたは引用符を含む NT ユーザー名を持つユーザーの WSL ユーザーアカウントを作成できない問題を修正しています。</span><span class="sxs-lookup"><span data-stu-id="3c169-1160">Fixed an issue that prevented creating WSL user accounts for users with NT usernames that contain spaces or quotes.</span></span> 
-- <span data-ttu-id="3c169-1161">ディレクトリのリンク数が stat で0を返すように、VolFs と DrvFs を変更します。</span><span class="sxs-lookup"><span data-stu-id="3c169-1161">Change VolFs and DrvFs to return 0 for directory's link count in stat</span></span>
-- <span data-ttu-id="3c169-1162">IPV6_MULTICAST_HOPS socket オプションをサポートします。</span><span class="sxs-lookup"><span data-stu-id="3c169-1162">Support IPV6_MULTICAST_HOPS socket option.</span></span>
-- <span data-ttu-id="3c169-1163">Tty ごとに1つのコンソール i/o ループに制限します。</span><span class="sxs-lookup"><span data-stu-id="3c169-1163">Limit to a single console I/O loop per tty.</span></span> <span data-ttu-id="3c169-1164">例: 次のコマンドを実行できます。</span><span class="sxs-lookup"><span data-stu-id="3c169-1164">Example: the following command is possible:</span></span>
-  - <span data-ttu-id="3c169-1165">bash-c "echo data" |bash-c "ssh user@example.com " cat > foo .txt ""</span><span class="sxs-lookup"><span data-stu-id="3c169-1165">bash -c "echo data" | bash -c "ssh user@example.com 'cat > foo.txt'"</span></span>
-
-- <span data-ttu-id="3c169-1166">/proc/cpuinfo のタブでスペースを置換する (GH #1115)</span><span class="sxs-lookup"><span data-stu-id="3c169-1166">replace spaces with tabs in /proc/cpuinfo (GH #1115)</span></span>
-- <span data-ttu-id="3c169-1167">Mountinfo に DrvFs が、マウントされた Windows ボリュームと一致する名前で表示されるようになりました。</span><span class="sxs-lookup"><span data-stu-id="3c169-1167">DrvFs now appears in mountinfo with a name that matches mounted Windows volume</span></span>
-- <span data-ttu-id="3c169-1168">/home と/root が mountinfo に正しい名前で表示されるようになりました</span><span class="sxs-lookup"><span data-stu-id="3c169-1168">/home and /root now appear in mountinfo with correct names</span></span>
-- <span data-ttu-id="3c169-1169">その他のバグ修正と機能強化</span><span class="sxs-lookup"><span data-stu-id="3c169-1169">Additional bugfixes and improvements</span></span>
-
-### <a name="ltp-results"></a><span data-ttu-id="3c169-1170">LTP の結果:</span><span class="sxs-lookup"><span data-stu-id="3c169-1170">LTP Results:</span></span>
-<span data-ttu-id="3c169-1171">成功したテストの数:665</span><span class="sxs-lookup"><span data-stu-id="3c169-1171">Number of Passing Test: 665</span></span> </br>
-<span data-ttu-id="3c169-1172">非パッシング (失敗、スキップされたなど) の数:263</span><span class="sxs-lookup"><span data-stu-id="3c169-1172">Number of non-Passing (failing, skipped, etc…): 263</span></span> </br>
-[<span data-ttu-id="3c169-1173">LTP テストの実行ログ</span><span class="sxs-lookup"><span data-stu-id="3c169-1173">LTP Test Run Logs</span></span>](https://github.com/Microsoft/CommandLine-Documentation/tree/live/LTP_Results/14946)<br/>
+### <a name="ltp-results"></a><span data-ttu-id="dea41-1153">LTP の結果:</span><span class="sxs-lookup"><span data-stu-id="dea41-1153">LTP Results:</span></span>
+<span data-ttu-id="dea41-1154">成功したテストの数:665</span><span class="sxs-lookup"><span data-stu-id="dea41-1154">Number of Passing Test: 665</span></span> </br>
+<span data-ttu-id="dea41-1155">非パッシング (失敗、スキップされたなど) の数:263</span><span class="sxs-lookup"><span data-stu-id="dea41-1155">Number of non-Passing (failing, skipped, etc…): 263</span></span> </br>
+[<span data-ttu-id="dea41-1156">LTP テストの実行ログ</span><span class="sxs-lookup"><span data-stu-id="dea41-1156">LTP Test Run Logs</span></span>](https://github.com/Microsoft/CommandLine-Documentation/tree/live/LTP_Results/14951)<br/>
 
 <br/>
 
-## <a name="build-14942"></a><span data-ttu-id="3c169-1174">ビルド14942</span><span class="sxs-lookup"><span data-stu-id="3c169-1174">Build 14942</span></span>
+## <a name="build-14946"></a><span data-ttu-id="dea41-1157">ビルド14946</span><span class="sxs-lookup"><span data-stu-id="dea41-1157">Build 14946</span></span>
 
-<span data-ttu-id="3c169-1175">ビルド14942の一般的な Windows 情報については、 [windows のブログ](https://aka.ms/onefourninefourtwoooooo)を参照してください。</span><span class="sxs-lookup"><span data-stu-id="3c169-1175">For general Windows information on build 14942 visit the [Windows Blog](https://aka.ms/onefourninefourtwoooooo).</span></span><br/>
-
-
-### <a name="fixed"></a><span data-ttu-id="3c169-1176">固定</span><span class="sxs-lookup"><span data-stu-id="3c169-1176">Fixed</span></span>
-
-- <span data-ttu-id="3c169-1177">SSH をブロックしていた "NOEXECUTE MEMORY の実行を試行しました" というネットワーククラッシュを含む、いくつかのバグを解決しました。</span><span class="sxs-lookup"><span data-stu-id="3c169-1177">A number of bugchecks addressed, including the “ATTEMPTED EXECUTE OF NOEXECUTE MEMORY” networking crash which was blocking SSH</span></span>
-- <span data-ttu-id="3c169-1178">DrvFs の Windows アプリケーションから生成された通知の inotifiy サポートがになりました。</span><span class="sxs-lookup"><span data-stu-id="3c169-1178">inotifiy support for notifications generated from Windows applications on DrvFs is now in</span></span>
-- <span data-ttu-id="3c169-1179">TCP_KEEPIDLE と TCP_KEEPINTVL を mongod 用に実装します。</span><span class="sxs-lookup"><span data-stu-id="3c169-1179">Implement TCP_KEEPIDLE and TCP_KEEPINTVL for mongod.</span></span> <span data-ttu-id="3c169-1180">(GH #695)</span><span class="sxs-lookup"><span data-stu-id="3c169-1180">(GH #695)</span></span>
-- <span data-ttu-id="3c169-1181">Pivot_root システムコールを実装する</span><span class="sxs-lookup"><span data-stu-id="3c169-1181">Implement the pivot_root system call</span></span>
-- <span data-ttu-id="3c169-1182">SO_DONTROUTE のソケットの実装オプション</span><span class="sxs-lookup"><span data-stu-id="3c169-1182">Implement socket option for SO_DONTROUTE</span></span>
-- <span data-ttu-id="3c169-1183">その他のバグ修正と機能強化</span><span class="sxs-lookup"><span data-stu-id="3c169-1183">Additional bugfixes and improvements</span></span>
+<span data-ttu-id="dea41-1158">ビルド14946の一般的な Windows 情報については、 [windows のブログ](https://blogs.windows.com/windowsexperience/2016/10/13/announcing-windows-10-insider-preview-build-14946-for-pc-and-mobile/#xj8GdVooEqo4H7H7.97)を参照してください。</span><span class="sxs-lookup"><span data-stu-id="dea41-1158">For general Windows information on build 14946 visit the [Windows Blog](https://blogs.windows.com/windowsexperience/2016/10/13/announcing-windows-10-insider-preview-build-14946-for-pc-and-mobile/#xj8GdVooEqo4H7H7.97).</span></span><br/>
 
 
-### <a name="ltp-results"></a><span data-ttu-id="3c169-1184">LTP の結果:</span><span class="sxs-lookup"><span data-stu-id="3c169-1184">LTP Results:</span></span>
-<span data-ttu-id="3c169-1185">成功したテストの数:665</span><span class="sxs-lookup"><span data-stu-id="3c169-1185">Number of Passing Test: 665</span></span> </br>
-<span data-ttu-id="3c169-1186">非パッシング (失敗、スキップされたなど) の数:263</span><span class="sxs-lookup"><span data-stu-id="3c169-1186">Number of non-Passing (failing, skipped, etc…): 263</span></span> </br>
-[<span data-ttu-id="3c169-1187">LTP テストの実行ログ</span><span class="sxs-lookup"><span data-stu-id="3c169-1187">LTP Test Run Logs</span></span>](https://github.com/Microsoft/CommandLine-Documentation/tree/live/LTP_Results/14942)<br/>
+### <a name="fixed"></a><span data-ttu-id="dea41-1159">固定</span><span class="sxs-lookup"><span data-stu-id="dea41-1159">Fixed</span></span>
 
-### <a name="syscall-support"></a><span data-ttu-id="3c169-1188">Syscall のサポート</span><span class="sxs-lookup"><span data-stu-id="3c169-1188">Syscall Support</span></span>
-<span data-ttu-id="3c169-1189">次に示すのは、WSL でいくつかの実装を持つ新しいまたは強化された syscall の一覧です。</span><span class="sxs-lookup"><span data-stu-id="3c169-1189">Below are a list of new or enhanced syscalls that have some implementation in WSL.</span></span> <span data-ttu-id="3c169-1190">この一覧の syscall は、少なくとも1つのシナリオでサポートされていますが、現時点では一部のパラメーターがサポートされていない可能性があります。</span><span class="sxs-lookup"><span data-stu-id="3c169-1190">The syscalls on this list are supported in at least one scenario, but may not have all parameters supported at this time.</span></span>
+- <span data-ttu-id="dea41-1160">スペースまたは引用符を含む NT ユーザー名を持つユーザーの WSL ユーザーアカウントを作成できない問題を修正しています。</span><span class="sxs-lookup"><span data-stu-id="dea41-1160">Fixed an issue that prevented creating WSL user accounts for users with NT usernames that contain spaces or quotes.</span></span> 
+- <span data-ttu-id="dea41-1161">ディレクトリのリンク数が stat で0を返すように、VolFs と DrvFs を変更します。</span><span class="sxs-lookup"><span data-stu-id="dea41-1161">Change VolFs and DrvFs to return 0 for directory's link count in stat</span></span>
+- <span data-ttu-id="dea41-1162">IPV6_MULTICAST_HOPS socket オプションをサポートします。</span><span class="sxs-lookup"><span data-stu-id="dea41-1162">Support IPV6_MULTICAST_HOPS socket option.</span></span>
+- <span data-ttu-id="dea41-1163">Tty ごとに1つのコンソール i/o ループに制限します。</span><span class="sxs-lookup"><span data-stu-id="dea41-1163">Limit to a single console I/O loop per tty.</span></span> <span data-ttu-id="dea41-1164">例: 次のコマンドを実行できます。</span><span class="sxs-lookup"><span data-stu-id="dea41-1164">Example: the following command is possible:</span></span>
+  - <span data-ttu-id="dea41-1165">bash-c "echo data" |bash-c "ssh user@example.com " cat > foo .txt ""</span><span class="sxs-lookup"><span data-stu-id="dea41-1165">bash -c "echo data" | bash -c "ssh user@example.com 'cat > foo.txt'"</span></span>
+
+- <span data-ttu-id="dea41-1166">/proc/cpuinfo のタブでスペースを置換する (GH #1115)</span><span class="sxs-lookup"><span data-stu-id="dea41-1166">replace spaces with tabs in /proc/cpuinfo (GH #1115)</span></span>
+- <span data-ttu-id="dea41-1167">Mountinfo に DrvFs が、マウントされた Windows ボリュームと一致する名前で表示されるようになりました。</span><span class="sxs-lookup"><span data-stu-id="dea41-1167">DrvFs now appears in mountinfo with a name that matches mounted Windows volume</span></span>
+- <span data-ttu-id="dea41-1168">/home と/root が mountinfo に正しい名前で表示されるようになりました</span><span class="sxs-lookup"><span data-stu-id="dea41-1168">/home and /root now appear in mountinfo with correct names</span></span>
+- <span data-ttu-id="dea41-1169">その他のバグ修正と機能強化</span><span class="sxs-lookup"><span data-stu-id="dea41-1169">Additional bugfixes and improvements</span></span>
+
+### <a name="ltp-results"></a><span data-ttu-id="dea41-1170">LTP の結果:</span><span class="sxs-lookup"><span data-stu-id="dea41-1170">LTP Results:</span></span>
+<span data-ttu-id="dea41-1171">成功したテストの数:665</span><span class="sxs-lookup"><span data-stu-id="dea41-1171">Number of Passing Test: 665</span></span> </br>
+<span data-ttu-id="dea41-1172">非パッシング (失敗、スキップされたなど) の数:263</span><span class="sxs-lookup"><span data-stu-id="dea41-1172">Number of non-Passing (failing, skipped, etc…): 263</span></span> </br>
+[<span data-ttu-id="dea41-1173">LTP テストの実行ログ</span><span class="sxs-lookup"><span data-stu-id="dea41-1173">LTP Test Run Logs</span></span>](https://github.com/Microsoft/CommandLine-Documentation/tree/live/LTP_Results/14946)<br/>
+
+<br/>
+
+## <a name="build-14942"></a><span data-ttu-id="dea41-1174">ビルド14942</span><span class="sxs-lookup"><span data-stu-id="dea41-1174">Build 14942</span></span>
+
+<span data-ttu-id="dea41-1175">ビルド14942の一般的な Windows 情報については、 [windows のブログ](https://aka.ms/onefourninefourtwoooooo)を参照してください。</span><span class="sxs-lookup"><span data-stu-id="dea41-1175">For general Windows information on build 14942 visit the [Windows Blog](https://aka.ms/onefourninefourtwoooooo).</span></span><br/>
+
+
+### <a name="fixed"></a><span data-ttu-id="dea41-1176">固定</span><span class="sxs-lookup"><span data-stu-id="dea41-1176">Fixed</span></span>
+
+- <span data-ttu-id="dea41-1177">SSH をブロックしていた "NOEXECUTE MEMORY の実行を試行しました" というネットワーククラッシュを含む、いくつかのバグを解決しました。</span><span class="sxs-lookup"><span data-stu-id="dea41-1177">A number of bugchecks addressed, including the “ATTEMPTED EXECUTE OF NOEXECUTE MEMORY” networking crash which was blocking SSH</span></span>
+- <span data-ttu-id="dea41-1178">DrvFs の Windows アプリケーションから生成された通知の inotifiy サポートがになりました。</span><span class="sxs-lookup"><span data-stu-id="dea41-1178">inotifiy support for notifications generated from Windows applications on DrvFs is now in</span></span>
+- <span data-ttu-id="dea41-1179">TCP_KEEPIDLE と TCP_KEEPINTVL を mongod 用に実装します。</span><span class="sxs-lookup"><span data-stu-id="dea41-1179">Implement TCP_KEEPIDLE and TCP_KEEPINTVL for mongod.</span></span> <span data-ttu-id="dea41-1180">(GH #695)</span><span class="sxs-lookup"><span data-stu-id="dea41-1180">(GH #695)</span></span>
+- <span data-ttu-id="dea41-1181">Pivot_root システムコールを実装する</span><span class="sxs-lookup"><span data-stu-id="dea41-1181">Implement the pivot_root system call</span></span>
+- <span data-ttu-id="dea41-1182">SO_DONTROUTE のソケットの実装オプション</span><span class="sxs-lookup"><span data-stu-id="dea41-1182">Implement socket option for SO_DONTROUTE</span></span>
+- <span data-ttu-id="dea41-1183">その他のバグ修正と機能強化</span><span class="sxs-lookup"><span data-stu-id="dea41-1183">Additional bugfixes and improvements</span></span>
+
+
+### <a name="ltp-results"></a><span data-ttu-id="dea41-1184">LTP の結果:</span><span class="sxs-lookup"><span data-stu-id="dea41-1184">LTP Results:</span></span>
+<span data-ttu-id="dea41-1185">成功したテストの数:665</span><span class="sxs-lookup"><span data-stu-id="dea41-1185">Number of Passing Test: 665</span></span> </br>
+<span data-ttu-id="dea41-1186">非パッシング (失敗、スキップされたなど) の数:263</span><span class="sxs-lookup"><span data-stu-id="dea41-1186">Number of non-Passing (failing, skipped, etc…): 263</span></span> </br>
+[<span data-ttu-id="dea41-1187">LTP テストの実行ログ</span><span class="sxs-lookup"><span data-stu-id="dea41-1187">LTP Test Run Logs</span></span>](https://github.com/Microsoft/CommandLine-Documentation/tree/live/LTP_Results/14942)<br/>
+
+### <a name="syscall-support"></a><span data-ttu-id="dea41-1188">Syscall のサポート</span><span class="sxs-lookup"><span data-stu-id="dea41-1188">Syscall Support</span></span>
+<span data-ttu-id="dea41-1189">次に示すのは、WSL でいくつかの実装を持つ新しいまたは強化された syscall の一覧です。</span><span class="sxs-lookup"><span data-stu-id="dea41-1189">Below are a list of new or enhanced syscalls that have some implementation in WSL.</span></span> <span data-ttu-id="dea41-1190">この一覧の syscall は、少なくとも1つのシナリオでサポートされていますが、現時点では一部のパラメーターがサポートされていない可能性があります。</span><span class="sxs-lookup"><span data-stu-id="dea41-1190">The syscalls on this list are supported in at least one scenario, but may not have all parameters supported at this time.</span></span>
 
 `pivot_root`<br/>
 <br/>
 
-## <a name="build-14936"></a><span data-ttu-id="3c169-1191">ビルド14936</span><span class="sxs-lookup"><span data-stu-id="3c169-1191">Build 14936</span></span>
+## <a name="build-14936"></a><span data-ttu-id="dea41-1191">ビルド14936</span><span class="sxs-lookup"><span data-stu-id="dea41-1191">Build 14936</span></span>
 
-<span data-ttu-id="3c169-1192">ビルド14936の一般的な Windows 情報については、 [windows のブログ](https://blogs.windows.com/windowsexperience/2016/09/28/announcing-windows-10-insider-preview-build-14936-for-pc/)を参照してください。</span><span class="sxs-lookup"><span data-stu-id="3c169-1192">For general Windows information on build 14936 visit the [Windows Blog](https://blogs.windows.com/windowsexperience/2016/09/28/announcing-windows-10-insider-preview-build-14936-for-pc/).</span></span><br/>
+<span data-ttu-id="dea41-1192">ビルド14936の一般的な Windows 情報については、 [windows のブログ](https://blogs.windows.com/windowsexperience/2016/09/28/announcing-windows-10-insider-preview-build-14936-for-pc/)を参照してください。</span><span class="sxs-lookup"><span data-stu-id="dea41-1192">For general Windows information on build 14936 visit the [Windows Blog](https://blogs.windows.com/windowsexperience/2016/09/28/announcing-windows-10-insider-preview-build-14936-for-pc/).</span></span><br/>
 
 
-<span data-ttu-id="3c169-1193">注:WSL は、今後のリリースで Ubuntu 14.04 (Trusty) ではなく、Ubuntu バージョン 16.04 (Xenial) をインストールします。</span><span class="sxs-lookup"><span data-stu-id="3c169-1193">Note: WSL will install Ubuntu version 16.04 (Xenial) instead of Ubuntu 14.04 (Trusty) in an upcoming release.</span></span>  <span data-ttu-id="3c169-1194">この変更は、新しいインスタンスをインストールする場合に適用されます (lxrun/install または bash の最初の実行)。</span><span class="sxs-lookup"><span data-stu-id="3c169-1194">This change will apply to Insiders installing new instances (lxrun.exe /install or first run of bash.exe).</span></span>  <span data-ttu-id="3c169-1195">Trusty を使用した既存のインスタンスは自動的にはアップグレードされません。</span><span class="sxs-lookup"><span data-stu-id="3c169-1195">Existing instances with Trusty will not be upgraded automatically.</span></span> <span data-ttu-id="3c169-1196">ユーザーは、Trusty コマンドを使用して、自分のイメージを Xenial にアップグレードできます。</span><span class="sxs-lookup"><span data-stu-id="3c169-1196">Users can upgrade their Trusty image to Xenial using the do-release-upgrade command.</span></span>
+<span data-ttu-id="dea41-1193">注:WSL は、今後のリリースで Ubuntu 14.04 (Trusty) ではなく、Ubuntu バージョン 16.04 (Xenial) をインストールします。</span><span class="sxs-lookup"><span data-stu-id="dea41-1193">Note: WSL will install Ubuntu version 16.04 (Xenial) instead of Ubuntu 14.04 (Trusty) in an upcoming release.</span></span>  <span data-ttu-id="dea41-1194">この変更は、新しいインスタンスをインストールする場合に適用されます (lxrun/install または bash の最初の実行)。</span><span class="sxs-lookup"><span data-stu-id="dea41-1194">This change will apply to Insiders installing new instances (lxrun.exe /install or first run of bash.exe).</span></span>  <span data-ttu-id="dea41-1195">Trusty を使用した既存のインスタンスは自動的にはアップグレードされません。</span><span class="sxs-lookup"><span data-stu-id="dea41-1195">Existing instances with Trusty will not be upgraded automatically.</span></span> <span data-ttu-id="dea41-1196">ユーザーは、Trusty コマンドを使用して、自分のイメージを Xenial にアップグレードできます。</span><span class="sxs-lookup"><span data-stu-id="dea41-1196">Users can upgrade their Trusty image to Xenial using the do-release-upgrade command.</span></span>
 
-### <a name="known-issue"></a><span data-ttu-id="3c169-1197">既知の問題</span><span class="sxs-lookup"><span data-stu-id="3c169-1197">Known Issue</span></span>
-<span data-ttu-id="3c169-1198">WSL でいくつかのソケット実装に問題が発生しています。</span><span class="sxs-lookup"><span data-stu-id="3c169-1198">WSL is experiencing an issue with some socket implementations.</span></span>  <span data-ttu-id="3c169-1199">"NOEXECUTE MEMORY の実行を試行しました" というエラーが発生すると、バグチェックはクラッシュします。</span><span class="sxs-lookup"><span data-stu-id="3c169-1199">The bugcheck manifests itself as a crash with the error “ATTEMPTED EXECUTE OF NOEXECUTE MEMORY”.</span></span>  <span data-ttu-id="3c169-1200">この問題の最も一般的な取り組みは、ssh を使用する場合のクラッシュです。</span><span class="sxs-lookup"><span data-stu-id="3c169-1200">The most common manifestation of this issue is a crash when using ssh.</span></span>  <span data-ttu-id="3c169-1201">根本原因は内部ビルドで固定されており、最も早い機会に Insider にプッシュされます。</span><span class="sxs-lookup"><span data-stu-id="3c169-1201">The root cause is fixed on internal builds and will be pushed to Insiders at the earliest opportunity.</span></span>
+### <a name="known-issue"></a><span data-ttu-id="dea41-1197">既知の問題</span><span class="sxs-lookup"><span data-stu-id="dea41-1197">Known Issue</span></span>
+<span data-ttu-id="dea41-1198">WSL でいくつかのソケット実装に問題が発生しています。</span><span class="sxs-lookup"><span data-stu-id="dea41-1198">WSL is experiencing an issue with some socket implementations.</span></span>  <span data-ttu-id="dea41-1199">"NOEXECUTE MEMORY の実行を試行しました" というエラーが発生すると、バグチェックはクラッシュします。</span><span class="sxs-lookup"><span data-stu-id="dea41-1199">The bugcheck manifests itself as a crash with the error “ATTEMPTED EXECUTE OF NOEXECUTE MEMORY”.</span></span>  <span data-ttu-id="dea41-1200">この問題の最も一般的な取り組みは、ssh を使用する場合のクラッシュです。</span><span class="sxs-lookup"><span data-stu-id="dea41-1200">The most common manifestation of this issue is a crash when using ssh.</span></span>  <span data-ttu-id="dea41-1201">根本原因は内部ビルドで固定されており、最も早い機会に Insider にプッシュされます。</span><span class="sxs-lookup"><span data-stu-id="dea41-1201">The root cause is fixed on internal builds and will be pushed to Insiders at the earliest opportunity.</span></span>
 
-### <a name="fixed"></a><span data-ttu-id="3c169-1202">固定</span><span class="sxs-lookup"><span data-stu-id="3c169-1202">Fixed</span></span>
+### <a name="fixed"></a><span data-ttu-id="dea41-1202">固定</span><span class="sxs-lookup"><span data-stu-id="dea41-1202">Fixed</span></span>
 
-- <span data-ttu-id="3c169-1203">Chroot システム呼び出しを実装します。</span><span class="sxs-lookup"><span data-stu-id="3c169-1203">Implemented the chroot system call</span></span>
-- <span data-ttu-id="3c169-1204">~~DrvFs の Windows アプリケーションから生成された通知のサポートを含む~~inotify の機能強化</span><span class="sxs-lookup"><span data-stu-id="3c169-1204">Improvements in inotify ~~including support for notifications generated from Windows applications on DrvFs~~</span></span>
-  - <span data-ttu-id="3c169-1205">量現時点では利用できない Windows アプリケーションからの変更については、Inotify のサポートが提供されています。</span><span class="sxs-lookup"><span data-stu-id="3c169-1205">Correction: Inotify support for changes originating from Windows applications not available at this time.</span></span>
-- <span data-ttu-id="3c169-1206">IPV6 へのソケットバインド:<port n> : で IPV6_V6ONLY (GH #68、#157、#393、#460、#674、#740、#982、#996) がサポートされるようになりました。</span><span class="sxs-lookup"><span data-stu-id="3c169-1206">Socket binding to IPV6::<port n> now supports IPV6_V6ONLY  (GH #68, #157, #393, #460, #674, #740, #982, #996)</span></span>
-- <span data-ttu-id="3c169-1207">Waitid systemcall が実装された WNOWAIT 動作 (GH #638)</span><span class="sxs-lookup"><span data-stu-id="3c169-1207">WNOWAIT behavior for waitid systemcall implemented (GH #638)</span></span>
-- <span data-ttu-id="3c169-1208">IP ソケットオプション IP_HDRINCL と IP_TTL のサポート</span><span class="sxs-lookup"><span data-stu-id="3c169-1208">Support for IP socket options IP_HDRINCL and IP_TTL</span></span>
-- <span data-ttu-id="3c169-1209">長さ0の読み取り () はすぐに返される必要があります (GH #975)</span><span class="sxs-lookup"><span data-stu-id="3c169-1209">Zero-length read() should return immediately (GH #975)</span></span>
-- <span data-ttu-id="3c169-1210">Tar ファイルに NULL 終端文字を含まないファイル名とファイル名プレフィックスを正しく処理します。</span><span class="sxs-lookup"><span data-stu-id="3c169-1210">Correctly handle filenames and filename prefixes that don't include a NULL terminator in a .tar file.</span></span>
-- <span data-ttu-id="3c169-1211">/dev/null の epoll サポート</span><span class="sxs-lookup"><span data-stu-id="3c169-1211">epoll support for /dev/null</span></span>
-- <span data-ttu-id="3c169-1212">更新プログラムのタイムソースを修正する</span><span class="sxs-lookup"><span data-stu-id="3c169-1212">Fix /dev/alarm time source</span></span>
-- <span data-ttu-id="3c169-1213">Bash-c がファイルにリダイレクトできるようになりました</span><span class="sxs-lookup"><span data-stu-id="3c169-1213">Bash -c now able to redirect to a file</span></span>
-- <span data-ttu-id="3c169-1214">その他のバグ修正と機能強化</span><span class="sxs-lookup"><span data-stu-id="3c169-1214">Additional bugfixes and improvements</span></span>
+- <span data-ttu-id="dea41-1203">Chroot システム呼び出しを実装します。</span><span class="sxs-lookup"><span data-stu-id="dea41-1203">Implemented the chroot system call</span></span>
+- <span data-ttu-id="dea41-1204">~~DrvFs の Windows アプリケーションから生成された通知のサポートを含む~~inotify の機能強化</span><span class="sxs-lookup"><span data-stu-id="dea41-1204">Improvements in inotify ~~including support for notifications generated from Windows applications on DrvFs~~</span></span>
+  - <span data-ttu-id="dea41-1205">量現時点では利用できない Windows アプリケーションからの変更については、Inotify のサポートが提供されています。</span><span class="sxs-lookup"><span data-stu-id="dea41-1205">Correction: Inotify support for changes originating from Windows applications not available at this time.</span></span>
+- <span data-ttu-id="dea41-1206">IPV6 へのソケットバインド:<port n> : で IPV6_V6ONLY (GH #68、#157、#393、#460、#674、#740、#982、#996) がサポートされるようになりました。</span><span class="sxs-lookup"><span data-stu-id="dea41-1206">Socket binding to IPV6::<port n> now supports IPV6_V6ONLY  (GH #68, #157, #393, #460, #674, #740, #982, #996)</span></span>
+- <span data-ttu-id="dea41-1207">Waitid systemcall が実装された WNOWAIT 動作 (GH #638)</span><span class="sxs-lookup"><span data-stu-id="dea41-1207">WNOWAIT behavior for waitid systemcall implemented (GH #638)</span></span>
+- <span data-ttu-id="dea41-1208">IP ソケットオプション IP_HDRINCL と IP_TTL のサポート</span><span class="sxs-lookup"><span data-stu-id="dea41-1208">Support for IP socket options IP_HDRINCL and IP_TTL</span></span>
+- <span data-ttu-id="dea41-1209">長さ0の読み取り () はすぐに返される必要があります (GH #975)</span><span class="sxs-lookup"><span data-stu-id="dea41-1209">Zero-length read() should return immediately (GH #975)</span></span>
+- <span data-ttu-id="dea41-1210">Tar ファイルに NULL 終端文字を含まないファイル名とファイル名プレフィックスを正しく処理します。</span><span class="sxs-lookup"><span data-stu-id="dea41-1210">Correctly handle filenames and filename prefixes that don't include a NULL terminator in a .tar file.</span></span>
+- <span data-ttu-id="dea41-1211">/dev/null の epoll サポート</span><span class="sxs-lookup"><span data-stu-id="dea41-1211">epoll support for /dev/null</span></span>
+- <span data-ttu-id="dea41-1212">更新プログラムのタイムソースを修正する</span><span class="sxs-lookup"><span data-stu-id="dea41-1212">Fix /dev/alarm time source</span></span>
+- <span data-ttu-id="dea41-1213">Bash-c がファイルにリダイレクトできるようになりました</span><span class="sxs-lookup"><span data-stu-id="dea41-1213">Bash -c now able to redirect to a file</span></span>
+- <span data-ttu-id="dea41-1214">その他のバグ修正と機能強化</span><span class="sxs-lookup"><span data-stu-id="dea41-1214">Additional bugfixes and improvements</span></span>
 
-### <a name="ltp-results"></a><span data-ttu-id="3c169-1215">LTP の結果:</span><span class="sxs-lookup"><span data-stu-id="3c169-1215">LTP Results:</span></span>
-<span data-ttu-id="3c169-1216">成功したテストの数:664</span><span class="sxs-lookup"><span data-stu-id="3c169-1216">Number of Passing Test: 664</span></span> </br>
-<span data-ttu-id="3c169-1217">非パッシング (失敗、スキップされたなど) の数:264</span><span class="sxs-lookup"><span data-stu-id="3c169-1217">Number of non-Passing (failing, skipped, etc…): 264</span></span> </br>
-[<span data-ttu-id="3c169-1218">LTP テストの実行ログ</span><span class="sxs-lookup"><span data-stu-id="3c169-1218">LTP Test Run Logs</span></span>](https://github.com/Microsoft/CommandLine-Documentation/tree/live/LTP_Results/14936)<br/>
+### <a name="ltp-results"></a><span data-ttu-id="dea41-1215">LTP の結果:</span><span class="sxs-lookup"><span data-stu-id="dea41-1215">LTP Results:</span></span>
+<span data-ttu-id="dea41-1216">成功したテストの数:664</span><span class="sxs-lookup"><span data-stu-id="dea41-1216">Number of Passing Test: 664</span></span> </br>
+<span data-ttu-id="dea41-1217">非パッシング (失敗、スキップされたなど) の数:264</span><span class="sxs-lookup"><span data-stu-id="dea41-1217">Number of non-Passing (failing, skipped, etc…): 264</span></span> </br>
+[<span data-ttu-id="dea41-1218">LTP テストの実行ログ</span><span class="sxs-lookup"><span data-stu-id="dea41-1218">LTP Test Run Logs</span></span>](https://github.com/Microsoft/CommandLine-Documentation/tree/live/LTP_Results/14936)<br/>
 
-### <a name="syscall-support"></a><span data-ttu-id="3c169-1219">Syscall のサポート</span><span class="sxs-lookup"><span data-stu-id="3c169-1219">Syscall Support</span></span>
-<span data-ttu-id="3c169-1220">次に示すのは、WSL でいくつかの実装を持つ新しいまたは強化された syscall の一覧です。</span><span class="sxs-lookup"><span data-stu-id="3c169-1220">Below are a list of new or enhanced syscalls that have some implementation in WSL.</span></span> <span data-ttu-id="3c169-1221">この一覧の syscall は、少なくとも1つのシナリオでサポートされていますが、現時点では一部のパラメーターがサポートされていない可能性があります。</span><span class="sxs-lookup"><span data-stu-id="3c169-1221">The syscalls on this list are supported in at least one scenario, but may not have all parameters supported at this time.</span></span>
+### <a name="syscall-support"></a><span data-ttu-id="dea41-1219">Syscall のサポート</span><span class="sxs-lookup"><span data-stu-id="dea41-1219">Syscall Support</span></span>
+<span data-ttu-id="dea41-1220">次に示すのは、WSL でいくつかの実装を持つ新しいまたは強化された syscall の一覧です。</span><span class="sxs-lookup"><span data-stu-id="dea41-1220">Below are a list of new or enhanced syscalls that have some implementation in WSL.</span></span> <span data-ttu-id="dea41-1221">この一覧の syscall は、少なくとも1つのシナリオでサポートされていますが、現時点では一部のパラメーターがサポートされていない可能性があります。</span><span class="sxs-lookup"><span data-stu-id="dea41-1221">The syscalls on this list are supported in at least one scenario, but may not have all parameters supported at this time.</span></span>
 
 `chroot`<br/>
 <br/>
 
-## <a name="build-14931"></a><span data-ttu-id="3c169-1222">ビルド14931</span><span class="sxs-lookup"><span data-stu-id="3c169-1222">Build 14931</span></span>
+## <a name="build-14931"></a><span data-ttu-id="dea41-1222">ビルド14931</span><span class="sxs-lookup"><span data-stu-id="dea41-1222">Build 14931</span></span>
 
-<span data-ttu-id="3c169-1223">ビルド14931の一般的な Windows 情報については、 [windows のブログ](https://blogs.windows.com/windowsexperience/2016/09/21/announcing-windows-10-insider-preview-build-14931-for-pc/)を参照してください。</span><span class="sxs-lookup"><span data-stu-id="3c169-1223">For general Windows information on build 14931 visit the [Windows Blog](https://blogs.windows.com/windowsexperience/2016/09/21/announcing-windows-10-insider-preview-build-14931-for-pc/).</span></span><br/>
-
-
-### <a name="fixed"></a><span data-ttu-id="3c169-1224">固定</span><span class="sxs-lookup"><span data-stu-id="3c169-1224">Fixed</span></span>
-
- - <span data-ttu-id="3c169-1225">Windows Subsystem for Linux では、コントロールを超える状況により、このビルドには更新プログラムがありません。</span><span class="sxs-lookup"><span data-stu-id="3c169-1225">Due to circumstances beyond our control there are no updates in this build for the Windows Subsystem for Linux.</span></span>  <span data-ttu-id="3c169-1226">定期的にスケジュールされた更新は、次のリリースで再開されます。</span><span class="sxs-lookup"><span data-stu-id="3c169-1226">Regularly scheduled updates will resume in the next release.</span></span>
-
-<br/>
-
-## <a name="build-14926"></a><span data-ttu-id="3c169-1227">ビルド14926</span><span class="sxs-lookup"><span data-stu-id="3c169-1227">Build 14926</span></span>
-
-<span data-ttu-id="3c169-1228">ビルド14926の一般的な Windows 情報については、 [windows のブログ](https://blogs.windows.com/windowsexperience/2016/09/14/announcing-windows-10-insider-preview-build-14926-for-pc-and-mobile/)を参照してください。</span><span class="sxs-lookup"><span data-stu-id="3c169-1228">For general Windows information on build 14926 visit the [Windows Blog](https://blogs.windows.com/windowsexperience/2016/09/14/announcing-windows-10-insider-preview-build-14926-for-pc-and-mobile/).</span></span><br/>
+<span data-ttu-id="dea41-1223">ビルド14931の一般的な Windows 情報については、 [windows のブログ](https://blogs.windows.com/windowsexperience/2016/09/21/announcing-windows-10-insider-preview-build-14931-for-pc/)を参照してください。</span><span class="sxs-lookup"><span data-stu-id="dea41-1223">For general Windows information on build 14931 visit the [Windows Blog](https://blogs.windows.com/windowsexperience/2016/09/21/announcing-windows-10-insider-preview-build-14931-for-pc/).</span></span><br/>
 
 
-### <a name="fixed"></a><span data-ttu-id="3c169-1229">固定</span><span class="sxs-lookup"><span data-stu-id="3c169-1229">Fixed</span></span>
+### <a name="fixed"></a><span data-ttu-id="dea41-1224">固定</span><span class="sxs-lookup"><span data-stu-id="dea41-1224">Fixed</span></span>
 
-- <span data-ttu-id="3c169-1230">管理者特権を持たないコンソールで Ping が機能するようになりました。</span><span class="sxs-lookup"><span data-stu-id="3c169-1230">Ping now works in consoles which do not have administrator privileges</span></span>
-- <span data-ttu-id="3c169-1231">Ping6 がサポートされるようになりました。管理者特権も必要ありません</span><span class="sxs-lookup"><span data-stu-id="3c169-1231">Ping6 now supported, also without administrator privileges</span></span>
-- <span data-ttu-id="3c169-1232">WSL によって変更されたファイルの Inotify サポート。</span><span class="sxs-lookup"><span data-stu-id="3c169-1232">Inotify support for files modified through WSL.</span></span> <span data-ttu-id="3c169-1233">(GH #216)</span><span class="sxs-lookup"><span data-stu-id="3c169-1233">(GH #216)</span></span>
-  - <span data-ttu-id="3c169-1234">サポートされているフラグ:</span><span class="sxs-lookup"><span data-stu-id="3c169-1234">Flags supported:</span></span>
-    - <span data-ttu-id="3c169-1235">inotify_init1:LX_O_CLOEXEC, LX_O_NONBLOCK</span><span class="sxs-lookup"><span data-stu-id="3c169-1235">inotify_init1: LX_O_CLOEXEC, LX_O_NONBLOCK</span></span>
-    - <span data-ttu-id="3c169-1236">inotify_add_watch イベント:LX_IN_ACCESS, LX_IN_MODIFY, LX_IN_ATTRIB, LX_IN_CLOSE_WRITE, LX_IN_CLOSE_NOWRITE, LX_IN_OPEN, LX_IN_MOVED_FROM, LX_IN_MOVED_TO, LX_IN_CREATE, LX_IN_DELETE, LX_IN_DELETE_SELF, LX_IN_MOVE_SELF</span><span class="sxs-lookup"><span data-stu-id="3c169-1236">inotify_add_watch events: LX_IN_ACCESS, LX_IN_MODIFY, LX_IN_ATTRIB, LX_IN_CLOSE_WRITE, LX_IN_CLOSE_NOWRITE, LX_IN_OPEN, LX_IN_MOVED_FROM, LX_IN_MOVED_TO, LX_IN_CREATE, LX_IN_DELETE, LX_IN_DELETE_SELF, LX_IN_MOVE_SELF</span></span>
-    - <span data-ttu-id="3c169-1237">inotify_add_watch 属性 (i):LX_IN_DONT_FOLLOW, LX_IN_EXCL_UNLINK, LX_IN_MASK_ADD, LX_IN_ONESHOT, LX_IN_ONLYDIR</span><span class="sxs-lookup"><span data-stu-id="3c169-1237">inotify_add_watch attributes: LX_IN_DONT_FOLLOW, LX_IN_EXCL_UNLINK, LX_IN_MASK_ADD, LX_IN_ONESHOT, LX_IN_ONLYDIR</span></span>
-    - <span data-ttu-id="3c169-1238">出力の読み取り:LX_IN_ISDIR, LX_IN_IGNORED</span><span class="sxs-lookup"><span data-stu-id="3c169-1238">read output: LX_IN_ISDIR, LX_IN_IGNORED</span></span>
-  - <span data-ttu-id="3c169-1239">既知の問題:Windows アプリケーションからファイルを変更してもイベントが生成されない</span><span class="sxs-lookup"><span data-stu-id="3c169-1239">Known issue: Modifying files from Windows applications does not generate any events</span></span>
-- <span data-ttu-id="3c169-1240">Unix ソケットで SCM_CREDENTIALS がサポートされるようになりました。</span><span class="sxs-lookup"><span data-stu-id="3c169-1240">Unix socket now supports SCM_CREDENTIALS</span></span>
-
-### <a name="ltp-results"></a><span data-ttu-id="3c169-1241">LTP の結果:</span><span class="sxs-lookup"><span data-stu-id="3c169-1241">LTP Results:</span></span>
-<span data-ttu-id="3c169-1242">成功したテストの数:651</span><span class="sxs-lookup"><span data-stu-id="3c169-1242">Number of Passing Test: 651</span></span> </br>
-<span data-ttu-id="3c169-1243">非パッシング (失敗、スキップされたなど) の数:258</span><span class="sxs-lookup"><span data-stu-id="3c169-1243">Number of non-Passing (failing, skipped, etc…): 258</span></span> </br>
-[<span data-ttu-id="3c169-1244">LTP テストの実行ログ</span><span class="sxs-lookup"><span data-stu-id="3c169-1244">LTP Test Run Logs</span></span>](https://github.com/Microsoft/CommandLine-Documentation/tree/live/LTP_Results/14926)<br/>
+ - <span data-ttu-id="dea41-1225">Windows Subsystem for Linux では、コントロールを超える状況により、このビルドには更新プログラムがありません。</span><span class="sxs-lookup"><span data-stu-id="dea41-1225">Due to circumstances beyond our control there are no updates in this build for the Windows Subsystem for Linux.</span></span>  <span data-ttu-id="dea41-1226">定期的にスケジュールされた更新は、次のリリースで再開されます。</span><span class="sxs-lookup"><span data-stu-id="dea41-1226">Regularly scheduled updates will resume in the next release.</span></span>
 
 <br/>
 
-## <a name="build-14915"></a><span data-ttu-id="3c169-1245">ビルド14915</span><span class="sxs-lookup"><span data-stu-id="3c169-1245">Build 14915</span></span>
+## <a name="build-14926"></a><span data-ttu-id="dea41-1227">ビルド14926</span><span class="sxs-lookup"><span data-stu-id="dea41-1227">Build 14926</span></span>
 
-<span data-ttu-id="3c169-1246">ビルド14915の一般的な Windows 情報については、 [windows のブログ](https://blogs.windows.com/windowsexperience/2016/08/31/announcing-windows-10-insider-preview-build-14915-for-pc-and-mobile)を参照してください。</span><span class="sxs-lookup"><span data-stu-id="3c169-1246">For general Windows information on build 14915 visit the [Windows Blog](https://blogs.windows.com/windowsexperience/2016/08/31/announcing-windows-10-insider-preview-build-14915-for-pc-and-mobile).</span></span><br/>
+<span data-ttu-id="dea41-1228">ビルド14926の一般的な Windows 情報については、 [windows のブログ](https://blogs.windows.com/windowsexperience/2016/09/14/announcing-windows-10-insider-preview-build-14926-for-pc-and-mobile/)を参照してください。</span><span class="sxs-lookup"><span data-stu-id="dea41-1228">For general Windows information on build 14926 visit the [Windows Blog](https://blogs.windows.com/windowsexperience/2016/09/14/announcing-windows-10-insider-preview-build-14926-for-pc-and-mobile/).</span></span><br/>
 
 
-### <a name="fixed"></a><span data-ttu-id="3c169-1247">固定</span><span class="sxs-lookup"><span data-stu-id="3c169-1247">Fixed</span></span>
--  <span data-ttu-id="3c169-1248">Unix データグラムソケットの socketpair (GH #262)</span><span class="sxs-lookup"><span data-stu-id="3c169-1248">Socketpair for unix datagram sockets (GH #262)</span></span>
-- <span data-ttu-id="3c169-1249">SO_REUSEADDR の Unix ソケットサポート</span><span class="sxs-lookup"><span data-stu-id="3c169-1249">Unix socket support for SO_REUSEADDR</span></span>
-- <span data-ttu-id="3c169-1250">SO_BROADCAST の UNIX ソケットサポート (GH #568)</span><span class="sxs-lookup"><span data-stu-id="3c169-1250">UNIX socket support for SO_BROADCAST (GH #568)</span></span>
-- <span data-ttu-id="3c169-1251">SOCK_SEQPACKET の Unix ソケットサポート (GH #758、#546)</span><span class="sxs-lookup"><span data-stu-id="3c169-1251">Unix socket support for SOCK_SEQPACKET (GH #758, #546)</span></span>
-- <span data-ttu-id="3c169-1252">Unix データグラムソケットの送信、受信、およびシャットダウンのサポートの追加</span><span class="sxs-lookup"><span data-stu-id="3c169-1252">Adding support for unix datagram socket send, recv and shutdown</span></span>
-- <span data-ttu-id="3c169-1253">非固定アドレスに対する mmap パラメーターの検証が無効なため、バグチェックを修正します。</span><span class="sxs-lookup"><span data-stu-id="3c169-1253">Fix bugcheck due to invalid mmap parameter validation for non-fixed addresses.</span></span> <span data-ttu-id="3c169-1254">(GH #847)</span><span class="sxs-lookup"><span data-stu-id="3c169-1254">(GH #847)</span></span>
-- <span data-ttu-id="3c169-1255">ターミナル状態の中断/再開のサポート</span><span class="sxs-lookup"><span data-stu-id="3c169-1255">Support for suspend / resume of terminal states</span></span>
-- <span data-ttu-id="3c169-1256">画面ユーティリティのブロックを解除する TIOCPKT ioctl のサポート (GH #774)</span><span class="sxs-lookup"><span data-stu-id="3c169-1256">Support for TIOCPKT ioctl to unblock the Screen utility (GH #774)</span></span>
-    - <span data-ttu-id="3c169-1257">既知の問題:関数キーが動作していません</span><span class="sxs-lookup"><span data-stu-id="3c169-1257">Known issue: Function keys not operational</span></span>
-- <span data-ttu-id="3c169-1258">TimerFd の競合を修正しました。これにより、解放されたメンバー ' ReaderReady ' が Lxp Timerfdworkspace Erroutine (GH #814) によってアクセスされる可能性があります</span><span class="sxs-lookup"><span data-stu-id="3c169-1258">Corrected a race in TimerFd that could cause a freed member 'ReaderReady' to be accessed by LxpTimerFdWorkerRoutine (GH #814)</span></span>
-- <span data-ttu-id="3c169-1259">Futex、投票、clock_nanosleep の再起動可能なシステムコールのサポートを有効にする</span><span class="sxs-lookup"><span data-stu-id="3c169-1259">Enable restartable system call support for futex, poll, and clock_nanosleep</span></span>
-- <span data-ttu-id="3c169-1260">バインドマウントサポートを追加しました</span><span class="sxs-lookup"><span data-stu-id="3c169-1260">Added bind mount support</span></span>
-- <span data-ttu-id="3c169-1261">マウントの名前空間のサポートの共有を解除する</span><span class="sxs-lookup"><span data-stu-id="3c169-1261">unshare for mount namespace support</span></span>
-    - <span data-ttu-id="3c169-1262">既知の問題:現在の作業ディレクトリを使用し`unshare(CLONE_NEWNS)`て新しいマウント名前空間を作成すると、引き続き古い名前空間が参照されます。</span><span class="sxs-lookup"><span data-stu-id="3c169-1262">Known issue: When creating a new mount namespace with `unshare(CLONE_NEWNS)` the current working directory will continue to point to the old namespace</span></span>
-- <span data-ttu-id="3c169-1263">追加の機能強化とバグ修正</span><span class="sxs-lookup"><span data-stu-id="3c169-1263">Additional improvements and bug fixes</span></span>
+### <a name="fixed"></a><span data-ttu-id="dea41-1229">固定</span><span class="sxs-lookup"><span data-stu-id="dea41-1229">Fixed</span></span>
+
+- <span data-ttu-id="dea41-1230">管理者特権を持たないコンソールで Ping が機能するようになりました。</span><span class="sxs-lookup"><span data-stu-id="dea41-1230">Ping now works in consoles which do not have administrator privileges</span></span>
+- <span data-ttu-id="dea41-1231">Ping6 がサポートされるようになりました。管理者特権も必要ありません</span><span class="sxs-lookup"><span data-stu-id="dea41-1231">Ping6 now supported, also without administrator privileges</span></span>
+- <span data-ttu-id="dea41-1232">WSL によって変更されたファイルの Inotify サポート。</span><span class="sxs-lookup"><span data-stu-id="dea41-1232">Inotify support for files modified through WSL.</span></span> <span data-ttu-id="dea41-1233">(GH #216)</span><span class="sxs-lookup"><span data-stu-id="dea41-1233">(GH #216)</span></span>
+  - <span data-ttu-id="dea41-1234">サポートされているフラグ:</span><span class="sxs-lookup"><span data-stu-id="dea41-1234">Flags supported:</span></span>
+    - <span data-ttu-id="dea41-1235">inotify_init1:LX_O_CLOEXEC, LX_O_NONBLOCK</span><span class="sxs-lookup"><span data-stu-id="dea41-1235">inotify_init1: LX_O_CLOEXEC, LX_O_NONBLOCK</span></span>
+    - <span data-ttu-id="dea41-1236">inotify_add_watch イベント:LX_IN_ACCESS, LX_IN_MODIFY, LX_IN_ATTRIB, LX_IN_CLOSE_WRITE, LX_IN_CLOSE_NOWRITE, LX_IN_OPEN, LX_IN_MOVED_FROM, LX_IN_MOVED_TO, LX_IN_CREATE, LX_IN_DELETE, LX_IN_DELETE_SELF, LX_IN_MOVE_SELF</span><span class="sxs-lookup"><span data-stu-id="dea41-1236">inotify_add_watch events: LX_IN_ACCESS, LX_IN_MODIFY, LX_IN_ATTRIB, LX_IN_CLOSE_WRITE, LX_IN_CLOSE_NOWRITE, LX_IN_OPEN, LX_IN_MOVED_FROM, LX_IN_MOVED_TO, LX_IN_CREATE, LX_IN_DELETE, LX_IN_DELETE_SELF, LX_IN_MOVE_SELF</span></span>
+    - <span data-ttu-id="dea41-1237">inotify_add_watch 属性 (i):LX_IN_DONT_FOLLOW, LX_IN_EXCL_UNLINK, LX_IN_MASK_ADD, LX_IN_ONESHOT, LX_IN_ONLYDIR</span><span class="sxs-lookup"><span data-stu-id="dea41-1237">inotify_add_watch attributes: LX_IN_DONT_FOLLOW, LX_IN_EXCL_UNLINK, LX_IN_MASK_ADD, LX_IN_ONESHOT, LX_IN_ONLYDIR</span></span>
+    - <span data-ttu-id="dea41-1238">出力の読み取り:LX_IN_ISDIR, LX_IN_IGNORED</span><span class="sxs-lookup"><span data-stu-id="dea41-1238">read output: LX_IN_ISDIR, LX_IN_IGNORED</span></span>
+  - <span data-ttu-id="dea41-1239">既知の問題:Windows アプリケーションからファイルを変更してもイベントが生成されない</span><span class="sxs-lookup"><span data-stu-id="dea41-1239">Known issue: Modifying files from Windows applications does not generate any events</span></span>
+- <span data-ttu-id="dea41-1240">Unix ソケットで SCM_CREDENTIALS がサポートされるようになりました。</span><span class="sxs-lookup"><span data-stu-id="dea41-1240">Unix socket now supports SCM_CREDENTIALS</span></span>
+
+### <a name="ltp-results"></a><span data-ttu-id="dea41-1241">LTP の結果:</span><span class="sxs-lookup"><span data-stu-id="dea41-1241">LTP Results:</span></span>
+<span data-ttu-id="dea41-1242">成功したテストの数:651</span><span class="sxs-lookup"><span data-stu-id="dea41-1242">Number of Passing Test: 651</span></span> </br>
+<span data-ttu-id="dea41-1243">非パッシング (失敗、スキップされたなど) の数:258</span><span class="sxs-lookup"><span data-stu-id="dea41-1243">Number of non-Passing (failing, skipped, etc…): 258</span></span> </br>
+[<span data-ttu-id="dea41-1244">LTP テストの実行ログ</span><span class="sxs-lookup"><span data-stu-id="dea41-1244">LTP Test Run Logs</span></span>](https://github.com/Microsoft/CommandLine-Documentation/tree/live/LTP_Results/14926)<br/>
 
 <br/>
 
-## <a name="build-14905"></a><span data-ttu-id="3c169-1264">ビルド14905</span><span class="sxs-lookup"><span data-stu-id="3c169-1264">Build 14905</span></span>
+## <a name="build-14915"></a><span data-ttu-id="dea41-1245">ビルド14915</span><span class="sxs-lookup"><span data-stu-id="dea41-1245">Build 14915</span></span>
 
-<span data-ttu-id="3c169-1265">ビルド14905の一般的な Windows 情報については、 [windows のブログ](https://blogs.windows.com/windowsexperience/2016/08/17/announcing-windows-10-insider-preview-build-14905-for-pc-mobile/)を参照してください。</span><span class="sxs-lookup"><span data-stu-id="3c169-1265">For general Windows information on build 14905 visit the [Windows Blog](https://blogs.windows.com/windowsexperience/2016/08/17/announcing-windows-10-insider-preview-build-14905-for-pc-mobile/).</span></span><br/>
+<span data-ttu-id="dea41-1246">ビルド14915の一般的な Windows 情報については、 [windows のブログ](https://blogs.windows.com/windowsexperience/2016/08/31/announcing-windows-10-insider-preview-build-14915-for-pc-and-mobile)を参照してください。</span><span class="sxs-lookup"><span data-stu-id="dea41-1246">For general Windows information on build 14915 visit the [Windows Blog](https://blogs.windows.com/windowsexperience/2016/08/31/announcing-windows-10-insider-preview-build-14915-for-pc-and-mobile).</span></span><br/>
 
 
-### <a name="fixed"></a><span data-ttu-id="3c169-1266">固定</span><span class="sxs-lookup"><span data-stu-id="3c169-1266">Fixed</span></span>
-- <span data-ttu-id="3c169-1267">再開可能なシステムコールがサポートされるようになりました (GH #349、GH #520)</span><span class="sxs-lookup"><span data-stu-id="3c169-1267">Restartable system calls are now supported (GH #349, GH #520)</span></span>
-- <span data-ttu-id="3c169-1268">現在操作中のディレクトリへのシンボリックリンク (GH #650)</span><span class="sxs-lookup"><span data-stu-id="3c169-1268">Symlinks to directories ending in / now operational (GH #650)</span></span>
-- <span data-ttu-id="3c169-1269">/Dev/random の RNDGETENTCNT ioctl を実装します。</span><span class="sxs-lookup"><span data-stu-id="3c169-1269">Implemented RNDGETENTCNT ioctl for /dev/random</span></span>
-- <span data-ttu-id="3c169-1270">/Proc/[pid]/マウント,/proc/[pid]/mountinfo および/proc/[pid]/mountstats ファイルを実装します。</span><span class="sxs-lookup"><span data-stu-id="3c169-1270">Implemented the /proc/[pid]/mounts, /proc/[pid]/mountinfo and /proc/[pid]/mountstats files</span></span>
-- <span data-ttu-id="3c169-1271">その他のバグ修正と機能強化</span><span class="sxs-lookup"><span data-stu-id="3c169-1271">Additional bugfixes and improvements</span></span>
+### <a name="fixed"></a><span data-ttu-id="dea41-1247">固定</span><span class="sxs-lookup"><span data-stu-id="dea41-1247">Fixed</span></span>
+-  <span data-ttu-id="dea41-1248">Unix データグラムソケットの socketpair (GH #262)</span><span class="sxs-lookup"><span data-stu-id="dea41-1248">Socketpair for unix datagram sockets (GH #262)</span></span>
+- <span data-ttu-id="dea41-1249">SO_REUSEADDR の Unix ソケットサポート</span><span class="sxs-lookup"><span data-stu-id="dea41-1249">Unix socket support for SO_REUSEADDR</span></span>
+- <span data-ttu-id="dea41-1250">SO_BROADCAST の UNIX ソケットサポート (GH #568)</span><span class="sxs-lookup"><span data-stu-id="dea41-1250">UNIX socket support for SO_BROADCAST (GH #568)</span></span>
+- <span data-ttu-id="dea41-1251">SOCK_SEQPACKET の Unix ソケットサポート (GH #758、#546)</span><span class="sxs-lookup"><span data-stu-id="dea41-1251">Unix socket support for SOCK_SEQPACKET (GH #758, #546)</span></span>
+- <span data-ttu-id="dea41-1252">Unix データグラムソケットの送信、受信、およびシャットダウンのサポートの追加</span><span class="sxs-lookup"><span data-stu-id="dea41-1252">Adding support for unix datagram socket send, recv and shutdown</span></span>
+- <span data-ttu-id="dea41-1253">非固定アドレスに対する mmap パラメーターの検証が無効なため、バグチェックを修正します。</span><span class="sxs-lookup"><span data-stu-id="dea41-1253">Fix bugcheck due to invalid mmap parameter validation for non-fixed addresses.</span></span> <span data-ttu-id="dea41-1254">(GH #847)</span><span class="sxs-lookup"><span data-stu-id="dea41-1254">(GH #847)</span></span>
+- <span data-ttu-id="dea41-1255">ターミナル状態の中断/再開のサポート</span><span class="sxs-lookup"><span data-stu-id="dea41-1255">Support for suspend / resume of terminal states</span></span>
+- <span data-ttu-id="dea41-1256">画面ユーティリティのブロックを解除する TIOCPKT ioctl のサポート (GH #774)</span><span class="sxs-lookup"><span data-stu-id="dea41-1256">Support for TIOCPKT ioctl to unblock the Screen utility (GH #774)</span></span>
+    - <span data-ttu-id="dea41-1257">既知の問題:関数キーが動作していません</span><span class="sxs-lookup"><span data-stu-id="dea41-1257">Known issue: Function keys not operational</span></span>
+- <span data-ttu-id="dea41-1258">TimerFd の競合を修正しました。これにより、解放されたメンバー ' ReaderReady ' が Lxp Timerfdworkspace Erroutine (GH #814) によってアクセスされる可能性があります</span><span class="sxs-lookup"><span data-stu-id="dea41-1258">Corrected a race in TimerFd that could cause a freed member 'ReaderReady' to be accessed by LxpTimerFdWorkerRoutine (GH #814)</span></span>
+- <span data-ttu-id="dea41-1259">Futex、投票、clock_nanosleep の再起動可能なシステムコールのサポートを有効にする</span><span class="sxs-lookup"><span data-stu-id="dea41-1259">Enable restartable system call support for futex, poll, and clock_nanosleep</span></span>
+- <span data-ttu-id="dea41-1260">バインドマウントサポートを追加しました</span><span class="sxs-lookup"><span data-stu-id="dea41-1260">Added bind mount support</span></span>
+- <span data-ttu-id="dea41-1261">マウントの名前空間のサポートの共有を解除する</span><span class="sxs-lookup"><span data-stu-id="dea41-1261">unshare for mount namespace support</span></span>
+    - <span data-ttu-id="dea41-1262">既知の問題:現在の作業ディレクトリを使用し`unshare(CLONE_NEWNS)`て新しいマウント名前空間を作成すると、引き続き古い名前空間が参照されます。</span><span class="sxs-lookup"><span data-stu-id="dea41-1262">Known issue: When creating a new mount namespace with `unshare(CLONE_NEWNS)` the current working directory will continue to point to the old namespace</span></span>
+- <span data-ttu-id="dea41-1263">追加の機能強化とバグ修正</span><span class="sxs-lookup"><span data-stu-id="dea41-1263">Additional improvements and bug fixes</span></span>
+
+<br/>
+
+## <a name="build-14905"></a><span data-ttu-id="dea41-1264">ビルド14905</span><span class="sxs-lookup"><span data-stu-id="dea41-1264">Build 14905</span></span>
+
+<span data-ttu-id="dea41-1265">ビルド14905の一般的な Windows 情報については、 [windows のブログ](https://blogs.windows.com/windowsexperience/2016/08/17/announcing-windows-10-insider-preview-build-14905-for-pc-mobile/)を参照してください。</span><span class="sxs-lookup"><span data-stu-id="dea41-1265">For general Windows information on build 14905 visit the [Windows Blog](https://blogs.windows.com/windowsexperience/2016/08/17/announcing-windows-10-insider-preview-build-14905-for-pc-mobile/).</span></span><br/>
+
+
+### <a name="fixed"></a><span data-ttu-id="dea41-1266">固定</span><span class="sxs-lookup"><span data-stu-id="dea41-1266">Fixed</span></span>
+- <span data-ttu-id="dea41-1267">再開可能なシステムコールがサポートされるようになりました (GH #349、GH #520)</span><span class="sxs-lookup"><span data-stu-id="dea41-1267">Restartable system calls are now supported (GH #349, GH #520)</span></span>
+- <span data-ttu-id="dea41-1268">現在操作中のディレクトリへのシンボリックリンク (GH #650)</span><span class="sxs-lookup"><span data-stu-id="dea41-1268">Symlinks to directories ending in / now operational (GH #650)</span></span>
+- <span data-ttu-id="dea41-1269">/Dev/random の RNDGETENTCNT ioctl を実装します。</span><span class="sxs-lookup"><span data-stu-id="dea41-1269">Implemented RNDGETENTCNT ioctl for /dev/random</span></span>
+- <span data-ttu-id="dea41-1270">/Proc/[pid]/マウント,/proc/[pid]/mountinfo および/proc/[pid]/mountstats ファイルを実装します。</span><span class="sxs-lookup"><span data-stu-id="dea41-1270">Implemented the /proc/[pid]/mounts, /proc/[pid]/mountinfo and /proc/[pid]/mountstats files</span></span>
+- <span data-ttu-id="dea41-1271">その他のバグ修正と機能強化</span><span class="sxs-lookup"><span data-stu-id="dea41-1271">Additional bugfixes and improvements</span></span>
 
 </br>
 
-## <a name="build-14901"></a><span data-ttu-id="3c169-1272">ビルド14901</span><span class="sxs-lookup"><span data-stu-id="3c169-1272">Build 14901</span></span>
-<span data-ttu-id="3c169-1273">Windows 10 記念日更新リリースの最初の Insider ビルド。</span><span class="sxs-lookup"><span data-stu-id="3c169-1273">First Insider build for the post Windows 10 Anniversary Update release.</span></span>
+## <a name="build-14901"></a><span data-ttu-id="dea41-1272">ビルド14901</span><span class="sxs-lookup"><span data-stu-id="dea41-1272">Build 14901</span></span>
+<span data-ttu-id="dea41-1273">Windows 10 記念日更新リリースの最初の Insider ビルド。</span><span class="sxs-lookup"><span data-stu-id="dea41-1273">First Insider build for the post Windows 10 Anniversary Update release.</span></span>
 
-<span data-ttu-id="3c169-1274">ビルド14901の一般的な Windows 情報については、 [windows のブログ](https://blogs.windows.com/windowsexperience/2016/08/11/announcing-windows-10-insider-preview-build-14901-for-pc/)を参照してください。</span><span class="sxs-lookup"><span data-stu-id="3c169-1274">For general Windows information on build 14901 visit the [Windows Blog](https://blogs.windows.com/windowsexperience/2016/08/11/announcing-windows-10-insider-preview-build-14901-for-pc/).</span></span><br/>
+<span data-ttu-id="dea41-1274">ビルド14901の一般的な Windows 情報については、 [windows のブログ](https://blogs.windows.com/windowsexperience/2016/08/11/announcing-windows-10-insider-preview-build-14901-for-pc/)を参照してください。</span><span class="sxs-lookup"><span data-stu-id="dea41-1274">For general Windows information on build 14901 visit the [Windows Blog](https://blogs.windows.com/windowsexperience/2016/08/11/announcing-windows-10-insider-preview-build-14901-for-pc/).</span></span><br/>
 
 
-### <a name="fixed"></a><span data-ttu-id="3c169-1275">固定</span><span class="sxs-lookup"><span data-stu-id="3c169-1275">Fixed</span></span>
-- <span data-ttu-id="3c169-1276">末尾のスラッシュの問題を修正した</span><span class="sxs-lookup"><span data-stu-id="3c169-1276">Fixed trailing slash issue</span></span>
-    - <span data-ttu-id="3c169-1277">などのコマンドが動作するようになりました`$ mv a/c/ a/b/`</span><span class="sxs-lookup"><span data-stu-id="3c169-1277">Commands such as `$ mv a/c/ a/b/` now work</span></span>
-- <span data-ttu-id="3c169-1278">Ubuntu ロケールを Windows ロケールに設定するかどうかを確認するメッセージが表示されるようになりました</span><span class="sxs-lookup"><span data-stu-id="3c169-1278">Installing now prompts if Ubuntu locale should be set to Windows locale</span></span>
-- <span data-ttu-id="3c169-1279">Ns フォルダーの Procfs サポート</span><span class="sxs-lookup"><span data-stu-id="3c169-1279">Procfs support for ns folder</span></span>
-- <span data-ttu-id="3c169-1280">Tmpfs、procfs、および sysfs ファイルシステムのマウントとマウント解除を追加しました</span><span class="sxs-lookup"><span data-stu-id="3c169-1280">Added mount and unmount for tmpfs, procfs and sysfs file systems</span></span>
-- <span data-ttu-id="3c169-1281">Mknod [at] 32 ビット ABI 署名の修正</span><span class="sxs-lookup"><span data-stu-id="3c169-1281">Fix mknod[at] 32-bit ABI signature</span></span>
-- <span data-ttu-id="3c169-1282">Unix ソケットをディスパッチモデルに移行</span><span class="sxs-lookup"><span data-stu-id="3c169-1282">Unix sockets moved to dispatch model</span></span>
-- <span data-ttu-id="3c169-1283">Setsockopt を使用して、INET ソケットの recv バッファーサイズを設定する必要があります</span><span class="sxs-lookup"><span data-stu-id="3c169-1283">INET socket recv buffer size set using the setsockopt should be honored</span></span>
-- <span data-ttu-id="3c169-1284">MSG_CMSG_CLOEXEC unix socket receive message フラグを実装する</span><span class="sxs-lookup"><span data-stu-id="3c169-1284">Implement MSG_CMSG_CLOEXEC unix socket receive message flag</span></span>
-- <span data-ttu-id="3c169-1285">Linux プロセス stdin/stdout パイプのリダイレクト (GH #2)</span><span class="sxs-lookup"><span data-stu-id="3c169-1285">Linux process stdin/stdout pipe redirection (GH #2)</span></span>
-    - <span data-ttu-id="3c169-1286">CMD で bash-c コマンドのパイプを使用できるようにします。</span><span class="sxs-lookup"><span data-stu-id="3c169-1286">Allows for piping of bash -c commands in CMD.</span></span>  <span data-ttu-id="3c169-1287">例: > dir |bash-c "grep foo"</span><span class="sxs-lookup"><span data-stu-id="3c169-1287">Example:  >dir | bash -c "grep foo"</span></span>
-- <span data-ttu-id="3c169-1288">Bash を複数のシステムにインストールできるようになりました (GH #538、#358)</span><span class="sxs-lookup"><span data-stu-id="3c169-1288">Bash can now be installed on systems with multiple pagefiles (GH #538, #358)</span></span>
-- <span data-ttu-id="3c169-1289">既定の INET ソケットバッファーサイズは、既定の Ubuntu セットアップのものと一致している必要があります。</span><span class="sxs-lookup"><span data-stu-id="3c169-1289">Default INET Socket buffer size should match that of default Ubuntu setup</span></span>
-- <span data-ttu-id="3c169-1290">Xattr syscall を listxattr に揃える</span><span class="sxs-lookup"><span data-stu-id="3c169-1290">Align xattr syscalls to listxattr</span></span>
-- <span data-ttu-id="3c169-1291">SIOCGIFCONF から有効な IPv4 アドレスを持つインターフェイスのみを返す</span><span class="sxs-lookup"><span data-stu-id="3c169-1291">Only return interfaces with a valid IPv4 address from SIOCGIFCONF</span></span>
-- <span data-ttu-id="3c169-1292">Ptrace によって挿入されるときのシグナルの既定の動作を修正する</span><span class="sxs-lookup"><span data-stu-id="3c169-1292">Fix signal default action when injected by ptrace</span></span>
-- <span data-ttu-id="3c169-1293">/proc/sys/vm/min_free_kbytes を実装する</span><span class="sxs-lookup"><span data-stu-id="3c169-1293">implement /proc/sys/vm/min_free_kbytes</span></span>
-- <span data-ttu-id="3c169-1294">Sigreturn でコンテキストを復元するときにマシンコンテキストレジスタの値を使用する</span><span class="sxs-lookup"><span data-stu-id="3c169-1294">Use machine context register values when restoring context in sigreturn</span></span>
-    - <span data-ttu-id="3c169-1295">これにより、一部のユーザーに対して java と javac がハングした問題が解決されます。</span><span class="sxs-lookup"><span data-stu-id="3c169-1295">This resolves the issue where java and javac were hanging for some users</span></span>
-- <span data-ttu-id="3c169-1296">/Proc/sys/kernel/hostname を実装する</span><span class="sxs-lookup"><span data-stu-id="3c169-1296">Implement /proc/sys/kernel/hostname</span></span>
+### <a name="fixed"></a><span data-ttu-id="dea41-1275">固定</span><span class="sxs-lookup"><span data-stu-id="dea41-1275">Fixed</span></span>
+- <span data-ttu-id="dea41-1276">末尾のスラッシュの問題を修正した</span><span class="sxs-lookup"><span data-stu-id="dea41-1276">Fixed trailing slash issue</span></span>
+    - <span data-ttu-id="dea41-1277">などのコマンドが動作するようになりました`$ mv a/c/ a/b/`</span><span class="sxs-lookup"><span data-stu-id="dea41-1277">Commands such as `$ mv a/c/ a/b/` now work</span></span>
+- <span data-ttu-id="dea41-1278">Ubuntu ロケールを Windows ロケールに設定するかどうかを確認するメッセージが表示されるようになりました</span><span class="sxs-lookup"><span data-stu-id="dea41-1278">Installing now prompts if Ubuntu locale should be set to Windows locale</span></span>
+- <span data-ttu-id="dea41-1279">Ns フォルダーの Procfs サポート</span><span class="sxs-lookup"><span data-stu-id="dea41-1279">Procfs support for ns folder</span></span>
+- <span data-ttu-id="dea41-1280">Tmpfs、procfs、および sysfs ファイルシステムのマウントとマウント解除を追加しました</span><span class="sxs-lookup"><span data-stu-id="dea41-1280">Added mount and unmount for tmpfs, procfs and sysfs file systems</span></span>
+- <span data-ttu-id="dea41-1281">Mknod [at] 32 ビット ABI 署名の修正</span><span class="sxs-lookup"><span data-stu-id="dea41-1281">Fix mknod[at] 32-bit ABI signature</span></span>
+- <span data-ttu-id="dea41-1282">Unix ソケットをディスパッチモデルに移行</span><span class="sxs-lookup"><span data-stu-id="dea41-1282">Unix sockets moved to dispatch model</span></span>
+- <span data-ttu-id="dea41-1283">Setsockopt を使用して、INET ソケットの recv バッファーサイズを設定する必要があります</span><span class="sxs-lookup"><span data-stu-id="dea41-1283">INET socket recv buffer size set using the setsockopt should be honored</span></span>
+- <span data-ttu-id="dea41-1284">MSG_CMSG_CLOEXEC unix socket receive message フラグを実装する</span><span class="sxs-lookup"><span data-stu-id="dea41-1284">Implement MSG_CMSG_CLOEXEC unix socket receive message flag</span></span>
+- <span data-ttu-id="dea41-1285">Linux プロセス stdin/stdout パイプのリダイレクト (GH #2)</span><span class="sxs-lookup"><span data-stu-id="dea41-1285">Linux process stdin/stdout pipe redirection (GH #2)</span></span>
+    - <span data-ttu-id="dea41-1286">CMD で bash-c コマンドのパイプを使用できるようにします。</span><span class="sxs-lookup"><span data-stu-id="dea41-1286">Allows for piping of bash -c commands in CMD.</span></span>  <span data-ttu-id="dea41-1287">例: > dir |bash-c "grep foo"</span><span class="sxs-lookup"><span data-stu-id="dea41-1287">Example:  >dir | bash -c "grep foo"</span></span>
+- <span data-ttu-id="dea41-1288">Bash を複数のシステムにインストールできるようになりました (GH #538、#358)</span><span class="sxs-lookup"><span data-stu-id="dea41-1288">Bash can now be installed on systems with multiple pagefiles (GH #538, #358)</span></span>
+- <span data-ttu-id="dea41-1289">既定の INET ソケットバッファーサイズは、既定の Ubuntu セットアップのものと一致している必要があります。</span><span class="sxs-lookup"><span data-stu-id="dea41-1289">Default INET Socket buffer size should match that of default Ubuntu setup</span></span>
+- <span data-ttu-id="dea41-1290">Xattr syscall を listxattr に揃える</span><span class="sxs-lookup"><span data-stu-id="dea41-1290">Align xattr syscalls to listxattr</span></span>
+- <span data-ttu-id="dea41-1291">SIOCGIFCONF から有効な IPv4 アドレスを持つインターフェイスのみを返す</span><span class="sxs-lookup"><span data-stu-id="dea41-1291">Only return interfaces with a valid IPv4 address from SIOCGIFCONF</span></span>
+- <span data-ttu-id="dea41-1292">Ptrace によって挿入されるときのシグナルの既定の動作を修正する</span><span class="sxs-lookup"><span data-stu-id="dea41-1292">Fix signal default action when injected by ptrace</span></span>
+- <span data-ttu-id="dea41-1293">/proc/sys/vm/min_free_kbytes を実装する</span><span class="sxs-lookup"><span data-stu-id="dea41-1293">implement /proc/sys/vm/min_free_kbytes</span></span>
+- <span data-ttu-id="dea41-1294">Sigreturn でコンテキストを復元するときにマシンコンテキストレジスタの値を使用する</span><span class="sxs-lookup"><span data-stu-id="dea41-1294">Use machine context register values when restoring context in sigreturn</span></span>
+    - <span data-ttu-id="dea41-1295">これにより、一部のユーザーに対して java と javac がハングした問題が解決されます。</span><span class="sxs-lookup"><span data-stu-id="dea41-1295">This resolves the issue where java and javac were hanging for some users</span></span>
+- <span data-ttu-id="dea41-1296">/Proc/sys/kernel/hostname を実装する</span><span class="sxs-lookup"><span data-stu-id="dea41-1296">Implement /proc/sys/kernel/hostname</span></span>
 
-### <a name="syscall-support"></a><span data-ttu-id="3c169-1297">Syscall のサポート</span><span class="sxs-lookup"><span data-stu-id="3c169-1297">Syscall Support</span></span>
-<span data-ttu-id="3c169-1298">次に示すのは、WSL でいくつかの実装を持つ新しいまたは強化された syscall の一覧です。</span><span class="sxs-lookup"><span data-stu-id="3c169-1298">Below are a list of new or enhanced syscalls that have some implementation in WSL.</span></span> <span data-ttu-id="3c169-1299">この一覧の syscall は、少なくとも1つのシナリオでサポートされていますが、現時点では一部のパラメーターがサポートされていない可能性があります。</span><span class="sxs-lookup"><span data-stu-id="3c169-1299">The syscalls on this list are supported in at least one scenario, but may not have all parameters supported at this time.</span></span>
+### <a name="syscall-support"></a><span data-ttu-id="dea41-1297">Syscall のサポート</span><span class="sxs-lookup"><span data-stu-id="dea41-1297">Syscall Support</span></span>
+<span data-ttu-id="dea41-1298">次に示すのは、WSL でいくつかの実装を持つ新しいまたは強化された syscall の一覧です。</span><span class="sxs-lookup"><span data-stu-id="dea41-1298">Below are a list of new or enhanced syscalls that have some implementation in WSL.</span></span> <span data-ttu-id="dea41-1299">この一覧の syscall は、少なくとも1つのシナリオでサポートされていますが、現時点では一部のパラメーターがサポートされていない可能性があります。</span><span class="sxs-lookup"><span data-stu-id="dea41-1299">The syscalls on this list are supported in at least one scenario, but may not have all parameters supported at this time.</span></span>
 
 `waitid`<br/>
 `epoll_pwait`<br/>
 
 <br/>
 
-## <a name="build-14388-to-windows-10-anniversary-update"></a><span data-ttu-id="3c169-1300">14388を Windows 10 記念日更新プログラムにビルドする</span><span class="sxs-lookup"><span data-stu-id="3c169-1300">Build 14388 to Windows 10 Anniversary Update</span></span>
-<span data-ttu-id="3c169-1301">ビルド14388の一般的な Windows 情報については、 [windows のブログ](https://aka.ms/14388wip)を参照してください。</span><span class="sxs-lookup"><span data-stu-id="3c169-1301">For general Windows information on build 14388 visit the [Windows Blog](https://aka.ms/14388wip).</span></span> <br/>
+## <a name="build-14388-to-windows-10-anniversary-update"></a><span data-ttu-id="dea41-1300">14388を Windows 10 記念日更新プログラムにビルドする</span><span class="sxs-lookup"><span data-stu-id="dea41-1300">Build 14388 to Windows 10 Anniversary Update</span></span>
+<span data-ttu-id="dea41-1301">ビルド14388の一般的な Windows 情報については、 [windows のブログ](https://aka.ms/14388wip)を参照してください。</span><span class="sxs-lookup"><span data-stu-id="dea41-1301">For general Windows information on build 14388 visit the [Windows Blog](https://aka.ms/14388wip).</span></span> <br/>
 
-### <a name="fixed"></a><span data-ttu-id="3c169-1302">固定</span><span class="sxs-lookup"><span data-stu-id="3c169-1302">Fixed</span></span>
-- <span data-ttu-id="3c169-1303">8/2 で Windows 10 記念日更新プログラムを準備するための修正プログラム</span><span class="sxs-lookup"><span data-stu-id="3c169-1303">Fixes to prepare for the Windows 10 Anniversary Update on 8/2</span></span>
-  - <span data-ttu-id="3c169-1304">記念日の更新に関する詳細については、こちらの[ブログ](https://blogs.msdn.microsoft.com/wsl/)を参照してください。</span><span class="sxs-lookup"><span data-stu-id="3c169-1304">More information about WSL in the Anniversary Update can be found on our [blog](https://blogs.msdn.microsoft.com/wsl/)</span></span>
-
-<br/>
-
-## <a name="build-14376"></a><span data-ttu-id="3c169-1305">ビルド14376</span><span class="sxs-lookup"><span data-stu-id="3c169-1305">Build 14376</span></span>
-<span data-ttu-id="3c169-1306">ビルド14376の一般的な Windows 情報については、 [windows のブログ](https://blogs.windows.com/windowsexperience/2016/06/28/announcing-windows-10-insider-preview-build-14376-for-pc-and-mobile/)を参照してください。</span><span class="sxs-lookup"><span data-stu-id="3c169-1306">For general Windows information on build 14376 visit the [Windows Blog](https://blogs.windows.com/windowsexperience/2016/06/28/announcing-windows-10-insider-preview-build-14376-for-pc-and-mobile/).</span></span> <br/>
-
-### <a name="fixed"></a><span data-ttu-id="3c169-1307">固定</span><span class="sxs-lookup"><span data-stu-id="3c169-1307">Fixed</span></span>
-- <span data-ttu-id="3c169-1308">Apt-get がハングするインスタンスをいくつか削除しました (GH #493)</span><span class="sxs-lookup"><span data-stu-id="3c169-1308">Removed some instances where apt-get hangs (GH #493)</span></span>
-- <span data-ttu-id="3c169-1309">空のマウントが正しく処理されない問題を修正しました</span><span class="sxs-lookup"><span data-stu-id="3c169-1309">Fixed an issue where empty mounts were not handled correctly</span></span>
-- <span data-ttu-id="3c169-1310">Ramdisks が正しくマウントされていない問題を修正しました</span><span class="sxs-lookup"><span data-stu-id="3c169-1310">Fixed an issue where ramdisks were not mounted correctly</span></span>
-- <span data-ttu-id="3c169-1311">Unix ソケットの受け入れをサポートフラグに変更する (partial GH #451)</span><span class="sxs-lookup"><span data-stu-id="3c169-1311">Change unix socket accept to support flags (partial GH #451)</span></span>
-- <span data-ttu-id="3c169-1312">一般的なネットワーク関連のブルースクリーンを修正した</span><span class="sxs-lookup"><span data-stu-id="3c169-1312">Fixed common network related bluescreen</span></span>
-- <span data-ttu-id="3c169-1313">/Proc/[pid]/task (GH #523) にアクセスするときにブルースクリーンを修正</span><span class="sxs-lookup"><span data-stu-id="3c169-1313">Fixed bluescreen when accessing /proc/[pid]/task (GH #523)</span></span>
-- <span data-ttu-id="3c169-1314">一部の pty シナリオ (GH #488、#504) の高 CPU 使用率を修正した</span><span class="sxs-lookup"><span data-stu-id="3c169-1314">Fixed high CPU utilization for some pty scenarios (GH #488, #504)</span></span>
-- <span data-ttu-id="3c169-1315">その他のバグ修正と機能強化</span><span class="sxs-lookup"><span data-stu-id="3c169-1315">Additional bugfixes and improvements</span></span>
+### <a name="fixed"></a><span data-ttu-id="dea41-1302">固定</span><span class="sxs-lookup"><span data-stu-id="dea41-1302">Fixed</span></span>
+- <span data-ttu-id="dea41-1303">8/2 で Windows 10 記念日更新プログラムを準備するための修正プログラム</span><span class="sxs-lookup"><span data-stu-id="dea41-1303">Fixes to prepare for the Windows 10 Anniversary Update on 8/2</span></span>
+  - <span data-ttu-id="dea41-1304">記念日の更新に関する詳細については、こちらの[ブログ](https://blogs.msdn.microsoft.com/wsl/)を参照してください。</span><span class="sxs-lookup"><span data-stu-id="dea41-1304">More information about WSL in the Anniversary Update can be found on our [blog](https://blogs.msdn.microsoft.com/wsl/)</span></span>
 
 <br/>
 
-## <a name="build-14371"></a><span data-ttu-id="3c169-1316">ビルド14371</span><span class="sxs-lookup"><span data-stu-id="3c169-1316">Build 14371</span></span>
-<span data-ttu-id="3c169-1317">ビルド14371の一般的な Windows 情報については、 [windows のブログ](https://blogs.windows.com/windowsexperience/2016/06/22/announcing-windows-10-insider-preview-build-14371-for-pc/)を参照してください。</span><span class="sxs-lookup"><span data-stu-id="3c169-1317">For general Windows information on build 14371 visit the [Windows Blog](https://blogs.windows.com/windowsexperience/2016/06/22/announcing-windows-10-insider-preview-build-14371-for-pc/).</span></span> <br/>
+## <a name="build-14376"></a><span data-ttu-id="dea41-1305">ビルド14376</span><span class="sxs-lookup"><span data-stu-id="dea41-1305">Build 14376</span></span>
+<span data-ttu-id="dea41-1306">ビルド14376の一般的な Windows 情報については、 [windows のブログ](https://blogs.windows.com/windowsexperience/2016/06/28/announcing-windows-10-insider-preview-build-14376-for-pc-and-mobile/)を参照してください。</span><span class="sxs-lookup"><span data-stu-id="dea41-1306">For general Windows information on build 14376 visit the [Windows Blog](https://blogs.windows.com/windowsexperience/2016/06/28/announcing-windows-10-insider-preview-build-14376-for-pc-and-mobile/).</span></span> <br/>
 
-### <a name="fixed"></a><span data-ttu-id="3c169-1318">固定</span><span class="sxs-lookup"><span data-stu-id="3c169-1318">Fixed</span></span>
-- <span data-ttu-id="3c169-1319">Ptrace を使用するときに SIGCHLD と wait () を使用してタイミングレースを修正しました</span><span class="sxs-lookup"><span data-stu-id="3c169-1319">Corrected timing race with SIGCHLD and wait() when using ptrace</span></span>
-- <span data-ttu-id="3c169-1320">パスの末尾に/(GH #432) がある場合の動作を修正しました</span><span class="sxs-lookup"><span data-stu-id="3c169-1320">Corrected some behavior when paths have a trailing /  (GH #432)</span></span>
-- <span data-ttu-id="3c169-1321">子へのハンドルが開いているため、名前の変更とリンク解除に失敗する問題を修正した</span><span class="sxs-lookup"><span data-stu-id="3c169-1321">Fixed issue with rename/unlink failing due to open handles to children</span></span>
-- <span data-ttu-id="3c169-1322">その他のバグ修正と機能強化</span><span class="sxs-lookup"><span data-stu-id="3c169-1322">Additional bugfixes and improvements</span></span>
+### <a name="fixed"></a><span data-ttu-id="dea41-1307">固定</span><span class="sxs-lookup"><span data-stu-id="dea41-1307">Fixed</span></span>
+- <span data-ttu-id="dea41-1308">Apt-get がハングするインスタンスをいくつか削除しました (GH #493)</span><span class="sxs-lookup"><span data-stu-id="dea41-1308">Removed some instances where apt-get hangs (GH #493)</span></span>
+- <span data-ttu-id="dea41-1309">空のマウントが正しく処理されない問題を修正しました</span><span class="sxs-lookup"><span data-stu-id="dea41-1309">Fixed an issue where empty mounts were not handled correctly</span></span>
+- <span data-ttu-id="dea41-1310">Ramdisks が正しくマウントされていない問題を修正しました</span><span class="sxs-lookup"><span data-stu-id="dea41-1310">Fixed an issue where ramdisks were not mounted correctly</span></span>
+- <span data-ttu-id="dea41-1311">Unix ソケットの受け入れをサポートフラグに変更する (partial GH #451)</span><span class="sxs-lookup"><span data-stu-id="dea41-1311">Change unix socket accept to support flags (partial GH #451)</span></span>
+- <span data-ttu-id="dea41-1312">一般的なネットワーク関連のブルースクリーンを修正した</span><span class="sxs-lookup"><span data-stu-id="dea41-1312">Fixed common network related bluescreen</span></span>
+- <span data-ttu-id="dea41-1313">/Proc/[pid]/task (GH #523) にアクセスするときにブルースクリーンを修正</span><span class="sxs-lookup"><span data-stu-id="dea41-1313">Fixed bluescreen when accessing /proc/[pid]/task (GH #523)</span></span>
+- <span data-ttu-id="dea41-1314">一部の pty シナリオ (GH #488、#504) の高 CPU 使用率を修正した</span><span class="sxs-lookup"><span data-stu-id="dea41-1314">Fixed high CPU utilization for some pty scenarios (GH #488, #504)</span></span>
+- <span data-ttu-id="dea41-1315">その他のバグ修正と機能強化</span><span class="sxs-lookup"><span data-stu-id="dea41-1315">Additional bugfixes and improvements</span></span>
 
 <br/>
 
-## <a name="build-14366"></a><span data-ttu-id="3c169-1323">ビルド14366</span><span class="sxs-lookup"><span data-stu-id="3c169-1323">Build 14366</span></span>
-<span data-ttu-id="3c169-1324">ビルド14366の一般的な Windows 情報については、 [windows のブログ](https://blogs.windows.com/windowsexperience/2016/06/14/announcing-windows-10-insider-preview-build-14366-mobile-build-14364/)を参照してください。</span><span class="sxs-lookup"><span data-stu-id="3c169-1324">For general Windows information on build 14366 visit the [Windows Blog](https://blogs.windows.com/windowsexperience/2016/06/14/announcing-windows-10-insider-preview-build-14366-mobile-build-14364/).</span></span> <br/>
+## <a name="build-14371"></a><span data-ttu-id="dea41-1316">ビルド14371</span><span class="sxs-lookup"><span data-stu-id="dea41-1316">Build 14371</span></span>
+<span data-ttu-id="dea41-1317">ビルド14371の一般的な Windows 情報については、 [windows のブログ](https://blogs.windows.com/windowsexperience/2016/06/22/announcing-windows-10-insider-preview-build-14371-for-pc/)を参照してください。</span><span class="sxs-lookup"><span data-stu-id="dea41-1317">For general Windows information on build 14371 visit the [Windows Blog](https://blogs.windows.com/windowsexperience/2016/06/22/announcing-windows-10-insider-preview-build-14371-for-pc/).</span></span> <br/>
 
-### <a name="fixed"></a><span data-ttu-id="3c169-1325">固定</span><span class="sxs-lookup"><span data-stu-id="3c169-1325">Fixed</span></span>
-- <span data-ttu-id="3c169-1326">シンボリックリンクを使用したファイル作成時の修正</span><span class="sxs-lookup"><span data-stu-id="3c169-1326">Fix in file creation through symlinks</span></span>
--   <span data-ttu-id="3c169-1327">Python 用 listxattr (GH 385) が追加されました</span><span class="sxs-lookup"><span data-stu-id="3c169-1327">Added listxattr for Python (GH 385)</span></span>
--   <span data-ttu-id="3c169-1328">その他のバグ修正と機能強化</span><span class="sxs-lookup"><span data-stu-id="3c169-1328">Additional bugfixes and improvements</span></span>
+### <a name="fixed"></a><span data-ttu-id="dea41-1318">固定</span><span class="sxs-lookup"><span data-stu-id="dea41-1318">Fixed</span></span>
+- <span data-ttu-id="dea41-1319">Ptrace を使用するときに SIGCHLD と wait () を使用してタイミングレースを修正しました</span><span class="sxs-lookup"><span data-stu-id="dea41-1319">Corrected timing race with SIGCHLD and wait() when using ptrace</span></span>
+- <span data-ttu-id="dea41-1320">パスの末尾に/(GH #432) がある場合の動作を修正しました</span><span class="sxs-lookup"><span data-stu-id="dea41-1320">Corrected some behavior when paths have a trailing /  (GH #432)</span></span>
+- <span data-ttu-id="dea41-1321">子へのハンドルが開いているため、名前の変更とリンク解除に失敗する問題を修正した</span><span class="sxs-lookup"><span data-stu-id="dea41-1321">Fixed issue with rename/unlink failing due to open handles to children</span></span>
+- <span data-ttu-id="dea41-1322">その他のバグ修正と機能強化</span><span class="sxs-lookup"><span data-stu-id="dea41-1322">Additional bugfixes and improvements</span></span>
 
-### <a name="syscall-support"></a><span data-ttu-id="3c169-1329">Syscall のサポート</span><span class="sxs-lookup"><span data-stu-id="3c169-1329">Syscall Support</span></span>
--   <span data-ttu-id="3c169-1330">次に示すのは、WSL でいくつかの実装を持つ新しいまたは強化された syscall の一覧です。</span><span class="sxs-lookup"><span data-stu-id="3c169-1330">Below are a list of new or enhanced syscalls that have some implementation in WSL.</span></span> <span data-ttu-id="3c169-1331">この一覧の syscall は、少なくとも1つのシナリオでサポートされていますが、現時点では一部のパラメーターがサポートされていない可能性があります。</span><span class="sxs-lookup"><span data-stu-id="3c169-1331">The syscalls on this list are supported in at least one scenario, but may not have all parameters supported at this time.</span></span>
+<br/>
+
+## <a name="build-14366"></a><span data-ttu-id="dea41-1323">ビルド14366</span><span class="sxs-lookup"><span data-stu-id="dea41-1323">Build 14366</span></span>
+<span data-ttu-id="dea41-1324">ビルド14366の一般的な Windows 情報については、 [windows のブログ](https://blogs.windows.com/windowsexperience/2016/06/14/announcing-windows-10-insider-preview-build-14366-mobile-build-14364/)を参照してください。</span><span class="sxs-lookup"><span data-stu-id="dea41-1324">For general Windows information on build 14366 visit the [Windows Blog](https://blogs.windows.com/windowsexperience/2016/06/14/announcing-windows-10-insider-preview-build-14366-mobile-build-14364/).</span></span> <br/>
+
+### <a name="fixed"></a><span data-ttu-id="dea41-1325">固定</span><span class="sxs-lookup"><span data-stu-id="dea41-1325">Fixed</span></span>
+- <span data-ttu-id="dea41-1326">シンボリックリンクを使用したファイル作成時の修正</span><span class="sxs-lookup"><span data-stu-id="dea41-1326">Fix in file creation through symlinks</span></span>
+-   <span data-ttu-id="dea41-1327">Python 用 listxattr (GH 385) が追加されました</span><span class="sxs-lookup"><span data-stu-id="dea41-1327">Added listxattr for Python (GH 385)</span></span>
+-   <span data-ttu-id="dea41-1328">その他のバグ修正と機能強化</span><span class="sxs-lookup"><span data-stu-id="dea41-1328">Additional bugfixes and improvements</span></span>
+
+### <a name="syscall-support"></a><span data-ttu-id="dea41-1329">Syscall のサポート</span><span class="sxs-lookup"><span data-stu-id="dea41-1329">Syscall Support</span></span>
+-   <span data-ttu-id="dea41-1330">次に示すのは、WSL でいくつかの実装を持つ新しいまたは強化された syscall の一覧です。</span><span class="sxs-lookup"><span data-stu-id="dea41-1330">Below are a list of new or enhanced syscalls that have some implementation in WSL.</span></span> <span data-ttu-id="dea41-1331">この一覧の syscall は、少なくとも1つのシナリオでサポートされていますが、現時点では一部のパラメーターがサポートされていない可能性があります。</span><span class="sxs-lookup"><span data-stu-id="dea41-1331">The syscalls on this list are supported in at least one scenario, but may not have all parameters supported at this time.</span></span>
 
 `listxattr`<br/>
 <br/>
 
-## <a name="build-14361"></a><span data-ttu-id="3c169-1332">ビルド14361</span><span class="sxs-lookup"><span data-stu-id="3c169-1332">Build 14361</span></span>
-<span data-ttu-id="3c169-1333">ビルド14361の一般的な Windows 情報については、 [windows のブログ](https://aka.ms/wip14361)を参照してください。</span><span class="sxs-lookup"><span data-stu-id="3c169-1333">For general Windows information on build 14361 visit the [Windows Blog](https://aka.ms/wip14361).</span></span> <br/>
+## <a name="build-14361"></a><span data-ttu-id="dea41-1332">ビルド14361</span><span class="sxs-lookup"><span data-stu-id="dea41-1332">Build 14361</span></span>
+<span data-ttu-id="dea41-1333">ビルド14361の一般的な Windows 情報については、 [windows のブログ](https://aka.ms/wip14361)を参照してください。</span><span class="sxs-lookup"><span data-stu-id="dea41-1333">For general Windows information on build 14361 visit the [Windows Blog](https://aka.ms/wip14361).</span></span> <br/>
 
-### <a name="fixed"></a><span data-ttu-id="3c169-1334">固定</span><span class="sxs-lookup"><span data-stu-id="3c169-1334">Fixed</span></span>
-- <span data-ttu-id="3c169-1335">Windows 上で Bash on Ubuntu を実行すると、DrvFs の大文字と小文字が区別されるようになりました。</span><span class="sxs-lookup"><span data-stu-id="3c169-1335">DrvFs is now case sensitive when running in Bash on Ubuntu on Windows.</span></span>
-  - <span data-ttu-id="3c169-1336">ユーザーは .txt と大文字小文字を区別することができます。/Mnt/c ドライブ上の TXT</span><span class="sxs-lookup"><span data-stu-id="3c169-1336">Users may case.txt and CASE.TXT on their /mnt/c drives</span></span>
-  - <span data-ttu-id="3c169-1337">大文字小文字の区別は、Bash on Ubuntu on Windows でのみサポートされています。</span><span class="sxs-lookup"><span data-stu-id="3c169-1337">Case sensitivity is only supported within Bash on Ubuntu on Windows.</span></span> <span data-ttu-id="3c169-1338">Bash の外部では、ファイルが正しく報告されますが、予期しない動作が Windows からのファイルの操作で発生する場合があります。</span><span class="sxs-lookup"><span data-stu-id="3c169-1338">When outside of Bash NTFS will report the files correctly, but unexpected behavior may occur interacting with the files from Windows.</span></span>
-  - <span data-ttu-id="3c169-1339">各ボリュームのルート (つまり/mnt/c) は大文字と小文字が区別されません。</span><span class="sxs-lookup"><span data-stu-id="3c169-1339">The root of each volume (i.e. /mnt/c) is not case sensitive</span></span>
-  - <span data-ttu-id="3c169-1340">これらのファイルを Windows で処理する方法の詳細については、[こちら](https://support.microsoft.com/en-us/kb/100625)を参照してください。</span><span class="sxs-lookup"><span data-stu-id="3c169-1340">More information on handling these files in Windows can be found [here](https://support.microsoft.com/en-us/kb/100625).</span></span>
-- <span data-ttu-id="3c169-1341">Pty/tty のサポートが大幅に強化されました。</span><span class="sxs-lookup"><span data-stu-id="3c169-1341">Greatly enhanced pty / tty support.</span></span>  <span data-ttu-id="3c169-1342">TMUX のようなアプリケーションがサポートされるようになりました (GH #40)</span><span class="sxs-lookup"><span data-stu-id="3c169-1342">Applications like TMUX now supported (GH #40)</span></span>
-- <span data-ttu-id="3c169-1343">ユーザーアカウントが常に作成されていないインストールの問題を修正しました</span><span class="sxs-lookup"><span data-stu-id="3c169-1343">Fixed install issue where user accounts not always created</span></span>
-- <span data-ttu-id="3c169-1344">非常に長い引数リストを許可する最適化されたコマンドライン arg 構造体。</span><span class="sxs-lookup"><span data-stu-id="3c169-1344">Optimized command line arg structure allowing for extremely long argument list.</span></span> <span data-ttu-id="3c169-1345">(GH #153)</span><span class="sxs-lookup"><span data-stu-id="3c169-1345">(GH #153)</span></span>
-- <span data-ttu-id="3c169-1346">DrvFs からファイルを削除することができるようになりました。</span><span class="sxs-lookup"><span data-stu-id="3c169-1346">Now able to delete and chmod read_only files from DrvFs</span></span>
-- <span data-ttu-id="3c169-1347">切断時にターミナルがハングする一部のインスタンスを修正した (GH #43)</span><span class="sxs-lookup"><span data-stu-id="3c169-1347">Fixed some instances where the terminal hangs on disconnect (GH #43)</span></span>
-- <span data-ttu-id="3c169-1348">chmod と chown が tty デバイスで動作するようになりました</span><span class="sxs-lookup"><span data-stu-id="3c169-1348">chmod and chown now work on tty devices</span></span>
-- <span data-ttu-id="3c169-1349">0\.0.0.0 および:: as localhost (GH #388) への接続を許可します</span><span class="sxs-lookup"><span data-stu-id="3c169-1349">Allow connection to 0.0.0.0 and :: as localhost (GH #388)</span></span>
-- <span data-ttu-id="3c169-1350">Sendmsg/recvmsg が > 1 (partial GH #376) の IO ベクターの長さを処理するようになりました</span><span class="sxs-lookup"><span data-stu-id="3c169-1350">Sendmsg/recvmsg now handle an IO vector length of >1 (partial GH #376)</span></span>
-- <span data-ttu-id="3c169-1351">ユーザーは、自動生成された hosts ファイル (GH #398) をオプトアウトできるようになりました。</span><span class="sxs-lookup"><span data-stu-id="3c169-1351">Users can now opt-out of auto-generated hosts file (GH #398)</span></span>
-- <span data-ttu-id="3c169-1352">インストール中に Linux ロケールを NT ロケールに自動的に一致させる (GH #11)</span><span class="sxs-lookup"><span data-stu-id="3c169-1352">Automatically match Linux locale to the NT locale during install (GH #11)</span></span>
-- <span data-ttu-id="3c169-1353">/Proc/sys/vm/swappiness ファイル (GH #306) が追加されました。</span><span class="sxs-lookup"><span data-stu-id="3c169-1353">Added the /proc/sys/vm/swappiness file (GH #306)</span></span>
-- <span data-ttu-id="3c169-1354">strace が正常に終了するようになりました</span><span class="sxs-lookup"><span data-stu-id="3c169-1354">strace now exits correctly</span></span>
-- <span data-ttu-id="3c169-1355">/Proc/self/fd を使用してパイプを再度開くことを許可する (GH #222)</span><span class="sxs-lookup"><span data-stu-id="3c169-1355">Allow pipes to be reopened through /proc/self/fd (GH #222)</span></span>
-- <span data-ttu-id="3c169-1356">DrvFs から%LOCALAPPDATA%\lxss の下にあるディレクトリを非表示にする (GH #270)</span><span class="sxs-lookup"><span data-stu-id="3c169-1356">Hide directories under %LOCALAPPDATA%\lxss from DrvFs (GH #270)</span></span>
-- <span data-ttu-id="3c169-1357">Bash の処理の強化 ~.</span><span class="sxs-lookup"><span data-stu-id="3c169-1357">Better handling of bash.exe ~.</span></span>  <span data-ttu-id="3c169-1358">などのコマンド"bash ~-c %.ls"(GH #467) をサポートするようになりました</span><span class="sxs-lookup"><span data-stu-id="3c169-1358">Commands like “bash ~ -c ls” now supported (GH #467)</span></span>
-- <span data-ttu-id="3c169-1359">ソケットはシャットダウン中に使用可能な epoll read を通知するようになりました (GH #271)</span><span class="sxs-lookup"><span data-stu-id="3c169-1359">Sockets now notify epoll read available during shutdown (GH #271)</span></span>
-- <span data-ttu-id="3c169-1360">lxrun/uninstall では、ファイルとフォルダーを削除する機能が改善されています。</span><span class="sxs-lookup"><span data-stu-id="3c169-1360">lxrun /uninstall does a better job of deleting the files and folders</span></span>
-- <span data-ttu-id="3c169-1361">修正された ps-f (GH #246)</span><span class="sxs-lookup"><span data-stu-id="3c169-1361">Corrected ps -f (GH #246)</span></span>
-- <span data-ttu-id="3c169-1362">XEmacs (GH #481) などの x11 アプリのサポートの強化</span><span class="sxs-lookup"><span data-stu-id="3c169-1362">Improved support for x11 apps such as xEmacs (GH #481)</span></span>
-- <span data-ttu-id="3c169-1363">既定の Ubuntu 設定に一致するように初期スレッドスタックサイズを更新し、get_rlimit syscall (GH #172、#258) にサイズを正しく報告しました</span><span class="sxs-lookup"><span data-stu-id="3c169-1363">Updated initial thread stack size to match default Ubuntu setting and reporting the size correctly to the get_rlimit syscall (GH #172, #258)</span></span>
-- <span data-ttu-id="3c169-1364">Pico プロセスのイメージ名 (監査のためなど) のレポートが改善されました。</span><span class="sxs-lookup"><span data-stu-id="3c169-1364">Improved reporting of pico process image names (e.g., for auditing)</span></span>
-- <span data-ttu-id="3c169-1365">Df コマンドの/proc/mountinfo を実装します。</span><span class="sxs-lookup"><span data-stu-id="3c169-1365">Implemented /proc/mountinfo for df command</span></span>
-- <span data-ttu-id="3c169-1366">子名のシンボリックリンクエラーコードを修正した。</span><span class="sxs-lookup"><span data-stu-id="3c169-1366">Fixed symlink error code for child name .</span></span> <span data-ttu-id="3c169-1367">そして。</span><span class="sxs-lookup"><span data-stu-id="3c169-1367">and ..</span></span>
-- <span data-ttu-id="3c169-1368">追加の改善バグ修正と改善</span><span class="sxs-lookup"><span data-stu-id="3c169-1368">Additional improvements bugfixes and improvements</span></span>
+### <a name="fixed"></a><span data-ttu-id="dea41-1334">固定</span><span class="sxs-lookup"><span data-stu-id="dea41-1334">Fixed</span></span>
+- <span data-ttu-id="dea41-1335">Windows 上で Bash on Ubuntu を実行すると、DrvFs の大文字と小文字が区別されるようになりました。</span><span class="sxs-lookup"><span data-stu-id="dea41-1335">DrvFs is now case sensitive when running in Bash on Ubuntu on Windows.</span></span>
+  - <span data-ttu-id="dea41-1336">ユーザーは .txt と大文字小文字を区別することができます。/Mnt/c ドライブ上の TXT</span><span class="sxs-lookup"><span data-stu-id="dea41-1336">Users may case.txt and CASE.TXT on their /mnt/c drives</span></span>
+  - <span data-ttu-id="dea41-1337">大文字小文字の区別は、Bash on Ubuntu on Windows でのみサポートされています。</span><span class="sxs-lookup"><span data-stu-id="dea41-1337">Case sensitivity is only supported within Bash on Ubuntu on Windows.</span></span> <span data-ttu-id="dea41-1338">Bash の外部では、ファイルが正しく報告されますが、予期しない動作が Windows からのファイルの操作で発生する場合があります。</span><span class="sxs-lookup"><span data-stu-id="dea41-1338">When outside of Bash NTFS will report the files correctly, but unexpected behavior may occur interacting with the files from Windows.</span></span>
+  - <span data-ttu-id="dea41-1339">各ボリュームのルート (つまり/mnt/c) は大文字と小文字が区別されません。</span><span class="sxs-lookup"><span data-stu-id="dea41-1339">The root of each volume (i.e. /mnt/c) is not case sensitive</span></span>
+  - <span data-ttu-id="dea41-1340">これらのファイルを Windows で処理する方法の詳細については、[こちら](https://support.microsoft.com/en-us/kb/100625)を参照してください。</span><span class="sxs-lookup"><span data-stu-id="dea41-1340">More information on handling these files in Windows can be found [here](https://support.microsoft.com/en-us/kb/100625).</span></span>
+- <span data-ttu-id="dea41-1341">Pty/tty のサポートが大幅に強化されました。</span><span class="sxs-lookup"><span data-stu-id="dea41-1341">Greatly enhanced pty / tty support.</span></span>  <span data-ttu-id="dea41-1342">TMUX のようなアプリケーションがサポートされるようになりました (GH #40)</span><span class="sxs-lookup"><span data-stu-id="dea41-1342">Applications like TMUX now supported (GH #40)</span></span>
+- <span data-ttu-id="dea41-1343">ユーザーアカウントが常に作成されていないインストールの問題を修正しました</span><span class="sxs-lookup"><span data-stu-id="dea41-1343">Fixed install issue where user accounts not always created</span></span>
+- <span data-ttu-id="dea41-1344">非常に長い引数リストを許可する最適化されたコマンドライン arg 構造体。</span><span class="sxs-lookup"><span data-stu-id="dea41-1344">Optimized command line arg structure allowing for extremely long argument list.</span></span> <span data-ttu-id="dea41-1345">(GH #153)</span><span class="sxs-lookup"><span data-stu-id="dea41-1345">(GH #153)</span></span>
+- <span data-ttu-id="dea41-1346">DrvFs からファイルを削除することができるようになりました。</span><span class="sxs-lookup"><span data-stu-id="dea41-1346">Now able to delete and chmod read_only files from DrvFs</span></span>
+- <span data-ttu-id="dea41-1347">切断時にターミナルがハングする一部のインスタンスを修正した (GH #43)</span><span class="sxs-lookup"><span data-stu-id="dea41-1347">Fixed some instances where the terminal hangs on disconnect (GH #43)</span></span>
+- <span data-ttu-id="dea41-1348">chmod と chown が tty デバイスで動作するようになりました</span><span class="sxs-lookup"><span data-stu-id="dea41-1348">chmod and chown now work on tty devices</span></span>
+- <span data-ttu-id="dea41-1349">0\.0.0.0 および:: as localhost (GH #388) への接続を許可します</span><span class="sxs-lookup"><span data-stu-id="dea41-1349">Allow connection to 0.0.0.0 and :: as localhost (GH #388)</span></span>
+- <span data-ttu-id="dea41-1350">Sendmsg/recvmsg が > 1 (partial GH #376) の IO ベクターの長さを処理するようになりました</span><span class="sxs-lookup"><span data-stu-id="dea41-1350">Sendmsg/recvmsg now handle an IO vector length of >1 (partial GH #376)</span></span>
+- <span data-ttu-id="dea41-1351">ユーザーは、自動生成された hosts ファイル (GH #398) をオプトアウトできるようになりました。</span><span class="sxs-lookup"><span data-stu-id="dea41-1351">Users can now opt-out of auto-generated hosts file (GH #398)</span></span>
+- <span data-ttu-id="dea41-1352">インストール中に Linux ロケールを NT ロケールに自動的に一致させる (GH #11)</span><span class="sxs-lookup"><span data-stu-id="dea41-1352">Automatically match Linux locale to the NT locale during install (GH #11)</span></span>
+- <span data-ttu-id="dea41-1353">/Proc/sys/vm/swappiness ファイル (GH #306) が追加されました。</span><span class="sxs-lookup"><span data-stu-id="dea41-1353">Added the /proc/sys/vm/swappiness file (GH #306)</span></span>
+- <span data-ttu-id="dea41-1354">strace が正常に終了するようになりました</span><span class="sxs-lookup"><span data-stu-id="dea41-1354">strace now exits correctly</span></span>
+- <span data-ttu-id="dea41-1355">/Proc/self/fd を使用してパイプを再度開くことを許可する (GH #222)</span><span class="sxs-lookup"><span data-stu-id="dea41-1355">Allow pipes to be reopened through /proc/self/fd (GH #222)</span></span>
+- <span data-ttu-id="dea41-1356">DrvFs から%LOCALAPPDATA%\lxss の下にあるディレクトリを非表示にする (GH #270)</span><span class="sxs-lookup"><span data-stu-id="dea41-1356">Hide directories under %LOCALAPPDATA%\lxss from DrvFs (GH #270)</span></span>
+- <span data-ttu-id="dea41-1357">Bash の処理の強化 ~.</span><span class="sxs-lookup"><span data-stu-id="dea41-1357">Better handling of bash.exe ~.</span></span>  <span data-ttu-id="dea41-1358">などのコマンド"bash ~-c %.ls"(GH #467) をサポートするようになりました</span><span class="sxs-lookup"><span data-stu-id="dea41-1358">Commands like “bash ~ -c ls” now supported (GH #467)</span></span>
+- <span data-ttu-id="dea41-1359">ソケットはシャットダウン中に使用可能な epoll read を通知するようになりました (GH #271)</span><span class="sxs-lookup"><span data-stu-id="dea41-1359">Sockets now notify epoll read available during shutdown (GH #271)</span></span>
+- <span data-ttu-id="dea41-1360">lxrun/uninstall では、ファイルとフォルダーを削除する機能が改善されています。</span><span class="sxs-lookup"><span data-stu-id="dea41-1360">lxrun /uninstall does a better job of deleting the files and folders</span></span>
+- <span data-ttu-id="dea41-1361">修正された ps-f (GH #246)</span><span class="sxs-lookup"><span data-stu-id="dea41-1361">Corrected ps -f (GH #246)</span></span>
+- <span data-ttu-id="dea41-1362">XEmacs (GH #481) などの x11 アプリのサポートの強化</span><span class="sxs-lookup"><span data-stu-id="dea41-1362">Improved support for x11 apps such as xEmacs (GH #481)</span></span>
+- <span data-ttu-id="dea41-1363">既定の Ubuntu 設定に一致するように初期スレッドスタックサイズを更新し、get_rlimit syscall (GH #172、#258) にサイズを正しく報告しました</span><span class="sxs-lookup"><span data-stu-id="dea41-1363">Updated initial thread stack size to match default Ubuntu setting and reporting the size correctly to the get_rlimit syscall (GH #172, #258)</span></span>
+- <span data-ttu-id="dea41-1364">Pico プロセスのイメージ名 (監査のためなど) のレポートが改善されました。</span><span class="sxs-lookup"><span data-stu-id="dea41-1364">Improved reporting of pico process image names (e.g., for auditing)</span></span>
+- <span data-ttu-id="dea41-1365">Df コマンドの/proc/mountinfo を実装します。</span><span class="sxs-lookup"><span data-stu-id="dea41-1365">Implemented /proc/mountinfo for df command</span></span>
+- <span data-ttu-id="dea41-1366">子名のシンボリックリンクエラーコードを修正した。</span><span class="sxs-lookup"><span data-stu-id="dea41-1366">Fixed symlink error code for child name .</span></span> <span data-ttu-id="dea41-1367">そして。</span><span class="sxs-lookup"><span data-stu-id="dea41-1367">and ..</span></span>
+- <span data-ttu-id="dea41-1368">追加の改善バグ修正と改善</span><span class="sxs-lookup"><span data-stu-id="dea41-1368">Additional improvements bugfixes and improvements</span></span>
 
-### <a name="syscall-support"></a><span data-ttu-id="3c169-1369">Syscall のサポート</span><span class="sxs-lookup"><span data-stu-id="3c169-1369">Syscall Support</span></span>
-<span data-ttu-id="3c169-1370">次に示すのは、WSL でいくつかの実装を持つ新しいまたは強化された syscall の一覧です。</span><span class="sxs-lookup"><span data-stu-id="3c169-1370">Below are a list of new or enhanced syscalls that have some implementation in WSL.</span></span> <span data-ttu-id="3c169-1371">この一覧の syscall は、少なくとも1つのシナリオでサポートされていますが、現時点では一部のパラメーターがサポートされていない可能性があります。</span><span class="sxs-lookup"><span data-stu-id="3c169-1371">The syscalls on this list are supported in at least one scenario, but may not have all parameters supported at this time.</span></span>
+### <a name="syscall-support"></a><span data-ttu-id="dea41-1369">Syscall のサポート</span><span class="sxs-lookup"><span data-stu-id="dea41-1369">Syscall Support</span></span>
+<span data-ttu-id="dea41-1370">次に示すのは、WSL でいくつかの実装を持つ新しいまたは強化された syscall の一覧です。</span><span class="sxs-lookup"><span data-stu-id="dea41-1370">Below are a list of new or enhanced syscalls that have some implementation in WSL.</span></span> <span data-ttu-id="dea41-1371">この一覧の syscall は、少なくとも1つのシナリオでサポートされていますが、現時点では一部のパラメーターがサポートされていない可能性があります。</span><span class="sxs-lookup"><span data-stu-id="dea41-1371">The syscalls on this list are supported in at least one scenario, but may not have all parameters supported at this time.</span></span>
 
 `GETTIMER`<br/>
 `MKNODAT`<br/>
@@ -1735,26 +1735,26 @@ wslconfig.exe /terminate <DistributionName>
 `SYNC_FILE_RANGE`<br/>
 <br/>
 
-## <a name="build-14352"></a><span data-ttu-id="3c169-1372">ビルド14352</span><span class="sxs-lookup"><span data-stu-id="3c169-1372">Build 14352</span></span>
-<span data-ttu-id="3c169-1373">ビルド14352の一般的な Windows 情報については、 [windows のブログ](https://aka.ms/wip14352)を参照してください。</span><span class="sxs-lookup"><span data-stu-id="3c169-1373">For general Windows information on build 14352 visit the [Windows Blog](https://aka.ms/wip14352).</span></span><br/>
+## <a name="build-14352"></a><span data-ttu-id="dea41-1372">ビルド14352</span><span class="sxs-lookup"><span data-stu-id="dea41-1372">Build 14352</span></span>
+<span data-ttu-id="dea41-1373">ビルド14352の一般的な Windows 情報については、 [windows のブログ](https://aka.ms/wip14352)を参照してください。</span><span class="sxs-lookup"><span data-stu-id="dea41-1373">For general Windows information on build 14352 visit the [Windows Blog](https://aka.ms/wip14352).</span></span><br/>
 
 
-### <a name="fixed"></a><span data-ttu-id="3c169-1374">固定</span><span class="sxs-lookup"><span data-stu-id="3c169-1374">Fixed</span></span>
-- <span data-ttu-id="3c169-1375">大きなファイルが正しくダウンロードまたは作成されなかった問題を修正しました。</span><span class="sxs-lookup"><span data-stu-id="3c169-1375">Fixed issue where large files were not downloaded / created correctly.</span></span>  <span data-ttu-id="3c169-1376">これにより、npm とその他のシナリオ (GH #3、GH #313) のブロックが解除されます。</span><span class="sxs-lookup"><span data-stu-id="3c169-1376">This should unblock npm and other scenarios (GH #3, GH #313)</span></span>
-- <span data-ttu-id="3c169-1377">ソケットがハングする一部のインスタンスを削除しました</span><span class="sxs-lookup"><span data-stu-id="3c169-1377">Removed some instances where sockets hang</span></span>
-- <span data-ttu-id="3c169-1378">いくつかの ptrace エラーを修正しました</span><span class="sxs-lookup"><span data-stu-id="3c169-1378">Corrected some ptrace errors</span></span>
-- <span data-ttu-id="3c169-1379">255文字を超えるファイル名を許可する WSL の問題を修正しました</span><span class="sxs-lookup"><span data-stu-id="3c169-1379">Fixed issue with WSL allowing filenames longer than 255 characters</span></span>
-- <span data-ttu-id="3c169-1380">英語以外の文字のサポートの強化</span><span class="sxs-lookup"><span data-stu-id="3c169-1380">Improved support for non-English characters</span></span>
-- <span data-ttu-id="3c169-1381">現在の Windows タイムゾーンデータを追加し、既定として設定する</span><span class="sxs-lookup"><span data-stu-id="3c169-1381">Add current Windows timezone data and set as default</span></span>
-- <span data-ttu-id="3c169-1382">各マウントポイントの一意のデバイス id (jre fix – GH #49)</span><span class="sxs-lookup"><span data-stu-id="3c169-1382">Unique device id’s for each mount point (jre fix – GH #49)</span></span>
-- <span data-ttu-id="3c169-1383">"." を含むパスの問題を修正してください。</span><span class="sxs-lookup"><span data-stu-id="3c169-1383">Correct issue with paths containing “.”</span></span> <span data-ttu-id="3c169-1384">および "."</span><span class="sxs-lookup"><span data-stu-id="3c169-1384">and “..”</span></span>
-- <span data-ttu-id="3c169-1385">追加された Fifo サポート (GH #71)</span><span class="sxs-lookup"><span data-stu-id="3c169-1385">Added Fifo support (GH #71)</span></span>
-- <span data-ttu-id="3c169-1386">ネイティブ Ubuntu 形式に一致するように resolv.conf の形式を更新しました</span><span class="sxs-lookup"><span data-stu-id="3c169-1386">Updated format of resolv.conf to match native Ubuntu format</span></span>
-- <span data-ttu-id="3c169-1387">一部の procfs クリーンアップ</span><span class="sxs-lookup"><span data-stu-id="3c169-1387">Some procfs cleanup</span></span>
-- <span data-ttu-id="3c169-1388">管理者コンソールの ping を有効にする (GH #18)</span><span class="sxs-lookup"><span data-stu-id="3c169-1388">Enabled ping for Administrator consoles (GH #18)</span></span>
+### <a name="fixed"></a><span data-ttu-id="dea41-1374">固定</span><span class="sxs-lookup"><span data-stu-id="dea41-1374">Fixed</span></span>
+- <span data-ttu-id="dea41-1375">大きなファイルが正しくダウンロードまたは作成されなかった問題を修正しました。</span><span class="sxs-lookup"><span data-stu-id="dea41-1375">Fixed issue where large files were not downloaded / created correctly.</span></span>  <span data-ttu-id="dea41-1376">これにより、npm とその他のシナリオ (GH #3、GH #313) のブロックが解除されます。</span><span class="sxs-lookup"><span data-stu-id="dea41-1376">This should unblock npm and other scenarios (GH #3, GH #313)</span></span>
+- <span data-ttu-id="dea41-1377">ソケットがハングする一部のインスタンスを削除しました</span><span class="sxs-lookup"><span data-stu-id="dea41-1377">Removed some instances where sockets hang</span></span>
+- <span data-ttu-id="dea41-1378">いくつかの ptrace エラーを修正しました</span><span class="sxs-lookup"><span data-stu-id="dea41-1378">Corrected some ptrace errors</span></span>
+- <span data-ttu-id="dea41-1379">255文字を超えるファイル名を許可する WSL の問題を修正しました</span><span class="sxs-lookup"><span data-stu-id="dea41-1379">Fixed issue with WSL allowing filenames longer than 255 characters</span></span>
+- <span data-ttu-id="dea41-1380">英語以外の文字のサポートの強化</span><span class="sxs-lookup"><span data-stu-id="dea41-1380">Improved support for non-English characters</span></span>
+- <span data-ttu-id="dea41-1381">現在の Windows タイムゾーンデータを追加し、既定として設定する</span><span class="sxs-lookup"><span data-stu-id="dea41-1381">Add current Windows timezone data and set as default</span></span>
+- <span data-ttu-id="dea41-1382">各マウントポイントの一意のデバイス id (jre fix – GH #49)</span><span class="sxs-lookup"><span data-stu-id="dea41-1382">Unique device id’s for each mount point (jre fix – GH #49)</span></span>
+- <span data-ttu-id="dea41-1383">"." を含むパスの問題を修正してください。</span><span class="sxs-lookup"><span data-stu-id="dea41-1383">Correct issue with paths containing “.”</span></span> <span data-ttu-id="dea41-1384">および "."</span><span class="sxs-lookup"><span data-stu-id="dea41-1384">and “..”</span></span>
+- <span data-ttu-id="dea41-1385">追加された Fifo サポート (GH #71)</span><span class="sxs-lookup"><span data-stu-id="dea41-1385">Added Fifo support (GH #71)</span></span>
+- <span data-ttu-id="dea41-1386">ネイティブ Ubuntu 形式に一致するように resolv.conf の形式を更新しました</span><span class="sxs-lookup"><span data-stu-id="dea41-1386">Updated format of resolv.conf to match native Ubuntu format</span></span>
+- <span data-ttu-id="dea41-1387">一部の procfs クリーンアップ</span><span class="sxs-lookup"><span data-stu-id="dea41-1387">Some procfs cleanup</span></span>
+- <span data-ttu-id="dea41-1388">管理者コンソールの ping を有効にする (GH #18)</span><span class="sxs-lookup"><span data-stu-id="dea41-1388">Enabled ping for Administrator consoles (GH #18)</span></span>
 
-### <a name="syscall-support"></a><span data-ttu-id="3c169-1389">Syscall のサポート</span><span class="sxs-lookup"><span data-stu-id="3c169-1389">Syscall Support</span></span>
-<span data-ttu-id="3c169-1390">次に示すのは、WSL でいくつかの実装を持つ新しいまたは強化された syscall の一覧です。</span><span class="sxs-lookup"><span data-stu-id="3c169-1390">Below are a list of new or enhanced syscalls that have some implementation in WSL.</span></span> <span data-ttu-id="3c169-1391">この一覧の syscall は、少なくとも1つのシナリオでサポートされていますが、現時点では一部のパラメーターがサポートされていない可能性があります。</span><span class="sxs-lookup"><span data-stu-id="3c169-1391">The syscalls on this list are supported in at least one scenario, but may not have all parameters supported at this time.</span></span>
+### <a name="syscall-support"></a><span data-ttu-id="dea41-1389">Syscall のサポート</span><span class="sxs-lookup"><span data-stu-id="dea41-1389">Syscall Support</span></span>
+<span data-ttu-id="dea41-1390">次に示すのは、WSL でいくつかの実装を持つ新しいまたは強化された syscall の一覧です。</span><span class="sxs-lookup"><span data-stu-id="dea41-1390">Below are a list of new or enhanced syscalls that have some implementation in WSL.</span></span> <span data-ttu-id="dea41-1391">この一覧の syscall は、少なくとも1つのシナリオでサポートされていますが、現時点では一部のパラメーターがサポートされていない可能性があります。</span><span class="sxs-lookup"><span data-stu-id="dea41-1391">The syscalls on this list are supported in at least one scenario, but may not have all parameters supported at this time.</span></span>
 
 `FALLOCATE`<br/>
 `EXECVE`<br/>
@@ -1762,39 +1762,39 @@ wslconfig.exe /terminate <DistributionName>
 `FGETXATTR`<br/>
 <br/>
 
-## <a name="build-14342"></a><span data-ttu-id="3c169-1392">ビルド14342</span><span class="sxs-lookup"><span data-stu-id="3c169-1392">Build 14342</span></span>
-<span data-ttu-id="3c169-1393">ビルド14342の一般的な Windows 情報については、 [Windows ブログ](https://aka.ms/wip14342)を参照してください。</span><span class="sxs-lookup"><span data-stu-id="3c169-1393">For general Windows information on build 14342 the [Windows Blog](https://aka.ms/wip14342).</span></span> <br/>
+## <a name="build-14342"></a><span data-ttu-id="dea41-1392">ビルド14342</span><span class="sxs-lookup"><span data-stu-id="dea41-1392">Build 14342</span></span>
+<span data-ttu-id="dea41-1393">ビルド14342の一般的な Windows 情報については、 [Windows ブログ](https://aka.ms/wip14342)を参照してください。</span><span class="sxs-lookup"><span data-stu-id="dea41-1393">For general Windows information on build 14342 the [Windows Blog](https://aka.ms/wip14342).</span></span> <br/>
 
-<span data-ttu-id="3c169-1394">VolFs とドライブ Fs に関する情報は、 [Wsl ブログ](https://blogs.msdn.microsoft.com/wsl)を参照してください。</span><span class="sxs-lookup"><span data-stu-id="3c169-1394">Information on VolFs and DriveFs can be found on the [WSL Blog](https://blogs.msdn.microsoft.com/wsl).</span></span> <br/>
+<span data-ttu-id="dea41-1394">VolFs とドライブ Fs に関する情報は、 [Wsl ブログ](https://blogs.msdn.microsoft.com/wsl)を参照してください。</span><span class="sxs-lookup"><span data-stu-id="dea41-1394">Information on VolFs and DriveFs can be found on the [WSL Blog](https://blogs.msdn.microsoft.com/wsl).</span></span> <br/>
 
-### <a name="fixed"></a><span data-ttu-id="3c169-1395">固定</span><span class="sxs-lookup"><span data-stu-id="3c169-1395">Fixed</span></span>
-- <span data-ttu-id="3c169-1396">Windows ユーザーのユーザー名に Unicode 文字が含まれている場合のインストールの問題を修正しました</span><span class="sxs-lookup"><span data-stu-id="3c169-1396">Fixed install issue when the Windows user had Unicode characters in the username</span></span>
-- <span data-ttu-id="3c169-1397">FAQ の apt get 更新 udev の回避策は、最初の実行時に既定で提供されるようになりました。</span><span class="sxs-lookup"><span data-stu-id="3c169-1397">The apt-get update udev workaround in the FAQ is now provided by default on first run</span></span>
-- <span data-ttu-id="3c169-1398">ドライブ fs (/mnt/<drive>) ディレクトリでのシンボリックリンクの有効化</span><span class="sxs-lookup"><span data-stu-id="3c169-1398">Enabled symlinks in DriveFs (/mnt/<drive>) directories</span></span>
-- <span data-ttu-id="3c169-1399">シンボリックリンクがドライブ Fs と VolFs 間で機能するようになりました</span><span class="sxs-lookup"><span data-stu-id="3c169-1399">Symlinks now work between DriveFs and VolFs</span></span>
-- <span data-ttu-id="3c169-1400">解析の問題、アドレス指定された最上位レベル パス: %.ls/期待どおりに、正しく動作/。</span><span class="sxs-lookup"><span data-stu-id="3c169-1400">Addressed top level path parsing issue: ls .// will now work as expected</span></span>
-- <span data-ttu-id="3c169-1401">npm がドライブ Fs にインストールされ、-g オプションが機能するようになりました。</span><span class="sxs-lookup"><span data-stu-id="3c169-1401">npm install on DriveFs and the -g options are now working</span></span>
-- <span data-ttu-id="3c169-1402">PHP サーバーの起動を妨げている問題を修正した</span><span class="sxs-lookup"><span data-stu-id="3c169-1402">Fixed issue preventing PHP server from launching</span></span>
-- <span data-ttu-id="3c169-1403">ネイティブ Ubuntu に近い $PATH など、既定の環境値が更新されました</span><span class="sxs-lookup"><span data-stu-id="3c169-1403">Updated default environment values, such as $PATH to closer match native Ubuntu</span></span>
-- <span data-ttu-id="3c169-1404">Apt パッケージキャッシュを更新するための週単位のメンテナンスタスクが Windows に追加されました</span><span class="sxs-lookup"><span data-stu-id="3c169-1404">Added a weekly maintenance task in Windows to update the apt package cache</span></span>
-- <span data-ttu-id="3c169-1405">ELF ヘッダーの検証に関する問題を修正しました。 WSL ですべての Melkor オプションがサポートされるようになりました</span><span class="sxs-lookup"><span data-stu-id="3c169-1405">Fixed issue with ELF header validation, WSL now supports all Melkor options</span></span>
-- <span data-ttu-id="3c169-1406">Zsh シェルが機能しています</span><span class="sxs-lookup"><span data-stu-id="3c169-1406">Zsh shell is functional</span></span>
-- <span data-ttu-id="3c169-1407">プリコンパイル済みのジャンプバイナリがサポートされるようになりました</span><span class="sxs-lookup"><span data-stu-id="3c169-1407">Precompiled Go binaries are now supported</span></span>
-- <span data-ttu-id="3c169-1408">Bash の初回実行時のプロンプトが正しくローカライズされるようになりました</span><span class="sxs-lookup"><span data-stu-id="3c169-1408">Prompting on Bash.exe first run is now localized correctly</span></span>
-- <span data-ttu-id="3c169-1409">/proc/meminfo が正しい情報を返すようになりました</span><span class="sxs-lookup"><span data-stu-id="3c169-1409">/proc/meminfo now returns correct information</span></span>
-- <span data-ttu-id="3c169-1410">VFS でソケットがサポートされるようになりました</span><span class="sxs-lookup"><span data-stu-id="3c169-1410">Sockets now supported in VFS</span></span>
-- <span data-ttu-id="3c169-1411">/dev が tempfs としてマウントされるようになりました</span><span class="sxs-lookup"><span data-stu-id="3c169-1411">/dev now mounted as tempfs</span></span>
-- <span data-ttu-id="3c169-1412">Fifo がサポートされるようになりました</span><span class="sxs-lookup"><span data-stu-id="3c169-1412">Fifo now supported</span></span>
-- <span data-ttu-id="3c169-1413">/Proc/cpuinfo で、マルチコアシステムが正しく表示されるようになりました。</span><span class="sxs-lookup"><span data-stu-id="3c169-1413">Multi-core systems now showing correctly in /proc/cpuinfo</span></span>
-- <span data-ttu-id="3c169-1414">初回実行時の追加の改善とエラーメッセージのダウンロード</span><span class="sxs-lookup"><span data-stu-id="3c169-1414">Additional improvements and error messages downloading during first run</span></span>
-- <span data-ttu-id="3c169-1415">Syscall の機能強化とバグ修正。</span><span class="sxs-lookup"><span data-stu-id="3c169-1415">Syscall improvements and bugfixes.</span></span> <span data-ttu-id="3c169-1416">以下のサポートされている syscall 一覧。</span><span class="sxs-lookup"><span data-stu-id="3c169-1416">Supported syscall list below.</span></span>
-- <span data-ttu-id="3c169-1417">その他のバグ修正と機能強化</span><span class="sxs-lookup"><span data-stu-id="3c169-1417">Additional bugfixes and improvements</span></span>
+### <a name="fixed"></a><span data-ttu-id="dea41-1395">固定</span><span class="sxs-lookup"><span data-stu-id="dea41-1395">Fixed</span></span>
+- <span data-ttu-id="dea41-1396">Windows ユーザーのユーザー名に Unicode 文字が含まれている場合のインストールの問題を修正しました</span><span class="sxs-lookup"><span data-stu-id="dea41-1396">Fixed install issue when the Windows user had Unicode characters in the username</span></span>
+- <span data-ttu-id="dea41-1397">FAQ の apt get 更新 udev の回避策は、最初の実行時に既定で提供されるようになりました。</span><span class="sxs-lookup"><span data-stu-id="dea41-1397">The apt-get update udev workaround in the FAQ is now provided by default on first run</span></span>
+- <span data-ttu-id="dea41-1398">ドライブ fs (/mnt/<drive>) ディレクトリでのシンボリックリンクの有効化</span><span class="sxs-lookup"><span data-stu-id="dea41-1398">Enabled symlinks in DriveFs (/mnt/<drive>) directories</span></span>
+- <span data-ttu-id="dea41-1399">シンボリックリンクがドライブ Fs と VolFs 間で機能するようになりました</span><span class="sxs-lookup"><span data-stu-id="dea41-1399">Symlinks now work between DriveFs and VolFs</span></span>
+- <span data-ttu-id="dea41-1400">解析の問題、アドレス指定された最上位レベル パス: %.ls/期待どおりに、正しく動作/。</span><span class="sxs-lookup"><span data-stu-id="dea41-1400">Addressed top level path parsing issue: ls .// will now work as expected</span></span>
+- <span data-ttu-id="dea41-1401">npm がドライブ Fs にインストールされ、-g オプションが機能するようになりました。</span><span class="sxs-lookup"><span data-stu-id="dea41-1401">npm install on DriveFs and the -g options are now working</span></span>
+- <span data-ttu-id="dea41-1402">PHP サーバーの起動を妨げている問題を修正した</span><span class="sxs-lookup"><span data-stu-id="dea41-1402">Fixed issue preventing PHP server from launching</span></span>
+- <span data-ttu-id="dea41-1403">ネイティブ Ubuntu に近い $PATH など、既定の環境値が更新されました</span><span class="sxs-lookup"><span data-stu-id="dea41-1403">Updated default environment values, such as $PATH to closer match native Ubuntu</span></span>
+- <span data-ttu-id="dea41-1404">Apt パッケージキャッシュを更新するための週単位のメンテナンスタスクが Windows に追加されました</span><span class="sxs-lookup"><span data-stu-id="dea41-1404">Added a weekly maintenance task in Windows to update the apt package cache</span></span>
+- <span data-ttu-id="dea41-1405">ELF ヘッダーの検証に関する問題を修正しました。 WSL ですべての Melkor オプションがサポートされるようになりました</span><span class="sxs-lookup"><span data-stu-id="dea41-1405">Fixed issue with ELF header validation, WSL now supports all Melkor options</span></span>
+- <span data-ttu-id="dea41-1406">Zsh シェルが機能しています</span><span class="sxs-lookup"><span data-stu-id="dea41-1406">Zsh shell is functional</span></span>
+- <span data-ttu-id="dea41-1407">プリコンパイル済みのジャンプバイナリがサポートされるようになりました</span><span class="sxs-lookup"><span data-stu-id="dea41-1407">Precompiled Go binaries are now supported</span></span>
+- <span data-ttu-id="dea41-1408">Bash の初回実行時のプロンプトが正しくローカライズされるようになりました</span><span class="sxs-lookup"><span data-stu-id="dea41-1408">Prompting on Bash.exe first run is now localized correctly</span></span>
+- <span data-ttu-id="dea41-1409">/proc/meminfo が正しい情報を返すようになりました</span><span class="sxs-lookup"><span data-stu-id="dea41-1409">/proc/meminfo now returns correct information</span></span>
+- <span data-ttu-id="dea41-1410">VFS でソケットがサポートされるようになりました</span><span class="sxs-lookup"><span data-stu-id="dea41-1410">Sockets now supported in VFS</span></span>
+- <span data-ttu-id="dea41-1411">/dev が tempfs としてマウントされるようになりました</span><span class="sxs-lookup"><span data-stu-id="dea41-1411">/dev now mounted as tempfs</span></span>
+- <span data-ttu-id="dea41-1412">Fifo がサポートされるようになりました</span><span class="sxs-lookup"><span data-stu-id="dea41-1412">Fifo now supported</span></span>
+- <span data-ttu-id="dea41-1413">/Proc/cpuinfo で、マルチコアシステムが正しく表示されるようになりました。</span><span class="sxs-lookup"><span data-stu-id="dea41-1413">Multi-core systems now showing correctly in /proc/cpuinfo</span></span>
+- <span data-ttu-id="dea41-1414">初回実行時の追加の改善とエラーメッセージのダウンロード</span><span class="sxs-lookup"><span data-stu-id="dea41-1414">Additional improvements and error messages downloading during first run</span></span>
+- <span data-ttu-id="dea41-1415">Syscall の機能強化とバグ修正。</span><span class="sxs-lookup"><span data-stu-id="dea41-1415">Syscall improvements and bugfixes.</span></span> <span data-ttu-id="dea41-1416">以下のサポートされている syscall 一覧。</span><span class="sxs-lookup"><span data-stu-id="dea41-1416">Supported syscall list below.</span></span>
+- <span data-ttu-id="dea41-1417">その他のバグ修正と機能強化</span><span class="sxs-lookup"><span data-stu-id="dea41-1417">Additional bugfixes and improvements</span></span>
 
-### <a name="known-issues"></a><span data-ttu-id="3c169-1418">既知の問題</span><span class="sxs-lookup"><span data-stu-id="3c169-1418">Known Issues</span></span>
-- <span data-ttu-id="3c169-1419">'. ' を解決できません</span><span class="sxs-lookup"><span data-stu-id="3c169-1419">Not resolving ‘..’</span></span> <span data-ttu-id="3c169-1420">場合によっては、ドライブ Fs で正しく動作します。</span><span class="sxs-lookup"><span data-stu-id="3c169-1420">correctly on DriveFs in some cases</span></span>
+### <a name="known-issues"></a><span data-ttu-id="dea41-1418">既知の問題</span><span class="sxs-lookup"><span data-stu-id="dea41-1418">Known Issues</span></span>
+- <span data-ttu-id="dea41-1419">'. ' を解決できません</span><span class="sxs-lookup"><span data-stu-id="dea41-1419">Not resolving ‘..’</span></span> <span data-ttu-id="dea41-1420">場合によっては、ドライブ Fs で正しく動作します。</span><span class="sxs-lookup"><span data-stu-id="dea41-1420">correctly on DriveFs in some cases</span></span>
 
-### <a name="syscall-support"></a><span data-ttu-id="3c169-1421">Syscall のサポート</span><span class="sxs-lookup"><span data-stu-id="3c169-1421">Syscall Support</span></span>
-<span data-ttu-id="3c169-1422">次に示すのは、WSL でいくつかの実装を持つ新しいまたは強化された syscall の一覧です。</span><span class="sxs-lookup"><span data-stu-id="3c169-1422">Below are a list of new or enhanced syscalls that have some implementation in WSL.</span></span> <span data-ttu-id="3c169-1423">この一覧の syscall は、少なくとも1つのシナリオでサポートされていますが、現時点では一部のパラメーターがサポートされていない可能性があります。</span><span class="sxs-lookup"><span data-stu-id="3c169-1423">The syscalls on this list are supported in at least one scenario, but may not have all parameters supported at this time.</span></span>
+### <a name="syscall-support"></a><span data-ttu-id="dea41-1421">Syscall のサポート</span><span class="sxs-lookup"><span data-stu-id="dea41-1421">Syscall Support</span></span>
+<span data-ttu-id="dea41-1422">次に示すのは、WSL でいくつかの実装を持つ新しいまたは強化された syscall の一覧です。</span><span class="sxs-lookup"><span data-stu-id="dea41-1422">Below are a list of new or enhanced syscalls that have some implementation in WSL.</span></span> <span data-ttu-id="dea41-1423">この一覧の syscall は、少なくとも1つのシナリオでサポートされていますが、現時点では一部のパラメーターがサポートされていない可能性があります。</span><span class="sxs-lookup"><span data-stu-id="dea41-1423">The syscalls on this list are supported in at least one scenario, but may not have all parameters supported at this time.</span></span>
 
 `FCHOWNAT`<br/>
 `GETEUID`<br/>
@@ -1808,49 +1808,49 @@ wslconfig.exe /terminate <DistributionName>
 `SETXATTR`<br/>
 <br/>
 
-## <a name="build-14332"></a><span data-ttu-id="3c169-1424">ビルド14332</span><span class="sxs-lookup"><span data-stu-id="3c169-1424">Build 14332</span></span>
+## <a name="build-14332"></a><span data-ttu-id="dea41-1424">ビルド14332</span><span class="sxs-lookup"><span data-stu-id="dea41-1424">Build 14332</span></span>
 
-<span data-ttu-id="3c169-1425">ビルド14332の一般的な Windows 情報については、 [windows のブログ](https://aka.ms/wip14332)を参照してください。</span><span class="sxs-lookup"><span data-stu-id="3c169-1425">For general Windows information on build 14332 visit the [Windows Blog](https://aka.ms/wip14332).</span></span> <br/>
+<span data-ttu-id="dea41-1425">ビルド14332の一般的な Windows 情報については、 [windows のブログ](https://aka.ms/wip14332)を参照してください。</span><span class="sxs-lookup"><span data-stu-id="dea41-1425">For general Windows information on build 14332 visit the [Windows Blog](https://aka.ms/wip14332).</span></span> <br/>
 
 
-### <a name="fixed"></a><span data-ttu-id="3c169-1426">固定</span><span class="sxs-lookup"><span data-stu-id="3c169-1426">Fixed</span></span>
-- <span data-ttu-id="3c169-1427">DNS エントリの優先順位を含む resolv.conf の生成の向上</span><span class="sxs-lookup"><span data-stu-id="3c169-1427">Better resolv.conf generation including prioritizing DNS entries</span></span>
-- <span data-ttu-id="3c169-1428">/Mnt ドライブと/mnt 以外のドライブの間でファイルとディレクトリを移動する場合の問題</span><span class="sxs-lookup"><span data-stu-id="3c169-1428">Issue with moving files and directories between /mnt and non-/mnt drives</span></span>
-- <span data-ttu-id="3c169-1429">シンボリックリンクを使用して Tar ファイルを作成できるようになりました。</span><span class="sxs-lookup"><span data-stu-id="3c169-1429">Tar files can now be created with symlinks</span></span>
-- <span data-ttu-id="3c169-1430">インスタンスの作成時に既定の/run/lock ディレクトリが追加されました</span><span class="sxs-lookup"><span data-stu-id="3c169-1430">Added default /run/lock directory on instance creation</span></span>
-- <span data-ttu-id="3c169-1431">/Dev/null を更新して適切な stat 情報を返す</span><span class="sxs-lookup"><span data-stu-id="3c169-1431">Update /dev/null to return proper stat info</span></span>
-- <span data-ttu-id="3c169-1432">初回実行時のダウンロード時の追加エラー</span><span class="sxs-lookup"><span data-stu-id="3c169-1432">Additional errors when downloading during first run</span></span>
-- <span data-ttu-id="3c169-1433">Syscall の機能強化とバグ修正。</span><span class="sxs-lookup"><span data-stu-id="3c169-1433">Syscall improvements and bugfixes.</span></span> <span data-ttu-id="3c169-1434">以下のサポートされている syscall 一覧。</span><span class="sxs-lookup"><span data-stu-id="3c169-1434">Supported syscall list below.</span></span>
-- <span data-ttu-id="3c169-1435">追加の改善バグ修正と改善</span><span class="sxs-lookup"><span data-stu-id="3c169-1435">Additional improvements bugfixes and improvements</span></span>
+### <a name="fixed"></a><span data-ttu-id="dea41-1426">固定</span><span class="sxs-lookup"><span data-stu-id="dea41-1426">Fixed</span></span>
+- <span data-ttu-id="dea41-1427">DNS エントリの優先順位を含む resolv.conf の生成の向上</span><span class="sxs-lookup"><span data-stu-id="dea41-1427">Better resolv.conf generation including prioritizing DNS entries</span></span>
+- <span data-ttu-id="dea41-1428">/Mnt ドライブと/mnt 以外のドライブの間でファイルとディレクトリを移動する場合の問題</span><span class="sxs-lookup"><span data-stu-id="dea41-1428">Issue with moving files and directories between /mnt and non-/mnt drives</span></span>
+- <span data-ttu-id="dea41-1429">シンボリックリンクを使用して Tar ファイルを作成できるようになりました。</span><span class="sxs-lookup"><span data-stu-id="dea41-1429">Tar files can now be created with symlinks</span></span>
+- <span data-ttu-id="dea41-1430">インスタンスの作成時に既定の/run/lock ディレクトリが追加されました</span><span class="sxs-lookup"><span data-stu-id="dea41-1430">Added default /run/lock directory on instance creation</span></span>
+- <span data-ttu-id="dea41-1431">/Dev/null を更新して適切な stat 情報を返す</span><span class="sxs-lookup"><span data-stu-id="dea41-1431">Update /dev/null to return proper stat info</span></span>
+- <span data-ttu-id="dea41-1432">初回実行時のダウンロード時の追加エラー</span><span class="sxs-lookup"><span data-stu-id="dea41-1432">Additional errors when downloading during first run</span></span>
+- <span data-ttu-id="dea41-1433">Syscall の機能強化とバグ修正。</span><span class="sxs-lookup"><span data-stu-id="dea41-1433">Syscall improvements and bugfixes.</span></span> <span data-ttu-id="dea41-1434">以下のサポートされている syscall 一覧。</span><span class="sxs-lookup"><span data-stu-id="dea41-1434">Supported syscall list below.</span></span>
+- <span data-ttu-id="dea41-1435">追加の改善バグ修正と改善</span><span class="sxs-lookup"><span data-stu-id="dea41-1435">Additional improvements bugfixes and improvements</span></span>
 
-### <a name="syscall-support"></a><span data-ttu-id="3c169-1436">Syscall のサポート</span><span class="sxs-lookup"><span data-stu-id="3c169-1436">Syscall Support</span></span>
-<span data-ttu-id="3c169-1437">以下は、WSL で実装がいくつかある新しい syscall です。</span><span class="sxs-lookup"><span data-stu-id="3c169-1437">Below is the new syscall that has some implementation in WSL.</span></span> <span data-ttu-id="3c169-1438">この一覧の syscall は、少なくとも1つのシナリオでサポートされていますが、現時点では一部のパラメーターがサポートされていない可能性があります。</span><span class="sxs-lookup"><span data-stu-id="3c169-1438">The syscall on this list is supported in at least one scenario, but may not have all parameters supported at this time.</span></span>
+### <a name="syscall-support"></a><span data-ttu-id="dea41-1436">Syscall のサポート</span><span class="sxs-lookup"><span data-stu-id="dea41-1436">Syscall Support</span></span>
+<span data-ttu-id="dea41-1437">以下は、WSL で実装がいくつかある新しい syscall です。</span><span class="sxs-lookup"><span data-stu-id="dea41-1437">Below is the new syscall that has some implementation in WSL.</span></span> <span data-ttu-id="dea41-1438">この一覧の syscall は、少なくとも1つのシナリオでサポートされていますが、現時点では一部のパラメーターがサポートされていない可能性があります。</span><span class="sxs-lookup"><span data-stu-id="dea41-1438">The syscall on this list is supported in at least one scenario, but may not have all parameters supported at this time.</span></span>
 
 `READLINKAT`<br/>
 <br/>
 
-## <a name="build-14328"></a><span data-ttu-id="3c169-1439">ビルド14328</span><span class="sxs-lookup"><span data-stu-id="3c169-1439">Build 14328</span></span>
+## <a name="build-14328"></a><span data-ttu-id="dea41-1439">ビルド14328</span><span class="sxs-lookup"><span data-stu-id="dea41-1439">Build 14328</span></span>
 
-<span data-ttu-id="3c169-1440">ビルド14332の一般的な Windows 情報については、 [windows のブログ](https://aka.ms/wip14328)を参照してください。</span><span class="sxs-lookup"><span data-stu-id="3c169-1440">For general Windows information on build 14332 visit the [Windows Blog](https://aka.ms/wip14328).</span></span> <br/>
+<span data-ttu-id="dea41-1440">ビルド14332の一般的な Windows 情報については、 [windows のブログ](https://aka.ms/wip14328)を参照してください。</span><span class="sxs-lookup"><span data-stu-id="dea41-1440">For general Windows information on build 14332 visit the [Windows Blog](https://aka.ms/wip14328).</span></span> <br/>
 
 
-### <a name="new-features"></a><span data-ttu-id="3c169-1441">新機能</span><span class="sxs-lookup"><span data-stu-id="3c169-1441">New Features</span></span>
-* <span data-ttu-id="3c169-1442">Linux ユーザーがサポートされるようになりました。</span><span class="sxs-lookup"><span data-stu-id="3c169-1442">Now support Linux users.</span></span>  <span data-ttu-id="3c169-1443">Bash on Ubuntu on Windows をインストールすると、Linux ユーザーの作成を求めるメッセージが表示されます。</span><span class="sxs-lookup"><span data-stu-id="3c169-1443">Installing Bash on Ubuntu on Windows will prompt for creation of a Linux user.</span></span>  <span data-ttu-id="3c169-1444">詳細については、「」を参照してください。 https://aka.ms/wslusers</span><span class="sxs-lookup"><span data-stu-id="3c169-1444">For more information, visit https://aka.ms/wslusers</span></span>
-* <span data-ttu-id="3c169-1445">ホスト名が Windows コンピューター名に設定されました@localhost</span><span class="sxs-lookup"><span data-stu-id="3c169-1445">Hostname is now set to the Windows computer name, no more @localhost</span></span>
-* <span data-ttu-id="3c169-1446">ビルド14328の詳細については、次を参照してください。 https://aka.ms/wip14328</span><span class="sxs-lookup"><span data-stu-id="3c169-1446">For more information on build 14328, visit: https://aka.ms/wip14328</span></span>
+### <a name="new-features"></a><span data-ttu-id="dea41-1441">新機能</span><span class="sxs-lookup"><span data-stu-id="dea41-1441">New Features</span></span>
+* <span data-ttu-id="dea41-1442">Linux ユーザーがサポートされるようになりました。</span><span class="sxs-lookup"><span data-stu-id="dea41-1442">Now support Linux users.</span></span>  <span data-ttu-id="dea41-1443">Bash on Ubuntu on Windows をインストールすると、Linux ユーザーの作成を求めるメッセージが表示されます。</span><span class="sxs-lookup"><span data-stu-id="dea41-1443">Installing Bash on Ubuntu on Windows will prompt for creation of a Linux user.</span></span>  <span data-ttu-id="dea41-1444">詳細については、「」を参照してください。 https://aka.ms/wslusers</span><span class="sxs-lookup"><span data-stu-id="dea41-1444">For more information, visit https://aka.ms/wslusers</span></span>
+* <span data-ttu-id="dea41-1445">ホスト名が Windows コンピューター名に設定されました@localhost</span><span class="sxs-lookup"><span data-stu-id="dea41-1445">Hostname is now set to the Windows computer name, no more @localhost</span></span>
+* <span data-ttu-id="dea41-1446">ビルド14328の詳細については、次を参照してください。 https://aka.ms/wip14328</span><span class="sxs-lookup"><span data-stu-id="dea41-1446">For more information on build 14328, visit: https://aka.ms/wip14328</span></span>
 
-### <a name="fixed"></a><span data-ttu-id="3c169-1447">固定</span><span class="sxs-lookup"><span data-stu-id="3c169-1447">Fixed</span></span>
-* <span data-ttu-id="3c169-1448">非/mnt/<drive>ファイルのシンボリックリンクの機能強化</span><span class="sxs-lookup"><span data-stu-id="3c169-1448">Symlink improvements for non /mnt/<drive> files</span></span>
-    * <span data-ttu-id="3c169-1449">npm のインストールが機能するようになりました</span><span class="sxs-lookup"><span data-stu-id="3c169-1449">npm install now works</span></span>
-    * <span data-ttu-id="3c169-1450">jdk/jre[はここ](https://xubuntugeek.blogspot.com/2012/09/how-to-install-oracle-jdk-7-manually-in.html)に記載されている手順に従ってインストールできるようになりました。</span><span class="sxs-lookup"><span data-stu-id="3c169-1450">jdk / jre now installable using instructions found [here](https://xubuntugeek.blogspot.com/2012/09/how-to-install-oracle-jdk-7-manually-in.html).</span></span>
-    * <span data-ttu-id="3c169-1451">既知の問題: symlink は Windows マウントでは機能しません。</span><span class="sxs-lookup"><span data-stu-id="3c169-1451">known issue: symlinks do not work for Windows mounts.</span></span>  <span data-ttu-id="3c169-1452">機能は、後のビルドで使用できるようになります</span><span class="sxs-lookup"><span data-stu-id="3c169-1452">Functionality will be available in a later build</span></span>
-* <span data-ttu-id="3c169-1453">上部と htop が表示されるようになりました</span><span class="sxs-lookup"><span data-stu-id="3c169-1453">top and htop now display</span></span>
-* <span data-ttu-id="3c169-1454">一部のインストールエラーに関する追加のエラーメッセージ</span><span class="sxs-lookup"><span data-stu-id="3c169-1454">Additional error messages for some install failures</span></span>
-* <span data-ttu-id="3c169-1455">Syscall の機能強化とバグ修正。</span><span class="sxs-lookup"><span data-stu-id="3c169-1455">Syscall improvements and bugfixes.</span></span>  <span data-ttu-id="3c169-1456">以下のサポートされている syscall 一覧。</span><span class="sxs-lookup"><span data-stu-id="3c169-1456">Supported syscall list below.</span></span>
-* <span data-ttu-id="3c169-1457">追加の改善バグ修正と改善</span><span class="sxs-lookup"><span data-stu-id="3c169-1457">Additional improvements bugfixes and improvements</span></span>
+### <a name="fixed"></a><span data-ttu-id="dea41-1447">固定</span><span class="sxs-lookup"><span data-stu-id="dea41-1447">Fixed</span></span>
+* <span data-ttu-id="dea41-1448">非/mnt/<drive>ファイルのシンボリックリンクの機能強化</span><span class="sxs-lookup"><span data-stu-id="dea41-1448">Symlink improvements for non /mnt/<drive> files</span></span>
+    * <span data-ttu-id="dea41-1449">npm のインストールが機能するようになりました</span><span class="sxs-lookup"><span data-stu-id="dea41-1449">npm install now works</span></span>
+    * <span data-ttu-id="dea41-1450">jdk/jre[はここ](https://xubuntugeek.blogspot.com/2012/09/how-to-install-oracle-jdk-7-manually-in.html)に記載されている手順に従ってインストールできるようになりました。</span><span class="sxs-lookup"><span data-stu-id="dea41-1450">jdk / jre now installable using instructions found [here](https://xubuntugeek.blogspot.com/2012/09/how-to-install-oracle-jdk-7-manually-in.html).</span></span>
+    * <span data-ttu-id="dea41-1451">既知の問題: symlink は Windows マウントでは機能しません。</span><span class="sxs-lookup"><span data-stu-id="dea41-1451">known issue: symlinks do not work for Windows mounts.</span></span>  <span data-ttu-id="dea41-1452">機能は、後のビルドで使用できるようになります</span><span class="sxs-lookup"><span data-stu-id="dea41-1452">Functionality will be available in a later build</span></span>
+* <span data-ttu-id="dea41-1453">上部と htop が表示されるようになりました</span><span class="sxs-lookup"><span data-stu-id="dea41-1453">top and htop now display</span></span>
+* <span data-ttu-id="dea41-1454">一部のインストールエラーに関する追加のエラーメッセージ</span><span class="sxs-lookup"><span data-stu-id="dea41-1454">Additional error messages for some install failures</span></span>
+* <span data-ttu-id="dea41-1455">Syscall の機能強化とバグ修正。</span><span class="sxs-lookup"><span data-stu-id="dea41-1455">Syscall improvements and bugfixes.</span></span>  <span data-ttu-id="dea41-1456">以下のサポートされている syscall 一覧。</span><span class="sxs-lookup"><span data-stu-id="dea41-1456">Supported syscall list below.</span></span>
+* <span data-ttu-id="dea41-1457">追加の改善バグ修正と改善</span><span class="sxs-lookup"><span data-stu-id="dea41-1457">Additional improvements bugfixes and improvements</span></span>
 
-### <a name="syscall-support"></a><span data-ttu-id="3c169-1458">Syscall のサポート</span><span class="sxs-lookup"><span data-stu-id="3c169-1458">Syscall Support</span></span>
-<span data-ttu-id="3c169-1459">WSL で実装がいくつかある syscall の一覧を次に示します。</span><span class="sxs-lookup"><span data-stu-id="3c169-1459">Below is a list of syscalls that have some implementation in WSL.</span></span>  <span data-ttu-id="3c169-1460">この一覧の syscall は、少なくとも1つのシナリオでサポートされていますが、現時点では一部のパラメーターがサポートされていない可能性があります。</span><span class="sxs-lookup"><span data-stu-id="3c169-1460">Syscalls on this list are supported in at least one scenario, but may not have all parameters supported at this time.</span></span>
+### <a name="syscall-support"></a><span data-ttu-id="dea41-1458">Syscall のサポート</span><span class="sxs-lookup"><span data-stu-id="dea41-1458">Syscall Support</span></span>
+<span data-ttu-id="dea41-1459">WSL で実装がいくつかある syscall の一覧を次に示します。</span><span class="sxs-lookup"><span data-stu-id="dea41-1459">Below is a list of syscalls that have some implementation in WSL.</span></span>  <span data-ttu-id="dea41-1460">この一覧の syscall は、少なくとも1つのシナリオでサポートされていますが、現時点では一部のパラメーターがサポートされていない可能性があります。</span><span class="sxs-lookup"><span data-stu-id="dea41-1460">Syscalls on this list are supported in at least one scenario, but may not have all parameters supported at this time.</span></span>
 
 `ACCEPT`<br/>
 `ACCEPT4`<br/>
