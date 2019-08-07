@@ -7,12 +7,12 @@ ms.date: 07/31/2017
 ms.topic: article
 ms.assetid: 36ea641e-4d49-4881-84eb-a9ca85b1cdf4
 ms.custom: seodec18
-ms.openlocfilehash: c262ddb359507c1654f0089050bfd15ec16402f9
-ms.sourcegitcommit: 44da0f435986598e6067e36ddca9369d27064793
+ms.openlocfilehash: b03d837e0ab3a371fd676e37b5c65a173824f84c
+ms.sourcegitcommit: 9175a28f04573f25338358faf61d73b1a5d1ade6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/26/2019
-ms.locfileid: "68523783"
+ms.lasthandoff: 08/06/2019
+ms.locfileid: "68832116"
 ---
 # <a name="release-notes-for-windows-subsystem-for-linux"></a>Windows Subsystem for Linux のリリースノート
 
@@ -37,7 +37,7 @@ ms.locfileid: "68523783"
 * [WSL2]Wsl $ で\\CopyFile hang を\\修正します
 * 既定の umask を0022に切り替え、/etc/wsl.conf にファイルシステムの umask 設定を追加します。
 * シンボリックリンクを適切に解決するために wslpath を修正しました。これは19h1 で低下したました [GH 4078]
-* WSL2 設定を調整\.するための% UserProfile% wslconfig ファイルの導入
+* WSL2 設定を調整\\するための% UserProfile%. wslconfig ファイルの導入
 ```
 [wsl2]
 kernel=<path>              # An absolute Windows path to a custom Linux kernel.
@@ -506,7 +506,7 @@ wslconfig.exe /terminate <DistributionName>
 #### <a name="wsl-is-more-configurable-with-wslconf"></a>WSL は wsl. conf で構成可能
 WSL で特定の機能を自動的に構成するためのメソッドを追加しました。これは、サブシステムを起動するたびに適用されます。 これには、自動マウントオプションとネットワーク構成が含まれます。 詳細については、次のブログ投稿を参照してください。 https://aka.ms/wslconf
 
-#### <a name="afunix-allows-socket-connections-between-linux-processes-on-wsl-and-windows-native-processes"></a>AF_UNIX は、WSL および Windows ネイティブプロセスでの Linux プロセス間のソケット接続を許可します。
+#### <a name="af_unix-allows-socket-connections-between-linux-processes-on-wsl-and-windows-native-processes"></a>AF_UNIX は、WSL および Windows ネイティブプロセスでの Linux プロセス間のソケット接続を許可します。
 WSL と Windows アプリケーションは、Unix ソケット経由で相互に通信できるようになりました。 Windows でサービスを実行し、Windows と WSL アプリの両方で使用できるようにする場合を考えてみましょう。 これは、Unix ソケットで可能です。 詳細については、ブログの投稿の「」を参照してください。 https://aka.ms/afunixinterop
 
 ### <a name="wsl"></a>WSL
@@ -574,7 +574,7 @@ WSL と Windows アプリケーションは、Unix ソケット経由で相互�
   * fmask: すべての標準ファイルに対して除外するアクセス許可の8進数のマスク。
   * dmask: すべてのディレクトリに対して除外するアクセス許可の8進数のマスク。
 
-  以下に例を示します。
+  例:
   ```
   mount -t drvfs C: /mnt/c -o uid=1000,gid=1000,umask=22,fmask=111
   ```
@@ -583,7 +583,7 @@ WSL と Windows アプリケーションは、Unix ソケット経由で相互�
 
 * では、wsl と`WSLENV`Win32 の間で環境変数がどのように流れるかを構成するために、新しい環境変数が導入されました。
 
-  例:
+  以下に例を示します。
 
   ``` bash
   WSLENV=GOPATH/l:USERPROFILE/pu:DISPLAY
@@ -1199,7 +1199,7 @@ Windows 10 の作成者の更新プログラムに含まれるように計画さ
 
 - コンソールが一部の Ctrl + <key>入力を認識しないという既知のバグがあります。  これには、通常の "c" キーの押下として機能する ctrl + c コマンドが含まれます。
 
-  - 回避策:代替キーを Ctrl + C にマップします。 たとえば、ctrl + K を Ctrl + C キーにマップするに`stty intr \^k`は、次のようにします。  このマッピングはターミナル単位で行われ、bash が起動されるたび*に実行さ*れる必要があります。 ユーザーは、オプションを調べて、`.bashrc`
+  - 回避策:代替キーを Ctrl + C にマップします。 たとえば、ctrl + K を Ctrl + C キーにマップするに`stty intr \^k`は、次のようにします。  このマッピングはターミナル単位で行われ、bash が起動されるたびに実行される必要があります。 ユーザーは、オプションを調べて、`.bashrc`
 
 ### <a name="fixed"></a>固定
 
@@ -1225,7 +1225,7 @@ Windows 10 の作成者の更新プログラムに含まれるように計画さ
 2つの既知の問題:
 - コンソールが一部の Ctrl + <key>入力を認識しないという既知のバグがあります。  これには、通常の "c" キーの押下として機能する ctrl + c コマンドが含まれます。
 
-  - 回避策:代替キーを Ctrl + C にマップします。 たとえば、ctrl + K を Ctrl + C キーにマップするに`stty intr \^k`は、次のようにします。  このマッピングはターミナル単位で行われ、bash が起動されるたび*に実行さ*れる必要があります。 ユーザーは、オプションを調べて、`.bashrc`
+  - 回避策:代替キーを Ctrl + C にマップします。 たとえば、ctrl + K を Ctrl + C キーにマップするに`stty intr \^k`は、次のようにします。  このマッピングはターミナル単位で行われ、bash が起動されるたびに実行される必要があります。 ユーザーは、オプションを調べて、`.bashrc`
 
 - WSL が実行されている間、システムスレッドは CPU コアの 100% を消費します。  根本原因は、内部的に解決されています。
 
