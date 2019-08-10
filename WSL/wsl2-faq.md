@@ -8,12 +8,12 @@ ms.date: 05/30/2019
 ms.topic: article
 ms.assetid: 7afaeacf-435a-4e58-bff0-a9f0d75b8a51
 ms.custom: seodec18
-ms.openlocfilehash: a74f5e3f5879d0af274d2e2b10aaf05e95a97a6f
-ms.sourcegitcommit: 44da0f435986598e6067e36ddca9369d27064793
+ms.openlocfilehash: 760ca61f77f12509224458f1b44a1329d7225600
+ms.sourcegitcommit: 00e4d12bfcd0dcd53c7445ddb2f8f0d0739d20af
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/26/2019
-ms.locfileid: "67587141"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68915558"
 ---
 # <a name="wsl-2-faq"></a>WSL 2 に関する FAQ
 
@@ -45,7 +45,7 @@ WSL 2 ハードウェアアクセスサポートの初回リリースでは、GP
 
 ## <a name="can-i-run-wsl-2-in-a-virtual-machine"></a>仮想マシンで WSL 2 を実行できますか。
 
-はい。 仮想マシンで、入れ子になった仮想化が有効になっていることを確認する必要があります。 Hyper-v でこれを有効にするには、PowerShell ウィンドウで管理者特権を使用して次のコマンドを実行します。
+はい。 仮想マシンで、入れ子になった仮想化が有効になっていることを確認する必要があります。 これは、管理者特権のある PowerShell ウィンドウで次のコマンドを実行して、親 Hyper-v ホストで有効にすることができます。
 
 `Set-VMProcessor -VMName <VMName> -ExposeVirtualizationExtensions $true`
 
