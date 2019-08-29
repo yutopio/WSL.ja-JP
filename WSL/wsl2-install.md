@@ -8,18 +8,20 @@ ms.date: 05/30/2019
 ms.topic: article
 ms.assetid: 7afaeacf-435a-4e58-bff0-a9f0d75b8a51
 ms.custom: seodec18
-ms.openlocfilehash: 0220d642854f9fc7fe2a85357ad2e70e0b888ed8
-ms.sourcegitcommit: f878e88921d36e01e32624a9c60ee9de3d706a2e
+ms.openlocfilehash: 6b7ed18480ea88200d00b67a3a6dc859947397db
+ms.sourcegitcommit: 6f10b40f6199538c8eedf6301f02b7d70ead3fe7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69620098"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "70117831"
 ---
 # <a name="installation-instructions-for-wsl-2"></a>WSL 2 のインストール手順
 
 WSL 2 をインストールして使用を開始するには、次の手順を実行します。
 
 - WSL がインストールされていることを確認します (この手順については[こちら](./install-win10.md)を参照してください)。また、Windows 10 ビルド18917以降を実行していることを確認してください。
+   - ビルド18917以降を使用していることを確認するには[、Windows Insider プログラムに](https://insider.windows.com/en-us/)参加して、"高速" リングを選択してください。 
+   - Windows のバージョンを確認するには、コマンドプロンプトを開き`ver` 、コマンドを実行します。
 - "仮想マシン プラットフォーム" のオプション コンポーネントを有効にする
 - コマンド ラインを使用して、WSL 2 によってサポートされるようにディストリビューションを設定する
 - 現在のディストリビューションが使用している WSL のバージョンを確認する

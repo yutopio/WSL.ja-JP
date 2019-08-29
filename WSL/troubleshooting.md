@@ -8,12 +8,13 @@ ms.date: 11/15/2017
 ms.topic: article
 ms.assetid: 6753f1b2-200e-49cc-93a5-4323e1117246
 ms.custom: seodec18
-ms.openlocfilehash: 0c84fb710eca1b0ffabe437f98d5c17edbd6ea39
-ms.sourcegitcommit: ead64b13501d6cb7170adafbb5624f4984a0af16
+ms.localizationpriority: high
+ms.openlocfilehash: 6a5fec8b8e054b4d3399ee9bcd903acebca7aace
+ms.sourcegitcommit: 7af6b7a3f8cfa66cb25115bc26f44aa64ef22811
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/21/2019
-ms.locfileid: "67307644"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "70122694"
 ---
 # <a name="troubleshooting-windows-subsystem-for-linux"></a>Windows Subsystem for Linux のトラブルシューティング
 
@@ -114,11 +115,11 @@ sudo update-locale LANG=en_US.UTF8
 場合によっては、ファイアウォールをオフにすることでアクセスできます。  場合によっては、ファイアウォールをインストールするだけでアクセスがブロックされます。
 
 ### <a name="permission-denied-error-when-using-ping"></a>Ping の使用時にアクセス許可拒否エラーが発生する
-#### <a name="anniversary-updatehttpsmsdnmicrosoftcomen-uscommandlinewslreleasenotesbuild-14388-to-windows-10-anniversary-update"></a>[記念日の更新](https://msdn.microsoft.com/en-us/commandline/wsl/release_notes#build-14388-to-windows-10-anniversary-update) 
+#### <a name="anniversary-updatehttpsmsdnmicrosoftcomen-uscommandlinewslrelease_notesbuild-14388-to-windows-10-anniversary-update"></a>[記念日の更新](https://msdn.microsoft.com/en-us/commandline/wsl/release_notes#build-14388-to-windows-10-anniversary-update) 
 
 WSL で ping を実行するには、Windows の管理者特権が必要です。  Ping を実行するには、管理者として Windows 上で Bash on Ubuntu を実行するか、管理者特権を使用して CMD/PowerShell プロンプトから bash を実行します。
 
-#### <a name="build-14926httpsmsdnmicrosoftcomen-uscommandlinewslreleasenotesbuild-14926"></a>[ビルド 14926 +](https://msdn.microsoft.com/en-us/commandline/wsl/release_notes#build-14926)
+#### <a name="build-14926httpsmsdnmicrosoftcomen-uscommandlinewslrelease_notesbuild-14926"></a>[ビルド 14926 +](https://msdn.microsoft.com/en-us/commandline/wsl/release_notes#build-14926)
   管理者特権は不要になりました。
 
 ### <a name="bash-is-hung"></a>Bash がハングしています

@@ -7,12 +7,13 @@ ms.date: 07/31/2017
 ms.topic: article
 ms.assetid: 36ea641e-4d49-4881-84eb-a9ca85b1cdf4
 ms.custom: seodec18
-ms.openlocfilehash: b03d837e0ab3a371fd676e37b5c65a173824f84c
-ms.sourcegitcommit: 9175a28f04573f25338358faf61d73b1a5d1ade6
+ms.localizationpriority: high
+ms.openlocfilehash: 56a596c39b0d07e75d0beb381b80af5a14612e00
+ms.sourcegitcommit: 7af6b7a3f8cfa66cb25115bc26f44aa64ef22811
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/06/2019
-ms.locfileid: "68832116"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "70122755"
 ---
 # <a name="release-notes-for-windows-subsystem-for-linux"></a>Windows Subsystem for Linux のリリースノート
 
@@ -574,7 +575,7 @@ WSL と Windows アプリケーションは、Unix ソケット経由で相互�
   * fmask: すべての標準ファイルに対して除外するアクセス許可の8進数のマスク。
   * dmask: すべてのディレクトリに対して除外するアクセス許可の8進数のマスク。
 
-  例:
+  以下に例を示します。
   ```
   mount -t drvfs C: /mnt/c -o uid=1000,gid=1000,umask=22,fmask=111
   ```

@@ -7,12 +7,13 @@ ms.date: 12/20/2017
 ms.topic: article
 ms.assetid: 3cefe0db-7616-4848-a2b6-9296746a178b
 ms.custom: seodec18
-ms.openlocfilehash: e4608c25c6bcc63413d53b2c808c16fe2a62dd5c
-ms.sourcegitcommit: cd239efc5c7c25ffbe5de25b2438d44181a838a9
+ms.localizationpriority: high
+ms.openlocfilehash: 3f3df3337ece75d7af77313f5fc55eb4e18e31cb
+ms.sourcegitcommit: 7af6b7a3f8cfa66cb25115bc26f44aa64ef22811
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/14/2019
-ms.locfileid: "67040819"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "70122731"
 ---
 # <a name="windows-subsystem-for-linux-interoperability-with-windows"></a>Windows と Linux の相互運用性のための windows サブシステム
 
