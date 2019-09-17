@@ -2,22 +2,22 @@
 title: WSL 2 について
 description: WSL 2 について Windows Subsystem for Linux の新しいアーキテクチャ
 keywords: BashOnWindows, bash, wsl, wsl2, windows, windows subsystem for linux, windowssubsystem, ubuntu, debian, suse, windows 10, インストール
-author: mscraigloewen
-ms.author: mscraigloewen
+author: craigloewen-msft
+ms.author: crloewen
 ms.date: 05/30/2019
 ms.topic: article
 ms.assetid: 7afaeacf-435a-4e58-bff0-a9f0d75b8a51
 ms.custom: seodec18
-ms.openlocfilehash: e9c1f043207193a5c00ecf6176f54f240aa48680
-ms.sourcegitcommit: 5844c6dbf692780b86b30bd65e11820fff43b3bd
+ms.openlocfilehash: 983699c26a21af7b81ba31067316ba3bbf1601af
+ms.sourcegitcommit: ed5cf72d5ceb92edd50cf9260ac31fd4d95a02c8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2019
-ms.locfileid: "67499251"
+ms.lasthandoff: 09/16/2019
+ms.locfileid: "71020934"
 ---
 # <a name="about-wsl-2"></a>WSL 2 について
 
-WSL 2 は、Windows Subsystem for Linux が Windows 上で ELF64 Linux バイナリを実行できるようにする、アーキテクチャの新しいバージョンです。 主な目的は、ファイルシステムのパフォーマンスを向上させたり、システムコールの完全な互換性を追加したりすることです。 この新しいアーキテクチャは、これらの Linux バイナリが Windows とコンピューターのハードウェアとどのように対話するかを変更しますが、WSL 1 (現在幅広く使用可能なバージョン) と同じユーザーエクスペリエンスを提供します。 個々の Linux ディストリビューションは WSL 1 ディストリビューションとして実行するか、WSL 2 ディストリビューションとして実行できます。また、いつでもアップグレードまたはダウングレードできます。 WSL 1 と WSL 2 ディストリビューションを並行して実行できます。 WSL 2 は、実際の Linux カーネルを使用するまったく新しいアーキテクチャを使用します。
+WSL 2 は、windows Subsystem for Linux が Windows 上で ELF64 Linux バイナリを実行できるようにする、アーキテクチャの新しいバージョンです。 主な目的は、ファイルシステムのパフォーマンスを向上させたり、システムコールの完全な互換性を追加したりすることです。 この新しいアーキテクチャは、これらの Linux バイナリが Windows とコンピューターのハードウェアとどのように対話するかを変更しますが、WSL 1 (現在幅広く使用可能なバージョン) と同じユーザーエクスペリエンスを提供します。 個々の Linux ディストリビューションは WSL 1 ディストリビューションとして実行するか、WSL 2 ディストリビューションとして実行できます。また、いつでもアップグレードまたはダウングレードできます。 WSL 1 と WSL 2 ディストリビューションを並行して実行できます。 WSL 2 は、実際の Linux カーネルを使用するまったく新しいアーキテクチャを使用します。
 
 ## <a name="linux-kernel-in-wsl-2"></a>WSL 2 の Linux カーネル
 
