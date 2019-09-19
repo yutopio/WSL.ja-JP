@@ -8,12 +8,12 @@ ms.date: 05/30/2019
 ms.topic: article
 ms.assetid: 7afaeacf-435a-4e58-bff0-a9f0d75b8a51
 ms.custom: seodec18
-ms.openlocfilehash: 3addfd27d777731bf92efab42c6bcd4be415779b
-ms.sourcegitcommit: ed5cf72d5ceb92edd50cf9260ac31fd4d95a02c8
+ms.openlocfilehash: 347c965dbbc2a328590d3a8149a8316979d6793d
+ms.sourcegitcommit: ebc6ae7e7546a6d33644e68788fa0215028859b2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "71020967"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71070316"
 ---
 # <a name="user-experience-changes-between-wsl-1-and-wsl-2"></a>WSL 1 と WSL 2 間のユーザーエクスペリエンスの変更
 
@@ -32,18 +32,7 @@ ms.locfileid: "71020967"
 ファイルのパフォーマンスを向上させるために、linux アプリケーションで頻繁にアクセスするファイルを linux ルートファイルシステム内に配置してください。 これらのファイルは、ファイルシステムへのアクセスを高速化するために、Linux ルートファイルシステム内に存在する必要があります。 また、Windows アプリが Linux ルートファイルシステム (エクスプローラーなど) にアクセスできるようになりました。 Linux ディストリビューションの`explorer.exe .`ホームディレクトリでを実行してみてください。これにより、この移行が大幅に簡単になります。 
 
 ## <a name="accessing-network-applications"></a>ネットワークアプリケーションへのアクセス
-WSL 2 preview の最初のビルドでは、Linux ディストリビューションの IP アドレスと、ホストコンピューターの IP アドレスを使用して Linux から任意の Windows server を使用して、Windows から任意の Linux サーバーにアクセスする必要があります。 これは一時的なものであり、修正する優先順位リストでは非常に高くなっています。
-
-### <a name="accessing-linux-applications-from-windows"></a>Windows からの Linux アプリケーションへのアクセス
-WSL ディストリビューションにサーバーがある場合は、ディストリビューションの電源を入れている仮想マシンの IP アドレスを検索し、その IP アドレスを使用して接続する必要があります。 これを行うには、次の手順を実行します。
-
-- Wsl ディストリビューション内でコマンドを実行し、 `ip addr` `eth0`インターフェイスの`inet`値の下でそのコマンドを見つけることによって、ディストリビューションの IP アドレスを取得します。
-   - これは、のように`ip addr | grep eth0`grep を使用してコマンドの出力をフィルター処理することで、より簡単に見つけることができます。
-- 上記の IP を使用して、Linux サーバーに接続します。
-
-次の図は、Edge ブラウザーを使用して node.js サーバーに接続することによって、この例を示しています。
-
-![Windows からの Linux ネットワークアプリケーションへのアクセス](media/wsl2-network-w2l.jpg)
+WSL 2 preview の最初のビルドでは、ホストコンピューターの IP アドレスを使用して Linux から任意の Windows server にアクセスする必要があります。
 
 ### <a name="accessing-windows-applications-from-linux"></a>Linux からの Windows アプリケーションへのアクセス
 Windows ネットワークアプリケーションにアクセスするには、ホストコンピューターの IP アドレスを使用する必要があります。 これを行うには、次の手順を実行します。
@@ -54,6 +43,19 @@ Windows ネットワークアプリケーションにアクセスするには、
 次の図は、curl を介して Windows で実行されている node.js サーバーに接続することによって、この例を示しています。 
 
 ![Windows からの Linux ネットワークアプリケーションへのアクセス](media/wsl2-network-l2w.png)
+
+### <a name="accessing-linux-applications-from-windows-only-in-builds-lower-than-18945"></a>Windows から Linux アプリケーションにアクセスする (18945 より前のビルドでのみ)
+WSL ディストリビューションにサーバーがある場合は、ディストリビューションの電源を入れている仮想マシンの IP アドレスを検索し、その IP アドレスを使用して接続する必要があります。 これを行うには、次の手順を実行します。
+
+- Wsl ディストリビューション内でコマンドを実行し、 `ip addr` `eth0`インターフェイスの`inet`値の下でそのコマンドを見つけることによって、ディストリビューションの IP アドレスを取得します。
+   - これは、のように`ip addr | grep eth0`grep を使用してコマンドの出力をフィルター処理することで、より簡単に見つけることができます。
+- 上記の IP を使用して、Linux サーバーに接続します。
+
+次の図は、Edge ブラウザーを使用して node.js サーバーに接続することによって、この例を示しています。
+
+![Windows からの Linux ネットワークアプリケーションへのアクセス](media/wsl2-network-w2l.jpg)
+
+ビルドが18945以上の場合は、通常と同じように localhost を使用できます。 
 
 ### <a name="other-networking-considerations"></a>ネットワークに関するその他の考慮事項
 
