@@ -2,18 +2,16 @@
 title: WSL 用のカスタム Linux ディストリビューションを構築する
 description: Windows Subsystem for Linux のカスタム Linux ディストリビューションを作成する方法について説明します。
 keywords: BashOnWindows、bash、wsl、windows、windows サブシステム、ディストリビューション、カスタム
-author: taraj
-ms.author: taraj
 ms.date: 03/27/2018
 ms.topic: article
 ms.assetid: a5095219-0c82-4ce5-9a6d-5c2fc00835a3
 ms.custom: seodec18
-ms.openlocfilehash: 4072df5fa81f65fd9a3ff875ab887c03b234bce1
-ms.sourcegitcommit: cd239efc5c7c25ffbe5de25b2438d44181a838a9
+ms.openlocfilehash: 181badd4ee2f69e904099c12b54dfbdf3a37e294
+ms.sourcegitcommit: 0b5a9f8982dfff07fc8df32d74d97293654f8e12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/14/2019
-ms.locfileid: "67040776"
+ms.lasthandoff: 09/25/2019
+ms.locfileid: "71269700"
 ---
 # <a name="creating-a-custom-linux-distro-for-wsl"></a>WSL 用のカスタム Linux ディストリビューションの作成
 

@@ -2,18 +2,16 @@
 title: エンタープライズ向け Windows Subsystem for Linux
 description: エンタープライズ環境で Windows Subsystem for Linux を最適に使用する方法に関するリソースと手順です。
 keywords: BashOnWindows、bash、wsl、windows、windows subsystem for linux、windowssubsystem、ubuntu、debian、suse、windows 10、enterprise、deployment、offline、パッケージング、ストア、ディストリビューション、インストール、インストール
-author: craigloewen-msft
-ms.author: crloewen
 ms.date: 09/04/2018
 ms.topic: article
 ms.assetid: 7afaeacf-435a-4e58-bff0-a9f0d75b8a51
 ms.custom: seodec18
-ms.openlocfilehash: ea03f2c67d8389eb41d686a99140e11b3181401c
-ms.sourcegitcommit: ed5cf72d5ceb92edd50cf9260ac31fd4d95a02c8
+ms.openlocfilehash: c32d62267c77d87fb200cfe43b8e6f43b4e3a56d
+ms.sourcegitcommit: 0b5a9f8982dfff07fc8df32d74d97293654f8e12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "71020972"
+ms.lasthandoff: 09/25/2019
+ms.locfileid: "71269859"
 ---
 # <a name="windows-subsystem-for-linux-for-enterprise"></a>エンタープライズ向け Windows Subsystem for Linux
 
