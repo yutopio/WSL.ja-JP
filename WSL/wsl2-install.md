@@ -6,18 +6,20 @@ ms.date: 05/30/2019
 ms.topic: article
 ms.assetid: 7afaeacf-435a-4e58-bff0-a9f0d75b8a51
 ms.custom: seodec18
-ms.openlocfilehash: af70bf567cd548d0ca84bbe535003052ec49256b
-ms.sourcegitcommit: 0b5a9f8982dfff07fc8df32d74d97293654f8e12
+ms.openlocfilehash: 386b6793f00300bc9dabd1613cfd69b19d222f0b
+ms.sourcegitcommit: eb7b572388c6bddbf6e8ad8d01927660fe66aecf
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/25/2019
-ms.locfileid: "71269585"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71692462"
 ---
 # <a name="installation-instructions-for-wsl-2"></a>WSL 2 のインストール手順
 
 WSL 2 をインストールして使用を開始するには、次の手順を実行します。
 
-- WSL がインストールされていることを確認します (この手順については[こちら](./install-win10.md)を参照してください)。また、Windows 10 ビルド18917以降を実行していることを確認してください。
+> WSL 2 は、Windows 10 ビルド18917以降でのみ使用できます。
+
+- WSL がインストールされていることを確認します (この手順については[こちら](./install-win10.md)を参照してください)。また、Windows 10**ビルド 18917**以降を実行していることを確認してください。
    - ビルド18917以降を使用していることを確認するには[、Windows Insider プログラムに](https://insider.windows.com/en-us/)参加して、"高速" リングを選択してください。 
    - Windows のバージョンを確認するには、コマンドプロンプトを開き`ver` 、コマンドを実行します。
 - "仮想マシン プラットフォーム" のオプション コンポーネントを有効にする
@@ -51,7 +53,7 @@ PowerShell で、以下を実行します。
 
 ## <a name="finish-with-verifying-what-versions-of-wsl-your-distro-are-using"></a>現在のディストリビューションが使用している WSL のバージョンを確認して終了する
 
-各ディストリビューションでどのバージョンの WSL が使用されているかを確認するには、次のコマンドを使用します。
+各ディストリビューションでどのバージョンの WSL が使用されているかを確認するには、次のコマンドを使用します (Windows ビルド18917以降でのみ使用できます)。
 
 `wsl --list --verbose` または `wsl -l -v`
 
