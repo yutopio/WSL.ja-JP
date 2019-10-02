@@ -1,7 +1,7 @@
 ---
 title: Windows Subsystem for Linux のトラブルシューティング
-description: Linux を Windows Subsystem for Linux で実行しているときに発生する一般的なエラーと問題について詳しく説明します。
-keywords: BashOnWindows、bash、wsl、windows、windowssubsystem、ubuntu
+description: Windows Subsystem for Linux で Linux を実行しているときに発生する一般的なエラーと問題について詳しく説明します。
+keywords: BashOnWindows, bash, wsl, windows, windowssubsystem, ubuntu
 author: scooley
 ms.author: scooley
 ms.date: 11/15/2017
@@ -9,163 +9,163 @@ ms.topic: article
 ms.assetid: 6753f1b2-200e-49cc-93a5-4323e1117246
 ms.custom: seodec18
 ms.localizationpriority: high
-ms.openlocfilehash: 6a5fec8b8e054b4d3399ee9bcd903acebca7aace
-ms.sourcegitcommit: 7af6b7a3f8cfa66cb25115bc26f44aa64ef22811
-ms.translationtype: MT
+ms.openlocfilehash: a73de13853c124de38cae1b9c6c51d0ee9978d44
+ms.sourcegitcommit: f1780bf174c67c531864497ae78cf3f26ef68503
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/28/2019
-ms.locfileid: "70122694"
+ms.lasthandoff: 09/24/2019
+ms.locfileid: "71205974"
 ---
-# <a name="troubleshooting-windows-subsystem-for-linux"></a><span data-ttu-id="70708-104">Windows Subsystem for Linux のトラブルシューティング</span><span class="sxs-lookup"><span data-stu-id="70708-104">Troubleshooting Windows Subsystem for Linux</span></span>
+# <a name="troubleshooting-windows-subsystem-for-linux"></a><span data-ttu-id="985b1-104">Windows Subsystem for Linux のトラブルシューティング</span><span class="sxs-lookup"><span data-stu-id="985b1-104">Troubleshooting Windows Subsystem for Linux</span></span>
 
-### <a name="bash-loses-network-connectivity-once-connected-to-a-vpn"></a><span data-ttu-id="70708-105">ネットワーク接続が VPN に接続されると、Bash が切断する</span><span class="sxs-lookup"><span data-stu-id="70708-105">Bash loses network connectivity once connected to a VPN</span></span>
+### <a name="bash-loses-network-connectivity-once-connected-to-a-vpn"></a><span data-ttu-id="985b1-105">VPN に接続されると、bash のネットワーク接続が切断される</span><span class="sxs-lookup"><span data-stu-id="985b1-105">Bash loses network connectivity once connected to a VPN</span></span>
 
-<span data-ttu-id="70708-106">Windows で VPN に接続した後、bash がネットワーク接続を失った場合は、bash 内からこの回避策を試してください。</span><span class="sxs-lookup"><span data-stu-id="70708-106">If after connecting to a VPN on Windows, bash loses network connectivity, try this workaround from within bash.</span></span> <span data-ttu-id="70708-107">この回避策では、を使用して`/etc/resolv.conf`DNS 解決を手動で上書きすることができます。</span><span class="sxs-lookup"><span data-stu-id="70708-107">This workaround will allow you to manually override the DNS resolution through `/etc/resolv.conf`.</span></span>
+<span data-ttu-id="985b1-106">Windows で VPN に接続した後、bash のネットワーク接続が切断される場合は、bash 内からこの回避策を試してください。</span><span class="sxs-lookup"><span data-stu-id="985b1-106">If after connecting to a VPN on Windows, bash loses network connectivity, try this workaround from within bash.</span></span> <span data-ttu-id="985b1-107">この回避策により、`/etc/resolv.conf` を使用して DNS 解決を手動で上書きできます。</span><span class="sxs-lookup"><span data-stu-id="985b1-107">This workaround will allow you to manually override the DNS resolution through `/etc/resolv.conf`.</span></span>
 
-1. <span data-ttu-id="70708-108">VPN の DNS サーバーを実行しないように注意してください。`ipconfig.exe /all`</span><span class="sxs-lookup"><span data-stu-id="70708-108">Take a note of the DNS server of the VPN from doing `ipconfig.exe /all`</span></span>
-2. <span data-ttu-id="70708-109">既存の resolv.conf のコピーを作成します。`sudo cp /etc/resolv.conf /etc/resolv.conf.new`</span><span class="sxs-lookup"><span data-stu-id="70708-109">Make a copy of the existing resolv.conf `sudo cp /etc/resolv.conf /etc/resolv.conf.new`</span></span>
-3. <span data-ttu-id="70708-110">現在の resolv.conf のリンクを解除します。`sudo unlink /etc/resolv.conf`</span><span class="sxs-lookup"><span data-stu-id="70708-110">Unlink the current resolv.con `sudo unlink /etc/resolv.conf`</span></span>
+1. <span data-ttu-id="985b1-108">`ipconfig.exe /all` を実行して、VPN の DNS サーバーをメモします</span><span class="sxs-lookup"><span data-stu-id="985b1-108">Take a note of the DNS server of the VPN from doing `ipconfig.exe /all`</span></span>
+2. <span data-ttu-id="985b1-109">`sudo cp /etc/resolv.conf /etc/resolv.conf.new` で、既存の resolv.conf のコピーを作成します</span><span class="sxs-lookup"><span data-stu-id="985b1-109">Make a copy of the existing resolv.conf `sudo cp /etc/resolv.conf /etc/resolv.conf.new`</span></span>
+3. <span data-ttu-id="985b1-110">`sudo unlink /etc/resolv.conf` で、現在の resolv.conf のリンクを解除します</span><span class="sxs-lookup"><span data-stu-id="985b1-110">Unlink the current resolv.con `sudo unlink /etc/resolv.conf`</span></span>
 4. `sudo mv /etc/resolv.conf.new /etc/resolv.conf`
-5. <span data-ttu-id="70708-111">および`/etc/resolv.conf`を開く</span><span class="sxs-lookup"><span data-stu-id="70708-111">Open `/etc/resolv.conf` and</span></span> <br/>
-   <span data-ttu-id="70708-112">a.</span><span class="sxs-lookup"><span data-stu-id="70708-112">a.</span></span> <span data-ttu-id="70708-113">ファイルから最初の行を削除します。 "\#このファイルは wsl によって自動的に生成されました。</span><span class="sxs-lookup"><span data-stu-id="70708-113">Delete the first line from the file, which says "\# This file was automatically generated by WSL.</span></span> <span data-ttu-id="70708-114">このファイルの自動生成を停止するには、この行を削除します。 "</span><span class="sxs-lookup"><span data-stu-id="70708-114">To stop automatic generation of this file, remove this line.".</span></span> <br/>
-   <span data-ttu-id="70708-115">b.</span><span class="sxs-lookup"><span data-stu-id="70708-115">b.</span></span> <span data-ttu-id="70708-116">DNS サーバーの一覧の最初のエントリとして、上記の DNS エントリ (1) を追加します。</span><span class="sxs-lookup"><span data-stu-id="70708-116">Add the DNS entry from (1) above as the very first entry in the list of DNS servers.</span></span> <br/>
-   <span data-ttu-id="70708-117">c.</span><span class="sxs-lookup"><span data-stu-id="70708-117">c.</span></span> <span data-ttu-id="70708-118">ファイルを閉じます。</span><span class="sxs-lookup"><span data-stu-id="70708-118">Close the file.</span></span> <br/>
+5. <span data-ttu-id="985b1-111">`/etc/resolv.conf` を開きます。そして、</span><span class="sxs-lookup"><span data-stu-id="985b1-111">Open `/etc/resolv.conf` and</span></span> <br/>
+   <span data-ttu-id="985b1-112">a.</span><span class="sxs-lookup"><span data-stu-id="985b1-112">a.</span></span> <span data-ttu-id="985b1-113">ファイルから最初の行を削除します。この行の内容は "\# This file was automatically generated by WSL.</span><span class="sxs-lookup"><span data-stu-id="985b1-113">Delete the first line from the file, which says "\# This file was automatically generated by WSL.</span></span> <span data-ttu-id="985b1-114">To stop automatic generation of this file, remove this line." です。</span><span class="sxs-lookup"><span data-stu-id="985b1-114">To stop automatic generation of this file, remove this line.".</span></span> <br/>
+   <span data-ttu-id="985b1-115">b.</span><span class="sxs-lookup"><span data-stu-id="985b1-115">b.</span></span> <span data-ttu-id="985b1-116">DNS サーバーの一覧の最初のエントリとして、上記 (1) の DNS エントリ を追加します。</span><span class="sxs-lookup"><span data-stu-id="985b1-116">Add the DNS entry from (1) above as the very first entry in the list of DNS servers.</span></span> <br/>
+   <span data-ttu-id="985b1-117">c.</span><span class="sxs-lookup"><span data-stu-id="985b1-117">c.</span></span> <span data-ttu-id="985b1-118">ファイを閉じます。</span><span class="sxs-lookup"><span data-stu-id="985b1-118">Close the file.</span></span> <br/>
 
-<span data-ttu-id="70708-119">VPN を切断したら、変更をに`/etc/resolv.conf`戻す必要があります。</span><span class="sxs-lookup"><span data-stu-id="70708-119">Once you have disconnected the VPN, you will have to revert the changes to `/etc/resolv.conf`.</span></span> <span data-ttu-id="70708-120">これを行うには、次の手順を実行します。</span><span class="sxs-lookup"><span data-stu-id="70708-120">To do this, do:</span></span>
+<span data-ttu-id="985b1-119">VPN を切断したら、変更を `/etc/resolv.conf` に戻す必要があります。</span><span class="sxs-lookup"><span data-stu-id="985b1-119">Once you have disconnected the VPN, you will have to revert the changes to `/etc/resolv.conf`.</span></span> <span data-ttu-id="985b1-120">これを行うには、次の手順を実行します。</span><span class="sxs-lookup"><span data-stu-id="985b1-120">To do this, do:</span></span>
 1. `cd /etc`
 2. `sudo mv resolv.conf resolv.conf.new`
 3. `sudo ln -s ../run/resolvconf/resolv.conf resolv.conf`
 
-### <a name="starting-wsl-or-installing-a-distribution-returns-an-error-code"></a><span data-ttu-id="70708-121">WSL を開始するか、ディストリビューションをインストールするとエラーコードが返される</span><span class="sxs-lookup"><span data-stu-id="70708-121">Starting WSL or installing a distribution returns an error code</span></span>
+### <a name="starting-wsl-or-installing-a-distribution-returns-an-error-code"></a><span data-ttu-id="985b1-121">WSL の開始またはディストリビューションのインストールでエラー コードが返される</span><span class="sxs-lookup"><span data-stu-id="985b1-121">Starting WSL or installing a distribution returns an error code</span></span>
 
-<span data-ttu-id="70708-122">こちらの[手順](https://github.com/Microsoft/WSL/blob/master/CONTRIBUTING.md#8-detailed-logs)に従って、詳細なログを収集し、GitHub で問題をファイルに記録してください。</span><span class="sxs-lookup"><span data-stu-id="70708-122">Follow [these instructions](https://github.com/Microsoft/WSL/blob/master/CONTRIBUTING.md#8-detailed-logs) to collect detailed logs and file an issue on our GitHub.</span></span>
+<span data-ttu-id="985b1-122">[こちらの手順](https://github.com/Microsoft/WSL/blob/master/CONTRIBUTING.md#8-detailed-logs)に従って、詳細なログを収集し、Microsoft の GitHub で問題を提出してください。</span><span class="sxs-lookup"><span data-stu-id="985b1-122">Follow [these instructions](https://github.com/Microsoft/WSL/blob/master/CONTRIBUTING.md#8-detailed-logs) to collect detailed logs and file an issue on our GitHub.</span></span>
 
-### <a name="updating-bash-on-ubuntu-on-windows"></a><span data-ttu-id="70708-123">Windows での Bash on Ubuntu の更新</span><span class="sxs-lookup"><span data-stu-id="70708-123">Updating Bash on Ubuntu on Windows</span></span>
+### <a name="updating-bash-on-ubuntu-on-windows"></a><span data-ttu-id="985b1-123">Bash on Ubuntu on Windows の更新</span><span class="sxs-lookup"><span data-stu-id="985b1-123">Updating Bash on Ubuntu on Windows</span></span>
 
-<span data-ttu-id="70708-124">Bash on Ubuntu on Windows では、更新が必要な2つのコンポーネントがあります。</span><span class="sxs-lookup"><span data-stu-id="70708-124">There are two components of Bash on Ubuntu on Windows that can require updating.</span></span> 
+<span data-ttu-id="985b1-124">Bash on Ubuntu on Windows には、更新が必要になることがある 2 つのコンポーネントがあります。</span><span class="sxs-lookup"><span data-stu-id="985b1-124">There are two components of Bash on Ubuntu on Windows that can require updating.</span></span> 
 
-1. <span data-ttu-id="70708-125">Windows Subsystem for Linux</span><span class="sxs-lookup"><span data-stu-id="70708-125">The Windows Subsystem for Linux</span></span>
+1. <span data-ttu-id="985b1-125">Windows Subsystem for Linux</span><span class="sxs-lookup"><span data-stu-id="985b1-125">The Windows Subsystem for Linux</span></span>
   
-   <span data-ttu-id="70708-126">Bash on Ubuntu on Windows でこの部分をアップグレードすると、[リリースノート](https://msdn.microsoft.com/en-us/commandline/wsl/release_notes)の新しい修正のアウトラインが有効になります。</span><span class="sxs-lookup"><span data-stu-id="70708-126">Upgrading this portion of Bash on Ubuntu on Windows will enable any new fixes outlines in the [release notes](https://msdn.microsoft.com/en-us/commandline/wsl/release_notes).</span></span> <span data-ttu-id="70708-127">Windows Insider プログラムをサブスクライブしていること、およびビルドが最新であることを確認します。</span><span class="sxs-lookup"><span data-stu-id="70708-127">Ensure that you are subscribed to the Windows Insider Program and that your build is up to date.</span></span> <span data-ttu-id="70708-128">Ubuntu インスタンスをリセットするなど、より細かな制御を行うには、[コマンドリファレンスページを参照](https://msdn.microsoft.com/en-us/commandline/wsl/reference)してください。</span><span class="sxs-lookup"><span data-stu-id="70708-128">For finer grain control including resetting your Ubuntu instance check out the [command reference page](https://msdn.microsoft.com/en-us/commandline/wsl/reference).</span></span>
+   <span data-ttu-id="985b1-126">Bash on Ubuntu on Windows のこの部分をアップグレードすると、[リリース ノート](https://msdn.microsoft.com/en-us/commandline/wsl/release_notes)で概説されている新しい修正が有効になります。</span><span class="sxs-lookup"><span data-stu-id="985b1-126">Upgrading this portion of Bash on Ubuntu on Windows will enable any new fixes outlines in the [release notes](https://msdn.microsoft.com/en-us/commandline/wsl/release_notes).</span></span> <span data-ttu-id="985b1-127">Windows Insider Program をサブスクライブしていることと、ビルドが最新であることを確認してください。</span><span class="sxs-lookup"><span data-stu-id="985b1-127">Ensure that you are subscribed to the Windows Insider Program and that your build is up to date.</span></span> <span data-ttu-id="985b1-128">Ubuntu インスタンスのリセットなど、より細かな制御を行うには、[コマンド リファレンスに関するページ](https://msdn.microsoft.com/en-us/commandline/wsl/reference)を確認してください。</span><span class="sxs-lookup"><span data-stu-id="985b1-128">For finer grain control including resetting your Ubuntu instance check out the [command reference page](https://msdn.microsoft.com/en-us/commandline/wsl/reference).</span></span>
 
-2. <span data-ttu-id="70708-129">Ubuntu ユーザーバイナリ</span><span class="sxs-lookup"><span data-stu-id="70708-129">The Ubuntu user binaries</span></span> 
+2. <span data-ttu-id="985b1-129">Ubuntu ユーザー バイナリ</span><span class="sxs-lookup"><span data-stu-id="985b1-129">The Ubuntu user binaries</span></span> 
 
-   <span data-ttu-id="70708-130">Bash on Ubuntu on Windows でこの部分をアップグレードすると、apt でインストールしたアプリケーションを含め、Ubuntu ユーザーバイナリに更新プログラムがインストールされます。</span><span class="sxs-lookup"><span data-stu-id="70708-130">Upgrading this portion of Bash on Ubuntu on Windows will install any updates to the Ubuntu user binaries including applications that you have installed via apt-get.</span></span> <span data-ttu-id="70708-131">更新するには、Bash で次のコマンドを実行します。</span><span class="sxs-lookup"><span data-stu-id="70708-131">To update run the following commands in Bash:</span></span>
+   <span data-ttu-id="985b1-130">Bash on Ubuntu on Windows のこの部分をアップグレードすると、apt-get を使用してインストールしたアプリケーションを含む Ubuntu ユーザー バイナリにすべての更新プログラムがインストールされます。</span><span class="sxs-lookup"><span data-stu-id="985b1-130">Upgrading this portion of Bash on Ubuntu on Windows will install any updates to the Ubuntu user binaries including applications that you have installed via apt-get.</span></span> <span data-ttu-id="985b1-131">更新するには、Bash で次のコマンドを実行します。</span><span class="sxs-lookup"><span data-stu-id="985b1-131">To update run the following commands in Bash:</span></span>
   
    1. `apt-get update`
    2. `apt-get upgrade`
   
-### <a name="apt-get-upgrade-errors"></a><span data-ttu-id="70708-132">Apt-アップグレードエラーの取得</span><span class="sxs-lookup"><span data-stu-id="70708-132">Apt-get upgrade errors</span></span>
-<span data-ttu-id="70708-133">一部のパッケージでは、まだ実装していない機能が使用されています。</span><span class="sxs-lookup"><span data-stu-id="70708-133">Some packages use features that we haven't implemented yet.</span></span> <span data-ttu-id="70708-134">`udev`たとえば、はまだサポートされていない`apt-get upgrade`ため、いくつかのエラーが発生します。</span><span class="sxs-lookup"><span data-stu-id="70708-134">`udev`, for example, isn't supported yet and causes several `apt-get upgrade` errors.</span></span>
+### <a name="apt-get-upgrade-errors"></a><span data-ttu-id="985b1-132">apt-get アップグレードのエラー</span><span class="sxs-lookup"><span data-stu-id="985b1-132">Apt-get upgrade errors</span></span>
+<span data-ttu-id="985b1-133">一部のパッケージでは、まだ Microsoft が実装していない機能が使用されています。</span><span class="sxs-lookup"><span data-stu-id="985b1-133">Some packages use features that we haven't implemented yet.</span></span> <span data-ttu-id="985b1-134">たとえば、`udev` はまだサポートされていないため、`apt-get upgrade` エラーがいくつか発生します。</span><span class="sxs-lookup"><span data-stu-id="985b1-134">`udev`, for example, isn't supported yet and causes several `apt-get upgrade` errors.</span></span>
 
-<span data-ttu-id="70708-135">に`udev`関連する問題を修正するには、次の手順に従います。</span><span class="sxs-lookup"><span data-stu-id="70708-135">To fix issues related to `udev`, follow the following steps:</span></span>
+<span data-ttu-id="985b1-135">`udev` に関連する問題を修正するには、次の手順に従います。</span><span class="sxs-lookup"><span data-stu-id="985b1-135">To fix issues related to `udev`, follow the following steps:</span></span>
 
-1. <span data-ttu-id="70708-136">に次のもの`/usr/sbin/policy-rc.d`を書き込んで、変更を保存します。</span><span class="sxs-lookup"><span data-stu-id="70708-136">Write the following to `/usr/sbin/policy-rc.d` and save your changes.</span></span>
+1. <span data-ttu-id="985b1-136">次の内容を `/usr/sbin/policy-rc.d` に記述して、変更を保存します。</span><span class="sxs-lookup"><span data-stu-id="985b1-136">Write the following to `/usr/sbin/policy-rc.d` and save your changes.</span></span>
   
    ``` BASH
    #!/bin/sh
    exit 101
    ```
   
-2. <span data-ttu-id="70708-137">実行アクセス許可の追加先`/usr/sbin/policy-rc.d`</span><span class="sxs-lookup"><span data-stu-id="70708-137">Add execute permissions to `/usr/sbin/policy-rc.d`</span></span>
+2. <span data-ttu-id="985b1-137">実行のアクセス許可を `/usr/sbin/policy-rc.d` に追加します</span><span class="sxs-lookup"><span data-stu-id="985b1-137">Add execute permissions to `/usr/sbin/policy-rc.d`</span></span>
    ``` BASH
    chmod +x /usr/sbin/policy-rc.d
    ```
   
-3. <span data-ttu-id="70708-138">次のコマンドを実行します。</span><span class="sxs-lookup"><span data-stu-id="70708-138">Run the following commands</span></span>
+3. <span data-ttu-id="985b1-138">次のコマンドを実行します</span><span class="sxs-lookup"><span data-stu-id="985b1-138">Run the following commands</span></span>
    ``` BASH
    dpkg-divert --local --rename --add /sbin/initctl
    ln -s /bin/true /sbin/initctl
    ```
   
-### <a name="error-0x80040306-on-installation"></a><span data-ttu-id="70708-139">エラー0x80040306 "インストール時</span><span class="sxs-lookup"><span data-stu-id="70708-139">"Error: 0x80040306" on installation</span></span>
-<span data-ttu-id="70708-140">これは、従来のコンソールをサポートしていないという点で必要になります。</span><span class="sxs-lookup"><span data-stu-id="70708-140">This has to do with the fact that we do not support legacy console.</span></span>
-<span data-ttu-id="70708-141">レガシコンソールをオフにするには:</span><span class="sxs-lookup"><span data-stu-id="70708-141">To turn off legacy console:</span></span>
+### <a name="error-0x80040306-on-installation"></a><span data-ttu-id="985b1-139">"Error:0x80040306" がインストール時に発生</span><span class="sxs-lookup"><span data-stu-id="985b1-139">"Error: 0x80040306" on installation</span></span>
+<span data-ttu-id="985b1-140">これは、従来のコンソールがサポートされていないということと関連があります。</span><span class="sxs-lookup"><span data-stu-id="985b1-140">This has to do with the fact that we do not support legacy console.</span></span>
+<span data-ttu-id="985b1-141">従来のコンソールをオフにするには、以下を実行します。</span><span class="sxs-lookup"><span data-stu-id="985b1-141">To turn off legacy console:</span></span>
 
-1. <span data-ttu-id="70708-142">Cmd.exe を開きます。</span><span class="sxs-lookup"><span data-stu-id="70708-142">Open cmd.exe</span></span>
-1. <span data-ttu-id="70708-143">タイトルバーを右クリックし > プロパティ-> レガシコンソールを使用する をオフにする</span><span class="sxs-lookup"><span data-stu-id="70708-143">Right click title bar -> Properties -> Uncheck Use legacy console</span></span>
-1. <span data-ttu-id="70708-144">[OK] をクリックします。</span><span class="sxs-lookup"><span data-stu-id="70708-144">Click OK</span></span>
+1. <span data-ttu-id="985b1-142">cmd.exe を開きます。</span><span class="sxs-lookup"><span data-stu-id="985b1-142">Open cmd.exe</span></span>
+1. <span data-ttu-id="985b1-143">タイトル バーを右クリックして、[プロパティ] を選択し、[従来のコンソールを使う] をオフにします。</span><span class="sxs-lookup"><span data-stu-id="985b1-143">Right click title bar -> Properties -> Uncheck Use legacy console</span></span>
+1. <span data-ttu-id="985b1-144">[OK] をクリックします。</span><span class="sxs-lookup"><span data-stu-id="985b1-144">Click OK</span></span>
 
-### <a name="error-0x80040154-after-windows-update"></a><span data-ttu-id="70708-145">エラーWindows update 後の0x80040154 が</span><span class="sxs-lookup"><span data-stu-id="70708-145">"Error: 0x80040154" after Windows update</span></span>
-<span data-ttu-id="70708-146">Windows update で Windows Subsystem for Linux 機能が無効になっている可能性があります。</span><span class="sxs-lookup"><span data-stu-id="70708-146">The Windows Subsystem for Linux feature may be disabled during a Windows update.</span></span> <span data-ttu-id="70708-147">この問題が発生した場合は、Windows の機能を再度有効にする必要があります。</span><span class="sxs-lookup"><span data-stu-id="70708-147">If this happens the Windows feature must be re-enabled.</span></span> <span data-ttu-id="70708-148">Windows Subsystem for Linux を有効にする手順については、[インストールガイド](https://msdn.microsoft.com/en-us/commandline/wsl/install_guide#enable-the-windows-subsystem-for-linux-feature-gui https://msdn.microsoft.com/en-us/commandline/wsl/install_guide#enable-the-windows-subsystem-for-linux-feature-gui)を参照してください。</span><span class="sxs-lookup"><span data-stu-id="70708-148">Instructions for enabling the Windows Subsystem for Linux can be found in the [Installation Guide](https://msdn.microsoft.com/en-us/commandline/wsl/install_guide#enable-the-windows-subsystem-for-linux-feature-guihttps://msdn.microsoft.com/en-us/commandline/wsl/install_guide#enable-the-windows-subsystem-for-linux-feature-gui).</span></span>
+### <a name="error-0x80040154-after-windows-update"></a><span data-ttu-id="985b1-145">"Error:0x80040154" が Windows Update 後に発生</span><span class="sxs-lookup"><span data-stu-id="985b1-145">"Error: 0x80040154" after Windows update</span></span>
+<span data-ttu-id="985b1-146">Windows Update 時に Windows Subsystem for Linux 機能が無効になる可能性があります。</span><span class="sxs-lookup"><span data-stu-id="985b1-146">The Windows Subsystem for Linux feature may be disabled during a Windows update.</span></span> <span data-ttu-id="985b1-147">その場合は、この Windows 機能を再度有効にする必要があります。</span><span class="sxs-lookup"><span data-stu-id="985b1-147">If this happens the Windows feature must be re-enabled.</span></span> <span data-ttu-id="985b1-148">Windows Subsystem for Linux を有効にする手順については、[インストール ガイド](https://msdn.microsoft.com/en-us/commandline/wsl/install_guide#enable-the-windows-subsystem-for-linux-feature-gui)をご覧ください。</span><span class="sxs-lookup"><span data-stu-id="985b1-148">Instructions for enabling the Windows Subsystem for Linux can be found in the [Installation Guide](https://msdn.microsoft.com/en-us/commandline/wsl/install_guide#enable-the-windows-subsystem-for-linux-feature-gui).</span></span>
 
-### <a name="changing-the-display-language"></a><span data-ttu-id="70708-149">表示言語の変更</span><span class="sxs-lookup"><span data-stu-id="70708-149">Changing the display language</span></span>
-<span data-ttu-id="70708-150">WSL install は、Windows インストールのロケールに合わせて Ubuntu のロケールを自動的に変更しようとします。</span><span class="sxs-lookup"><span data-stu-id="70708-150">WSL install will try to automatically change the Ubuntu locale to match the locale of your Windows install.</span></span>  <span data-ttu-id="70708-151">この動作が不要な場合は、このコマンドを実行して、インストールの完了後に Ubuntu のロケールを変更することができます。</span><span class="sxs-lookup"><span data-stu-id="70708-151">If you do not want this behavior you can run this command to change the Ubuntu locale after install completes.</span></span>  <span data-ttu-id="70708-152">この変更を有効にするには、bash を再起動する必要があります。</span><span class="sxs-lookup"><span data-stu-id="70708-152">You will have to relaunch bash.exe for this change to take effect.</span></span>
+### <a name="changing-the-display-language"></a><span data-ttu-id="985b1-149">表示言語の変更</span><span class="sxs-lookup"><span data-stu-id="985b1-149">Changing the display language</span></span>
+<span data-ttu-id="985b1-150">WSL インストールでは、Windows インストールのロケールに合わせて Ubuntu ロケールを自動的に変更しようとします。</span><span class="sxs-lookup"><span data-stu-id="985b1-150">WSL install will try to automatically change the Ubuntu locale to match the locale of your Windows install.</span></span>  <span data-ttu-id="985b1-151">この動作が不要な場合は、次のコマンドを実行して、インストールの完了後に Ubuntu ロケールを変更できます。</span><span class="sxs-lookup"><span data-stu-id="985b1-151">If you do not want this behavior you can run this command to change the Ubuntu locale after install completes.</span></span>  <span data-ttu-id="985b1-152">この変更を有効にするには、bash.exe を再起動する必要があります。</span><span class="sxs-lookup"><span data-stu-id="985b1-152">You will have to relaunch bash.exe for this change to take effect.</span></span>
 
-<span data-ttu-id="70708-153">次の例では、ロケールを en-us に変更します。</span><span class="sxs-lookup"><span data-stu-id="70708-153">The below example changes to locale to en-US:</span></span>
+<span data-ttu-id="985b1-153">次の例は、ロケールを en-US に変更します。</span><span class="sxs-lookup"><span data-stu-id="985b1-153">The below example changes to locale to en-US:</span></span>
 ``` BASH
 sudo update-locale LANG=en_US.UTF8
 ```
 
-### <a name="installation-issues-after-windows-system-restore"></a><span data-ttu-id="70708-154">Windows システムの復元後のインストールに関する問題</span><span class="sxs-lookup"><span data-stu-id="70708-154">Installation issues after Windows system restore</span></span>
-1.  <span data-ttu-id="70708-155">フォルダーを`%windir%\System32\Tasks\Microsoft\Windows\Windows Subsystem for Linux`削除します。</span><span class="sxs-lookup"><span data-stu-id="70708-155">Delete the `%windir%\System32\Tasks\Microsoft\Windows\Windows Subsystem for Linux` folder.</span></span> <br/>
-  <span data-ttu-id="70708-156">**注:オプションの機能が完全にインストールされ、動作している場合は、この操作を行わないでください。**</span><span class="sxs-lookup"><span data-stu-id="70708-156">**Note: Do not do this if your optional feature is fully installed and working.**</span></span>
-2.  <span data-ttu-id="70708-157">WSL オプション機能を有効にします (まだ設定されていない場合)</span><span class="sxs-lookup"><span data-stu-id="70708-157">Enable the WSL optional feature (if not already)</span></span>
-3.  <span data-ttu-id="70708-158">再起動します</span><span class="sxs-lookup"><span data-stu-id="70708-158">Reboot</span></span>
-4.  <span data-ttu-id="70708-159">lxrun/uninstall の場合</span><span class="sxs-lookup"><span data-stu-id="70708-159">lxrun /uninstall /full</span></span>
-5.  <span data-ttu-id="70708-160">Bash をインストールする</span><span class="sxs-lookup"><span data-stu-id="70708-160">Install bash</span></span>
+### <a name="installation-issues-after-windows-system-restore"></a><span data-ttu-id="985b1-154">Windows システムの復元後のインストールの問題</span><span class="sxs-lookup"><span data-stu-id="985b1-154">Installation issues after Windows system restore</span></span>
+1.  <span data-ttu-id="985b1-155">`%windir%\System32\Tasks\Microsoft\Windows\Windows Subsystem for Linux` フォルダーを削除します。</span><span class="sxs-lookup"><span data-stu-id="985b1-155">Delete the `%windir%\System32\Tasks\Microsoft\Windows\Windows Subsystem for Linux` folder.</span></span> <br/>
+  <span data-ttu-id="985b1-156">**注:オプションの機能が完全にインストールされて動作している場合は、この操作を行わないでください。**</span><span class="sxs-lookup"><span data-stu-id="985b1-156">**Note: Do not do this if your optional feature is fully installed and working.**</span></span>
+2.  <span data-ttu-id="985b1-157">WSL オプション機能を有効にします (まだ有効にされていない場合)</span><span class="sxs-lookup"><span data-stu-id="985b1-157">Enable the WSL optional feature (if not already)</span></span>
+3.  <span data-ttu-id="985b1-158">再起動します</span><span class="sxs-lookup"><span data-stu-id="985b1-158">Reboot</span></span>
+4.  <span data-ttu-id="985b1-159">lxrun /uninstall /full</span><span class="sxs-lookup"><span data-stu-id="985b1-159">lxrun /uninstall /full</span></span>
+5.  <span data-ttu-id="985b1-160">Bash をインストールします</span><span class="sxs-lookup"><span data-stu-id="985b1-160">Install bash</span></span>
 
-### <a name="no-internet-access-in-wsl"></a><span data-ttu-id="70708-161">WSL でインターネットにアクセスできない</span><span class="sxs-lookup"><span data-stu-id="70708-161">No internet access in WSL</span></span>
-<span data-ttu-id="70708-162">一部のユーザーが、WSL でのインターネットアクセスをブロックする特定のファイアウォールアプリケーションに関する問題を報告しています。</span><span class="sxs-lookup"><span data-stu-id="70708-162">Some users have reported issues with specific firewall applications blocking internet access in WSL.</span></span>  <span data-ttu-id="70708-163">報告されるファイアウォールは次のとおりです。</span><span class="sxs-lookup"><span data-stu-id="70708-163">The firewalls reported are:</span></span>
+### <a name="no-internet-access-in-wsl"></a><span data-ttu-id="985b1-161">WSL でインターネットにアクセスできない</span><span class="sxs-lookup"><span data-stu-id="985b1-161">No internet access in WSL</span></span>
+<span data-ttu-id="985b1-162">一部のユーザーにより、WSL でのインターネット アクセスをブロックする特定のファイアウォール アプリケーションに関する問題が報告されています。</span><span class="sxs-lookup"><span data-stu-id="985b1-162">Some users have reported issues with specific firewall applications blocking internet access in WSL.</span></span>  <span data-ttu-id="985b1-163">報告されているファイアウォールは次のとおりです。</span><span class="sxs-lookup"><span data-stu-id="985b1-163">The firewalls reported are:</span></span>
 
-1. <span data-ttu-id="70708-164">Kaspersky</span><span class="sxs-lookup"><span data-stu-id="70708-164">Kaspersky</span></span>
-1. <span data-ttu-id="70708-165">AVG</span><span class="sxs-lookup"><span data-stu-id="70708-165">AVG</span></span>
-1. <span data-ttu-id="70708-166">Avast</span><span class="sxs-lookup"><span data-stu-id="70708-166">Avast</span></span>
+1. <span data-ttu-id="985b1-164">Kaspersky</span><span class="sxs-lookup"><span data-stu-id="985b1-164">Kaspersky</span></span>
+1. <span data-ttu-id="985b1-165">AVG</span><span class="sxs-lookup"><span data-stu-id="985b1-165">AVG</span></span>
+1. <span data-ttu-id="985b1-166">Avast</span><span class="sxs-lookup"><span data-stu-id="985b1-166">Avast</span></span>
 
-<span data-ttu-id="70708-167">場合によっては、ファイアウォールをオフにすることでアクセスできます。</span><span class="sxs-lookup"><span data-stu-id="70708-167">In some cases turning off the firewall allows for access.</span></span>  <span data-ttu-id="70708-168">場合によっては、ファイアウォールをインストールするだけでアクセスがブロックされます。</span><span class="sxs-lookup"><span data-stu-id="70708-168">In some cases simply having the firewall installed looks to block access.</span></span>
+<span data-ttu-id="985b1-167">ファイアウォールをオフにすると、アクセスできる場合があります。</span><span class="sxs-lookup"><span data-stu-id="985b1-167">In some cases turning off the firewall allows for access.</span></span>  <span data-ttu-id="985b1-168">場合によっては、ファイアウォールをインストールするだけでアクセスがブロックされるようです。</span><span class="sxs-lookup"><span data-stu-id="985b1-168">In some cases simply having the firewall installed looks to block access.</span></span>
 
-### <a name="permission-denied-error-when-using-ping"></a><span data-ttu-id="70708-169">Ping の使用時にアクセス許可拒否エラーが発生する</span><span class="sxs-lookup"><span data-stu-id="70708-169">Permission Denied error when using ping</span></span>
-#### <a name="anniversary-updatehttpsmsdnmicrosoftcomen-uscommandlinewslrelease_notesbuild-14388-to-windows-10-anniversary-update"></a>[<span data-ttu-id="70708-170">記念日の更新</span><span class="sxs-lookup"><span data-stu-id="70708-170">Anniversary Update</span></span>](https://msdn.microsoft.com/en-us/commandline/wsl/release_notes#build-14388-to-windows-10-anniversary-update) 
+### <a name="permission-denied-error-when-using-ping"></a><span data-ttu-id="985b1-169">ping 使用時のアクセス拒否エラー</span><span class="sxs-lookup"><span data-stu-id="985b1-169">Permission Denied error when using ping</span></span>
+#### <a name="anniversary-updatehttpsmsdnmicrosoftcomen-uscommandlinewslrelease_notesbuild-14388-to-windows-10-anniversary-update"></a>[<span data-ttu-id="985b1-170">Anniversary Update</span><span class="sxs-lookup"><span data-stu-id="985b1-170">Anniversary Update</span></span>](https://msdn.microsoft.com/en-us/commandline/wsl/release_notes#build-14388-to-windows-10-anniversary-update) 
 
-<span data-ttu-id="70708-171">WSL で ping を実行するには、Windows の管理者特権が必要です。</span><span class="sxs-lookup"><span data-stu-id="70708-171">Administrator privileges in Windows are required to run ping in WSL.</span></span>  <span data-ttu-id="70708-172">Ping を実行するには、管理者として Windows 上で Bash on Ubuntu を実行するか、管理者特権を使用して CMD/PowerShell プロンプトから bash を実行します。</span><span class="sxs-lookup"><span data-stu-id="70708-172">To run ping, run Bash on Ubuntu on Windows as an administrator, or run bash.exe from a CMD/PowerShell prompt with administrator privileges.</span></span>
+<span data-ttu-id="985b1-171">WSL で ping を実行するには、Windows の管理者特権が必要です。</span><span class="sxs-lookup"><span data-stu-id="985b1-171">Administrator privileges in Windows are required to run ping in WSL.</span></span>  <span data-ttu-id="985b1-172">ping を実行するには、管理者として Bash on Ubuntu on Windows を実行するか、管理者特権を使用して CMD/PowerShell プロンプトから bash.exe を実行します。</span><span class="sxs-lookup"><span data-stu-id="985b1-172">To run ping, run Bash on Ubuntu on Windows as an administrator, or run bash.exe from a CMD/PowerShell prompt with administrator privileges.</span></span>
 
-#### <a name="build-14926httpsmsdnmicrosoftcomen-uscommandlinewslrelease_notesbuild-14926"></a>[<span data-ttu-id="70708-173">ビルド 14926 +</span><span class="sxs-lookup"><span data-stu-id="70708-173">Build 14926+</span></span>](https://msdn.microsoft.com/en-us/commandline/wsl/release_notes#build-14926)
-  <span data-ttu-id="70708-174">管理者特権は不要になりました。</span><span class="sxs-lookup"><span data-stu-id="70708-174">Administrator privileges no longer required.</span></span>
+#### <a name="build-14926httpsmsdnmicrosoftcomen-uscommandlinewslrelease_notesbuild-14926"></a>[<span data-ttu-id="985b1-173">Build 14926 以降</span><span class="sxs-lookup"><span data-stu-id="985b1-173">Build 14926+</span></span>](https://msdn.microsoft.com/en-us/commandline/wsl/release_notes#build-14926)
+  <span data-ttu-id="985b1-174">管理者特権は不要になりました。</span><span class="sxs-lookup"><span data-stu-id="985b1-174">Administrator privileges no longer required.</span></span>
 
-### <a name="bash-is-hung"></a><span data-ttu-id="70708-175">Bash がハングしています</span><span class="sxs-lookup"><span data-stu-id="70708-175">Bash is hung</span></span>
-<span data-ttu-id="70708-176">Bash を使用しているときに bash がハングしている (またはデッドロックされている) ことが検出され、入力に応答していない場合は、メモリダンプを収集して報告することによって問題を診断してください。</span><span class="sxs-lookup"><span data-stu-id="70708-176">If while working with bash, you find that bash is hung (or deadlocked) and not responding to inputs, help us diagnose the issue by collecting and reporting a memory dump.</span></span> <span data-ttu-id="70708-177">これらの手順はシステムをクラッシュさせることに注意してください。</span><span class="sxs-lookup"><span data-stu-id="70708-177">Note that these steps will crash your system.</span></span> <span data-ttu-id="70708-178">これに慣れていない場合や、作業を保存する前に作業を保存していない場合は、この操作を行わないでください。</span><span class="sxs-lookup"><span data-stu-id="70708-178">Do not do this if you are not comfortable with that or save your work prior to doing this.</span></span>  <br/>
-<span data-ttu-id="70708-179">メモリダンプを収集するには:</span><span class="sxs-lookup"><span data-stu-id="70708-179">To collect a memory dump:</span></span>
-1. <span data-ttu-id="70708-180">メモリダンプの種類を "完全なメモリダンプ" に変更します。</span><span class="sxs-lookup"><span data-stu-id="70708-180">Change the memory dump type to "complete memory dump".</span></span> <span data-ttu-id="70708-181">ダンプの種類を変更するときに、現在の型をメモしておきます。</span><span class="sxs-lookup"><span data-stu-id="70708-181">While changing the dump type, take a note of your current type.</span></span>
-2. <span data-ttu-id="70708-182">キーボードコントロールを使用してクラッシュを構成する[手順](https://blogs.technet.microsoft.com/askpfeplat/2015/04/05/how-to-force-a-diagnostic-memory-dump-when-a-computer-hangs/)を使用します。</span><span class="sxs-lookup"><span data-stu-id="70708-182">Use the [steps](https://blogs.technet.microsoft.com/askpfeplat/2015/04/05/how-to-force-a-diagnostic-memory-dump-when-a-computer-hangs/) to configure crash using keyboard control.</span></span>
-3. <span data-ttu-id="70708-183">ハングまたはデッドロックを再現します。</span><span class="sxs-lookup"><span data-stu-id="70708-183">Repro the hang or deadlock.</span></span>
-4. <span data-ttu-id="70708-184">(2) のキーシーケンスを使用してシステムをクラッシュさせる。</span><span class="sxs-lookup"><span data-stu-id="70708-184">Crash the system using the key sequence from (2).</span></span>
-5. <span data-ttu-id="70708-185">システムはクラッシュし、メモリダンプを収集します。</span><span class="sxs-lookup"><span data-stu-id="70708-185">The system will crash and collect the memory dump.</span></span>
-6. <span data-ttu-id="70708-186">システムが再起動したら、memory.dmp をにsecure@microsoft.com報告します。</span><span class="sxs-lookup"><span data-stu-id="70708-186">Once the system reboots, report the memory.dmp to secure@microsoft.com.</span></span> <span data-ttu-id="70708-187">ダンプファイルの既定の場所は、C:\Windows\memory.dmp、または C: がシステムドライブである場合は、になります。</span><span class="sxs-lookup"><span data-stu-id="70708-187">The default location of the dump file is %SystemRoot%\memory.dmp or C:\Windows\memory.dmp if C: is the system drive.</span></span> <span data-ttu-id="70708-188">電子メールでは、ダンプは WSL または Bash on Windows チーム用です。</span><span class="sxs-lookup"><span data-stu-id="70708-188">In the email, note that the dump is for the WSL or Bash on Windows team.</span></span>
-7. <span data-ttu-id="70708-189">メモリダンプの種類を元の設定に復元します。</span><span class="sxs-lookup"><span data-stu-id="70708-189">Restore the memory dump type to the original setting.</span></span>
+### <a name="bash-is-hung"></a><span data-ttu-id="985b1-175">Bash がハングしている</span><span class="sxs-lookup"><span data-stu-id="985b1-175">Bash is hung</span></span>
+<span data-ttu-id="985b1-176">bash を使用しているときに bash がハングしている (またはデッドロックされている) か、入力に応答していないことに気付いた場合は、Microsoft が問題を診断できるようにメモリ ダンプを収集して報告してください。</span><span class="sxs-lookup"><span data-stu-id="985b1-176">If while working with bash, you find that bash is hung (or deadlocked) and not responding to inputs, help us diagnose the issue by collecting and reporting a memory dump.</span></span> <span data-ttu-id="985b1-177">次の手順によりシステムがクラッシュすることに注意してください。</span><span class="sxs-lookup"><span data-stu-id="985b1-177">Note that these steps will crash your system.</span></span> <span data-ttu-id="985b1-178">それが問題である場合は、この操作を行わないでください。または、これを行う前に作業を保存してください。</span><span class="sxs-lookup"><span data-stu-id="985b1-178">Do not do this if you are not comfortable with that or save your work prior to doing this.</span></span>  <br/>
+<span data-ttu-id="985b1-179">メモリ ダンプを収集するには、以下を実行します。</span><span class="sxs-lookup"><span data-stu-id="985b1-179">To collect a memory dump:</span></span>
+1. <span data-ttu-id="985b1-180">メモリ ダンプの種類を "完全なメモリ ダンプ" に変更します。</span><span class="sxs-lookup"><span data-stu-id="985b1-180">Change the memory dump type to "complete memory dump".</span></span> <span data-ttu-id="985b1-181">ダンプの種類を変更するときに、現在の種類をメモしておきます。</span><span class="sxs-lookup"><span data-stu-id="985b1-181">While changing the dump type, take a note of your current type.</span></span>
+2. <span data-ttu-id="985b1-182">[こちらの手順](https://blogs.technet.microsoft.com/askpfeplat/2015/04/05/how-to-force-a-diagnostic-memory-dump-when-a-computer-hangs/)を使用して、キーボード コントロールを使ってクラッシュを構成します。</span><span class="sxs-lookup"><span data-stu-id="985b1-182">Use the [steps](https://blogs.technet.microsoft.com/askpfeplat/2015/04/05/how-to-force-a-diagnostic-memory-dump-when-a-computer-hangs/) to configure crash using keyboard control.</span></span>
+3. <span data-ttu-id="985b1-183">ハングまたはデッドロックを再現します。</span><span class="sxs-lookup"><span data-stu-id="985b1-183">Repro the hang or deadlock.</span></span>
+4. <span data-ttu-id="985b1-184">(2) のキー シーケンスを使用してシステムをクラッシュさせます。</span><span class="sxs-lookup"><span data-stu-id="985b1-184">Crash the system using the key sequence from (2).</span></span>
+5. <span data-ttu-id="985b1-185">システムはクラッシュし、メモリ ダンプを収集します。</span><span class="sxs-lookup"><span data-stu-id="985b1-185">The system will crash and collect the memory dump.</span></span>
+6. <span data-ttu-id="985b1-186">システムが再起動したら、memory.dmp を secure@microsoft.com に報告します。</span><span class="sxs-lookup"><span data-stu-id="985b1-186">Once the system reboots, report the memory.dmp to secure@microsoft.com.</span></span> <span data-ttu-id="985b1-187">ダンプ ファイルの既定の場所は、%SystemRoot%\memory.dmp です。つまり、C: がシステム ドライブである場合は、C:\Windows\memory.dmp になります。</span><span class="sxs-lookup"><span data-stu-id="985b1-187">The default location of the dump file is %SystemRoot%\memory.dmp or C:\Windows\memory.dmp if C: is the system drive.</span></span> <span data-ttu-id="985b1-188">メールには、ダンプは WSL or Bash on Windows チーム向けであることを記載します。</span><span class="sxs-lookup"><span data-stu-id="985b1-188">In the email, note that the dump is for the WSL or Bash on Windows team.</span></span>
+7. <span data-ttu-id="985b1-189">メモリ ダンプの種類を元の設定に戻します。</span><span class="sxs-lookup"><span data-stu-id="985b1-189">Restore the memory dump type to the original setting.</span></span>
 
-### <a name="check-your-build-number"></a><span data-ttu-id="70708-190">ビルド番号を確認する</span><span class="sxs-lookup"><span data-stu-id="70708-190">Check your build number</span></span>
+### <a name="check-your-build-number"></a><span data-ttu-id="985b1-190">ビルド番号を確認する</span><span class="sxs-lookup"><span data-stu-id="985b1-190">Check your build number</span></span>
 
-<span data-ttu-id="70708-191">PC のアーキテクチャと Windows ビルド番号を確認するには、を開きます。</span><span class="sxs-lookup"><span data-stu-id="70708-191">To find your PC's architecture and Windows build number, open</span></span>  
-<span data-ttu-id="70708-192">**設定** > システムに > **ついて**</span><span class="sxs-lookup"><span data-stu-id="70708-192">**Settings** > **System** > **About**</span></span>
+<span data-ttu-id="985b1-191">PC のアーキテクチャと Windows ビルド番号を確認するには、次を開きます。</span><span class="sxs-lookup"><span data-stu-id="985b1-191">To find your PC's architecture and Windows build number, open</span></span>  
+<span data-ttu-id="985b1-192">**[設定]**  >  **[システム]**  >  **[バージョン情報]**</span><span class="sxs-lookup"><span data-stu-id="985b1-192">**Settings** > **System** > **About**</span></span>
 
-<span data-ttu-id="70708-193">**[OS ビルド]** フィールドと **[システムの種類]** フィールドを探します。</span><span class="sxs-lookup"><span data-stu-id="70708-193">Look for the **OS Build** and **System Type** fields.</span></span>  
-    <span data-ttu-id="70708-194">![ビルドとシステムの種類のフィールドのスクリーンショット](media/system.png)</span><span class="sxs-lookup"><span data-stu-id="70708-194">![Screenshot of Build and System Type fields](media/system.png)</span></span> 
+<span data-ttu-id="985b1-193">**[OS ビルド]** フィールドと **[システムの種類]** フィールドを探します。</span><span class="sxs-lookup"><span data-stu-id="985b1-193">Look for the **OS Build** and **System Type** fields.</span></span>  
+    <span data-ttu-id="985b1-194">![ビルドとシステムの種類のフィールドのスクリーンショット](media/system.png)</span><span class="sxs-lookup"><span data-stu-id="985b1-194">![Screenshot of Build and System Type fields](media/system.png)</span></span> 
 
 
-<span data-ttu-id="70708-195">Windows Server のビルド番号を確認するには、PowerShell で次のように実行します。</span><span class="sxs-lookup"><span data-stu-id="70708-195">To find your Windows Server build number, run the following in PowerShell:</span></span>  
+<span data-ttu-id="985b1-195">Windows Server のビルド番号を確認するには、PowerShell で次を実行します。</span><span class="sxs-lookup"><span data-stu-id="985b1-195">To find your Windows Server build number, run the following in PowerShell:</span></span>  
 ``` PowerShell
 systeminfo | Select-String "^OS Name","^OS Version"
 ```
 
-### <a name="confirm-wsl-is-enabled"></a><span data-ttu-id="70708-196">WSL が有効になっていることを確認する</span><span class="sxs-lookup"><span data-stu-id="70708-196">Confirm WSL is enabled</span></span>
-<span data-ttu-id="70708-197">Windows Subsystem for Linux が有効になっていることを確認するには、PowerShell で次のように実行します。</span><span class="sxs-lookup"><span data-stu-id="70708-197">You can confirm that the Windows Subsystem for Linux is enabled by running the following in PowerShell:</span></span>  
+### <a name="confirm-wsl-is-enabled"></a><span data-ttu-id="985b1-196">WSL が有効になっていることを確認する</span><span class="sxs-lookup"><span data-stu-id="985b1-196">Confirm WSL is enabled</span></span>
+<span data-ttu-id="985b1-197">Windows Subsystem for Linux が有効になっていることを確認するには、PowerShell で次を実行します。</span><span class="sxs-lookup"><span data-stu-id="985b1-197">You can confirm that the Windows Subsystem for Linux is enabled by running the following in PowerShell:</span></span>  
 ``` PowerShell
 Get-WindowsOptionalFeature -Online -FeatureName Microsoft-Windows-Subsystem-Linux
 ```
 
-### <a name="openssh-server-connection-issues"></a><span data-ttu-id="70708-198">OpenSSH-サーバー接続に関する問題</span><span class="sxs-lookup"><span data-stu-id="70708-198">OpenSSH-Server connection issues</span></span>
-<span data-ttu-id="70708-199">SSH サーバーに接続しようとしましたが、次のエラーで失敗しました:"127.0.0.1 ポート22によって接続が切断されました。"</span><span class="sxs-lookup"><span data-stu-id="70708-199">Trying to connect your SSH server is failed with the following error: "Connection closed by 127.0.0.1 port 22".</span></span>
-1. <span data-ttu-id="70708-200">OpenSSH サーバーが実行されていることを確認します。</span><span class="sxs-lookup"><span data-stu-id="70708-200">Make sure your OpenSSH Server is running:</span></span>
+### <a name="openssh-server-connection-issues"></a><span data-ttu-id="985b1-198">OpenSSH サーバーの接続に関する問題</span><span class="sxs-lookup"><span data-stu-id="985b1-198">OpenSSH-Server connection issues</span></span>
+<span data-ttu-id="985b1-199">SSH サーバーに接続しようとしましたが、次のエラーで失敗しました。"Connection closed by 127.0.0.1 port 22" (127.0.0.1 ポート 22 によって接続は閉じられました)。</span><span class="sxs-lookup"><span data-stu-id="985b1-199">Trying to connect your SSH server is failed with the following error: "Connection closed by 127.0.0.1 port 22".</span></span>
+1. <span data-ttu-id="985b1-200">OpenSSH サーバーが実行されていることを確認します。</span><span class="sxs-lookup"><span data-stu-id="985b1-200">Make sure your OpenSSH Server is running:</span></span>
    ``` BASH
    sudo service ssh status
    ```
-   <span data-ttu-id="70708-201">次に、このチュートリアルに従っています。 https://help.ubuntu.com/lts/serverguide/openssh-server.html.en</span><span class="sxs-lookup"><span data-stu-id="70708-201">and you've followed this tutorial: https://help.ubuntu.com/lts/serverguide/openssh-server.html.en</span></span>
-2. <span data-ttu-id="70708-202">Sshd サービスを停止し、デバッグモードで sshd を開始します。</span><span class="sxs-lookup"><span data-stu-id="70708-202">Stop the sshd service and start sshd in debug mode:</span></span>
+   <span data-ttu-id="985b1-201">次のチュートリアルに従っていることも確認します。 https://help.ubuntu.com/lts/serverguide/openssh-server.html.en</span><span class="sxs-lookup"><span data-stu-id="985b1-201">and you've followed this tutorial: https://help.ubuntu.com/lts/serverguide/openssh-server.html.en</span></span>
+2. <span data-ttu-id="985b1-202">sshd サービスを停止し、デバッグ モードで sshd を開始します。</span><span class="sxs-lookup"><span data-stu-id="985b1-202">Stop the sshd service and start sshd in debug mode:</span></span>
    ``` BASH
    sudo service ssh stop
    sudo /usr/sbin/sshd -d
    ```
-3. <span data-ttu-id="70708-203">スタートアップログを確認し、HostKeys が使用可能であり、次のようなログメッセージが表示されていないことを確認します。</span><span class="sxs-lookup"><span data-stu-id="70708-203">Check the startup logs and make sure HostKeys are available and you don't see log messages such as:</span></span>
+3. <span data-ttu-id="985b1-203">スタートアップ ログを調べて、HostKey が使用可能であり、次のようなログ メッセージが表示されていないことを確認します。</span><span class="sxs-lookup"><span data-stu-id="985b1-203">Check the startup logs and make sure HostKeys are available and you don't see log messages such as:</span></span>
    ```
    debug1: sshd version OpenSSH_7.2, OpenSSL 1.0.2g  1 Mar 2016
    debug1: key_load_private: incorrect passphrase supplied to decrypt private key
@@ -182,7 +182,7 @@ Get-WindowsOptionalFeature -Online -FeatureName Microsoft-Windows-Subsystem-Linu
    Could not load host key: /etc/ssh/ssh_host_ed25519_key
    ```
 
-<span data-ttu-id="70708-204">このようなメッセージが表示されていて、 `/etc/ssh/`キーがにない場合は、キーを再生成するか、または & を削除するだけで openssh-server をインストールする必要があります。</span><span class="sxs-lookup"><span data-stu-id="70708-204">If you do see such messages and the keys are missing under `/etc/ssh/`, you will have to regenerate the keys or just purge&install openssh-server:</span></span>
+<span data-ttu-id="985b1-204">このようなメッセージが表示されていて、`/etc/ssh/` の下にそれらのキーがない場合は、キーを再生成するか、単に purge openssh-server と install openssh-server を実行する必要があります。</span><span class="sxs-lookup"><span data-stu-id="985b1-204">If you do see such messages and the keys are missing under `/etc/ssh/`, you will have to regenerate the keys or just purge&install openssh-server:</span></span>
 ```BASH
 sudo apt-get purge openssh-server
 sudo apt-get install openssh-server
