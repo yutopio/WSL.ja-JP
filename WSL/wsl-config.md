@@ -2,19 +2,17 @@
 title: Linux ディストリビューションの管理
 description: Windows Subsystem for Linux で実行されている複数の Linux ディストリビューションの一覧表示と構成に関するリファレンス。
 keywords: BashOnWindows, bash, wsl, windows, windows subsystem for linux, windowssubsystem, ubuntu, wsl.conf, wslconfig
-author: scooley
-ms.author: scooley
 ms.date: 02/7/2018
 ms.topic: article
 ms.assetid: 7ca59bd7-d9d3-4f6d-8b92-b8faa9bcf250
 ms.custom: seodec18
 ms.localizationpriority: high
-ms.openlocfilehash: 7817858b297408ec179b57bda99a38c724595d6a
-ms.sourcegitcommit: 253e4ac5baede53abf19a87d04cf58c8b848eafc
+ms.openlocfilehash: 51099f21fe44fd8c7e8682332c939fbe6d5e5827
+ms.sourcegitcommit: 0b5a9f8982dfff07fc8df32d74d97293654f8e12
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70746738"
+ms.lasthandoff: 09/25/2019
+ms.locfileid: "71269875"
 ---
 # <a name="manage-and-configure-windows-subsystem-for-linux"></a>Windows Subsystem for Linux の管理と構成
 
