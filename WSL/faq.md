@@ -2,18 +2,16 @@
 title: よく寄せられる質問 (FAQ)
 description: Windows Subsystem for Linux に関してよく寄せられる質問。
 keywords: BashOnWindows, bash, wsl, windows, windowssubsystem, faq
-author: taraj
-ms.author: taraj
 ms.date: 9/4/2018
 ms.topic: article
 ms.assetid: 129101ed-b88a-43c2-b6a2-cd2c4ff6fee1
 ms.localizationpriority: high
-ms.openlocfilehash: e3376f8dff83262577bc52fb3ac368b70b21d922
-ms.sourcegitcommit: 7af6b7a3f8cfa66cb25115bc26f44aa64ef22811
+ms.openlocfilehash: 78d0dc3db6f0c173cec64c9830df981568320717
+ms.sourcegitcommit: 0b5a9f8982dfff07fc8df32d74d97293654f8e12
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/28/2019
-ms.locfileid: "70122763"
+ms.lasthandoff: 09/25/2019
+ms.locfileid: "71269741"
 ---
 # <a name="frequently-asked-questions-about-windows-subsystem-for-linux"></a>Windows Subsystem for Linux に関してよく寄せられる質問
 
@@ -139,14 +137,14 @@ WSL では、コンピューターの固定ドライブを Linux ディストリ
 ## <a name="how-do-i-run-an-openssh-server"></a>OpenSSH サーバーを実行するにはどうすればよいですか。
 WSL で OpenSSH を実行するには、Windows の管理者特権が必要です。 OpenSSH サーバーを実行するには、管理者として Bash on Ubuntu on Windows を実行するか、管理者特権を使用して CMD/PowerShell プロンプトから bash.exe を実行します。
 
-## <a name="why-do-i-get-error-0x80040306-when-i-try-to-install"></a>インストールしようとすると、"エラー: 0x80040306" が表示されるのはなぜですか。
+## <a name="why-do-i-get-error-0x80040306-when-i-try-to-install"></a>インストールしようとすると、"エラー:0x80040306" が表示されるのはなぜですか。
 WSL は、従来のコンソールでの実行をサポートしていません。 従来のコンソールをオフにするには、以下を実行します。
 
 1. WSL、PowerShell、または Cmd を開きます
 1. タイトル バーを右クリックして、[プロパティ] を選択し、[従来のコンソールを使う] をオフにします
 1. [OK] をクリックします。
 
-## <a name="why-do-i-get-error-0x80040154-when-i-run-bashexe-after-upgrading-windows"></a>Windows をアップグレードした後に bash.exe を実行すると、"エラー: 0x80040154" が表示されるのはなぜですか。
+## <a name="why-do-i-get-error-0x80040154-when-i-run-bashexe-after-upgrading-windows"></a>Windows のアップグレード後に bash.exe を実行すると、"エラー:0x80040154" が表示されるのはなぜですか。
 Windows Update 時に "Windows Subsystem for Linux" 機能が無効になる可能性があります。 その場合は、この Windows 機能を再度有効にする必要があります。 "Windows Subsystem for Linux" 機能を有効にする手順については、[インストール ガイド](https://msdn.microsoft.com/en-us/commandline/wsl/install_guide#enable-the-windows-subsystem-for-linux-feature-gui https://msdn.microsoft.com/en-us/commandline/wsl/install_guide#enable-the-windows-subsystem-for-linux-feature-gui)をご覧ください。
 
 ## <a name="how-do-i-change-the-display-language-of-wsl"></a>WSL の表示言語を変更するにはどうすればよいですか。
@@ -182,5 +180,5 @@ Appdata フォルダーのファイルをバックアップする従来のバッ
 複数のチャネルを通じて、フィードバックを共有したり、質問したりできます。フィードバックや質問は以下宛てにお願いいたします。
 * Microsoft の [GitHub の問題の追跡ツール](https://github.com/Microsoft/BashOnWindows/issues)
 * Microsoft の[コマンド ライン UserVoice ポータル](https://wpdev.uservoice.com/forums/266908-command-prompt/filters/top)
-* Microsoft のコマンド ライン チームのブログ](https://blogs.msdn.microsoft.com/commandline/)
+* [Microsoft のコマンド ライン チームのブログ](https://blogs.msdn.microsoft.com/commandline/)
 * Twitter 経由。 ニュース、更新などを確認するには、Twitter で [@richturn_ms](https://twitter.com/richturn_MS) をフォローしてください。
