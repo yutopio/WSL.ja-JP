@@ -8,14 +8,22 @@ ms.topic: article
 ms.assetid: 36ea641e-4d49-4881-84eb-a9ca85b1cdf4
 ms.custom: seodec18
 ms.localizationpriority: high
-ms.openlocfilehash: 9dfd4704eee537c053d874d6fcee47b70efbc33c
-ms.sourcegitcommit: 212d3e0092dbc584a8422de47599a4ce46f0f016
+ms.openlocfilehash: 0dcf4519877fac5b838d4542dfd088cb6d233353
+ms.sourcegitcommit: 0fa3b02b36dc49779e165e689dfded4f3b727124
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/11/2019
-ms.locfileid: "70902422"
+ms.lasthandoff: 09/25/2019
+ms.locfileid: "71249192"
 ---
 # <a name="release-notes-for-windows-subsystem-for-linux"></a>Windows Subsystem for Linux のリリース ノート
+
+## <a name="build-18990"></a>ビルド 18990
+ビルド 18990 の一般的な Windows 情報については、[Windows ブログ](https://blogs.windows.com/windowsexperience/2019/09/24/announcing-windows-10-insider-preview-build-18990/)を参照してください。
+
+* \\wsl$ のディレクトリの一覧のパフォーマンスが向上します
+* [WSL2] 追加のブート エントロピーを挿入します [GH 4416]
+* [WSL2] su または sudo を使用する場合の Windows の相互運用を修正します [GH 4465]
+
 
 ## <a name="build-18980"></a>ビルド 18980
 ビルド 18980 の一般的な Windows 情報については、[Windows ブログ](https://blogs.windows.com/windowsexperience/2019/09/11/announcing-windows-10-insider-preview-build-18980/)を参照してください。
@@ -234,7 +242,7 @@ wslconfig.exe /terminate <DistributionName>
 
 ### <a name="wsl"></a>WSL
 * Setpriority システム コールのアクセス許可チェックが厳しすぎて、同じスレッドの優先順位を変更できません [GH 1838]
-* clock_gettime(CLOCK_BOOTTIME) に対して負値が返されないように、起動時間に、バイアスのかかっていない割り込み時間が使用されていることを確認します [GH 3434]
+* clock_gettime(CLOCK_BOOTTIME) に対して負値が返されないように、バイアスのかかっていない割り込み時間が起動時間に使用されていることを確認します [GH 3434]
 * WSL binfmt インタープリターでシンボリック リンクを処理します [GH 3424]
 * threadgroup リーダー ファイル記述子のクリーンアップの処理が改善されました。
 * オーバーフローを回避するために、KeQueryPerformanceCounter ではなく KeQueryInterruptTimePrecise を使用するように WSL を切り替えます [GH 3252]
