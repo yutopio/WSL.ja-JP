@@ -6,12 +6,12 @@ ms.date: 9/4/2018
 ms.topic: article
 ms.assetid: 129101ed-b88a-43c2-b6a2-cd2c4ff6fee1
 ms.localizationpriority: high
-ms.openlocfilehash: 78d0dc3db6f0c173cec64c9830df981568320717
-ms.sourcegitcommit: 0b5a9f8982dfff07fc8df32d74d97293654f8e12
+ms.openlocfilehash: 911bde69540bb8bb7a5ee40d8a9f4d6995f4fdaa
+ms.sourcegitcommit: 3f35034581456a2008aa5ed1b623715dfef64608
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/25/2019
-ms.locfileid: "71269741"
+ms.lasthandoff: 10/03/2019
+ms.locfileid: "71934903"
 ---
 # <a name="frequently-asked-questions-about-windows-subsystem-for-linux"></a>Windows Subsystem for Linux に関してよく寄せられる質問
 
@@ -145,7 +145,7 @@ WSL は、従来のコンソールでの実行をサポートしていません�
 1. [OK] をクリックします。
 
 ## <a name="why-do-i-get-error-0x80040154-when-i-run-bashexe-after-upgrading-windows"></a>Windows のアップグレード後に bash.exe を実行すると、"エラー:0x80040154" が表示されるのはなぜですか。
-Windows Update 時に "Windows Subsystem for Linux" 機能が無効になる可能性があります。 その場合は、この Windows 機能を再度有効にする必要があります。 "Windows Subsystem for Linux" 機能を有効にする手順については、[インストール ガイド](https://msdn.microsoft.com/en-us/commandline/wsl/install_guide#enable-the-windows-subsystem-for-linux-feature-gui https://msdn.microsoft.com/en-us/commandline/wsl/install_guide#enable-the-windows-subsystem-for-linux-feature-gui)をご覧ください。
+Windows Update 時に "Windows Subsystem for Linux" 機能が無効になる可能性があります。 その場合は、この Windows 機能を再度有効にする必要があります。 "Windows Subsystem for Linux" 機能を有効にする手順については、[インストール ガイド](https://docs.microsoft.com/en-us/windows/wsl/install-win10#install-the-windows-subsystem-for-linux)をご覧ください。
 
 ## <a name="how-do-i-change-the-display-language-of-wsl"></a>WSL の表示言語を変更するにはどうすればよいですか。
 WSL インストールでは、Windows インストールのロケールに合わせて Ubuntu ロケールを自動的に変更しようとします。 この動作が不要な場合は、次のコマンドを実行して、インストールの完了後に Ubuntu ロケールを変更できます。 この変更を有効にするには、bash.exe を再起動する必要があります。
