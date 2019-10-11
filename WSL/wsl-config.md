@@ -7,12 +7,12 @@ ms.topic: article
 ms.assetid: 7ca59bd7-d9d3-4f6d-8b92-b8faa9bcf250
 ms.custom: seodec18
 ms.localizationpriority: high
-ms.openlocfilehash: 51099f21fe44fd8c7e8682332c939fbe6d5e5827
-ms.sourcegitcommit: 0b5a9f8982dfff07fc8df32d74d97293654f8e12
+ms.openlocfilehash: e69810625d08baf734683ff06231f79132ce1519
+ms.sourcegitcommit: e1cc2fe4de0fa03d5aea14f6b328f1bb9d0c59be
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/25/2019
-ms.locfileid: "71269875"
+ms.lasthandoff: 10/07/2019
+ms.locfileid: "71999393"
 ---
 # <a name="manage-and-configure-windows-subsystem-for-linux"></a>Windows Subsystem for Linux の管理と構成
 
@@ -277,6 +277,20 @@ WSL では、`automount` と `network` の 2 つのセクションがサポー�
 既定では、WSL は uid と gid を既定のユーザーの値に設定します (Ubuntu ディストリビューションでは、既定のユーザーは uid = 1000、gid = 1000 で作成されます)。 ユーザーがこのキーを使用して gid または uid オプションを明示的に指定した場合、関連する値は上書きされます。 それ以外の場合は、既定値が常に追加されます。
 
 **注:** これらのオプションは、自動的にマウントされたドライブすべてのマウント オプションとして適用されます。 特定のドライブのみのオプションを変更するには、代わりに /etc/fstab を使用します。
+
+##### <a name="mount-options"></a>マウント オプション
+
+Windows ドライブ (DrvFs) にさまざまなマウント オプションを設定すると、Windows ファイルのファイルのアクセス許可を計算する方法を制御できます。 次のオプションが使用できます。
+
+| Key | 説明 | Default |
+|:----|:----|:----|
+|uid| すべてのファイルの所有者に使用するユーザー ID | WSL ディストリビューションの既定のユーザー ID (初回インストールの場合、既定値は 1000)
+|gid| すべてのファイルの所有者に使用するグループ ID | WSL ディストリビューションの既定のグループ ID (初回インストールの場合、既定値は 1000)
+|umask | すべてのファイルとディレクトリに対して除外するアクセス許可の 8 進数のマスク | 000
+|fmask | すべてのファイルに対して除外するアクセス許可の 8 進数のマスク | 000
+|dmask | すべてのディレクトリに対して除外するアクセス許可の 8 進数のマスク | 000
+
+**注:** アクセス許可のマスクは、ファイルまたはディレクトリに適用される前に論理 OR 演算によって配置されます。 
 
 #### <a name="network"></a>ネットワーク
 
