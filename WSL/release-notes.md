@@ -8,14 +8,21 @@ ms.topic: article
 ms.assetid: 36ea641e-4d49-4881-84eb-a9ca85b1cdf4
 ms.custom: seodec18
 ms.localizationpriority: high
-ms.openlocfilehash: b92c20bad50d0c58da05bb0c8f26a69d4c0b2970
-ms.sourcegitcommit: 050f6095e92469b903db8ddf9356df5b22b21804
+ms.openlocfilehash: dbc041c98081563d4f77b9fc186698fad8299c0d
+ms.sourcegitcommit: 4beb93f80749ab4c8c6f0e6920ab7f809567e243
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/03/2019
-ms.locfileid: "71910302"
+ms.lasthandoff: 10/17/2019
+ms.locfileid: "72549573"
 ---
 # <a name="release-notes-for-windows-subsystem-for-linux"></a>Windows Subsystem for Linux のリリース ノート
+
+## <a name="build-19002"></a>ビルド 19002
+ビルド 19002 の一般的な Windows 情報については、[Windows ブログ](https://blogs.windows.com/windowsexperience/2019/10/17/announcing-windows-10-insider-preview-build-19002/)を参照してください。
+
+* [WSL] 一部の Unicode 文字の処理に関する問題を修正します: https://github.com/microsoft/terminal/issues/2770
+* [WSL] ビルド間のアップグレードの直後に起動すると、まれにディストリビューションが登録解除されるケースを修正します。
+* [WSL] インスタンスのアイドル タイマーがキャンセルされない場合にシャットダウンする wsl.exe の問題を修正します。
 
 ## <a name="build-18995"></a>ビルド 18995
 ビルド 18995 の一般的な Windows 情報については、[Windows ブログ](https://blogs.windows.com/windowsexperience/2019/10/03/announcing-windows-10-insider-preview-build-18995/)を参照してください。
@@ -40,7 +47,6 @@ kernelCommandLine = <string> # Additional kernel command line arguments
 * \\\\wsl$ のディレクトリの一覧のパフォーマンスを向上します
 * [WSL2] 追加のブート エントロピーを挿入します [GH 4416]
 * [WSL2] su または sudo を使用する場合の Windows の相互運用を修正します [GH 4465]
-
 
 ## <a name="build-18980"></a>ビルド 18980
 ビルド 18980 の一般的な Windows 情報については、[Windows ブログ](https://blogs.windows.com/windowsexperience/2019/09/11/announcing-windows-10-insider-preview-build-18980/)を参照してください。
@@ -1903,7 +1909,7 @@ VolFs および DriveFs の情報については、[WSL ブログ](https://blogs
 ### <a name="new-features"></a>新機能
 * Linux ユーザーがサポートされるようになりました。  Bash on Ubuntu on Windows をインストールすると、Linux ユーザーの作成を求めるプロンプトが表示されます。  詳細については、 https://aka.ms/wslusers にアクセスしてください
 * ホスト名は、Windows コンピューター名に設定されるようになりました。@localhost はもう使用されません
-* ビルド 14328 の詳細については、次を参照してください: https://aka.ms/wip14328
+* ビルド 14328 の詳細についは、次を参照してください: https://aka.ms/wip14328
 
 ### <a name="fixed"></a>固定
 * /mnt/<drive> 以外のファイルに対するシンボリック リンクの機能強化
