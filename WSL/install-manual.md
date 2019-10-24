@@ -6,12 +6,12 @@ ms.date: 07/24/2018
 ms.topic: article
 ms.assetid: 9281ffa2-4fa9-4078-bf6f-b51c967617e3
 ms.custom: seodec18
-ms.openlocfilehash: df47e656cf83e0b13aa8eb3f210e010d6a85bfd8
-ms.sourcegitcommit: 0b5a9f8982dfff07fc8df32d74d97293654f8e12
+ms.openlocfilehash: 99215a3bccc3d0b07e8ed4b7629913af3765aec0
+ms.sourcegitcommit: d35870009477813aa4c8fe4e401af4bddef4a47c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/25/2019
-ms.locfileid: "71269791"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72778823"
 ---
 # <a name="manually-download-windows-subsystem-for-linux-distro-packages"></a>Windows Subsystem for Linux ディストリビューションパッケージを手動でダウンロードする
 
@@ -19,7 +19,7 @@ Microsoft Store 経由で WSL Linux ディストリビューションをイン�
 
 このような場合は、WSL 自体を利用できますが、ストアにアクセスできない場合は、WSL で Linux ディストリビューションをダウンロードしてインストールするにはどうすればよいですか。
 
-> メモ:**Cmd、PowerShell、Linux/WSL ディストリビューションを含むコマンドラインシェル環境は、Windows 10 S モードでの実行が許可されていません**。 この制限は、によって提供される整合性と安全性の目標を確保するために存在します。詳細については、こちらの[投稿](https://blogs.msdn.microsoft.com/commandline/2017/05/18/will-linux-distros-run-on-windows-10-s/)をお読みください。
+> 注:**コマンドラインシェル環境 (Cmd、PowerShell、Linux/WSL ディストリビューションを含む) は、Windows 10 S モードでの実行は許可されていません**。 この制限は、S モードで提供される整合性と安全性の目標を確保するために存在します。詳細については、[この投稿](https://blogs.msdn.microsoft.com/commandline/2017/05/18/will-linux-distros-run-on-windows-10-s/)を参照してください。
 
 ## <a name="downloading-distros"></a>ディストリビューションのダウンロード
 
@@ -31,9 +31,9 @@ Microsoft Store アプリが使用できない場合は、次のリンクをク�
 * [Kali Linux](https://aka.ms/wsl-kali-linux-new)
 * [OpenSUSE Leap 42](https://aka.ms/wsl-opensuse-42)
 * [SUSE Linux Enterprise Server 12](https://aka.ms/wsl-sles-12)
-* [WSL の Fedora Remix](https://github.com/WhitewaterFoundry/WSLFedoraRemix/releases/)
+* [WSL のための Fedora リミックス](https://github.com/WhitewaterFoundry/WSLFedoraRemix/releases/)
 
-これにより、 `<distro>.appx`パッケージは選択したフォルダーにダウンロードされます。 [インストール手順](#installing-your-distro)に従って、ダウンロードしたディストリビューションをインストールします。
+これにより、`<distro>.appx` パッケージが、選択したフォルダーにダウンロードされます。 [インストール手順](#installing-your-distro)に従って、ダウンロードしたディストリビューションをインストールします。
 
 ## <a name="downloading-distros-via-the-command-line"></a>コマンドラインを使用したディストリビューションのダウンロード
 必要に応じて、コマンドラインを使用して、優先するディストリビューションをダウンロードすることもできます。
@@ -46,25 +46,25 @@ Invoke-WebRequest -Uri https://aka.ms/wsl-ubuntu-1604 -OutFile Ubuntu.appx -UseB
 ```
 
 > [!TIP]
-> ダウンロードに時間がかかる場合は、を設定して進行状況バーをオフにします。`$ProgressPreference = 'SilentlyContinue'`
+> ダウンロードに時間がかかる場合は、を設定して進行状況バーをオフにし `$ProgressPreference = 'SilentlyContinue'`
 
 ### <a name="download-using-curl"></a>Curl を使用してダウンロードする
-Windows 10 Spring 2018 Update (またはそれ以降) には、コマンドラインから web 要求 (HTTP GET、POST、PUT などのコマンド) を呼び出すことができる、一般的な[curl コマンドラインユーティリティ](https://curl.haxx.se/)が含まれています。 を使用`curl.exe`すると、上記のディストリビューションをダウンロードできます。
+Windows 10 Spring 2018 Update (またはそれ以降) には、コマンドラインから web 要求 (HTTP GET、POST、PUT などのコマンド) を呼び出すことができる、一般的な[curl コマンドラインユーティリティ](https://curl.haxx.se/)が含まれています。 @No__t_0 を使用すると、上記のディストリビューションをダウンロードできます。
 
 ```console
 curl.exe -L -o ubuntu-1604.appx https://aka.ms/wsl-ubuntu-1604
 ```
 
-上の例では`curl.exe` 、(だけで`curl`なく) が実行され、powershell では、[呼び出し](https://docs.microsoft.com/en-us/powershell/module/microsoft.powershell.utility/invoke-webrequest?view=powershell-6)の powershell curl エイリアスではなく、実際の curl 実行可能ファイルが呼び出されるようにしています。
+上の例では、(`curl` だけでなく) `curl.exe` が実行され、PowerShell によって実際の curl 実行可能ファイルが呼び出されます。これは、[呼び出し](https://docs.microsoft.com/en-us/powershell/module/microsoft.powershell.utility/invoke-webrequest?view=powershell-6)の powershell curl エイリアスではありません。
 
-> メモ:コマンド`curl`シェルやスクリプトを使用してダウンロード手順を呼び出したりスクリプトを作成したり`.bat`  /  `.cmd`する必要がある場合は、を使用することをお勧めします。
+> 注: `curl` を使用すると、Cmd シェルや `.bat`  /  `.cmd` スクリプトを使用してダウンロード手順を呼び出したりスクリプトを作成したりする必要がある場合に適しています。
 
 ## <a name="installing-your-distro"></a>ディストリビューションのインストール
-Windows 10 を使用している場合は、PowerShell を使用してディストリビューションをインストールできます。 上記の手順でダウンロードしたディストリビューションが格納されているフォルダーに移動し、その`app_name`ディレクトリで次のコマンドを実行します。ここで、は、ディストリビューションの .appx ファイルの名前です。  
+Windows 10 を使用している場合は、PowerShell を使用してディストリビューションをインストールできます。 上記の手順でダウンロードしたディストリビューションが格納されているフォルダーに移動し、そのディレクトリで次のコマンドを実行します。 `app_name` は、ディストリビューションの .appx ファイル名です。  
 ```Powershell
 Add-AppxPackage .\app_name.appx
 ```
 
 Windows server を使用している場合は、 [Windows server](install-on-server.md)のドキュメントページでインストール手順を確認できます。
 
-ディストリビューションがインストールされたら、Intilization の[手順](initialize-distro.md)ページを参照して、新しいディストリビューションを初期化します。
+ディストリビューションがインストールされたら、初期化の[手順](initialize-distro.md)ページを参照して、新しいディストリビューションを初期化します。
