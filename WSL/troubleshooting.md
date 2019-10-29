@@ -7,12 +7,12 @@ ms.topic: article
 ms.assetid: 6753f1b2-200e-49cc-93a5-4323e1117246
 ms.custom: seodec18
 ms.localizationpriority: high
-ms.openlocfilehash: 7b7938e7a6a636b012f4b84a8c93d5dfc0a4a4cf
-ms.sourcegitcommit: aef7bb1e851089b3311d497a3be0da79558feb4e
+ms.openlocfilehash: 24a899df78e705630c6cb95f8719594aec340c5c
+ms.sourcegitcommit: 600853005bd2b42d6e47bf36ebed4b868ff2af26
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/26/2019
-ms.locfileid: "71279248"
+ms.lasthandoff: 10/28/2019
+ms.locfileid: "72987525"
 ---
 # <a name="troubleshooting-windows-subsystem-for-linux"></a>Windows Subsystem for Linux のトラブルシューティング
 
@@ -124,7 +124,7 @@ WSL で ping を実行するには、Windows の管理者特権が必要です�
 bash を使用しているときに bash がハングしている (またはデッドロックされている) か、入力に応答していないことに気付いた場合は、Microsoft が問題を診断できるようにメモリ ダンプを収集して報告してください。 次の手順によりシステムがクラッシュすることに注意してください。 それが問題である場合は、この操作を行わないでください。または、これを行う前に作業を保存してください。  <br/>
 メモリ ダンプを収集するには、以下を実行します。
 1. メモリ ダンプの種類を "完全なメモリ ダンプ" に変更します。 ダンプの種類を変更するときに、現在の種類をメモしておきます。
-2. [こちらの手順](https://blogs.technet.microsoft.com/askpfeplat/2015/04/05/how-to-force-a-diagnostic-memory-dump-when-a-computer-hangs/)を使用して、キーボード コントロールを使ってクラッシュを構成します。
+2. [こちらの手順](https://techcommunity.microsoft.com/t5/Core-Infrastructure-and-Security/How-to-Force-a-Diagnostic-Memory-Dump-When-a-Computer-Hangs/ba-p/257809)を使用して、キーボード コントロールを使ってクラッシュを構成します。
 3. ハングまたはデッドロックを再現します。
 4. (2) のキー シーケンスを使用してシステムをクラッシュさせます。
 5. システムはクラッシュし、メモリ ダンプを収集します。
