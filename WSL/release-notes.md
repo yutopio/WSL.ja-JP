@@ -8,14 +8,22 @@ ms.topic: article
 ms.assetid: 36ea641e-4d49-4881-84eb-a9ca85b1cdf4
 ms.custom: seodec18
 ms.localizationpriority: high
-ms.openlocfilehash: 63c0e14dab73faf7f835e9ae1eb23eb490b13c44
-ms.sourcegitcommit: 48ca05ce1ac8bf35408af3bc2a2b92a43adba0af
+ms.openlocfilehash: 299b939383a98752cb54cafa23bb8b7662d53e0a
+ms.sourcegitcommit: ac6029d7d7440b8ed0e866fcea5b693edfdc163e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73166661"
+ms.lasthandoff: 11/06/2019
+ms.locfileid: "73633852"
 ---
 # <a name="release-notes-for-windows-subsystem-for-linux"></a>Windows Subsystem for Linux のリリース ノート
+
+## <a name="build-19018"></a>ビルド 19018
+ビルド 19018 の一般的な Windows 情報については、[Windows ブログ](https://blogs.windows.com/windowsexperience/2019/11/05/announcing-windows-10-insider-preview-build-19018/)を参照してください。
+
+* [WSL2] 9p マウントの既定値として cache=mmap を使用して dotnet アプリを修正します
+* [WSL2] localhost リレーの修正プログラム [GH 4340]
+* [WSL2] ディストリビューション間で状態を共有するためにクロスディストリビューション共有の tmpfs マウントを導入
+* \\\\wsl$ の永続ネットワーク ドライブを復元する修正
 
 ## <a name="build-19013"></a>ビルド 19013
 ビルド 19013 の一般的な Windows 情報については、[Windows ブログ](https://blogs.windows.com/windowsexperience/2019/10/29/announcing-windows-10-insider-preview-build-19013/)を参照してください。
