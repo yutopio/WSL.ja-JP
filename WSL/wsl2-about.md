@@ -6,12 +6,12 @@ ms.date: 05/30/2019
 ms.topic: article
 ms.assetid: 7afaeacf-435a-4e58-bff0-a9f0d75b8a51
 ms.custom: seodec18
-ms.openlocfilehash: 9ed24b185ad6aef3589b23a114853b6f78b5899f
-ms.sourcegitcommit: 0b5a9f8982dfff07fc8df32d74d97293654f8e12
+ms.openlocfilehash: 7122fcbd73e064871eba2ac80c727178aaf3ca7b
+ms.sourcegitcommit: 5c92b820f84de57a04ab11faf4dd0d24fff6b320
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/25/2019
-ms.locfileid: "71269827"
+ms.lasthandoff: 11/18/2019
+ms.locfileid: "74161474"
 ---
 # <a name="about-wsl-2"></a>WSL 2 について
 
@@ -25,11 +25,11 @@ WSL 2 の Linux カーネルは、kernel.org で入手できるソースに基�
 
 ## <a name="brief-overview-of-the-wsl-2-architecture"></a>WSL 2 アーキテクチャの概要
 
-WSL 2 では、仮想化テクノロジの最新で最高のものを使用して、ライトウェイトユーティリティ仮想マシン (VM) 内で Linux カーネルを実行します。 ただし、WSL 2 は従来の VM エクスペリエンスではありません。 従来の VM エクスペリエンスは起動に時間がかかり、分離され、大量のリソースを消費するため、管理に時間がかかることがあります。 WSL 2 には、これらの属性はありません。 WSL 1 には次のような利点があります。Windows と Linux の間の高いレベルの統合、非常に高速な起動時間、小規模なリソースフットプリント、最大限のメリットを実現するには、VM の構成または管理は必要ありません。 WSL 2 では VM を使用しますが、WSL 1 と同じユーザーエクスペリエンスが得られるように、管理され、バックグラウンドで実行されます。
+WSL 2 では、仮想化テクノロジの最新で最高のものを使用して、ライトウェイトユーティリティ仮想マシン (VM) 内で Linux カーネルを実行します。 ただし、WSL 2 は従来の VM エクスペリエンスではありません。 従来の VM エクスペリエンスは起動に時間がかかり、分離され、大量のリソースを消費するため、管理に時間がかかることがあります。 WSL 2 には、これらの属性はありません。 WSL 1 の大きなメリットが得られます。 Windows と Linux 間の高レベルの統合、非常に高速な起動時間、小規模なリソースのフットプリント、すべての利点は VM の構成や管理を必要としないことです。 WSL 2 では VM を使用しますが、WSL 1 と同じユーザーエクスペリエンスが得られるように、管理され、バックグラウンドで実行されます。
 
 ## <a name="increased-file-io-performance"></a>ファイル IO パフォーマンスの向上
 
-Git clone、npm install、apt update、apt upgrade など、ファイルを多用する操作はすべて、非常に高速になります。 実際の速度の増加は、実行しているアプリとファイルシステムとの対話方法によって異なります。 最初のバージョンの WSL 2 は、zip 圧縮された tar を開梱する場合は WSL 1、git clone を使用する場合は約2倍速、さまざまなプロジェクトでは npm install と cmake の方が、20倍まで高速に実行できます。
+`git clone`、`npm install`、`apt update`、`apt upgrade`などのファイル集中型の操作はすべて、非常に高速になります。 実際の速度の増加は、実行しているアプリとファイルシステムとの対話方法によって異なります。 最初のバージョンの WSL 2 は、zip 圧縮された tar を開梱する場合は WSL 1 を20倍、さまざまなプロジェクトでは `npm install` と `cmake` `git clone`を使用する場合は約2倍高速に実行されます。
 
 ## <a name="full-system-call-compatibility"></a>システムコールの完全な互換性
 

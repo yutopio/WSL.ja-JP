@@ -6,12 +6,12 @@ ms.date: 05/30/2019
 ms.topic: article
 ms.assetid: 7afaeacf-435a-4e58-bff0-a9f0d75b8a51
 ms.custom: seodec18
-ms.openlocfilehash: e3593aaf0e1c176cbeec2d3ba7d8eca1ede6b1ec
-ms.sourcegitcommit: d74fab7469f4e589ab0bf4418be575381a3f72a0
+ms.openlocfilehash: 91994f3a075436c022acb9dadeea072142687b72
+ms.sourcegitcommit: cf6d8e277ed3102f8f879b9f39ba0966d4ea6135
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2019
-ms.locfileid: "73240363"
+ms.lasthandoff: 11/18/2019
+ms.locfileid: "74164338"
 ---
 # <a name="installation-instructions-for-wsl-2"></a>WSL 2 のインストール手順
 
@@ -28,16 +28,24 @@ WSL 2 をインストールして使用を開始するには、次の手順を�
 
 ## <a name="enable-the-virtual-machine-platform-optional-component-and-make-sure-wsl-is-enabled"></a>' 仮想マシンプラットフォーム ' オプションのコンポーネントを有効にし、WSL が有効になっていることを確認してください
 
-管理者として PowerShell を開き、以下を実行します。
+' 仮想マシンプラットフォーム ' コンポーネントを有効にするには、PowerShell を管理者として開き、次のコマンドを実行します。 WSL を初めてインストールする場合は、再起動を求めるメッセージが表示されたら [いいえ] を選択します。これは、"Windows Subsystem for Linux" オプションコンポーネントをインストールした後で、コンピューターを再起動する必要があるためです。
 
 ```powershell
-Enable-WindowsOptionalFeature -Online -FeatureName Microsoft-Windows-Subsystem-Linux
 Enable-WindowsOptionalFeature -Online -FeatureName VirtualMachinePlatform
 ```
 
-これにより、仮想マシンプラットフォームと Linux 用 Windows サブシステムのオプションコンポーネントの両方がインストールされます。 これらのコマンドを実行したら、コンピューターを再起動する必要があります。 
+また、Linux 用 Windows Subsystem オプションコンポーネントが有効になっていることを確認する必要があります。 これを行うには、PowerShell ウィンドウから管理者特権で次のコマンドを実行します。 
+
+```powershell
+Enable-WindowsOptionalFeature -Online -FeatureName Microsoft-Windows-Subsystem-Linux
+```
+
+両方のコンポーネントのインストールを完了するには、コンピューターを再起動してください。
+
 
 ## <a name="set-a-distro-to-be-backed-by-wsl-2-using-the-command-line"></a>コマンド ラインを使用して、WSL 2 によってサポートされるようにディストリビューションを設定する
+
+Linux ディストリビューションがインストールされていない場合は、 [Windows 10](./install-win10.md#install-your-linux-distribution-of-choice)のインストールに関するドキュメントページを参照してください。 
 
 PowerShell で、以下を実行します。
 
