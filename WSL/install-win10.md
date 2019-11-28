@@ -7,12 +7,12 @@ ms.topic: article
 ms.assetid: 7afaeacf-435a-4e58-bff0-a9f0d75b8a51
 ms.custom: seodec18
 ms.localizationpriority: high
-ms.openlocfilehash: c53c4507fb56f8e4a3456963b1d6f50ceac8ef37
-ms.sourcegitcommit: 0b5a9f8982dfff07fc8df32d74d97293654f8e12
+ms.openlocfilehash: 17ca32db23b426ef1367ff9444b5924d9d7e1716
+ms.sourcegitcommit: 3be576f946611cf36e27745bdb7c4c52af1b9928
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/25/2019
-ms.locfileid: "71269813"
+ms.lasthandoff: 11/20/2019
+ms.locfileid: "74200231"
 ---
 # <a name="windows-subsystem-for-linux-installation-guide-for-windows-10"></a>Windows 10 用 Windows Subsystem for Linux のインストール ガイド
 
@@ -29,9 +29,9 @@ WSL 用の Linux ディストリビューションをインストールする前
 
 ## <a name="install-your-linux-distribution-of-choice"></a>任意の Linux ディストリビューションのインストール
 希望するディストリビューションをダウンロードしてインストールするには、次の 3 つの選択肢があります。
-1. Microsoft Store からダウンロードしてインストールする (下記参照)
-1. コマンド ライン/スクリプトからダウンロードしてインストールする ([手動インストール手順を参照](install-manual.md))
-1. ダウンロードして手動で展開し、インストールする (Windows Server の場合 - [こちらの手順](install-on-server.md))
+* Microsoft Store からダウンロードしてインストールする (下記参照)
+* コマンド ライン/スクリプトからダウンロードしてインストールする ([手動インストール手順を参照](install-manual.md))
+* ダウンロードして手動で展開し、インストールする (Windows Server の場合 - [こちらの手順](install-on-server.md))
 
 ### <a name="windows-10-fall-creators-update-and-later-install-from-the-microsoft-store"></a>Windows 10 Fall Creators Update 以降:Microsoft Store からのインストール
 
