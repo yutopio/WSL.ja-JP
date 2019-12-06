@@ -6,12 +6,12 @@ ms.date: 05/30/2019
 ms.topic: article
 ms.assetid: 7afaeacf-435a-4e58-bff0-a9f0d75b8a51
 ms.custom: seodec18
-ms.openlocfilehash: a53e6a986813809d0c355b80b3fe3028adb21375
-ms.sourcegitcommit: 73f4cc6ac9482ea9727f3cda0ec5c3572e164256
+ms.openlocfilehash: 65c0440a95637708881c00558cba6c7985f89ec0
+ms.sourcegitcommit: 522af20edfba4d4a9e429327389967a83e6d1156
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/21/2019
-ms.locfileid: "74309048"
+ms.lasthandoff: 12/06/2019
+ms.locfileid: "74881375"
 ---
 # <a name="installation-instructions-for-wsl-2"></a>WSL 2 のインストール手順
 
@@ -20,7 +20,7 @@ WSL 2 をインストールして使用を開始するには、次の手順を�
 > WSL 2 は、Windows 10 ビルド18917以降でのみ使用できます。
 
 - WSL がインストールされていることを確認します (この手順については[こちら](./install-win10.md)を参照してください)。また、Windows 10**ビルド 18917**以降を実行していることを確認してください。
-   - ビルド18917以降を使用していることを確認するには[、Windows Insider プログラムに](https://insider.windows.com/en-us/)参加して、"高速" リングを選択してください。 
+   - ビルド18917以降を使用していることを確認するには[、Windows Insider プログラムに](https://insider.windows.com/en-us/)参加して、"高速" リングまたは "低速" リングを選択してください。 
    - Windows のバージョンを確認するには、コマンドプロンプトを開き、`ver` コマンドを実行します。
 - "仮想マシン プラットフォーム" のオプション コンポーネントを有効にする
 - コマンド ラインを使用して、WSL 2 によってサポートされるようにディストリビューションを設定する
