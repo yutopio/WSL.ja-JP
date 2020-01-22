@@ -6,12 +6,12 @@ ms.date: 9/4/2018
 ms.topic: article
 ms.assetid: 129101ed-b88a-43c2-b6a2-cd2c4ff6fee1
 ms.localizationpriority: high
-ms.openlocfilehash: 911bde69540bb8bb7a5ee40d8a9f4d6995f4fdaa
-ms.sourcegitcommit: 3f35034581456a2008aa5ed1b623715dfef64608
+ms.openlocfilehash: d5c4308c531e4df02acbfb17a76b3f83d912b512
+ms.sourcegitcommit: 33290fd88a461a1a36d6106e737490bd57dc77bd
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/03/2019
-ms.locfileid: "71934903"
+ms.lasthandoff: 01/14/2020
+ms.locfileid: "75951250"
 ---
 # <a name="frequently-asked-questions-about-windows-subsystem-for-linux"></a>Windows Subsystem for Linux に関してよく寄せられる質問
 
@@ -83,7 +83,7 @@ WSL では、コンピューターの固定ドライブを Linux ディストリ
 
 マウントされたドライブを使用すると、[Visual Studio](https://visualstudio.microsoft.com/vs/) または[VS Code](https://code.visualstudio.com/)を使用して、たとえば `C:\dev\myproj\` 内のコードを編集したり、`/mnt/c/dev/myproj` を介して同じファイルにアクセスして Linux でそのコードをビルド/テストしたりできます。
 
-> **重要な注意**:WSL を使用する際の主な制限事項の 1 つは、Windows アプリまたはツールを使用して Linux ディストリビューションのファイル システム内のファイルに直接アクセスしたり、変更したりすることがサポートされていないことです。 以下をご覧ください。[Windows アプリやツールを使用して Linux ファイルを変更しない](https://blogs.msdn.microsoft.com/commandline/2016/11/17/do-not-change-linux-files-using-windows-apps-and-tools/)
+> **重要な注意**:WSL を使用する際の主な制限事項の 1 つは、Windows アプリまたはツールを使用して Linux ディストリビューションのファイル システム内のファイルに直接アクセスしたり、変更したりすることがサポートされていないことです。 以下を参照してください。[Windows アプリやツールを使用して Linux ファイルを変更しない](https://blogs.msdn.microsoft.com/commandline/2016/11/17/do-not-change-linux-files-using-windows-apps-and-tools/)
 
 ## <a name="are-files-in-the-linux-drive-different-from-the-mounted-windows-drive"></a>Linux ドライブのファイルはマウントされた Windows ドライブのものとは異なりますか。
 
@@ -177,8 +177,11 @@ Appdata フォルダーのファイルをバックアップする従来のバッ
 
 ## <a name="where-can-i-provide-feedback"></a>フィードバックはどこで提供できますか。
 
-複数のチャネルを通じて、フィードバックを共有したり、質問したりできます。フィードバックや質問は以下宛てにお願いいたします。
-* Microsoft の [GitHub の問題の追跡ツール](https://github.com/Microsoft/BashOnWindows/issues)
-* Microsoft の[コマンド ライン UserVoice ポータル](https://wpdev.uservoice.com/forums/266908-command-prompt/filters/top)
+複数のチャネルを通じて、フィードバックを送ったり、質問したりできます。
+
+技術上の問題がある場合や、新機能のリクエストをしたい場合は、GitHub の問題の追跡ツールにアクセスしてください。
+* [GitHub の問題の追跡ツール](https://github.com/Microsoft/BashOnWindows/issues)
+
+WSL の最新ニュースを入手するには、以下をご利用ください。
 * [Microsoft のコマンド ライン チームのブログ](https://blogs.msdn.microsoft.com/commandline/)
-* Twitter 経由。 ニュース、更新などを確認するには、Twitter で [@richturn_ms](https://twitter.com/richturn_MS) をフォローしてください。
+* Twitter。 ニュース、更新などを確認するには、Twitter で [@craigaloewen](https://twitter.com/craigaloewen) をフォローしてください。
