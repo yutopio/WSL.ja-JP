@@ -4,6 +4,7 @@
 # [Distro の初期化](./initialize-distro.md)
 # [ユーザー アカウントとアクセス許可](./user-support.md)
 # [Distro 管理](./wsl-config.md)
+# [ファイル システムのアクセス許可](./file-permissions.md)
 # [エンタープライズ向け Windows Subsystem for Linux](./enterprise.md)
 # [相互運用性](./interop.md)
 # [カスタム Distro のビルド](./build-custom-distro.md)
