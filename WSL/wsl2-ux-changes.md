@@ -6,12 +6,12 @@ ms.date: 05/30/2019
 ms.topic: article
 ms.assetid: 7afaeacf-435a-4e58-bff0-a9f0d75b8a51
 ms.custom: seodec18
-ms.openlocfilehash: 635e4335bd3fe5dd1629faba0168ec4fa331e190
-ms.sourcegitcommit: 6f6b7b67dd35b5fc7b582bb7ac27b9936dedb23d
+ms.openlocfilehash: a8f298a69acf44f152da626a0ba571f6bba1970c
+ms.sourcegitcommit: 07eb5f2e1f4517928165dda4510012599b0d0e1e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/02/2019
-ms.locfileid: "74681642"
+ms.lasthandoff: 01/22/2020
+ms.locfileid: "76520561"
 ---
 # <a name="user-experience-changes-between-wsl-1-and-wsl-2"></a>WSL 1 と WSL 2 間のユーザーエクスペリエンスの変更
 
@@ -42,7 +42,12 @@ Windows ネットワークアプリケーションにアクセスするには、
 
 ![Windows からの Linux ネットワークアプリケーションへのアクセス](media/wsl2-network-l2w.png)
 
-### <a name="accessing-linux-applications-from-windows-only-in-builds-lower-than-18945"></a>Windows から Linux アプリケーションにアクセスする (18945 より前のビルドでのみ)
+### <a name="accessing-linux-applications-from-windows"></a>Windows からの Linux アプリケーションへのアクセス
+
+使用している Windows のバージョンによっては、仮想マシンの IP アドレスの取得が必要になる場合があります。 ビルドが18945以上の場合は、通常と同じように `localhost` を使用できます。 
+
+#### <a name="accessing-linux-on-builds-lower-than-18945httpsblogswindowscomwindowsexperience20190726announcing-windows-10-insider-preview-build-18945"></a>[18945](https://blogs.windows.com/windowsexperience/2019/07/26/announcing-windows-10-insider-preview-build-18945/)より前のビルドでの Linux へのアクセス
+
 WSL ディストリビューションにサーバーがある場合は、ディストリビューションの電源を入れている仮想マシンの IP アドレスを検索し、その IP アドレスを使用して接続する必要があります。 これを行うには、次の手順を実行します。
 
 - WSL ディストリビューション内のコマンド `ip addr` を実行し、`eth0` インターフェイスの `inet` 値の下にあるコマンドを実行して、ディストリビューションの IP アドレスを取得します。
@@ -52,8 +57,6 @@ WSL ディストリビューションにサーバーがある場合は、ディ�
 次の図は、Edge ブラウザーを使用して node.js サーバーに接続することによって、この例を示しています。
 
 ![Windows からの Linux ネットワークアプリケーションへのアクセス](media/wsl2-network-w2l.jpg)
-
-ビルドが18945以上の場合は、通常と同じように localhost を使用できます。 
 
 ### <a name="other-networking-considerations"></a>ネットワークに関するその他の考慮事項
 
