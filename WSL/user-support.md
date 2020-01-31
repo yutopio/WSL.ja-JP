@@ -1,142 +1,48 @@
 ---
-title: Linux ユーザー アカウントとアクセス許可
+title: WSL ディストリビューションのユーザー アカウントを作成および更新する
 description: Windows Subsystem for Linux を使用したユーザー アカウントとアクセス許可の管理のリファレンス。
 keywords: BashOnWindows, bash, wsl, windows, windows subsystem for linux, windowssubsystem, ubuntu, ユーザー アカウント
-ms.date: 09/11/2017
+ms.date: 01/20/2020
 ms.topic: article
 ms.assetid: f70e685f-24c6-4908-9546-bf4f0291d8fd
 ms.custom: seodec18
 ms.localizationpriority: high
-ms.openlocfilehash: d8434283e459ae25637fac0c0b1877ca07d9a255
-ms.sourcegitcommit: 0b5a9f8982dfff07fc8df32d74d97293654f8e12
+ms.openlocfilehash: 85bd8f05d041181c2cfb16f6fb55aaeea15b332c
+ms.sourcegitcommit: 07eb5f2e1f4517928165dda4510012599b0d0e1e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/25/2019
-ms.locfileid: "71269712"
+ms.lasthandoff: 01/22/2020
+ms.locfileid: "76520581"
 ---
-# <a name="user-accounts-and-permissions-for-windows-subsystem-for-linux"></a><span data-ttu-id="a0406-104">Windows Subsystem for Linux のユーザー アカウントとアクセス許可</span><span class="sxs-lookup"><span data-stu-id="a0406-104">User Accounts and Permissions for Windows Subsystem for Linux</span></span>
+# <a name="create-and-update-user-accounts-for-wsl-distributions"></a><span data-ttu-id="5758f-104">WSL ディストリビューションのユーザー アカウントを作成および更新する</span><span class="sxs-lookup"><span data-stu-id="5758f-104">Create and update user accounts for WSL distributions</span></span>
 
-<span data-ttu-id="a0406-105">Linux ユーザーの作成は、WSL で新しい Linux ディストリビューションを設定する際の最初の手順です。</span><span class="sxs-lookup"><span data-stu-id="a0406-105">Creating your Linux user is the first step in setting up a new Linux distribution on WSL.</span></span>  <span data-ttu-id="a0406-106">作成した最初のユーザー アカウントは、次のいくつかの特殊な属性で自動的に構成されます。</span><span class="sxs-lookup"><span data-stu-id="a0406-106">The first user account you create is automatically configured with a few special attributes:</span></span>
+<span data-ttu-id="5758f-105">WSL を有効にし、Microsoft Store から Linux ディストリビューションをインストールしたら、新しくインストールされた Linux ディストリビューションを開くときに最初に実行する必要がある手順は、**ユーザー名**および**パスワード**を含むアカウントを作成することです。</span><span class="sxs-lookup"><span data-stu-id="5758f-105">Once you have enabled WSL and installed a Linux distribution from the Microsoft Store, the first step you will be asked to complete when opening your newly installed Linux distribution is to create an account, including a **User Name** and **Password**.</span></span>
 
-1. <span data-ttu-id="a0406-107">これは既定のユーザーであり、起動時に自動的にサインインします。</span><span class="sxs-lookup"><span data-stu-id="a0406-107">It is your default user -- it signs-in automatically on launch.</span></span>
-1. <span data-ttu-id="a0406-108">既定では、Linux 管理者 (sudo グループのメンバー) です。</span><span class="sxs-lookup"><span data-stu-id="a0406-108">It is Linux administrator (a member of the sudo group) by default.</span></span>
+- <span data-ttu-id="5758f-106">この**ユーザー名**および**パスワード**は、お使いの Linux ディストリビューションに固有であり、Windows ユーザー名とは関係ありません。</span><span class="sxs-lookup"><span data-stu-id="5758f-106">This **User Name** and **Password** is specific to your Linux distribution and has no bearing on your Windows user name.</span></span>
 
-<span data-ttu-id="a0406-109">Windows Subsystem for Linux で実行されている各 Linux ディストリビューションには、独自の Linux ユーザー アカウントとパスワードがあります。</span><span class="sxs-lookup"><span data-stu-id="a0406-109">Each Linux distribution running on the Windows Subsystem for Linux has its own Linux user accounts and passwords.</span></span>  <span data-ttu-id="a0406-110">ディストリビューションの追加、再インストール、または再設定を行うたびに、Linux ユーザー アカウントを構成する必要があります。</span><span class="sxs-lookup"><span data-stu-id="a0406-110">You will have to configure a Linux user account any time you add a distribution, reinstall, or reset.</span></span>  <span data-ttu-id="a0406-111">Linux ユーザー アカウントは、ディストリビューションごとに独立しているだけではなく、Windows ユーザー アカウントにも依存しません。</span><span class="sxs-lookup"><span data-stu-id="a0406-111">Linux user accounts are not only independent per distribution, they are also independent from your Windows user account.</span></span>
+- <span data-ttu-id="5758f-107">この**ユーザー名**および**パスワード**を作成すると、このアカウントがディストリビューションの既定のユーザーとなり、起動時に自動的にサインインされます。</span><span class="sxs-lookup"><span data-stu-id="5758f-107">Once you create this **User Name** and **Password**, the account will be your default user for the distribution and automatically sign-in on launch.</span></span>
 
-## <a name="resetting-your-linux-password"></a><span data-ttu-id="a0406-112">Linux パスワードの再設定</span><span class="sxs-lookup"><span data-stu-id="a0406-112">Resetting your Linux password</span></span>
+- <span data-ttu-id="5758f-108">このアカウントは、Linux 管理者と見なされ、`sudo` (Super User Do) 管理コマンドを実行できます。</span><span class="sxs-lookup"><span data-stu-id="5758f-108">This account will be considered the Linux administrator, with the ability to run `sudo` (Super User Do) administrative commands.</span></span>
 
-<span data-ttu-id="a0406-113">Linux ユーザー アカウントへのアクセス権があり、現在のパスワードを知っている場合は、そのディストリビューションの Linux パスワード再設定ツール (最も一般的なのは `passwd`) を使用して変更してください。</span><span class="sxs-lookup"><span data-stu-id="a0406-113">If you have access to your Linux user account and know your current password, change it using Linux password reset tools of that distribution -- most likely `passwd`.</span></span>
+- <span data-ttu-id="5758f-109">Windows Subsystem for Linux で実行されている各 Linux ディストリビューションには、独自の Linux ユーザー アカウントとパスワードがあります。</span><span class="sxs-lookup"><span data-stu-id="5758f-109">Each Linux distribution running on the Windows Subsystem for Linux has its own Linux user accounts and passwords.</span></span>  <span data-ttu-id="5758f-110">ディストリビューションの追加、再インストール、再設定を行うたびに、Linux ユーザー アカウントを構成する必要があります。</span><span class="sxs-lookup"><span data-stu-id="5758f-110">You will have to configure a Linux user account every time you add a distribution, reinstall, or reset.</span></span>
 
-<span data-ttu-id="a0406-114">これを実行できない場合、ディストリビューションによっては、既定のユーザーを再設定することでパスワードを再設定できることがあります。</span><span class="sxs-lookup"><span data-stu-id="a0406-114">If that's not an option, depending on the distribution, you may be able to reset your password by resetting the default user.</span></span>
+## <a name="reset-your-linux-password"></a><span data-ttu-id="5758f-111">Linux パスワードの再設定</span><span class="sxs-lookup"><span data-stu-id="5758f-111">Reset your Linux password</span></span>
 
-<span data-ttu-id="a0406-115">WSL では、WSL を開始するときに自動的にログインするユーザー アカウントを識別するための既定のユーザー タグが用意されています。</span><span class="sxs-lookup"><span data-stu-id="a0406-115">WSL offers a default user tag to identify which user account automatically logs in when you start a WSL.</span></span>  <span data-ttu-id="a0406-116">多くのディストリビューションには、既定のユーザーをルートに設定するコマンドや、パスワードが設定されていないルート ユーザーを設定するコマンドが含まれているため、既定のユーザーのルートへの変更は、パスワードの再設定などのための便利なツールになります。</span><span class="sxs-lookup"><span data-stu-id="a0406-116">Since many distributions include commands to set the default user to root and also a root user with no password set, changing the default user to root is a handy tool for things like password reset.</span></span>
+<span data-ttu-id="5758f-112">パスワードを変更するには、Linux ディストリビューション (Ubuntu など) を開き、コマンド `passwd` を入力します。</span><span class="sxs-lookup"><span data-stu-id="5758f-112">To change your password, open your Linux distribution (Ubuntu for example) and enter the command: `passwd`</span></span>
 
-### <a name="for-creators-update-and-earlier"></a><span data-ttu-id="a0406-117">Creators Update 以前の場合</span><span class="sxs-lookup"><span data-stu-id="a0406-117">For Creators Update and earlier</span></span>
-<span data-ttu-id="a0406-118">Windows 10 Creators Update 以前を実行している場合は、次のコマンドを実行して既定の Bash ユーザーを変更できます。</span><span class="sxs-lookup"><span data-stu-id="a0406-118">If you're running Windows 10 Creators update or earlier, you can change the default Bash user by running the following commands:</span></span>
+<span data-ttu-id="5758f-113">現在のパスワードを入力するよう求められ、新しいパスワードの入力を求められたら、新しいパスワードを確認します。</span><span class="sxs-lookup"><span data-stu-id="5758f-113">You will be asked to enter your current password, then asked to enter your new password, and then to confirm your new password.</span></span>
 
-1. <span data-ttu-id="a0406-119">既定のユーザーを `root` に変更します。</span><span class="sxs-lookup"><span data-stu-id="a0406-119">Change the default user to `root`:</span></span>
+### <a name="forgot-your-password"></a><span data-ttu-id="5758f-114">パスワードを忘れた場合</span><span class="sxs-lookup"><span data-stu-id="5758f-114">Forgot your password</span></span>
 
-    ```console
-    C:\> lxrun /setdefaultuser root
-    ```
+<span data-ttu-id="5758f-115">Linux ディストリビューションのパスワードを忘れた場合は、次のようにします。</span><span class="sxs-lookup"><span data-stu-id="5758f-115">If you forgot the password for your Linux distribution:</span></span>
 
-1. <span data-ttu-id="a0406-120">`bash.exe` を実行して、今度は `root` としてログインします。</span><span class="sxs-lookup"><span data-stu-id="a0406-120">Run `bash.exe` to now login as `root`:</span></span>
+1. <span data-ttu-id="5758f-116">PowerShell を開き、コマンド `wsl -u root` を使用して、既定の WSL ディストリビューションのルートを入力します。</span><span class="sxs-lookup"><span data-stu-id="5758f-116">Open PowerShell and enter the root of your default WSL distribution using the command: `wsl -u root`</span></span>
 
-    ```console
-    C:\> bash.exe
-    ```
+<span data-ttu-id="5758f-117">-- 既定ではないディストリビューションで忘れたパスワードを更新する必要がある場合は、コマンド `wsl -d Debian -u root` を使用します。`Debian` は対象のディストリビューション名に置き換えます。</span><span class="sxs-lookup"><span data-stu-id="5758f-117">-- If you need to update the forgotten password on a distribution that is not your default, use the command: `wsl -d Debian -u root`, replacing `Debian` with the name of your targeted distribution.</span></span>
 
-1. <span data-ttu-id="a0406-121">ディストリビューションのパスワード コマンドを使用してパスワードを再設定し、Linux コンソールを閉じます。</span><span class="sxs-lookup"><span data-stu-id="a0406-121">Reset your password using the distribution's password command, and close the Linux Console:</span></span>
+2. <span data-ttu-id="5758f-118">PowerShell 内のルート レベルで WSL ディストリビューションが開かれたら、コマンド `passwd` を使用してパスワードを更新できます。</span><span class="sxs-lookup"><span data-stu-id="5758f-118">Once your WSL distribution has been opened at the root level inside PowerShell, you can use this command to update your password: `passwd`</span></span>
 
-    ```BASH
-    $ passwd username
-    $ exit
-    ```
+3. <span data-ttu-id="5758f-119">新しい UNIX パスワードを入力し、そのパスワードを確認するように求められます。</span><span class="sxs-lookup"><span data-stu-id="5758f-119">You will be prompted to enter a new UNIX password and then confirm that password.</span></span> <span data-ttu-id="5758f-120">パスワードが正常に更新されたことを示す通知が表示されたら、コマンド `exit` を使用して PowerShell 内の WSL を閉じます。</span><span class="sxs-lookup"><span data-stu-id="5758f-120">Once you're told that the password has updated successfully, close WSL inside of PowerShell using the command: `exit`</span></span>
 
-1. <span data-ttu-id="a0406-122">Windows CMD で、既定のユーザーを通常の Linux ユーザー アカウントに再設定して戻します。</span><span class="sxs-lookup"><span data-stu-id="a0406-122">From Windows CMD, reset your default user back to your normal Linux user account:</span></span>
-
-    ```console
-    C:\> lxrun.exe /setdefaultuser username
-    ```
-
-### <a name="for-fall-creators-update-and-later"></a><span data-ttu-id="a0406-123">Fall Creators Update 以降の場合</span><span class="sxs-lookup"><span data-stu-id="a0406-123">For Fall Creators Update and later</span></span>
-<span data-ttu-id="a0406-124">特定のディストリビューションで使用できるコマンドを確認するには、`[distro.exe] /?` を実行します。</span><span class="sxs-lookup"><span data-stu-id="a0406-124">To see what commands are available for a particular distribution, run `[distro.exe] /?`.</span></span>
-    
-<span data-ttu-id="a0406-125">たとえば、Ubuntu がインストールされているとします。</span><span class="sxs-lookup"><span data-stu-id="a0406-125">For example, with Ubuntu installed:</span></span>
-
-```console
-C:\> ubuntu.exe /?
-
-Launches or configures a linux distribution.
-
-Usage:
-    <no args>
-      - Launches the distro's default behavior. By default, this launches your default shell.
-
-    run <command line>
-      - Run the given command line in that distro, using the default configuration.
-      - Everything after `run ` is passed to the linux LaunchProcess cal
-
-    config [setting [value]]
-      - Configure certain settings for this distro.
-      - Settings are any of the following (by default)
-        - `--default-user <username>`: Set the default user for this distro to <username>
-
-    clean
-      - Uninstalls the distro. The appx remains on your machine. This can be
-        useful for "factory resetting" your instance. This removes the linux
-        filesystem from the disk, but not the app from your PC, so you don't
-        need to redownload the entire tar.gz again.
-
-    help
-      - Print this usage message.
-```
-
-<span data-ttu-id="a0406-126">Ubuntu を使用したステップ バイ ステップの手順:</span><span class="sxs-lookup"><span data-stu-id="a0406-126">Step by step instructions using Ubuntu:</span></span>
-
-1. <span data-ttu-id="a0406-127">CMD を開きます。</span><span class="sxs-lookup"><span data-stu-id="a0406-127">Open CMD</span></span>
-1. <span data-ttu-id="a0406-128">既定の Linux ユーザーを `root` に設定します。</span><span class="sxs-lookup"><span data-stu-id="a0406-128">Set the default Linux user to `root`:</span></span>
-
-    ```console
-    C:\> ubuntu config --default-user root
-    ```    
-
-1. <span data-ttu-id="a0406-129">Linux ディストリビューション (`ubuntu`) を起動します。</span><span class="sxs-lookup"><span data-stu-id="a0406-129">Launch your Linux distribution (`ubuntu`).</span></span>  <span data-ttu-id="a0406-130">`root` として自動的にログインします。</span><span class="sxs-lookup"><span data-stu-id="a0406-130">You will automatically login as `root`:</span></span>
-
-1. <span data-ttu-id="a0406-131">`passwd` コマンドを使用してパスワードを再設定します。</span><span class="sxs-lookup"><span data-stu-id="a0406-131">Reset your password using the `passwd` command:</span></span>
-
-    ```BASH
-    $ passwd username
-    ```
-
-1. <span data-ttu-id="a0406-132">Windows CMD で、既定のユーザーを通常の Linux ユーザー アカウントに再設定して戻します。</span><span class="sxs-lookup"><span data-stu-id="a0406-132">From Windows CMD, reset your default user back to your normal Linux user account.</span></span>
-
-    ```console
-    C:\> ubuntu config --default-user username
-    ```
-
-## <a name="permissions"></a><span data-ttu-id="a0406-133">アクセス許可</span><span class="sxs-lookup"><span data-stu-id="a0406-133">Permissions</span></span>
-
-<span data-ttu-id="a0406-134">WSL のアクセス許可に関しては、留意すべき重要な概念が 2 つあります。</span><span class="sxs-lookup"><span data-stu-id="a0406-134">There are two important concepts to keep in mind when it comes to permissions in WSL:</span></span>
-
-1. <span data-ttu-id="a0406-135">Windows アクセス許可モデルは、Windows リソースに対するプロセスの権限を管理します</span><span class="sxs-lookup"><span data-stu-id="a0406-135">The Windows permission model governs a process' rights to Windows resources</span></span>
-2. <span data-ttu-id="a0406-136">Linux アクセス許可モデルは、Linux リソースに対するプロセスの権限を制御します</span><span class="sxs-lookup"><span data-stu-id="a0406-136">The Linux permission model controls a process' rights to Linux resources</span></span>
-
-<span data-ttu-id="a0406-137">WSL で Linux を実行すると、Linux はそれを起動するプロセスと同じ Windows アクセス許可を持ちます。</span><span class="sxs-lookup"><span data-stu-id="a0406-137">When running Linux on WSL, Linux will have the same Windows permissions as the process that launches it.</span></span> <span data-ttu-id="a0406-138">Linux は、次の 2 つのアクセス許可レベルのいずれかで起動できます。</span><span class="sxs-lookup"><span data-stu-id="a0406-138">Linux can be launched in one of two permission levels:</span></span>
-
-* <span data-ttu-id="a0406-139">通常 (管理者特権でない):Linux は、ログインしているユーザーのアクセス許可を使用して実行されます</span><span class="sxs-lookup"><span data-stu-id="a0406-139">Normal (non-elevated): Linux runs with the permissions of the logged-in user</span></span>
-* <span data-ttu-id="a0406-140">管理者特権/管理者:Linux は、管理者特権/管理者の Windows アクセス許可を使用して実行されます</span><span class="sxs-lookup"><span data-stu-id="a0406-140">Elevated/admin: Linux runs with elevated/admin Windows permissions</span></span>
-
-> <span data-ttu-id="a0406-141">昇格されたプロセスはシステム全体の設定やシステム全体にわたるデータまたは保護されているデータへのアクセスや変更が可能であり、結果として破損させる可能性があるため、Windows と Linux のどちらのアプリケーション/ツール/シェルであるかに関係なく、どうしても必要でない限りは昇格されたプロセスを起動**しないようにしてください**。</span><span class="sxs-lookup"><span data-stu-id="a0406-141">Because elevated processes can access/modify (and therefore damage) system-wide settings and system-wide/protected data, **AVOID** launching elevated processes unless you absolutely have to - whether they're Windows or Linux applications/tools/shells!</span></span>
-
-<span data-ttu-id="a0406-142">上記の Windows アクセス許可は、Linux インスタンス内のアクセス許可とは無関係です。Linux の "ルート権限" は、Linux 環境およびファイル システム内のユーザーの権限にのみ影響し、付与されている Windows 特権には影響しません。</span><span class="sxs-lookup"><span data-stu-id="a0406-142">The above Windows permissions are independent of the permissions within a Linux instance: Linux "Root privileges" only impact the user’s rights within the Linux environment & filesystem; they have no impact on the Windows privileges granted.</span></span> <span data-ttu-id="a0406-143">したがって、(たとえば、`sudo` を使用して) Linux プロセスをルートとして実行すると、Linux 環境内でそのプロセス管理者権限のみが付与されます。</span><span class="sxs-lookup"><span data-stu-id="a0406-143">Thus, running a Linux process as root (e.g. via `sudo`) only grants that process admin rights within the Linux environment.</span></span>
-
-<span data-ttu-id="a0406-144">**例:**   </span><span class="sxs-lookup"><span data-stu-id="a0406-144">**Example:**  </span></span>  
-<span data-ttu-id="a0406-145">Windows 管理特権がある Bash セッションでは `cd /mnt/c/Users/Administrator` にアクセスできる一方で、管理特権のない Bash セッションでは "アクセス許可が拒否されました" というエラーが表示されます。</span><span class="sxs-lookup"><span data-stu-id="a0406-145">A Bash session with Windows admin privileges may access `cd /mnt/c/Users/Administrator` while a Bash session without admin privileges would see a "Permission Denied" error.</span></span>
-
-<span data-ttu-id="a0406-146">Windows 内のアクセス許可は Windows によって管理されているため、Linux では、「`sudo cd /mnt/c/Users/Administrator`」と入力しても、管理者のディレクトリへのアクセス権が付与されません。</span><span class="sxs-lookup"><span data-stu-id="a0406-146">In Linux, typing `sudo cd /mnt/c/Users/Administrator` will not grant access to the Administrator’s directory since permissions within Windows are managed by Windows.</span></span>
-
-<span data-ttu-id="a0406-147">Linux アクセス許可モデルは、Linux 環境内で、ユーザーが現在の Linux ユーザーに基づいたアクセス許可を持っている場合に重要です。</span><span class="sxs-lookup"><span data-stu-id="a0406-147">The Linux permission model is important when inside the Linux environment where the user has permissions based on the current Linux user.</span></span>
-
-<span data-ttu-id="a0406-148">**例:**</span><span class="sxs-lookup"><span data-stu-id="a0406-148">**Example:**</span></span>  
-<span data-ttu-id="a0406-149">sudo グループ内のユーザーは `sudo apt update` を実行できます。</span><span class="sxs-lookup"><span data-stu-id="a0406-149">A user in the sudo group may run `sudo apt update`.</span></span>
+> [!NOTE]
+> <span data-ttu-id="5758f-121">古いバージョン (1703 (Creators Update) または 1709 (Fall Creators Update) など) の Windows オペレーティング システムを実行している場合、[アーカイブされたバージョンのこのユーザー アカウントの更新に関するドキュメント](./user-support-archived.md)を参照してください。</span><span class="sxs-lookup"><span data-stu-id="5758f-121">If you are running an early version of Windows operating system, like 1703 (Creators Update) or 1709 (Fall Creators Update), see the [archived version of this user account update doc](./user-support-archived.md).</span></span>
