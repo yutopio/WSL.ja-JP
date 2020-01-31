@@ -1,142 +1,48 @@
 ---
-title: Linux ユーザー アカウントとアクセス許可
+title: WSL ディストリビューションのユーザー アカウントを作成および更新する
 description: Windows Subsystem for Linux を使用したユーザー アカウントとアクセス許可の管理のリファレンス。
 keywords: BashOnWindows, bash, wsl, windows, windows subsystem for linux, windowssubsystem, ubuntu, ユーザー アカウント
-ms.date: 09/11/2017
+ms.date: 01/20/2020
 ms.topic: article
 ms.assetid: f70e685f-24c6-4908-9546-bf4f0291d8fd
 ms.custom: seodec18
 ms.localizationpriority: high
-ms.openlocfilehash: d8434283e459ae25637fac0c0b1877ca07d9a255
-ms.sourcegitcommit: 0b5a9f8982dfff07fc8df32d74d97293654f8e12
+ms.openlocfilehash: 85bd8f05d041181c2cfb16f6fb55aaeea15b332c
+ms.sourcegitcommit: 07eb5f2e1f4517928165dda4510012599b0d0e1e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/25/2019
-ms.locfileid: "71269712"
+ms.lasthandoff: 01/22/2020
+ms.locfileid: "76520581"
 ---
-# <a name="user-accounts-and-permissions-for-windows-subsystem-for-linux"></a>Windows Subsystem for Linux のユーザー アカウントとアクセス許可
+# <a name="create-and-update-user-accounts-for-wsl-distributions"></a>WSL ディストリビューションのユーザー アカウントを作成および更新する
 
-Linux ユーザーの作成は、WSL で新しい Linux ディストリビューションを設定する際の最初の手順です。  作成した最初のユーザー アカウントは、次のいくつかの特殊な属性で自動的に構成されます。
+WSL を有効にし、Microsoft Store から Linux ディストリビューションをインストールしたら、新しくインストールされた Linux ディストリビューションを開くときに最初に実行する必要がある手順は、**ユーザー名**および**パスワード**を含むアカウントを作成することです。
 
-1. これは既定のユーザーであり、起動時に自動的にサインインします。
-1. 既定では、Linux 管理者 (sudo グループのメンバー) です。
+- この**ユーザー名**および**パスワード**は、お使いの Linux ディストリビューションに固有であり、Windows ユーザー名とは関係ありません。
 
-Windows Subsystem for Linux で実行されている各 Linux ディストリビューションには、独自の Linux ユーザー アカウントとパスワードがあります。  ディストリビューションの追加、再インストール、または再設定を行うたびに、Linux ユーザー アカウントを構成する必要があります。  Linux ユーザー アカウントは、ディストリビューションごとに独立しているだけではなく、Windows ユーザー アカウントにも依存しません。
+- この**ユーザー名**および**パスワード**を作成すると、このアカウントがディストリビューションの既定のユーザーとなり、起動時に自動的にサインインされます。
 
-## <a name="resetting-your-linux-password"></a>Linux パスワードの再設定
+- このアカウントは、Linux 管理者と見なされ、`sudo` (Super User Do) 管理コマンドを実行できます。
 
-Linux ユーザー アカウントへのアクセス権があり、現在のパスワードを知っている場合は、そのディストリビューションの Linux パスワード再設定ツール (最も一般的なのは `passwd`) を使用して変更してください。
+- Windows Subsystem for Linux で実行されている各 Linux ディストリビューションには、独自の Linux ユーザー アカウントとパスワードがあります。  ディストリビューションの追加、再インストール、再設定を行うたびに、Linux ユーザー アカウントを構成する必要があります。
 
-これを実行できない場合、ディストリビューションによっては、既定のユーザーを再設定することでパスワードを再設定できることがあります。
+## <a name="reset-your-linux-password"></a>Linux パスワードの再設定
 
-WSL では、WSL を開始するときに自動的にログインするユーザー アカウントを識別するための既定のユーザー タグが用意されています。  多くのディストリビューションには、既定のユーザーをルートに設定するコマンドや、パスワードが設定されていないルート ユーザーを設定するコマンドが含まれているため、既定のユーザーのルートへの変更は、パスワードの再設定などのための便利なツールになります。
+パスワードを変更するには、Linux ディストリビューション (Ubuntu など) を開き、コマンド `passwd` を入力します。
 
-### <a name="for-creators-update-and-earlier"></a>Creators Update 以前の場合
-Windows 10 Creators Update 以前を実行している場合は、次のコマンドを実行して既定の Bash ユーザーを変更できます。
+現在のパスワードを入力するよう求められ、新しいパスワードの入力を求められたら、新しいパスワードを確認します。
 
-1. 既定のユーザーを `root` に変更します。
+### <a name="forgot-your-password"></a>パスワードを忘れた場合
 
-    ```console
-    C:\> lxrun /setdefaultuser root
-    ```
+Linux ディストリビューションのパスワードを忘れた場合は、次のようにします。
 
-1. `bash.exe` を実行して、今度は `root` としてログインします。
+1. PowerShell を開き、コマンド `wsl -u root` を使用して、既定の WSL ディストリビューションのルートを入力します。
 
-    ```console
-    C:\> bash.exe
-    ```
+-- 既定ではないディストリビューションで忘れたパスワードを更新する必要がある場合は、コマンド `wsl -d Debian -u root` を使用します。`Debian` は対象のディストリビューション名に置き換えます。
 
-1. ディストリビューションのパスワード コマンドを使用してパスワードを再設定し、Linux コンソールを閉じます。
+2. PowerShell 内のルート レベルで WSL ディストリビューションが開かれたら、コマンド `passwd` を使用してパスワードを更新できます。
 
-    ```BASH
-    $ passwd username
-    $ exit
-    ```
+3. 新しい UNIX パスワードを入力し、そのパスワードを確認するように求められます。 パスワードが正常に更新されたことを示す通知が表示されたら、コマンド `exit` を使用して PowerShell 内の WSL を閉じます。
 
-1. Windows CMD で、既定のユーザーを通常の Linux ユーザー アカウントに再設定して戻します。
-
-    ```console
-    C:\> lxrun.exe /setdefaultuser username
-    ```
-
-### <a name="for-fall-creators-update-and-later"></a>Fall Creators Update 以降の場合
-特定のディストリビューションで使用できるコマンドを確認するには、`[distro.exe] /?` を実行します。
-    
-たとえば、Ubuntu がインストールされているとします。
-
-```console
-C:\> ubuntu.exe /?
-
-Launches or configures a linux distribution.
-
-Usage:
-    <no args>
-      - Launches the distro's default behavior. By default, this launches your default shell.
-
-    run <command line>
-      - Run the given command line in that distro, using the default configuration.
-      - Everything after `run ` is passed to the linux LaunchProcess cal
-
-    config [setting [value]]
-      - Configure certain settings for this distro.
-      - Settings are any of the following (by default)
-        - `--default-user <username>`: Set the default user for this distro to <username>
-
-    clean
-      - Uninstalls the distro. The appx remains on your machine. This can be
-        useful for "factory resetting" your instance. This removes the linux
-        filesystem from the disk, but not the app from your PC, so you don't
-        need to redownload the entire tar.gz again.
-
-    help
-      - Print this usage message.
-```
-
-Ubuntu を使用したステップ バイ ステップの手順:
-
-1. CMD を開きます。
-1. 既定の Linux ユーザーを `root` に設定します。
-
-    ```console
-    C:\> ubuntu config --default-user root
-    ```    
-
-1. Linux ディストリビューション (`ubuntu`) を起動します。  `root` として自動的にログインします。
-
-1. `passwd` コマンドを使用してパスワードを再設定します。
-
-    ```BASH
-    $ passwd username
-    ```
-
-1. Windows CMD で、既定のユーザーを通常の Linux ユーザー アカウントに再設定して戻します。
-
-    ```console
-    C:\> ubuntu config --default-user username
-    ```
-
-## <a name="permissions"></a>アクセス許可
-
-WSL のアクセス許可に関しては、留意すべき重要な概念が 2 つあります。
-
-1. Windows アクセス許可モデルは、Windows リソースに対するプロセスの権限を管理します
-2. Linux アクセス許可モデルは、Linux リソースに対するプロセスの権限を制御します
-
-WSL で Linux を実行すると、Linux はそれを起動するプロセスと同じ Windows アクセス許可を持ちます。 Linux は、次の 2 つのアクセス許可レベルのいずれかで起動できます。
-
-* 通常 (管理者特権でない):Linux は、ログインしているユーザーのアクセス許可を使用して実行されます
-* 管理者特権/管理者:Linux は、管理者特権/管理者の Windows アクセス許可を使用して実行されます
-
-> 昇格されたプロセスはシステム全体の設定やシステム全体にわたるデータまたは保護されているデータへのアクセスや変更が可能であり、結果として破損させる可能性があるため、Windows と Linux のどちらのアプリケーション/ツール/シェルであるかに関係なく、どうしても必要でない限りは昇格されたプロセスを起動**しないようにしてください**。
-
-上記の Windows アクセス許可は、Linux インスタンス内のアクセス許可とは無関係です。Linux の "ルート権限" は、Linux 環境およびファイル システム内のユーザーの権限にのみ影響し、付与されている Windows 特権には影響しません。 したがって、(たとえば、`sudo` を使用して) Linux プロセスをルートとして実行すると、Linux 環境内でそのプロセス管理者権限のみが付与されます。
-
-**例:**     
-Windows 管理特権がある Bash セッションでは `cd /mnt/c/Users/Administrator` にアクセスできる一方で、管理特権のない Bash セッションでは "アクセス許可が拒否されました" というエラーが表示されます。
-
-Windows 内のアクセス許可は Windows によって管理されているため、Linux では、「`sudo cd /mnt/c/Users/Administrator`」と入力しても、管理者のディレクトリへのアクセス権が付与されません。
-
-Linux アクセス許可モデルは、Linux 環境内で、ユーザーが現在の Linux ユーザーに基づいたアクセス許可を持っている場合に重要です。
-
-**例:**  
-sudo グループ内のユーザーは `sudo apt update` を実行できます。
+> [!NOTE]
+> 古いバージョン (1703 (Creators Update) または 1709 (Fall Creators Update) など) の Windows オペレーティング システムを実行している場合、[アーカイブされたバージョンのこのユーザー アカウントの更新に関するドキュメント](./user-support-archived.md)を参照してください。
