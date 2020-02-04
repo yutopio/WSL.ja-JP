@@ -2,7 +2,7 @@
 # [Windows 10 へのインストール](./install-win10.md)
 # [Windows Server へのインストール](./install-on-server.md)
 # [Distro の初期化](./initialize-distro.md)
-# [ユーザー アカウントとアクセス許可](./user-support.md)
+# [ユーザー アカウント](./user-support.md)
 # [Distro 管理](./wsl-config.md)
 # [ファイル システムのアクセス許可](./file-permissions.md)
 # [エンタープライズ向け Windows Subsystem for Linux](./enterprise.md)
