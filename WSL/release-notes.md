@@ -8,14 +8,32 @@ ms.topic: article
 ms.assetid: 36ea641e-4d49-4881-84eb-a9ca85b1cdf4
 ms.custom: seodec18
 ms.localizationpriority: high
-ms.openlocfilehash: 2e1b8a2ae37568af273ac311572881daa8b55d4b
-ms.sourcegitcommit: 3be576f946611cf36e27745bdb7c4c52af1b9928
+ms.openlocfilehash: 31bf975afb202a6cfd9a2879cff29a77b2969fce
+ms.sourcegitcommit: 7069b8d452308c32cc7fa31d1158fcb130d42e06
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/20/2019
-ms.locfileid: "74200226"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76911706"
 ---
 # <a name="release-notes-for-windows-subsystem-for-linux"></a>Windows Subsystem for Linux のリリース ノート
+
+## <a name="build-19555"></a>ビルド 19555
+ビルド 19555 の一般的な Windows 情報については、[Windows ブログ](https://blogs.windows.com/windowsexperience/2020/01/30/announcing-windows-10-insider-preview-build-19555/)を参照してください。
+
+* [WSL2] インストールおよび変換の操作によって使用されるメモリの量を制限するには、メモリ cgroup を使用します [GH 4669]
+* 機能の検出機能を向上させるため、Linux 用 Windows サブシステムのオプションのコンポーネントが有効になっていない場合 wsl.exe を使用します
+* WSL のオプションのコンポーネントがインストールされていない場合、wsl.exe を変更してヘルプ テキストを出力します
+* インスタンス作成時の競合状態を修正します
+* すべてのコマンド ライン機能を含む wslclient.dll を作成します
+* LxssManagerUser サービスの停止中にクラッシュしないようにします
+* distroName パラメーターが NULL の場合に wslapi.dll ファスト フェールを修正します
+
+## <a name="build-19041"></a>ビルド 19041
+ビルド 19041 の一般的な Windows 情報については、[Windows ブログ](https://blogs.windows.com/windowsexperience/2019/12/10/announcing-windows-10-insider-preview-build-19041/)を参照してください。
+
+* [WSL2] プロセスを起動する前にシグナル マスクをクリアします
+* [WSL2] Linux カーネルを 4.19.84 に更新します
+* symlink が非相対である場合に /etc/resolv.conf symlink の作成を処理します
 
 ## <a name="build-19028"></a>ビルド 19028
 ビルド 19028 の一般的な Windows 情報については、[Windows ブログ](https://blogs.windows.com/windowsexperience/2019/11/19/announcing-windows-10-insider-preview-build-19028/)を参照してください。
@@ -350,7 +368,7 @@ wslconfig.exe /terminate <DistributionName>
     * 注: dmesg は、現在、`/dev/kmsg` デバイス インターフェイスを介してサポートされます。 `syslog` システム コール インターフェイスはまだサポートされていません。 そのため、一部の `dmesg` コマンド ラインのオプション (`-S`、`-C` など) は機能しません。
 * ネイティブに一致するように、シリアル デバイスの既定の gid とモードを変更します [GH 3042]
 * DrvFs で拡張属性がサポートされるようになりました。
-    * 注:DrvFs では、拡張属性の名前にいくつかの制限があります。 一部の文字 ('/'、':'、'\*' など) は使用できません。また、DrvFs では拡張属性名の大文字と小文字は区別されません
+    * 注: DrvFs では、拡張属性の名前にいくつかの制限があります。 一部の文字 ('/'、':'、'\*' など) は使用できません。また、DrvFs では拡張属性名の大文字と小文字は区別されません
 
 ## <a name="build-18252-skip-ahead"></a>ビルド 18252 (前へスキップ)
 ビルド 18252 の一般的な Windows 情報については、[Windows ブログ](https://blogs.windows.com/windowsexperience/2018/10/03/announcing-windows-10-insider-preview-build-18252/)を参照してください。
@@ -486,7 +504,7 @@ wslconfig.exe /terminate <DistributionName>
 ### <a name="wsl"></a>WSL
 * ネイティブに一致するように、シリアル デバイスの既定の gid とモードを変更します [GH 3042]
 * DrvFs で拡張属性がサポートされるようになりました。
-    * 注:DrvFs では、拡張属性の名前にいくつかの制限があります。 特に、一部の文字 ('/'、':'、'\*' など) は使用できません。また、拡張属性名は DrvFs では大文字と小文字が区別されません
+    * 注: DrvFs では、拡張属性の名前にいくつかの制限があります。 特に、一部の文字 ('/'、':'、'\*' など) は使用できません。また、拡張属性名は DrvFs では大文字と小文字が区別されません
 
 ## <a name="build-17133-fast"></a>ビルド 17133 (Fast)
 ビルド 17133 の一般的な Windows 情報については、[Windows ブログ](https://blogs.windows.com/windowsexperience/2018/03/27/announcing-windows-10-insider-preview-build-17133-for-fast/)を参照してください。
@@ -498,7 +516,7 @@ wslconfig.exe /terminate <DistributionName>
 ビルド 17128 の一般的な Windows 情報については、[Windows ブログ](https://blogs.windows.com/windowsexperience/2018/03/23/announcing-windows-10-insider-preview-build-17128-for-fast/)を参照してください。
 
 ### <a name="wsl"></a>WSL
-* なし
+* None
 
 ## <a name="build-17627-skip-ahead"></a>ビルド 17627 (前へスキップ)
 ビルド 17627 の一般的な Windows 情報については、[Windows ブログ](https://blogs.windows.com/windowsexperience/2018/03/21/announcing-windows-10-insider-preview-build-17627-for-skip-ahead/)を参照してください。
@@ -513,7 +531,7 @@ wslconfig.exe /terminate <DistributionName>
 * すべてのネットワーク インターフェイスをイーサネットとして報告します。 [GH 2996]
 * 破損した /etc/passwd ファイルの処理が改善。 [GH 3001]
 
-### <a name="console"></a>Console
+### <a name="console"></a>コンソール
 * 修正なし。
 
 ### <a name="ltp-results"></a>LTP の結果:
@@ -526,7 +544,7 @@ wslconfig.exe /terminate <DistributionName>
 * NT 相互運用のために pseudoconsole 機能を導入します [GH 988、1366、1433、1542、2370、2406]。
 * レガシ インストール メカニズム (lxrun.exe) は非推奨となりました。 ディストリビューションをインストールするためのサポートされているメカニズムは、Microsoft Store 経由です。
 
-### <a name="console"></a>Console
+### <a name="console"></a>コンソール
 * 修正なし。
 
 ### <a name="ltp-results"></a>LTP の結果:
@@ -542,7 +560,7 @@ wslconfig.exe /terminate <DistributionName>
     * 以前のバージョンの Windows に含まれている WSL で作成された既存のディレクトリがあり、大文字と小文字を区別する必要がある場合は、次の fsutil.exe を使用して大文字と小文字を区別するように指定します: fsutil.exe file setcasesensitiveinfo <path> enable
 * uname システム コールから NULL の終了文字列が返されます。
 
-### <a name="console"></a>Console
+### <a name="console"></a>コンソール
 * 修正なし。
 
 ### <a name="ltp-results"></a>LTP の結果:
@@ -558,7 +576,7 @@ wslconfig.exe /terminate <DistributionName>
 * CLEARTID フラグと SETTID フラグの両方を指定して複製された、有効期間の短いプロセスが、TID アドレスをクリアせずに終了する場合がある競合を修正します。
 * 17093 より前のビルドから移行するときに、Linux ファイルシステムのディレクトリをアップグレードする際にメッセージを表示します。 17093 のファイルシステムの変更について詳しくは、[17093](https://github.com/MicrosoftDocs/WSL/blob/live/WSL/release-notes.md#build-17093) のリリース ノートを参照してください。
 
-### <a name="console"></a>Console
+### <a name="console"></a>コンソール
 * 修正なし。
 
 ### <a name="ltp-results"></a>LTP の結果:
@@ -576,7 +594,7 @@ wslconfig.exe /terminate <DistributionName>
 * レジストリが改ざんされているか破損している場合にサービスが無限ループに入る原因となる問題を修正します。
 * iproute2 の新しい (アップストリーム 4.14) バージョンで機能するように netlink メッセージを修正します。
 
-### <a name="console"></a>Console
+### <a name="console"></a>コンソール
 * 修正なし。
 
 ### <a name="ltp-results"></a>LTP の結果:
@@ -618,7 +636,7 @@ WSL と Windows のアプリケーションは、UNIX ソケット経由で相�
 * イメージを読み込むときにページの末尾バイトをゼロ設定します。
 * execve が警告なしにプロセスを終了するケースを削減します
 
-### <a name="console"></a>Console
+### <a name="console"></a>コンソール
 * 修正なし。
 
 ### <a name="ltp-results"></a>LTP の結果:
@@ -632,7 +650,7 @@ WSL と Windows のアプリケーションは、UNIX ソケット経由で相�
 * ASLR をオフにする際のハングを修正しました [GH 1185, 2870]
 * mmap 操作がアトミックに見えるようにします [GH 2732]
 
-### <a name="console"></a>Console
+### <a name="console"></a>コンソール
 * 修正なし。
 
 ### <a name="ltp-results"></a>LTP の結果:
@@ -646,7 +664,7 @@ WSL と Windows のアプリケーションは、UNIX ソケット経由で相�
 **重要:** このビルドより前に作成された DrvFs メタデータは、正しく表示されないか、まったく表示されません。 影響を受けるファイルを修正するには、chmod と chown を使用してメタデータを再適用します。
 * 複数のシグナルと再開可能なシステム コールの問題を修正しました。
 
-### <a name="console"></a>Console
+### <a name="console"></a>コンソール
 * 修正なし。
 
 ### <a name="ltp-results"></a>LTP の結果:
@@ -674,7 +692,7 @@ WSL と Windows のアプリケーションは、UNIX ソケット経由で相�
   * fmask: すべての標準ファイルに対して除外するアクセス許可の 8 進数のマスク。
   * dmask: 全ディレクトリに対して除外するアクセス許可の 8 進数のマスク。
 
-  次に、例を示します。
+  たとえば、次のように入力します。
   ```
   mount -t drvfs C: /mnt/c -o uid=1000,gid=1000,umask=22,fmask=111
   ```
@@ -683,7 +701,7 @@ WSL と Windows のアプリケーションは、UNIX ソケット経由で相�
 
 * WSL と Win32 の間で環境変数がどのように流れるかを構成するために、新しい環境変数 `WSLENV` を導入しました。
 
-  次に、例を示します。
+  たとえば、次のように入力します。
 
   ``` bash
   WSLENV=GOPATH/l:USERPROFILE/pu:DISPLAY
@@ -720,7 +738,7 @@ WSL と Windows のアプリケーションは、UNIX ソケット経由で相�
 *   `AF_UNIX` は、Windows Insider SDK (17061+) で利用可能です。
   `AF_UNIX` の詳細と、Windows 上で開発者がそれをどのように使用できるかについては、[こちらのブログ](https://blogs.msdn.microsoft.com/commandline/2017/12/19/af_unix-comes-to-windows/)をお読みください。
 
-### <a name="console"></a>Console
+### <a name="console"></a>コンソール
 * 修正なし。
 
 ### <a name="ltp-results"></a>LTP の結果:
@@ -752,7 +770,7 @@ WSL と Windows のアプリケーションは、UNIX ソケット経由で相�
 
       EX: wslpath ‘c:\users’
   ```
-  #### <a name="console"></a>Console
+  #### <a name="console"></a>コンソール
 - 修正なし。
 
 ### <a name="ltp-results"></a>LTP の結果:
@@ -768,7 +786,7 @@ WSL と Windows のアプリケーションは、UNIX ソケット経由で相�
 #### <a name="wsl"></a>WSL
 - 17035 以降修正なし。
 
-#### <a name="console"></a>Console
+#### <a name="console"></a>コンソール
 - 17035 以降修正なし。
 
 ### <a name="ltp-results"></a>LTP の結果:
@@ -783,7 +801,7 @@ WSL と Windows のアプリケーションは、UNIX ソケット経由で相�
 #### <a name="wsl"></a>WSL
 - DrvFs 上のファイルにアクセスすると、時々 EINVAL で失敗することがあります。 [GH 2448]
 
-#### <a name="console"></a>Console
+#### <a name="console"></a>コンソール
 - VT モードで行を挿入または削除するときに一部の色が失われます。
 
 ### <a name="ltp-results"></a>LTP の結果:
@@ -803,7 +821,7 @@ WSL と Windows のアプリケーションは、UNIX ソケット経由で相�
 - 追加の相互運用 stdout/stderr パイプの修正。
 - syncfs システム コールをスタブします。
 
-#### <a name="console"></a>Console
+#### <a name="console"></a>コンソール
 - サード パーティ コンソールの入力 VT 変換を修正します [GH 111]
 
 ### <a name="ltp-results"></a>LTP の結果:
@@ -829,7 +847,7 @@ WSL と Windows のアプリケーションは、UNIX ソケット経由で相�
 - tty/pty ファイルに対する O_ASYNC サポート。
 - その他の機能強化とバグ修正
 
-#### <a name="console"></a>Console
+#### <a name="console"></a>コンソール
 - このリリースでは、コンソールに関連する変更はありません。
 
 ### <a name="ltp-results"></a>LTP の結果:
@@ -847,7 +865,7 @@ WSL と Windows のアプリケーションは、UNIX ソケット経由で相�
 - ソケット ファイル記述子の uid、gid、およびモードを正しく初期化して報告します [GH 2490]
 - その他の機能強化とバグ修正
 
-#### <a name="console"></a>Console
+#### <a name="console"></a>コンソール
 - このリリースでは、コンソールに関連する変更はありません。
 
 ### <a name="ltp-results"></a>LTP の結果:
@@ -863,7 +881,7 @@ WSL と Windows のアプリケーションは、UNIX ソケット経由で相�
 - LX MM 状態を解除するときに、ファイルによってサポートされているセクションのマップされたビューを明示的にマップ解除します [GH 2415]
 - その他の機能強化とバグ修正
 
-#### <a name="console"></a>Console
+#### <a name="console"></a>コンソール
 - このリリースでは、コンソールに関連する変更はありません。
 
 ### <a name="ltp-results"></a>LTP の結果:
@@ -878,7 +896,7 @@ WSL と Windows のアプリケーションは、UNIX ソケット経由で相�
 #### <a name="wsl"></a>WSL
 - このリリースでは、WSL に関連する変更はありません。
 
-#### <a name="console"></a>Console
+#### <a name="console"></a>コンソール
 - このリリースでは、コンソールに関連する変更はありません。
 
 ### <a name="ltp-results"></a>LTP の結果:
@@ -909,7 +927,7 @@ WSL と Windows のアプリケーションは、UNIX ソケット経由で相�
 - udp::msg_peek からの python ソケット テストのハングを修正します
 - その他の機能強化とバグ修正
 
-#### <a name="console"></a>Console
+#### <a name="console"></a>コンソール
 - このリリースでは、コンソールに関連する変更はありません。
 
 ### <a name="ltp-results"></a>LTP の結果:
@@ -936,7 +954,7 @@ WSL と Windows のアプリケーションは、UNIX ソケット経由で相�
 - 高い使用率の後に /dev/ptmx がロックします [GH 1882]
 - その他の機能強化とバグ修正
 
-#### <a name="console"></a>Console
+#### <a name="console"></a>コンソール
 - すべての場所での横線とアンダースコアの修正 [GH 2168]
 - プロセス順序の変更により NPM のクローズが困難になった問題の修正 [GH 2170]
 - 新しいカラー スキームを追加しました: https://blogs.msdn.microsoft.com/commandline/2017/08/02/updating-the-windows-console-colors/
@@ -970,7 +988,7 @@ WSL と Windows のアプリケーションは、UNIX ソケット経由で相�
 - 無視されたシグナルでの停止について ptrace を修正しました
 - その他の機能強化とバグ修正
 
-#### <a name="console"></a>Console
+#### <a name="console"></a>コンソール
 - このリリースでは、コンソールに関連する変更はありません。
 
 ### <a name="ltp-results"></a>LTP の結果:
@@ -990,7 +1008,7 @@ WSL と Windows のアプリケーションは、UNIX ソケット経由で相�
 #### <a name="wsl"></a>WSL
 - このリリースでは、WSL に関連する変更はありません。
 
-#### <a name="console"></a>Console
+#### <a name="console"></a>コンソール
 - [こちら](https://www.reddit.com/r/Windows10/comments/6in82t/i_believe_ive_found_the_most_obscure_bug_ever/)で最初に報告された、交差行の DEC に対して誤った文字が出力されることの修正
 - コード ページ 65001 (utf8) に出力テキストが表示されないことの修正
 - ある色の RGB 値に対して行われた変更を、選択の変更時にパレットの他の部分に転送しないでください。 これにより、コンソール プロパティ シートがずっと使いやすくなります。
@@ -1600,7 +1618,7 @@ Windows バイナリを WSL コマンド ラインから直接呼び出せるよ
 ビルド 14936 の一般的な Windows 情報については、[Windows ブログ](https://blogs.windows.com/windowsexperience/2016/09/28/announcing-windows-10-insider-preview-build-14936-for-pc/)を参照してください。<br/>
 
 
-注:WSL は、今後のリリースで Ubuntu 14.04 (Trusty) ではなく、Ubuntu バージョン 16.04 (Xenial) をインストールします。  この変更は、新しいインスタンスをインストールする Insiders に適用されます (lxrun.exe、あるいは bash.exe のインストールまたは初回の実行)。  Trusty を使用する既存のインスタンスは、自動的にアップグレードされません。 ユーザーは、do-release-upgrade コマンドを使用して、Trusty イメージを Xenial にアップグレードできます。
+注: WSL は、今後のリリースで Ubuntu 14.04 (Trusty) ではなく、Ubuntu バージョン 16.04 (Xenial) をインストールします。  この変更は、新しいインスタンスをインストールする Insiders に適用されます (lxrun.exe、あるいは bash.exe のインストールまたは初回の実行)。  Trusty を使用する既存のインスタンスは、自動的にアップグレードされません。 ユーザーは、do-release-upgrade コマンドを使用して、Trusty イメージを Xenial にアップグレードできます。
 
 ### <a name="known-issue"></a>既知の問題
 WSL では、いくつかのソケット実装で問題が発生しています。  バグチェックを実行するとクラッシュし、エラー “ATTEMPTED EXECUTE OF NOEXECUTE MEMORY” が出されます。  この問題の最も一般的な発現は、SSH を使用したときのクラッシュです。  根本原因は内部ビルドで修正され、最も早い機会に Insiders にプッシュされます。
