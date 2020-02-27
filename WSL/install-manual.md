@@ -6,12 +6,12 @@ ms.date: 07/24/2018
 ms.topic: article
 ms.assetid: 9281ffa2-4fa9-4078-bf6f-b51c967617e3
 ms.custom: seodec18
-ms.openlocfilehash: 99215a3bccc3d0b07e8ed4b7629913af3765aec0
-ms.sourcegitcommit: d35870009477813aa4c8fe4e401af4bddef4a47c
+ms.openlocfilehash: aa0b42748115045105bb4e6eae91493bfee11d09
+ms.sourcegitcommit: 467b6c8e9716d1a60dbf9f7658fd9579da365b58
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72778823"
+ms.lasthandoff: 02/26/2020
+ms.locfileid: "77624926"
 ---
 # <a name="manually-download-windows-subsystem-for-linux-distro-packages"></a>Windows Subsystem for Linux ディストリビューションパッケージを手動でダウンロードする
 
@@ -24,8 +24,10 @@ Microsoft Store 経由で WSL Linux ディストリビューションをイン�
 ## <a name="downloading-distros"></a>ディストリビューションのダウンロード
 
 Microsoft Store アプリが使用できない場合は、次のリンクをクリックして Linux ディストリビューションをダウンロードし、手動でインストールすることができます。
-* [Ubuntu 18.04](https://aka.ms/wsl-ubuntu-1804)
-* [Ubuntu 18.04 ARM](https://aka.ms/wsl-ubuntu-1804-arm)
+<!-- * [Ubuntu 18.04](https://aka.ms/wsl-ubuntu-1804)
+* [Ubuntu 18.04 ARM](https://aka.ms/wsl-ubuntu-1804-arm) -->
+* Ubuntu 18.04
+* Ubuntu 18.04 ARM
 * [Ubuntu 16.04](https://aka.ms/wsl-ubuntu-1604)
 * [Debian GNU/Linux](https://aka.ms/wsl-debian-gnulinux)
 * [Kali Linux](https://aka.ms/wsl-kali-linux-new)
@@ -49,15 +51,15 @@ Invoke-WebRequest -Uri https://aka.ms/wsl-ubuntu-1604 -OutFile Ubuntu.appx -UseB
 > ダウンロードに時間がかかる場合は、を設定して進行状況バーをオフにし `$ProgressPreference = 'SilentlyContinue'`
 
 ### <a name="download-using-curl"></a>Curl を使用してダウンロードする
-Windows 10 Spring 2018 Update (またはそれ以降) には、コマンドラインから web 要求 (HTTP GET、POST、PUT などのコマンド) を呼び出すことができる、一般的な[curl コマンドラインユーティリティ](https://curl.haxx.se/)が含まれています。 @No__t_0 を使用すると、上記のディストリビューションをダウンロードできます。
+Windows 10 Spring 2018 Update (またはそれ以降) には、コマンドラインから web 要求 (HTTP GET、POST、PUT などのコマンド) を呼び出すことができる、一般的な[curl コマンドラインユーティリティ](https://curl.haxx.se/)が含まれています。 `curl.exe` を使用すると、上記のディストリビューションをダウンロードできます。
 
 ```console
 curl.exe -L -o ubuntu-1604.appx https://aka.ms/wsl-ubuntu-1604
 ```
 
-上の例では、(`curl` だけでなく) `curl.exe` が実行され、PowerShell によって実際の curl 実行可能ファイルが呼び出されます。これは、[呼び出し](https://docs.microsoft.com/en-us/powershell/module/microsoft.powershell.utility/invoke-webrequest?view=powershell-6)の powershell curl エイリアスではありません。
+上の例では、(`curl`だけでなく) `curl.exe` が実行され、PowerShell によって実際の curl 実行可能ファイルが呼び出されます。これは、[呼び出し](https://docs.microsoft.com/en-us/powershell/module/microsoft.powershell.utility/invoke-webrequest?view=powershell-6)の powershell curl エイリアスではありません。
 
-> 注: `curl` を使用すると、Cmd シェルや `.bat`  /  `.cmd` スクリプトを使用してダウンロード手順を呼び出したりスクリプトを作成したりする必要がある場合に適しています。
+> 注: `curl` を使用すると、Cmd シェルや `.bat` / `.cmd` スクリプトを使用してダウンロード手順を呼び出したりスクリプトを作成したりする必要がある場合に適しています。
 
 ## <a name="installing-your-distro"></a>ディストリビューションのインストール
 Windows 10 を使用している場合は、PowerShell を使用してディストリビューションをインストールできます。 上記の手順でダウンロードしたディストリビューションが格納されているフォルダーに移動し、そのディレクトリで次のコマンドを実行します。 `app_name` は、ディストリビューションの .appx ファイル名です。  
