@@ -5,12 +5,12 @@ keywords: BashOnWindows, bash, wsl, windows, windowssubsystem, ubuntu
 ms.date: 01/20/2020
 ms.topic: article
 ms.localizationpriority: high
-ms.openlocfilehash: ec456c314ac4a1588ccb5c1aa35e22a2d33a39b0
-ms.sourcegitcommit: 07eb5f2e1f4517928165dda4510012599b0d0e1e
+ms.openlocfilehash: b66392f6ad37af9d61e8b4fb6bb477d0d774ccb6
+ms.sourcegitcommit: f1e471bca7a65073135365e49c0d4e59227bdf25
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/22/2020
-ms.locfileid: "76520531"
+ms.lasthandoff: 02/25/2020
+ms.locfileid: "77575290"
 ---
 # <a name="troubleshooting-windows-subsystem-for-linux"></a>Windows Subsystem for Linux のトラブルシューティング
 
@@ -247,3 +247,24 @@ sudo apt-get install openssh-server
 - [設定]、[更新] の順に移動し、[更新プログラムの確認] をクリックして、Windows のバージョンを更新します
 
 - 上記の両方が失敗し、WSL にアクセスする必要がある場合は、インプレース アップグレードを検討してください。インストール メディアを使用して Windows 10 を再インストールし、[すべて保持] を選択することにより、アプリとファイルが確実に保持されます。 これを行うための手順については、[「Windows 10 を再インストールする」のページ](https://support.microsoft.com/help/4000735/windows-10-reinstall)をご覧ください。
+
+### <a name="correct-ssh-related-permission-errors"></a>(SSH 関連の) アクセス許可のエラーを修正する
+
+以下のエラーが表示される場合:
+
+```
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+@         WARNING: UNPROTECTED PRIVATE KEY FILE!          @
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+Permissions 0777 for '/home/artur/.ssh/private-key.pem' are too open.
+```
+
+これを修正するには、```/etc/wsl.conf``` ファイルに以下を追加します。
+
+```
+[automount]
+enabled = true
+options = metadata,uid=1000,gid=1000,umask=0022
+```
+
+このコマンドを追加すると、メタデータが組み込まれ、WSL から見た Windows ファイルに対するファイルのアクセス許可が変更されることにご注意ください。 詳細については、[ファイル システムのアクセス許可](./file-permissions.md)を参照してください。
