@@ -6,24 +6,27 @@ ms.date: 9/4/2018
 ms.topic: article
 ms.assetid: 129101ed-b88a-43c2-b6a2-cd2c4ff6fee1
 ms.localizationpriority: high
-ms.openlocfilehash: d5c4308c531e4df02acbfb17a76b3f83d912b512
-ms.sourcegitcommit: 33290fd88a461a1a36d6106e737490bd57dc77bd
+ms.openlocfilehash: 5651b0869ff97899a768985ce6efa006afa77a9b
+ms.sourcegitcommit: 467b6c8e9716d1a60dbf9f7658fd9579da365b58
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/14/2020
-ms.locfileid: "75951250"
+ms.lasthandoff: 02/26/2020
+ms.locfileid: "77624936"
 ---
 # <a name="frequently-asked-questions-about-windows-subsystem-for-linux"></a>Windows Subsystem for Linux に関してよく寄せられる質問
 
 ## <a name="what-is-windows-subsystem-for-linux-wsl"></a>Windows Subsystem for Linux (WSL) とは何ですか。
+
 Windows Subsystem for Linux (WSL) は、ネイティブ Linux コマンド ライン ツールを Windows で直接実行できる Windows 10 の新機能です。これは、従来の Windows デスクトップや最新のストア アプリと共存します。
 
 詳しくは、[詳細ページ](./about.md)をご覧ください。
 
 ## <a name="who-is-wsl-for"></a>WSL の対象ユーザーは誰ですか。
+
 これは、主に開発者向けのツールです。特に Web 開発者と、オープン ソース プロジェクトで作業している開発者が対象です。 これにより、Bash、一般的な Linux ツール (`sed`、 `awk` など)、および多くの Linux ファースト ツール (Ruby、Python など) を使用する必要があるユーザーは、Windows でそれらのツールチェーンを使用できます。
 
 ## <a name="what-can-i-do-with-wsl"></a>WSL で何ができますか。
+
 WSL が提供する Bash.exe というアプリケーションを開始すると、Bash シェルを実行している Windows コンソールが開きます。 Bash を使用すると、コマンド ライン Linux ツールおよびアプリを実行できます。 たとえば、「`lsb_release -a`」と入力して Enter キーを押すと、現在実行中の Linux ディストリビューションの詳細が表示されます。
 
 ![ディストリビューションの詳細のスクリーンショット](media/distro.png)
@@ -33,15 +36,19 @@ Linux Bash シェル内からローカル コンピューターのファイル �
 ![マウントされた C ドライブのスクリーンショット](media/ls.png)
 
 ## <a name="what-is-bash"></a>Bash とは何ですか。
+
 [Bash](https://en.wikipedia.org/wiki/Bash_%28Unix_shell%29) は、広く使われているテキスト ベースのシェルおよびコマンド言語です。 これは、Ubuntu およびその他の Linux ディストリビューション内と macOS に含まれる既定のシェルです。 ユーザーは、シェルにコマンドを入力して、スクリプトを実行したり、コマンドやツールを実行したりして多くのタスクを行います。
 
 ## <a name="how-does-this-work"></a>この処理のしくみ
+
 基礎となるテクノロジの詳細については、[ブログ](https://blogs.msdn.microsoft.com/wsl/)を参照してください。
 
 ## <a name="why-would-i-use-wsl-rather-than-linux-in-a-vm"></a>VM で Linux ではなく WSL を使用するのはなぜですか。
+
 WSL は、必要なリソース (CPU、メモリ、およびストレージ) が完全な仮想マシンよりも少なくて済みます。 また、WSL を使用すると、Linux コマンド ライン ツールおよびアプリを Windows コマンド ライン、デスクトップおよびストア アプリと共に実行したり、Linux 内から Windows ファイルにアクセスしたりすることもできます。 これにより、必要に応じて、同じファイル セットに対して Windows アプリと Linux コマンド ライン ツールを使用できます。
 
 ## <a name="why-would-i-use-for-example-ruby-on-linux-instead-of-on-windows"></a>たとえば、Windows ではなく Linux 上で Ruby を使用するのはなぜですか。
+
 一部のクロスプラットフォーム ツールは、それらが実行される環境が Linux のように動作することを前提として構築されました。 たとえば、一部のツールでは、非常に長いファイル パスにアクセスできることや、特定のファイルまたはフォルダーが存在することを前提としています。 これにより、Linux とは動作が異なる事が多い Windows で問題が発生することがよくあります。
 
 Ruby や node のような多くの言語は、たいていの場合、Windows に移植され、非常にうまく動作します。 ただし、すべての Ruby Gem または node/NPM ライブラリ所有者が、Windows をサポートするためにライブラリを移植するわけではなく、多くのものに Linux 固有の依存関係があります。 これにより、このようなツールやライブラリを使用して構築されたシステムはビルドから悪影響を受ける場合が多く、Windows で実行時エラーや望ましくない動作が発生することがあります。
@@ -49,37 +56,56 @@ Ruby や node のような多くの言語は、たいていの場合、Windows �
 これらは、多くのユーザーが Windows のコマンド ライン ツールの向上を Microsoft に依頼する原因となった問題の一部に過ぎません。また、こうした要因から、Microsoft が Canonical と提携して、ネイティブ Bash と Linux コマンド ライン ツールを Windows で実行できるようにすることになりました。
 
 ## <a name="what-does-this-mean-for-powershell"></a>PowerShell においてこれは何を意味しますか。
+
 OSS プロジェクトでの作業中、PowerShell プロンプトから Bash を実行すると非常に役立つシナリオが多数あります。 Bash のサポートは補完的なものであり、Windows でのそのコマンド ラインの価値を高め、PowerShell と PowerShell コミュニティでその他の一般的なテクノロジを利用できるようにします。
 
 詳細については、PowerShell チームのブログ「[Windows の Bash:それがすばらしい理由と PowerShell における意味](https://blogs.msdn.microsoft.com/powershell/2016/04/01/bash-for-windows-why-its-awesome-and-what-it-means-for-powershell/)」をお読みください
 
 ## <a name="can-i-run-all-linux-apps-in-wsl"></a>WSL ですべての Linux アプリを実行できますか。
-いいえ。 WSL は、Bash およびコア Linux コマンド ライン ツールを必要とするユーザーが Windows 上でそれらを実行できるようにすることを目的としたツールです。 
+
+いいえ。 WSL は、Bash およびコア Linux コマンド ライン ツールを必要とするユーザーが Windows 上でそれらを実行できるようにすることを目的としたツールです。
 
 WSL は、GUI デスクトップやアプリケーション (例: Gnome、KDE など) をサポートすることを目的として**いません**。  
 
 また、多くの一般的なサーバー アプリケーション (Redis など) を実行できる場合でも、実稼働サービスをホストする目的には WSL をお勧めしません。Microsoft は、Azure、Hyper-V、Docker で実稼働 Linux ワークロードを実行するためのさまざまなソリューションを提供しています。 
 
 ## <a name="what-windows-skus-is-wsl-included-in"></a>WSL はどの Windows SKU に含まれていますか。
+
 Windows Subsystem for Linux は、Windows 10 Anniversary および Creators Update 以降の Windows デスクトップ バージョンで使用できます。
 
 Fall Creators Update 以降では、WSL は Windows のデスクトップとサーバーの両方の SKU で使用できるようになります。
 
 ## <a name="what-processors-does-wsl-support"></a>WSL はどのようなプロセッサをサポートしていますか。
+
 WSL は x64 および ARM の CPU をサポートしています。
 
 ## <a name="how-do-i-access-my-c-drive"></a>C: ドライブにアクセスするにはどうすればよいですか。
-ローカル コンピューター上のハード ドライブのマウント ポイントが自動的に作成され、Windows ファイル システムに簡単にアクセスできるようになります。 
- 
+
+ローカル コンピューター上のハード ドライブのマウント ポイントが自動的に作成され、Windows ファイル システムに簡単にアクセスできるようになります。
+
 **/mnt/\<ドライブ文字>/**
- 
+
 使用例は、c:\ にアクセスする `cd /mnt/c` です。
+
+## <a name="how-do-i-set-up-git-credential-manager-how-do-i-use-my-windows-git-permissions-in-wsl"></a>Git Credential Manager をセットアップするにはどうすればよいですか。 (WSL で Windows Git アクセス許可を使用するにはどうすればよいですか。) 
+
+Git Credential Manager を使用すると、Azure Active Directory や 2 要素認証などの複雑な認証パターンがある場合でも、リモート Git サーバーを認証できます。 Git Credential Manager は、GitHub などのサービスの認証フローに統合されています。ユーザーがホスティング プロバイダーに対して認証されると、新しい認証トークンが要求されます。 その後、そのトークンは Windows 資格情報マネージャーに安全に格納されます。 2 回目以降は、Git を使用してホスティング プロバイダーと通信することができ、再認証は必要ありません。 Windows 資格情報マネージャーにあるトークンへのアクセスだけが行われることになります。
+
+WSL ディストリビューションで使用するように Git Credential Manager をセットアップするには、ディストリビューションを開き、次のコマンドを入力します。
+
+```Bash
+git config --global credential.helper "/mnt/c/Program\ Files/Git/mingw64/libexec/git-core/git-credential-manager.exe"
+```
+
+これで、WSL ディストリビューション内で実行するすべての Git 操作で、資格情報マネージャーが使用されるようになります。 ホスト用に既にキャッシュされている資格情報がある場合は、それらへのアクセスが資格情報マネージャーから行われます。 そうでない場合は、Linux コンソールを使用しているとしても、資格情報を要求するダイアログ応答が表示されます。
+
+このサポートは、[Linux 用 Windows サブシステムと Windows そのものとの相互運用性](https://docs.microsoft.com/windows/wsl/interop)に依存しています。
 
 ## <a name="how-do-i-use-a-windows-file-with-a-linux-app"></a>Linux アプリで Windows ファイルをどのように使用しますか。
 
 WSL の利点の 1 つは、Windows と Linux の両方のアプリまたはツールを経由してファイルにアクセスできることです。 
 
-WSL では、コンピューターの固定ドライブを Linux ディストリビューションの `/mnt/<drive>` フォルダーの下にマウントします。 たとえば、 `C:` ドライブは `/mnt/c/` の下にマウントされます。 
+WSL では、コンピューターの固定ドライブを Linux ディストリビューションの `/mnt/<drive>` フォルダーの下にマウントします。 たとえば、 `C:` ドライブは `/mnt/c/` の下にマウントされます。
 
 マウントされたドライブを使用すると、[Visual Studio](https://visualstudio.microsoft.com/vs/) または[VS Code](https://code.visualstudio.com/)を使用して、たとえば `C:\dev\myproj\` 内のコードを編集したり、`/mnt/c/dev/myproj` を介して同じファイルにアクセスして Linux でそのコードをビルド/テストしたりできます。
 
@@ -98,6 +124,7 @@ WSL では、コンピューターの固定ドライブを Linux ディストリ
    * すべてのアクセス許可は、Windows アクセス許可を最適に反映するように設定
 
 ## <a name="why-are-there-so-many-errors-when-i-run-apt-get-upgrade"></a>apt-get upgrade を実行すると、多くのエラーが発生するのはなぜですか。
+
 一部のパッケージでは、Microsoft がまだ実装していない機能が使用されています。 たとえば、`udev` はまだサポートされていないため、`apt-get upgrade` エラーがいくつか発生します。
 
 `udev` に関連する問題を修正するには、次の手順に従います。
@@ -115,7 +142,7 @@ WSL では、コンピューターの固定ドライブを Linux ディストリ
     chmod +x /usr/sbin/policy-rc.d
     ```
   
-2. 次のコマンドを実行します
+3. 次のコマンドを実行します
 
     ```bash
     dpkg-divert --local --rename --add /sbin/initctl
@@ -125,19 +152,23 @@ WSL では、コンピューターの固定ドライブを Linux ディストリ
 ## <a name="how-do-i-uninstall-a-wsl-distribution"></a>WSL ディストリビューションをアンインストールするにはどうすればよいですか。
 
 1709 (16299) より前のビルドでは、コマンド プロンプトを開き、次を実行します。
+
   ```batchfile
   lxrun /uninstall /full
   ```
   
-ストアからインストールされた WSL ディストリビューションは、他の Windows アプリと同様に、アプリ タイルを右クリックして [アンインストール] をクリックするか、[`Remove-AppxPackage` コマンドレット](https://technet.microsoft.com/en-us/library/hh856038.aspx)を使用して PowerShell を介してアンインストールできます。
+ストアからインストールされた WSL ディストリビューションは、他の Windows アプリと同様に、アプリ タイルを右クリックして [アンインストール] をクリックするか、[`Remove-AppxPackage` コマンドレット](https://technet.microsoft.com/library/hh856038.aspx)を使用して PowerShell を介してアンインストールできます。
 
 ## <a name="why-does-ping-generate-permission-denied-errors"></a>ping によってアクセス拒否エラーが発生するのはなぜですか。
+
 14926 より前の WSL ビルドでは、WSL で管理者特権のコンソールを使用して ping を実行する必要がありました。 この問題は、ビルド14926 以降で修正されました。
 
 ## <a name="how-do-i-run-an-openssh-server"></a>OpenSSH サーバーを実行するにはどうすればよいですか。
+
 WSL で OpenSSH を実行するには、Windows の管理者特権が必要です。 OpenSSH サーバーを実行するには、管理者として Bash on Ubuntu on Windows を実行するか、管理者特権を使用して CMD/PowerShell プロンプトから bash.exe を実行します。
 
 ## <a name="why-do-i-get-error-0x80040306-when-i-try-to-install"></a>インストールしようとすると、"エラー:0x80040306" が表示されるのはなぜですか。
+
 WSL は、従来のコンソールでの実行をサポートしていません。 従来のコンソールをオフにするには、以下を実行します。
 
 1. WSL、PowerShell、または Cmd を開きます
@@ -145,17 +176,21 @@ WSL は、従来のコンソールでの実行をサポートしていません�
 1. [OK] をクリックします。
 
 ## <a name="why-do-i-get-error-0x80040154-when-i-run-bashexe-after-upgrading-windows"></a>Windows のアップグレード後に bash.exe を実行すると、"エラー:0x80040154" が表示されるのはなぜですか。
-Windows Update 時に "Windows Subsystem for Linux" 機能が無効になる可能性があります。 その場合は、この Windows 機能を再度有効にする必要があります。 "Windows Subsystem for Linux" 機能を有効にする手順については、[インストール ガイド](https://docs.microsoft.com/en-us/windows/wsl/install-win10#install-the-windows-subsystem-for-linux)をご覧ください。
+
+Windows Update 時に "Windows Subsystem for Linux" 機能が無効になる可能性があります。 その場合は、この Windows 機能を再度有効にする必要があります。 "Windows Subsystem for Linux" 機能を有効にする手順については、[インストール ガイド](https://docs.microsoft.com/windows/wsl/install-win10#install-the-windows-subsystem-for-linux)をご覧ください。
 
 ## <a name="how-do-i-change-the-display-language-of-wsl"></a>WSL の表示言語を変更するにはどうすればよいですか。
+
 WSL インストールでは、Windows インストールのロケールに合わせて Ubuntu ロケールを自動的に変更しようとします。 この動作が不要な場合は、次のコマンドを実行して、インストールの完了後に Ubuntu ロケールを変更できます。 この変更を有効にするには、bash.exe を再起動する必要があります。
 
 次の例は、ロケールを en-US に変更します。
+
 ```bash
 sudo update-locale LANG=en_US.UTF8
 ```
 
 ## <a name="why-do-i-not-have-internet-access-from-wsl"></a>WSL からインターネットにアクセスできないのはなぜですか。
+
 一部のユーザーにより、WSL でのインターネット アクセスをブロックする特定のファイアウォール アプリケーションに関する問題が報告されています。 報告されているファイアウォールは次のとおりです。
 
 1. Kaspersky
@@ -171,17 +206,17 @@ WSL は Windows で実行されているため、Windows の IP アドレスを�
 
 ディストリビューションをバックアップする最適な方法は、Windows バージョン1809 以降で使用できます。 `wsl --export` コマンドを使用して、ディストリビューション全体を tarball にエクスポートできます。 その後、`wsl --import` コマンドを使用してこのディストリビューションを WSL にインポートし直すことができます。これにより、WSL ディストリビューションの状態をバックアップして保存できます。 
 
-Appdata フォルダーのファイルをバックアップする従来のバックアップ サービス (Windows バックアップなど) によって Linux ファイルが破損することはありません。 
-
-
+Appdata フォルダーのファイルをバックアップする従来のバックアップ サービス (Windows バックアップなど) によって Linux ファイルが破損することはありません。
 
 ## <a name="where-can-i-provide-feedback"></a>フィードバックはどこで提供できますか。
 
 複数のチャネルを通じて、フィードバックを送ったり、質問したりできます。
 
 技術上の問題がある場合や、新機能のリクエストをしたい場合は、GitHub の問題の追跡ツールにアクセスしてください。
+
 * [GitHub の問題の追跡ツール](https://github.com/Microsoft/BashOnWindows/issues)
 
 WSL の最新ニュースを入手するには、以下をご利用ください。
+
 * [Microsoft のコマンド ライン チームのブログ](https://blogs.msdn.microsoft.com/commandline/)
 * Twitter。 ニュース、更新などを確認するには、Twitter で [@craigaloewen](https://twitter.com/craigaloewen) をフォローしてください。
