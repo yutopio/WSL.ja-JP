@@ -5,12 +5,12 @@ keywords: BashOnWindows, bash, wsl, windows, windowssubsystem, ubuntu
 ms.date: 01/20/2020
 ms.topic: article
 ms.localizationpriority: high
-ms.openlocfilehash: b66392f6ad37af9d61e8b4fb6bb477d0d774ccb6
-ms.sourcegitcommit: f1e471bca7a65073135365e49c0d4e59227bdf25
+ms.openlocfilehash: 9028f1e89e92da94d82b16603b3af60876a4cb86
+ms.sourcegitcommit: 8795e1c4c5d2efdc8a9c78af05fb7be3ac1eef3d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/25/2020
-ms.locfileid: "77575290"
+ms.lasthandoff: 03/13/2020
+ms.locfileid: "79318146"
 ---
 # <a name="troubleshooting-windows-subsystem-for-linux"></a>Windows Subsystem for Linux のトラブルシューティング
 
@@ -86,20 +86,20 @@ Bash on Ubuntu on Windows には、更新が必要になることがある 2 つ
 
 1. 次の内容を `/usr/sbin/policy-rc.d` に記述して、変更を保存します。
   
-   ``` BASH
+   ```bash
    #!/bin/sh
    exit 101
    ```
   
 2. 実行のアクセス許可を `/usr/sbin/policy-rc.d` に追加します。
 
-   ``` BASH
+   ```bash
    chmod +x /usr/sbin/policy-rc.d
    ```
   
 3. 次のコマンドを実行します。
 
-   ``` BASH
+   ```bash
    dpkg-divert --local --rename --add /sbin/initctl
    ln -s /bin/true /sbin/initctl
    ```
@@ -123,7 +123,7 @@ WSL インストールでは、Windows インストールのロケールに合�
 
 次の例は、ロケールを en-US に変更します。
 
-``` BASH
+```bash
 sudo update-locale LANG=en_US.UTF8
 ```
 
@@ -200,7 +200,7 @@ SSH サーバーに接続しようとしましたが、次のエラーで失敗�
 
 1. OpenSSH サーバーが実行されていることを確認します。
 
-   ``` BASH
+   ```bash
    sudo service ssh status
    ```
 
@@ -208,7 +208,7 @@ SSH サーバーに接続しようとしましたが、次のエラーで失敗�
 
 2. sshd サービスを停止し、デバッグ モードで sshd を開始します。
 
-   ``` BASH
+   ```bash
    sudo service ssh stop
    sudo /usr/sbin/sshd -d
    ```
