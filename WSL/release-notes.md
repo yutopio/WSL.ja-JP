@@ -968,7 +968,7 @@ WSL と Windows のアプリケーションは、UNIX ソケット経由で相�
 `prlimit64`<br/>
 
 ### <a name="known-issues"></a>の既知の問題
-#### <a name="github-issue-2392-windows-folders-not-recognized-by-wsl-httpsgithubcommicrosoftbashonwindowsissues2392"></a>[GitHub の問題 2392:Windows フォルダーが WSL によって認識されない...](https://github.com/Microsoft/BashOnWindows/issues/2392)
+#### <a name="github-issue-2392-windows-folders-not-recognized-by-wsl-"></a>[GitHub の問題 2392:Windows フォルダーが WSL によって認識されない...](https://github.com/Microsoft/BashOnWindows/issues/2392)
 ビルド 16257 で、WSL には、`/mnt/c/...` を介して Windows ファイル/フォルダーを列挙するときに問題があります。
 この問題は修正済みであり、2017 年 8 月 14 日から始まる週の間に Insiders ビルドでリリースされます。
 

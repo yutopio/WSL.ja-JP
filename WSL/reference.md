@@ -96,7 +96,7 @@ Windows Subsystem for Linux を操作するための過去のコマンドもあ�
 
 使用法: `wslconfig [Argument] [Options...]`
 
-#### <a name="arguments"></a>Arguments
+#### <a name="arguments"></a>引数
 * **/l、/list [Options]**
   
   登録済みのディストリビューションを一覧表示します。

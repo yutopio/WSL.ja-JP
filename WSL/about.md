@@ -18,7 +18,7 @@ ms.locfileid: "74200199"
 
 Windows Subsystem for Linux を使用すると、開発者は、仮想マシンのオーバーヘッドなしで、ほとんどのコマンド ライン ツール、ユーティリティ、アプリケーションを含む GNU/Linux 環境を変更せずそのまま Windows 上で直接実行できます。  
 
-以下が可能です。
+次の操作を行います。
 
 1. [Microsoft Store から](https://aka.ms/wslstore)好みの GNU/Linux ディストリビューションを選択します。
 1. `grep`、`sed`、`awk` などの一般的なコマンド ライン無料ソフトウェアや、その他の ELF-64 バイナリを実行します。 
@@ -30,7 +30,7 @@ Windows Subsystem for Linux を使用すると、開発者は、仮想マシン�
 1. Unix に似たコマンド ライン シェルを使用して Windows アプリケーションを起動します。
 1. Windows で GNU/Linux アプリケーションを起動します。
 
-## <a name="getting-started"></a>作業の開始
+## <a name="getting-started"></a>はじめに
 
 * [Windows 10 に Linux をインストールする](install-win10.md)
 * [コマンド リファレンスを参照する](reference.md)
