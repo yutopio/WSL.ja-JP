@@ -32,7 +32,7 @@ WSL のデプロイを開始するように設定しようとしている企業�
 
 Microsoft Store アプリのインストーラーを取得するには、Azure AD アカウントが必要であり、組織のグローバル管理者である必要があります。 アカウントを既に持っている場合は、この手順を省略できます。
 
-アカウントを登録する手順については、次を参照してください。 https://docs.microsoft.com/en-us/microsoft-store/sign-up-microsoft-store-for-business
+アカウントを登録する手順については、「」を参照してください https://docs.microsoft.com/en-us/microsoft-store/sign-up-microsoft-store-for-business
 
 ### <a name="sign-into-the-store-for-business-and-go-to-the-homepage"></a>ビジネス向けストアにサインインし、ホームページにアクセスします
 ここでサインイン: www.microsoft.com/business-store

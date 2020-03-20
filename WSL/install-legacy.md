@@ -27,14 +27,14 @@ Windows 10 秋の更新プログラム (バージョン 1709) より前のバー
 
 1. 開発者モードを有効にして、Windows 10 の記念日更新または作成者の更新で WSL を実行するには、開発者モードを有効にする必要があります。
 
-    **開発者のための**[**設定** -> ] [**更新とセキュリティ** -> ]
+    **開発者のための**[**設定** -> **更新とセキュリティ** -> を開く]
 
     [開発者モード] オプションボタンを選択します。  
     ![開発者モードを有効にする](media/updateAndSecurity.png)
 
     > 開発者モードを有効にするための要件は、 [Windows 10 の作成者の更新プログラムで削除](https://blogs.msdn.microsoft.com/commandline/2017/06/08/developer-mode-no-longer-required-for-windows-subsystem-for-linux/)されました
 
-1. コマンド プロンプトを開きます。  「 `bash` 」と入力し、enter キーを押します。
+1. コマンド プロンプトを開きます。  「`bash`」と入力し、enter キーを押します。
 
     Windows で Bash on Ubuntu を初めて実行すると、正規のライセンスに同意するように求められます。 承諾すると、WSL は Ubuntu インスタンスをコンピューターにダウンロードしてインストールします。また、[Windows の Bash on Ubuntu] ショートカットが [スタート] メニューに追加されます。
 
@@ -43,7 +43,7 @@ Windows 10 秋の更新プログラム (バージョン 1709) より前のバー
     Windows で Bash on Ubuntu を初めて実行するときに、UNIX ユーザー名とパスワードの作成を求められます。 [新しいディストリビューションインスタンスの指示](initialize-distro.md)に従って、インストールを完了します。
 
 1. 次のいずれかの方法で新しい Ubuntu シェルを起動します。
-    * コマンド`bash`プロンプトからの実行
+    * コマンドプロンプトからの `bash` の実行
     * [スタート] メニューの [Bash on Ubuntu on Windows] のショートカット
 
     
@@ -56,14 +56,14 @@ WSL をインストールした以前の Windows 10 リリースから Windows 1
 wsl --unregister Legacy
 ```
 
-Windows バージョン1903以降を使用していない場合は、代わりにまたは`wslconfig /u Legacy` `lxrun /uninstall /full`を実行する必要があります。 
+Windows バージョン1903以降を使用していない場合は、代わりに `wslconfig /u Legacy` または `lxrun /uninstall /full` を実行する必要がある場合があります。 
 
 ### <a name="manually-deleting-the-legacy-distro"></a>レガシディストリビューションを手動で削除する
-必要に応じて、レガシインスタンスを手動で削除できます。 これは、を使用して`lxrun.exe`レガシディストリビューションをアンインストールするときに問題が発生した場合、またはに`lxrun.exe`付属していない Windows 10 Spring 2018 Update (またはそれ以降) を実行している場合に必要になることがあります。
+必要に応じて、レガシインスタンスを手動で削除できます。 これは、`lxrun.exe`を使用したレガシディストリビューションのアンインストールで問題が発生した場合、または `lxrun.exe`で出荷されていない Windows 10 Spring 2018 Update (またはそれ以降) を実行している場合に必要になることがあります。
 
-従来の wsl ディストリビューションを強制的に削除するに`%localappdata%\lxss\`は、Windows のエクスプローラーまたはコマンドラインを使用して、フォルダー (およびそのすべてのサブコンテンツ) を削除します。
+従来の WSL ディストリビューションを強制的に削除するには、Windows のエクスプローラーまたはコマンドラインを使用して、`%localappdata%\lxss\` フォルダー (およびそのすべてのサブコンテンツ) を削除します。
 
-PowerShell を使用する
+PowerShell の使用
 ```powershell
 rm -Recurse $env:localappdata/lxss/
 ```
