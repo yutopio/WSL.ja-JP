@@ -7,12 +7,12 @@ ms.topic: article
 ms.assetid: 7afaeacf-435a-4e58-bff0-a9f0d75b8a51
 ms.localizationpriority: high
 ms.custom: seodec18
-ms.openlocfilehash: f7fce13c2acc65e3afa2cc56873e40bc55a460bc
-ms.sourcegitcommit: 506272bd7fc1cbda7e32146d54a8bdd02af3e0c4
+ms.openlocfilehash: a1a2f23fb05c426f80878e12e82026a96c71354e
+ms.sourcegitcommit: 4b7b8bb0ac20c2336fcdbf44e6b3b2ed336bf4d6
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79319712"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79447742"
 ---
 # <a name="updating-the-wsl-2-linux-kernel"></a>WSL 2 Linux カーネルの更新
 
@@ -20,7 +20,7 @@ WSL 2 内の Linux カーネルを手動で更新するには、次の手順に�
 
 ## <a name="download-the-linux-kernel-update-package"></a>Linux カーネル更新プログラム パッケージをダウンロードする
 
-[このリンク](https://wslstorestorage.blob.core.windows.net/wslblob/wsl_update_x64.msi)をクリックして、AMD64 マシン用の最新の WSL2 Linux カーネル更新プログラム パッケージをダウンロードしてください。
+[このリンク](https://wslstorestorage.blob.core.windows.net/wslblob/wsl_update_x64.msi)をクリックして、x64 マシン用の最新の WSL2 Linux カーネル更新プログラム パッケージをダウンロードしてください。
 
 > [!NOTE] 
 > ARM64 マシンを使用している場合は、代わりに[このパッケージ](https://wslstorestorage.blob.core.windows.net/wslblob/wsl_update_arm64.msi)をダウンロードしてください。
