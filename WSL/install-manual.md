@@ -6,12 +6,13 @@ ms.date: 07/24/2018
 ms.topic: article
 ms.assetid: 9281ffa2-4fa9-4078-bf6f-b51c967617e3
 ms.custom: seodec18
-ms.openlocfilehash: aa0b42748115045105bb4e6eae91493bfee11d09
-ms.sourcegitcommit: 467b6c8e9716d1a60dbf9f7658fd9579da365b58
+ms.localizationpriority: high
+ms.openlocfilehash: 37d8ad589d0108534c27137614a005c0c0ac55bc
+ms.sourcegitcommit: 0a001ada2131f80dd77b114fc14f2fde43c947ad
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/26/2020
-ms.locfileid: "77624926"
+ms.lasthandoff: 03/25/2020
+ms.locfileid: "80256375"
 ---
 # <a name="manually-download-windows-subsystem-for-linux-distro-packages"></a>Linux 用 Windows サブシステム ディストリビューション パッケージを手動でダウンロードする
 
@@ -24,10 +25,8 @@ Microsoft Store 経由で WSL Linux ディストリビューションをイン�
 ## <a name="downloading-distros"></a>ディストリビューションのダウンロード
 
 Microsoft Store アプリを使用できない場合は、以下のリンクをクリックして Linux ディストリビューションをダウンロードして手動でインストールできます。
-<!-- * [Ubuntu 18.04](https://aka.ms/wsl-ubuntu-1804)
-* [Ubuntu 18.04 ARM](https://aka.ms/wsl-ubuntu-1804-arm) -->
-* Ubuntu 18.04
-* Ubuntu 18.04 ARM
+* [Ubuntu 18.04](https://aka.ms/wsl-ubuntu-1804)
+* [Ubuntu 18.04 ARM](https://aka.ms/wsl-ubuntu-1804-arm)
 * [Ubuntu 16.04](https://aka.ms/wsl-ubuntu-1604)
 * [Debian GNU/Linux](https://aka.ms/wsl-debian-gnulinux)
 * [Kali Linux](https://aka.ms/wsl-kali-linux-new)

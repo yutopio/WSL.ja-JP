@@ -6,12 +6,13 @@ ms.date: 05/30/2019
 ms.topic: article
 ms.assetid: 7afaeacf-435a-4e58-bff0-a9f0d75b8a51
 ms.custom: seodec18
-ms.openlocfilehash: c694b3476976241422d079eb65e72beca415ff62
-ms.sourcegitcommit: 07eb5f2e1f4517928165dda4510012599b0d0e1e
+ms.localizationpriority: high
+ms.openlocfilehash: 6a70cf1c3a139610785ff506d78b8c3621620b4c
+ms.sourcegitcommit: 7d9ad78979e7a111c5022138af8201a57c24a3f4
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/22/2020
-ms.locfileid: "76520571"
+ms.lasthandoff: 03/26/2020
+ms.locfileid: "80307458"
 ---
 # <a name="wsl-2-faq"></a>WSL 2 についての FAQ
 
@@ -29,7 +30,7 @@ WSL 2 は、WSL を現在使用できるすべての SKU (Windows 10 Home を含
 
 ## <a name="will-i-be-able-to-run-wsl-2-and-other-3rd-party-virtualization-tools-such-as-vmware-or-virtualbox"></a>WSL 2 と、VMware や VirtualBox などの他のサード パーティの仮想化ツールを実行できますか?
 
-一部のサード パーティ アプリケーションは、Hyper-V が使用されている場合は機能しません。つまり、WSL 2 が有効な場合は実行できません。 残念ながら、これには、VMware、および VirtualBox 6 より前の VirtualBox のバージョンが含まれます (2018 年 12 月にリリースされた VirtualBox 6.0.0 で、[Windows ホストのフォールバック実行コアとして Hyper-V がサポートされるようになりました][1])
+一部のサード パーティ アプリケーションは、Hyper-V が使用されている場合は機能しません。つまり、VMware や VirtualBox など、WSL 2 が有効な場合は実行できません。 しかし、VirtualBox と VMware の両方から、Hyper-v と WSL2 をサポートするバージョンが最近リリースされました。 [VirtualBox の変更点についてはこちら][1]から、[VMware の変更点についてはこちら][4]から、それぞれ詳細をご確認いただけます。
 
 Microsoft では、この問題を解決する方法を調査しています。 たとえば、[Hypervisor Platform][2] という一連の API を公開しています。サードパーティの仮想化プロバイダーはこれを使用してソフトウェアに Hyper-V との互換性を持たせることができます。 これにより、アプリケーションでは、[Google Android Emulator][3] や、Hyper-V と互換性のある VirtualBox 6 以降など、のエミュレーションに Hyper-V アーキテクチャを使用できます。
 
@@ -56,3 +57,4 @@ WSL 2 では、WSL 1 に使用されているものと同じ wsl.conf ファイ�
  [1]: https://www.virtualbox.org/wiki/Changelog-6.0
  [2]: https://docs.microsoft.com/en-us/virtualization/api/
  [3]: https://devblogs.microsoft.com/visualstudio/hyper-v-android-emulator-support/
+ [4]: https://blogs.vmware.com/workstation/2020/01/vmware-workstation-tech-preview-20h1.html
