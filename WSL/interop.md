@@ -7,10 +7,10 @@ ms.assetid: 3cefe0db-7616-4848-a2b6-9296746a178b
 ms.custom: seodec18
 ms.localizationpriority: high
 ms.openlocfilehash: f8b0150c044f5011b84e80cac4befd752c4dc552
-ms.sourcegitcommit: 0b5a9f8982dfff07fc8df32d74d97293654f8e12
+ms.sourcegitcommit: 39d3a2f0f4184eaec8d8fec740aff800e8ea9ac7
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/25/2019
+ms.lasthandoff: 04/24/2020
 ms.locfileid: "71269804"
 ---
 # <a name="windows-subsystem-for-linux-interoperability-with-windows"></a>Windows との Windows Subsystem for Linux の相互運用性
@@ -18,7 +18,7 @@ ms.locfileid: "71269804"
 > **Fall Creators Update 向けに更新されました。**  
 Creators Update または Anniversary Update を実行している場合は、[Creators/Anniversary Update に関するセクション](interop.md#creators-update-and-anniversary-update)に移動してください。
 
-Windows Subsystem for Linux (WSL) は、Windows と Linux 間の統合を継続的に向上させています。  次の操作を行います。
+Windows Subsystem for Linux (WSL) は、Windows と Linux 間の統合を継続的に向上させています。  以下が可能です。
 
 1. Linux コンソールから Windows バイナリを起動します。
 1. Windows コンソールから Linux バイナリを起動します。
@@ -36,7 +36,7 @@ Windows Subsystem for Linux (WSL) は、Windows と Linux 間の統合を継続�
 1. WSL の既定のユーザーとして実行されます。
 1. 呼び出し元のプロセスおよびターミナルと同じ Windows 管理者権限を持ちます。
 
-たとえば、次のように入力します。
+次に、例を示します。
 
 ```console
 C:\temp> wsl ls -la
@@ -80,7 +80,7 @@ C:\temp> wsl ls -la "/mnt/c/Program Files"
 
 ## <a name="run-windows-tools-from-wsl"></a>WSL からの Windows ツールの実行
 
-WSL では、`[binary name].exe` を使用して、WSL コマンド ラインから Windows バイナリを直接起動することができます。  たとえば、`notepad.exe` のように指定します。  Windows 実行可能ファイルの実行を容易にするために、Fall Creators Update では Windows のパスは Linux `$PATH` に含まれています。
+WSL では、`[binary name].exe` を使用して、WSL コマンド ラインから Windows バイナリを直接起動することができます。  たとえば、`notepad.exe` と記述します。  Windows 実行可能ファイルの実行を容易にするために、Fall Creators Update では Windows のパスは Linux `$PATH` に含まれています。
 
 この方法で実行されるアプリケーションには、次の特性があります。
 
@@ -89,7 +89,7 @@ WSL では、`[binary name].exe` を使用して、WSL コマンド ラインか
 1. アクティブな Windows ユーザーとして実行されます。
 1. CMD プロンプトから直接実行されたかのように、Windows タスク マネージャーに表示されます。
 
-例:
+以下に例を示します。
 
 ``` BASH
 $ notepad.exe
@@ -129,7 +129,7 @@ Reply from 2600:1409:a:5a2::747: time=2ms
 
 パラメーターは、変更されずに Windows バイナリに渡されます。
 
-たとえば、次のコマンドによって `notepad.exe` で `C:\temp\foo.txt` が開きます。
+たとえば、次のコマンドによって `C:\temp\foo.txt` で `notepad.exe` が開きます。
 
 ``` BASH
 $ notepad.exe "C:\temp\foo.txt"
@@ -215,7 +215,7 @@ Linux バイナリは、Windows コマンド プロンプトまたは PowerShell
 1. WSL の既定のユーザーとして実行されます。
 1. 呼び出し元のプロセスおよびターミナルと同じ Windows 管理者権限を持ちます。
 
-例:
+以下に例を示します。
 
 ```console
 C:\temp> bash -c "ls -la"
@@ -238,7 +238,7 @@ C:\temp> dir | bash -c "grep foo"
 C:\temp> bash -c "ls -la" > out.txt
 ```
 
-`bash -c` に渡される WSL コマンドは、変更なしで WSL プロセスに転送されます。  ファイル パスは WSL 形式で指定する必要があり、関連文字をエスケープするように注意する必要があります。 例:
+`bash -c` に渡される WSL コマンドは、変更なしで WSL プロセスに転送されます。  ファイル パスは WSL 形式で指定する必要があり、関連文字をエスケープするように注意する必要があります。 以下に例を示します。
 
 ```console
 C:\temp> bash -c "ls -la /proc/cpuinfo"
@@ -257,7 +257,7 @@ Windows Subsystem for Linux では、WSL コマンド ラインから Windows �
 1. アクティブな Windows ユーザーとして実行されます。
 1. CMD プロンプトから直接実行されたかのように、Windows タスク マネージャーに表示されます。
 
-例:
+以下に例を示します。
 
 ``` BASH
 $ /mnt/c/Windows/System32/notepad.exe
@@ -284,7 +284,7 @@ $ /mnt/c/Windows/System32/PING.EXE www.microsoft.com
 
 パラメーターは、変更されずに Windows バイナリに渡されます。  
 
-たとえば、次のコマンドによって `notepad.exe` で `C:\temp\foo.txt` が開きます。
+たとえば、次のコマンドによって `C:\temp\foo.txt` で `notepad.exe` が開きます。
 
 ``` BASH
 $ notepad.exe "C:\temp\foo.txt"
