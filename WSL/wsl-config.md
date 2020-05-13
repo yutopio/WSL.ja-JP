@@ -4,12 +4,12 @@ description: Windows Subsystem for Linux で実行されている複数の Linux
 keywords: BashOnWindows, bash, wsl, windows, windows subsystem for linux, windowssubsystem, ubuntu, wsl.conf, wslconfig
 ms.date: 05/12/2020
 ms.topic: article
-ms.openlocfilehash: 59419919be138a20ab57e1a6d26a411e1531bf9f
-ms.sourcegitcommit: 3fb40fd65b34a5eb26b213a0df6a3b2746b7a9b4
+ms.openlocfilehash: e72822bdec0ef5788bd384a5795a91d746428800
+ms.sourcegitcommit: e6e888f2b88a2d9c105cee46e5ab5b70aa43dd80
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/12/2020
-ms.locfileid: "83235900"
+ms.lasthandoff: 05/13/2020
+ms.locfileid: "83343897"
 ---
 # <a name="wsl-commands-and-launch-configurations"></a>WSL コマンドと起動構成
 
@@ -161,6 +161,17 @@ Linux ディストリビューションは Microsoft Store を介してインス
 
 指定されたユーザーとして WSL を実行します。 ユーザーは WSL ディストリビューション内に存在する必要があることに注意してください。
 
+## <a name="change-the-default-user-for-a-distribution"></a>配布の既定のユーザーを変更する
+
+`<DistributionName> config --default-user <Username>`
+
+ディストリビューションログインの既定のユーザーを変更します。 既定のユーザーになるには、ユーザーが既にディストリビューション内に存在している必要があります。 
+
+たとえば、 `ubuntu config --default-user johndoe` Ubuntu ディストリビューションの既定のユーザーを "johndoe" ユーザーに変更します。
+
+> [!NOTE]
+> 配布の名前を確認できない場合は、コマンドの [[ディストリビューションの一覧](https://docs.microsoft.com/windows/wsl/wsl-config#list-distributions)] を参照して、インストールされているディストリビューションの正式な名前を一覧表示します。 
+
 ## <a name="run-a-specific-distribution"></a>特定のディストリビューションの実行
 
 `wsl -d <DistributionName>`, `wsl --distribution <DistributionName>`
@@ -247,22 +258,22 @@ WSL では、`automount` と `network` の 2 つのセクションがサポー�
 
 セクション: `[automount]`
 
-| key        | value                          | default      | notes                                                                                                                                                                                                                                                                                                                          |
+| key        | value                          | 既定      | 注                                                                                                                                                                                                                                                                                                                          |
 |:-----------|:-------------------------------|:-------------|:-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | enabled    | boolean                        | true         | `true` にすると、固定ドライブ (つまり、 `C:/` または`D:/`) は `/mnt` の下に DrvFs で自動的にマウントされます。  `false`ドライブは自動的にマウントされませんが、手動またはを使用してマウントすることもでき `fstab` ます。                                                                                                             |
 | mountFsTab | boolean                        | true         | `true` にすると、WSL 開始時に処理されるように `/etc/fstab` を設定します。 /etc/fstab は、SMB 共有などの他のファイル システムを宣言できるファイルです。 そのため、起動時にこれらのファイル システムを WSL 内で自動的にマウントできます。                                                                                                                |
 | root       | String                         | `/mnt/`      | 固定ドライブが自動的にマウントされるディレクトリを設定します。 たとえば、`/windir/` に WSL のディレクトリがあり、それをルートとして指定すると、固定ドライブは `/windir/c` でマウントされることが予想されます。                                                                                              |
-| options    | 値のコンマ区切りのリスト | 空の文字列 | この値は、既定の DrvFs マウント オプション文字列に追加されます。 **DrvFs 固有のオプションのみを指定できます。** マウント バイナリが通常、フラグに解析するオプションはサポートされていません。 これらのオプションを明示的に指定する場合は、それを行う対象のドライブすべてを /etc/fstab に含める必要があります。 |
+| オプション    | 値のコンマ区切りのリスト | 空の文字列 | この値は、既定の DrvFs マウント オプション文字列に追加されます。 **DrvFs 固有のオプションのみを指定できます。** マウント バイナリが通常、フラグに解析するオプションはサポートされていません。 これらのオプションを明示的に指定する場合は、それを行う対象のドライブすべてを /etc/fstab に含める必要があります。 |
 
 既定では、WSL は uid と gid を既定のユーザーの値に設定します (Ubuntu ディストリビューションでは、既定のユーザーは uid = 1000、gid = 1000 で作成されます)。 ユーザーがこのキーを使用して gid または uid オプションを明示的に指定した場合、関連する値は上書きされます。 それ以外の場合は、既定値が常に追加されます。
 
-**注:** これらのオプションは、自動的にマウントされたすべてのドライブのマウントオプションとして適用されます。 特定のドライブのみのオプションを変更するには、代わりに /etc/fstab を使用します。
+**注:** これらのオプションは、自動的にマウントされたドライブすべてのマウント オプションとして適用されます。 特定のドライブのみのオプションを変更するには、代わりに /etc/fstab を使用します。
 
 #### <a name="mount-options"></a>マウント オプション
 
-Windows ドライブ (DrvFs) にさまざまなマウント オプションを設定すると、Windows ファイルのファイルのアクセス許可を計算する方法を制御できます。 次のオプションを使用できます。
+Windows ドライブ (DrvFs) にさまざまなマウント オプションを設定すると、Windows ファイルのファイルのアクセス許可を計算する方法を制御できます。 次のオプションが使用できます。
 
-| Key | 説明 | Default |
+| キー | 説明 | 既定 |
 |:----|:----|:----|
 |uid| すべてのファイルの所有者に使用するユーザー ID | WSL ディストリビューションの既定のユーザー ID (初回インストールの場合、既定値は 1000)
 |gid| すべてのファイルの所有者に使用するグループ ID | WSL ディストリビューションの既定のグループ ID (初回インストールの場合、既定値は 1000)
@@ -270,13 +281,13 @@ Windows ドライブ (DrvFs) にさまざまなマウント オプションを�
 |fmask | すべてのファイルに対して除外するアクセス許可の 8 進数のマスク | 000
 |dmask | すべてのディレクトリに対して除外するアクセス許可の 8 進数のマスク | 000
 
-**注:** アクセス許可マスクは、ファイルまたはディレクトリに適用される前に論理 OR 演算によって配置されます。 
+**注:** アクセス許可のマスクは、ファイルまたはディレクトリに適用される前に論理 OR 演算によって配置されます。 
 
 #### <a name="network"></a>ネットワーク
 
 セクションのラベル: `[network]`
 
-| key | value | default | notes|
+| key | value | 既定 | 注|
 |:----|:----|:----|:----|
 | generateHosts | boolean | `true` | `true` にすると、`/etc/hosts` を生成するように WSL を設定します。 `hosts` ファイルには、IP アドレスに対応するホスト名の静的マップが含まれています。 |
 | generateResolvConf | boolean | `true` | `true` にすると、`/etc/resolv.conf` を生成するように WSL を設定します。 `resolv.conf` には、指定されたホスト名をその IP アドレスに解決できる DNS リストが含まれています。 | 
@@ -287,7 +298,7 @@ Windows ドライブ (DrvFs) にさまざまなマウント オプションを�
 
 次のオプションは、Insider Build 17713 以降で使用できます。
 
-| key | value | default | notes|
+| key | value | 既定 | 注|
 |:----|:----|:----|:----|
 | enabled | boolean | `true` | このキーの設定により、WSL で Windows プロセスの起動をサポートするかどうかが決まります。 |
 | appendWindowsPath | boolean | `true` | このキーの設定により、WSL が Windows パス要素を $PATH 環境変数に追加するかどうかが決まります。 |

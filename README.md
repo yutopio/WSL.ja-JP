@@ -5,7 +5,7 @@
 
 > **注:** このリポジトリの issue tracker は、WSL ドキュメントに関する問題の報告のみを対象としています。関連するその他の問題のリポジトリ:
 > * WSLhttps://github.com/Microsoft/WSL/
-> * Windows コンソール:https://github.com/Microsoft/Console/
+> * Windows コンソール:https://github.com/Microsoft/Terminal/
 
 ## <a name="external-links"></a>外部リンク
 
