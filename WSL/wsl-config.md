@@ -4,12 +4,12 @@ description: Windows Subsystem for Linux で実行されている複数の Linux
 keywords: BashOnWindows, bash, wsl, windows, windows subsystem for linux, windowssubsystem, ubuntu, wsl.conf, wslconfig
 ms.date: 05/12/2020
 ms.topic: article
-ms.openlocfilehash: e72822bdec0ef5788bd384a5795a91d746428800
-ms.sourcegitcommit: e6e888f2b88a2d9c105cee46e5ab5b70aa43dd80
+ms.openlocfilehash: 914bce22b789d379420823d44d063bc84ec39ac1
+ms.sourcegitcommit: 509691ed3d42c9e0171e6a44e09003d4eb24f9ae
 ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/13/2020
-ms.locfileid: "83343897"
+ms.locfileid: "83380429"
 ---
 # <a name="wsl-commands-and-launch-configurations"></a>WSL コマンドと起動構成
 
@@ -317,11 +317,24 @@ Windows ドライブ (DrvFs) にさまざまなマウント オプションを�
 
 > **Windows ビルド19041以降で使用可能**
 
-グローバル WSL オプションを構成するには、 `.wslconfig` ユーザーフォルダーのルートディレクトリにファイルを配置し `C:\Users\<yourUserName>\.wslconfig` ます。 このファイルには、次のオプションを含めることができます。
+グローバル WSL オプションを構成するには、 `.wslconfig` ユーザーフォルダーのルートディレクトリにファイルを配置し `C:\Users\<yourUserName>\.wslconfig` ます。 
+
+サンプルの wslconfig ファイルを次に示します。
+
+```console
+[wsl2]
+kernel=C:\\temp\\myCustomKernel
+memory=4GB # Limits VM memory in WSL 2 to 4 GB
+processors=2 # Makes the WSL 2 VM use two virtual processors
+```
+
+このファイルには、次のオプションを含めることができます。
 
 ### <a name="wsl-2-settings"></a>WSL 2 の設定
 
-これらの設定は、WSL 2 ディストリビューションを電源にする VM に影響します。 
+セクションのラベル: `[wsl2]`
+
+これらの設定は、WSL 2 ディストリビューションを電源にする VM に影響します。
 
 | key | value | default | notes|
 |:----|:----|:----|:----|
