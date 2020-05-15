@@ -1,0 +1,40 @@
+- name: WSL ドキュメント
+  href: index.md
+- name: 概要
+  items:
+    - name: WSL とは
+      href: about.md
+    - name: WSL 2 の新機能
+      href: wsl2-index.md
+    - name: WSL 2 と WSL 1 の比較
+      href: compare-versions.md
+- name: クイック スタート
+  items:
+    - name: WSL をインストールし、WSL 2 に更新する
+      href: install-win10.md
+    - name: Windows Server へのインストール
+      href: install-on-server.md
+    - name: ユーザー アカウントとパスワードを作成する
+      href: user-support.md
+- name: 方法
+  items:
+    - name: 相互運用性コマンド
+      href: interop.md
+    - name: コマンドと構成を起動する
+      href: wsl-config.md
+    - name: ファイルのアクセス許可
+      href: file-permissions.md
+    - name: お客様の会社のために WSL を設定する
+      href: enterprise.md
+    - name: カスタム ディストリビューションのビルド
+      href: build-custom-distro.md
+    - name: コマンド ライン リファレンス
+      href: reference.md
+- name: よく寄せられる質問
+  href: faq.md
+- name: WSL 2 についての FAQ
+  href: wsl2-faq.md
+- name: トラブルシューティング
+  href: troubleshooting.md
+- name: のリリース ノート
+  href: release-notes.md
