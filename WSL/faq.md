@@ -6,12 +6,12 @@ ms.date: 9/4/2018
 ms.topic: article
 ms.assetid: 129101ed-b88a-43c2-b6a2-cd2c4ff6fee1
 ms.localizationpriority: high
-ms.openlocfilehash: 5651b0869ff97899a768985ce6efa006afa77a9b
-ms.sourcegitcommit: 39d3a2f0f4184eaec8d8fec740aff800e8ea9ac7
+ms.openlocfilehash: 3c3681b0e0e8317917b4ec7c37c9bb2f0bbe9c95
+ms.sourcegitcommit: e6e888f2b88a2d9c105cee46e5ab5b70aa43dd80
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/24/2020
-ms.locfileid: "77624936"
+ms.lasthandoff: 05/13/2020
+ms.locfileid: "83343904"
 ---
 # <a name="frequently-asked-questions-about-windows-subsystem-for-linux"></a>Windows Subsystem for Linux に関してよく寄せられる質問
 
@@ -202,9 +202,9 @@ sudo update-locale LANG=en_US.UTF8
 ## <a name="how-do-i-access-a-port-from-wsl-in-windows"></a>Windows の WSL からポートにアクセスするにはどうすればよいですか。
 WSL は Windows で実行されているため、Windows の IP アドレスを共有します。 そのため、localhost 上の任意のポートにアクセスできます。たとえば、ポート 1234 に Web コンテンツがあるとすると、 https://localhost:1234 を Windows ブラウザーに入力できます。
 
-## <a name="how-can-i-back-up-my-wsl-distros"></a>WSL ディストリビューションをバックアップするにはどうすればよいですか。
+## <a name="how-can-i-back-up-my-wsl-distros-or-move-them-from-one-drive-to-another"></a>WSL ディストリビューションをバックアップしたり、別のドライブに移動したりするにはどうすればよいですか。
 
-ディストリビューションをバックアップする最適な方法は、Windows バージョン1809 以降で使用できます。 `wsl --export` コマンドを使用して、ディストリビューション全体を tarball にエクスポートできます。 その後、`wsl --import` コマンドを使用してこのディストリビューションを WSL にインポートし直すことができます。これにより、WSL ディストリビューションの状態をバックアップして保存できます。 
+ディストリビューションをバックアップまたは移動する最適な方法は、Windows バージョン 1809 以降で使用できるエクスポート/インポート コマンドを使用することです。 `wsl --export` コマンドを使用して、ディストリビューション全体を tarball にエクスポートできます。 その後、`wsl --import` コマンドを使用してこのディストリビューションを WSL にインポートし直すことができます。これにより、インポート用の新しいドライブの場所に名前を付けて、WSL ディストリビューションをバックアップして状態を保存 (または移動) できます。 
 
 Appdata フォルダーのファイルをバックアップする従来のバックアップ サービス (Windows バックアップなど) によって Linux ファイルが破損することはありません。
 

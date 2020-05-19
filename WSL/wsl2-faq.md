@@ -7,14 +7,14 @@ ms.topic: article
 ms.assetid: 7afaeacf-435a-4e58-bff0-a9f0d75b8a51
 ms.custom: seodec18
 ms.localizationpriority: high
-ms.openlocfilehash: 6a70cf1c3a139610785ff506d78b8c3621620b4c
-ms.sourcegitcommit: 39d3a2f0f4184eaec8d8fec740aff800e8ea9ac7
+ms.openlocfilehash: 35edad06775e75eef6d81d018355d8f28d772deb
+ms.sourcegitcommit: 3fb40fd65b34a5eb26b213a0df6a3b2746b7a9b4
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/24/2020
-ms.locfileid: "80307458"
+ms.lasthandoff: 05/12/2020
+ms.locfileid: "83235893"
 ---
-# <a name="wsl-2-faq"></a>WSL 2 についての FAQ
+# <a name="wsl-2-faqs"></a>WSL 2 に関する FAQ
 
 Linux 用 Windows サブシステム 2 についてよく寄せられる質問 (FAQ) の一覧を次に示します。
 
@@ -52,9 +52,9 @@ WSL 2 の初期リリースでは、ハードウェア アクセスのサポー�
 
 ## <a name="can-i-use-wslconf-in-wsl-2"></a>WSL 2 で wsl.conf を使用できますか?
 
-WSL 2 では、WSL 1 に使用されているものと同じ wsl.conf ファイルがサポートされています。 つまり、Windows ドライブの自動マウント、相互運用の有効化または無効化、Windows ドライブのマウント先ディレクトリの変更など、WSL 1 ディストリビューションで設定した構成オプションは、すべて WSL 2 内で機能します。 WSL の構成オプションの詳細については、[ディストリビューションの管理](./wsl-config.md)に関するページを参照してください。 
+WSL 2 では、WSL 1 に使用されているものと同じ wsl.conf ファイルがサポートされています。 つまり、Windows ドライブの自動マウント、相互運用の有効化または無効化、Windows ドライブのマウント先ディレクトリの変更など、WSL 1 ディストリビューションで設定した構成オプションは、すべて WSL 2 内で機能します。 WSL の構成オプションの詳細については、[ディストリビューションの管理](./wsl-config.md)に関するページを参照してください。
 
  [1]: https://www.virtualbox.org/wiki/Changelog-6.0
- [2]: https://docs.microsoft.com/en-us/virtualization/api/
+ [2]: https://docs.microsoft.com/virtualization/api/
  [3]: https://devblogs.microsoft.com/visualstudio/hyper-v-android-emulator-support/
  [4]: https://blogs.vmware.com/workstation/2020/01/vmware-workstation-tech-preview-20h1.html

@@ -1,113 +1,111 @@
 ---
 title: ファイルのアクセス許可
-description: WSL による Windows でのファイルアクセス許可の決定方法について
-keywords: BashOnWindows、bash、wsl、wsl2、windows、windows subsystem for linux、windowssubsystem、ubuntu、debian、suse、windows 10、file、permissions
+description: WSL が Windows でファイルのアクセス許可を特定する方法について
+keywords: BashOnWindows, bash, wsl, wsl2, windows, linux 用 windows サブシステム, windowssubsystem, ubuntu, debian, suse, windows 10, ファイル, アクセス許可
 ms.date: 01/14/2020
 ms.topic: article
 ms.assetid: 7afaeacf-435a-4e58-bff0-a9f0d75b8a51
-ms.custom: seodec18
-ms.openlocfilehash: 4566fc86cf14df986bde80cf3a6cfb9267b23308
-ms.sourcegitcommit: 07eb5f2e1f4517928165dda4510012599b0d0e1e
-ms.translationtype: MT
+ms.localizationpriority: high
+ms.openlocfilehash: 66cded36fb7182a54a05e7794250808665bd4cf1
+ms.sourcegitcommit: 3fb40fd65b34a5eb26b213a0df6a3b2746b7a9b4
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/22/2020
-ms.locfileid: "76520861"
+ms.lasthandoff: 05/12/2020
+ms.locfileid: "83235851"
 ---
-# <a name="file-permissions-for-wsl"></a>WSL のファイルアクセス許可
+# <a name="file-permissions-for-wsl"></a>WSL のファイルのアクセス許可
 
-このページでは、linux ファイルのアクセス許可が Windows Subsystem for Linux でどのように解釈されるかについて詳しく説明します。これは特に NT ファイルシステムの Windows 内のリソースにアクセスする場合に役立ちます。 このドキュメントでは、 [Linux ファイルシステムの権限の構造](https://wiki.archlinux.org/index.php/File_permissions_and_attributes)に関する基本的な知識があることを前提としています。 <!--TODO: Double check that it's okay to add these links--> また、 [umask コマンド](https://en.wikipedia.org/wiki/Umask)を実行します。
+このページでは、特に NT ファイル システム上の Windows 内のリソースにアクセスした際に、Linux 用 Windows サブシステム全体で Linux のファイルのアクセス許可がどのように解釈されるかについて詳しく説明します。 このドキュメントでは、[Linux ファイル システムのアクセス許可の構造](https://wiki.archlinux.org/index.php/File_permissions_and_attributes)と [umask コマンド](https://en.wikipedia.org/wiki/Umask)について基本的な知識があることを前提としています。
 
-WSL から Windows ファイルにアクセスする場合、ファイルのアクセス許可は Windows のアクセス許可から計算されるか、WSL によってファイルに追加されたメタデータから読み込まれます。 このメタデータは、既定では有効になっていません。 
+WSL から Windows ファイルにアクセスした際、ファイルのアクセス許可は Windows のアクセス許可から計算されるか、WSL によってファイルに追加されたメタデータから読み取られます。 このメタデータは、既定では有効になっていません。
 
 ## <a name="wsl-metadata-on-windows-files"></a>Windows ファイルの WSL メタデータ
 
-WSL でマウントオプションとしてメタデータを有効にすると、Windows NT ファイルの拡張属性を追加して解釈し、Linux ファイルシステムのアクセス許可を与えることができます。 
+WSL のマウント オプションとしてメタデータが有効な場合、Windows NT ファイルの拡張属性を追加および解釈することで、Linux ファイル システムのアクセス許可を提供することができます。
 
-WSL では、次の4つの NTFS 拡張属性を追加できます。
+WSL では、次の 4 つの NTFS 拡張属性を追加できます。
 
 | 属性名 | 説明 |
 | --- | --- |
 | $LXUID | ユーザー所有者 ID |
 | $LXGID | グループ所有者 ID |
-| $LXMOD | ファイルモード (ファイルシステムのアクセス許可の octals と種類。例: 0777) |
-| $LXDEV | デバイス (デバイスファイルの場合) |
+| $LXMOD | ファイル モード (ファイル システムのアクセス許可の 8 進数と種類。例: 0777) |
+| $LXDEV | デバイス (デバイス ファイルの場合) |
 
-また、通常のファイルまたはディレクトリではないファイル (例: symlink、Fifo、ブロックデバイス、unix ソケット、文字デバイス) には、NTFS[再解析ポイント](https://docs.microsoft.com/en-us/windows/win32/fileio/reparse-points)もあります。 これにより、拡張属性に対してクエリを実行しなくても、特定のディレクトリ内のファイルの種類をより速く特定できます。 
-<!-- TODO: For the blog include ONeDrive detail -->
+さらに、通常のファイルやディレクトリではないファイル (例: シンボリック リンク、FIFO、ブロック デバイス、UNIX ソケット、文字デバイス) には、NTFS [再解析ポイント](https://docs.microsoft.com/windows/win32/fileio/reparse-points)もあります。 これにより、特定のディレクトリ内のファイルの種類を、その拡張属性を照会しなくても、はるかにすばやく特定できます。
 
-## <a name="file-access-scenarios"></a>ファイルアクセスのシナリオ
+## <a name="file-access-scenarios"></a>ファイル アクセスのシナリオ
 
-Windows Subsystem for Linux を使用してさまざまな方法でファイルにアクセスする場合のアクセス許可の決定方法について、以下に説明します。
+以下は、Linux 用 Windows サブシステムを使用してさまざまな方法でファイルにアクセスするときに、アクセス許可がどのように特定されるかを説明したものです。
 
-### <a name="accessing-files-in-the-windows-drive-file-system-drvfs-from-linux"></a>Linux から Windows ドライブファイルシステム (DrvFS) のファイルにアクセスする
+### <a name="accessing-files-in-the-windows-drive-file-system-drvfs-from-linux"></a>Linux から Windows ドライブ ファイル システム (DrvFS) のファイルにアクセスする
 
-これらのシナリオは、WSL から Windows ファイルにアクセスする場合に発生します。ほとんどの場合 `/mnt/c`経由でアクセスします。 
+これらのシナリオは、WSL から (ほとんどの場合 `/mnt/c` 経由で) Windows ファイルにアクセスする場合に生じるものです。
 
-#### <a name="reading-file-permissions-from-an-existing-windows-file"></a>既存の Windows ファイルからのファイルのアクセス許可の読み取り
+#### <a name="reading-file-permissions-from-an-existing-windows-file"></a>既存の Windows ファイルからファイルのアクセス許可を読み取る
 
-この結果は、ファイルに既にメタデータが存在するかどうかによって異なります。
+結果は、ファイルに既存のメタデータがあるかどうかによって異なります。
 
-##### <a name="the-file-does-not-have-metadata-default"></a>**ファイルにメタデータがありません (既定)。**
+##### <a name="drvfs-file-does-not-have-metadata-default"></a>DrvFS ファイルにメタデータがない場合 (既定)
 
-ファイルにメタデータが関連付けられていない場合は、Windows ユーザーの有効なアクセス許可を読み取り/書き込み/実行ビットに変換し、ユーザー、グループ、およびその他の同じ値として設定します。 たとえば、Windows ユーザーアカウントに読み取りと実行のアクセス権があり、ファイルへの書き込みアクセスが許可されていない場合は、ユーザー、グループ、およびその他の `r-x` として表示されます。 ファイルに Windows で ' 読み取り専用 ' 属性が設定されている場合、Linux では書き込みアクセス権は付与されません。
+ファイルにメタデータが関連付けられていない場合は、Windows ユーザーの有効なアクセス許可が読み取りビット、書き込みビット、または実行ビットに変換され、これらが "ユーザー"、"グループ"、および "その他" に対して同じ値として設定されます。 たとえば、Windows ユーザー アカウントにファイルの読み取りおよび実行アクセス権がある一方で書き込みアクセス権がない場合、これは "ユーザー"、"グループ"、および "その他" に対して `r-x` と表示されます。 Windows でファイルに "読み取り専用" 属性が設定されている場合、Linux で書き込みアクセス権は付与されません。
 
-##### <a name="the-file-has-metadata"></a>ファイルにメタデータが含まれています
+##### <a name="the-file-has-metadata"></a>ファイルにメタデータがある場合
 
-ファイルにメタデータが含まれている場合は、Windows ユーザーの有効なアクセス許可を変換する代わりに、これらのメタデータ値を使用するだけです。
+ファイルにメタデータが存在する場合は、Windows ユーザーの有効なアクセス許可を変換する代わりに、これらのメタデータ値がそのまま使用されます。
 
-#### <a name="changing-file-permissions-on-an-existing-windows-file-using-chmod"></a>Chmod を使用して既存の Windows ファイルのファイルアクセス許可を変更する
+#### <a name="changing-file-permissions-on-an-existing-windows-file-using-chmod"></a>chmod を使用して既存の Windows ファイルのファイル アクセス許可を変更する
 
-この結果は、ファイルに既にメタデータが存在するかどうかによって異なります。
+結果は、ファイルに既存のメタデータがあるかどうかによって異なります。
 
-##### <a name="the-file-does-not-have-metadata-default"></a>**ファイルにメタデータがありません (既定)。**
+##### <a name="chmod-file-does-not-have-metadata-default"></a>chmod ファイルにメタデータがない場合 (既定)
 
-Chmod の効果は1つだけです。ファイルのすべての書き込み属性を削除すると、Windows ファイルの ' 読み取り専用 ' 属性が設定されます。これは、Linux の SMB (サーバーメッセージブロック) クライアントである CIFS (Common Internet File System) と同じ動作であるためです。
+chmod の効果は 1 つだけです。ファイルのすべての書き込み属性を削除すると、Windows ファイルに "読み取り専用" 属性が設定されます。これは、Linux の SMB (Server Message Block) クライアントである CIFS (Common Internet File System) と同じ動作であるためです。
 
-##### <a name="the-file-has-metadata"></a>ファイルにメタデータが含まれています
+##### <a name="chmod-file-has-metadata"></a>chmod ファイルにメタデータがある場合
 
-Chmod は、ファイルの既存のメタデータに応じて、メタデータを変更または追加します。 
+chmod を使用すると、ファイルの既存のメタデータに応じて、メタデータを変更または追加できます。 
 
-Windows の場合よりもアクセス権を追加することはできないことに注意してください。メタデータでは、そのような場合でも同様です。 たとえば、`chmod 777`を使用してファイルに対する書き込みアクセス許可があることを示すメタデータを設定できますが、そのファイルにアクセスしようとした場合でも、そのファイルに書き込むことはできません。 Windows ファイルに対するすべての読み取りまたは書き込みコマンドが Windows ユーザーのアクセス許可を通じてルーティングされるため、interopability に感謝します。
+たとえメタデータに示されていても、Windows 上で与えられている以上のアクセス権を自分に与えることはできないことに注意してください。 たとえば、`chmod 777` を使用してファイルに対する書き込みアクセス許可があることを示すメタデータを設定することはできますが、そのファイルへのアクセスを試みたときにそのファイルに書き込むことはできません。 これは、相互運用性により、Windows ファイルに対するすべての読み取りまたは書き込みコマンドが Windows ユーザーのアクセス許可を介してルーティングされるためです。
 
-#### <a name="creating-a-file-in-drivefs"></a>ドライブ Fs でのファイルの作成
+#### <a name="creating-a-file-in-drivefs"></a>DriveFS にファイルを作成する
 
 結果は、メタデータが有効になっているかどうかによって異なります。
 
-##### <a name="metadata-is-not-enabled-default"></a>メタデータが有効になっていません (既定)
+##### <a name="metadata-is-not-enabled-default"></a>メタデータが有効になっていない場合 (既定)
 
-新しく作成されたファイルの Windows アクセス許可は、特定のセキュリティ記述子を使用せずに Windows でファイルを作成した場合と同じになります。これは、親のアクセス許可を継承します。 
+新しく作成されたファイルの Windows アクセス許可は、特定のセキュリティ記述子なしで Windows でファイルを作成した場合と同じく、親のアクセス許可から継承されます。
 
-##### <a name="metadata-is-enabled"></a>メタデータが有効
+##### <a name="metadata-is-enabled"></a>メタデータが有効になっている場合
 
-ファイルのアクセス許可ビットは、Linux umask に従うように設定され、ファイルはメタデータと共に保存されます。
+ファイルのアクセス許可ビットは Linux umask に従うように設定され、ファイルと共にメタデータが保存されます。
 
-#### <a name="which-linux-user-and-linux-group-owns-the-file"></a>どの Linux ユーザーおよび Linux グループがファイルを所有していますか。 
+#### <a name="which-linux-user-and-linux-group-owns-the-file"></a>どの Linux ユーザーおよび Linux グループがファイルを所有しているか 
 
-この結果は、ファイルに既にメタデータが存在するかどうかによって異なります。
+結果は、ファイルに既存のメタデータがあるかどうかによって異なります。
 
-##### <a name="the-file-does-not-have-metadata-default"></a>**ファイルにメタデータがありません (既定)。**
-既定のシナリオでは、Windows ドライブを automounting するときに、任意のファイルのユーザー ID (UID) が WSL ユーザーのユーザー ID に設定され、グループ ID (GID) が WSL ユーザーのプリンシパルグループ ID に設定されることを指定します。 
+##### <a name="user-file-does-not-have-metadata-default"></a>ユーザー ファイルにメタデータがない場合 (既定)
 
-##### <a name="the-file-has-metadata"></a>ファイルにメタデータが含まれています
+既定のシナリオでは、Windows ドライブを自動マウントするときに、任意のファイルのユーザー ID (UID) が WSL ユーザーのユーザー ID に設定され、グループ ID (GID) が WSL ユーザーのプリンシパル グループ ID に設定されるように指定します。
 
-メタデータに指定されている UID および GID は、ファイルのユーザー所有者とグループ所有者として適用されます。 
+##### <a name="user-file-has-metadata"></a>ユーザー ファイルにメタデータがある場合
 
-### <a name="accessing-linux-files-from-windows-using-wsl"></a>`\\wsl$` を使用した Windows からの Linux ファイルへのアクセス
+メタデータに指定されている UID および GID は、ファイルのユーザー所有者およびグループ所有者として適用されます。
 
-`\\wsl$` 経由で Linux ファイルにアクセスする場合は、WSL ディストリビューションの既定のユーザーが使用されます。 そのため、Linux ファイルにアクセスするすべての Windows アプリは、既定のユーザーと同じアクセス許可を持ちます。
+### <a name="accessing-linux-files-from-windows-using-wsl"></a>`\\wsl$` を使用して Windows から Linux ファイルにアクセスする
 
-#### <a name="creating-a-new-file"></a>新しいファイルの作成
+`\\wsl$` 経由で Linux ファイルにアクセスする場合は、WSL ディストリビューションの既定のユーザーが使用されます。 したがって、Linux ファイルにアクセスするすべての Windows アプリに、既定のユーザーと同じアクセス許可が付与されます。
 
-既定の umask は、Windows から WSL ディストリビューション内に新しいファイルを作成するときに適用されます。 既定の umask は `022`であるか、またはグループと他のユーザーに対する書き込み権限以外のすべての権限を許可することを意味します。 
+#### <a name="creating-a-new-file"></a>新しいファイルを作成する
 
-### <a name="accessing-files-in-the-linux-root-file-system-from-linux"></a>Linux から Linux ルートファイルシステムのファイルにアクセスする
+Windows から WSL ディストリビューション内に新しいファイルを作成する場合は、既定の umask が適用されます。 既定の umask は `022` です。つまり、"グループ" と "その他" に対する書き込みアクセス許可を除くすべてのアクセス許可が許可されます。 
 
-Linux ルートファイルシステムで作成、変更、またはアクセスされるすべてのファイルは、新しく作成されたファイルに umask を適用するなど、標準的な Linux 規則に従います。
+### <a name="accessing-files-in-the-linux-root-file-system-from-linux"></a>Linux から Linux ルート ファイル システム内のファイルにアクセスする
 
-## <a name="configuring-file-permissions"></a>ファイルのアクセス許可の構成
+Linux ルート ファイル システム内で作成、変更、またはアクセスされるすべてのファイルには、新しく作成されたファイルに umask を適用するといった標準の Linux 規則が適用されます。
 
-Wsl のマウントオプションを使用して、Windows ドライブ内でファイルのアクセス許可を構成できます。 マウントオプションを使用すると、`umask`、`dmask`、および `fmask` のアクセス許可マスクを設定できます。 `umask` がすべてのファイルに適用されます。 `dmask` はディレクトリだけに適用され、`fmask` はファイルにのみ適用されます。 これらのアクセス許可マスクは、ファイルに適用されるときに論理 OR 演算によって設定されます。たとえば、`umask` の値が `023` で `fmask` 値が `022` の場合、ファイルの結果として得られるアクセス許可マスクは `023`されます。 
+## <a name="configuring-file-permissions"></a>ファイルのアクセス許可を構成する
 
-これを行う方法については、「 [Linux ディストリビューションの管理」](./wsl-config.md)ドキュメントを参照してください。
-<!-- TODO: Add # to the link-->
+wsl.conf 内でマウント オプションを使用して、Windows ドライブ内のファイルのアクセス許可を構成できます。 マウント オプションを使用すると、`umask`、`dmask`、および `fmask` のアクセス許可マスクを設定できます。 `umask` はすべてのファイルに適用され、`dmask` はディレクトリにのみ適用されます。`fmask` はファイルにのみ適用されます。 これらのアクセス許可のマスクは、ファイルに適用されるときに論理 OR 演算が適用されます。たとえば、`umask` の値が `023` で、`fmask` の値が `022` の場合、ファイルに対する結果のアクセス許可マスクは `023` になります。
 
+これを行う方法については、[wslconf を使用した起動設定の構成](./wsl-config.md#configure-launch-settings-with-wslconf)に関する記事を参照してください。

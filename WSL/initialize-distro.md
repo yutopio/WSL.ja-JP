@@ -4,27 +4,27 @@ description: WSL 用の Linux ディストリビューションをインスト�
 keywords: BashOnWindows, bash, wsl, windows, windows subsystem for linux, windowssubsystem, ubuntu, debian, suse, windows 10
 ms.date: 07/24/2018
 ms.topic: article
-ms.assetid: 7afaeacf-435a-4e58-bff0-a9f0d75b8a51
-ms.custom: seodec18
 ms.localizationpriority: high
-ms.openlocfilehash: c33d349a6d39c325b079ccbf7ed6350bed796e33
-ms.sourcegitcommit: 39d3a2f0f4184eaec8d8fec740aff800e8ea9ac7
+ms.openlocfilehash: 7ce4455dd4ab5e75d69ba841d7dfb7963af9c891
+ms.sourcegitcommit: 3fb40fd65b34a5eb26b213a0df6a3b2746b7a9b4
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/24/2020
-ms.locfileid: "71269589"
+ms.lasthandoff: 05/12/2020
+ms.locfileid: "83235792"
 ---
-# <a name="initializing-a-newly-installed-distro"></a>新しくインストールされたディストリビューションの初期化
+# <a name="initializing-a-newly-installed-distribution"></a>新しくインストールされたディストリビューションの初期化
+
 ディストリビューションをダウンロードしてインストールしたら、新しいディストリビューションの初期化を完了する必要があります。
 
-## <a name="launch-a-distro"></a>ディストリビューションの起動
+## <a name="launch-a-distribution"></a>ディストリビューションの起動
+
 新しくインストールされたディストリビューションの初期化を完了するには、新しいインスタンスを起動します。 これを行うには、Microsoft Store アプリの [起動] ボタンをクリックするか、[スタート] メニューからそのディストリビューションを起動します。
 
 > ヒント:最も頻繁に使用するディストリビューションを [スタート] メニューやタスク バーにピン留めすることができます。
 
 ![[スタート] メニューからディストリビューションを起動する](media/start-menu.png)
 
-> Windows Server では、ディストリビューション インストール フォルダーから、ディストリビューションのランチャー実行可能ファイル `<distro>.exe` を起動できます。
+> Windows Server では、ディストリビューション インストール フォルダーから、ディストリビューションのランチャー実行可能ファイル `<distribution>.exe` を起動できます。
 
 新しくインストールされたディストリビューションを初めて実行すると、コンソール ウィンドウが開き、インストールが完了するまで 1、2 分待つように求められます。
 
@@ -32,19 +32,19 @@ ms.locfileid: "71269589"
 
 ## <a name="setting-up-a-new-linux-user-account"></a>新しい Linux ユーザー アカウントの設定
 
-インストールが完了すると、新しいユーザー アカウント (およびそのパスワード) を作成するように求められます。 
+インストールが完了すると、新しいユーザー アカウント (およびそのパスワード) を作成するように求められます。
 
 ![Windows コンソールでの Ubuntu の展開](media/UbuntuInstall.png)
 
 このユーザー アカウントは、ディストリビューションの起動時に既定でログインする、管理者以外の通常ユーザー用です。
 
-> 任意のユーザー名とパスワードを選択できます。Windows ユーザー名と関係はありません。 
+> 任意のユーザー名とパスワードを選択できます。Windows ユーザー名と関係はありません。
 
 新しいディストリビューション インスタンスを開いたときに、パスワードの入力は求められませんが、 **`sudo` を使用してプロセスを昇格する場合は、パスワードを入力する必要があるため**、必ず覚えやすいパスワードを選択してください。 詳細については、[ユーザー サポート](user-support.md)に関するページを参照してください。
 
-## <a name="update--upgrade-your-distros-packages"></a>ディストリビューションのパッケージの更新とアップグレード
+## <a name="update--upgrade-your-distributions-packages"></a>ディストリビューションのパッケージの更新とアップグレード
 
-ほとんどのディストリビューションには、空または最小のパッケージ カタログが付属しています。 パッケージ カタログを定期的に更新し、ディストリビューションの推奨パッケージ マネージャーを使用して、インストールされているパッケージをアップグレードすることを強くお勧めします。 Debian または Ubuntu では、apt を使用します。
+ほとんどのディストリビューションには、空/最小のパッケージ カタログが付属しています。 パッケージ カタログを定期的に更新し、ディストリビューションの推奨パッケージ マネージャーを使用して、インストールされているパッケージをアップグレードすることを強くお勧めします。 Debian または Ubuntu では、apt を使用します。
 
 ```bash
 sudo apt update && sudo apt upgrade
@@ -52,7 +52,7 @@ sudo apt update && sudo apt upgrade
 
 > Windows では、Linux ディストリビューションの更新やアップグレードは自動的に行われません。これは、Linux ユーザーが自分で制御することを好むタスクです。
 
-これで完了です。 WSL で新しい Linux ディストリビューションをご利用ください。 WSL の詳細については、他の [WSL ドキュメント](https://aka.ms/wsldocs)または[WSL の学習リソースのページ](https://aka.ms/learnwsl)を参照してください。
+これで完了です。 WSL 上で新しい Linux ディストリビューションをご利用ください。 WSL の詳細については、他の [WSL ドキュメント](https://aka.ms/wsldocs)または[WSL の学習リソースのページ](https://aka.ms/learnwsl)を参照してください。
 
 ![WSL で Linux を使用する](media/linux-on-wsl.png)
 

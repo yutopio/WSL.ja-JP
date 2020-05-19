@@ -4,20 +4,49 @@ description: Windows Subsystem for Linux を管理するコマンドの一覧
 keywords: BashOnWindows, bash, wsl, windows, windows subsystem for linux, windowssubsystem, ubuntu
 ms.date: 07/31/2017
 ms.topic: article
-ms.assetid: 82908295-a6bd-483c-a995-613674c2677e
-ms.custom: seodec18
 ms.localizationpriority: high
-ms.openlocfilehash: d74a6926fd797f2e1ede0fd5d8d080d0f1ce3f6b
-ms.sourcegitcommit: 39d3a2f0f4184eaec8d8fec740aff800e8ea9ac7
+ms.openlocfilehash: 72b78a73bf68b28dd14b4826943a0c81ea04bbad
+ms.sourcegitcommit: 1b6191351bbf9e95f3c28fc67abe4bf1bcfd3336
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/24/2020
-ms.locfileid: "71269843"
+ms.lasthandoff: 05/13/2020
+ms.locfileid: "83270876"
 ---
 # <a name="command-reference-for-windows-subsystem-for-linux"></a>Windows Subsystem for Linux のコマンド リファレンス
 
-Windows Subsystem for Linux を操作する最良の方法は、`wsl.exe` コマンドを使用することです。 
+Windows Subsystem for Linux を操作する最良の方法は、`wsl.exe` コマンドを使用することです。
 
+## <a name="set-wsl-2-as-your-default-version"></a>WSL 2 を既定のバージョンとして設定する
+
+PowerShell で次のコマンドを実行して、新しい Linux ディストリビューションをインストールするときに WSL 2 を既定のバージョンとして設定します。
+
+```powershell
+wsl --set-default-version 2
+```
+
+## <a name="set-your-distribution-version-to-wsl-1-or-wsl-2"></a>ディストリビューションのバージョンを WSL 1 または WSL 2 に設定する
+
+インストールされている各 Linux ディストリビューションに割り当てられている WSL バージョンを確認するには、PowerShell コマンド ラインを開き、次のコマンドを入力します ([Windows ビルド 19041 以上](ms-settings:windowsupdate)でのみ使用可能): `wsl -l -v`
+
+```bash
+wsl --list --verbose
+```
+
+ディストリビューションで使用される WSL のバージョンを設定するには、以下を実行します。
+
+```bash
+wsl --set-version <distribution name> <versionNumber>
+```
+
+`<distribution name>` は、お使いのディストリビューションの実際の名前に必ず置き換えてください。`<versionNumber>` は、数字の "1" または "2" に置き換えてください。 上記と同じコマンドで "2" を "1" に置き換えて実行することにより、いつでも WSL 1 に戻すことができます。
+
+また、WSL 2 を既定のアーキテクチャにする場合は、次のコマンドを使用して実行できます。
+
+```bash
+wsl --set-default-version 2
+```
+
+これにより、インストールされるすべての新しいディストリビューションのバージョンが WSL 2 に設定されます。
 
 ## `wsl.exe`
 
@@ -25,7 +54,7 @@ Windows バージョン 1903 以降で `wsl.exe` を使用する場合のすべ�
 
 使用法: `wsl [Argument] [Options...] [CommandLine]`
 
-### <a name="arguments-for-running-linux-binaries"></a>Linux バイナリを実行するための引数
+### <a name="arguments-for-running-linux-commands"></a>Linux コマンドを実行するための引数
 
 * **引数なし**
 
@@ -65,11 +94,11 @@ Windows バージョン 1903 以降で `wsl.exe` を使用する場合のすべ�
 
   オプション:
   * **--all**
-      
+
     現在インストール中またはアンインストール中のディストリビューションを含む、すべてのディストリビューションを一覧表示します。
 
   * **--running**
-      
+
     現在実行中のディストリビューションのみを一覧表示します。
 
 * **--set-default、-s \<Distro>**
@@ -83,12 +112,12 @@ Windows バージョン 1903 以降で `wsl.exe` を使用する場合のすべ�
 * **--unregister \<Distro>**
   
   ディストリビューションの登録を解除します。
-   
+
 * **--help** 使用方法に関する情報を表示します。
 
 ## <a name="additional-commands"></a>その他のコマンド
 
-Windows Subsystem for Linux を操作するための過去のコマンドもあります。 これらの機能は、`wsl.exe` 内に含まれますが、引き続き使用できます。 
+Windows Subsystem for Linux を操作するための過去のコマンドもあります。 これらの機能は、`wsl.exe` 内に含まれますが、引き続き使用できます。
 
 ### `wslconfig.exe`
 
@@ -96,35 +125,25 @@ Windows Subsystem for Linux を操作するための過去のコマンドもあ�
 
 使用法: `wslconfig [Argument] [Options...]`
 
-#### <a name="arguments"></a>Arguments
+#### <a name="arguments"></a>引数
+
 * **/l、/list [Options]**
   
   登録済みのディストリビューションを一覧表示します。
   
-  オプション:
-    * **/all**
-    
-      現在インストール中またはアンインストール中のディストリビューションを含む、すべてのディストリビューションをオプションで一覧表示します。
+オプション:
 
-    * **/running**
-      
-      現在実行中のディストリビューションのみを一覧表示します。
+* **/all** 現在インストール中またはアンインストール中のディストリビューションを含む、すべてのディストリビューションをオプションで一覧表示します。
 
-* **/s、/setdefault \<Distro>**
-  
-  このディストリビューションを既定値として設定します。
+* **/running** 現在実行中のディストリビューションのみを一覧表示します。
 
-* **/t、/terminate \<Distro>**
-  
-  ディストリビューションを終了します。
+* **/s、/setdefault \<Distro>** このディストリビューションを既定値として設定します。
 
-* **/u、/unregister \<Distro>**
-  
-  ディストリビューションの登録を解除します。
-   
-* **/upgrade \<Distro>**
-  
-  ディストリビューションを WslFs ファイル システム形式にアップグレードします。
+* **/t、/terminate \<Distro>** ディストリビューションを終了します。
+
+* **/u、/unregister \<Distro>** ディストリビューションの登録を解除します。
+
+* **/upgrade \<Distro>** ディストリビューションを WslFs ファイル システム形式にアップグレードします。
 
 ### `bash.exe`
 
@@ -143,14 +162,14 @@ Windows Subsystem for Linux を操作するための過去のコマンドもあ�
 * **-c "\<command>"**
   
   コマンドを実行し、出力を行って、Windows のコマンド プロンプトに戻ります。
-    
+
   例: `bash -c "ls"` のようにします。
 
 ## <a name="deprecated-commands"></a>非推奨のコマンド
 
 `lxrun.exe` は、Windows Subsystem for Linux をインストールして管理するために使用された最初のコマンドでした。 これは、Windows 10 1803 以降では非推奨です。
 
-`lxrun.exe` コマンドは、[Windows Subsystem for Linux (WSL)](https://msdn.microsoft.com/en-us/commandline/wsl/faq#what-windows-subsystem-for-linux-wsl-) を直接操作するために使用できます。  これらのコマンドは `\Windows\System32` ディレクトリにインストールされ、Windows コマンド プロンプトまたは PowerShell 内で実行できます。
+`lxrun.exe` コマンドは、[Windows Subsystem for Linux (WSL)](https://msdn.microsoft.com/commandline/wsl/faq#what-windows-subsystem-for-linux-wsl-) を直接操作するために使用できます。  これらのコマンドは `\Windows\System32` ディレクトリにインストールされ、Windows コマンド プロンプトまたは PowerShell 内で実行できます。
 
 | コマンド                     | 説明                     |
 |:----------------------------|:---------------------------|

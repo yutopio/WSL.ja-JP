@@ -7,12 +7,12 @@ ms.topic: article
 ms.assetid: 7afaeacf-435a-4e58-bff0-a9f0d75b8a51
 ms.custom: seodec18
 ms.localizationpriority: high
-ms.openlocfilehash: f11aed3a5583d1a68f4a0e095103eb0315ca2c45
-ms.sourcegitcommit: 39d3a2f0f4184eaec8d8fec740aff800e8ea9ac7
+ms.openlocfilehash: 70044105820dd485246ae3fc731cbd6f06183f8a
+ms.sourcegitcommit: e6e888f2b88a2d9c105cee46e5ab5b70aa43dd80
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/24/2020
-ms.locfileid: "80256385"
+ms.lasthandoff: 05/13/2020
+ms.locfileid: "83343884"
 ---
 # <a name="about-wsl-2"></a>WSL 2 について
 
@@ -34,4 +34,4 @@ WSL 2 の Linux カーネルは、kernel.org で入手できるソースに基�
 
 ## <a name="full-system-call-compatibility"></a>システム コールの完全な互換性
 
-ファイルへのアクセス、メモリの要求、プロセスの作成など、多くの機能を実行するために、Linux バイナリにはシステム コールを使用されています。 WSL 1 では WSL チームが構築した変換レイヤーが使用されていましたが、WSL 2 にはシステム コールの完全な互換性を持つ独自の Linux カーネルが含まれています。 これにより、Docker など、WSL 内で実行できる一連のアプリが一新されました。 さらに、Linux カーネルの更新プログラムがリリースされると、すぐにコンピューターに追加できるようになります。WSL チームが変更を実装して追加するまで待つ必要はありません。
+ファイルへのアクセス、メモリの要求、プロセスの作成など、多くの機能を実行するために、Linux バイナリにはシステム コールを使用されています。 WSL 1 では WSL チームが構築した変換レイヤーが使用されていましたが、WSL 2 にはシステム コールの完全な互換性を持つ独自の Linux カーネルが含まれています。 これにより、Docker など、WSL 内で実行できる一連のアプリが一新されました。 さらに、Linux カーネルの更新プログラムがリリースされると、すぐにコンピューターに追加できます。WSL チームが変更を実装して追加するまで待つ必要はありません。

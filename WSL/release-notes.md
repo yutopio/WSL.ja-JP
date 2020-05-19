@@ -1,19 +1,17 @@
 ---
 title: Windows Subsystem for Linux のリリース ノート
 description: Windows Subsystem for Linux のリリース ノート。  毎週更新されます。
-keywords: BashOnWindows, bash, wsl, windows, windows subsystem for linux, windowssubsystem, ubuntu
+keywords: リリース ノート, wsl, windows, Linux 用 Windows サブシステム, windowssubsystem, ubuntu
 author: benhillis
-ms.date: 07/31/2017
+ms.date: 05/15/2020
 ms.topic: article
-ms.assetid: 36ea641e-4d49-4881-84eb-a9ca85b1cdf4
-ms.custom: seodec18
 ms.localizationpriority: high
-ms.openlocfilehash: 31bf975afb202a6cfd9a2879cff29a77b2969fce
-ms.sourcegitcommit: 39d3a2f0f4184eaec8d8fec740aff800e8ea9ac7
+ms.openlocfilehash: 3df4d4b4e0c542a3e87306c01a14b7073eb5e677
+ms.sourcegitcommit: 3fb40fd65b34a5eb26b213a0df6a3b2746b7a9b4
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/24/2020
-ms.locfileid: "76911706"
+ms.lasthandoff: 05/12/2020
+ms.locfileid: "83235943"
 ---
 # <a name="release-notes-for-windows-subsystem-for-linux"></a>Windows Subsystem for Linux のリリース ノート
 
@@ -219,7 +217,7 @@ localhostForwarding=<bool> # Boolean specifying if ports bound to wildcard or lo
 
 ### <a name="wsl"></a>WSL
 * プライマリ スレッドが終了すると、pthread はファイルへのアクセスを失います [GH 3589]
-* 必要な場合を除き、TIOCSCTTY は “force” パラメーターを無視します [GH 3652]
+* 必要な場合を除き、TIOCSCTTY では "force" パラメーターが無視されます [GH 3652]
 * wsl.exe コマンド ラインの機能強化と、インポート/エクスポートの機能の追加。
 ```
 Usage: wsl.exe [Argument] [Options...] [CommandLine]
@@ -291,7 +289,7 @@ Arguments to manage Windows Subsystem for Linux:
 ビルド18272の一般的な Windows 情報については、[Windows ブログ](https://blogs.windows.com/windowsexperience/2018/10/31/announcing-windows-10-insider-preview-build-18272/)を参照してください。
 
 ### <a name="wsl"></a>WSL
-* **警告:** このビルドには、WSL を操作不能にする問題があります。 ディストリビューションを起動しようとすると、「そのようなインターフェイスはサポートされていません」というエラーが表示されます。 この問題は修正されており、次週の Insider Fast ビルドに組み込まれます。 このビルドをインストールした場合は、「設定」->「更新とセキュリティ」->「回復」を選択し、「前のバージョンの Windows 10 に戻す」を使用することで、前の Windows ビルドにロールバックできます。
+* **警告:** このビルドには、WSL を操作不能にする問題があります。 ディストリビューションを起動しようとすると、「そのようなインターフェイスはサポートされていません」というエラーが表示されます。 この問題は修正されており、次週の Insider Fast ビルドに組み込まれます。 このビルドをインストールした場合は、[設定] -> [更新とセキュリティ] -> [回復] を選択し、「前のバージョンの Windows 10 に戻す」を使用することで、前の Windows ビルドにロールバックできます。
 
 ## <a name="build-18267"></a>ビルド 18267
 ビルド 18267 の一般的な Windows 情報については、[Windows ブログ](https://blogs.windows.com/windowsexperience/2018/10/24/announcing-windows-10-insider-preview-build-18267/)を参照してください。
@@ -526,7 +524,7 @@ wslconfig.exe /terminate <DistributionName>
     * 優先順位は現在サポートされている WSL 機能ではないため、制限がありますが、標準の使用はブロック解除する必要がある点に留意してください。
 * WSL プロセスに対する Windows ファイアウォールのサポート。 [GH 1852]
     * たとえば、WSL python プロセスが任意のポートでリッスンできるようにするには、次の管理者特権の Windows コマンドを使用します: ```netsh.exe advfirewall firewall add rule name=wsl_python dir=in action=allow program="C:\users\<username>\appdata\local\packages\canonicalgrouplimited.ubuntuonwindows_79rhkp1fndgsc\localstate\rootfs\usr\bin\python2.7" enable=yes```
-    * ファイアウォール規則を追加する方法の詳細については、[リンク](https://support.microsoft.com/en-us/help/947709/how-to-use-the-netsh-advfirewall-firewall-context-instead-of-the-netsh)を参照してください。
+    * ファイアウォール規則を追加する方法の詳細については、[リンク](https://support.microsoft.com/help/947709/how-to-use-the-netsh-advfirewall-firewall-context-instead-of-the-netsh)を参照してください。
 * WSL を使用するときにユーザーの既定のシェルを考慮します。 [GH 2372]
 * すべてのネットワーク インターフェイスをイーサネットとして報告します。 [GH 2996]
 * 破損した /etc/passwd ファイルの処理が改善。 [GH 3001]
@@ -556,7 +554,7 @@ wslconfig.exe /terminate <DistributionName>
 ### <a name="wsl"></a>WSL
 * /init を Windows から終了することを許可します [GH 2928]。
 * DrvFs では、ディレクトリごとの大文字小文字の区別が既定で使用されるようになりました ("case = dir" マウント オプションと同等)。
-    * "case=force" (以前の動作) を使用するには、レジストリ キーを設定する必要があります。 “case=force” を使用する必要がある場合は、次のコマンドを実行して有効にします: reg add HKLM\SYSTEM\CurrentControlSet\Services\lxss /v DrvFsAllowForceCaseSensitivity /t REG_DWORD /d 1
+    * "case=force" (以前の動作) を使用するには、レジストリ キーを設定する必要があります。 "case=force" を使用する必要がある場合は、次のコマンドを実行して有効にします: reg add HKLM\SYSTEM\CurrentControlSet\Services\lxss /v DrvFsAllowForceCaseSensitivity /t REG_DWORD /d 1
     * 以前のバージョンの Windows に含まれている WSL で作成された既存のディレクトリがあり、大文字と小文字を区別する必要がある場合は、次の fsutil.exe を使用して大文字と小文字を区別するように指定します: fsutil.exe file setcasesensitiveinfo <path> enable
 * uname システム コールから NULL の終了文字列が返されます。
 
@@ -766,9 +764,9 @@ WSL と Windows のアプリケーションは、UNIX ソケット経由で相�
       -a    force result to absolute path format
       -u    translate from a Windows path to a WSL path (default)
       -w    translate from a WSL path to a Windows path
-      -m    translate from a WSL path to a Windows path, with ‘/’ instead of ‘\\’
+      -m    translate from a WSL path to a Windows path, with '/' instead of '\\'
 
-      EX: wslpath ‘c:\users’
+      EX: wslpath 'c:\users'
   ```
   #### <a name="console"></a>コンソール
 - 修正なし。
@@ -1416,7 +1414,7 @@ Windows 10 の Creators Update への組み込みが予定されている WSL �
 - Ping で 0.000 ミリ秒の時間が返される問題を修正しました (GH #1296)
 - 開いているファイルの数が多すぎるときに適切なエラー コードを返します。
 - インターフェイスのハードウェア アドレスが 32 バイトの場合 (Teredo インターフェイスなど) に、Netlink のネットワーク インターフェイス データの要求が EINVAL で失敗する WSL の問題を修正しました
-   - Linux の "ip" ユーティリティには、WSL が 32 バイトのハードウェア アドレスを報告した場合にクラッシュするバグが含まれていることに留意してください。 これは、WSL ではなく、"ip" のバグです。 "Ip" ユーティリティは、ハードウェア アドレスの出力に使用される文字列バッファーの長さをハードコーディングしますが、そのバッファーは 32 バイトのハードウェア アドレスを出力するには小さすぎます。
+   - Linux の "ip" ユーティリティには、WSL が 32 バイトのハードウェア アドレスを報告した場合にクラッシュするバグが含まれていることに留意してください。 これは、WSL ではなく、"ip" のバグです。 "ip" ユーティリティは、ハードウェア アドレスの出力に使用される文字列バッファーの長さをハードコーディングしますが、そのバッファーは 32 バイトのハードウェア アドレスを出力するには小さすぎます。
 - その他の修正と機能強化
 
 ### <a name="ltp-results"></a>LTP の結果:
@@ -1544,7 +1542,7 @@ Windows バイナリを WSL コマンド ラインから直接呼び出せるよ
 詳細については、以下を参照してください。
 
 - [相互運用に関する WSL チームのブログ](https://blogs.msdn.microsoft.com/wsl/2016/10/19/windows-and-ubuntu-interoperability/)<br/>
-- [MSDN 相互運用のドキュメント](https://msdn.microsoft.com/en-us/commandline/wsl/interop)<br/>
+- [MSDN 相互運用のドキュメント](https://msdn.microsoft.com/commandline/wsl/interop)<br/>
 
 ### <a name="fixed"></a>固定
 
@@ -1594,7 +1592,7 @@ Windows バイナリを WSL コマンド ラインから直接呼び出せるよ
 
 ### <a name="fixed"></a>固定
 
-- SSH をブロックしていた “ATTEMPTED EXECUTE OF NOEXECUTE MEMORY” ネットワーク クラッシュを含め、複数のバグチェックに対処しました
+- SSH をブロックしていた "ATTEMPTED EXECUTE OF NOEXECUTE MEMORY" ネットワーク クラッシュを含め、複数のバグチェックに対処しました
 - DrvFs の Windows アプリケーションから生成された通知に対する inotifiy のサポートが有効になりました
 - mongod に対して TCP_KEEPIDLE および TCP_KEEPINTVL を実装します。 (GH #695)
 - pivot_root システム コールを実装します
@@ -1621,7 +1619,7 @@ Windows バイナリを WSL コマンド ラインから直接呼び出せるよ
 注: WSL は、今後のリリースで Ubuntu 14.04 (Trusty) ではなく、Ubuntu バージョン 16.04 (Xenial) をインストールします。  この変更は、新しいインスタンスをインストールする Insiders に適用されます (lxrun.exe、あるいは bash.exe のインストールまたは初回の実行)。  Trusty を使用する既存のインスタンスは、自動的にアップグレードされません。 ユーザーは、do-release-upgrade コマンドを使用して、Trusty イメージを Xenial にアップグレードできます。
 
 ### <a name="known-issue"></a>既知の問題
-WSL では、いくつかのソケット実装で問題が発生しています。  バグチェックを実行するとクラッシュし、エラー “ATTEMPTED EXECUTE OF NOEXECUTE MEMORY” が出されます。  この問題の最も一般的な発現は、SSH を使用したときのクラッシュです。  根本原因は内部ビルドで修正され、最も早い機会に Insiders にプッシュされます。
+WSL では、いくつかのソケット実装で問題が発生しています。  バグチェックを実行するとクラッシュし、エラー "ATTEMPTED EXECUTE OF NOEXECUTE MEMORY" が出されます。  この問題の最も一般的な発現は、SSH を使用したときのクラッシュです。  根本原因は内部ビルドで修正され、最も早い機会に Insiders にプッシュされます。
 
 ### <a name="fixed"></a>固定
 
@@ -1816,7 +1814,7 @@ Windows 10 Anniversary Update リリース以降の最初の Insider ビルド�
   - ユーザーは、/mnt/c ドライブで case.txt と CASE.TXT を使用できます
   - 大文字小文字の区別は、Bash on Ubuntu on Windows でのみサポートされています。 Bash の外では、NTFS はファイルを正しく報告しますが、Windows からのファイルの操作で、予期しない動作が発生する場合があります。
   - 各ボリュームのルート (つまり、/mnt/c) では大文字小文字の区別はありません
-  - Windows でのこれらのファイルの処理について詳しくは、[こちら](https://support.microsoft.com/en-us/kb/100625)を参照してください。
+  - Windows でのこれらのファイルの処理について詳しくは、[こちら](https://support.microsoft.com/kb/100625)を参照してください。
 - pty / tty のサポートが大幅に強化されました。  TMUX のようなアプリケーションがサポートされるようになりました (GH #40)
 - ユーザー アカウントが必ずしも作成されないというインストールの問題を修正しました
 - 非常に長い引数リストを使用できるように、コマンド ラインの引数の構造を最適化しました。 (GH #153)
@@ -1831,7 +1829,7 @@ Windows 10 Anniversary Update リリース以降の最初の Insider ビルド�
 - strace が正常に終了するようになりました
 - /proc/self/fd を使用したパイプの再オープンを許可します (GH #222)
 - DrvFs で %LOCALAPPDATA%\lxss の下のディレクトリが非表示になります (GH #270)
-- bash.exe ~ の処理の改善。  “bash ~ -c ls” のようなコマンドがサポートされるようになりました (GH #467)
+- bash.exe ~ の処理の改善。  "bash ~ -c ls" のようなコマンドがサポートされるようになりました (GH #467)
 - ソケットが、シャットダウン中に使用可能な epoll read を通知するようになりました (GH #271)
 - lxrun /uninstall でファイルとフォルダーの削除ジョブが改善されました
 - ps -f を修正しました (GH #246)
@@ -1865,7 +1863,7 @@ Windows 10 Anniversary Update リリース以降の最初の Insider ビルド�
 - 英語以外の文字のサポートが強化されました
 - 現在の Windows タイムゾーンのデータを追加し、既定として設定します
 - マウント ポイントごとに一意のデバイス ID (JRE 修正 – GH #49)
-- “.” および “..” を含むパスの問題を修正します
+- "."{}および ".." を含むパスの問題を修正します
 - Fifo のサポートを追加しました (GH #71)
 - ネイティブ Ubuntu 形式に一致するように resolv.conf の形式を更新しました
 - 一部の procfs のクリーンアップ
@@ -1909,7 +1907,7 @@ VolFs および DriveFs の情報については、[WSL ブログ](https://blogs
 - その他のバグ修正と機能強化
 
 ### <a name="known-issues"></a>の既知の問題
-- 場合によって、DriveFs で ‘..’ が正しく解決されません
+- 場合によって、DriveFs で '..' が正しく解決されません
 
 ### <a name="syscall-support"></a>システム コールのサポート
 次に示すのは、WSL に何らかの実装がある新しい、または強化されたシステム コールの一覧です。 この一覧にあるシステム コールは、少なくとも 1 つのシナリオではサポートされていますが、現時点では、一部のパラメーターがサポートされていない可能性があります。

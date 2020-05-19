@@ -1,68 +1,66 @@
 ---
 title: エンタープライズ向け Windows Subsystem for Linux
-description: エンタープライズ環境で Windows Subsystem for Linux を最適に使用する方法に関するリソースと手順です。
-keywords: BashOnWindows、bash、wsl、windows、windows subsystem for linux、windowssubsystem、ubuntu、debian、suse、windows 10、enterprise、deployment、offline、パッケージング、ストア、ディストリビューション、インストール、インストール
-ms.date: 09/04/2018
+description: エンタープライズ環境で Linux 用 Windows サブシステムを最適に使用する方法に関するリソースと手順。
+keywords: BashOnWindows, bash, wsl, windows, linux 用 windows サブシステム, windowssubsystem, ubuntu, debian, suse, windows 10, エンタープライズ, デプロイ, オフライン, パッケージング, ストア, ディストリビューション, インストール, インストール
+ms.date: 05/15/2020
 ms.topic: article
-ms.assetid: 7afaeacf-435a-4e58-bff0-a9f0d75b8a51
-ms.custom: seodec18
-ms.openlocfilehash: c32d62267c77d87fb200cfe43b8e6f43b4e3a56d
-ms.sourcegitcommit: 0b5a9f8982dfff07fc8df32d74d97293654f8e12
-ms.translationtype: MT
+ms.localizationpriority: high
+ms.openlocfilehash: 02f4ff41614f78c0e588f329c777a87f8b416233
+ms.sourcegitcommit: 3fb40fd65b34a5eb26b213a0df6a3b2746b7a9b4
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/25/2019
-ms.locfileid: "71269859"
+ms.lasthandoff: 05/12/2020
+ms.locfileid: "83235829"
 ---
-# <a name="windows-subsystem-for-linux-for-enterprise"></a>エンタープライズ向け Windows Subsystem for Linux
+# <a name="set-up-windows-subsystem-for-linux-for-your-enterprise-company"></a>エンタープライズ企業向けに Linux 用 Windows サブシステムを設定する
 
-ビジネス向け Microsoft Store は、WSL を会社に展開する企業に対してさまざまなソリューションを提供します。 ビジネス向け Microsoft Store の[オンラインドキュメント](https://docs.microsoft.com/en-us/microsoft-store/)は、ストアエクスペリエンスに関する一般的な情報を確認するための優れたリソースです。
+ビジネス向け Microsoft Store では、自社に WSL をデプロイすることを検討している企業に対してさまざまなソリューションを提供しています。 [ビジネスおよび教育機関向け Microsoft Store のドキュメント](https://docs.microsoft.com/microsoft-store/)は、Store のエクスペリエンスに関する一般的な情報を見つけるための優れたリソースです。
 
-WSL のデプロイを開始するように設定しようとしている企業の場合は、次の手順に従ってください。 Microsoft Store のドキュメントで説明されています。
+WSL のデプロイを開始する準備の方法を調べている企業のお客様は、次の手順に従ってください。
 
-* [ビジネス向け Microsoft Store にサインアップして開始する](https://docs.microsoft.com/en-us/microsoft-store/sign-up-microsoft-store-for-business-overview)
-* [(プライベートストア内のどのアプリにアクセスできるかを含む) 製品とサービスを管理](https://docs.microsoft.com/en-us/microsoft-store/manage-apps-microsoft-store-for-business-overview)します。 ここでは、WSL ディストリビューションをストアに追加し、それらをインストールできるユーザーを制御できます。
-* [任意の配布方法を使用してソフトウェアを会社に展開する](https://docs.microsoft.com/en-us/microsoft-store/distribute-apps-to-your-employees-microsoft-store-for-business)
-* WSL ディストリビューションにアクセスできるユーザーと通信します。[これらの手順を使用](https://docs.microsoft.com/en-us/windows/wsl/install-win10)して、選択したディストリビューションまたはディストリビューションをインストールすることができます。 
+* [ビジネス向け Microsoft Store にサインアップして開始します](https://docs.microsoft.com/microsoft-store/sign-up-microsoft-store-for-business-overview)
+* [対象の製品とサービスを管理します (たとえば、どのユーザーがプライベート ストア内のどのアプリにアクセスできるか)](https://docs.microsoft.com/microsoft-store/manage-apps-microsoft-store-for-business-overview)。 ここでは、WSL ディストリビューションをストアに追加したり、それらをインストールできるユーザーを制御したりできます
+* [任意の配布方法を使用して、ソフトウェアを会社にデプロイします](https://docs.microsoft.com/microsoft-store/distribute-apps-to-your-employees-microsoft-store-for-business)
+* このドキュメント リンクを使用して WSL をインストールできることを会社の従業員に伝えます: [Linux 用 Windows サブシステムのインストール](./install-win10.md)
 
-## <a name="how-to-distribute-a-distro-offline"></a>ディストリビューションをオフラインで配布する方法
+## <a name="how-to-distribute-a-linux-distribution-on-windows-offline"></a>Windows 上で Linux ディストリビューションをオフラインで配布する方法
 
-社内のコンピューターが Microsoft Store または Microsoft Store for Business にアクセスできない場合は、次の手順に従って、オフラインライセンスを持つ Linux ディストリビューションのインストーラーをダウンロードできます。 
+社内のコンピューターから Microsoft Store またはビジネス向け Microsoft Store にアクセスできない場合は、次の手順に従って、オフライン ライセンスが与えられた Linux ディストリビューションのインストーラーをダウンロードできます。
 
-### <a name="set-up-an-azure-active-directory-ad-account"></a>Azure Active Directory (AD) アカウントを設定する 
+### <a name="set-up-an-azure-active-directory-account"></a>Azure Active Directory アカウントを設定する
 
-Microsoft Store アプリのインストーラーを取得するには、Azure AD アカウントが必要であり、組織のグローバル管理者である必要があります。 アカウントを既に持っている場合は、この手順を省略できます。
+Microsoft Store アプリのインストーラーを入手するには、[Azure AD アカウントにサインアップ](https://docs.microsoft.com/azure/active-directory/fundamentals/sign-up-organization?WT.mc_id=windows-c9-niner)する必要があり、組織のグローバル管理者である必要があります。 既にアカウントがある場合は、この手順を省略できます。
 
-アカウントを登録する手順については、「」を参照してください https://docs.microsoft.com/en-us/microsoft-store/sign-up-microsoft-store-for-business
+### <a name="set-up-wsl-using-your-microsoft-store-for-business-account"></a>ビジネス向け Microsoft Store アカウントを使用して WSL を設定する
 
-### <a name="sign-into-the-store-for-business-and-go-to-the-homepage"></a>ビジネス向けストアにサインインし、ホームページにアクセスします
-ここでサインイン: www.microsoft.com/business-store
+アカウントを登録する手順については、以下を参照してください: https://docs.microsoft.com/microsoft-store/sign-up-microsoft-store-for-business
 
-![ビジネス向け MS ストアのホームページ](media/offlineinstallscreens/1-screen.png)
+1. ビジネス向け Store にサインインし、ホームページに移動します: https://www.microsoft.com/business-store
 
-### <a name="go-to-manage-settings-and-enable-show-offline-apps"></a>管理-> 設定にアクセスして、[オフラインアプリの表示] を有効にします
+    ![ビジネス向け MS Store のホーム ページ](media/offlineinstallscreens/1-screen.png)
 
-![[ビジネス向け MS ストアの設定] ページ](media/offlineinstallscreens/2-screen.png)
+2. [管理] > [設定] に移動し、[Show offline apps]\(オフライン アプリを表示\) を有効にします。
 
-### <a name="go-back-to-the-main-page-by-clicking-shop-for-my-group"></a>メインページに戻るには、[グループの購入] をクリックしてください。
+    ![ビジネス向け MS Store の [設定] ページ](media/offlineinstallscreens/2-screen.png)
 
-![ビジネス向け MS ストアのホームページ](media/offlineinstallscreens/1-screen.png)
+3. [Shop for my group]\(自分のグループ用に購入\) を選択して、メイン ページに戻ります。
 
-### <a name="search-for-your-desired-distro-and-select-it"></a>目的のディストリビューションを検索して選択します
+    ![ビジネス向け MS Store のホーム ページ](media/offlineinstallscreens/1-screen.png)
 
-![アクティブな検索を使用したビジネス向け MS ストアのホームページ](media/offlineinstallscreens/3-screen.png)
+4. 目的のディストリビューションを検索し、選択します。
 
-### <a name="select-an-offline-license-in-the-license-type-dropdown-menu-and-click-get-the-app"></a>[ライセンスの種類] ドロップダウンメニューで [オフライン] ライセンスを選択し、[アプリの取得] をクリックします。
+    ![ビジネス向け MS Store の検索がアクティブなホーム ページ](media/offlineinstallscreens/3-screen.png)
 
-![ビジネス向け MS ストアの Ubuntu 製品ページ](media/offlineinstallscreens/4-screen.png)
+5. [ライセンスの種類] ドロップダウン メニューで [オフライン] ライセンスを選択し、[Get the app]\(アプリを入手\) を選択します (一部の Linux ディストリビューションでは、オフライン ライセンスが提供されない場合があります)。
 
-注意: 一部のディストリビューションではオフラインライセンスを使用しないことを選択できます
+    ![ビジネス向け MS Store の Ubuntu の製品ページ](media/offlineinstallscreens/4-screen.png)
 
-### <a name="click-the-manage-button-to-get-to-the-apps-product-page"></a>[管理] ボタンをクリックして、アプリの製品ページにアクセスします
+6. [管理] ボタンを選択して、アプリの製品ページに移動します。
 
-![ビジネス向け MS ストアの Ubuntu 製品ページ](media/offlineinstallscreens/5-screen.png)
+    ![ビジネス向け MS Store の Ubuntu の製品ページ](media/offlineinstallscreens/5-screen.png)
 
-### <a name="select-your-architecture-and-download-the-package-for-offline-use"></a>アーキテクチャを選択し、オフラインで使用するパッケージをダウンロードする
+7. 対象のアーキテクチャを選択し、オフラインで使用するためにパッケージをダウンロードします。
 
-![ビジネス向け MS ストアの Ubuntu 製品の詳細ページ](media/offlineinstallscreens/6-screen.png)
+    ![ビジネス向け MS Store の Ubuntu の製品詳細ページ](media/offlineinstallscreens/6-screen.png)
 
 このインストーラーは、WSL をインストールする任意のコンピューターに配布できます。
