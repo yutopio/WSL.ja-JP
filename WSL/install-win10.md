@@ -1,79 +1,140 @@
 ---
 title: Windows Subsystem for Linux (WSL) を Windows 10 にインストールする
 description: Windows 10 での Windows Subsystem for Linux のインストール手順。
-keywords: BashOnWindows, bash, wsl, windows, windows subsystem for linux, windowssubsystem, ubuntu, debian, suse, windows 10, インストール
-ms.date: 07/23/2018
+keywords: BashOnWindows, bash, wsl, windows, linux 用 windows サブシステム, windowssubsystem, ubuntu, debian, suse, windows 10, インストール, 有効にする, WSL2, バージョン 2
+ms.date: 05/12/2020
 ms.topic: article
-ms.assetid: 7afaeacf-435a-4e58-bff0-a9f0d75b8a51
-ms.custom: seodec18
 ms.localizationpriority: high
-ms.openlocfilehash: 17ca32db23b426ef1367ff9444b5924d9d7e1716
-ms.sourcegitcommit: 39d3a2f0f4184eaec8d8fec740aff800e8ea9ac7
+ms.openlocfilehash: acb83234a90dc5e65c98518b869f29c4ecf973d8
+ms.sourcegitcommit: e6e888f2b88a2d9c105cee46e5ab5b70aa43dd80
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/24/2020
-ms.locfileid: "74200231"
+ms.lasthandoff: 05/13/2020
+ms.locfileid: "83343914"
 ---
-# <a name="windows-subsystem-for-linux-installation-guide-for-windows-10"></a><span data-ttu-id="7187f-104">Windows 10 用 Windows Subsystem for Linux のインストール ガイド</span><span class="sxs-lookup"><span data-stu-id="7187f-104">Windows Subsystem for Linux Installation Guide for Windows 10</span></span>
+# <a name="windows-subsystem-for-linux-installation-guide-for-windows-10"></a><span data-ttu-id="1d625-104">Windows 10 用 Windows Subsystem for Linux のインストール ガイド</span><span class="sxs-lookup"><span data-stu-id="1d625-104">Windows Subsystem for Linux Installation Guide for Windows 10</span></span>
 
-## <a name="install-the-windows-subsystem-for-linux"></a><span data-ttu-id="7187f-105">Windows Subsystem for Linux のインストール</span><span class="sxs-lookup"><span data-stu-id="7187f-105">Install the Windows Subsystem for Linux</span></span>
+## <a name="install-the-windows-subsystem-for-linux"></a><span data-ttu-id="1d625-105">Windows Subsystem for Linux のインストール</span><span class="sxs-lookup"><span data-stu-id="1d625-105">Install the Windows Subsystem for Linux</span></span>
 
-<span data-ttu-id="7187f-106">WSL 用の Linux ディストリビューションをインストールする前に、[Windows Subsystem for Linux] オプション機能が有効になっていることを確認する必要があります。</span><span class="sxs-lookup"><span data-stu-id="7187f-106">Before installing any Linux distros for WSL, you must ensure that the "Windows Subsystem for Linux" optional feature is enabled:</span></span>
+<span data-ttu-id="1d625-106">Windows 上に Linux ディストリビューションをインストールする前に、"Linux 用 Windows サブシステム" オプション機能を有効にする必要があります。</span><span class="sxs-lookup"><span data-stu-id="1d625-106">Before installing any Linux distributions on Windows, you must enable the "Windows Subsystem for Linux" optional feature.</span></span>
 
-1. <span data-ttu-id="7187f-107">管理者として PowerShell を開き、以下を実行します。</span><span class="sxs-lookup"><span data-stu-id="7187f-107">Open PowerShell as Administrator and run:</span></span>
-    ```powershell
-    Enable-WindowsOptionalFeature -Online -FeatureName Microsoft-Windows-Subsystem-Linux
-    ```
+<span data-ttu-id="1d625-107">管理者として PowerShell を開き、以下を実行します。</span><span class="sxs-lookup"><span data-stu-id="1d625-107">Open PowerShell as Administrator and run:</span></span>
 
-2. <span data-ttu-id="7187f-108">メッセージが表示されたら、コンピューターを再起動します。</span><span class="sxs-lookup"><span data-stu-id="7187f-108">Restart your computer when prompted.</span></span>
+```powershell
+dism.exe /online /enable-feature /featurename:Microsoft-Windows-Subsystem-Linux /all /norestart
+```
 
-## <a name="install-your-linux-distribution-of-choice"></a><span data-ttu-id="7187f-109">任意の Linux ディストリビューションのインストール</span><span class="sxs-lookup"><span data-stu-id="7187f-109">Install your Linux Distribution of Choice</span></span>
-<span data-ttu-id="7187f-110">希望するディストリビューションをダウンロードしてインストールするには、次の 3 つの選択肢があります。</span><span class="sxs-lookup"><span data-stu-id="7187f-110">To download and install your preferred distro(s), you have three choices:</span></span>
-* <span data-ttu-id="7187f-111">Microsoft Store からダウンロードしてインストールする (下記参照)</span><span class="sxs-lookup"><span data-stu-id="7187f-111">Download and install from the Microsoft Store (see below)</span></span>
-* <span data-ttu-id="7187f-112">コマンド ライン/スクリプトからダウンロードしてインストールする ([手動インストール手順を参照](install-manual.md))</span><span class="sxs-lookup"><span data-stu-id="7187f-112">Download and install from the Command-Line/Script ([read the manual installation instructions](install-manual.md))</span></span>
-* <span data-ttu-id="7187f-113">ダウンロードして手動で展開し、インストールする (Windows Server の場合 - [こちらの手順](install-on-server.md))</span><span class="sxs-lookup"><span data-stu-id="7187f-113">Download and manually unpack and install (for Windows Server - [instructions here](install-on-server.md))</span></span>
+<span data-ttu-id="1d625-108">WSL 1 のみをインストールするには、お使いのマシンを再起動し、「[選択した Linux ディストリビューションをインストールする](./install-win10.md#install-your-linux-distribution-of-choice)」に進んでください。それ以外の場合は、再起動を待ってから WSL 2 への更新操作に進んでください。</span><span class="sxs-lookup"><span data-stu-id="1d625-108">To only install WSL 1, you should now restart your machine and move on to [Install your Linux distribution of choice](./install-win10.md#install-your-linux-distribution-of-choice), otherwise wait to restart and move on to update to WSL 2.</span></span> <span data-ttu-id="1d625-109">詳細については、「[WSL 2 と WSL 1 の比較](./compare-versions.md)」を参照してください。</span><span class="sxs-lookup"><span data-stu-id="1d625-109">Read more about [Comparing WSL 2 and WSL 1](./compare-versions.md).</span></span>
 
-### <a name="windows-10-fall-creators-update-and-later-install-from-the-microsoft-store"></a><span data-ttu-id="7187f-114">Windows 10 Fall Creators Update 以降:Microsoft Store からのインストール</span><span class="sxs-lookup"><span data-stu-id="7187f-114">Windows 10 Fall Creators Update and later: Install from the Microsoft Store</span></span>
+## <a name="update-to-wsl-2"></a><span data-ttu-id="1d625-110">WSL 2 に更新する</span><span class="sxs-lookup"><span data-stu-id="1d625-110">Update to WSL 2</span></span>
 
-> <span data-ttu-id="7187f-115">このセクションは、Windows ビルド16215 以降が対象です。</span><span class="sxs-lookup"><span data-stu-id="7187f-115">This section is for Windows build 16215 or later.</span></span>  <span data-ttu-id="7187f-116">[ビルドを確認する](troubleshooting.md#check-your-build-number)には、次の手順に従います。</span><span class="sxs-lookup"><span data-stu-id="7187f-116">Follow these steps to [check your build](troubleshooting.md#check-your-build-number).</span></span> 
+<span data-ttu-id="1d625-111">WSL 2 に更新するには、次の条件を満たす必要があります。</span><span class="sxs-lookup"><span data-stu-id="1d625-111">To update to WSL 2, you must meet the follow criteria:</span></span>
 
-1. <span data-ttu-id="7187f-117">Microsoft Store を開き、希望する Linux ディストリビューションを選択します。</span><span class="sxs-lookup"><span data-stu-id="7187f-117">Open the Microsoft Store and choose your favorite Linux distribution.</span></span>
+- <span data-ttu-id="1d625-112">[バージョン 2004](ms-settings:windowsupdate)、**ビルド 19041** 以上に更新された Windows 10 を実行している。</span><span class="sxs-lookup"><span data-stu-id="1d625-112">Running Windows 10, [updated to version 2004](ms-settings:windowsupdate), **Build 19041** or higher.</span></span>
 
-    ![Microsoft Store の Linux ディストリビューションのビュー](media/store.png)
+> [!IMPORTANT]
+> <span data-ttu-id="1d625-113">現時点では、Windows 10、バージョン 2004 (ビルド 19041) に更新するには、[Windows Insider プログラムに参加](https://insider.windows.com/insidersigninboth/)し、[リリース プレビュー] リングを選択する必要があります。</span><span class="sxs-lookup"><span data-stu-id="1d625-113">Currently to update to Windows 10, version 2004 (Build 19041), you will need to [join the Windows Insider program](https://insider.windows.com/insidersigninboth/) and select the "Release Preview" ring.</span></span> <span data-ttu-id="1d625-114">パブリック リリースは、5 月下旬に利用できるようになる予定です。</span><span class="sxs-lookup"><span data-stu-id="1d625-114">The public release should arrive by late May.</span></span>
 
-    <span data-ttu-id="7187f-119">次のリンクを使用すると、各ディストリビューションの Microsoft Store ページが開きます。</span><span class="sxs-lookup"><span data-stu-id="7187f-119">The following links will open the Microsoft store page for each distribution:</span></span>
+- <span data-ttu-id="1d625-115">Windows のバージョンを確認するには **Windows ロゴ キー + R** キーを押します。次に「**winver**」と入力し、 **[OK]** を選択します</span><span class="sxs-lookup"><span data-stu-id="1d625-115">Check your Windows version by selecting the **Windows logo key + R**, type **winver**, select **OK**.</span></span> <span data-ttu-id="1d625-116">(または、Windows コマンド プロンプトで `ver` コマンドを入力します)。</span><span class="sxs-lookup"><span data-stu-id="1d625-116">(Or enter the `ver` command in Windows Command Prompt).</span></span> <span data-ttu-id="1d625-117">お使いのビルドが 19041 より前の場合は、[最新の Windows バージョンに更新](ms-settings:windowsupdate)してください。</span><span class="sxs-lookup"><span data-stu-id="1d625-117">Please [update to the latest Windows version](ms-settings:windowsupdate) if your build is lower than 19041.</span></span> <span data-ttu-id="1d625-118">[Windows 更新アシスタントを入手する](https://www.microsoft.com/software-download/windows10)。</span><span class="sxs-lookup"><span data-stu-id="1d625-118">[Get Windows Update Assistant](https://www.microsoft.com/software-download/windows10).</span></span>
 
-    * [<span data-ttu-id="7187f-120">Ubuntu 16.04 LTS</span><span class="sxs-lookup"><span data-stu-id="7187f-120">Ubuntu 16.04 LTS</span></span>](https://www.microsoft.com/store/apps/9pjn388hp8c9)
-    * [<span data-ttu-id="7187f-121">Ubuntu 18.04 LTS</span><span class="sxs-lookup"><span data-stu-id="7187f-121">Ubuntu 18.04 LTS</span></span>](https://www.microsoft.com/store/apps/9N9TNGVNDL3Q)
-    * [<span data-ttu-id="7187f-122">OpenSUSE Leap 15</span><span class="sxs-lookup"><span data-stu-id="7187f-122">OpenSUSE Leap 15</span></span>](https://www.microsoft.com/store/apps/9n1tb6fpvj8c)
-    * [<span data-ttu-id="7187f-123">OpenSUSE Leap 42</span><span class="sxs-lookup"><span data-stu-id="7187f-123">OpenSUSE Leap 42</span></span>](https://www.microsoft.com/store/apps/9njvjts82tjx)
-    * [<span data-ttu-id="7187f-124">SUSE Linux Enterprise Server 12</span><span class="sxs-lookup"><span data-stu-id="7187f-124">SUSE Linux Enterprise Server 12</span></span>](https://www.microsoft.com/store/apps/9p32mwbh6cns)
-    * [<span data-ttu-id="7187f-125">SUSE Linux Enterprise Server 15</span><span class="sxs-lookup"><span data-stu-id="7187f-125">SUSE Linux Enterprise Server 15</span></span>](https://www.microsoft.com/store/apps/9pmw35d7fnlx)
-    * [<span data-ttu-id="7187f-126">Kali Linux</span><span class="sxs-lookup"><span data-stu-id="7187f-126">Kali Linux</span></span>](https://www.microsoft.com/store/apps/9PKR34TNCV07)
-    * [<span data-ttu-id="7187f-127">Debian GNU/Linux</span><span class="sxs-lookup"><span data-stu-id="7187f-127">Debian GNU/Linux</span></span>](https://www.microsoft.com/store/apps/9MSVKQC78PK6)
-    * [<span data-ttu-id="7187f-128">WSL のための Fedora リミックス</span><span class="sxs-lookup"><span data-stu-id="7187f-128">Fedora Remix for WSL</span></span>](https://www.microsoft.com/store/apps/9n6gdm4k2hnc)
-    * [<span data-ttu-id="7187f-129">Pengwin</span><span class="sxs-lookup"><span data-stu-id="7187f-129">Pengwin</span></span>](https://www.microsoft.com/store/apps/9NV1GV1PXZ6P)
-    * [<span data-ttu-id="7187f-130">Pengwin Enterprise</span><span class="sxs-lookup"><span data-stu-id="7187f-130">Pengwin Enterprise</span></span>](https://www.microsoft.com/store/apps/9N8LP0X93VCP)
-    * [<span data-ttu-id="7187f-131">Alpine WSL</span><span class="sxs-lookup"><span data-stu-id="7187f-131">Alpine WSL</span></span>](https://www.microsoft.com/store/apps/9p804crf0395)
+### <a name="enable-the-virtual-machine-platform-optional-component"></a><span data-ttu-id="1d625-119">"仮想マシン プラットフォーム" のオプション コンポーネントを有効にする</span><span class="sxs-lookup"><span data-stu-id="1d625-119">Enable the 'Virtual Machine Platform' optional component</span></span>
 
-1. <span data-ttu-id="7187f-132">ディストリビューションのページで、[入手] を選択します。</span><span class="sxs-lookup"><span data-stu-id="7187f-132">From the distro's page, select "Get"</span></span>
+<span data-ttu-id="1d625-120">WSL 2 をインストールする前に、"仮想マシン プラットフォーム" オプション機能を有効にする必要があります。</span><span class="sxs-lookup"><span data-stu-id="1d625-120">Before installing WSL 2, you must enable the "Virtual Machine Platform" optional feature.</span></span>
 
-    ![Microsoft Store の Linux ディストリビューションのビュー](media/UbuntuStore.png)
+<span data-ttu-id="1d625-121">管理者として PowerShell を開き、以下を実行します。</span><span class="sxs-lookup"><span data-stu-id="1d625-121">Open PowerShell as Administrator and run:</span></span>
 
-## <a name="complete-initialization-of-your-distro"></a><span data-ttu-id="7187f-134">ディストリビューションの初期化を完了する</span><span class="sxs-lookup"><span data-stu-id="7187f-134">Complete initialization of your distro</span></span>
-<span data-ttu-id="7187f-135">Linux ディストリビューションがインストールされたので、新しいディストリビューション インスタンスを使用する前に、一度[そのインスタンスを初期化する](initialize-distro.md)必要があります。</span><span class="sxs-lookup"><span data-stu-id="7187f-135">Now that your Linux distro is installed, you must [initialize your new distro instance](initialize-distro.md) once, before it can be used.</span></span>
+```powershell
+dism.exe /online /enable-feature /featurename:VirtualMachinePlatform /all /norestart
+```
 
-## <a name="troubleshooting"></a><span data-ttu-id="7187f-136">トラブルシューティング :</span><span class="sxs-lookup"><span data-stu-id="7187f-136">Troubleshooting:</span></span> 
+<span data-ttu-id="1d625-122">お使いのマシンを**再起動**して WSL のインストールを完了し、WSL 2 に更新します。</span><span class="sxs-lookup"><span data-stu-id="1d625-122">**Restart** your machine to complete the WSL install and update to WSL 2.</span></span>
 
-<span data-ttu-id="7187f-137">関連エラーと推奨される修正を次に示します。</span><span class="sxs-lookup"><span data-stu-id="7187f-137">Below are related errors and suggested fixes.</span></span> <span data-ttu-id="7187f-138">その他の一般的なエラーとその解決策については、[WSL のトラブルシューティングのページ](troubleshooting.md)を参照してください。</span><span class="sxs-lookup"><span data-stu-id="7187f-138">Refer to the [WSL troubleshooting page](troubleshooting.md) for other common errors and their solutions.</span></span>
+### <a name="set-wsl-2-as-your-default-version"></a><span data-ttu-id="1d625-123">WSL 2 を既定のバージョンとして設定する</span><span class="sxs-lookup"><span data-stu-id="1d625-123">Set WSL 2 as your default version</span></span>
 
-* <span data-ttu-id="7187f-139">**エラー 0x80070003 が発生してインストールに失敗しました**</span><span class="sxs-lookup"><span data-stu-id="7187f-139">**Installation failed with error 0x80070003**</span></span>
-    * <span data-ttu-id="7187f-140">Windows Subsystem for Linux はシステム ドライブ (通常、これは `C:` ドライブ) でのみ実行されます。</span><span class="sxs-lookup"><span data-stu-id="7187f-140">The Windows Subsystem for Linux only runs on your system drive (usually this is your `C:` drive).</span></span> <span data-ttu-id="7187f-141">ディストリビューションがシステム ドライブに格納されていることを確認してください。</span><span class="sxs-lookup"><span data-stu-id="7187f-141">Make sure that distros are stored on your system drive:</span></span>  
-    * <span data-ttu-id="7187f-142">**[設定]** -> **[ストレージ]** -> **[その他のストレージ設定: 新しいコンテンツの保存先を変更する]** 
-    を開きます。![C: ドライブにアプリをインストールするためのシステム設定の画像](media/AppStorage.png)</span><span class="sxs-lookup"><span data-stu-id="7187f-142">Open **Settings** -> **Storage** -> **More Storage Settings: Change where new content is saved**
+<span data-ttu-id="1d625-124">PowerShell で次のコマンドを実行して、新しい Linux ディストリビューションをインストールするときに WSL 2 を既定のバージョンとして設定します。</span><span class="sxs-lookup"><span data-stu-id="1d625-124">Run the following command in Powershell to set WSL 2 as the default version when installing a new Linux distribution:</span></span>
+
+```powershell
+wsl --set-default-version 2
+```
+
+## <a name="install-your-linux-distribution-of-choice"></a><span data-ttu-id="1d625-125">選択した Linux ディストリビューションをインストールする</span><span class="sxs-lookup"><span data-stu-id="1d625-125">Install your Linux distribution of choice</span></span>
+
+1. <span data-ttu-id="1d625-126">[Microsoft Store](https://aka.ms/wslstore) を開き、希望する Linux ディストリビューションを選択します。</span><span class="sxs-lookup"><span data-stu-id="1d625-126">Open the [Microsoft Store](https://aka.ms/wslstore) and select your favorite Linux distribution.</span></span>
+
+    ![Microsoft Store での Linux ディストリビューションの表示](media/store.png)
+
+    <span data-ttu-id="1d625-128">次のリンクを使用すると、各ディストリビューションの Microsoft Store ページが開きます。</span><span class="sxs-lookup"><span data-stu-id="1d625-128">The following links will open the Microsoft store page for each distribution:</span></span>
+
+    - [<span data-ttu-id="1d625-129">Ubuntu 16.04 LTS</span><span class="sxs-lookup"><span data-stu-id="1d625-129">Ubuntu 16.04 LTS</span></span>](https://www.microsoft.com/store/apps/9pjn388hp8c9)
+    - [<span data-ttu-id="1d625-130">Ubuntu 18.04 LTS</span><span class="sxs-lookup"><span data-stu-id="1d625-130">Ubuntu 18.04 LTS</span></span>](https://www.microsoft.com/store/apps/9N9TNGVNDL3Q)
+    - [<span data-ttu-id="1d625-131">openSUSE Leap 15.1</span><span class="sxs-lookup"><span data-stu-id="1d625-131">openSUSE Leap 15.1</span></span>](https://www.microsoft.com/store/apps/9NJFZK00FGKV)
+    - [<span data-ttu-id="1d625-132">SUSE Linux Enterprise Server 12 SP5</span><span class="sxs-lookup"><span data-stu-id="1d625-132">SUSE Linux Enterprise Server 12 SP5</span></span>](https://www.microsoft.com/store/apps/9MZ3D1TRP8T1)
+    - [<span data-ttu-id="1d625-133">SUSE Linux Enterprise Server 15 SP1</span><span class="sxs-lookup"><span data-stu-id="1d625-133">SUSE Linux Enterprise Server 15 SP1</span></span>](https://www.microsoft.com/store/apps/9PN498VPMF3Z)
+    - [<span data-ttu-id="1d625-134">Kali Linux</span><span class="sxs-lookup"><span data-stu-id="1d625-134">Kali Linux</span></span>](https://www.microsoft.com/store/apps/9PKR34TNCV07)
+    - [<span data-ttu-id="1d625-135">Debian GNU/Linux</span><span class="sxs-lookup"><span data-stu-id="1d625-135">Debian GNU/Linux</span></span>](https://www.microsoft.com/store/apps/9MSVKQC78PK6)
+    - [<span data-ttu-id="1d625-136">WSL のための Fedora リミックス</span><span class="sxs-lookup"><span data-stu-id="1d625-136">Fedora Remix for WSL</span></span>](https://www.microsoft.com/store/apps/9n6gdm4k2hnc)
+    - [<span data-ttu-id="1d625-137">Pengwin</span><span class="sxs-lookup"><span data-stu-id="1d625-137">Pengwin</span></span>](https://www.microsoft.com/store/apps/9NV1GV1PXZ6P)
+    - [<span data-ttu-id="1d625-138">Pengwin Enterprise</span><span class="sxs-lookup"><span data-stu-id="1d625-138">Pengwin Enterprise</span></span>](https://www.microsoft.com/store/apps/9N8LP0X93VCP)
+    - [<span data-ttu-id="1d625-139">Alpine WSL</span><span class="sxs-lookup"><span data-stu-id="1d625-139">Alpine WSL</span></span>](https://www.microsoft.com/store/apps/9p804crf0395)
+
+2. <span data-ttu-id="1d625-140">ディストリビューションのページで、[入手] を選択します。</span><span class="sxs-lookup"><span data-stu-id="1d625-140">From the distribution's page, select "Get".</span></span>
+
+    ![Microsoft Store での Linux ディストリビューション](media/UbuntuStore.png)
+
+## <a name="set-up-a-new-distribution"></a><span data-ttu-id="1d625-142">新しいディストリビューションを設定する</span><span class="sxs-lookup"><span data-stu-id="1d625-142">Set up a new distribution</span></span>
+
+<span data-ttu-id="1d625-143">新しくインストールした Linux ディストリビューションを初めて起動すると、コンソール ウィンドウが開き、ファイルが圧縮解除されて PC に格納されるまで 1、2 分待つように求められます。</span><span class="sxs-lookup"><span data-stu-id="1d625-143">The first time you launch a newly installed Linux distribution, a console window will open and you'll be asked to wait for a minute or two for files to de-compress and be stored on your PC.</span></span> <span data-ttu-id="1d625-144">今後のすべての起動には、1 秒もかかりません。</span><span class="sxs-lookup"><span data-stu-id="1d625-144">All future launches should take less than a second.</span></span>
+
+<span data-ttu-id="1d625-145">次に、[新しい Linux ディストリビューションのユーザー アカウントとパスワードを作成する](./user-support.md)必要があります。</span><span class="sxs-lookup"><span data-stu-id="1d625-145">You will then need to [create a user account and password for your new Linux distribution](./user-support.md).</span></span>
+
+![Windows コンソールでの Ubuntu の展開](media/UbuntuInstall.png)
+
+## <a name="set-your-distribution-version-to-wsl-1-or-wsl-2"></a><span data-ttu-id="1d625-147">ディストリビューションのバージョンを WSL 1 または WSL 2 に設定する</span><span class="sxs-lookup"><span data-stu-id="1d625-147">Set your distribution version to WSL 1 or WSL 2</span></span>
+
+<span data-ttu-id="1d625-148">インストールされている各 Linux ディストリビューションに割り当てられている WSL バージョンを確認するには、PowerShell コマンド ラインを開き、次のコマンドを入力します ([Windows ビルド 19041 以上](ms-settings:windowsupdate)でのみ使用可能): `wsl -l -v`</span><span class="sxs-lookup"><span data-stu-id="1d625-148">You can check the WSL version assigned to each of the Linux distributions you have installed by opening the PowerShell command line and entering the command (only available in [Windows Build 19041 or higher](ms-settings:windowsupdate)): `wsl -l -v`</span></span>
+
+```bash
+wsl --list --verbose
+```
+
+<span data-ttu-id="1d625-149">ディストリビューションで使用される WSL のバージョンを設定するには、以下を実行します。</span><span class="sxs-lookup"><span data-stu-id="1d625-149">To set a distribution to be backed by either version of WSL please run:</span></span>
+
+```bash
+wsl --set-version <distribution name> <versionNumber>
+```
+
+<span data-ttu-id="1d625-150">`<distribution name>` は、お使いのディストリビューションの実際の名前に必ず置き換えてください。`<versionNumber>` は、数字の "1" または "2" に置き換えてください。</span><span class="sxs-lookup"><span data-stu-id="1d625-150">Make sure to replace `<distribution name>` with the actual name of your distribution and `<versionNumber>` with the number '1' or '2'.</span></span> <span data-ttu-id="1d625-151">上記と同じコマンドで "2" を "1" に置き換えて実行することにより、いつでも WSL 1 に戻すことができます。</span><span class="sxs-lookup"><span data-stu-id="1d625-151">You can change back to WSL 1 at anytime by running the same command as above but replacing the '2' with a '1'.</span></span>
+
+<span data-ttu-id="1d625-152">また、WSL 2 を既定のアーキテクチャにする場合は、次のコマンドを使用して実行できます。</span><span class="sxs-lookup"><span data-stu-id="1d625-152">Additionally, if you want to make WSL 2 your default architecture you can do so with this command:</span></span>
+
+```bash
+wsl --set-default-version 2
+```
+
+<span data-ttu-id="1d625-153">これにより、インストールされるすべての新しいディストリビューションのバージョンが WSL 2 に設定されます。</span><span class="sxs-lookup"><span data-stu-id="1d625-153">This will set the version of any new distribution installed to WSL 2.</span></span>
+
+## <a name="troubleshooting-installation"></a><span data-ttu-id="1d625-154">インストールのトラブルシューティング</span><span class="sxs-lookup"><span data-stu-id="1d625-154">Troubleshooting installation</span></span>
+
+<span data-ttu-id="1d625-155">関連エラーと推奨される修正を次に示します。</span><span class="sxs-lookup"><span data-stu-id="1d625-155">Below are related errors and suggested fixes.</span></span> <span data-ttu-id="1d625-156">その他の一般的なエラーとその解決策については、[WSL のトラブルシューティングのページ](troubleshooting.md)を参照してください。</span><span class="sxs-lookup"><span data-stu-id="1d625-156">Refer to the [WSL troubleshooting page](troubleshooting.md) for other common errors and their solutions.</span></span>
+
+- <span data-ttu-id="1d625-157">**エラー 0x80070003 が発生してインストールに失敗しました**</span><span class="sxs-lookup"><span data-stu-id="1d625-157">**Installation failed with error 0x80070003**</span></span>
+  - <span data-ttu-id="1d625-158">Windows Subsystem for Linux はシステム ドライブ (通常、これは `C:` ドライブ) でのみ実行されます。</span><span class="sxs-lookup"><span data-stu-id="1d625-158">The Windows Subsystem for Linux only runs on your system drive (usually this is your `C:` drive).</span></span> <span data-ttu-id="1d625-159">ディストリビューションがシステム ドライブに格納されていることを確認します。</span><span class="sxs-lookup"><span data-stu-id="1d625-159">Make sure that distributions are stored on your system drive:</span></span>  
+  - <span data-ttu-id="1d625-160">**[設定]** -> **[ストレージ]** -> **[その他のストレージ設定: 新しいコンテンツの保存先を変更する]** 
+    を開きます。![C: ドライブにアプリをインストールするためのシステム設定の画像](media/AppStorage.png)</span><span class="sxs-lookup"><span data-stu-id="1d625-160">Open **Settings** -> **Storage** -> **More Storage Settings: Change where new content is saved**
 ![Picture of system settings to install apps on C: drive](media/AppStorage.png)</span></span>
-    
-    
- * <span data-ttu-id="7187f-143">**WslRegisterDistribution failed with error 0x8007019e (エラー0x8007019e で WslRegisterDistribution が失敗しました)**</span><span class="sxs-lookup"><span data-stu-id="7187f-143">**WslRegisterDistribution failed with error 0x8007019e**</span></span>   
-  * <span data-ttu-id="7187f-144">Windows Subsystem for Linux オプション コンポーネントが有効になっていません。</span><span class="sxs-lookup"><span data-stu-id="7187f-144">The Windows Subsystem for Linux optional component is not enabled:</span></span> 
-   * <span data-ttu-id="7187f-145">**[コントロール パネル]**  ->  **[プログラムと機能]**  ->  **[Windows の機能の有効化または無効化]** を開いて、 **[Windows Subsystem for Linux]** をチェックするか、またはこの記事の冒頭に記載した PowerShell コマンドレットを使用して有効にしてください。</span><span class="sxs-lookup"><span data-stu-id="7187f-145">Open **Control Panel** -> **Programs and Features** -> **Turn Windows Feature on or off** -> Check **Windows Subsystem for Linux** or using the PowerShell cmdlet mentioned at the begining of this article.</span></span>
+
+- <span data-ttu-id="1d625-161">**WslRegisterDistribution failed with error 0x8007019e (エラー0x8007019e で WslRegisterDistribution が失敗しました)**</span><span class="sxs-lookup"><span data-stu-id="1d625-161">**WslRegisterDistribution failed with error 0x8007019e**</span></span>
+  - <span data-ttu-id="1d625-162">Windows Subsystem for Linux オプション コンポーネントが有効になっていません。</span><span class="sxs-lookup"><span data-stu-id="1d625-162">The Windows Subsystem for Linux optional component is not enabled:</span></span>
+  - <span data-ttu-id="1d625-163">**[コントロール パネル]**  ->  **[プログラムと機能]**  ->  **[Windows の機能の有効化または無効化]** を開いて、 **[Windows Subsystem for Linux]** をチェックするか、またはこの記事の冒頭に記載した PowerShell コマンドレットを使用して有効にしてください。</span><span class="sxs-lookup"><span data-stu-id="1d625-163">Open **Control Panel** -> **Programs and Features** -> **Turn Windows Feature on or off** -> Check **Windows Subsystem for Linux** or using the PowerShell cmdlet mentioned at the begining of this article.</span></span>
+
+- <span data-ttu-id="1d625-164">**インストールがエラー 0x80070003 またはエラー 0x80370102 で失敗した**</span><span class="sxs-lookup"><span data-stu-id="1d625-164">**Installation failed with error 0x80070003 or error 0x80370102**</span></span>
+  - <span data-ttu-id="1d625-165">コンピューターの BIOS 内部で仮想化が有効になっていることを確認してください。</span><span class="sxs-lookup"><span data-stu-id="1d625-165">Please make sure that virtualization is enabled inside of your computer's BIOS.</span></span> <span data-ttu-id="1d625-166">これを行う方法の手順は、コンピューターによって異なりますが、最も可能性が高いのは CPU 関連のオプションの下です。</span><span class="sxs-lookup"><span data-stu-id="1d625-166">The instructions on how to do this will vary from computer to computer, and will most likely be under CPU related options.</span></span>
+
+- <span data-ttu-id="1d625-167">**アップグレードしようとしたときに次のエラーが発生する: `Invalid command line option: wsl --set-version Ubuntu 2`**</span><span class="sxs-lookup"><span data-stu-id="1d625-167">**Error when trying to upgrade: `Invalid command line option: wsl --set-version Ubuntu 2`**</span></span>
+  - <span data-ttu-id="1d625-168">Linux 用 Windows サブシステムが有効になっていること、および Windows ビルド バージョン 19041 以降を使用していることを確認してください。</span><span class="sxs-lookup"><span data-stu-id="1d625-168">Please make sure that you have the Windows Subsystem for Linux enabled, and that you're using Windows Build version 19041 or higher.</span></span> <span data-ttu-id="1d625-169">WSL を有効にするには、Powershell プロンプトで管理者特権を使用してこのコマンドを実行します: `Enable-WindowsOptionalFeature -Online -FeatureName Microsoft-Windows-Subsystem-Linux`。</span><span class="sxs-lookup"><span data-stu-id="1d625-169">To enable WSL run this command in a Powershell prompt with admin privileges: `Enable-WindowsOptionalFeature -Online -FeatureName Microsoft-Windows-Subsystem-Linux`.</span></span> <span data-ttu-id="1d625-170">WSL のインストール手順の詳細については、[こちら](./install-win10.md)を参照してください。</span><span class="sxs-lookup"><span data-stu-id="1d625-170">You can find the full WSL install instructions [here](./install-win10.md).</span></span>
+
+- <span data-ttu-id="1d625-171">**仮想ディスク システムの制限があるため、要求された操作を完了できませんでした。仮想ハード ディスク ファイルは、圧縮と暗号化が解除されている必要があります。また、スパースにすることはできません。**</span><span class="sxs-lookup"><span data-stu-id="1d625-171">**The requested operation could not be completed due to a virtual disk system limitation. Virtual hard disk files must be uncompressed and unencrypted and must not be sparse.**</span></span>
+  - <span data-ttu-id="1d625-172">この問題の最新情報が追跡されている [WSL Github スレッド #4103](https://github.com/microsoft/WSL/issues/4103) を参照してください。</span><span class="sxs-lookup"><span data-stu-id="1d625-172">Please check [WSL Github thread #4103](https://github.com/microsoft/WSL/issues/4103) where this issue is being tracked for updated information.</span></span>
+
+- <span data-ttu-id="1d625-173">**"wsl" という用語が、コマンドレット、関数、スクリプト ファイル、または操作可能なプログラムの名前として認識されません。**</span><span class="sxs-lookup"><span data-stu-id="1d625-173">**The term 'wsl' is not recognized as the name of a cmdlet, function, script file, or operable program.**</span></span>
+  - <span data-ttu-id="1d625-174">[Linux 用 Windows サブシステムのオプション コンポーネントがインストールされている](./install-win10.md#enable-the-virtual-machine-platform-optional-component)ことを確認してください。</span><span class="sxs-lookup"><span data-stu-id="1d625-174">Ensure that the [Windows Subsystem for Linux Optional Component is installed](./install-win10.md#enable-the-virtual-machine-platform-optional-component).</span></span> <span data-ttu-id="1d625-175">また、Arm64 デバイスを使用し、PowerShell からこのコマンドを実行している場合も、このエラーを受け取ります。</span><span class="sxs-lookup"><span data-stu-id="1d625-175">Additionally, if you are using an Arm64 device and running this command from PowerShell, you will receive this error.</span></span> <span data-ttu-id="1d625-176">代わりに、`wsl.exe`PowerShell Core[ またはコマンド プロンプトから ](https://docs.microsoft.com/powershell/scripting/install/installing-powershell-core-on-windows?view=powershell-6) を実行します。</span><span class="sxs-lookup"><span data-stu-id="1d625-176">Instead run `wsl.exe` from [PowerShell Core](https://docs.microsoft.com/powershell/scripting/install/installing-powershell-core-on-windows?view=powershell-6), or Command Prompt.</span></span>

@@ -1,308 +1,239 @@
 ---
 title: Linux との Windows の相互運用性
 description: Windows Subsystem for Linux で実行されている Linux ディストリビューションとの Windows の相互運用性について説明します。
-ms.date: 12/20/2017
+ms.date: 05/12/2020
 ms.topic: article
-ms.assetid: 3cefe0db-7616-4848-a2b6-9296746a178b
-ms.custom: seodec18
 ms.localizationpriority: high
-ms.openlocfilehash: f8b0150c044f5011b84e80cac4befd752c4dc552
-ms.sourcegitcommit: 39d3a2f0f4184eaec8d8fec740aff800e8ea9ac7
+ms.openlocfilehash: b1c7a64a86cf088159d1abee3b341328151428f6
+ms.sourcegitcommit: 1b6191351bbf9e95f3c28fc67abe4bf1bcfd3336
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/24/2020
-ms.locfileid: "71269804"
+ms.lasthandoff: 05/13/2020
+ms.locfileid: "83270846"
 ---
-# <a name="windows-subsystem-for-linux-interoperability-with-windows"></a><span data-ttu-id="7f5f6-103">Windows との Windows Subsystem for Linux の相互運用性</span><span class="sxs-lookup"><span data-stu-id="7f5f6-103">Windows Subsystem for Linux interoperability with Windows</span></span>
+# <a name="windows-interoperability-with-linux"></a><span data-ttu-id="59a3b-103">Linux との Windows の相互運用性</span><span class="sxs-lookup"><span data-stu-id="59a3b-103">Windows interoperability with Linux</span></span>
 
-> <span data-ttu-id="7f5f6-104">**Fall Creators Update 向けに更新されました。**</span><span class="sxs-lookup"><span data-stu-id="7f5f6-104">**Updated for Fall Creators Update.**</span></span>  
-<span data-ttu-id="7f5f6-105">Creators Update または Anniversary Update を実行している場合は、[Creators/Anniversary Update に関するセクション](interop.md#creators-update-and-anniversary-update)に移動してください。</span><span class="sxs-lookup"><span data-stu-id="7f5f6-105">If you're running Creators Update or Anniversary Update, jump to the [Creators/Anniversary Update section](interop.md#creators-update-and-anniversary-update).</span></span>
+<span data-ttu-id="59a3b-104">Windows Subsystem for Linux (WSL) は、Windows と Linux 間の統合を継続的に向上させています。</span><span class="sxs-lookup"><span data-stu-id="59a3b-104">The Windows Subsystem for Linux (WSL) is continuously improving integration between Windows and Linux.</span></span>  <span data-ttu-id="59a3b-105">次の操作を行います。</span><span class="sxs-lookup"><span data-stu-id="59a3b-105">You can:</span></span>
 
-<span data-ttu-id="7f5f6-106">Windows Subsystem for Linux (WSL) は、Windows と Linux 間の統合を継続的に向上させています。</span><span class="sxs-lookup"><span data-stu-id="7f5f6-106">The Windows Subsystem for Linux (WSL) is continuously improving integration between Windows and Linux.</span></span>  <span data-ttu-id="7f5f6-107">以下が可能です。</span><span class="sxs-lookup"><span data-stu-id="7f5f6-107">You can:</span></span>
+* <span data-ttu-id="59a3b-106">Windows ツール (つまり、notepad.exe) を Linux コマンド ライン (つまり、Ubuntu) から実行する。</span><span class="sxs-lookup"><span data-stu-id="59a3b-106">Run Windows tools (ie. notepad.exe) from a Linux command line (ie. Ubuntu).</span></span>
+* <span data-ttu-id="59a3b-107">Linux ツール (つまり、grep) を Windows コマンド ライン (つまり、PowerShell) から実行する。</span><span class="sxs-lookup"><span data-stu-id="59a3b-107">Run Linux tools (ie. grep) from a Windows command line (ie. PowerShell).</span></span>
+* <span data-ttu-id="59a3b-108">Linux と Windows の間で環境変数を共有する。</span><span class="sxs-lookup"><span data-stu-id="59a3b-108">Share environment variables between Linux and Windows.</span></span> <span data-ttu-id="59a3b-109">(ビルド 17063 以降)</span><span class="sxs-lookup"><span data-stu-id="59a3b-109">(Build 17063+)</span></span>
 
-1. <span data-ttu-id="7f5f6-108">Linux コンソールから Windows バイナリを起動します。</span><span class="sxs-lookup"><span data-stu-id="7f5f6-108">Invoke Windows binaries from the Linux console.</span></span>
-1. <span data-ttu-id="7f5f6-109">Windows コンソールから Linux バイナリを起動します。</span><span class="sxs-lookup"><span data-stu-id="7f5f6-109">Invoke Linux binaries from a Windows console.</span></span>
-1. <span data-ttu-id="7f5f6-110">**Windows Insiders Build 17063 以降**では、Linux と Windows の間で環境変数を共有します。</span><span class="sxs-lookup"><span data-stu-id="7f5f6-110">**Windows Insiders Builds 17063+** Share environment variables between Linux and Windows.</span></span>
+> [!NOTE]
+> <span data-ttu-id="59a3b-110">Creators Update (2017 年 10 月、ビルド 16299) または Anniversary Update (2016 年 8 月、ビルド 14393) を実行している場合は、「[Windows 10 の以前のバージョン](#earlier-versions-of-windows-10)」に進んでください。</span><span class="sxs-lookup"><span data-stu-id="59a3b-110">If you're running Creators Update (Oct 2017, Build 16299) or Anniversary Update (Aug 2016, Build 14393), jump to the [Earlier versions of Windows 10](#earlier-versions-of-windows-10).</span></span>
 
-<span data-ttu-id="7f5f6-111">これにより、Windows と WSL の間でシームレスなエクスペリエンスが提供されます。</span><span class="sxs-lookup"><span data-stu-id="7f5f6-111">This delivers a seamless experience between Windows and WSL.</span></span>  <span data-ttu-id="7f5f6-112">技術的な詳細については、[WSL のブログ](https://blogs.msdn.microsoft.com/wsl/2016/10/19/windows-and-ubuntu-interoperability/)をご覧ください。</span><span class="sxs-lookup"><span data-stu-id="7f5f6-112">Technical details are on the [WSL blog](https://blogs.msdn.microsoft.com/wsl/2016/10/19/windows-and-ubuntu-interoperability/).</span></span>
+## <a name="run-linux-tools-from-a-windows-command-line"></a><span data-ttu-id="59a3b-111">Windows コマンド ラインからの Linux ツールの実行</span><span class="sxs-lookup"><span data-stu-id="59a3b-111">Run Linux tools from a Windows command line</span></span>
 
-## <a name="run-linux-tools-from-a-windows-command-line"></a><span data-ttu-id="7f5f6-113">Windows コマンド ラインからの Linux ツールの実行</span><span class="sxs-lookup"><span data-stu-id="7f5f6-113">Run Linux tools from a Windows command line</span></span>
+<span data-ttu-id="59a3b-112">`wsl <command>` (または `wsl.exe <command>`) を使用して、Windows コマンド プロンプト (CMD) または PowerShell から Linux バイナリを実行します。</span><span class="sxs-lookup"><span data-stu-id="59a3b-112">Run Linux binaries from the Windows Command Prompt (CMD) or PowerShell using `wsl <command>` (or `wsl.exe <command>`).</span></span>
 
-<span data-ttu-id="7f5f6-114">`wsl.exe <command>` を使用して、Windows コマンド プロンプト (CMD または PowerShell) から Linux バイナリを実行します。</span><span class="sxs-lookup"><span data-stu-id="7f5f6-114">Run Linux binaries from the Windows Command Prompt (CMD or PowerShell) using `wsl.exe <command>`.</span></span>
+<span data-ttu-id="59a3b-113">たとえば、次のように入力します。</span><span class="sxs-lookup"><span data-stu-id="59a3b-113">For example:</span></span>
 
-<span data-ttu-id="7f5f6-115">この方法で起動されるバイナリには、次の特性があります。</span><span class="sxs-lookup"><span data-stu-id="7f5f6-115">Binaries invoked in this way:</span></span>
-
-1. <span data-ttu-id="7f5f6-116">現在の CMD または PowerShell プロンプトと同じ作業ディレクトリを使用します。</span><span class="sxs-lookup"><span data-stu-id="7f5f6-116">Use the same working directory as the current CMD or PowerShell prompt.</span></span>
-1. <span data-ttu-id="7f5f6-117">WSL の既定のユーザーとして実行されます。</span><span class="sxs-lookup"><span data-stu-id="7f5f6-117">Run as the WSL default user.</span></span>
-1. <span data-ttu-id="7f5f6-118">呼び出し元のプロセスおよびターミナルと同じ Windows 管理者権限を持ちます。</span><span class="sxs-lookup"><span data-stu-id="7f5f6-118">Have the same Windows administrative rights as the calling process and terminal.</span></span>
-
-<span data-ttu-id="7f5f6-119">次に、例を示します。</span><span class="sxs-lookup"><span data-stu-id="7f5f6-119">For example:</span></span>
-
-```console
+```powershell
 C:\temp> wsl ls -la
 <- contents of C:\temp ->
 ```
 
-<span data-ttu-id="7f5f6-120">`wsl.exe` の後の Linux コマンドは、WSL での任意のコマンド実行と同様に処理されます。</span><span class="sxs-lookup"><span data-stu-id="7f5f6-120">The Linux command following `wsl.exe` is handled like any command run in WSL.</span></span>  <span data-ttu-id="7f5f6-121">sudo、パイプ処理、ファイル リダイレクトなどが機能します。</span><span class="sxs-lookup"><span data-stu-id="7f5f6-121">Things such as sudo, piping, and file redirection work.</span></span>
+<span data-ttu-id="59a3b-114">この方法で起動されるバイナリには、次の特性があります。</span><span class="sxs-lookup"><span data-stu-id="59a3b-114">Binaries invoked in this way:</span></span>
 
-<span data-ttu-id="7f5f6-122">sudo を使用した例:</span><span class="sxs-lookup"><span data-stu-id="7f5f6-122">Example using sudo:</span></span>
+* <span data-ttu-id="59a3b-115">現在の CMD または PowerShell プロンプトと同じ作業ディレクトリを使用します。</span><span class="sxs-lookup"><span data-stu-id="59a3b-115">Use the same working directory as the current CMD or PowerShell prompt.</span></span>
+* <span data-ttu-id="59a3b-116">WSL の既定のユーザーとして実行されます。</span><span class="sxs-lookup"><span data-stu-id="59a3b-116">Run as the WSL default user.</span></span>
+* <span data-ttu-id="59a3b-117">呼び出し元のプロセスおよびターミナルと同じ Windows 管理者権限を持ちます。</span><span class="sxs-lookup"><span data-stu-id="59a3b-117">Have the same Windows administrative rights as the calling process and terminal.</span></span>
 
-```console
+<span data-ttu-id="59a3b-118">`wsl` (または `wsl.exe`) に続く Linux コマンドは、WSL での任意のコマンド実行と同様に処理されます。</span><span class="sxs-lookup"><span data-stu-id="59a3b-118">The Linux command following `wsl` (or `wsl.exe`) is handled like any command run in WSL.</span></span>  <span data-ttu-id="59a3b-119">sudo、パイプ処理、ファイル リダイレクトなどが機能します。</span><span class="sxs-lookup"><span data-stu-id="59a3b-119">Things such as sudo, piping, and file redirection work.</span></span>
+
+<span data-ttu-id="59a3b-120">sudo を使用して既定の Linux ディストリビューションを更新する例:</span><span class="sxs-lookup"><span data-stu-id="59a3b-120">Example using sudo to update your default Linux distribution:</span></span>
+
+```powershell
 C:\temp> wsl sudo apt-get update
-[sudo] password for username:
-Hit:1 https://archive.ubuntu.com/ubuntu xenial InRelease
-Get:2 https://security.ubuntu.com/ubuntu xenial-security InRelease [94.5 kB]
 ```
 
-<span data-ttu-id="7f5f6-123">WSL コマンドと Windows コマンドを組み合わせた例:</span><span class="sxs-lookup"><span data-stu-id="7f5f6-123">Examples mixing WSL and Windows commands:</span></span>
+<span data-ttu-id="59a3b-121">このコマンドを実行すると、既定の Linux ディストリビューションのユーザー名が一覧表示され、パスワードの入力を求められます。</span><span class="sxs-lookup"><span data-stu-id="59a3b-121">Your default Linux distribution user name will be listed after running this command and you will be asked for your password.</span></span> <span data-ttu-id="59a3b-122">パスワードを正しく入力すると、ディストリビューションによって更新プログラムがダウンロードされます。</span><span class="sxs-lookup"><span data-stu-id="59a3b-122">After entering your password correctly, your distribution will download updates.</span></span>
 
-```console
-C:\temp> wsl ls -la | findstr "foo"
--rwxrwxrwx 1 root root     14 Sep 27 14:26 foo.bat
+## <a name="mixing-linux-and-windows-commands"></a><span data-ttu-id="59a3b-123">Linux と Windows のコマンドを組み合わせて使用する</span><span class="sxs-lookup"><span data-stu-id="59a3b-123">Mixing Linux and Windows commands</span></span>
 
-C:\temp> dir | wsl grep foo
-09/27/2016  02:26 PM                14 foo.bat
+<span data-ttu-id="59a3b-124">PowerShell を使用して Linux と Windows のコマンドを組み合わせて使用するいくつかの例を次に示します。</span><span class="sxs-lookup"><span data-stu-id="59a3b-124">Here are a few examples of mixing Linux and Windows commands using PowerShell.</span></span>
 
+<span data-ttu-id="59a3b-125">Linux コマンド `ls -la` を使用してファイルを一覧表示し、PowerShell コマンド `findstr` を使用して "git" を含む単語の結果をフィルター処理するには、次のようにコマンドを組み合わせます。</span><span class="sxs-lookup"><span data-stu-id="59a3b-125">To use the Linux command `ls -la` to list files and the PowerShell command `findstr` to filter the results for words containing "git", combine the commands:</span></span>
+
+```powershell
+wsl ls -la | findstr "git"
+```
+
+<span data-ttu-id="59a3b-126">Linux コマンド `dir` を使用してファイルを一覧表示し、PowerShell コマンド `grep` を使用して "git" を含む単語の結果をフィルター処理するには、次のようにコマンドを組み合わせます。</span><span class="sxs-lookup"><span data-stu-id="59a3b-126">To use the PowerShell command `dir` to list files and the Linux command `grep` to filter the results for words containing "git", combine the commands:</span></span>
+
+```powershell
+C:\temp> dir | wsl grep git
+```
+
+<span data-ttu-id="59a3b-127">Linux コマンド `ls -la` を使用してファイルを一覧表示し、PowerShell コマンド `> out.txt` を使用してその一覧を "out.txt" という名前のテキスト ファイルに出力するには、次のようにコマンドを組み合わせます。</span><span class="sxs-lookup"><span data-stu-id="59a3b-127">To use the Linux command `ls -la` to list files and the PowerShell command `> out.txt` to print that list to a text file named "out.txt", combine the commands:</span></span>
+
+```powershell
 C:\temp> wsl ls -la > out.txt
 ```
 
-<span data-ttu-id="7f5f6-124">`wsl.exe` に渡されるコマンドは、変更なしで WSL プロセスに転送されます。</span><span class="sxs-lookup"><span data-stu-id="7f5f6-124">The commands passed into `wsl.exe` are forwarded to the WSL process without modification.</span></span>  <span data-ttu-id="7f5f6-125">ファイル パスは WSL 形式で指定する必要があります。</span><span class="sxs-lookup"><span data-stu-id="7f5f6-125">File paths must be specified in the WSL format.</span></span>
+<span data-ttu-id="59a3b-128">`wsl.exe` に渡されるコマンドは、変更なしで WSL プロセスに転送されます。</span><span class="sxs-lookup"><span data-stu-id="59a3b-128">The commands passed into `wsl.exe` are forwarded to the WSL process without modification.</span></span>  <span data-ttu-id="59a3b-129">ファイル パスは WSL 形式で指定する必要があります。</span><span class="sxs-lookup"><span data-stu-id="59a3b-129">File paths must be specified in the WSL format.</span></span>
 
-<span data-ttu-id="7f5f6-126">パスを指定した例:</span><span class="sxs-lookup"><span data-stu-id="7f5f6-126">Example with paths:</span></span>
+<span data-ttu-id="59a3b-130">PowerShell を使用して、Linux コマンド `ls -la` を使用して `/proc/cpuinfo` Linux ファイル システム パス内のファイルを一覧表示するには、次のようにします。</span><span class="sxs-lookup"><span data-stu-id="59a3b-130">To use the Linux command `ls -la` to list files in the `/proc/cpuinfo` Linux file system path, using PowerShell:</span></span>
 
-```console
+```powershell
 C:\temp> wsl ls -la /proc/cpuinfo
--r--r--r-- 1 root root 0 Sep 28 11:28 /proc/cpuinfo
+```
 
+<span data-ttu-id="59a3b-131">PowerShell を使用して、Linux コマンド `ls -la` を使用して `C:\Program Files` Windows ファイル システム パス内のファイルを一覧表示するには、次のようにします。</span><span class="sxs-lookup"><span data-stu-id="59a3b-131">To use the Linux command `ls -la` to list files in the `C:\Program Files` Windows file system path, using PowerShell:</span></span>
+
+```powershell
 C:\temp> wsl ls -la "/mnt/c/Program Files"
-<- contents of C:\Program Files ->
 ```
 
-## <a name="run-windows-tools-from-wsl"></a><span data-ttu-id="7f5f6-127">WSL からの Windows ツールの実行</span><span class="sxs-lookup"><span data-stu-id="7f5f6-127">Run Windows tools from WSL</span></span>
+## <a name="run-windows-tools-from-linux"></a><span data-ttu-id="59a3b-132">Linux からの Windows ツールの実行</span><span class="sxs-lookup"><span data-stu-id="59a3b-132">Run Windows tools from Linux</span></span>
 
-<span data-ttu-id="7f5f6-128">WSL では、`[binary name].exe` を使用して、WSL コマンド ラインから Windows バイナリを直接起動することができます。</span><span class="sxs-lookup"><span data-stu-id="7f5f6-128">WSL can invoke Windows binaries directly from the WSL command line using `[binary name].exe`.</span></span>  <span data-ttu-id="7f5f6-129">たとえば、`notepad.exe` と記述します。</span><span class="sxs-lookup"><span data-stu-id="7f5f6-129">For example, `notepad.exe`.</span></span>  <span data-ttu-id="7f5f6-130">Windows 実行可能ファイルの実行を容易にするために、Fall Creators Update では Windows のパスは Linux `$PATH` に含まれています。</span><span class="sxs-lookup"><span data-stu-id="7f5f6-130">To make Windows executables easier to run, Windows path is included in the Linux `$PATH` in Fall Creators Update.</span></span>
+<span data-ttu-id="59a3b-133">WSL では、`[tool-name].exe` を使用して、WSL コマンド ラインから Windows ツールを直接実行することができます。</span><span class="sxs-lookup"><span data-stu-id="59a3b-133">WSL can run Windows tools directly from the WSL command line using `[tool-name].exe`.</span></span>  <span data-ttu-id="59a3b-134">たとえば、`notepad.exe` のように指定します。</span><span class="sxs-lookup"><span data-stu-id="59a3b-134">For example, `notepad.exe`.</span></span>
 
-<span data-ttu-id="7f5f6-131">この方法で実行されるアプリケーションには、次の特性があります。</span><span class="sxs-lookup"><span data-stu-id="7f5f6-131">Applications run this way have the following properties:</span></span>
+<!-- Craig - could you help add a section with an example here to explain this scenario: "To access your Linux files using a Windows tool, use `\\wsl$\<distroName>\'` as the file path." Currently it I can just enter `notepad.exe foo.txt` and it seems to work fine, so explaining a situation where the file path is needed would be helpful. -->
 
-1. <span data-ttu-id="7f5f6-132">ほとんどの場合、作業ディレクトリを WSL コマンド プロンプトとして保持します (例外については後述します)。</span><span class="sxs-lookup"><span data-stu-id="7f5f6-132">Retain the working directory as the WSL command prompt (for the most part -- exceptions are explained below).</span></span>
-1. <span data-ttu-id="7f5f6-133">WSL プロセスと同じアクセス許可権限が与えられています。</span><span class="sxs-lookup"><span data-stu-id="7f5f6-133">Have the same permission rights as the WSL process.</span></span>
-1. <span data-ttu-id="7f5f6-134">アクティブな Windows ユーザーとして実行されます。</span><span class="sxs-lookup"><span data-stu-id="7f5f6-134">Run as the active Windows user.</span></span>
-1. <span data-ttu-id="7f5f6-135">CMD プロンプトから直接実行されたかのように、Windows タスク マネージャーに表示されます。</span><span class="sxs-lookup"><span data-stu-id="7f5f6-135">Appear in the Windows Task Manager as if directly executed from the CMD prompt.</span></span>
+<span data-ttu-id="59a3b-135">この方法で実行されるアプリケーションには、次の特性があります。</span><span class="sxs-lookup"><span data-stu-id="59a3b-135">Applications run this way have the following properties:</span></span>
 
-<span data-ttu-id="7f5f6-136">以下に例を示します。</span><span class="sxs-lookup"><span data-stu-id="7f5f6-136">Example:</span></span>
+* <span data-ttu-id="59a3b-136">ほとんどの場合、作業ディレクトリを WSL コマンド プロンプトとして保持します (例外については後述します)。</span><span class="sxs-lookup"><span data-stu-id="59a3b-136">Retain the working directory as the WSL command prompt (for the most part -- exceptions are explained below).</span></span>
+* <span data-ttu-id="59a3b-137">WSL プロセスと同じアクセス許可権限が与えられています。</span><span class="sxs-lookup"><span data-stu-id="59a3b-137">Have the same permission rights as the WSL process.</span></span>
+* <span data-ttu-id="59a3b-138">アクティブな Windows ユーザーとして実行されます。</span><span class="sxs-lookup"><span data-stu-id="59a3b-138">Run as the active Windows user.</span></span>
+* <span data-ttu-id="59a3b-139">CMD プロンプトから直接実行されたかのように、Windows タスク マネージャーに表示されます。</span><span class="sxs-lookup"><span data-stu-id="59a3b-139">Appear in the Windows Task Manager as if directly executed from the CMD prompt.</span></span>
 
-``` BASH
-$ notepad.exe
+<span data-ttu-id="59a3b-140">WSL で実行される Windows 実行可能ファイルは、ネイティブの Linux 実行可能ファイルと同様に処理されます。パイプ処理、リダイレクト、さらにバックグラウンド処理も想定どおりに機能します。</span><span class="sxs-lookup"><span data-stu-id="59a3b-140">Windows executables run in WSL are handled similarly to native Linux executables -- piping, redirects, and even backgrounding work as expected.</span></span>
+
+<span data-ttu-id="59a3b-141">Linux ディストリビューション (たとえば、Ubuntu) から Windows ツール `ipconfig.exe` を実行し、Linux ツール `grep` を使用して "IPv4" の結果をフィルター処理し、Linux ツール `cut` を使用して列フィールドを削除するには、次のように入力します。</span><span class="sxs-lookup"><span data-stu-id="59a3b-141">To run the Windows tool `ipconfig.exe`, use the Linux tool `grep` to filter the "IPv4" results, and use the Linux tool `cut` to remove the column fields, from a Linux distribution (for example, Ubuntu) enter:</span></span>
+
+```bash
+ipconfig.exe | grep IPv4 | cut -d: -f2
 ```
 
-<span data-ttu-id="7f5f6-137">WSL で実行される Windows 実行可能ファイルは、ネイティブの Linux 実行可能ファイルと同様に処理されます。パイプ処理、リダイレクト、さらにバックグラウンド処理も想定どおりに機能します。</span><span class="sxs-lookup"><span data-stu-id="7f5f6-137">Windows executables run in WSL are handled similarly to native Linux executables -- piping, redirects, and even backgrounding work as expected.</span></span>
+<span data-ttu-id="59a3b-142">Windows と Linux のコマンドを組み合わせた例を試してみましょう。</span><span class="sxs-lookup"><span data-stu-id="59a3b-142">Let's try an example mixing Windows and Linux commands.</span></span> <span data-ttu-id="59a3b-143">Linux ディストリビューション (つまり、Ubuntu) を開き、テキスト ファイルを作成します: `touch foo.txt`。</span><span class="sxs-lookup"><span data-stu-id="59a3b-143">Open your Linux distribution (ie. Ubuntu) and create a text file: `touch foo.txt`.</span></span> <span data-ttu-id="59a3b-144">次に、Linux コマンド `ls -la` を使用して直接ファイルとその作成の詳細を一覧表示し、さらに Windows PowerShell ツール `findstr.exe` を使用して結果をフィルター処理して `foo.txt` ファイルのみが結果に表示されるようにします。</span><span class="sxs-lookup"><span data-stu-id="59a3b-144">Now use the Linux command `ls -la` to list the direct files and their creation details, plus the Windows PowerShell tool `findstr.exe` to filter the results so only your `foo.txt` file shows in the results:</span></span>
 
-<span data-ttu-id="7f5f6-138">パイプを使用した例:</span><span class="sxs-lookup"><span data-stu-id="7f5f6-138">Examples using pipes:</span></span>
-
-``` BASH
-$ ipconfig.exe | grep IPv4 | cut -d: -f2
-172.21.240.1
-10.159.21.24
+```bash
+ls -la | findstr.exe foo.txt
 ```
 
-<span data-ttu-id="7f5f6-139">Windows コマンドと WSL コマンドの組み合わせを使用した例:</span><span class="sxs-lookup"><span data-stu-id="7f5f6-139">Example using mixed Windows and WSL commands:</span></span>
+<span data-ttu-id="59a3b-145">Windows ツールは、ファイル拡張子を含み、ファイルの大文字と小文字が一致し、実行可能である必要があります。</span><span class="sxs-lookup"><span data-stu-id="59a3b-145">Windows tools must include the file extension, match the file case, and be executable.</span></span>  <span data-ttu-id="59a3b-146">非実行可能ファイルにはバッチ スクリプトが含まれます。</span><span class="sxs-lookup"><span data-stu-id="59a3b-146">Non-executables including batch scripts.</span></span>  <span data-ttu-id="59a3b-147">`dir` などの CMD ネイティブ コマンドは、`cmd.exe /C` コマンドを使用して実行できます。</span><span class="sxs-lookup"><span data-stu-id="59a3b-147">CMD native commands like `dir` can be run with `cmd.exe /C` command.</span></span>
 
-``` BASH
-$ ls -la | findstr.exe foo.txt
+<span data-ttu-id="59a3b-148">たとえば、次のように入力して、Windows ファイル システムの C:\ ディレクトリの内容を一覧表示します。</span><span class="sxs-lookup"><span data-stu-id="59a3b-148">For example, list the contents of your Windows files system C:\ directory, by entering:</span></span>
 
-$ cmd.exe /c dir
-<- contents of C:\ ->
+```bash
+cmd.exe /C dir
 ```
 
-<span data-ttu-id="7f5f6-140">Windows バイナリは、ファイル拡張子を含み、ファイルの大文字と小文字が一致し、実行可能である必要があります。</span><span class="sxs-lookup"><span data-stu-id="7f5f6-140">Windows binaries must include the file extension, match the file case, and be executable.</span></span>  <span data-ttu-id="7f5f6-141">非実行可能ファイルにはバッチ スクリプトが含まれます。</span><span class="sxs-lookup"><span data-stu-id="7f5f6-141">Non-executables including batch scripts.</span></span>  <span data-ttu-id="7f5f6-142">`dir` などの CMD ネイティブ コマンドは、`cmd.exe /C` コマンドを使用して実行できます。</span><span class="sxs-lookup"><span data-stu-id="7f5f6-142">CMD native commands like `dir` can be run with `cmd.exe /C` command.</span></span>
+<span data-ttu-id="59a3b-149">または、`ping` コマンドを使用して、エコー要求を microsoft.com Web サイトに送信します。</span><span class="sxs-lookup"><span data-stu-id="59a3b-149">Or use the `ping` command to send an echo request to the microsoft.com website:</span></span>
 
-<span data-ttu-id="7f5f6-143">例:</span><span class="sxs-lookup"><span data-stu-id="7f5f6-143">Examples:</span></span>
-
-``` BASH
-$ cmd.exe /C dir
-<- contents of C:\ ->
-
-$ PING.EXE www.microsoft.com
-Pinging e1863.dspb.akamaiedge.net [2600:1409:a:5a2::747] with 32 bytes of data:
-Reply from 2600:1409:a:5a2::747: time=2ms
+```bash
+ping.exe www.microsoft.com
 ```
 
-<span data-ttu-id="7f5f6-144">パラメーターは、変更されずに Windows バイナリに渡されます。</span><span class="sxs-lookup"><span data-stu-id="7f5f6-144">Parameters are passed to the Windows binary unmodified.</span></span>
+<span data-ttu-id="59a3b-150">パラメーターは、変更されずに Windows バイナリに渡されます。</span><span class="sxs-lookup"><span data-stu-id="59a3b-150">Parameters are passed to the Windows binary unmodified.</span></span> <span data-ttu-id="59a3b-151">たとえば、次のコマンドを実行すると `C:\temp\foo.txt` が `notepad.exe` で開かれます。</span><span class="sxs-lookup"><span data-stu-id="59a3b-151">As an example, the following command will open `C:\temp\foo.txt` in `notepad.exe`:</span></span>
 
-<span data-ttu-id="7f5f6-145">たとえば、次のコマンドによって `C:\temp\foo.txt` で `notepad.exe` が開きます。</span><span class="sxs-lookup"><span data-stu-id="7f5f6-145">As an example, the following commands will open `C:\temp\foo.txt` in `notepad.exe`:</span></span>
-
-``` BASH
-$ notepad.exe "C:\temp\foo.txt"
-$ notepad.exe C:\\temp\\foo.txt
+```bash
+notepad.exe "C:\temp\foo.txt"
 ```
 
-<span data-ttu-id="7f5f6-146">WSL の Windows アプリケーションを使用して、VolFs にあるファイル (`/mnt/<x>` の下にないファイル) を変更することはサポートされていません。</span><span class="sxs-lookup"><span data-stu-id="7f5f6-146">Modifying files located on VolFs (files not under `/mnt/<x>`) with a Windows application in WSL is not supported.</span></span>
+<span data-ttu-id="59a3b-152">以下も有効です。</span><span class="sxs-lookup"><span data-stu-id="59a3b-152">This will also work:</span></span>
 
-<span data-ttu-id="7f5f6-147">既定では、WSL は Windows バイナリの作業ディレクトリを現在の WSL ディレクトリとして保持しようとしますが、作業ディレクトリが VolFs にある場合はインスタンス作成ディレクトリに戻ります。</span><span class="sxs-lookup"><span data-stu-id="7f5f6-147">By default, WSL tries to keep the working directory of the Windows binary as the current WSL directory, but will fall back on the instance creation directory if the working directory is on VolFs.</span></span>
-
-<span data-ttu-id="7f5f6-148">たとえば、`wsl.exe` が最初に `C:\temp` から起動され、現在の WSL ディレクトリがユーザーのホームに変更されているとします。</span><span class="sxs-lookup"><span data-stu-id="7f5f6-148">As an example; `wsl.exe` is initially launched from `C:\temp` and the current WSL directory is changed to the user’s home.</span></span>  <span data-ttu-id="7f5f6-149">`notepad.exe` がユーザーのホーム ディレクトリからが呼び出されると、WSL は notepad.exe の作業ディレクトリとして `C:\temp` に自動的に戻ります。</span><span class="sxs-lookup"><span data-stu-id="7f5f6-149">When `notepad.exe` is called from the user’s home directory, WSL automatically reverts to `C:\temp` as the notepad.exe working directory:</span></span>
-
-``` BASH
-C:\temp> wsl
-/mnt/c/temp/$ cd ~
-~$ notepad.exe foo.txt
-~$ ls | grep foo.txt
-~$ exit
-
-exit
-C:\temp>dir | findstr foo.txt
-09/27/2016  02:15 PM                14 foo.txt
+```bash
+notepad.exe C:\\temp\\foo.txt
 ```
 
-## <a name="share-environment-variables-between-windows-and-wsl"></a><span data-ttu-id="7f5f6-150">Windows と WSL の間での環境変数の共有</span><span class="sxs-lookup"><span data-stu-id="7f5f6-150">Share environment variables between Windows and WSL</span></span>
+## <a name="share-environment-variables-between-windows-and-wsl"></a><span data-ttu-id="59a3b-153">Windows と WSL の間での環境変数の共有</span><span class="sxs-lookup"><span data-stu-id="59a3b-153">Share environment variables between Windows and WSL</span></span>
 
-> <span data-ttu-id="7f5f6-151">Windows Insider Build 17063 以降で使用可能です。</span><span class="sxs-lookup"><span data-stu-id="7f5f6-151">Available in Windows Insider builds 17063 and later.</span></span>
+<span data-ttu-id="59a3b-154">WSL と Windows は `WSLENV` を共有します。これは、Windows と WSL で実行される Linux ディストリビューションをつなぐために作成された特殊な環境変数です。</span><span class="sxs-lookup"><span data-stu-id="59a3b-154">WSL and Windows share a special environment variable, `WSLENV`, created to bridge Windows and Linux distributions running on WSL.</span></span>
 
-<span data-ttu-id="7f5f6-152">17063 より前では、WSL がアクセスできる唯一の Windows 環境変数は `PATH` でした (そのため、WSL で Win32 実行可能ファイルを起動できました)。</span><span class="sxs-lookup"><span data-stu-id="7f5f6-152">Prior to 17063, only Windows environment variable that WSL could access was `PATH` (so you could launch Win32 executables from under WSL).</span></span>
+<span data-ttu-id="59a3b-155">`WSLENV` 変数のプロパティ:</span><span class="sxs-lookup"><span data-stu-id="59a3b-155">Properties of `WSLENV` variable:</span></span>
 
-<span data-ttu-id="7f5f6-153">17063 以降、WSL と Windows は `WSLENV` を共有します。これは、WSL で実行される Windows と Linux のディストリビューションをつなぐために作成された特殊な環境変数です。</span><span class="sxs-lookup"><span data-stu-id="7f5f6-153">Starting in 17063, WSL and Windows share `WSLENV`, a special environment variable created to bridge Windows and Linux distros running on WSL.</span></span>
+* <span data-ttu-id="59a3b-156">共有され、Windows と WSL の両方の環境に存在します。</span><span class="sxs-lookup"><span data-stu-id="59a3b-156">It is shared; it exists in both Windows and WSL environments.</span></span>
+* <span data-ttu-id="59a3b-157">Windows と WSL の間で共有する環境変数の一覧です。</span><span class="sxs-lookup"><span data-stu-id="59a3b-157">It is a list of environment variables to share between Windows and WSL.</span></span>
+* <span data-ttu-id="59a3b-158">Windows と WSL で適切に機能するように環境変数をフォーマットできます。</span><span class="sxs-lookup"><span data-stu-id="59a3b-158">It can format environment variables to work well in Windows and WSL.</span></span>
 
-<span data-ttu-id="7f5f6-154">`WSLENV` の特性:</span><span class="sxs-lookup"><span data-stu-id="7f5f6-154">Properties of `WSLENV`:</span></span>
+> [!NOTE]
+> <span data-ttu-id="59a3b-159">17063 より前では、WSL がアクセスできる唯一の Windows 環境変数は `PATH` でした (そのため、WSL で Win32 実行可能ファイルを起動できました)。</span><span class="sxs-lookup"><span data-stu-id="59a3b-159">Prior to 17063, only Windows environment variable that WSL could access was `PATH` (so you could launch Win32 executables from under WSL).</span></span> <span data-ttu-id="59a3b-160">17063 以降、`WSLENV` がサポートされるようになります。</span><span class="sxs-lookup"><span data-stu-id="59a3b-160">Starting in 17063, `WSLENV` begins being supported.</span></span>
 
-* <span data-ttu-id="7f5f6-155">共有され、Windows と WSL の両方の環境に存在します。</span><span class="sxs-lookup"><span data-stu-id="7f5f6-155">It is shared; it exists in both Windows and WSL environments.</span></span>
-* <span data-ttu-id="7f5f6-156">Windows と WSL の間で共有する環境変数の一覧です。</span><span class="sxs-lookup"><span data-stu-id="7f5f6-156">It is a list of environment variables to share between Windows and WSL.</span></span>
-* <span data-ttu-id="7f5f6-157">Windows と WSL で適切に機能するように環境変数をフォーマットできます。</span><span class="sxs-lookup"><span data-stu-id="7f5f6-157">It can format environment variables to work well in Windows and WSL.</span></span>
+## <a name="wslenv-flags"></a><span data-ttu-id="59a3b-161">WSLENV フラグ</span><span class="sxs-lookup"><span data-stu-id="59a3b-161">WSLENV flags</span></span>
 
-<span data-ttu-id="7f5f6-158">環境変数の変換方法に影響する、`WSLENV` で利用可能な 4 つのフラグがあります。</span><span class="sxs-lookup"><span data-stu-id="7f5f6-158">There are four flags available in `WSLENV` to influence how that environment variable is translated.</span></span>
+<span data-ttu-id="59a3b-162">`WSLENV` には、環境変数の変換方法に影響を与える 4 つのフラグがあります。</span><span class="sxs-lookup"><span data-stu-id="59a3b-162">There are four flags available in `WSLENV` to influence how the environment variable is translated.</span></span>
 
-<span data-ttu-id="7f5f6-159">`WSLENV` のフラグ:</span><span class="sxs-lookup"><span data-stu-id="7f5f6-159">`WSLENV` flags:</span></span>
+<span data-ttu-id="59a3b-163">`WSLENV` のフラグ:</span><span class="sxs-lookup"><span data-stu-id="59a3b-163">`WSLENV` flags:</span></span>
 
-* <span data-ttu-id="7f5f6-160">`/p` - WSL/Linux スタイル パスと Win32 パスの間でパスを変換します。</span><span class="sxs-lookup"><span data-stu-id="7f5f6-160">`/p` - translates the path between WSL/Linux style paths and Win32 paths.</span></span>
-* <span data-ttu-id="7f5f6-161">`/l` - 環境変数がパスのリストであることを示します。</span><span class="sxs-lookup"><span data-stu-id="7f5f6-161">`/l` - indicates the environment variable is a list of paths.</span></span>
-* <span data-ttu-id="7f5f6-162">`/u` - Win32 から WSL を実行する場合にのみ、この環境変数を含める必要があることを示します。</span><span class="sxs-lookup"><span data-stu-id="7f5f6-162">`/u` - indicates that this environment variable should only be included when running WSL from Win32.</span></span>
-* <span data-ttu-id="7f5f6-163">`/w` - WSL から Win32 を実行する場合にのみ、この環境変数を含める必要があることを示します。</span><span class="sxs-lookup"><span data-stu-id="7f5f6-163">`/w` - indicates that this environment variable should only be included when running Win32 from WSL.</span></span>
+* <span data-ttu-id="59a3b-164">`/p` - WSL/Linux スタイル パスと Win32 パスの間でパスを変換します。</span><span class="sxs-lookup"><span data-stu-id="59a3b-164">`/p` - translates the path between WSL/Linux style paths and Win32 paths.</span></span>
+* <span data-ttu-id="59a3b-165">`/l` - 環境変数がパスのリストであることを示します。</span><span class="sxs-lookup"><span data-stu-id="59a3b-165">`/l` - indicates the environment variable is a list of paths.</span></span>
+* <span data-ttu-id="59a3b-166">`/u` - Win32 から WSL を実行する場合にのみ、この環境変数を含める必要があることを示します。</span><span class="sxs-lookup"><span data-stu-id="59a3b-166">`/u` - indicates that this environment variable should only be included when running WSL from Win32.</span></span>
+* <span data-ttu-id="59a3b-167">`/w` - WSL から Win32 を実行する場合にのみ、この環境変数を含める必要があることを示します。</span><span class="sxs-lookup"><span data-stu-id="59a3b-167">`/w` - indicates that this environment variable should only be included when running Win32 from WSL.</span></span>
 
-<span data-ttu-id="7f5f6-164">フラグは、必要に応じて組み合わせることができます。</span><span class="sxs-lookup"><span data-stu-id="7f5f6-164">Flags can be combined as needed.</span></span>
+<span data-ttu-id="59a3b-168">フラグは、必要に応じて組み合わせることができます。</span><span class="sxs-lookup"><span data-stu-id="59a3b-168">Flags can be combined as needed.</span></span>
 
-## <a name="disable-interop"></a><span data-ttu-id="7f5f6-165">相互運用の無効化</span><span class="sxs-lookup"><span data-stu-id="7f5f6-165">Disable Interop</span></span>
+## <a name="disable-interoperability"></a><span data-ttu-id="59a3b-169">相互運用性の無効化</span><span class="sxs-lookup"><span data-stu-id="59a3b-169">Disable interoperability</span></span>
 
-<span data-ttu-id="7f5f6-166">ユーザーは、ルートとして次のコマンドを実行することで、1 つの WSL セッションに対して Windows バイナリを実行する機能を無効にできます。</span><span class="sxs-lookup"><span data-stu-id="7f5f6-166">Users may disable the ability to run Windows binaries for a single WSL session by running the following command as root:</span></span>
+<span data-ttu-id="59a3b-170">ユーザーは、ルートとして次のコマンドを実行することで、1 つの WSL セッションに対して Windows ツールを実行する機能を無効にできます。</span><span class="sxs-lookup"><span data-stu-id="59a3b-170">Users may disable the ability to run Windows tools for a single WSL session by running the following command as root:</span></span>
 
-``` BASH
-$ echo 0 > /proc/sys/fs/binfmt_misc/WSLInterop
+```bash
+echo 0 > /proc/sys/fs/binfmt_misc/WSLInterop
 ```
 
-<span data-ttu-id="7f5f6-167">Windows バイナリを再び有効にするには、すべての WSL セッションを終了して bash.exe を再実行するか、ルートとして次のコマンドを実行します。</span><span class="sxs-lookup"><span data-stu-id="7f5f6-167">To reenable Windows binaries either exit all WSL sessions and re-run bash.exe or run the following command as root:</span></span>
+<span data-ttu-id="59a3b-171">Windows バイナリを再び有効にするには、すべての WSL セッションを終了して bash.exe を再実行するか、ルートとして次のコマンドを実行します。</span><span class="sxs-lookup"><span data-stu-id="59a3b-171">To re-enable Windows binaries, exit all WSL sessions and re-run bash.exe or run the following command as root:</span></span>
 
-``` BASH
-$ echo 1 > /proc/sys/fs/binfmt_misc/WSLInterop
+```bash
+echo 1 > /proc/sys/fs/binfmt_misc/WSLInterop
 ```
 
-<span data-ttu-id="7f5f6-168">相互運用の無効化は、WSL セッション間で保持されません。新しいセッションが開始されると、相互運用は再び有効になります。</span><span class="sxs-lookup"><span data-stu-id="7f5f6-168">Disabling interop will not persist between WSL sessions -- interop will be enabled again when a new session is launched.</span></span>
+<span data-ttu-id="59a3b-172">相互運用の無効化は、WSL セッション間で保持されません。新しいセッションが開始されると、相互運用は再び有効になります。</span><span class="sxs-lookup"><span data-stu-id="59a3b-172">Disabling interop will not persist between WSL sessions -- interop will be enabled again when a new session is launched.</span></span>
 
-## <a name="creators-update-and-anniversary-update"></a><span data-ttu-id="7f5f6-169">Creators Update と Anniversary Update</span><span class="sxs-lookup"><span data-stu-id="7f5f6-169">Creators Update and Anniversary Update</span></span>
+## <a name="earlier-versions-of-windows-10"></a><span data-ttu-id="59a3b-173">Windows 10 の以前のバージョン</span><span class="sxs-lookup"><span data-stu-id="59a3b-173">Earlier versions of Windows 10</span></span>
 
-<span data-ttu-id="7f5f6-170">Fall Creators Update 以前の相互運用エクスペリエンスは、より新しい相互運用エクスペリエンスに似ていますが、いくつかの大きな違いがあります。</span><span class="sxs-lookup"><span data-stu-id="7f5f6-170">While the interop experience pre-Fall Creators Update is similar to more recent interop experiences, there are a handful of major differences.</span></span>
+<span data-ttu-id="59a3b-174">以前の Windows 10 バージョンでは、相互運用性コマンドにいくつかの違いがあります。</span><span class="sxs-lookup"><span data-stu-id="59a3b-174">There are several differences for the interoperability commands on earlier Windows 10 versions.</span></span> <span data-ttu-id="59a3b-175">Windows 10 の Creators Update (2017 年 10 月、Build 16299) バージョンまたは Anniversary Update (2016 年 8 月、Build 14393) バージョンを実行している場合は[最新の Windows バージョンに更新する](ms-settings:windowsupdate)ことをお勧めします。ただし、これが不可能な場合のために、相互運用性に関する相違点のいくつかを次にまとめてあります。</span><span class="sxs-lookup"><span data-stu-id="59a3b-175">If you're running a Creators Update (Oct 2017, Build 16299), or Anniversary Update (Aug 2016, Build 14393) version of Windows 10, we recommend you [update to the latest Windows version](ms-settings:windowsupdate), but if that's not possible, we have outlined some of the interop differences below.</span></span>
 
-<span data-ttu-id="7f5f6-171">要約すると、以下のようになります。</span><span class="sxs-lookup"><span data-stu-id="7f5f6-171">To summarize:</span></span>
+<span data-ttu-id="59a3b-176">要約:</span><span class="sxs-lookup"><span data-stu-id="59a3b-176">Summary:</span></span>
 
-* <span data-ttu-id="7f5f6-172">`bash.exe` は非推奨となり、`wsl.exe` に置き換えられました。</span><span class="sxs-lookup"><span data-stu-id="7f5f6-172">`bash.exe` has been deprecated and replaced with `wsl.exe`.</span></span>
-* <span data-ttu-id="7f5f6-173">1 つのコマンドを実行する場合の `-c` オプションは、`wsl.exe` で必要ありません。</span><span class="sxs-lookup"><span data-stu-id="7f5f6-173">`-c` option for running a single command isn't needed with `wsl.exe`.</span></span>
-* <span data-ttu-id="7f5f6-174">Windows パスは WSL `$PATH` に含まれています。</span><span class="sxs-lookup"><span data-stu-id="7f5f6-174">Windows path is included in the WSL `$PATH`</span></span>
+* <span data-ttu-id="59a3b-177">`bash.exe` は `wsl.exe` に置き換えられました。</span><span class="sxs-lookup"><span data-stu-id="59a3b-177">`bash.exe` has been replaced with `wsl.exe`.</span></span>
+* <span data-ttu-id="59a3b-178">1 つのコマンドを実行する場合の `-c` オプションは、`wsl.exe` で必要ありません。</span><span class="sxs-lookup"><span data-stu-id="59a3b-178">`-c` option for running a single command isn't needed with `wsl.exe`.</span></span>
+* <span data-ttu-id="59a3b-179">Windows パスは WSL `$PATH` に含まれています。</span><span class="sxs-lookup"><span data-stu-id="59a3b-179">Windows path is included in the WSL `$PATH`.</span></span>
+* <span data-ttu-id="59a3b-180">相互運用を無効にするプロセスは変更されていません。</span><span class="sxs-lookup"><span data-stu-id="59a3b-180">The process for disabling interop is unchanged.</span></span>
 
-<span data-ttu-id="7f5f6-175">相互運用を無効にするプロセスは変更されていません。</span><span class="sxs-lookup"><span data-stu-id="7f5f6-175">The process for disabling interop is unchanged.</span></span>
+<span data-ttu-id="59a3b-181">Linux コマンドは Windows コマンド プロンプトまたは PowerShell から実行できますが、初期の Windows バージョンでは `bash` コマンドを使用することが必要になる場合があります。</span><span class="sxs-lookup"><span data-stu-id="59a3b-181">Linux commands can be run from the Windows Command Prompt or from PowerShell, but for early Windows versions, you man need to use the `bash` command.</span></span> <span data-ttu-id="59a3b-182">たとえば、次のように入力します。</span><span class="sxs-lookup"><span data-stu-id="59a3b-182">For example:</span></span>
 
-### <a name="invoking-wsl-from-the-windows-command-line"></a><span data-ttu-id="7f5f6-176">Windows コマンド ラインからの WSL の起動</span><span class="sxs-lookup"><span data-stu-id="7f5f6-176">Invoking WSL from the Windows Command Line</span></span>
-
-<span data-ttu-id="7f5f6-177">Linux バイナリは、Windows コマンド プロンプトまたは PowerShell から起動できます。</span><span class="sxs-lookup"><span data-stu-id="7f5f6-177">Linux binaries can be invoked from the Windows Command Prompt or from PowerShell.</span></span>  <span data-ttu-id="7f5f6-178">この方法で起動されるバイナリには、次の特性があります。</span><span class="sxs-lookup"><span data-stu-id="7f5f6-178">Binaries invoked in this way have the following properties:</span></span>
-
-1. <span data-ttu-id="7f5f6-179">CMD または PowerShell プロンプトと同じ作業ディレクトリを使用します。</span><span class="sxs-lookup"><span data-stu-id="7f5f6-179">Use the same working directory as the CMD or PowerShell prompt.</span></span>
-1. <span data-ttu-id="7f5f6-180">WSL の既定のユーザーとして実行されます。</span><span class="sxs-lookup"><span data-stu-id="7f5f6-180">Run as the WSL default user.</span></span>
-1. <span data-ttu-id="7f5f6-181">呼び出し元のプロセスおよびターミナルと同じ Windows 管理者権限を持ちます。</span><span class="sxs-lookup"><span data-stu-id="7f5f6-181">Have the same Windows administrative rights as the calling process and terminal.</span></span>
-
-<span data-ttu-id="7f5f6-182">以下に例を示します。</span><span class="sxs-lookup"><span data-stu-id="7f5f6-182">Example:</span></span>
-
-```console
+```powershell
 C:\temp> bash -c "ls -la"
 ```
 
-<span data-ttu-id="7f5f6-183">この方法で呼び出された Linux コマンドは、他の Windows アプリケーションと同様に処理されます。</span><span class="sxs-lookup"><span data-stu-id="7f5f6-183">Linux commands called in this way are handled like any other Windows application.</span></span>  <span data-ttu-id="7f5f6-184">sudo、パイプ処理、ファイル リダイレクトなどが想定どおりに機能します。</span><span class="sxs-lookup"><span data-stu-id="7f5f6-184">Things such as input, piping, and file redirection work as expected.</span></span>
+<span data-ttu-id="59a3b-183">sudo、パイプ処理、ファイル リダイレクトなどが想定どおりに機能します。</span><span class="sxs-lookup"><span data-stu-id="59a3b-183">Things such as input, piping, and file redirection work as expected.</span></span>
 
-<span data-ttu-id="7f5f6-185">例:</span><span class="sxs-lookup"><span data-stu-id="7f5f6-185">Examples:</span></span>
-
-```console
-C:\temp>bash -c "sudo apt-get update"
-[sudo] password for username:
-Hit:1 https://archive.ubuntu.com/ubuntu xenial InRelease
-Get:2 https://security.ubuntu.com/ubuntu xenial-security InRelease [94.5 kB]
-```
-
-```console
-C:\temp> bash -c "ls -la" | findstr foo
-C:\temp> dir | bash -c "grep foo"
-C:\temp> bash -c "ls -la" > out.txt
-```
-
-<span data-ttu-id="7f5f6-186">`bash -c` に渡される WSL コマンドは、変更なしで WSL プロセスに転送されます。</span><span class="sxs-lookup"><span data-stu-id="7f5f6-186">The WSL commands passed into `bash -c` are forwarded to the WSL process without modification.</span></span>  <span data-ttu-id="7f5f6-187">ファイル パスは WSL 形式で指定する必要があり、関連文字をエスケープするように注意する必要があります。</span><span class="sxs-lookup"><span data-stu-id="7f5f6-187">File paths must be specified in the WSL format and care must be taken to escape relevant characters.</span></span> <span data-ttu-id="7f5f6-188">以下に例を示します。</span><span class="sxs-lookup"><span data-stu-id="7f5f6-188">Example:</span></span>
+<span data-ttu-id="59a3b-184">`bash -c` に渡される WSL コマンドは、変更なしで WSL プロセスに転送されます。</span><span class="sxs-lookup"><span data-stu-id="59a3b-184">The WSL commands passed into `bash -c` are forwarded to the WSL process without modification.</span></span>  <span data-ttu-id="59a3b-185">ファイル パスは WSL 形式で指定する必要があり、関連文字をエスケープするように注意する必要があります。</span><span class="sxs-lookup"><span data-stu-id="59a3b-185">File paths must be specified in the WSL format and care must be taken to escape relevant characters.</span></span> <span data-ttu-id="59a3b-186">例:</span><span class="sxs-lookup"><span data-stu-id="59a3b-186">Example:</span></span>
 
 ```console
 C:\temp> bash -c "ls -la /proc/cpuinfo"
--r--r--r-- 1 root root 0 Sep 28 11:28 /proc/cpuinfo
+```
 
+<span data-ttu-id="59a3b-187">または</span><span class="sxs-lookup"><span data-stu-id="59a3b-187">Or...</span></span>
+
+```powershell
 C:\temp> bash -c "ls -la \"/mnt/c/Program Files\""
-<- contents of C:\Program Files ->
 ```
 
-### <a name="invoking-windows-binaries-from-wsl"></a><span data-ttu-id="7f5f6-189">WSL からの Windows バイナリの起動</span><span class="sxs-lookup"><span data-stu-id="7f5f6-189">Invoking Windows binaries from WSL</span></span>
+<span data-ttu-id="59a3b-188">以前のバージョンの Windows 10 の WSL ディストリビューションから Windows ツールを呼び出す場合は、ディレクトリ パスを指定する必要があります。</span><span class="sxs-lookup"><span data-stu-id="59a3b-188">When calling a Windows tool from a WSL distribution in an earlier version of Windows 10, you will need to specify the directory path.</span></span> <span data-ttu-id="59a3b-189">たとえば、WSL コマンド ラインから次のように入力します。</span><span class="sxs-lookup"><span data-stu-id="59a3b-189">For example, from your WSL command line, enter:</span></span>
 
-<span data-ttu-id="7f5f6-190">Windows Subsystem for Linux では、WSL コマンド ラインから Windows バイナリを直接起動することができます。</span><span class="sxs-lookup"><span data-stu-id="7f5f6-190">The Windows Subsystem for Linux can invoke Windows binaries directly from the WSL command line.</span></span>  <span data-ttu-id="7f5f6-191">この方法で実行されるアプリケーションには、次の特性があります。</span><span class="sxs-lookup"><span data-stu-id="7f5f6-191">Applications run this way have the following properties:</span></span>
-
-1. <span data-ttu-id="7f5f6-192">作業ディレクトリを WSL コマンド プロンプトとして保持します。ただし、以降で説明するシナリオを除きます。</span><span class="sxs-lookup"><span data-stu-id="7f5f6-192">Retain the working directory as the WSL command prompt except in the scenario explained below.</span></span>
-1. <span data-ttu-id="7f5f6-193">`bash.exe` プロセスと同じアクセス許可権限を持ちます。</span><span class="sxs-lookup"><span data-stu-id="7f5f6-193">Have the same permission rights as the `bash.exe` process.</span></span> 
-1. <span data-ttu-id="7f5f6-194">アクティブな Windows ユーザーとして実行されます。</span><span class="sxs-lookup"><span data-stu-id="7f5f6-194">Run as the active Windows user.</span></span>
-1. <span data-ttu-id="7f5f6-195">CMD プロンプトから直接実行されたかのように、Windows タスク マネージャーに表示されます。</span><span class="sxs-lookup"><span data-stu-id="7f5f6-195">Appear in the Windows Task Manager as if directly executed from the CMD prompt.</span></span>
-
-<span data-ttu-id="7f5f6-196">以下に例を示します。</span><span class="sxs-lookup"><span data-stu-id="7f5f6-196">Example:</span></span>
-
-``` BASH
-$ /mnt/c/Windows/System32/notepad.exe
+```bash
+/mnt/c/Windows/System32/notepad.exe
 ```
 
-<span data-ttu-id="7f5f6-197">WSL では、これらの実行可能ファイルはネイティブの Linux 実行可能ファイルと同様に処理されます。</span><span class="sxs-lookup"><span data-stu-id="7f5f6-197">In WSL, these executables are handled similar to native Linux executables.</span></span>  <span data-ttu-id="7f5f6-198">これは、Linux パスへのディレクトリの追加や、コマンド間でのパイプ処理が想定どおりに機能することを意味します。</span><span class="sxs-lookup"><span data-stu-id="7f5f6-198">This means adding directories to the Linux path and piping between commands works as expected.</span></span>  <span data-ttu-id="7f5f6-199">例:</span><span class="sxs-lookup"><span data-stu-id="7f5f6-199">Examples:</span></span>
+<span data-ttu-id="59a3b-190">WSL では、これらの実行可能ファイルはネイティブの Linux 実行可能ファイルと同様に処理されます。</span><span class="sxs-lookup"><span data-stu-id="59a3b-190">In WSL, these executables are handled similar to native Linux executables.</span></span>  <span data-ttu-id="59a3b-191">これは、Linux パスへのディレクトリの追加や、コマンド間でのパイプ処理が想定どおりに機能することを意味します。</span><span class="sxs-lookup"><span data-stu-id="59a3b-191">This means adding directories to the Linux path and piping between commands works as expected.</span></span>  <span data-ttu-id="59a3b-192">たとえば、次のように入力します。</span><span class="sxs-lookup"><span data-stu-id="59a3b-192">For example:</span></span>
 
-``` BASH
-$ export PATH=$PATH:/mnt/c/Windows/System32
-$ notepad.exe
-$ ipconfig.exe | grep IPv4 | cut -d: -f2
-$ ls -la | findstr.exe foo.txt
-$ cmd.exe /c dir
+```bash
+export PATH=$PATH:/mnt/c/Windows/System32
+```
+<span data-ttu-id="59a3b-193">または</span><span class="sxs-lookup"><span data-stu-id="59a3b-193">Or</span></span>
+
+```bash
+ipconfig.exe | grep IPv4 | cut -d: -f2
 ```
 
-<span data-ttu-id="7f5f6-200">Windows バイナリは、ファイル拡張子を含み、ファイルの大文字と小文字が一致し、実行可能である必要があります。</span><span class="sxs-lookup"><span data-stu-id="7f5f6-200">The Windows binary must include the file extension, match the file case, and be executable.</span></span>  <span data-ttu-id="7f5f6-201">バッチ スクリプトや `dir` などのコマンドを含む非実行可能ファイルは、`/mnt/c/Windows/System32/cmd.exe /C` コマンドを使用して実行できます。</span><span class="sxs-lookup"><span data-stu-id="7f5f6-201">Non-executables including batch scripts and command like `dir` can be run with `/mnt/c/Windows/System32/cmd.exe /C` command.</span></span>
+<span data-ttu-id="59a3b-194">Windows バイナリは、ファイル拡張子を含み、ファイルの大文字と小文字が一致し、実行可能である必要があります。</span><span class="sxs-lookup"><span data-stu-id="59a3b-194">The Windows binary must include the file extension, match the file case, and be executable.</span></span>  <span data-ttu-id="59a3b-195">バッチ スクリプトや `dir` などのコマンドを含む非実行可能ファイルは、`/mnt/c/Windows/System32/cmd.exe /C` コマンドを使用して実行できます。</span><span class="sxs-lookup"><span data-stu-id="59a3b-195">Non-executables including batch scripts and command like `dir` can be run with `/mnt/c/Windows/System32/cmd.exe /C` command.</span></span> <span data-ttu-id="59a3b-196">たとえば、次のように入力します。</span><span class="sxs-lookup"><span data-stu-id="59a3b-196">For example:</span></span>
 
-<span data-ttu-id="7f5f6-202">例:</span><span class="sxs-lookup"><span data-stu-id="7f5f6-202">Examples:</span></span>
-
-``` BASH
-$ /mnt/c/Windows/System32/cmd.exe /C dir
-$ /mnt/c/Windows/System32/PING.EXE www.microsoft.com
+```bash
+/mnt/c/Windows/System32/cmd.exe /C dir
 ```
 
-<span data-ttu-id="7f5f6-203">パラメーターは、変更されずに Windows バイナリに渡されます。</span><span class="sxs-lookup"><span data-stu-id="7f5f6-203">Parameters are passed to the Windows binary unmodified.</span></span>  
+## <a name="additional-resources"></a><span data-ttu-id="59a3b-197">その他の資料</span><span class="sxs-lookup"><span data-stu-id="59a3b-197">Additional resources</span></span>
 
-<span data-ttu-id="7f5f6-204">たとえば、次のコマンドによって `C:\temp\foo.txt` で `notepad.exe` が開きます。</span><span class="sxs-lookup"><span data-stu-id="7f5f6-204">As an example, the following commands will open `C:\temp\foo.txt` in `notepad.exe`:</span></span>
-
-``` BASH
-$ notepad.exe "C:\temp\foo.txt"
-$ notepad.exe C:\\temp\\foo.txt
-```
-
-<span data-ttu-id="7f5f6-205">Windows アプリケーションを使用して、VolFs にあるファイル (`/mnt/<x>` の下にないファイル) を変更することはサポートされていません。</span><span class="sxs-lookup"><span data-stu-id="7f5f6-205">Modifying files located on VolFs (files not under `/mnt/<x>`) with a Windows application is not supported.</span></span>  <span data-ttu-id="7f5f6-206">既定では、WSL は Windows バイナリの作業ディレクトリを現在の WSL ディレクトリとして保持しようとしますが、作業ディレクトリが VolFs にある場合はインスタンス作成ディレクトリに戻ります。</span><span class="sxs-lookup"><span data-stu-id="7f5f6-206">By default, WSL attempts to keep the working directory of the Windows binary as the current WSL directory, but will fall back on the instance creation directory if the working directory is on VolFs.</span></span>
-
-<span data-ttu-id="7f5f6-207">たとえば、`bash.exe` が最初に `C:\temp` から起動され、現在の WSL ディレクトリがユーザーのホームに変更されているとします。</span><span class="sxs-lookup"><span data-stu-id="7f5f6-207">As an example; `bash.exe` is initially launched from `C:\temp` and the current WSL directory is changed to the user’s home.</span></span>  <span data-ttu-id="7f5f6-208">`notepad.exe` がユーザーのホーム ディレクトリからが呼び出されると、WSL は notepad.exe の作業ディレクトリとして `C:\temp` に自動的に戻ります。</span><span class="sxs-lookup"><span data-stu-id="7f5f6-208">When `notepad.exe` is called from the user’s home directory, WSL automatically reverts to `C:\temp` as the notepad.exe working directory:</span></span>
-
-``` BASH
-C:\temp> bash
-/mnt/c/temp/$ cd ~
-~$ notepad.exe foo.txt
-~$ ls | grep foo.txt
-~$ exit
-exit
-
-C:\temp> dir | findstr foo.txt
-09/27/2016  02:15 PM                14 foo.txt
-```
+* [<span data-ttu-id="59a3b-198">2016 年からの相互運用性に関する WSL のブログの投稿</span><span class="sxs-lookup"><span data-stu-id="59a3b-198">WSL blog post on interoperability from 2016</span></span>](https://blogs.msdn.microsoft.com/wsl/2016/10/19/windows-and-ubuntu-interoperability/)
