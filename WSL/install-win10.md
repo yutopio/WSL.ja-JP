@@ -5,12 +5,12 @@ keywords: BashOnWindows, bash, wsl, windows, linux 用 windows サブシステ�
 ms.date: 05/12/2020
 ms.topic: article
 ms.localizationpriority: high
-ms.openlocfilehash: acb83234a90dc5e65c98518b869f29c4ecf973d8
-ms.sourcegitcommit: e6e888f2b88a2d9c105cee46e5ab5b70aa43dd80
+ms.openlocfilehash: ec24bbe6ed3ecc4413e623d12d12f9a92c6db9e6
+ms.sourcegitcommit: f0b33cdd1ce7b461e7f657d44e9798094ef55b55
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/13/2020
-ms.locfileid: "83343914"
+ms.lasthandoff: 05/20/2020
+ms.locfileid: "83683031"
 ---
 # <a name="windows-subsystem-for-linux-installation-guide-for-windows-10"></a>Windows 10 用 Windows Subsystem for Linux のインストール ガイド
 
@@ -93,13 +93,13 @@ wsl --set-default-version 2
 
 インストールされている各 Linux ディストリビューションに割り当てられている WSL バージョンを確認するには、PowerShell コマンド ラインを開き、次のコマンドを入力します ([Windows ビルド 19041 以上](ms-settings:windowsupdate)でのみ使用可能): `wsl -l -v`
 
-```bash
+```powershell
 wsl --list --verbose
 ```
 
 ディストリビューションで使用される WSL のバージョンを設定するには、以下を実行します。
 
-```bash
+```powershell
 wsl --set-version <distribution name> <versionNumber>
 ```
 
@@ -107,7 +107,7 @@ wsl --set-version <distribution name> <versionNumber>
 
 また、WSL 2 を既定のアーキテクチャにする場合は、次のコマンドを使用して実行できます。
 
-```bash
+```powershell
 wsl --set-default-version 2
 ```
 
