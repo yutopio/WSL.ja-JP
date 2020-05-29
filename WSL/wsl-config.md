@@ -4,12 +4,12 @@ description: Windows Subsystem for Linux で実行されている複数の Linux
 keywords: BashOnWindows, bash, wsl, windows, windows subsystem for linux, windowssubsystem, ubuntu, wsl.conf, wslconfig
 ms.date: 05/12/2020
 ms.topic: article
-ms.openlocfilehash: 914bce22b789d379420823d44d063bc84ec39ac1
-ms.sourcegitcommit: 509691ed3d42c9e0171e6a44e09003d4eb24f9ae
+ms.openlocfilehash: dc488ab988d8e158b5eff7a486a2fe707dbedfd7
+ms.sourcegitcommit: 90f7caeefe886bf6c0ba2b90c1b56b5f9795ad1b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/13/2020
-ms.locfileid: "83380429"
+ms.lasthandoff: 05/28/2020
+ms.locfileid: "84153119"
 ---
 # <a name="wsl-commands-and-launch-configurations"></a>WSL コマンドと起動構成
 
@@ -309,7 +309,7 @@ Windows ドライブ (DrvFs) にさまざまなマウント オプションを�
 
 これらのオプションは、ビルド18980以降で使用できます。
 
-| key | value | default | notes|
+| key | 値 | default | notes|
 |:----|:----|:----|:----|
 | default | string | 最初の実行時に作成された最初のユーザー名 | このキーを設定すると、最初に WSL セッションを開始したときに実行するユーザーを指定します。 |
 
@@ -336,15 +336,15 @@ processors=2 # Makes the WSL 2 VM use two virtual processors
 
 これらの設定は、WSL 2 ディストリビューションを電源にする VM に影響します。
 
-| key | value | default | notes|
+| key | 値 | default | notes|
 |:----|:----|:----|:----|
 | kernel | string | Microsoft が構築したカーネルの受信トレイ | カスタム Linux カーネルへの絶対 Windows パス。 |
 | memory | size | Windows 上の合計メモリの80% | WSL 2 VM に割り当てるメモリの量。 |
-| 状況 | number | Windows 上の同じプロセッサ数 | WSL 2 VM に割り当てるプロセッサの数。 |
+| 状況 | 数値 | Windows 上の同じプロセッサ数 | WSL 2 VM に割り当てるプロセッサの数。 |
 | localhostForwarding | boolean | `true` | WSL 2 VM のワイルドカードまたは localhost にバインドされたポートが localhost: port を介してホストから接続可能である必要があるかどうかを指定するブール値。 |
 | カーネルコマンドライン | string | 空白 | 追加のカーネルコマンドライン引数。 |
 | swap | size | Windows 上のメモリサイズの25% が最も近い GB に切り上げられます | WSL 2 VM に追加するスワップ領域の大きさ。スワップファイルがない場合は0です。 |
-| スワップ | size | %USERPROFILE%\AppData\Local\Temp\swap.vhdx | スワップバーチャルハードディスクへの絶対 Windows パス。 |
+| スワップ | string | %USERPROFILE%\AppData\Local\Temp\swap.vhdx | スワップバーチャルハードディスクへの絶対 Windows パス。 |
 
 値がのエントリは `path` 、エスケープされた円記号を含む Windows パスである必要があります。次に例を示します。`C:\\Temp\\myCustomKernel`
 
