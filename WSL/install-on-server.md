@@ -5,12 +5,12 @@ keywords: BashOnWindows, bash, wsl, windows, Linux 用 Windows サブシステ�
 ms.date: 05/12/2020
 ms.topic: article
 ms.localizationpriority: high
-ms.openlocfilehash: 86fd7de0ef45af760f46bb2a18932f513b813609
-ms.sourcegitcommit: 1b6191351bbf9e95f3c28fc67abe4bf1bcfd3336
+ms.openlocfilehash: 805b7d266020c62e0c6f58889541517d44db3726
+ms.sourcegitcommit: 90f7caeefe886bf6c0ba2b90c1b56b5f9795ad1b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/13/2020
-ms.locfileid: "83270886"
+ms.lasthandoff: 05/28/2020
+ms.locfileid: "84153076"
 ---
 # <a name="windows-server-installation-guide"></a>Windows Server インストール ガイド
 
@@ -29,7 +29,7 @@ Windows 上で Linux ディストリビューションを実行する前に、"L
 
 **100% のシステム コールの互換性とより高速な IO パフォーマンスが必要な場合は、以下を読んで WSL 2 をインストールしてください。**
 
-WSL 2 は、Windows 10、バージョン 2004、ビルド 19041 以上でのみ使用できます。 [Windows バージョンを更新](ms-settings:windowsupdate)し、5 月下旬にパブリック リリースされるまで [リリース プレビュー] リングで [Windows Insider プログラムに参加](https://insider.windows.com/insidersigninboth/)する必要があります。
+WSL 2 は、Windows 10、バージョン 2004、ビルド 19041 以上でのみ使用できます。 [Windows のバージョンを更新しなければならない](ms-settings:windowsupdate)場合があります。
 
 **WSL 1 から続ける場合は、プロンプトが表示されたらマシンを再起動し、[こちら](./install-on-server.md#download-a-linux-distribution)** に従ってインストールを続行してください
 

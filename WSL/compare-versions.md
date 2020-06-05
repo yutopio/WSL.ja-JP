@@ -5,12 +5,12 @@ keywords: BashOnWindows, bash, wsl, windows, windowssubsystem, gnu, linux, ubunt
 ms.date: 05/12/2020
 ms.topic: article
 ms.localizationpriority: high
-ms.openlocfilehash: 299caaaeb1bac60d2af780dfdd10a64b218ab1f1
-ms.sourcegitcommit: 1b6191351bbf9e95f3c28fc67abe4bf1bcfd3336
+ms.openlocfilehash: aa656d2e5a301d3f5519065246ba99941e74f642
+ms.sourcegitcommit: 53e6a01cbb989dc1aeaba465af4730afe71beb40
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/13/2020
-ms.locfileid: "83270856"
+ms.lasthandoff: 06/01/2020
+ms.locfileid: "84256687"
 ---
 # <a name="comparing-wsl-2-and-wsl-1"></a>WSL 2 と WSL 1 の比較
 
@@ -28,12 +28,15 @@ Linux 用 Windows サブシステムを新しいバージョンに更新する�
  マネージド VM| ❌ | ✅
  完全な Linux カーネル| ❌ |✅
  システム コールの完全な互換性| ❌ | ✅
- VMware と VirtualBox での実行| ✅ |❌
+ 現在のバージョンの VMware と VirtualBox での実行| ✅ | ❌
  OS ファイル システム間でのパフォーマンス| ✅ | ❌
 
 WSL 1 を既に使用していて、WSL 2 にアップグレードする場合は、 手順に従って [WSL 2 に更新](./install-win10.md#update-to-wsl-2)してください。
 
-WSL 2 は、Windows 10、バージョン 2004、ビルド 19041 以上でのみ使用できます。 [Windows バージョンを更新](ms-settings:windowsupdate)し、5 月下旬にパブリック リリースされるまで [リリース プレビュー] リングで [Windows Insider プログラムに参加](https://insider.windows.com/insidersigninboth/)する必要があります。
+WSL 2 は、Windows 10、バージョン 2004、ビルド 19041 以上でのみ使用できます。 Windows のバージョンを確認するには **Windows ロゴ キー + R** キーを押します。次に「**winver**」と入力し、 **[OK]** を選択します (または、Windows コマンド プロンプトで `ver` コマンドを入力します)。 [最新の Windows バージョンに更新する](ms-settings:windowsupdate)必要がある場合があります。 19041 より前のビルドでは、WSL はまったくサポートされていません。
+
+> [!NOTE]
+> WSL 2 は[ VMware のプレビュー バージョン](https://blogs.vmware.com/workstation/2020/01/vmware-workstation-tech-preview-20h1.html)および [VirtualBox 6.x](https://www.virtualbox.org/wiki/Changelog-6.0) で動作します。
 
 ## <a name="use-the-linux-file-system-for-faster-performance"></a>Linux ファイル システムを使用してパフォーマンスを向上させる
 

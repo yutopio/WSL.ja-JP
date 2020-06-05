@@ -1,18 +1,16 @@
 ---
 title: Linux 用 Windows サブシステム (WSL) ディストリビューションを手動でダウンロードする
 description: Linux 用 Windows サブシステム ディストリビューションを手動でダウンロードする方法について説明します。
-keywords: BashOnWindows, bash, wsl, windows, Linux 用 Windows サブシステム, WSL, windows サブシステム, distro, ubuntu, openSUSE, SLES, debian, kali
-ms.date: 07/24/2018
+keywords: wsl, linux 用 windows subsystem, 手動インストール, 手動でインストール, microsoft ストア, windows 10, curl, Add-AppxPackage, 長期的なサービス, LTSC
+ms.date: 05/28/2020
 ms.topic: article
-ms.assetid: 9281ffa2-4fa9-4078-bf6f-b51c967617e3
-ms.custom: seodec18
-ms.localizationpriority: high
-ms.openlocfilehash: b1720d01d492f1dccce8c2e1d2ff430f7769a42e
-ms.sourcegitcommit: 3fb40fd65b34a5eb26b213a0df6a3b2746b7a9b4
+ms.localizationpriority: medium
+ms.openlocfilehash: 621b2619d6c62e0b6c4e53f7791fc587c1c8f878
+ms.sourcegitcommit: 09f5eb0f6062642e5c86deb1f34307ce3429163a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/12/2020
-ms.locfileid: "83235818"
+ms.lasthandoff: 05/29/2020
+ms.locfileid: "84211718"
 ---
 # <a name="manually-download-windows-subsystem-for-linux-distro-packages"></a>Linux 用 Windows サブシステム ディストリビューション パッケージを手動でダウンロードする
 
@@ -40,7 +38,7 @@ Microsoft Store アプリを使用できない場合は、以下のリンクを�
 必要に応じて、コマンド ラインから好みのディストリビューションをダウンロードすることもできます。
 
  ### <a name="download-using-powershell"></a>PowerShell を使用してダウンロードする
- PowerShell を使用してディストリビューションをダウンロードするには、[Invoke-WebRequest](https://msdn.microsoft.com/powershell/reference/5.1/microsoft.powershell.utility/invoke-webrequest) コマンドレットを使用します。 Ubuntu 16.04 をダウンロードする手順の例を次に示します。
+ PowerShell を使用してディストリビューションをダウンロードするには、[Invoke-WebRequest](https://docs.microsoft.com/powershell/module/microsoft.powershell.utility/invoke-webrequest?view=powershell-5.1) コマンドレットを使用します。 Ubuntu 16.04 をダウンロードする手順の例を次に示します。
 
 ```powershell
 Invoke-WebRequest -Uri https://aka.ms/wsl-ubuntu-1604 -OutFile Ubuntu.appx -UseBasicParsing
@@ -68,4 +66,4 @@ Add-AppxPackage .\app_name.appx
 
 Windows サーバーを使用している場合、インストール手順については、[Windows Server](install-on-server.md) のドキュメント ページを参照してください。
 
-ディストリビューションをインストールしたら、[初期化手順](initialize-distro.md)のページを参照して、新しいディストリビューションを初期化してください。
+ディストリビューションがインストールされたら、通常の手順に従って [WSL 2 に更新](./install-win10.md#update-to-wsl-2)するか、[新しいユーザー アカウントとパスワードを作成](./user-support.md)します。

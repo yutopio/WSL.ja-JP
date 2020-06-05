@@ -5,19 +5,19 @@ keywords: wsl, windows, linux カーネル, linux 用 windows サブシステム
 ms.date: 03/12/2020
 ms.topic: article
 ms.localizationpriority: high
-ms.openlocfilehash: 89e5755699938b7797aa65a5f3131f93e3e31796
-ms.sourcegitcommit: e6e888f2b88a2d9c105cee46e5ab5b70aa43dd80
+ms.openlocfilehash: 1628bea2f1bae590928b055425413e5b085dffef
+ms.sourcegitcommit: 90f7caeefe886bf6c0ba2b90c1b56b5f9795ad1b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/13/2020
-ms.locfileid: "83343834"
+ms.lasthandoff: 05/28/2020
+ms.locfileid: "84153052"
 ---
 # <a name="updating-the-wsl-2-linux-kernel"></a>WSL 2 Linux カーネルの更新
 
 WSL 2 内の Linux カーネルを手動で更新するには、次の手順に従ってください。
 
 > [!NOTE] 
-> インストーラーで WSL 1 が見つからない場合は、Linux カーネル更新プログラムのインストーラーを右クリックして [アンインストール] をクリックし、インストーラーを再実行します
+> インストーラーで WSL 1 が見つからない場合は、Linux カーネル更新プログラムのインストーラーを右クリックして [アンインストール] をクリックし、インストーラーを再実行します。
 
 ## <a name="download-the-linux-kernel-update-package"></a>Linux カーネル更新プログラム パッケージをダウンロードする
 

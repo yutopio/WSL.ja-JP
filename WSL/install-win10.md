@@ -5,12 +5,12 @@ keywords: BashOnWindows, bash, wsl, windows, linux 用 windows サブシステ�
 ms.date: 05/12/2020
 ms.topic: article
 ms.localizationpriority: high
-ms.openlocfilehash: ec24bbe6ed3ecc4413e623d12d12f9a92c6db9e6
-ms.sourcegitcommit: f0b33cdd1ce7b461e7f657d44e9798094ef55b55
+ms.openlocfilehash: 3914e8d3be84f922424cba1000ea45ea8ce22cd8
+ms.sourcegitcommit: 09f5eb0f6062642e5c86deb1f34307ce3429163a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/20/2020
-ms.locfileid: "83683031"
+ms.lasthandoff: 05/29/2020
+ms.locfileid: "84211728"
 ---
 # <a name="windows-subsystem-for-linux-installation-guide-for-windows-10"></a>Windows 10 用 Windows Subsystem for Linux のインストール ガイド
 
@@ -31,9 +31,6 @@ WSL 1 のみをインストールするには、お使いのマシンを再起�
 WSL 2 に更新するには、次の条件を満たす必要があります。
 
 - [バージョン 2004](ms-settings:windowsupdate)、**ビルド 19041** 以上に更新された Windows 10 を実行している。
-
-> [!IMPORTANT]
-> 現時点では、Windows 10、バージョン 2004 (ビルド 19041) に更新するには、[Windows Insider プログラムに参加](https://insider.windows.com/insidersigninboth/)し、[リリース プレビュー] リングを選択する必要があります。 パブリック リリースは、5 月下旬に利用できるようになる予定です。
 
 - Windows のバージョンを確認するには **Windows ロゴ キー + R** キーを押します。次に「**winver**」と入力し、 **[OK]** を選択します (または、Windows コマンド プロンプトで `ver` コマンドを入力します)。 お使いのビルドが 19041 より前の場合は、[最新の Windows バージョンに更新](ms-settings:windowsupdate)してください。 [Windows 更新アシスタントを入手する](https://www.microsoft.com/software-download/windows10)。
 
@@ -57,6 +54,9 @@ PowerShell で次のコマンドを実行して、新しい Linux ディスト�
 wsl --set-default-version 2
 ```
 
+> [!NOTE]
+> 対象のディストリビューションのサイズによっては、WSL 1 から WSL 2 への更新が完了するまでに数分かかる場合があります。
+
 ## <a name="install-your-linux-distribution-of-choice"></a>選択した Linux ディストリビューションをインストールする
 
 1. [Microsoft Store](https://aka.ms/wslstore) を開き、希望する Linux ディストリビューションを選択します。
@@ -67,6 +67,7 @@ wsl --set-default-version 2
 
     - [Ubuntu 16.04 LTS](https://www.microsoft.com/store/apps/9pjn388hp8c9)
     - [Ubuntu 18.04 LTS](https://www.microsoft.com/store/apps/9N9TNGVNDL3Q)
+    - [Ubuntu 20.04 LTS](https://www.microsoft.com/store/apps/9n6svws3rx71)
     - [openSUSE Leap 15.1](https://www.microsoft.com/store/apps/9NJFZK00FGKV)
     - [SUSE Linux Enterprise Server 12 SP5](https://www.microsoft.com/store/apps/9MZ3D1TRP8T1)
     - [SUSE Linux Enterprise Server 15 SP1](https://www.microsoft.com/store/apps/9PN498VPMF3Z)
@@ -124,7 +125,7 @@ wsl --set-default-version 2
 
 - **WslRegisterDistribution failed with error 0x8007019e (エラー0x8007019e で WslRegisterDistribution が失敗しました)**
   - Windows Subsystem for Linux オプション コンポーネントが有効になっていません。
-  - **[コントロール パネル]**  ->  **[プログラムと機能]**  ->  **[Windows の機能の有効化または無効化]** を開いて、 **[Windows Subsystem for Linux]** をチェックするか、またはこの記事の冒頭に記載した PowerShell コマンドレットを使用して有効にしてください。
+  - **[コントロール パネル]**  ->  **[プログラムと機能]**  ->  **[Windows の機能の有効化または無効化]** を開いて、 **[Linux 用 Windows サブシステム]** をチェックするか、またはこの記事の冒頭に記載した PowerShell コマンドレットを使用してください。
 
 - **インストールがエラー 0x80070003 またはエラー 0x80370102 で失敗した**
   - コンピューターの BIOS 内部で仮想化が有効になっていることを確認してください。 これを行う方法の手順は、コンピューターによって異なりますが、最も可能性が高いのは CPU 関連のオプションの下です。
