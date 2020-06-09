@@ -16,6 +16,12 @@
       href: install-on-server.md
     - name: ユーザー アカウントとパスワードを作成する
       href: user-support.md
+- name: チュートリアル
+  items:
+    - name: VS Code で作業を始める
+      href: tutorials/wsl-vscode.md
+    - name: Git で作業を始める
+      href: tutorials/wsl-git.md
 - name: 方法
   items:
     - name: 相互運用性コマンド
