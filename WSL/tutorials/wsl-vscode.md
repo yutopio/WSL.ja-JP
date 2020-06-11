@@ -1,7 +1,7 @@
 ---
 title: Windows Subsystem for Linux で VS Code の使用を開始する
 description: Windows Subsystem for Linux を使用してコードを作成およびデバッグするための VS Code を設定する方法について説明します。
-keywords: wsl、windows、windowssubsystem、gnu、linux、bash、vs code、remote extension、debug、path、visual studio
+keywords: wsl、windows、windowssubsystem、gnu、linux、bash、vs code、remote extension、debug、path、visual studio code
 ms.date: 05/28/2020
 ms.topic: article
 ms.localizationpriority: medium
@@ -43,13 +43,13 @@ Visual Studio Code をリモート WSL 拡張機能と共に使用すると、WS
 たとえば、Debian または Ubuntu を更新するには、次のように使用します。
 
 ```bash
-sudo apt-get update
+sudo apt update
 ```
 
 Wget (web サーバーからコンテンツを取得するため) および ca 証明書を追加するには (SSL ベースのアプリケーションが SSL 接続の信頼性を確認できるようにするため)、次のように入力します。
 
 ```bash
-sudo apt-get install wget ca-certificates
+sudo apt install wget ca-certificates
 ```
 
 ## <a name="open-a-wsl-project-in-visual-studio-code"></a>Visual Studio Code で WSL プロジェクトを開く
@@ -86,17 +86,17 @@ VS Code リモートで実行しているときに、[拡張機能] タブを選
 
 ## <a name="install-git-optional"></a>Git のインストール (省略可能)
 
-共同作業で開発する場合や、(GitHub のような) オープンソース サイトでプロジェクトをホストする場合のために、VS Code では [Git によるバージョン管理](https://code.visualstudio.com/docs/editor/versioncontrol#_git-support)がサポートされています。 VS Code の [ソース管理] タブでは、すべての変更が追跡され、一般的な Git コマンド (追加、コミット、プッシュ、プル) が UI に組み込まれています。
+共同作業で開発する場合や、(GitHub のような) オープンソース サイトでプロジェクトをホストする場合のために、VS Code では [Git によるバージョン管理](https://code.visualstudio.com/docs/editor/versioncontrol#_git-support)がサポートされています。 VS Code の [ソース管理] タブでは、すべての変更が追跡され、一般的な Git コマンド (追加、コミット、プッシュ、プル) が GUI に組み込まれています。
 
 Git をインストールするには、「 [Windows Subsystem For Linux で動作するように git を設定する](./wsl-git.md)」を参照してください。
 
 ## <a name="install-windows-terminal-optional"></a>Windows ターミナルをインストールする (省略可能)
 
-新しい Windows ターミナルでは、複数のタブが有効になり (コマンドプロンプト、PowerShell、または複数の Linux ディストリビューションをすばやく切り替えることができます)、カスタムキーバインド (タブを開いたり閉じたりするための独自のショートカットキーを作成する、コピーと貼り付けなど)、絵文字☺、カスタムテーマ (配色、フォントスタイルとサイズ、背景画像、 詳細については、 [Windows ターミナルのドキュメント](https://docs.microsoft.com/windows/terminal)を参照してください。
+新しい Windows Terminalでは、複数のタブが有効になり (コマンドプロンプト、PowerShell、または複数の Linux ディストリビューションをすばやく切り替えることができます)、カスタムキーバインド (タブを開いたり閉じたりするための独自のショートカットキーを作成する、コピーと貼り付けなど)、絵文字☺、カスタムテーマ (配色、フォントスタイルとサイズ、背景画像、 詳細については、 [Windows ターミナルのドキュメント](https://docs.microsoft.com/windows/terminal)を参照してください。
 
-1. [Microsoft Store で Windows ターミナル](https://www.microsoft.com/store/apps/9n0dx20hk701)を取得する: ストアを使用してをインストールすることにより、更新プログラムは自動的に処理されます。
+1. [Microsoft Store で Windows Terminal](https://www.microsoft.com/store/apps/9n0dx20hk701)を取得する: ストアを使用してをインストールすることにより、更新プログラムは自動的に処理されます。 また､ [Windows Terminal Preview](https://www.microsoft.com/store/apps/9n8g5rfz9xk3) というプレビュー版も存在します｡
 
-2. インストールが完了したら、Windows ターミナルを開き、 **[設定]** を選択して、`profile.json` ファイルによってターミナルをカスタマイズします。
+2. インストールが完了したら、Windows Terminalを開き、 **[設定]** を選択して、`profile.json` ファイルを編集してターミナルをカスタマイズします。
 
 ## <a name="additional-resources"></a>その他のリソース
 
