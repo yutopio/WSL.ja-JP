@@ -22,7 +22,9 @@ Windows Subsystem for Linux を使用すると、開発者は、仮想マシン�
 * [Microsoft Store から](https://aka.ms/wslstore)好みの GNU/Linux ディストリビューションを選択します。
 * `grep`、`sed`、`awk` などの一般的なコマンドライン ツールや、その他の ELF-64 バイナリを実行します。
 * 以下のような Bash シェル スクリプトや GNU/Linux コマンド ライン アプリケーションを実行します。  
-    * ツール: vim、emacs、tmux *言語: [Node.js](https://docs.microsoft.com/windows/nodejs/setup-on-wsl2)、JavaScript、[Python](https://docs.microsoft.com/windows/python/web-frameworks)、Ruby、C/C++、C# & F#、Rust、Go など *サービス: SSHD、MySQL、Apache、lighttpd、[MongoDB](https://docs.microsoft.com/windows/nodejs/databases)、[PostgreSQL](https://docs.microsoft.com/windows/python/databases)。
+    * ツール: vim、emacs、tmux 
+    * 言語: [Node.js](https://docs.microsoft.com/windows/nodejs/setup-on-wsl2)、JavaScript、[Python](https://docs.microsoft.com/windows/python/web-frameworks)、Ruby、C/C++、C# & F#、Rust、Go など
+    * サービス: SSHD、MySQL、Apache、lighttpd、[MongoDB](https://docs.microsoft.com/windows/nodejs/databases)、[PostgreSQL](https://docs.microsoft.com/windows/python/databases)。
 * 独自の GNU/Linux ディストリビューション パッケージ マネージャーを使用して、追加のソフトウェアをインストールします。
 * Unix に似たコマンド ライン シェルを使用して Windows アプリケーションを起動します。
 * Windows で GNU/Linux アプリケーションを起動します。
