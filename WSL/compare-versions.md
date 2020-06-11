@@ -173,5 +173,26 @@ WSL 2 VHD では、ext4 ファイル システムが使用されます。 この
     * `sudo resize2fs /dev/sdXX`
     * 前の手順でコピーした値を使用します。 resize2fs のインストールが必要になる場合もあります: `apt install resize2fs`
 
+## <a name="optimize-the-size-of-your-wsl-2-virtual-hardware-disk"></a>WSL 2 仮想ハードウェア ディスクのサイズの最適化
+
+WSL 2 では、ディストリビューションのディスク使用状況に合わせて､仮想ハードウェア ディスク (VHD) が 可変的に 拡張されます｡ ですが､自動的に収縮(最適化)されることはありません｡
+
+WSL 2 の､増大した 仮想ハードウェア ディスク (VHD) を最適化するには､ 次のようにします｡
+
+1. 次のコマンドを使用して、すべての WSL インスタンスを終了します: `wsl --shutdown`
+
+2. ディストリビューションのインストール パッケージ名 ("PackageFamilyName") を見つけます
+    * PowerShell を使用して、次のコマンドを入力します ("distro" はディストリビューション名です):
+    * `Get-AppxPackage -Name "*<distro>*" | Select PackageFamilyName`
+
+3. WSL 2 のインストールで使用される VHD ファイルの `fullpath` を特定します。これが `pathToVHD` になります。
+     * `%LOCALAPPDATA%\Packages\<PackageFamilyName>\LocalState\<disk>.vhdx`
+     
+4. 次の Powershell コマンドを実行して、WSL 2 VHD のサイズを変更します。
+   * Powershell を開き、次のように入力します。
+      * `Optimize-VHD -Mode Full -Path "<pathToVHD>"`
+      > 引数Modeなど､詳しくは[Optmize-VHD](https://docs.microsoft.com/en-us/powershell/module/hyper-v/optimize-vhd?view=win10-ps#parameters)のドキュメントを参照してください｡
+
+
 > [!NOTE]
 > 通常、Windows ツールまたはエディターを使用して、AppData フォルダー内にある WSL 関連ファイルを変更、移動、またはアクセスしないでください。 そうすると、Linux ディストリビューションが破損する可能性があります。
