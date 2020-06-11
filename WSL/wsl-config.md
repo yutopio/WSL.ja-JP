@@ -19,10 +19,10 @@ WSL を[インストール](install-win10.md)した Linux ディストリビュ�
 
 1. Windows の [スタート] メニューにアクセスし、インストールされているディストリビューションの名前を入力して、Linux ディストリビューションを開きます。 たとえば、"Ubuntu" のようになります。
 2. Windows のコマンドプロンプトまたは PowerShell から、インストールされている配布の名前を入力します。 例: `ubuntu`
-3. Windows コマンドプロンプトまたは PowerShell から、現在のコマンドライン内で既定の Linux ディストリビューションを開くには、「」と入力し `wsl.exe` ます。
-4. Windows コマンドプロンプトまたは PowerShell から、現在のコマンドライン内で既定の Linux ディストリビューションを開くには、「」と入力し `wsl [command]` ます。
+3. Windows コマンドプロンプトまたは PowerShell から、現在のコマンドライン内で既定の Linux ディストリビューションを開くには、`wsl.exe`と入力します。
+4. Windows コマンドプロンプトまたは PowerShell から、現在のコマンドライン内で既定の Linux ディストリビューションでコマンドを実行するには、`wsl [command]`と入力します。
 
-どの方法を使用すべきかは、作業内容によって異なります。 Windows プロンプトまたは PowerShell ウィンドウ内で WSL コマンドラインを開いて終了する場合は、コマンドを入力します `exit` 。
+どの方法を使用すべきかは、作業内容によって異なります。Windows プロンプトまたは PowerShell ウィンドウ内で WSL コマンドラインを開いて終了する場合は、`exit`コマンドを入力します。
 
 ## <a name="launch-wsl-by-distribution"></a>ディストリビューションによって WSL を起動する
 
@@ -41,39 +41,34 @@ WSL を[インストール](install-win10.md)した Linux ディストリビュ�
 **例: (PowerShell を使用)**
 
 ```console
-PS C:\Users\sarah> pwd
+PS C:\Users\username> pwd
 
 Path
 ----
-C:\Users\sarah
+C:\Users\username
 
-PS C:\Users\sarah> ubuntu
+PS C:\Users\username> ubuntu
 
-scooley@scooley-elmer:~$ pwd
-/home/scooley
-scooley@scooley-elmer:~$ exit
+user@host:~$ pwd
+/home/user
+user@host:~$ exit
 logout
 
-PS C:\Users\sarah>
+PS C:\Users\username>
 ```
 
 ### <a name="wsl-and-wsl-command"></a>wsl および wsl [コマンド]
 
-コマンド ラインから WSL を実行する最善の方法は、`wsl.exe` を使用することです。
+コマンドラインから WSL を実行する最善の方法は、`wsl.exe` を使用することです。
 
 **例: (PowerShell を使用)**
 
 ```console
-PS C:\Users\sarah> pwd
+PS C:\Users\username> wsl
 
-Path
-----
-C:\Users\sarah
+user@host:/mnt/c/Users/username$ exit
 
-PS C:\Users\sarah> wsl
-
-scooley@scooley-elmer:/mnt/c/Users/sarah$ pwd
-/mnt/c/Users/sarah
+PS C:\Users\username>
 ```
 
 `wsl` は、現在の作業ディレクトリを適切に維持するだけでなく、1 つのコマンドを Windows コマンドとともに実行できます。
@@ -81,24 +76,24 @@ scooley@scooley-elmer:/mnt/c/Users/sarah$ pwd
 **例: (PowerShell を使用)**
 
 ```console
-PS C:\Users\sarah> Get-Date
+PS C:\Users\username> Get-Date
 
 Sunday, March 11, 2018 7:54:05 PM
 
-PS C:\Users\sarah> wsl
-scooley@scooley-elmer:/mnt/c/Users/sarah$ date
+PS C:\Users\username> wsl
+user@host:/mnt/c/Users/username$ date
 Sun Mar 11 19:55:47 DST 2018
-scooley@scooley-elmer:/mnt/c/Users/sarah$ exit
-logout
-
-PS C:\Users\sarah> wsl date
+user@host:/mnt/c/Users/username$ exit
+ 
+PS C:\Users\username> wsl date
 Sun Mar 11 19:56:57 DST 2018
+PS C:\Users\username>
 ```
 
 **例: (PowerShell を使用)**
 
 ```console
-PS C:\Users\sarah> Get-VM
+PS C:\Users\username> Get-VM
 
 Name            State CPUUsage(%) MemoryAssigned(M) Uptime   Status
 ----            ----- ----------- ----------------- ------   ------
@@ -108,15 +103,14 @@ Ubuntu (bionic) Off   0           0                 00:00:00 Opera...
 Windows         Off   0           0                 00:00:00 Opera...
 
 
-PS C:\Users\sarah> Get-VM | wsl grep "Ubuntu"
+PS C:\Users\username> Get-VM | wsl grep "Ubuntu"
 Ubuntu          Off   0           0                 00:00:00 Opera...
 Ubuntu (bionic) Off   0           0                 00:00:00 Opera...
-PS C:\Users\sarah>
 ```
 
 ## <a name="managing-multiple-linux-distributions"></a>複数の Linux ディストリビューションの管理
 
-Windows 10 バージョン 1903[以降](ms-settings:windowsupdate)では、を使用して `wsl.exe` Windows Subsystem for Linux (wsl) でのディストリビューションを管理できます。これには、使用可能なディストリビューションの一覧表示、既定の配布の設定、およびディストリビューションのアンインストールが含まれます。
+Windows 10 バージョン 1903[以降](ms-settings:windowsupdate)では、 `wsl.exe` を使用してWindows Subsystem for Linux (WSL) でのディストリビューションを管理できます。これには、使用可能なディストリビューションの一覧表示、既定の配布の設定、およびディストリビューションのアンインストールが含まれます。
 
 各 Linux ディストリビューションは、個別に独自の構成を管理します。 ディストリビューション固有のコマンドを確認するには、`[distro.exe] /?` を実行します。  たとえば、「 `ubuntu /?` 」のように指定します。
 
@@ -125,9 +119,11 @@ Windows 10 バージョン 1903[以降](ms-settings:windowsupdate)では、を�
 `wsl -l` , `wsl --list`  
 WSL で利用可能な Linux ディストリビューションを一覧表示します。  一覧表示されているディストリビューションは、インストールされており、使用できる状態です。
 
-`wsl --list --all`現在使用できないすべてのディストリビューションを含む、すべてのディストリビューションを一覧表示します。  インストールのプロセス中、アンインストールのプロセス中、または破損した状態の可能性があります。  
+`wsl --list --all`
+現在使用できないすべてのディストリビューションを含む、すべてのディストリビューションを一覧表示します。  インストールのプロセス中、アンインストールのプロセス中、または破損した状態の可能性があります。  
 
-`wsl --list --running`現在実行中のすべてのディストリビューションを一覧表示します。
+`wsl --list --running`
+現在実行中のすべてのディストリビューションを一覧表示します。
 
 ## <a name="set-a-default-distribution"></a>既定のディストリビューションの設定
 
@@ -142,11 +138,12 @@ WSL で利用可能な Linux ディストリビューションを一覧表示し
 
 ## <a name="unregister-and-reinstall-a-distribution"></a>ディストリビューションの登録解除と再インストール
 
-Linux ディストリビューションは Microsoft Store を介してインストールできますが、そのストアを介してアンインストールすることはできません。  WSL Config を使用すると、ディストリビューションの登録解除/アンインストールを行うことができます。
+Linux ディストリビューションは Microsoft Store を介してインストールできますが、WSL Config を使用すると、ディストリビューションの登録解除/アンインストールを行うことができます。
 
-登録を解除すると、ディストリビューションを再インストールすることもできます。
+登録を解除しても、ディストリビューションを再インストールすることができます。
 
-> **注意:** 登録が解除されると、その配布に関連付けられているすべてのデータ、設定、およびソフトウェアが完全に失われます。  ストアから再インストールすると、ディストリビューションのクリーン コピーがインストールされます。
+> [!NOTE]
+> 登録が解除されると、その配布に関連付けられているすべてのデータ、設定、およびソフトウェアが完全に失われます。  ストアから再インストールすると、ディストリビューションのクリーン コピーがインストールされます。
 
 `wsl --unregister <DistributionName>`  
 ディストリビューションを再インストールまたはクリーンアップできるように、WSL からその登録が解除されます。
@@ -265,7 +262,7 @@ WSL では、`automount` と `network` の 2 つのセクションがサポー�
 | root       | String                         | `/mnt/`      | 固定ドライブが自動的にマウントされるディレクトリを設定します。 たとえば、`/windir/` に WSL のディレクトリがあり、それをルートとして指定すると、固定ドライブは `/windir/c` でマウントされることが予想されます。                                                                                              |
 | オプション    | 値のコンマ区切りのリスト | 空の文字列 | この値は、既定の DrvFs マウント オプション文字列に追加されます。 **DrvFs 固有のオプションのみを指定できます。** マウント バイナリが通常、フラグに解析するオプションはサポートされていません。 これらのオプションを明示的に指定する場合は、それを行う対象のドライブすべてを /etc/fstab に含める必要があります。 |
 
-既定では、WSL は uid と gid を既定のユーザーの値に設定します (Ubuntu ディストリビューションでは、既定のユーザーは uid = 1000、gid = 1000 で作成されます)。 ユーザーがこのキーを使用して gid または uid オプションを明示的に指定した場合、関連する値は上書きされます。 それ以外の場合は、既定値が常に追加されます。
+WSLの既定では、は uid と gid を既定のユーザーの値に設定します (Ubuntu ディストリビューションでは、既定のユーザーは uid = 1000、gid = 1000 で作成されます)。 ユーザーがこのキーを使用して gid または uid オプションを明示的に指定した場合、関連する値は上書きされます。 それ以外の場合は、既定値が常に追加されます。
 
 **注:** これらのオプションは、自動的にマウントされたドライブすべてのマウント オプションとして適用されます。 特定のドライブのみのオプションを変更するには、代わりに /etc/fstab を使用します。
 
@@ -338,14 +335,14 @@ processors=2 # Makes the WSL 2 VM use two virtual processors
 
 | key | 値 | default | notes|
 |:----|:----|:----|:----|
-| kernel | string | Microsoft が構築したカーネルの受信トレイ | カスタム Linux カーネルへの絶対 Windows パス。 |
+| kernel | string | Microsoft が構築したカーネルへのパス | カスタム Linux カーネルへの絶対 Windows パス。 |
 | memory | size | Windows 上の合計メモリの80% | WSL 2 VM に割り当てるメモリの量。 |
-| 状況 | 数値 | Windows 上の同じプロセッサ数 | WSL 2 VM に割り当てるプロセッサの数。 |
+| processors | number | Windows 上の同じプロセッサ数 | WSL 2 VM に割り当てるプロセッサの数。 |
 | localhostForwarding | boolean | `true` | WSL 2 VM のワイルドカードまたは localhost にバインドされたポートが localhost: port を介してホストから接続可能である必要があるかどうかを指定するブール値。 |
-| カーネルコマンドライン | string | 空白 | 追加のカーネルコマンドライン引数。 |
+| kernelCommandLine	 | string | なし | 追加のカーネルコマンドライン引数。 |
 | swap | size | Windows 上のメモリサイズの25% が最も近い GB に切り上げられます | WSL 2 VM に追加するスワップ領域の大きさ。スワップファイルがない場合は0です。 |
-| スワップ | string | %USERPROFILE%\AppData\Local\Temp\swap.vhdx | スワップバーチャルハードディスクへの絶対 Windows パス。 |
+| swapFile | string | %USERPROFILE%\AppData\Local\Temp\swap.vhdx | スワップバーチャルハードディスクへの絶対 Windows パス。 |
 
-値がのエントリは `path` 、エスケープされた円記号を含む Windows パスである必要があります。次に例を示します。`C:\\Temp\\myCustomKernel`
+ `path` 値を持つエントリは、エスケープされた円記号を含む Windows パスである必要があります。次に例を示します。`C:\\Temp\\myCustomKernel`
 
-値を持つエントリは、 `size` サイズの後に単位 (やなど) が続く必要があり `8GB` `512MB` ます。
+ `size` 値を持つエントリは、サイズの後に単位 ( `8GB` や `512MB` など) が続く必要があります。
