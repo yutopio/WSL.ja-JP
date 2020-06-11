@@ -5,12 +5,12 @@ keywords: wsl、windows、windowssubsystem、gnu、linux、bash、git、github�
 ms.date: 06/04/2020
 ms.topic: article
 ms.localizationpriority: medium
-ms.openlocfilehash: 94166371fc0928d6be3b3cfd6cb595c6fac76608
-ms.sourcegitcommit: d95bdbc2fea991ba14a4c9ec53ee0ec19d6bbdb4
+ms.openlocfilehash: 687a12186d11343a2d4131e0fdeeef3bcec902fb
+ms.sourcegitcommit: 5d3898772851e6ac9a310f219cc0d71278f95d22
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/05/2020
-ms.locfileid: "84457794"
+ms.lasthandoff: 06/10/2020
+ms.locfileid: "84671012"
 ---
 # <a name="get-started-using-git-on-windows-subsystem-for-linux"></a>Windows Subsystem for Linux で Git の使用を開始する
 
@@ -18,12 +18,12 @@ Git は、最も一般的に使用されるバージョン管理システムで�
 
 ## <a name="git-can-be-installed-on-windows-and-on-wsl"></a>Git は、Windows および WSL にインストールできます。
 
-重要な考慮事項: WSL を有効にして Linux ディストリビューションをインストールする場合は、Windows NTFS C:\ から分離した新しいファイルシステムをインストールします。コンピューター上のドライブ。 Linux では、ドライブに文字が指定されていません。 これらにはマウントポイントが指定されています。 ファイルシステムのルートは、 `/` ルートパーティションのマウントポイント、または WSL の場合はフォルダーです。 すべてが同じドライブであるとは限りません `/` 。 たとえば、ラップトップには、2つのバージョンの Ubuntu (20.04 と 18.01) と Debian がインストールされています。 これらの配布を開いた場合は、コマンドを使用してルートディレクトリを選択 `cd ~` し、コマンドを入力すると、 `explorer.exe .` Windows ファイルエクスプローラーが開き、その配布のディレクトリパスが表示されます。
+重要な考慮事項: WSL を有効にして Linux ディストリビューションをインストールする場合は、Windows NTFS C:\ から分離した新しいファイルシステムをインストールします。コンピューター上のドライブ。 Linux では、ドライブに文字が指定されていません。 これらにはマウントポイントが指定されています。 ファイルシステムのルートは、 `/` ルートパーティションのマウントポイント、または WSL の場合はフォルダーです。 すべてが同じドライブであるとは限りません `/` 。 たとえば、ラップトップには、2つのバージョンの Ubuntu (20.04 と 18.04) と Debian がインストールされています。 これらの配布を開いた場合は、コマンドを使用してルートディレクトリを選択 `cd ~` し、コマンドを入力すると、 `explorer.exe .` Windows ファイルエクスプローラーが開き、その配布のディレクトリパスが表示されます。
 
 | Linux ディストリビューション | ホームフォルダーにアクセスするための Windows パス |
 | ----------- | ----------- |
 | Ubuntu 20.04 | `\\wsl$\Ubuntu-20.04\home\username` |
-| Ubuntu 18.01 | `\\wsl$\Ubuntu-18.04\home\username` |
+| Ubuntu 18.04 | `\\wsl$\Ubuntu-18.04\home\username` |
 | Debian | `\\wsl$\Debian\home\username` |
 | Windows PowerShell | `C:\Users\username` |
 
