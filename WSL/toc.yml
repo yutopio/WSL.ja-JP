@@ -43,4 +43,8 @@
 - name: トラブルシューティング
   href: troubleshooting.md
 - name: のリリース ノート
-  href: release-notes.md
+  items:
+    - name: 一般のリリース ノート
+      href: release-notes.md
+    - name: Linux カーネルのリリース ノート
+      href: kernel-release-notes.md
