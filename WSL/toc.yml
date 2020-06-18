@@ -22,6 +22,8 @@
       href: tutorials/wsl-vscode.md
     - name: Git で作業を始める
       href: tutorials/wsl-git.md
+    - name: GPU アクセラレーション (NVIDIA CUDA/DirectML) の設定
+      href: tutorials/gpu-compute.md
 - name: 方法
   items:
     - name: 相互運用性コマンド
@@ -42,7 +44,7 @@
   href: wsl2-faq.md
 - name: トラブルシューティング
   href: troubleshooting.md
-- name: のリリース ノート
+- name: リリース ノート
   items:
     - name: 一般のリリース ノート
       href: release-notes.md
