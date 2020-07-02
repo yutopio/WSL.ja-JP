@@ -5,12 +5,12 @@ keywords: BashOnWindows, bash, wsl, windows, Linux 用 Windows サブシステ�
 ms.date: 05/12/2020
 ms.topic: article
 ms.localizationpriority: high
-ms.openlocfilehash: 805b7d266020c62e0c6f58889541517d44db3726
-ms.sourcegitcommit: 90f7caeefe886bf6c0ba2b90c1b56b5f9795ad1b
+ms.openlocfilehash: ebcd7f6b10d2b734b1f2a66f64a5e3292855bcf4
+ms.sourcegitcommit: 5d3898772851e6ac9a310f219cc0d71278f95d22
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/28/2020
-ms.locfileid: "84153076"
+ms.lasthandoff: 06/10/2020
+ms.locfileid: "84671022"
 ---
 # <a name="windows-server-installation-guide"></a>Windows Server インストール ガイド
 
@@ -25,20 +25,6 @@ Windows 上で Linux ディストリビューションを実行する前に、"L
 ```powershell
     Enable-WindowsOptionalFeature -Online -FeatureName Microsoft-Windows-Subsystem-Linux
 
-```
-
-**100% のシステム コールの互換性とより高速な IO パフォーマンスが必要な場合は、以下を読んで WSL 2 をインストールしてください。**
-
-WSL 2 は、Windows 10、バージョン 2004、ビルド 19041 以上でのみ使用できます。 [Windows のバージョンを更新しなければならない](ms-settings:windowsupdate)場合があります。
-
-**WSL 1 から続ける場合は、プロンプトが表示されたらマシンを再起動し、[こちら](./install-on-server.md#download-a-linux-distribution)** に従ってインストールを続行してください
-
-## <a name="enable-the-virtual-machine-platform-optional-component"></a>仮想マシン プラットフォームのオプション コンポーネントを有効にする
-
-"仮想マシン プラットフォーム" のオプション コンポーネントがインストールされていることを確認します。 これを行うには、PowerShell で次のコマンドを実行します。
-
-```powershell
-dism.exe /online /enable-feature /featurename:VirtualMachinePlatform /all /norestart
 ```
 
 ## <a name="download-a-linux-distribution"></a>Linux ディストリビューションをダウンロードする
