@@ -97,7 +97,7 @@ WSL 2 では、メモリ フットプリントが小さな実際の Linux カー
 
 ### <a name="accessing-linux-networking-apps-from-windows-localhost"></a>Windows からの Linux ネットワーク アプリへのアクセス (localhost)
 
-Linux ディストリビューションでネットワーク アプリ (たとえば、Node.js または SQL Server で実行されるアプリ) を構築する場合、(通常の場合と同様に) `localhost` を使用して (Edge または Chrome インターネット ブラウザーなどの) Windows アプリからアクセスすることができます。
+Linux ディストリビューションでネットワーク アプリ (たとえば、Node.js または SQL Server で実行されるアプリ) を構築する場合、(通常の場合と同様に) `localhost` を使用して (Microsoft Edge または Chrome インターネット ブラウザーなどの) Windows アプリからアクセスすることができます。
 
 ただし、Windows の古いバージョン (ビルド 18945 以下) を実行している場合は、Linux ホスト VM の IP アドレスを取得する (または[最新の Windows バージョンに更新する](ms-settings:windowsupdate)) 必要があります。
 
