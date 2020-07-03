@@ -5,12 +5,12 @@ keywords: wsl, linux 用 windows subsystem, 手動インストール, 手動で�
 ms.date: 05/28/2020
 ms.topic: article
 ms.localizationpriority: medium
-ms.openlocfilehash: 621b2619d6c62e0b6c4e53f7791fc587c1c8f878
-ms.sourcegitcommit: 09f5eb0f6062642e5c86deb1f34307ce3429163a
+ms.openlocfilehash: d948ce9d304314bdd15b98136b8a99ca35723139
+ms.sourcegitcommit: e67eb4aedff57a304188ca3360aba25605f8bdb1
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/29/2020
-ms.locfileid: "84211718"
+ms.lasthandoff: 06/12/2020
+ms.locfileid: "84746278"
 ---
 # <a name="manually-download-windows-subsystem-for-linux-distro-packages"></a>Linux 用 Windows サブシステム ディストリビューション パッケージを手動でダウンロードする
 
@@ -23,6 +23,8 @@ Microsoft Store 経由で WSL Linux ディストリビューションをイン�
 ## <a name="downloading-distros"></a>ディストリビューションのダウンロード
 
 Microsoft Store アプリを使用できない場合は、以下のリンクをクリックして Linux ディストリビューションをダウンロードして手動でインストールできます。
+* [Ubuntu 20.04](https://aka.ms/wslubuntu2004)
+* [Ubuntu 20.04 ARM](https://aka.ms/wslubuntu2004arm)
 * [Ubuntu 18.04](https://aka.ms/wsl-ubuntu-1804)
 * [Ubuntu 18.04 ARM](https://aka.ms/wsl-ubuntu-1804-arm)
 * [Ubuntu 16.04](https://aka.ms/wsl-ubuntu-1604)

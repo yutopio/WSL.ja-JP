@@ -5,12 +5,12 @@ keywords: BashOnWindows, bash, wsl, windows, windowssubsystem, gnu, linux, ubunt
 ms.date: 05/12/2020
 ms.topic: article
 ms.localizationpriority: high
-ms.openlocfilehash: aa656d2e5a301d3f5519065246ba99941e74f642
-ms.sourcegitcommit: 53e6a01cbb989dc1aeaba465af4730afe71beb40
+ms.openlocfilehash: bbd5b36f7857d136d3eb2f75eb3d1a36ac2b94f7
+ms.sourcegitcommit: eaceda3589b9bd777e0fead5ef33bb16060a55d2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/01/2020
-ms.locfileid: "84256687"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84978265"
 ---
 # <a name="comparing-wsl-2-and-wsl-1"></a>WSL 2 と WSL 1 の比較
 
@@ -36,7 +36,7 @@ WSL 1 を既に使用していて、WSL 2 にアップグレードする場合�
 WSL 2 は、Windows 10、バージョン 2004、ビルド 19041 以上でのみ使用できます。 Windows のバージョンを確認するには **Windows ロゴ キー + R** キーを押します。次に「**winver**」と入力し、 **[OK]** を選択します (または、Windows コマンド プロンプトで `ver` コマンドを入力します)。 [最新の Windows バージョンに更新する](ms-settings:windowsupdate)必要がある場合があります。 19041 より前のビルドでは、WSL はまったくサポートされていません。
 
 > [!NOTE]
-> WSL 2 は[ VMware のプレビュー バージョン](https://blogs.vmware.com/workstation/2020/01/vmware-workstation-tech-preview-20h1.html)および [VirtualBox 6.x](https://www.virtualbox.org/wiki/Changelog-6.0) で動作します。
+> WSL 2 は [VMware のプレビュー バージョン](https://blogs.vmware.com/workstation/2020/01/vmware-workstation-tech-preview-20h1.html)および [VirtualBox 6.x](https://www.virtualbox.org/wiki/Changelog-6.0) で動作します。
 
 ## <a name="use-the-linux-file-system-for-faster-performance"></a>Linux ファイル システムを使用してパフォーマンスを向上させる
 
