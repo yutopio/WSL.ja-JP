@@ -4,12 +4,12 @@ description: Windows Subsystem for Linux で実行されている Linux ディ�
 ms.date: 05/12/2020
 ms.topic: article
 ms.localizationpriority: high
-ms.openlocfilehash: 2a9b6c8ac65fe28e029ada7f86475c44220a93fe
-ms.sourcegitcommit: cb8a61e7de08b1c18622fc78bc5dfa38786e921a
+ms.openlocfilehash: d78cc53aa40f896c20e40a5ef00570a97ccac258
+ms.sourcegitcommit: 386d47a1c53a85b91f5a2b0f1f99ce2c46b20a77
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/10/2020
-ms.locfileid: "84663135"
+ms.lasthandoff: 07/08/2020
+ms.locfileid: "86093271"
 ---
 # <a name="windows-interoperability-with-linux"></a>Linux との Windows の相互運用性
 
@@ -151,6 +151,7 @@ WSL と Windows は `WSLENV` を共有します。これは、Windows と WSL �
 
 > [!NOTE]
 > 17063 より前では、WSL がアクセスできる唯一の Windows 環境変数は `PATH` でした (そのため、WSL で Win32 実行可能ファイルを起動できました)。 17063 以降、`WSLENV` がサポートされるようになります。
+> WSLENV では、大文字と小文字が区別されます。
 
 ## <a name="wslenv-flags"></a>WSLENV フラグ
 
