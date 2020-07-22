@@ -4,12 +4,12 @@ description: Windows Subsystem for Linux で実行されている Linux ディ�
 ms.date: 05/12/2020
 ms.topic: article
 ms.localizationpriority: high
-ms.openlocfilehash: b1c7a64a86cf088159d1abee3b341328151428f6
-ms.sourcegitcommit: 1b6191351bbf9e95f3c28fc67abe4bf1bcfd3336
+ms.openlocfilehash: d78cc53aa40f896c20e40a5ef00570a97ccac258
+ms.sourcegitcommit: 386d47a1c53a85b91f5a2b0f1f99ce2c46b20a77
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/13/2020
-ms.locfileid: "83270846"
+ms.lasthandoff: 07/08/2020
+ms.locfileid: "86093271"
 ---
 # <a name="windows-interoperability-with-linux"></a>Linux との Windows の相互運用性
 
@@ -147,9 +147,11 @@ WSL と Windows は `WSLENV` を共有します。これは、Windows と WSL �
 * 共有され、Windows と WSL の両方の環境に存在します。
 * Windows と WSL の間で共有する環境変数の一覧です。
 * Windows と WSL で適切に機能するように環境変数をフォーマットできます。
+* WSL と Win32 間のフローに役立ちます。
 
 > [!NOTE]
 > 17063 より前では、WSL がアクセスできる唯一の Windows 環境変数は `PATH` でした (そのため、WSL で Win32 実行可能ファイルを起動できました)。 17063 以降、`WSLENV` がサポートされるようになります。
+> WSLENV では、大文字と小文字が区別されます。
 
 ## <a name="wslenv-flags"></a>WSLENV フラグ
 
@@ -163,6 +165,8 @@ WSL と Windows は `WSLENV` を共有します。これは、Windows と WSL �
 * `/w` - WSL から Win32 を実行する場合にのみ、この環境変数を含める必要があることを示します。
 
 フラグは、必要に応じて組み合わせることができます。
+
+[WSLENV の詳細](https://devblogs.microsoft.com/commandline/share-environment-vars-between-wsl-and-windows/)をご覧ください。これには、WSLENV の値を他の定義済みの環境変数の連結に設定し (各変数の末尾にはスラッシュが付けられ、その後に、値の変換方法を指定するフラグが続く)、スクリプトによって変数を渡す例や FAQ なども含まれます。 この記事には、WSL と Win32 の間で GOPATH を共有するように構成された、[Go プログラミング言語](https://golang.org/)により開発環境を設定する例も含まれています。
 
 ## <a name="disable-interoperability"></a>相互運用性の無効化
 

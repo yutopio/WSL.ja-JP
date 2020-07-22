@@ -4,12 +4,12 @@ description: Windows Subsystem for Linux で実行されている複数の Linux
 keywords: BashOnWindows, bash, wsl, windows, windows subsystem for linux, windowssubsystem, ubuntu, wsl.conf, wslconfig
 ms.date: 05/12/2020
 ms.topic: article
-ms.openlocfilehash: dc488ab988d8e158b5eff7a486a2fe707dbedfd7
-ms.sourcegitcommit: 90f7caeefe886bf6c0ba2b90c1b56b5f9795ad1b
+ms.openlocfilehash: e97b1030d5891bf8aa1cb656646a4d9e1d480a3d
+ms.sourcegitcommit: f1b049a1276782d4f2754f46a8d2025b598a0784
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/28/2020
-ms.locfileid: "84153119"
+ms.lasthandoff: 06/24/2020
+ms.locfileid: "85336085"
 ---
 # <a name="wsl-commands-and-launch-configurations"></a>WSL コマンドと起動構成
 
@@ -306,7 +306,7 @@ Windows ドライブ (DrvFs) にさまざまなマウント オプションを�
 
 これらのオプションは、ビルド18980以降で使用できます。
 
-| key | 値 | default | notes|
+| key | value | default | notes|
 |:----|:----|:----|:----|
 | default | string | 最初の実行時に作成された最初のユーザー名 | このキーを設定すると、最初に WSL セッションを開始したときに実行するユーザーを指定します。 |
 
@@ -314,7 +314,7 @@ Windows ドライブ (DrvFs) にさまざまなマウント オプションを�
 
 > **Windows ビルド19041以降で使用可能**
 
-グローバル WSL オプションを構成するには、 `.wslconfig` ユーザーフォルダーのルートディレクトリにファイルを配置し `C:\Users\<yourUserName>\.wslconfig` ます。 
+グローバル WSL オプションを構成するには、 `.wslconfig` ユーザーフォルダーのルートディレクトリにファイルを配置し `C:\Users\<yourUserName>\.wslconfig` ます。 これらのファイルの多くは WSL 2 に関連しています。そのため、 `wsl --shutdown` wsl 2 VM をシャットダウンしてから wsl インスタンスを再起動して変更を反映するために、を実行することが必要になる場合があります。
 
 サンプルの wslconfig ファイルを次に示します。
 
@@ -333,7 +333,7 @@ processors=2 # Makes the WSL 2 VM use two virtual processors
 
 これらの設定は、WSL 2 ディストリビューションを電源にする VM に影響します。
 
-| key | 値 | default | notes|
+| key | value | default | notes|
 |:----|:----|:----|:----|
 | kernel | string | Microsoft が構築したカーネルへのパス | カスタム Linux カーネルへの絶対 Windows パス。 |
 | memory | size | Windows 上の合計メモリの80% | WSL 2 VM に割り当てるメモリの量。 |

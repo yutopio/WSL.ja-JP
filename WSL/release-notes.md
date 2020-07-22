@@ -6,14 +6,30 @@ author: benhillis
 ms.date: 05/15/2020
 ms.topic: article
 ms.localizationpriority: high
-ms.openlocfilehash: 3df4d4b4e0c542a3e87306c01a14b7073eb5e677
-ms.sourcegitcommit: 3fb40fd65b34a5eb26b213a0df6a3b2746b7a9b4
+ms.openlocfilehash: 2fcf24719f037a29bab7652fc75ac82cc0b6176a
+ms.sourcegitcommit: 031a74801e03a90aed4b34c4fd5bfe964fc30994
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/12/2020
-ms.locfileid: "83235943"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84942596"
 ---
 # <a name="release-notes-for-windows-subsystem-for-linux"></a>Windows Subsystem for Linux のリリース ノート
+
+## <a name="build-20150"></a>ビルド 20150
+ビルド 20150 の一般的な Windows 情報については、[Windows ブログ](https://blogs.windows.com/windowsexperience/2020/06/17/announcing-windows-10-insider-preview-build-20150/)を参照してください。
+
+* WSL2 GPU コンピューティングの場合、詳しくは、[Windows ブログ](https://blogs.windows.com/windowsexperience/2020/06/17/announcing-windows-10-insider-preview-build-20150/)を参照してください。
+* WSL を簡単に設定できるように wsl.exe --install コマンド ライン オプションを導入します。
+* WSL2 カーネルへの更新を管理するための wsl.exe --update コマンド ライン オプションを導入します。 
+* WSL2 を既定値として設定します。
+* WSL2 vm の正常なシャットダウン タイムアウトを増やします。
+* デバイス メモリをマッピングするときの virtio-9p 競合状態を修正します。
+* UAC が無効になっている場合は、昇格された 9p サーバーを実行しないでください。
+
+## <a name="build-19640"></a>ビルド 19640
+ビルド 19640 の一般的な Windows 情報については、[Windows ブログ](https://blogs.windows.com/windowsexperience/2020/06/03/announcing-windows-10-insider-preview-build-19640/)を参照してください。
+
+* [WSL2] virtio-9p (drvfs) の安定性が向上しました。
 
 ## <a name="build-19555"></a>ビルド 19555
 ビルド 19555 の一般的な Windows 情報については、[Windows ブログ](https://blogs.windows.com/windowsexperience/2020/01/30/announcing-windows-10-insider-preview-build-19555/)を参照してください。

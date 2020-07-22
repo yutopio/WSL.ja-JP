@@ -5,12 +5,12 @@ keywords: BashOnWindows, bash, wsl, windows, windowssubsystem, gnu, linux, ubunt
 ms.date: 05/12/2020
 ms.topic: article
 ms.localizationpriority: high
-ms.openlocfilehash: aa656d2e5a301d3f5519065246ba99941e74f642
-ms.sourcegitcommit: 53e6a01cbb989dc1aeaba465af4730afe71beb40
+ms.openlocfilehash: 8354e9c35d1e97f38c4cf6aa53a861c2c5e290be
+ms.sourcegitcommit: 386d47a1c53a85b91f5a2b0f1f99ce2c46b20a77
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/01/2020
-ms.locfileid: "84256687"
+ms.lasthandoff: 07/08/2020
+ms.locfileid: "86093280"
 ---
 # <a name="comparing-wsl-2-and-wsl-1"></a>WSL 2 と WSL 1 の比較
 
@@ -25,10 +25,10 @@ Linux 用 Windows サブシステムを新しいバージョンに更新する�
  Windows と Linux の統合| ✅|✅
  高速の起動時間| ✅ | ✅
  小さなリソース フット プリント| ✅ |✅
+ 現在のバージョンの VMware と VirtualBox での実行| ✅ | ✅
  マネージド VM| ❌ | ✅
  完全な Linux カーネル| ❌ |✅
  システム コールの完全な互換性| ❌ | ✅
- 現在のバージョンの VMware と VirtualBox での実行| ✅ | ❌
  OS ファイル システム間でのパフォーマンス| ✅ | ❌
 
 WSL 1 を既に使用していて、WSL 2 にアップグレードする場合は、 手順に従って [WSL 2 に更新](./install-win10.md#update-to-wsl-2)してください。
@@ -36,7 +36,7 @@ WSL 1 を既に使用していて、WSL 2 にアップグレードする場合�
 WSL 2 は、Windows 10、バージョン 2004、ビルド 19041 以上でのみ使用できます。 Windows のバージョンを確認するには **Windows ロゴ キー + R** キーを押します。次に「**winver**」と入力し、 **[OK]** を選択します (または、Windows コマンド プロンプトで `ver` コマンドを入力します)。 [最新の Windows バージョンに更新する](ms-settings:windowsupdate)必要がある場合があります。 19041 より前のビルドでは、WSL はまったくサポートされていません。
 
 > [!NOTE]
-> WSL 2 は[ VMware のプレビュー バージョン](https://blogs.vmware.com/workstation/2020/01/vmware-workstation-tech-preview-20h1.html)および [VirtualBox 6.x](https://www.virtualbox.org/wiki/Changelog-6.0) で動作します。
+> WSL 2 は [VMWare 15.5.5+](https://blogs.vmware.com/workstation/2020/05/vmware-workstation-now-supports-hyper-v-mode.html) と [VirtualBox 6+](https://www.virtualbox.org/wiki/Changelog-6.0) で動作します。
 
 ## <a name="use-the-linux-file-system-for-faster-performance"></a>Linux ファイル システムを使用してパフォーマンスを向上させる
 
@@ -97,7 +97,7 @@ WSL 2 では、メモリ フットプリントが小さな実際の Linux カー
 
 ### <a name="accessing-linux-networking-apps-from-windows-localhost"></a>Windows からの Linux ネットワーク アプリへのアクセス (localhost)
 
-Linux ディストリビューションでネットワーク アプリ (たとえば、Node.js または SQL Server で実行されるアプリ) を構築する場合、(通常の場合と同様に) `localhost` を使用して (Edge または Chrome インターネット ブラウザーなどの) Windows アプリからアクセスすることができます。
+Linux ディストリビューションでネットワーク アプリ (たとえば、Node.js または SQL Server で実行されるアプリ) を構築する場合、(通常の場合と同様に) `localhost` を使用して (Microsoft Edge または Chrome インターネット ブラウザーなどの) Windows アプリからアクセスすることができます。
 
 ただし、Windows の古いバージョン (ビルド 18945 以下) を実行している場合は、Linux ホスト VM の IP アドレスを取得する (または[最新の Windows バージョンに更新する](ms-settings:windowsupdate)) 必要があります。
 

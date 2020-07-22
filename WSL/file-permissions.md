@@ -6,12 +6,12 @@ ms.date: 01/14/2020
 ms.topic: article
 ms.assetid: 7afaeacf-435a-4e58-bff0-a9f0d75b8a51
 ms.localizationpriority: high
-ms.openlocfilehash: 66cded36fb7182a54a05e7794250808665bd4cf1
-ms.sourcegitcommit: 3fb40fd65b34a5eb26b213a0df6a3b2746b7a9b4
+ms.openlocfilehash: 81d4cfa1ae57cdd077ba8cbd614111881724718a
+ms.sourcegitcommit: f1b049a1276782d4f2754f46a8d2025b598a0784
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/12/2020
-ms.locfileid: "83235851"
+ms.lasthandoff: 06/24/2020
+ms.locfileid: "85336075"
 ---
 # <a name="file-permissions-for-wsl"></a>WSL のファイルのアクセス許可
 
@@ -108,4 +108,4 @@ Linux ルート ファイル システム内で作成、変更、またはアク
 
 wsl.conf 内でマウント オプションを使用して、Windows ドライブ内のファイルのアクセス許可を構成できます。 マウント オプションを使用すると、`umask`、`dmask`、および `fmask` のアクセス許可マスクを設定できます。 `umask` はすべてのファイルに適用され、`dmask` はディレクトリにのみ適用されます。`fmask` はファイルにのみ適用されます。 これらのアクセス許可のマスクは、ファイルに適用されるときに論理 OR 演算が適用されます。たとえば、`umask` の値が `023` で、`fmask` の値が `022` の場合、ファイルに対する結果のアクセス許可マスクは `023` になります。
 
-これを行う方法については、[wslconf を使用した起動設定の構成](./wsl-config.md#configure-launch-settings-with-wslconf)に関する記事を参照してください。
+これを行う方法については、「[ディストリビューションごとの起動設定を wslconf で構成する](./wsl-config.md#configure-per-distro-launch-settings-with-wslconf)」を参照してください。
