@@ -35,7 +35,7 @@ Windows 10 Creators Update 以前を実行している場合は、次のコマ�
 
 1. ディストリビューションのパスワード コマンドを使用してパスワードを再設定し、Linux コンソールを閉じます。
 
-    ```BASH
+    ```bash
     $ passwd username
     $ exit
     ```
@@ -93,7 +93,7 @@ Ubuntu を使用したステップ バイ ステップの手順:
 
 1. `passwd` コマンドを使用してパスワードを再設定します。
 
-    ```BASH
+    ```bash
     $ passwd username
     ```
 

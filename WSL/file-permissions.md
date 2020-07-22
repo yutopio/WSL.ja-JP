@@ -40,7 +40,7 @@ WSL では、次の 4 つの NTFS 拡張属性を追加できます。
 
 ### <a name="accessing-files-in-the-windows-drive-file-system-drvfs-from-linux"></a>Linux から Windows ドライブ ファイル システム (DrvFS) のファイルにアクセスする
 
-これらのシナリオは、WSL から (ほとんどの場合 `/mnt/c` 経由で) Windows ファイルにアクセスする場合に生じるものです。
+これらのシナリオは、WSL から (既定の場合 `/mnt/c` 経由で) Windows ファイルにアクセスする場合に生じるものです。
 
 #### <a name="reading-file-permissions-from-an-existing-windows-file"></a>既存の Windows ファイルからファイルのアクセス許可を読み取る
 

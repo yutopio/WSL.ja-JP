@@ -85,7 +85,7 @@ WSL は x64 および ARM の CPU をサポートしています。
 
 **/mnt/\<ドライブ文字>/**
 
-使用例は、c:\ にアクセスする `cd /mnt/c` です。
+**使用例** C:\ にアクセスする: `cd /mnt/c`
 
 ## <a name="how-do-i-set-up-git-credential-manager-how-do-i-use-my-windows-git-permissions-in-wsl"></a>Git Credential Manager をセットアップするにはどうすればよいですか。 (WSL で Windows Git アクセス許可を使用するにはどうすればよいですか。) 
 
@@ -181,12 +181,18 @@ Windows Update 時に "Windows Subsystem for Linux" 機能が無効になる可�
 
 ## <a name="how-do-i-change-the-display-language-of-wsl"></a>WSL の表示言語を変更するにはどうすればよいですか。
 
-WSL インストールでは、Windows インストールのロケールに合わせて Ubuntu ロケールを自動的に変更しようとします。 この動作が不要な場合は、次のコマンドを実行して、インストールの完了後に Ubuntu ロケールを変更できます。 この変更を有効にするには、bash.exe を再起動する必要があります。
+WSL の､インストールでは、Windows インストールのロケールに合わせて Ubuntu ロケールを自動的に変更しようとします。 この動作が不要な場合は、次のコマンドを実行して、インストールの完了後に Ubuntu ロケールを変更できます。 この変更を有効にするには、bash.exe を再起動する必要があります。
 
 次の例は、ロケールを en-US に変更します。
 
 ```bash
 sudo update-locale LANG=en_US.UTF8
+```
+
+また､次の例は、ロケールを ja-JP に変更します。
+
+```bash
+sudo update-locale LANG=ja_JP.UTF8
 ```
 
 ## <a name="why-do-i-not-have-internet-access-from-wsl"></a>WSL からインターネットにアクセスできないのはなぜですか。
