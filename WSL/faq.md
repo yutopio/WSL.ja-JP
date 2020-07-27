@@ -6,12 +6,12 @@ ms.date: 9/4/2018
 ms.topic: article
 ms.assetid: 129101ed-b88a-43c2-b6a2-cd2c4ff6fee1
 ms.localizationpriority: high
-ms.openlocfilehash: 3c3681b0e0e8317917b4ec7c37c9bb2f0bbe9c95
-ms.sourcegitcommit: e6e888f2b88a2d9c105cee46e5ab5b70aa43dd80
+ms.openlocfilehash: 8e3ebb44c139b5e7b8c25e8e813766b0107426dc
+ms.sourcegitcommit: 97cc93f8e26391c09a31a4ab42c4b5e9d98d1c32
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/13/2020
-ms.locfileid: "83343904"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86948636"
 ---
 # <a name="frequently-asked-questions-about-windows-subsystem-for-linux"></a>Windows Subsystem for Linux に関してよく寄せられる質問
 
@@ -34,6 +34,10 @@ WSL が提供する Bash.exe というアプリケーションを開始すると
 Linux Bash シェル内からローカル コンピューターのファイル システムにアクセスすることもできます。ローカル ドライブは `/mnt` フォルダーの下にマウントされます。 たとえば、 `C:` ドライブは `/mnt/c` の下にマウントされます。  
 
 ![マウントされた C ドライブのスクリーンショット](media/ls.png)
+
+## <a name="could-you-describe-a-typical-development-workflow-that-incorporates-wsl"></a>WSL が組み込まれた一般的な開発ワークフローについて説明してください。
+
+WSL は開発者を対象としており、内部開発ループの一部としての使用を目的としています。 たとえば、Sam が CI/CD パイプライン (継続的インテグレーションおよび継続的デリバリー) を作成しており、クラウドにデプロイする前に、まずローカル コンピューター (ノート PC) でそれをテストしたいと思っているとします。 Sam は WSL (速度とパフォーマンスを向上させるには WSL 2) を有効にして、ローカル (ノート PC) で本物の Linux Ubuntu インスタンスと、任意の Bash コマンドとツールを使用することができます。 開発パイプラインをローカルで検証したら、Sam はその CI/CD パイプラインをクラウド (Azure) にプッシュできます。そうするには、これを Docker コンテナーに格納し、そのコンテナーをクラウド インスタンスにプッシュします。こうして、運用に対応した Ubuntu VM 上でこれを実行できます。
 
 ## <a name="what-is-bash"></a>Bash とは何ですか。
 
@@ -83,9 +87,9 @@ WSL は x64 および ARM の CPU をサポートしています。
 
 ローカル コンピューター上のハード ドライブのマウント ポイントが自動的に作成され、Windows ファイル システムに簡単にアクセスできるようになります。
 
-**/mnt/\<ドライブ文字>/**
+**/mnt/\<drive letter>/**
 
-**使用例** C:\ にアクセスする: `cd /mnt/c`
+使用例は、c:\ にアクセスする `cd /mnt/c` です。
 
 ## <a name="how-do-i-set-up-git-credential-manager-how-do-i-use-my-windows-git-permissions-in-wsl"></a>Git Credential Manager をセットアップするにはどうすればよいですか。 (WSL で Windows Git アクセス許可を使用するにはどうすればよいですか。) 
 
@@ -181,18 +185,12 @@ Windows Update 時に "Windows Subsystem for Linux" 機能が無効になる可�
 
 ## <a name="how-do-i-change-the-display-language-of-wsl"></a>WSL の表示言語を変更するにはどうすればよいですか。
 
-WSL の､インストールでは、Windows インストールのロケールに合わせて Ubuntu ロケールを自動的に変更しようとします。 この動作が不要な場合は、次のコマンドを実行して、インストールの完了後に Ubuntu ロケールを変更できます。 この変更を有効にするには、bash.exe を再起動する必要があります。
+WSL インストールでは、Windows インストールのロケールに合わせて Ubuntu ロケールを自動的に変更しようとします。 この動作が不要な場合は、次のコマンドを実行して、インストールの完了後に Ubuntu ロケールを変更できます。 この変更を有効にするには、bash.exe を再起動する必要があります。
 
 次の例は、ロケールを en-US に変更します。
 
 ```bash
 sudo update-locale LANG=en_US.UTF8
-```
-
-また､次の例は、ロケールを ja-JP に変更します。
-
-```bash
-sudo update-locale LANG=ja_JP.UTF8
 ```
 
 ## <a name="why-do-i-not-have-internet-access-from-wsl"></a>WSL からインターネットにアクセスできないのはなぜですか。

@@ -4,19 +4,21 @@ description: Linux 用 Windows サブシステム ドキュメントを参照し
 keywords: BashOnWindows, bash, wsl, windows, windowssubsystem, gnu, linux
 ms.topic: article
 ms.localizationpriority: high
-ms.openlocfilehash: eac5ab3a4406d7e3b1ba89c0d9e6212fa602d852
-ms.sourcegitcommit: 3fb40fd65b34a5eb26b213a0df6a3b2746b7a9b4
+ms.openlocfilehash: 81ff05f03172e3e3a167ffba4ce846ec2edb3d1c
+ms.sourcegitcommit: 97cc93f8e26391c09a31a4ab42c4b5e9d98d1c32
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/12/2020
-ms.locfileid: "83270490"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86948586"
 ---
 # <a name="windows-subsystem-for-linux-documentation"></a>Windows Subsystem for Linux に関するドキュメント
+
+Linux 用 Windows サブシステムを使用すると、開発者は、従来の仮想マシンまたはデュアルブート セットアップのオーバーヘッドなしで、ほとんどのコマンド ライン ツール、ユーティリティ、アプリケーションを含む GNU/Linux 環境を変更せずそのまま Windows 上で直接実行できます。
 
 ## <a name="learn-more-here"></a>詳細情報はこちら
 
 * [Linux 用 Windows サブシステムとは](about.md)
-* [WSL2 の新機能](wsl2-index.md)
+* [WSL 2 の新機能](wsl2-index.md)
 * [WSL 2 と WSL 1 を比較する](compare-versions.md)
 * [よく寄せられる質問を読む](faq.md)
 

@@ -1,18 +1,18 @@
 ---
-title: Linux 用 Windows サブシステムの概要
+title: WSL バージョン 1 と 2 の比較
 description: Linux 用 Windows サブシステムとそのさまざまなバージョン、およびそれらの使用方法について説明します。
 keywords: BashOnWindows, bash, wsl, windows, windowssubsystem, gnu, linux, ubuntu, debian, suse, windows 10, UX の変更, WSL 2, linux カーネル, ネットワーク アプリケーション, localhost, IPv6, 仮想ハードウェア ディスク, VHD, VHD の制限, VHD エラー
-ms.date: 05/12/2020
+ms.date: 07/22/2020
 ms.topic: article
 ms.localizationpriority: high
-ms.openlocfilehash: 8354e9c35d1e97f38c4cf6aa53a861c2c5e290be
-ms.sourcegitcommit: 386d47a1c53a85b91f5a2b0f1f99ce2c46b20a77
+ms.openlocfilehash: 139bf2200b47f7d1465312f16ed0a3449491dc89
+ms.sourcegitcommit: 97cc93f8e26391c09a31a4ab42c4b5e9d98d1c32
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/08/2020
-ms.locfileid: "86093280"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86948646"
 ---
-# <a name="comparing-wsl-2-and-wsl-1"></a>WSL 2 と WSL 1 の比較
+# <a name="comparing-wsl-1-and-wsl-2"></a>WSL 1 と WSL 2 の比較
 
 Linux 用 Windows サブシステムを新しいバージョンに更新する主な目的は、**ファイル システムのパフォーマンスを向上させ**、**システム コールの完全な互換性**をサポートすることです。 
 
@@ -172,27 +172,6 @@ WSL 2 VHD では、ext4 ファイル システムが使用されます。 この
     * `/dev/sdXX` のようなこのエントリの名前をコピーします (X は他の文字を表します)
     * `sudo resize2fs /dev/sdXX`
     * 前の手順でコピーした値を使用します。 resize2fs のインストールが必要になる場合もあります: `apt install resize2fs`
-
-## <a name="optimize-the-size-of-your-wsl-2-virtual-hardware-disk"></a>WSL 2 仮想ハードウェア ディスクのサイズの最適化
-
-WSL 2 では、ディストリビューションのディスク使用状況に合わせて､仮想ハードウェア ディスク (VHD) が 可変的に 拡張されます｡ ですが､自動的に収縮(最適化)されることはありません｡
-
-WSL 2 の､増大した 仮想ハードウェア ディスク (VHD) を最適化するには､ 次のようにします｡
-
-1. 次のコマンドを使用して、すべての WSL インスタンスを終了します: `wsl --shutdown`
-
-2. ディストリビューションのインストール パッケージ名 ("PackageFamilyName") を見つけます
-    * PowerShell を使用して、次のコマンドを入力します ("distro" はディストリビューション名です):
-    * `Get-AppxPackage -Name "*<distro>*" | Select PackageFamilyName`
-
-3. WSL 2 のインストールで使用される VHD ファイルの `fullpath` を特定します。これが `pathToVHD` になります。
-     * `%LOCALAPPDATA%\Packages\<PackageFamilyName>\LocalState\<disk>.vhdx`
-     
-4. 次の Powershell コマンドを実行して、WSL 2 VHD のサイズを変更します。
-   * Powershell を開き、次のように入力します。
-      * `Optimize-VHD -Mode Full -Path "<pathToVHD>"`
-      > 引数Modeなど､詳しくは[Optmize-VHD](https://docs.microsoft.com/en-us/powershell/module/hyper-v/optimize-vhd?view=win10-ps#parameters)のドキュメントを参照してください｡
-
 
 > [!NOTE]
 > 通常、Windows ツールまたはエディターを使用して、AppData フォルダー内にある WSL 関連ファイルを変更、移動、またはアクセスしないでください。 そうすると、Linux ディストリビューションが破損する可能性があります。

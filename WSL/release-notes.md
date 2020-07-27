@@ -6,14 +6,24 @@ author: benhillis
 ms.date: 05/15/2020
 ms.topic: article
 ms.localizationpriority: high
-ms.openlocfilehash: 2fcf24719f037a29bab7652fc75ac82cc0b6176a
-ms.sourcegitcommit: 031a74801e03a90aed4b34c4fd5bfe964fc30994
+ms.openlocfilehash: 1de8f5e287d70c4992e9e6694d8980cbd305957b
+ms.sourcegitcommit: 97cc93f8e26391c09a31a4ab42c4b5e9d98d1c32
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84942596"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86948686"
 ---
 # <a name="release-notes-for-windows-subsystem-for-linux"></a>Windows Subsystem for Linux のリリース ノート
+
+## <a name="build-20175"></a>ビルド 20175
+ビルド 20175 の一般的な Windows 情報については、[Windows ブログ](https://blogs.windows.com/windowsexperience/2020/07/22/announcing-windows-10-insider-preview-build-20175/)を参照してください。
+
+* WSL2 VM の既定のメモリ割り当てを、ホスト メモリの 50% または 8 GB のどちらか少ない方になるように調整します [GH 4166]。
+* URI 解析をサポートするために、\\\\wsl$ プレフィックスを \\\\wsl に変更します。 従来の \\\\wsl$ パスも引き続きサポートされます。
+* amd64 で、入れ子になった WSL2 の仮想化を既定で有効にします。 これは、%userprofile%\\.wslconfig で無効にできます ([wsl2] nestedVirtualization=false)。
+* wsl.exe --update で、Microsoft Update の開始を要求します。
+* DrvFs で読み取り専用ファイルの名前変更をサポートします。
+* エラー メッセージが常に適切なコードページで出力されるようにします。
 
 ## <a name="build-20150"></a>ビルド 20150
 ビルド 20150 の一般的な Windows 情報については、[Windows ブログ](https://blogs.windows.com/windowsexperience/2020/06/17/announcing-windows-10-insider-preview-build-20150/)を参照してください。
@@ -1547,13 +1557,13 @@ Windows 10 の Creators Update への組み込みが予定されている WSL �
 ### <a name="new-feature-windows--ubuntu-interoperability"></a>新機能:Windows/Ubuntu の相互運用性
 Windows バイナリを WSL コマンド ラインから直接呼び出せるようになりました。  これによりユーザーは、今まで可能ではなかった方法で Windows 環境およびシステムと対話ができるようになります。  簡単な例として、ユーザーは次のコマンドを実行できるようになりました。
 
-    ```
-    $ export PATH=$PATH:/mnt/c/Windows/System32
-    $ notepad.exe
-    $ ipconfig.exe | grep IPv4 | cut -d: -f2
-    $ ls -la | findstr.exe foo.txt
-    $ cmd.exe /c dir
-    ```
+```bash
+$ export PATH=$PATH:/mnt/c/Windows/System32
+$ notepad.exe
+$ ipconfig.exe | grep IPv4 | cut -d: -f2
+$ ls -la | findstr.exe foo.txt
+$ cmd.exe /c dir
+```
 
 詳細については、以下を参照してください。
 
