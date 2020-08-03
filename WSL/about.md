@@ -2,16 +2,16 @@
 title: Linux 用 Windows サブシステムについて
 description: Linux 用 Windows サブシステムとそのさまざまなバージョン、およびそれらの使用方法について説明します。
 keywords: BashOnWindows, bash, wsl, windows, windowssubsystem, gnu, linux
-ms.date: 05/12/2020
+ms.date: 07/21/2020
 ms.topic: article
 ms.assetid: 3cefe0db-7616-4848-a2b6-9296746a178b
-ROBOTS: NOINDEX
-ms.openlocfilehash: ddc242360adf67e3c5b6cd14d35fb6c869b83b2d
-ms.sourcegitcommit: 97cc93f8e26391c09a31a4ab42c4b5e9d98d1c32
+ms.localizationpriority: high
+ms.openlocfilehash: 512b5dc96892e2b66721e5e164301f2e9be6cd65
+ms.sourcegitcommit: b494c8a76f867d69fa7fff4878c4e38140eaeb8a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86948626"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87235456"
 ---
 # <a name="what-is-the-windows-subsystem-for-linux"></a>Linux 用 Windows サブシステムとは
 
@@ -24,10 +24,17 @@ Linux 用 Windows サブシステムを使用すると、開発者は、従来�
 * 以下のような Bash シェル スクリプトや GNU/Linux コマンド ライン アプリケーションを実行します。  
     * ツール: vim、emacs、tmux
     * 言語:[Node.js](https://docs.microsoft.com/windows/nodejs/setup-on-wsl2)、JavaScript、[Python](https://docs.microsoft.com/windows/python/web-frameworks)、Ruby、C/C++、C# & F#、Rust、Go など
-    * サービス:SSHD、MySQL、Apache、lighttpd、[MongoDB](https://docs.microsoft.com/windows/nodejs/databases)、[PostgreSQL](https://docs.microsoft.com/windows/python/databases)。
+    * サービス:SSHD、[MySQL](./tutorials/wsl-database.md)、Apache、lighttpd、[MongoDB](./tutorials/wsl-database.md)、[PostgreSQL](./tutorials/wsl-database.md)。
 * 独自の GNU/Linux ディストリビューション パッケージ マネージャーを使用して、追加のソフトウェアをインストールします。
 * Unix に似たコマンド ライン シェルを使用して Windows アプリケーションを起動します。
 * Windows で GNU/Linux アプリケーションを起動します。
+
+> [!div class="nextstepaction"]
+> [WSL をインストールする](install-win10.md)
+
+<br>
+
+> [!VIDEO https://www.youtube.com/embed/48k317kOxqg]
 
 ## <a name="what-is-wsl-2"></a>WSL 2 とは
 
@@ -36,6 +43,10 @@ WSL 2 は、Linux 用 Windows サブシステムが Windows 上で ELF64 Linux �
 この新しいアーキテクチャによって、こうした Linux バイナリと、Windows やお使いのコンピューターのハードウェアとの対話方法は変わりますが、ユーザー エクスペリエンスは WSL 1 (現在幅広く利用されているバージョン) と同じです。
 
 個々の Linux ディストリビューションは、WSL 1 または WSL 2 アーキテクチャで実行できます。 各ディストリビューションはいつでもアップグレードまたはダウングレードできます。また、WSL 1 ディストリビューションと WSL 2 ディストリビューションをサイド バイ サイドで実行することができます。 WSL 2 には、実際の Linux カーネルを実行することによるメリットが得られるまったく新しいアーキテクチャが使用されています。
+
+<br>
+
+> [!VIDEO https://www.youtube.com/embed/MrZolfGm8Zk]
 
 ## <a name="next-steps"></a>次の手順
 
