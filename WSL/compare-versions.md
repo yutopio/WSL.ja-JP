@@ -5,12 +5,12 @@ keywords: BashOnWindows, bash, wsl, windows, windowssubsystem, gnu, linux, ubunt
 ms.date: 07/22/2020
 ms.topic: article
 ms.localizationpriority: high
-ms.openlocfilehash: ea2c92030a895076be17ad2b99fe34719f84a47f
-ms.sourcegitcommit: b494c8a76f867d69fa7fff4878c4e38140eaeb8a
+ms.openlocfilehash: f64eff318ead5b74356a1b7db435952d4d4e669b
+ms.sourcegitcommit: 90577817a9321949da2a3971b4c78bb00f6d977f
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87235466"
+ms.lasthandoff: 08/10/2020
+ms.locfileid: "88039425"
 ---
 # <a name="comparing-wsl-1-and-wsl-2"></a>WSL 1 と WSL 2 の比較
 
@@ -136,6 +136,11 @@ Linux ディストリビューション (つまり、Ubuntu) から Windows 上�
 WSL 1 ディストリビューションを使用している場合、LAN からアクセスできるようにコンピューターが設定されていれば、WSL で実行されているアプリケーションに LAN からもアクセスできます。
 
 WSL 2 では、これは既定の動作ではありません。 WSL 2 には、独自の一意の IP アドレスを持つ仮想化されたイーサネット アダプターがあります。 現在、このワークフローを有効にするには、通常の仮想マシンの場合と同じ手順を実行する必要があります。 (Microsoft は、このエクスペリエンスを改善する方法を検討しています)。
+
+次に、ホスト上のポート 4000 でリッスンし、それを IP アドレス 192.168.101.100 の WSL 2 VM のポート 4000 に接続するポート プロキシを追加する PowerShell コマンドの例を示します。
+```powershell
+netsh interface portproxy add v4tov4 listenport=4000 listenaddress=0.0.0.0 connectport=4000 connectaddress=192.168.101.100
+```
 
 #### <a name="ipv6-access"></a>IPv6 アクセス
 

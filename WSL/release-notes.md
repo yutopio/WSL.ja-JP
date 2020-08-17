@@ -6,14 +6,23 @@ author: benhillis
 ms.date: 05/15/2020
 ms.topic: article
 ms.localizationpriority: high
-ms.openlocfilehash: 1de8f5e287d70c4992e9e6694d8980cbd305957b
-ms.sourcegitcommit: 97cc93f8e26391c09a31a4ab42c4b5e9d98d1c32
+ms.openlocfilehash: 751f7dd73abeefe7be0406c17b95158ee21b9199
+ms.sourcegitcommit: b79bf1d5f158f09e858184a6dfd096e212c1a231
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86948686"
+ms.lasthandoff: 08/12/2020
+ms.locfileid: "88161044"
 ---
 # <a name="release-notes-for-windows-subsystem-for-linux"></a>Windows Subsystem for Linux のリリース ノート
+
+## <a name="build-20190"></a>ビルド 20190
+ビルド 20190 の一般的な Windows 情報については、[Windows ブログ](https://blogs.windows.com/windowsexperience/2020/08/12/announcing-windows-10-insider-preview-build-20190/)を参照してください。
+
+* WSL1 インスタンスの起動を妨げているバグを修正します [GH 5633]
+* Windows プロセスの出力をリダイレクトする際のハングを修正します [GH 5648]
+* VM アイドル タイムアウトを制御するための %userprofile%\\.wslconfig オプションを追加します (wsl2.vmIdleTimeout=<time_in_ms>)
+* WSL からアプリの実行エイリアスを起動する操作をサポートします
+* WSL2 カーネルとディストリビューションをインストールするためのサポートが wsl.exe --install に追加されました
 
 ## <a name="build-20175"></a>ビルド 20175
 ビルド 20175 の一般的な Windows 情報については、[Windows ブログ](https://blogs.windows.com/windowsexperience/2020/07/22/announcing-windows-10-insider-preview-build-20175/)を参照してください。
