@@ -5,12 +5,12 @@ keywords: wsl, windows, linux カーネル, linux 用 windows サブシステム
 ms.date: 03/12/2020
 ms.topic: article
 ms.localizationpriority: high
-ms.openlocfilehash: bef722f5653380d9f6d104f1a7c116a7599658c9
-ms.sourcegitcommit: ba52d673c123fe8ae61e872a33e218cfc30a1f82
+ms.openlocfilehash: a718c4a880e2c3147900143c24983835d269a4bc
+ms.sourcegitcommit: a5534257c236cefeebe86e6b3fc4be0be8fac24e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/07/2020
-ms.locfileid: "86033041"
+ms.lasthandoff: 08/21/2020
+ms.locfileid: "88714826"
 ---
 # <a name="updating-the-wsl-2-linux-kernel"></a>WSL 2 Linux カーネルの更新
 
@@ -43,7 +43,7 @@ Linux カーネル更新パッケージをインストールするには、次�
 ## <a name="troubleshooting"></a>トラブルシューティング
 
 ### <a name="this-update-only-applies-to-machines-with-the-windows-subsystem-for-linux"></a>この更新プログラムは、Linux 用 Windows サブシステムを搭載したコンピューターにのみ適用される
-MSI カーネルをインストールするには、WSL が必要であり、最初に有効にする必要があります。 失敗した場合は、"`This update only applies to machines with the Windows Subsytem for Linux`" というメッセージが表示されます。 
+MSI カーネルをインストールするには、WSL が必要であり、最初に有効にする必要があります。 失敗した場合は、"`This update only applies to machines with the Windows Subsystem for Linux`" というメッセージが表示されます。 
 
 このメッセージが表示される理由として、次の 3 つが考えられます。
 
