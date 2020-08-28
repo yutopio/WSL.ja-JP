@@ -5,16 +5,24 @@ keywords: リリース ノート, wsl, windows, Linux 用 Windows サブシス�
 ms.date: 06/09/2020
 ms.topic: article
 ms.localizationpriority: high
-ms.openlocfilehash: e2409fccada9077adbeac3843c31b8faa2c93208
-ms.sourcegitcommit: f1b049a1276782d4f2754f46a8d2025b598a0784
+ms.openlocfilehash: ffec37d179005eb7015a8f9af8de0ac185710bec
+ms.sourcegitcommit: fb79750bd71d6ebaed5203b3de71ba85a67227b1
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/24/2020
-ms.locfileid: "85336055"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88866114"
 ---
 # <a name="release-notes-for-windows-subsystem-for-linux-kernel"></a>Linux 用 Windows サブシステム カーネルのリリース ノート
 
 WSL 2 ディストリビューションのサポートが追加されました。ここでは、[完全な Linux カーネルが使用されます](https://devblogs.microsoft.com/commandline/shipping-a-linux-kernel-with-windows/)。 この Linux カーネルはオープン ソースであり、そのソースコードは [WSL2-Linux-Kernel](https://github.com/microsoft/WSL2-Linux-Kernel) リポジトリから入手できます。 この Linux カーネルは Microsoft Update を介してコンピューターに配信され、Windows イメージの一部として提供される Linux 用 Windows サブシステムの個別のリリース スケジュールに従います。
+
+## <a name="419128-microsoft-standard"></a>4.19.128-microsoft-standard
+*リリース日*:プレリリース
+
+[公式の GitHub リリース リンク](https://github.com/microsoft/WSL2-Linux-Kernel/releases/tag/4.19.128-microsoft-standard)。
+
+* これは 4.19.128 の安定リリースです
+* dxgkrnl ドライバーの IOCTL メモリの破損を修正
 
 ## <a name="419121-microsoft-standard"></a>4.19.121-microsoft-standard
 *リリース日*:プレリリース

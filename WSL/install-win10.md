@@ -1,16 +1,16 @@
 ---
 title: Windows Subsystem for Linux (WSL) を Windows 10 にインストールする
-description: Windows 10 での Windows Subsystem for Linux のインストール手順。
+description: Windows 10 に Linux 用 Windows サブシステムをインストールする方法について説明します。 Windows 10 は、バージョン 2004、ビルド 19041 以上に更新する必要があります。
 keywords: BashOnWindows, bash, wsl, windows, linux 用 windows サブシステム, windowssubsystem, ubuntu, debian, suse, windows 10, インストール, 有効にする, WSL2, バージョン 2
 ms.date: 05/12/2020
 ms.topic: article
 ms.localizationpriority: high
-ms.openlocfilehash: bab21722e77a0879db70e21003fb237491d99218
-ms.sourcegitcommit: 90577817a9321949da2a3971b4c78bb00f6d977f
+ms.openlocfilehash: 23c72c0e82c90c23fc0406b56dbf8accad0e39df
+ms.sourcegitcommit: fb79750bd71d6ebaed5203b3de71ba85a67227b1
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/10/2020
-ms.locfileid: "88039441"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88866162"
 ---
 # <a name="windows-subsystem-for-linux-installation-guide-for-windows-10"></a>Windows 10 用 Windows Subsystem for Linux のインストール ガイド
 
@@ -30,9 +30,9 @@ WSL 1 のみをインストールするには、お使いのマシンを再起�
 
 WSL 2 に更新するには、次の条件を満たす必要があります。
 
-- [バージョン 2004](ms-settings:windowsupdate)、**ビルド 19041** 以上に更新された Windows 10 を実行している。
+- [バージョン 1903 以降](ms-settings:windowsupdate)、**ビルド 18362** 以上に更新された Windows 10 を実行している。
 
-- Windows のバージョンを確認するには **Windows ロゴ キー + R** キーを押します。次に「**winver**」と入力し、 **[OK]** を選択します (または、Windows コマンド プロンプトで `ver` コマンドを入力します)。 お使いのビルドが 19041 より前の場合は、[最新の Windows バージョンに更新](ms-settings:windowsupdate)してください。 [Windows 更新アシスタントを入手する](https://www.microsoft.com/software-download/windows10)。
+- Windows のバージョンを確認するには **Windows ロゴ キー + R** キーを押します。次に「**winver**」と入力し、 **[OK]** を選択します (または、Windows コマンド プロンプトで `ver` コマンドを入力します)。 お使いのビルドが 18361 より前の場合は、[最新の Windows バージョンに更新](ms-settings:windowsupdate)してください。 [Windows 更新アシスタントを入手する](https://www.microsoft.com/software-download/windows10)。
 
 ### <a name="enable-the-virtual-machine-platform-optional-component"></a>"仮想マシン プラットフォーム" のオプション コンポーネントを有効にする
 
@@ -59,7 +59,7 @@ wsl --set-default-version 2
 > [!NOTE]
 > 対象のディストリビューションのサイズによっては、WSL 1 から WSL 2 への更新が完了するまでに数分かかる場合があります。 Windows 10 Anniversary Update または Creators Update から WSL 1 の古い (レガシ) インストールを実行している場合は、更新エラーが発生することがあります。 次の手順に従って、[レガシ ディストリビューションをアンインストールして削除](https://docs.microsoft.com/windows/wsl/install-legacy#uninstallingremoving-the-legacy-distro)します。 
 >
-> `wsl --set-default-version` の結果が無効なコマンドである場合は、「`wsl --help`」と入力してください。 `--set-default-version` が表示されない場合は、お使いの OS によってサポートされていないことを意味しているため、バージョン 2004 ビルド 19041 以降に更新する必要があります。
+> `wsl --set-default-version` の結果が無効なコマンドである場合は、「`wsl --help`」と入力してください。 `--set-default-version` が表示されない場合は、お使いの OS によってサポートされていないことを意味しているため、バージョン 1903、ビルド 18362 以上に更新する必要があります。
 
 ## <a name="install-your-linux-distribution-of-choice"></a>選択した Linux ディストリビューションをインストールする
 
@@ -96,7 +96,7 @@ wsl --set-default-version 2
 
 ## <a name="set-your-distribution-version-to-wsl-1-or-wsl-2"></a>ディストリビューションのバージョンを WSL 1 または WSL 2 に設定する
 
-インストールされている各 Linux ディストリビューションに割り当てられている WSL バージョンを確認するには、PowerShell コマンド ラインを開き、次のコマンドを入力します ([Windows ビルド 19041 以上](ms-settings:windowsupdate)でのみ使用可能): `wsl -l -v`
+インストールされている各 Linux ディストリビューションに割り当てられている WSL バージョンを確認するには、PowerShell コマンド ラインを開き、次のコマンドを入力します ([Windows ビルド 18362 以上](ms-settings:windowsupdate)でのみ使用可能): `wsl -l -v`
 
 ```powershell
 wsl --list --verbose
@@ -135,7 +135,7 @@ wsl --set-default-version 2
   - コンピューターの BIOS 内部で仮想化が有効になっていることを確認してください。 これを行う方法の手順は、コンピューターによって異なりますが、最も可能性が高いのは CPU 関連のオプションの下です。
 
 - **アップグレードしようとしたときに次のエラーが発生する: `Invalid command line option: wsl --set-version Ubuntu 2`**
-  - Linux 用 Windows サブシステムが有効になっていること、および Windows ビルド バージョン 19041 以降を使用していることをご確認ください。 WSL を有効にするには、PowerShell プロンプトで管理者特権を使用してこのコマンドを実行します: `Enable-WindowsOptionalFeature -Online -FeatureName Microsoft-Windows-Subsystem-Linux`。
+  - Linux 用 Windows サブシステムが有効になっていること、および Windows ビルド バージョン 18362 以上を使用していることをご確認ください。 WSL を有効にするには、PowerShell プロンプトで管理者特権を使用してこのコマンドを実行します: `Enable-WindowsOptionalFeature -Online -FeatureName Microsoft-Windows-Subsystem-Linux`。
 
 - **仮想ディスク システムの制限があるため、要求された操作を完了できませんでした。仮想ハード ディスク ファイルは、圧縮と暗号化が解除されている必要があります。また、スパースにすることはできません。**
   - [内容を圧縮] ([内容を暗号化] のチェックボックスがオンになっている場合はこれも) を選択解除するため、Linux ディストリビューションのプロファイル フォルダーを開きます。 これは、Windows ファイル システムのフォルダーにあります (例: `USERPROFILE%\AppData\Local\Packages\CanonicalGroupLimited...`)。

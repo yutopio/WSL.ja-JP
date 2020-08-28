@@ -1,16 +1,16 @@
 ---
 title: Windows Subsystem for Linux のコマンド リファレンス
-description: Windows Subsystem for Linux を管理するコマンドの一覧
+description: Linux コマンドを実行するための引数など、Linux 用 Windows サブシステムを管理するコマンドの一覧をご覧ください。
 keywords: BashOnWindows, bash, wsl, windows, windows subsystem for linux, windowssubsystem, ubuntu
 ms.date: 07/31/2017
 ms.topic: article
 ms.localizationpriority: high
-ms.openlocfilehash: 72b78a73bf68b28dd14b4826943a0c81ea04bbad
-ms.sourcegitcommit: 1b6191351bbf9e95f3c28fc67abe4bf1bcfd3336
+ms.openlocfilehash: fc5c9e06c597092a3790ba7f9eb06054a33450c1
+ms.sourcegitcommit: fb79750bd71d6ebaed5203b3de71ba85a67227b1
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/13/2020
-ms.locfileid: "83270876"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88866138"
 ---
 # <a name="command-reference-for-windows-subsystem-for-linux"></a>Windows Subsystem for Linux のコマンド リファレンス
 
@@ -139,11 +139,11 @@ Windows Subsystem for Linux を操作するための過去のコマンドもあ�
 
 * **/s、/setdefault \<Distro>** このディストリビューションを既定値として設定します。
 
-* **/t、/terminate \<Distro>** ディストリビューションを終了します。
+* **/t、/terminate \<Distro>** このディストリビューションを終了します。
 
-* **/u、/unregister \<Distro>** ディストリビューションの登録を解除します。
+* **/u、/unregister \<Distro>** このディストリビューションの登録を解除します。
 
-* **/upgrade \<Distro>** ディストリビューションを WslFs ファイル システム形式にアップグレードします。
+* **/upgrade \<Distro>** このディストリビューションを WslFs ファイル システム形式にアップグレードします。
 
 ### `bash.exe`
 

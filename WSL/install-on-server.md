@@ -1,16 +1,16 @@
 ---
 title: Windows Server に Linux サブシステムをインストールする
-description: Windows Server 上の Linux サブシステムのインストール手順です。
+description: Windows Server に Linux サブシステムをインストールする方法について説明します。 WSL は、Windows Server 2019 (バージョン 1709) 以降にインストールできます。
 keywords: BashOnWindows, bash, wsl, windows, Linux 用 Windows サブシステム, windowssubsystem, ubuntu, windows server
 ms.date: 05/12/2020
 ms.topic: article
 ms.localizationpriority: high
-ms.openlocfilehash: ebcd7f6b10d2b734b1f2a66f64a5e3292855bcf4
-ms.sourcegitcommit: 5d3898772851e6ac9a310f219cc0d71278f95d22
+ms.openlocfilehash: 501bbf78c2d9f59dad945af9c30571317240b79f
+ms.sourcegitcommit: fb79750bd71d6ebaed5203b3de71ba85a67227b1
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/10/2020
-ms.locfileid: "84671022"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88866146"
 ---
 # <a name="windows-server-installation-guide"></a>Windows Server インストール ガイド
 

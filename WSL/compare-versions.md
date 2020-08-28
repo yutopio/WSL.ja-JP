@@ -1,16 +1,16 @@
 ---
 title: WSL 2 と WSL 1 の比較
-description: Linux 用 Windows サブシステムのバージョン 1 とバージョン 2 を比較します。 ヒント - バージョン 2 では、実際の Linux カーネルが実行され、パフォーマンスが向上し、より高速になりますが、Windows と Linux の両方のファイル システムで作業している場合は WSL 1 が適しています。
+description: Linux 用 Windows サブシステムのバージョン 1 とバージョン 2 を比較します。 WSL 2 は、実際の Linux カーネルを実行し、速度とシステム コールの完全な互換性を高めます。 WSL 1 は、Windows と Linux の両方のファイル システムで作業している場合に適しています。
 keywords: BashOnWindows, bash, wsl, windows, windowssubsystem, gnu, linux, ubuntu, debian, suse, windows 10, UX の変更, WSL 2, linux カーネル, ネットワーク アプリケーション, localhost, IPv6, 仮想ハードウェア ディスク, VHD, VHD の制限, VHD エラー
 ms.date: 07/22/2020
 ms.topic: article
 ms.localizationpriority: high
-ms.openlocfilehash: f64eff318ead5b74356a1b7db435952d4d4e669b
-ms.sourcegitcommit: 90577817a9321949da2a3971b4c78bb00f6d977f
+ms.openlocfilehash: 15f1528332345f0bea829b9606372ed7346e6dff
+ms.sourcegitcommit: fb79750bd71d6ebaed5203b3de71ba85a67227b1
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/10/2020
-ms.locfileid: "88039425"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88866026"
 ---
 # <a name="comparing-wsl-1-and-wsl-2"></a>WSL 1 と WSL 2 の比較
 
