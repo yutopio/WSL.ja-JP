@@ -1,18 +1,18 @@
 ---
 title: WSL 2 について
-description: Linux 用 Windows サブシステムの新しいアーキテクチャの WSL 2 の概要
+description: Linux 用 Windows サブシステムの新しいアーキテクチャである WSL 2 について説明します。 このアーキテクチャの概要および Linux カーネルに関する情報をお読みください。
 keywords: BashOnWindows, bash, wsl, wsl2, windows, windows subsystem for linux, windowssubsystem, ubuntu, debian, suse, windows 10, インストール
 ms.date: 05/30/2019
 ms.topic: article
 ms.assetid: 7afaeacf-435a-4e58-bff0-a9f0d75b8a51
 ms.custom: seodec18
 ms.localizationpriority: high
-ms.openlocfilehash: 70044105820dd485246ae3fc731cbd6f06183f8a
-ms.sourcegitcommit: e6e888f2b88a2d9c105cee46e5ab5b70aa43dd80
+ms.openlocfilehash: bfb0e14ce53d3022dba06340630cc97a1286a13f
+ms.sourcegitcommit: fb79750bd71d6ebaed5203b3de71ba85a67227b1
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/13/2020
-ms.locfileid: "83343884"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88866120"
 ---
 # <a name="about-wsl-2"></a>WSL 2 について
 
