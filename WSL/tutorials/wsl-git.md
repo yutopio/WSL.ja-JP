@@ -5,12 +5,12 @@ keywords: wsl、windows、windowssubsystem、gnu、linux、bash、git、github�
 ms.date: 06/04/2020
 ms.topic: article
 ms.localizationpriority: medium
-ms.openlocfilehash: 550355ea77c97d68130c8d85e9aef2a6b49ffe63
-ms.sourcegitcommit: eaceda3589b9bd777e0fead5ef33bb16060a55d2
+ms.openlocfilehash: c48234be5c3867d771363aaa5e630d8ebe378364
+ms.sourcegitcommit: 6ff046993e9f196cdfa04f5f91130e0e4ff1e7fa
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "84978245"
+ms.lasthandoff: 09/03/2020
+ms.locfileid: "89427219"
 ---
 # <a name="get-started-using-git-on-windows-subsystem-for-linux"></a>Windows Subsystem for Linux で Git の使用を開始する
 
@@ -38,7 +38,7 @@ Git は、最も一般的に使用されるバージョン管理システムで�
 
 Git は、ほとんどの Windows Subsystem for Linux ディストリビューションで既にインストールされていますが、最新バージョンに更新することもできます。 また、git 構成ファイルを設定する必要があります。
 
-Git をインストールするには、 [Linux サイト用の Git ダウンロードに関する](https://git-scm.com/download/linux)ページを参照してください。 各 Linux ディストリビューションには、独自のパッケージマネージャーとインストールコマンドがあります。
+Git をインストールするには、 [Linux サイト用の Git ダウンロードに関する](https://git-scm.com/download/linux) ページを参照してください。 各 Linux ディストリビューションには、独自のパッケージマネージャーとインストールコマンドがあります。
 
 Ubuntu/Debian の最新の安定した GIt バージョンについては、次のコマンドを入力します。
 
@@ -47,20 +47,20 @@ sudo apt-get install git
 ```
 
 > [!NOTE]
-> また、 [Git For Windows](https://git-scm.com/download/win)をまだインストールしていない場合にもインストールすることができます。
+> また、 [Git For Windows](https://git-scm.com/download/win) をまだインストールしていない場合にもインストールすることができます。
 
 ## <a name="git-config-file-setup"></a>Git 構成ファイルのセットアップ
 
 Git 構成ファイルを設定するには、作業中のディストリビューションのコマンドラインを開き、次のコマンドで名前を設定します ("your Name" を Git ユーザー名に置き換えます)。
 
 ```bash
- `git config --global user.name "Your Name"`
+git config --global user.name "Your Name"
 ```
 
 次のコマンドを使用して電子メールを設定します (" youremail@domain.com " は、Git アカウントで使用する電子メールに置き換えてください)。
 
 ```bash
-`git config --global user.email "youremail@domain.com"`
+git config --global user.email "youremail@domain.com"
 ```
 
 > [!TIP]
@@ -70,7 +70,7 @@ Git 構成ファイルを設定するには、作業中のディストリビュ�
 
 ## <a name="git-credential-manager-setup"></a>Git Credential Manager のセットアップ
 
-Git Credential Manager を使用すると、リモート Git サーバーを認証することができます。これには、2要素認証のような複雑な認証パターン、Azure Active Directory、またはすべての git プッシュに SSH キーパスワードを必要とする SSH リモート Url の使用などがあります。 Git Credential Manager は、GitHub などのサービスの認証フローに統合されています。ユーザーがホスティング プロバイダーに対して認証されると、新しい認証トークンが要求されます。 その後、トークンを[Windows 資格情報マネージャー](https://support.microsoft.com/help/4026814/windows-accessing-credential-manager)に安全に格納します。 2 回目以降は、Git を使用してホスティング プロバイダーと通信することができ、再認証は必要ありません。 Windows 資格情報マネージャーにあるトークンへのアクセスだけが行われることになります。
+Git Credential Manager を使用すると、リモート Git サーバーを認証することができます。これには、2要素認証のような複雑な認証パターン、Azure Active Directory、またはすべての git プッシュに SSH キーパスワードを必要とする SSH リモート Url の使用などがあります。 Git Credential Manager は、GitHub などのサービスの認証フローに統合されています。ユーザーがホスティング プロバイダーに対して認証されると、新しい認証トークンが要求されます。 その後、トークンを [Windows 資格情報マネージャー](https://support.microsoft.com/help/4026814/windows-accessing-credential-manager)に安全に格納します。 2 回目以降は、Git を使用してホスティング プロバイダーと通信することができ、再認証は必要ありません。 Windows 資格情報マネージャーにあるトークンへのアクセスだけが行われることになります。
 
 WSL ディストリビューションで使用するように Git Credential Manager をセットアップするには、ディストリビューションを開き、次のコマンドを入力します。
 
@@ -85,7 +85,7 @@ git config --global credential.helper "/mnt/c/Program\ Files/Git/mingw64/libexec
 
 ## <a name="adding-a-git-ignore-file"></a>Git Ignore ファイルの追加
 
-プロジェクトには、ファイルを追加することをお勧め[します](https://help.github.com/en/articles/ignoring-files)。 GitHub では、使用事例に従って整理されたファイル設定を使用して[、便利なテンプレートのコレクションを](https://github.com/github/gitignore)提供しています。 たとえば、 [Node.js プロジェクトの GitHub の既定の gitemplate テンプレート](https://github.com/github/gitignore/blob/master/Node.gitignore)は次のようになります。
+プロジェクトには、ファイルを追加することをお勧め [します](https://help.github.com/en/articles/ignoring-files) 。 GitHub では、使用事例に従って整理されたファイル設定を使用して [、便利なテンプレートのコレクションを](https://github.com/github/gitignore) 提供しています。 たとえば、 [Node.js プロジェクトの GitHub の既定の gitemplate テンプレート](https://github.com/github/gitignore/blob/master/Node.gitignore)は次のようになります。
 
 [Github web サイトを使用して新しいリポジトリを作成](https://help.github.com/articles/create-a-repo)することを選択した場合は、README ファイルを使用してリポジトリを初期化するためのチェックボックスがあります。特定のプロジェクトの種類に対してファイルがセットアップされ、必要に応じてライセンスを追加するためのオプションがあります。
 
@@ -97,7 +97,7 @@ Visual Studio Code には、Git のサポートが組み込まれています。
 
 Windows、WSL、またはコンテナー間で同じリポジトリフォルダーを使用している場合は、一貫性のある行の終わりを設定してください。
 
-Windows と Linux では異なる既定の行の終わりが使用されるため、Git では、変更されたファイルのうち、行の終わりとは異なるものが多数報告される場合があります。 これが行われないようにするには、ファイルを使用する `.gitattributes` か、Windows 側でグローバルに行の終了変換を無効にします。 Git の[行の終了問題の解決について](https://code.visualstudio.com/docs/remote/troubleshooting#_resolving-git-line-ending-issues-in-containers-resulting-in-many-modified-files)は、この VS Code のドキュメントを参照してください。
+Windows と Linux では異なる既定の行の終わりが使用されるため、Git では、変更されたファイルのうち、行の終わりとは異なるものが多数報告される場合があります。 これが行われないようにするには、ファイルを使用する `.gitattributes` か、Windows 側でグローバルに行の終了変換を無効にします。 Git の [行の終了問題の解決について](https://code.visualstudio.com/docs/remote/troubleshooting#_resolving-git-line-ending-issues-in-containers-resulting-in-many-modified-files)は、この VS Code のドキュメントを参照してください。
 
 ## <a name="additional-resources"></a>その他のリソース
 
