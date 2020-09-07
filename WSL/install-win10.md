@@ -5,12 +5,12 @@ keywords: BashOnWindows, bash, wsl, windows, linux 用 windows サブシステ�
 ms.date: 05/12/2020
 ms.topic: article
 ms.localizationpriority: high
-ms.openlocfilehash: 23c72c0e82c90c23fc0406b56dbf8accad0e39df
-ms.sourcegitcommit: fb79750bd71d6ebaed5203b3de71ba85a67227b1
+ms.openlocfilehash: 14e1697d1f2ac7a1efa17368be830a5c22973bc6
+ms.sourcegitcommit: 910845e9b3f980b2c5b9b4968331a706720603c6
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/26/2020
-ms.locfileid: "88866162"
+ms.lasthandoff: 08/28/2020
+ms.locfileid: "89058497"
 ---
 # <a name="windows-subsystem-for-linux-installation-guide-for-windows-10"></a>Windows 10 用 Windows Subsystem for Linux のインストール ガイド
 
@@ -30,7 +30,9 @@ WSL 1 のみをインストールするには、お使いのマシンを再起�
 
 WSL 2 に更新するには、次の条件を満たす必要があります。
 
-- [バージョン 1903 以降](ms-settings:windowsupdate)、**ビルド 18362** 以上に更新された Windows 10 を実行している。
+- [バージョン 1903 以降](ms-settings:windowsupdate)、**ビルド 18362** 以上に更新された x64 システム用の Windows 10 を実行している。
+- バージョン 2004 以降、**ビルド 19041** に更新された ARM64 システム用の Windows 10 を実行している。
+- Windows 10 バージョン 1903 または 1909 を使用している場合は、適切なバックポートがあることを確認する必要があります。手順については、[こちらを参照してください](https://devblogs.microsoft.com/commandline/wsl-2-support-is-coming-to-windows-10-versions-1903-and-1909/#how-do-i-get-it)。 
 
 - Windows のバージョンを確認するには **Windows ロゴ キー + R** キーを押します。次に「**winver**」と入力し、 **[OK]** を選択します (または、Windows コマンド プロンプトで `ver` コマンドを入力します)。 お使いのビルドが 18361 より前の場合は、[最新の Windows バージョンに更新](ms-settings:windowsupdate)してください。 [Windows 更新アシスタントを入手する](https://www.microsoft.com/software-download/windows10)。
 
