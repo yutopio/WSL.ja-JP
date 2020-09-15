@@ -5,12 +5,12 @@ keywords: BashOnWindows, bash, wsl, windows, windows subsystem for linux, window
 ms.date: 05/12/2020
 ms.topic: article
 ms.localizationpriority: high
-ms.openlocfilehash: 551cc66b1648a66717163d1d8e19a78d28bff342
-ms.sourcegitcommit: 3fb40fd65b34a5eb26b213a0df6a3b2746b7a9b4
+ms.openlocfilehash: cdb510b8195f18f89ea475889c34850234b7c0e8
+ms.sourcegitcommit: 6ff046993e9f196cdfa04f5f91130e0e4ff1e7fa
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/12/2020
-ms.locfileid: "83235910"
+ms.lasthandoff: 09/03/2020
+ms.locfileid: "89427189"
 ---
 # <a name="create-a-user-account-and-password-for-your-new-linux-distribution"></a>新しい Linux ディストリビューションのユーザー アカウントとパスワードを作成する
 
@@ -50,7 +50,7 @@ Linux ディストリビューションのパスワードを忘れた場合は�
 
     > 既定ではないディストリビューションで忘れたパスワードを更新する必要がある場合は、コマンド `wsl -d Debian -u root` を使用します。`Debian` は対象のディストリビューション名に置き換えます。
 
-2. PowerShell 内のルート レベルで WSL ディストリビューションが開かれたら、コマンド `passwd` を使用してパスワードを更新できます。
+2. PowerShell 内のルート レベルでお客様の WSL ディストリビューションが開いたら、コマンド `passwd <WSLUsername>` を使用してパスワードを更新できます。ここで、`<WSLUsername>` は、パスワードを忘れてしまった DISTRO のアカウントのユーザー名です。
 
 3. 新しい UNIX パスワードを入力し、そのパスワードを確認するように求められます。 パスワードが正常に更新されたことを示す通知が表示されたら、コマンド `exit` を使用して PowerShell 内の WSL を閉じます。
 

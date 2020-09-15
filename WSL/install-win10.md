@@ -5,12 +5,12 @@ keywords: BashOnWindows, bash, wsl, windows, linux 用 windows サブシステ�
 ms.date: 05/12/2020
 ms.topic: article
 ms.localizationpriority: high
-ms.openlocfilehash: 14e1697d1f2ac7a1efa17368be830a5c22973bc6
-ms.sourcegitcommit: 910845e9b3f980b2c5b9b4968331a706720603c6
+ms.openlocfilehash: 50b434e288ba90173875cf5e7cd5fe9e6c3d8a16
+ms.sourcegitcommit: 498592fa4b09015be3ee9a8913e5e3cf755de24b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/28/2020
-ms.locfileid: "89058497"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89559292"
 ---
 # <a name="windows-subsystem-for-linux-installation-guide-for-windows-10"></a>Windows 10 用 Windows Subsystem for Linux のインストール ガイド
 
@@ -31,6 +31,7 @@ WSL 1 のみをインストールするには、お使いのマシンを再起�
 WSL 2 に更新するには、次の条件を満たす必要があります。
 
 - [バージョン 1903 以降](ms-settings:windowsupdate)、**ビルド 18362** 以上に更新された x64 システム用の Windows 10 を実行している。
+   - Windows 10 バージョン 1903 または 1909 を使用している場合、マイナー ビルド番号が 1049 以上であることをご確認ください。 [詳細なトラブルシューティング手順についてはこちら](https://docs.microsoft.com/windows/wsl/troubleshooting#im-on-windows-10-version-1903-and-i-still-do-not-see-options-for-wsl-2)をご覧ください
 - バージョン 2004 以降、**ビルド 19041** に更新された ARM64 システム用の Windows 10 を実行している。
 - Windows 10 バージョン 1903 または 1909 を使用している場合は、適切なバックポートがあることを確認する必要があります。手順については、[こちらを参照してください](https://devblogs.microsoft.com/commandline/wsl-2-support-is-coming-to-windows-10-versions-1903-and-1909/#how-do-i-get-it)。 
 
@@ -141,7 +142,7 @@ wsl --set-default-version 2
 
 - **仮想ディスク システムの制限があるため、要求された操作を完了できませんでした。仮想ハード ディスク ファイルは、圧縮と暗号化が解除されている必要があります。また、スパースにすることはできません。**
   - [内容を圧縮] ([内容を暗号化] のチェックボックスがオンになっている場合はこれも) を選択解除するため、Linux ディストリビューションのプロファイル フォルダーを開きます。 これは、Windows ファイル システムのフォルダーにあります (例: `USERPROFILE%\AppData\Local\Packages\CanonicalGroupLimited...`)。
-  - この Linux ディストリビューション プロファイル内に、LocalState フォルダーが存在します。 このフォルダーを右クリックして、オプションのメニューを表示します。 [プロパティ] > [詳細設定] の順に選択し、[内容を圧縮してディスク領域を節約する] および [内容を暗号化してデータをセキュリティで保護する] チェックボックスを確実にオフにします。 これを現在のフォルダーのみに適用するか、すべてのサブフォルダーとファイルに適用するかを確認するメッセージが表示された場合は、圧縮フラグをオフにしようとしているだけなので、[このフォルダーのみ] を選択します。 この操作を実行すると、`wsl –set-version` コマンドが機能するようになります。
+  - この Linux ディストリビューション プロファイル内に、LocalState フォルダーが存在します。 このフォルダーを右クリックして、オプションのメニューを表示します。 [プロパティ] > [詳細設定] の順に選択し、[内容を圧縮してディスク領域を節約する] および [内容を暗号化してデータをセキュリティで保護する] チェックボックスを確実にオフにします。 これを現在のフォルダーのみに適用するか、すべてのサブフォルダーとファイルに適用するかを確認するメッセージが表示された場合は、圧縮フラグをオフにしようとしているだけなので、[このフォルダーのみ] を選択します。 この操作を実行すると、`wsl --set-version` コマンドが機能するようになります。
 
 ![WSL ディストリビューションのプロパティ設定のスクリーンショット](media/troubleshooting-virtualdisk-compress.png)
 

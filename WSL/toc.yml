@@ -24,6 +24,8 @@
       href: tutorials/wsl-git.md
     - name: データベースの概要
       href: tutorials/wsl-database.md
+    - name: Docker リモート コンテナーの概要
+      href: tutorials/wsl-containers.md
     - name: GPU アクセラレーション (NVIDIA CUDA/DirectML) の設定
       href: tutorials/gpu-compute.md
 - name: 方法
@@ -46,7 +48,7 @@
   href: wsl2-faq.md
 - name: トラブルシューティング
   href: troubleshooting.md
-- name: のリリース ノート
+- name: リリース ノート
   items:
     - name: 一般のリリース ノート
       href: release-notes.md

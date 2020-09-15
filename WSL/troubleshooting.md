@@ -5,12 +5,12 @@ keywords: BashOnWindows, bash, wsl, windows, windowssubsystem, ubuntu
 ms.date: 01/20/2020
 ms.topic: article
 ms.localizationpriority: high
-ms.openlocfilehash: 84aecf4f6111cca47ece3c2421be659fb5a27771
-ms.sourcegitcommit: a5534257c236cefeebe86e6b3fc4be0be8fac24e
+ms.openlocfilehash: 2335db4daf8b9c5c67ad04a1fc94339b6c01e546
+ms.sourcegitcommit: 6ff046993e9f196cdfa04f5f91130e0e4ff1e7fa
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/21/2020
-ms.locfileid: "88714851"
+ms.lasthandoff: 09/03/2020
+ms.locfileid: "89427199"
 ---
 # <a name="troubleshooting-windows-subsystem-for-linux"></a>Windows Subsystem for Linux のトラブルシューティング
 
@@ -39,6 +39,12 @@ WSL ドキュメントに投稿するには、ドキュメント リポジトリ
 最後に、問題が Windows ターミナル、Windows コンソール、またはコマンドライン UI に関連している場合は、Windows ターミナル リポジトリを使用します: https://github.com/microsoft/terminal
 
 ## <a name="common-issues"></a>一般的な問題
+
+### <a name="im-on-windows-10-version-1903-and-i-still-do-not-see-options-for-wsl-2"></a>Windows 10 バージョン 1903 を使用しており、WSL 2 のオプションがまだ表示されません。 
+
+これはおそらく、お客様のマシンが WSL 2 のバックポートをまだ取得していないことが原因です。 これの最も簡単な解決方法は、Windows 設定に移動し、[更新プログラムの確認] をクリックして最新の更新プログラムをお客様のシステムにインストールすることです。 バックポート取得の詳細な手順については、[こちら](https://devblogs.microsoft.com/commandline/wsl-2-support-is-coming-to-windows-10-versions-1903-and-1909/#how-do-i-get-it)をご覧ください。 
+
+[更新プログラムの確認] を押しても更新プログラムが届かない場合は、[このリンクに従って](http://www.catalog.update.microsoft.com/Search.aspx?q=KB4566116)手動で KB KB4566116 をインストールすることができます。  
 
 ### <a name="error-0x1bc-when-wsl---set-default-version-2"></a>エラー: 0x1bc (`wsl --set-default-version 2` の場合)
 これは、[表示言語] または [システム ロケール] の設定が英語ではない場合に発生する可能性があります。
