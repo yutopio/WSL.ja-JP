@@ -40,6 +40,8 @@
       href: enterprise.md
     - name: カスタム ディストリビューションのビルド
       href: build-custom-distro.md
+    - name: WSL 2 でのディスクのマウント (プレビュー)
+      href: wsl2-mount-disk.md
     - name: コマンド ライン リファレンス
       href: reference.md
 - name: よく寄せられる質問
