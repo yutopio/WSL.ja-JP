@@ -5,12 +5,12 @@ keywords: wsl、windows、windowssubsystem、MySQL MongoDB、PostgreSQL、SQLite
 ms.date: 07/07/2020
 ms.topic: article
 ms.localizationpriority: medium
-ms.openlocfilehash: 8ffd40ef21e8fb8ece529157852ba5d8bb676076
-ms.sourcegitcommit: 16ffb1a096a4a7fbb77c58f92258051930cc82da
+ms.openlocfilehash: 561af482e245892156a02fe287b95867ef80ded1
+ms.sourcegitcommit: ba3399a5ffeffd23551315acd04ea6848d30693b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/09/2020
-ms.locfileid: "86160223"
+ms.lasthandoff: 09/17/2020
+ms.locfileid: "90719131"
 ---
 # <a name="get-started-with-databases-on-windows-subsystem-for-linux"></a>Windows Subsystem for Linux でデータベースを使ってみる
 
@@ -20,31 +20,31 @@ ms.locfileid: "86160223"
 
 - [バージョン 2004](ms-settings:windowsupdate)、**ビルド 19041** 以上に更新された Windows 10 を実行している。
 - [Wsl が有効になり、インストールされ、wsl 2 に更新されました](https://docs.microsoft.com/windows/wsl/install-win10)。
-- [Linux ディストリビューションがインストールされている](https://docs.microsoft.com/windows/wsl/install-win10#install-your-linux-distribution-of-choice)(例については Ubuntu 18.04)。
-- Ubuntu 18.04 のディストリビューションが[WSL 2 モードで実行](https://docs.microsoft.com/windows/wsl/install-win10#set-your-distribution-version-to-wsl-1-or-wsl-2)されていることを確認します。 (WSL では、v1 モードと v2 モードの両方でディストリビューションを実行できます)。これを確認するには、PowerShell を開き、次のように入力します。`wsl -l -v`
+- [Linux ディストリビューションがインストールされている](https://docs.microsoft.com/windows/wsl/install-win10#step-6---install-your-linux-distribution-of-choice) (例については Ubuntu 18.04)。
+- Ubuntu 18.04 のディストリビューションが [WSL 2 モードで実行](https://docs.microsoft.com/windows/wsl/install-win10#set-your-distribution-version-to-wsl-1-or-wsl-2)されていることを確認します。 (WSL では、v1 モードと v2 モードの両方でディストリビューションを実行できます)。これを確認するには、PowerShell を開き、次のように入力します。 `wsl -l -v`
 
 ## <a name="differences-between-database-systems"></a>データベースシステム間の相違点
 
-データベースシステムの最も[一般的な選択肢](https://insights.stackoverflow.com/survey/2019#technology-_-databases)は次のとおりです。
+データベースシステムの最も [一般的な選択肢](https://insights.stackoverflow.com/survey/2019#technology-_-databases) は次のとおりです。
 
 - [MySQL](https://www.mysql.com/why-mysql/) (SQL)
 - [PostgreSQL](https://www.postgresql.org/about/) (SQL)
-- [Microsoft SQL Server](https://docs.microsoft.com/sql/?view=sql-server-ver15) (SQL)
+- [Microsoft SQL Server](https://docs.microsoft.com/sql) (SQL)
 - [SQLite](https://www.sqlite.org/about.html) (SQL)
 - [MongoDB](https://www.mongodb.com/what-is-mongodb) (NoSQL)
 - [Redis](https://redis.io/topics/introduction) (NoSQL)
 
-**MySQL**は、オープンソースの SQL リレーショナルデータベースで、データ型が相互に関連している可能性のある1つ以上のテーブルにデータを整理します。 この機能は垂直方向にスケーラブルであるため、1つの究極のコンピューターで作業が行われます。 現在、4つのデータベースシステムで最も広く使用されています。
+**MySQL** は、オープンソースの SQL リレーショナルデータベースで、データ型が相互に関連している可能性のある1つ以上のテーブルにデータを整理します。 この機能は垂直方向にスケーラブルであるため、1つの究極のコンピューターで作業が行われます。 現在、4つのデータベースシステムで最も広く使用されています。
 
 **PostgreSQL** (Postgres とも呼ばれます) もオープンソースの SQL リレーショナルデータベースであり、拡張性と標準への準拠を重視しています。 現在は JSON も処理できますが、一般的には、構造化データ、垂直方向の規模拡張、および、e コマースや金融取引などの ACID 準拠のニーズに適しています。
 
-**Microsoft SQL Server**には、Azure 上の Windows、SQL SERVER ON LINUX、SQL の SQL Server が含まれています。 これらは、ソフトウェアアプリケーションによって要求されたデータの格納と取得の主な機能を備えたサーバーに設定されたリレーショナルデータベース管理システムでもあります。
+**Microsoft SQL Server** には、Azure 上の Windows、SQL SERVER ON LINUX、SQL の SQL Server が含まれています。 これらは、ソフトウェアアプリケーションによって要求されたデータの格納と取得の主な機能を備えたサーバーに設定されたリレーショナルデータベース管理システムでもあります。
 
-**SQLite**は、オープンソースの自己完結型の "サーバーレス" データベースです。低メモリ環境でも、移植性、信頼性、優れたパフォーマンスが確保されています。
+**SQLite** は、オープンソースの自己完結型の "サーバーレス" データベースです。低メモリ環境でも、移植性、信頼性、優れたパフォーマンスが確保されています。
 
-**MongoDB**は、JSON を使用してスキーマフリーデータを格納するように設計されたオープンソースの NoSQL ドキュメントデータベースです。 水平方向にスケーラブルなので、複数の小さなマシンで作業が行われます。 柔軟性と非構造化データに適しており、リアルタイム分析をキャッシュしています。
+**MongoDB** は、JSON を使用してスキーマフリーデータを格納するように設計されたオープンソースの NoSQL ドキュメントデータベースです。 水平方向にスケーラブルなので、複数の小さなマシンで作業が行われます。 柔軟性と非構造化データに適しており、リアルタイム分析をキャッシュしています。
 
-**Redis**は、オープンソースのメモリ内の NoSQL データ構造ストアです。 ドキュメントではなく、ストレージにキーと値のペアを使用します。 Redis は、柔軟性、パフォーマンス、および幅広い言語のサポートのために認識されています。 キャッシュまたはメッセージブローカーとして使用するのに十分な柔軟性があり、リスト、セット、ハッシュなどのデータ構造を使用できます。
+**Redis** は、オープンソースのメモリ内の NoSQL データ構造ストアです。 ドキュメントではなく、ストレージにキーと値のペアを使用します。 Redis は、柔軟性、パフォーマンス、および幅広い言語のサポートのために認識されています。 キャッシュまたはメッセージブローカーとして使用するのに十分な柔軟性があり、リスト、セット、ハッシュなどのデータ構造を使用できます。
 
 選択するデータベースの種類は、データベースを使用するアプリケーションの種類に応じて決める必要があります。 構造化データベースと非構造化データベースの長所と短所を検討し、ユースケースに基づいて選択することをお勧めします。
 
@@ -54,22 +54,22 @@ WSL に MySQL をインストールするには (Ubuntu 18.04):
 
 1. WSL ターミナルを開きます (Ubuntu 18.04)。
 2. `sudo apt update` を実行して Ubuntu パッケージを更新します。
-3. パッケージが更新されたら、次のものを使用して MySQL をインストールします。`sudo apt install mysql-server`
+3. パッケージが更新されたら、次のものを使用して MySQL をインストールします。 `sudo apt install mysql-server`
 4. `mysql --version` を実行してインストールを確認し、バージョン番号を取得します。
 
 また、含まれているセキュリティスクリプトを実行することもできます。 これにより、リモートルートログインやサンプルユーザーなどの、安全性の低い既定のオプションの一部が変更されます。 セキュリティスクリプトを実行するには:
 
-1. MySQL サーバーを起動します。`sudo /etc/init.d/mysql start`
-2. セキュリティスクリプトのプロンプトを開始します。`sudo mysql_secure_installation`
+1. MySQL サーバーを起動します。 `sudo /etc/init.d/mysql start`
+2. セキュリティスクリプトのプロンプトを開始します。 `sudo mysql_secure_installation`
 3. 最初のプロンプトで、パスワードの検証プラグインを設定するかどうかを確認するメッセージが表示されます。これを使用すると、MySQL パスワードの強度をテストできます。 次に、MySQL ルートユーザーのパスワードを設定し、匿名ユーザーを削除するかどうかを決定し、ルートユーザーがローカルとリモートの両方でログインできるようにするかどうかを決定し、テストデータベースを削除するかどうかを決定し、最後に特権テーブルを直ちに再読み込みするかどうかを決定します。
 
-MySQL プロンプトを開くには、次のように入力します。`sudo mysql`
+MySQL プロンプトを開くには、次のように入力します。 `sudo mysql`
 
-使用できるデータベースを確認するには、MySQL プロンプトで次のように入力します。`SHOW DATABASES;`
+使用できるデータベースを確認するには、MySQL プロンプトで次のように入力します。 `SHOW DATABASES;`
 
-新しいデータベースを作成するには、次のように入力します。`CREATE DATABASE database_name;`
+新しいデータベースを作成するには、次のように入力します。 `CREATE DATABASE database_name;`
 
-データベースを削除するには、次のように入力します。` DROP DATABASE database_name;`
+データベースを削除するには、次のように入力します。 ` DROP DATABASE database_name;`
 
 MySQL データベースの操作の詳細については、 [mysql のドキュメント](https://dev.mysql.com/doc/mysql-getting-started/en/)を参照してください。
 
@@ -114,7 +114,7 @@ PostgreSQL データベースの操作の詳細については、 [postgresql �
 
 VS Code で PostgreSQL データベースを使用するには、 [postgresql の拡張機能](https://marketplace.visualstudio.com/items?itemName=ms-ossdata.vscode-postgresql)を試してください。
 
-## <a name="install-mongodb"></a>MongoDB のインストール
+## <a name="install-mongodb"></a>MongoDB をインストールする
 
 WSL に MongoDB をインストールするには (Ubuntu 18.04):
 
@@ -157,7 +157,7 @@ VS Code は、 [Azure CosmosDB 拡張機能](https://marketplace.visualstudio.co
 
 ## <a name="install-microsoft-sql-server"></a>Microsoft SQL Server のインストール:
 
-WSL (Ubuntu 18.04) に SQL Server をインストールするには、次のクイックスタートに従ってください。 [ubuntu で SQL Server をインストールし、データベースを作成](https://docs.microsoft.com/sql/linux/quickstart-install-connect-ubuntu?view=sql-server-ver15)します。
+WSL (Ubuntu 18.04) に SQL Server をインストールするには、次のクイックスタートに従ってください。 [ubuntu で SQL Server をインストールし、データベースを作成](https://docs.microsoft.com/sql/linux/quickstart-install-connect-ubuntu)します。
 
 VS Code で Microsoft SQL Server データベースを操作するには、 [MSSQL 拡張子](https://marketplace.visualstudio.com/items?itemName=ms-mssql.mssql)を試してください。
 
@@ -167,16 +167,16 @@ WSL に SQLite をインストールするには (Ubuntu 18.04):
 
 1. WSL ターミナルを開きます (Ubuntu 18.04)。
 2. `sudo apt update` を実行して Ubuntu パッケージを更新します。
-3. パッケージが更新されたら、次のように SQLite3 をインストールします。`sudo apt install sqlite3`
+3. パッケージが更新されたら、次のように SQLite3 をインストールします。 `sudo apt install sqlite3`
 4. `sqlite3 --version` を実行してインストールを確認し、バージョン番号を取得します。
 
-"Example. db" という名前のテストデータベースを作成するには、次のように入力します。`sqlite3 example.db`
+"Example. db" という名前のテストデータベースを作成するには、次のように入力します。 `sqlite3 example.db`
 
-SQLite データベースの一覧を表示するには、次のように入力します。`.databases`
+SQLite データベースの一覧を表示するには、次のように入力します。 `.databases`
 
-データベースの状態を確認するには、次のように入力します。`.dbinfo ?DB?`
+データベースの状態を確認するには、次のように入力します。 `.dbinfo ?DB?`
 
-SQLite プロンプトを終了するには、次のように入力します。`.exit`
+SQLite プロンプトを終了するには、次のように入力します。 `.exit`
 
 SQLite データベースの操作の詳細については、 [sqlite のドキュメント](https://www.sqlite.org/quickstart.html)を参照してください。
 
@@ -188,14 +188,14 @@ WSL に Redis をインストールするには (Ubuntu 18.04):
 
 1. WSL ターミナルを開きます (Ubuntu 18.04)。
 2. `sudo apt update` を実行して Ubuntu パッケージを更新します。
-3. パッケージが更新されたら、次のものを使用して Redis をインストールします。`sudo apt install redis-server`
+3. パッケージが更新されたら、次のものを使用して Redis をインストールします。 `sudo apt install redis-server`
 4. `redis-server --version` を実行してインストールを確認し、バージョン番号を取得します。
 
-Redis サーバーの実行を開始するには、次のようにします。`sudo service redis-server start`
+Redis サーバーの実行を開始するには、次のようにします。 `sudo service redis-server start`
 
 Redis が動作しているかどうかを確認します (redis は、Redis と対話するためのコマンドラインインターフェイスユーティリティです)。これにより、 `redis-cli ping` "、" という応答が返されます。
 
-Redis サーバーの実行を停止するには、次のようにします。`sudo service redis-server stop`
+Redis サーバーの実行を停止するには、次のようにします。 `sudo service redis-server stop`
 
 Redis データベースの使用方法の詳細については、 [redis のドキュメント](https://redis.io/topics/quickstart)を参照してください。
 
@@ -203,7 +203,7 @@ VS Code で Redis データベースを使用するには、 [redis 拡張機能
 
 ## <a name="see-services-running-and-set-up-profile-aliases"></a>「実行中のサービス」と「プロファイルの別名の設定」を参照してください。
 
-現在 WSL ディストリビューションで実行されているサービスを表示するには、次のように入力します。`service --status-all`
+現在 WSL ディストリビューションで実行されているサービスを表示するには、次のように入力します。 `service --status-all`
 
 `sudo service mongodb start`、`sudo service postgres start`、`sudo -u postgrest psql` などの入力は面倒な場合があります。  これらのコマンドをすばやく使えるように、また覚えやすくするために、WSL 上の `.profile` ファイルでエイリアスを設定することを検討してください。
 
@@ -224,6 +224,6 @@ VS Code で Redis データベースを使用するには、 [redis 拡張機能
 4. 新しいエイリアスを追加したら、**Ctrl + X** キーを使用して Nano テキスト エディターを終了し、保存の確認に対して `Y` (はい) を選択して Enter キーを押します (ファイル名は `.profile` のままにします)。
 5. WSL ターミナルを閉じて開き直してから、新しいエイリアス コマンドを試してみてください。
 
-## <a name="additional-resources"></a>その他のリソース
+## <a name="additional-resources"></a>その他の技術情報
 
 - [Windows 10 での開発環境のセットアップ](https://docs.microsoft.com/windows/dev-environment/)
