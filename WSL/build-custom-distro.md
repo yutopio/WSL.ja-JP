@@ -4,12 +4,12 @@ description: Windows Subsystem for Linux のカスタム Linux ディストリ�
 keywords: BashOnWindows、bash、wsl、windows、windows サブシステム、ディストリビューション、カスタム
 ms.date: 09/15/2020
 ms.topic: article
-ms.openlocfilehash: 8b898cbee12aaff6e575afbeaa57d52c3a2c9e75
-ms.sourcegitcommit: ba3399a5ffeffd23551315acd04ea6848d30693b
+ms.openlocfilehash: 2882cccac6c34cd52529dbf7e42c8d35907d8241
+ms.sourcegitcommit: 69fc9d3ca22cf3f07622db4cdf80c8ec751fe620
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/17/2020
-ms.locfileid: "90719151"
+ms.lasthandoff: 09/19/2020
+ms.locfileid: "90818704"
 ---
 # <a name="creating-a-custom-linux-distribution-for-wsl"></a>WSL 用のカスタム Linux ディストリビューションの作成
 
@@ -46,4 +46,3 @@ Microsoft Store を通じて、WSL 用の Linux ディストリビューショ�
 
 - [ディストリビューションランチャー GitHub リポジトリ](https://github.com/Microsoft/WSL-DistroLauncher)
 - [GitHub issue tracker for WSL](https://github.com/Microsoft/BashOnWindows/issues)
-- [コマンド ライン UserVoice ポータル](https://wpdev.uservoice.com/forums/266908-command-prompt-console-bash-on-ubuntu-on-windo/category/161892-bash)

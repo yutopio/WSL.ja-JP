@@ -4,18 +4,18 @@ description: Windows Subsystem for Linux で実行されている複数の Linux
 keywords: BashOnWindows, bash, wsl, windows, windows subsystem for linux, windowssubsystem, ubuntu, wsl.conf, wslconfig
 ms.date: 05/12/2020
 ms.topic: article
-ms.openlocfilehash: b8aa740233f3ac9517744212eb7b362a18378822
-ms.sourcegitcommit: 90577817a9321949da2a3971b4c78bb00f6d977f
+ms.openlocfilehash: 0a127d376a8606a1a13ea88c9efed161e18a161d
+ms.sourcegitcommit: 69fc9d3ca22cf3f07622db4cdf80c8ec751fe620
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/10/2020
-ms.locfileid: "88039415"
+ms.lasthandoff: 09/19/2020
+ms.locfileid: "90818734"
 ---
 # <a name="wsl-commands-and-launch-configurations"></a>WSL コマンドと起動構成
 
 ## <a name="ways-to-run-wsl"></a>WSL を実行する方法
 
-WSL を[インストール](install-win10.md)した Linux ディストリビューションを実行するには、いくつかの方法があります。
+WSL を [インストール](install-win10.md)した Linux ディストリビューションを実行するには、いくつかの方法があります。
 
 1. Windows の [スタート] メニューにアクセスし、インストールされているディストリビューションの名前を入力して、Linux ディストリビューションを開きます。 たとえば、"Ubuntu" のようになります。
 2. Windows のコマンドプロンプトまたは PowerShell から、インストールされている配布の名前を入力します。 例: `ubuntu`
@@ -116,7 +116,7 @@ PS C:\Users\sarah>
 
 ## <a name="managing-multiple-linux-distributions"></a>複数の Linux ディストリビューションの管理
 
-Windows 10 バージョン 1903[以降](ms-settings:windowsupdate)では、を使用して `wsl.exe` Windows Subsystem for Linux (wsl) でのディストリビューションを管理できます。これには、使用可能なディストリビューションの一覧表示、既定の配布の設定、およびディストリビューションのアンインストールが含まれます。
+Windows 10 バージョン 1903 [以降](ms-settings:windowsupdate)では、を使用して `wsl.exe` Windows Subsystem for Linux (wsl) でのディストリビューションを管理できます。これには、使用可能なディストリビューションの一覧表示、既定の配布の設定、およびディストリビューションのアンインストールが含まれます。
 
 各 Linux ディストリビューションは、個別に独自の構成を管理します。 ディストリビューション固有のコマンドを確認するには、`[distro.exe] /?` を実行します。  たとえば、「 `ubuntu /?` 」のように指定します。
 
@@ -125,9 +125,9 @@ Windows 10 バージョン 1903[以降](ms-settings:windowsupdate)では、を�
 `wsl -l` , `wsl --list`  
 WSL で利用可能な Linux ディストリビューションを一覧表示します。  一覧表示されているディストリビューションは、インストールされており、使用できる状態です。
 
-`wsl --list --all`現在使用できないすべてのディストリビューションを含む、すべてのディストリビューションを一覧表示します。  インストールのプロセス中、アンインストールのプロセス中、または破損した状態の可能性があります。  
+`wsl --list --all` 現在使用できないすべてのディストリビューションを含む、すべてのディストリビューションを一覧表示します。  インストールのプロセス中、アンインストールのプロセス中、または破損した状態の可能性があります。  
 
-`wsl --list --running`現在実行中のすべてのディストリビューションを一覧表示します。
+`wsl --list --running` 現在実行中のすべてのディストリビューションを一覧表示します。
 
 ## <a name="set-a-default-distribution"></a>既定のディストリビューションの設定
 
@@ -170,7 +170,7 @@ Linux ディストリビューションは Microsoft Store を介してインス
 たとえば、 `ubuntu config --default-user johndoe` Ubuntu ディストリビューションの既定のユーザーを "johndoe" ユーザーに変更します。
 
 > [!NOTE]
-> 配布の名前を確認できない場合は、コマンドの [[ディストリビューションの一覧](https://docs.microsoft.com/windows/wsl/wsl-config#list-distributions)] を参照して、インストールされているディストリビューションの正式な名前を一覧表示します。 
+> 配布の名前を確認できない場合は、コマンドの [ [ディストリビューションの一覧](https://docs.microsoft.com/windows/wsl/wsl-config#list-distributions) ] を参照して、インストールされているディストリビューションの正式な名前を一覧表示します。 
 
 ## <a name="run-a-specific-distribution"></a>特定のディストリビューションの実行
 
@@ -208,7 +208,7 @@ WSL で利用可能な Linux ディストリビューションを一覧表示し
 
 コマンドラインでを実行したときに実行される既定のディストリビューションを設定するには、次のようにし `wsl` ます。
 
-`wslconfig /setdefault <DistributionName>`既定の分布をに設定 `<DistributionName>` します。
+`wslconfig /setdefault <DistributionName>` 既定の分布をに設定 `<DistributionName>` します。
 
 **例: (PowerShell を使用)**  
 `wslconfig /setdefault Ubuntu` の場合、既定のディストリビューションが Ubuntu に設定されます。  これで、`wsl npm init` を実行すると、Ubuntu で実行されるようになります。  `wsl` を実行すると、Ubuntu セッションが開きます。
@@ -260,7 +260,7 @@ WSL では、`automount` と `network` の 2 つのセクションがサポー�
 
 | key        | value                          | 既定      | 注                                                                                                                                                                                                                                                                                                                          |
 |:-----------|:-------------------------------|:-------------|:-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| enabled    | boolean                        | true         | `true` にすると、固定ドライブ (つまり、 `C:/` または`D:/`) は `/mnt` の下に DrvFs で自動的にマウントされます。  `false`ドライブは自動的にマウントされませんが、手動またはを使用してマウントすることもでき `fstab` ます。                                                                                                             |
+| enabled    | boolean                        | true         | `true` にすると、固定ドライブ (つまり、 `C:/` または`D:/`) は `/mnt` の下に DrvFs で自動的にマウントされます。  `false` ドライブは自動的にマウントされませんが、手動またはを使用してマウントすることもでき `fstab` ます。                                                                                                             |
 | mountFsTab | boolean                        | true         | `true` にすると、WSL 開始時に処理されるように `/etc/fstab` を設定します。 /etc/fstab は、SMB 共有などの他のファイル システムを宣言できるファイルです。 そのため、起動時にこれらのファイル システムを WSL 内で自動的にマウントできます。                                                                                                                |
 | root       | String                         | `/mnt/`      | 固定ドライブが自動的にマウントされるディレクトリを設定します。 たとえば、`/windir/` に WSL のディレクトリがあり、それをルートとして指定すると、固定ドライブは `/windir/c` でマウントされることが予想されます。                                                                                              |
 | オプション    | 値のコンマ区切りのリスト | 空の文字列 | この値は、既定の DrvFs マウント オプション文字列に追加されます。 **DrvFs 固有のオプションのみを指定できます。** マウント バイナリが通常、フラグに解析するオプションはサポートされていません。 これらのオプションを明示的に指定する場合は、それを行う対象のドライブすべてを /etc/fstab に含める必要があります。 |
@@ -339,15 +339,15 @@ processors=2 # Makes the WSL 2 VM use two virtual processors
 | key | value | default | notes|
 |:----|:----|:----|:----|
 | kernel | string | Microsoft が構築したカーネルの受信トレイ | カスタム Linux カーネルへの絶対 Windows パス。 |
-| メモリ | size | Windows 上の合計メモリの 80% * | WSL 2 VM に割り当てるメモリの量。 |
-| 状況 | number | Windows 上の同じプロセッサ数 | WSL 2 VM に割り当てるプロセッサの数。 |
+| メモリ | サイズ | Windows または 8 GB のメモリ合計の 50% (どちらか少ない方)20175より前のビルドの場合: Windows 上の合計メモリの80% | WSL 2 VM に割り当てるメモリの量。 |
+| 状況 | 数値 | Windows 上の同じプロセッサ数 | WSL 2 VM に割り当てるプロセッサの数。 |
 | localhostForwarding | boolean | `true` | WSL 2 VM のワイルドカードまたは localhost にバインドされたポートが localhost: port を介してホストから接続可能である必要があるかどうかを指定するブール値。 |
-| カーネルコマンドライン | string | 新規 | 追加のカーネルコマンドライン引数。 |
-| swap | size | Windows 上のメモリサイズの25% が最も近い GB に切り上げられます | WSL 2 VM に追加するスワップ領域の大きさ。スワップファイルがない場合は0です。 |
+| カーネルコマンドライン | string | 空白 | 追加のカーネルコマンドライン引数。 |
+| swap | サイズ | Windows 上のメモリサイズの25% が最も近い GB に切り上げられます | WSL 2 VM に追加するスワップ領域の大きさ。スワップファイルがない場合は0です。 |
 | スワップ | string | %USERPROFILE%\AppData\Local\Temp\swap.vhdx | スワップバーチャルハードディスクへの絶対 Windows パス。 |
 
 * メモ: この値は Windows ビルド19041では true であり、Insider プログラムの Windows ビルドでは異なる場合があります。
 
-値がのエントリは `path` 、エスケープされた円記号を含む Windows パスである必要があります。次に例を示します。`C:\\Temp\\myCustomKernel`
+値がのエントリは `path` 、エスケープされた円記号を含む Windows パスである必要があります。次に例を示します。 `C:\\Temp\\myCustomKernel`
 
 値を持つエントリは、 `size` サイズの後に単位 (やなど) が続く必要があり `8GB` `512MB` ます。

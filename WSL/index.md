@@ -3,29 +3,33 @@ title: Linux 用 Windows サブシステムの概要
 description: Linux 用 Windows サブシステム ドキュメントを参照します。
 keywords: BashOnWindows, bash, wsl, windows, windowssubsystem, gnu, linux
 ms.topic: article
+ms.date: 09/15/2020
 ms.localizationpriority: high
-ms.openlocfilehash: 81ff05f03172e3e3a167ffba4ce846ec2edb3d1c
-ms.sourcegitcommit: 97cc93f8e26391c09a31a4ab42c4b5e9d98d1c32
+ms.openlocfilehash: e8046e4ec95e599014c5e5c09a24e7fac44da43d
+ms.sourcegitcommit: ba3399a5ffeffd23551315acd04ea6848d30693b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86948586"
+ms.lasthandoff: 09/17/2020
+ms.locfileid: "90719161"
 ---
 # <a name="windows-subsystem-for-linux-documentation"></a>Windows Subsystem for Linux に関するドキュメント
 
-Linux 用 Windows サブシステムを使用すると、開発者は、従来の仮想マシンまたはデュアルブート セットアップのオーバーヘッドなしで、ほとんどのコマンド ライン ツール、ユーティリティ、アプリケーションを含む GNU/Linux 環境を変更せずそのまま Windows 上で直接実行できます。
+Linux 用 Windows サブシステムを使用すると、開発者は、従来の仮想マシンまたはデュアルブート セットアップのオーバーヘッドなしで、ほとんどのコマンドライン ツール、ユーティリティ、アプリケーションなどを含む GNU/Linux 環境を、変更せずに Windows 上で直接実行できます。
 
-## <a name="learn-more-here"></a>詳細情報はこちら
+> [!div class="nextstepaction"]
+> [WSL をインストールする](install-win10.md)
+
+## <a name="learn-more"></a>詳細情報
 
 * [Linux 用 Windows サブシステムとは](about.md)
-* [WSL 2 の新機能](wsl2-index.md)
+* [WSL 2 の新機能](compare-versions.md#whats-new-in-wsl-2)
 * [WSL 2 と WSL 1 を比較する](compare-versions.md)
 * [よく寄せられる質問を読む](faq.md)
 
 ## <a name="get-started"></a>開始
 
 * [WSL1 をインストールする](install-win10.md)
-* [WSL2 に更新する](install-win10.md#update-to-wsl-2)
+* [WSL2 に更新する](install-win10.md#step-2---update-to-wsl-2)
 * [Windows Server に Linux をインストールする](install-on-server.md)
 * [新しい Linux ディストリビューション用のユーザー アカウントとパスワードを作成する](user-support.md)
 
