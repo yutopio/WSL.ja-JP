@@ -6,12 +6,12 @@ ms.date: 07/21/2020
 ms.topic: article
 ms.assetid: 3cefe0db-7616-4848-a2b6-9296746a178b
 ms.localizationpriority: high
-ms.openlocfilehash: c468f501894df9dfde4323471a6d20569ac82e9c
-ms.sourcegitcommit: fb79750bd71d6ebaed5203b3de71ba85a67227b1
+ms.openlocfilehash: 2b79473f620c39084bc9b7a385d4e16e3fe34d77
+ms.sourcegitcommit: 69fc9d3ca22cf3f07622db4cdf80c8ec751fe620
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/26/2020
-ms.locfileid: "88865965"
+ms.lasthandoff: 09/19/2020
+ms.locfileid: "90818674"
 ---
 # <a name="what-is-the-windows-subsystem-for-linux"></a>Linux 用 Windows サブシステムとは
 
@@ -25,7 +25,7 @@ Linux 用 Windows サブシステムを使用すると、開発者は、従来�
     * ツール: vim、emacs、tmux
     * 言語:[Node.js](https://docs.microsoft.com/windows/nodejs/setup-on-wsl2)、JavaScript、[Python](https://docs.microsoft.com/windows/python/web-frameworks)、Ruby、C/C++、C# & F#、Rust、Go など
     * サービス:SSHD、[MySQL](./tutorials/wsl-database.md)、Apache、lighttpd、[MongoDB](./tutorials/wsl-database.md)、[PostgreSQL](./tutorials/wsl-database.md)。
-* 独自の GNU/Linux ディストリビューション パッケージ マネージャーを使用して、追加のソフトウェアをインストールします。
+* 自分の GNU/Linux ディストリビューション パッケージ マネージャーを使用して、追加のソフトウェアをインストールします。
 * Unix に似たコマンド ライン シェルを使用して Windows アプリケーションを起動します。
 * Windows で GNU/Linux アプリケーションを起動します。
 
