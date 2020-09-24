@@ -2,16 +2,16 @@
 title: よく寄せられる質問 (FAQ)
 description: "\"WSL で何ができますか\" などの、Linux 用 Windows サブシステムについてよく寄せられる質問 (FAQ) への回答をご確認いただけます。"
 keywords: BashOnWindows, bash, wsl, windows, windowssubsystem, faq
-ms.date: 9/4/2018
+ms.date: 09/15/2020
 ms.topic: article
 ms.assetid: 129101ed-b88a-43c2-b6a2-cd2c4ff6fee1
 ms.localizationpriority: high
-ms.openlocfilehash: 9a9f287ceb2ae93286999ed32d655198c8a390c8
-ms.sourcegitcommit: fb79750bd71d6ebaed5203b3de71ba85a67227b1
+ms.openlocfilehash: 0f16471968151fa040d41baa90af6aedfb6fee79
+ms.sourcegitcommit: ba3399a5ffeffd23551315acd04ea6848d30693b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/26/2020
-ms.locfileid: "88866156"
+ms.lasthandoff: 09/17/2020
+ms.locfileid: "90719191"
 ---
 # <a name="frequently-asked-questions-about-windows-subsystem-for-linux"></a>Windows Subsystem for Linux に関してよく寄せられる質問
 
@@ -181,7 +181,7 @@ WSL は、従来のコンソールでの実行をサポートしていません�
 
 ## <a name="why-do-i-get-error-0x80040154-when-i-run-bashexe-after-upgrading-windows"></a>Windows のアップグレード後に bash.exe を実行すると、"エラー:0x80040154" が表示されるのはなぜですか。
 
-Windows Update 時に "Windows Subsystem for Linux" 機能が無効になる可能性があります。 その場合は、この Windows 機能を再度有効にする必要があります。 "Windows Subsystem for Linux" 機能を有効にする手順については、[インストール ガイド](https://docs.microsoft.com/windows/wsl/install-win10#install-the-windows-subsystem-for-linux)をご覧ください。
+Windows Update 時に "Windows Subsystem for Linux" 機能が無効になる可能性があります。 その場合は、この Windows 機能を再度有効にする必要があります。 "Windows Subsystem for Linux" 機能を有効にする手順については、[インストール ガイド](https://docs.microsoft.com/windows/wsl/install-win10)をご覧ください。
 
 ## <a name="how-do-i-change-the-display-language-of-wsl"></a>WSL の表示言語を変更するにはどうすればよいですか。
 

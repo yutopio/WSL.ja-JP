@@ -2,15 +2,15 @@
 title: Windows Subsystem for Linux のコマンド リファレンス
 description: Linux コマンドを実行するための引数など、Linux 用 Windows サブシステムを管理するコマンドの一覧をご覧ください。
 keywords: BashOnWindows, bash, wsl, windows, windows subsystem for linux, windowssubsystem, ubuntu
-ms.date: 07/31/2017
+ms.date: 09/15/2020
 ms.topic: article
 ms.localizationpriority: high
-ms.openlocfilehash: fc5c9e06c597092a3790ba7f9eb06054a33450c1
-ms.sourcegitcommit: fb79750bd71d6ebaed5203b3de71ba85a67227b1
+ms.openlocfilehash: 6f98cb7b238e4b38c1a931a0e77e419efbcc319d
+ms.sourcegitcommit: ba3399a5ffeffd23551315acd04ea6848d30693b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/26/2020
-ms.locfileid: "88866138"
+ms.lasthandoff: 09/17/2020
+ms.locfileid: "90719170"
 ---
 # <a name="command-reference-for-windows-subsystem-for-linux"></a>Windows Subsystem for Linux のコマンド リファレンス
 
@@ -169,7 +169,7 @@ Windows Subsystem for Linux を操作するための過去のコマンドもあ�
 
 `lxrun.exe` は、Windows Subsystem for Linux をインストールして管理するために使用された最初のコマンドでした。 これは、Windows 10 1803 以降では非推奨です。
 
-`lxrun.exe` コマンドは、[Windows Subsystem for Linux (WSL)](https://msdn.microsoft.com/commandline/wsl/faq#what-windows-subsystem-for-linux-wsl-) を直接操作するために使用できます。  これらのコマンドは `\Windows\System32` ディレクトリにインストールされ、Windows コマンド プロンプトまたは PowerShell 内で実行できます。
+`lxrun.exe` コマンドは、Windows Subsystem for Linux (WSL) を直接操作するために使用できます。  これらのコマンドは `\Windows\System32` ディレクトリにインストールされ、Windows コマンド プロンプトまたは PowerShell 内で実行できます。
 
 | コマンド                     | 説明                     |
 |:----------------------------|:---------------------------|

@@ -2,15 +2,15 @@
 title: Linux 用 Windows サブシステム (WSL) ディストリビューションを手動でダウンロードする
 description: Linux 用 Windows サブシステム ディストリビューションを手動でダウンロードする方法について説明します。
 keywords: wsl, linux 用 windows subsystem, 手動インストール, 手動でインストール, microsoft ストア, windows 10, curl, Add-AppxPackage, 長期的なサービス, LTSC
-ms.date: 05/28/2020
+ms.date: 09/15/2020
 ms.topic: article
 ms.localizationpriority: medium
-ms.openlocfilehash: d948ce9d304314bdd15b98136b8a99ca35723139
-ms.sourcegitcommit: e67eb4aedff57a304188ca3360aba25605f8bdb1
+ms.openlocfilehash: 04b991d1019f2187a01189695e4078f4d8a8ba1f
+ms.sourcegitcommit: ba3399a5ffeffd23551315acd04ea6848d30693b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/12/2020
-ms.locfileid: "84746278"
+ms.lasthandoff: 09/17/2020
+ms.locfileid: "90719141"
 ---
 # <a name="manually-download-windows-subsystem-for-linux-distro-packages"></a>Linux 用 Windows サブシステム ディストリビューション パッケージを手動でダウンロードする
 
@@ -40,7 +40,7 @@ Microsoft Store アプリを使用できない場合は、以下のリンクを�
 必要に応じて、コマンド ラインから好みのディストリビューションをダウンロードすることもできます。
 
  ### <a name="download-using-powershell"></a>PowerShell を使用してダウンロードする
- PowerShell を使用してディストリビューションをダウンロードするには、[Invoke-WebRequest](https://docs.microsoft.com/powershell/module/microsoft.powershell.utility/invoke-webrequest?view=powershell-5.1) コマンドレットを使用します。 Ubuntu 16.04 をダウンロードする手順の例を次に示します。
+ PowerShell を使用してディストリビューションをダウンロードするには、[Invoke-WebRequest](https://docs.microsoft.com/powershell/module/microsoft.powershell.utility/invoke-webrequest) コマンドレットを使用します。 Ubuntu 16.04 をダウンロードする手順の例を次に示します。
 
 ```powershell
 Invoke-WebRequest -Uri https://aka.ms/wsl-ubuntu-1604 -OutFile Ubuntu.appx -UseBasicParsing
@@ -56,7 +56,7 @@ Windows 10 Spring 2018 Update (またはそれ以降) には、コマンド ラ�
 curl.exe -L -o ubuntu-1604.appx https://aka.ms/wsl-ubuntu-1604
 ```
 
-上記の例では、(`curl` だけでなく) `curl.exe` が実行され、PowerShell では、[Invoke-WebRequest](https://docs.microsoft.com/powershell/module/microsoft.powershell.utility/invoke-webrequest?view=powershell-6) の PowerShell curl エイリアスではなく、実際の curl 実行可能ファイルが呼び出されます。
+上記の例では、(`curl` だけでなく) `curl.exe` が実行され、PowerShell では、[Invoke-WebRequest](https://docs.microsoft.com/powershell/module/microsoft.powershell.utility/invoke-webrequest) の PowerShell curl エイリアスではなく、実際の curl 実行可能ファイルが呼び出されます。
 
 > 注: Cmd シェルや `.bat` / `.cmd` スクリプトを使用してダウンロード手順を呼び出したりスクリプトで実行したりする必要がある場合は、`curl` を使用することをお勧めします。
 
@@ -68,4 +68,4 @@ Add-AppxPackage .\app_name.appx
 
 Windows サーバーを使用している場合、インストール手順については、[Windows Server](install-on-server.md) のドキュメント ページを参照してください。
 
-ディストリビューションがインストールされたら、通常の手順に従って [WSL 2 に更新](./install-win10.md#update-to-wsl-2)するか、[新しいユーザー アカウントとパスワードを作成](./user-support.md)します。
+ディストリビューションがインストールされたら、通常の手順に従って [WSL 2 に更新](./install-win10.md#step-2---update-to-wsl-2)するか、[新しいユーザー アカウントとパスワードを作成](./user-support.md)します。
