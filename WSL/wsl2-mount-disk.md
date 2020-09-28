@@ -5,12 +5,12 @@ keywords: wsl、windows、windowssubsystem、gnu、linux、bash、disk、ext4、
 ms.date: 06/08/2020
 ms.topic: article
 ms.localizationpriority: medium
-ms.openlocfilehash: 8053b817dab0639789401e2fcfb116f6f8e722a7
-ms.sourcegitcommit: a949595f3947c733f0bcdc54b30ccda5ae61577c
+ms.openlocfilehash: 5ea7d7adae42a44b040408575e7345c456f3acac
+ms.sourcegitcommit: b15b847b87d29a40de4a1517315949bce9c7a3d5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/10/2020
-ms.locfileid: "89671205"
+ms.lasthandoff: 09/28/2020
+ms.locfileid: "91413283"
 ---
 # <a name="get-started-mounting-a-linux-disk-in-wsl-2-preview"></a>WSL 2 (プレビュー) で linux ディスクのマウントを開始する
 
@@ -127,7 +127,7 @@ wsl --mount <Diskpath> -t vfat
 wsl --mount <Diskpath> -p <PartitionIndex>
 ```
 
-これは、ディスクが MBR (マスターブートレコード) または GPT (GUID パーティションテーブル) のいずれかである場合にのみ機能します。 [パーティションスタイルについては、「MBR と GPT](https://docs.microsoft.com/windows-server/storage/disk-management/initialize-new-disks#about-partition-styles---gpt-and-mbr)」を参照してください。
+これは、ディスクが MBR (マスターブートレコード) または GPT (GUID パーティションテーブル) のいずれかである場合にのみ機能します。 [パーティションスタイルについては、「MBR と GPT](/windows-server/storage/disk-management/initialize-new-disks#about-partition-styles---gpt-and-mbr)」を参照してください。
 
 ### <a name="specifying-mount-options"></a>マウントオプションの指定
 

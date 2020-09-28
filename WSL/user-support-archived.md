@@ -4,18 +4,18 @@ description: Windows Subsystem for Linux を使用して Linux ユーザーア�
 ms.date: 01/20/2020
 ms.topic: article
 ROBOTS: NOINDEX
-ms.openlocfilehash: 406158d769c4b465b6168d7cca45b48ff1f201fe
-ms.sourcegitcommit: 07eb5f2e1f4517928165dda4510012599b0d0e1e
+ms.openlocfilehash: 33a42c8f3bd518fa45df2874a6c59b76cd8ec80a
+ms.sourcegitcommit: b15b847b87d29a40de4a1517315949bce9c7a3d5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/22/2020
-ms.locfileid: "76520841"
+ms.lasthandoff: 09/28/2020
+ms.locfileid: "91413363"
 ---
 # <a name="wsl-user-account-updates-on-previous-windows-versions"></a>以前のバージョンの Windows での WSL ユーザーアカウントの更新
 
 このコンテンツは、Linux 用サブシステムをサポートし、Linux ユーザーアカウントの更新をサポートする必要がある以前のバージョンの Windows オペレーティングシステムのユーザー向けにアーカイブされています。
 
-最新のドキュメントについては、「 [Windows Subsystem For Linux のユーザーアカウント](../user-support.md)」を参照してください。
+最新のドキュメントについては、「 [Windows Subsystem For Linux のユーザーアカウント](./user-support.md)」を参照してください。
 
 ### <a name="for-creators-update-version-of-windows-and-earlier"></a>Windows およびそれ以前のバージョンの更新プログラムの場合
 
@@ -35,7 +35,7 @@ Windows 10 Creators Update 以前を実行している場合は、次のコマ�
 
 1. ディストリビューションのパスワード コマンドを使用してパスワードを再設定し、Linux コンソールを閉じます。
 
-    ```bash
+    ```BASH
     $ passwd username
     $ exit
     ```
@@ -93,7 +93,7 @@ Ubuntu を使用したステップ バイ ステップの手順:
 
 1. `passwd` コマンドを使用してパスワードを再設定します。
 
-    ```bash
+    ```BASH
     $ passwd username
     ```
 

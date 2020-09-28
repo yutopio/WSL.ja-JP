@@ -6,12 +6,12 @@ ms.date: 07/21/2020
 ms.topic: article
 ms.assetid: 3cefe0db-7616-4848-a2b6-9296746a178b
 ms.localizationpriority: high
-ms.openlocfilehash: 2b79473f620c39084bc9b7a385d4e16e3fe34d77
-ms.sourcegitcommit: 69fc9d3ca22cf3f07622db4cdf80c8ec751fe620
+ms.openlocfilehash: 0c6fa3d0c5483a7ffd1fb95f13ca62666a7c1e72
+ms.sourcegitcommit: b15b847b87d29a40de4a1517315949bce9c7a3d5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/19/2020
-ms.locfileid: "90818674"
+ms.lasthandoff: 09/28/2020
+ms.locfileid: "91413083"
 ---
 # <a name="what-is-the-windows-subsystem-for-linux"></a>Linux 用 Windows サブシステムとは
 
@@ -23,7 +23,7 @@ Linux 用 Windows サブシステムを使用すると、開発者は、従来�
 * `grep`、`sed`、`awk` などの一般的なコマンドライン ツールや、その他の ELF-64 バイナリを実行します。
 * 以下のような Bash シェル スクリプトや GNU/Linux コマンド ライン アプリケーションを実行します。  
     * ツール: vim、emacs、tmux
-    * 言語:[Node.js](https://docs.microsoft.com/windows/nodejs/setup-on-wsl2)、JavaScript、[Python](https://docs.microsoft.com/windows/python/web-frameworks)、Ruby、C/C++、C# & F#、Rust、Go など
+    * 言語:[Node.js](/windows/nodejs/setup-on-wsl2)、JavaScript、[Python](/windows/python/web-frameworks)、Ruby、C/C++、C# & F#、Rust、Go など
     * サービス:SSHD、[MySQL](./tutorials/wsl-database.md)、Apache、lighttpd、[MongoDB](./tutorials/wsl-database.md)、[PostgreSQL](./tutorials/wsl-database.md)。
 * 自分の GNU/Linux ディストリビューション パッケージ マネージャーを使用して、追加のソフトウェアをインストールします。
 * Unix に似たコマンド ライン シェルを使用して Windows アプリケーションを起動します。

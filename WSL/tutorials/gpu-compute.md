@@ -5,12 +5,12 @@ keywords: wsl、windows、windows サブシステム、gpu コンピューティ
 ms.date: 06/17/2020
 ms.topic: article
 ms.localizationpriority: medium
-ms.openlocfilehash: f101022dec534055905b25619a6c4fcee36f3f7d
-ms.sourcegitcommit: 031a74801e03a90aed4b34c4fd5bfe964fc30994
+ms.openlocfilehash: bc20f2d3f1da646ba01dcdc00de8eca6c3825ec8
+ms.sourcegitcommit: b15b847b87d29a40de4a1517315949bce9c7a3d5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84947412"
+ms.lasthandoff: 09/28/2020
+ms.locfileid: "91413313"
 ---
 # <a name="gpu-accelerated-machine-learning-training-in-the-windows-subsystem-for-linux"></a>Windows Subsystem for Linux での GPU アクセラレータによる機械学習トレーニング
 
@@ -22,7 +22,7 @@ GPU コンピューティングのサポートは、最も要求の厳しい WSL
 
 ## <a name="install-and-set-up"></a>インストールと設定
 
-WSL 2 のサポートと、DirectML ドキュメント内の[GPU アクセラレーショントレーニングガイド](https://docs.microsoft.com/windows/win32/direct3d12/gpu-accelerated-training)で機械学習モデルのトレーニングを開始する方法の詳細については、こちらを参照してください。このガイドの内容は次のとおりです。
+WSL 2 のサポートと、DirectML ドキュメント内の [GPU アクセラレーショントレーニングガイド](/windows/win32/direct3d12/gpu-accelerated-training) で機械学習モデルのトレーニングを開始する方法の詳細については、こちらを参照してください。このガイドの内容は次のとおりです。
 
 * DirectML を使用した、初級または学生向けのセットアップに関するガイダンス
 * 既存の CUDA ML ワークフローの実行を開始するためのプロフェッショナル向けガイダンス

@@ -5,12 +5,12 @@ keywords: wsl、windows、windowssubsystem、gnu、linux、bash、git、github�
 ms.date: 06/04/2020
 ms.topic: article
 ms.localizationpriority: medium
-ms.openlocfilehash: c48234be5c3867d771363aaa5e630d8ebe378364
-ms.sourcegitcommit: 6ff046993e9f196cdfa04f5f91130e0e4ff1e7fa
+ms.openlocfilehash: 2d05e83d4c87b1b03028856bcec9d5205205535a
+ms.sourcegitcommit: b15b847b87d29a40de4a1517315949bce9c7a3d5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/03/2020
-ms.locfileid: "89427219"
+ms.lasthandoff: 09/28/2020
+ms.locfileid: "91413353"
 ---
 # <a name="get-started-using-git-on-windows-subsystem-for-linux"></a>Windows Subsystem for Linux で Git の使用を開始する
 
@@ -40,7 +40,7 @@ Git は、ほとんどの Windows Subsystem for Linux ディストリビュー�
 
 Git をインストールするには、 [Linux サイト用の Git ダウンロードに関する](https://git-scm.com/download/linux) ページを参照してください。 各 Linux ディストリビューションには、独自のパッケージマネージャーとインストールコマンドがあります。
 
-Ubuntu/Debian の最新の安定した GIt バージョンについては、次のコマンドを入力します。
+Ubuntu/Debian の最新の安定した Git バージョンについては、次のコマンドを入力します。
 
 ```bash
 sudo apt-get install git

@@ -5,12 +5,12 @@ keywords: wsl、windows、windowssubsystem、gnu、linux、bash、vs code、remo
 ms.date: 05/28/2020
 ms.topic: article
 ms.localizationpriority: medium
-ms.openlocfilehash: f5d7bd4f582f504ea3c4bd814454b1dc881ffed2
-ms.sourcegitcommit: 97cc93f8e26391c09a31a4ab42c4b5e9d98d1c32
+ms.openlocfilehash: b39b34644040354df44bf62ec7b878e3f5d667e6
+ms.sourcegitcommit: b15b847b87d29a40de4a1517315949bce9c7a3d5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86948656"
+ms.lasthandoff: 09/28/2020
+ms.locfileid: "91413343"
 ---
 # <a name="get-started-using-visual-studio-code-with-windows-subsystem-for-linux"></a>Windows Subsystem for Linux で Visual Studio Code の使用を開始する
 
@@ -29,12 +29,12 @@ Visual Studio Code をリモート WSL 拡張機能と共に使用すると、WS
 
 * [VS Code インストールページ](https://code.visualstudio.com/download)にアクセスし、32または64ビットインストーラーを選択します。 (WSL ファイルシステムではなく) Windows に Visual Studio Code をインストールします。
 
-* インストール中に**追加のタスクを選択**するように求めるメッセージが表示されたら、[**パスの追加**] オプションをオンにして、wsl 内のフォルダーをコードコマンドで簡単に開くことができるようにします。
+* インストール中に **追加のタスクを選択** するように求めるメッセージが表示されたら、[ **パスの追加** ] オプションをオンにして、wsl 内のフォルダーをコードコマンドで簡単に開くことができるようにします。
 
 * [リモート開発拡張機能パック](https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.vscode-remote-extensionpack)をインストールします。 この拡張パックには、リモート SSH およびリモートコンテナーの拡張機能に加えて、リモートの WSL 拡張機能が含まれており、コンテナー、リモートコンピューター、または WSL で任意のフォルダーを開くことができます。
 
 > [!IMPORTANT]
-> リモート WSL 拡張機能をインストールするには、VS Code の[1.35 リリース](https://code.visualstudio.com/updates/v1_35)バージョン以降が必要になります。 リモート WSL 拡張機能を使用せずに VS Code で WSL を使用することはお勧めしません。オートコンプリート、デバッグ、インライン処理などのサポートが失われるためです。楽しい事実: この WSL 拡張機能は $HOME/.vscode/extensions にインストールされます (PowerShell でコマンドを入力してください `ls $HOME\.vscode\extensions\` )。
+> リモート WSL 拡張機能をインストールするには、VS Code の [1.35 リリース](https://code.visualstudio.com/updates/v1_35) バージョン以降が必要になります。 リモート WSL 拡張機能を使用せずに VS Code で WSL を使用することはお勧めしません。オートコンプリート、デバッグ、インライン処理などのサポートが失われるためです。楽しい事実: この WSL 拡張機能は $HOME/.vscode/extensions にインストールされます (PowerShell でコマンドを入力してください `ls $HOME\.vscode\extensions\` )。
 
 ## <a name="update-your-linux-distribution"></a>Linux ディストリビューションを更新する
 
@@ -56,7 +56,7 @@ sudo apt-get install wget ca-certificates
 
 ### <a name="from-the-command-line"></a>コマンドラインから
 
-WSL ディストリビューションからプロジェクトを開くには、ディストリビューションのコマンドラインを開き、次のように入力します。`code .`
+WSL ディストリビューションからプロジェクトを開くには、ディストリビューションのコマンドラインを開き、次のように入力します。 `code .`
 
 ![VS Code リモートサーバーで WSL プロジェクトを開く](../media/wsl-open-vs-code.gif)
 
@@ -80,9 +80,9 @@ VS Code リモートで実行しているときに、[拡張機能] タブを選
 
 詳細については、VS Code のドキュメントを参照してください。
 
-* WSL で VS Code リモートが開始されると、シェルスタートアップスクリプトは実行されません。 追加のコマンドを実行する方法、または環境を変更する方法の詳細については、この[高度な環境セットアップスクリプト](https://code.visualstudio.com/docs/remote/wsl#_advanced-environment-setup-script)に関する記事を参照してください。
+* WSL で VS Code リモートが開始されると、シェルスタートアップスクリプトは実行されません。 追加のコマンドを実行する方法、または環境を変更する方法の詳細については、この [高度な環境セットアップスクリプト](https://code.visualstudio.com/docs/remote/wsl#_advanced-environment-setup-script) に関する記事を参照してください。
 
-* WSL コマンドラインから VS Code を起動するときに問題が発生する場合は、 この[トラブルシューティングガイド](https://code.visualstudio.com/docs/remote/troubleshooting#_fixing-problems-with-the-code-command-not-working)には、パス変数の変更、依存関係の欠落に関する拡張機能のエラーの解決、Git 行の終了に関する問題の解決、リモートコンピューターへのローカル VSIX のインストール、ブラウザーウィンドウの起動、ブロック localhost ポート、web ソケットの起動、拡張データの格納エラーなどに関するヒントが記載されています。
+* WSL コマンドラインから VS Code を起動するときに問題が発生する場合は、 この [トラブルシューティングガイド](https://code.visualstudio.com/docs/remote/troubleshooting#_fixing-problems-with-the-code-command-not-working) には、パス変数の変更、依存関係の欠落に関する拡張機能のエラーの解決、Git 行の終了に関する問題の解決、リモートコンピューターへのローカル VSIX のインストール、ブラウザーウィンドウの起動、ブロック localhost ポート、web ソケットの起動、拡張データの格納エラーなどに関するヒントが記載されています。
 
 ## <a name="install-git-optional"></a>Git のインストール (省略可能)
 
@@ -92,20 +92,20 @@ Git をインストールするには、「 [Windows Subsystem For Linux で動�
 
 ## <a name="install-windows-terminal-optional"></a>Windows ターミナルをインストールする (省略可能)
 
-新しい Windows ターミナルでは、複数のタブが有効になり (コマンドプロンプト、PowerShell、または複数の Linux ディストリビューションをすばやく切り替えることができます)、カスタムキーバインド (タブを開いたり閉じたりするための独自のショートカットキーを作成する、コピーと貼り付けなど)、絵文字☺、カスタムテーマ (配色、フォントスタイルとサイズ、背景画像、 詳細については、 [Windows ターミナルのドキュメント](https://docs.microsoft.com/windows/terminal)を参照してください。
+新しい Windows ターミナルでは、複数のタブが有効になり (コマンドプロンプト、PowerShell、または複数の Linux ディストリビューションをすばやく切り替えることができます)、カスタムキーバインド (タブを開いたり閉じたりするための独自のショートカットキーを作成する、コピーと貼り付けなど)、絵文字☺、カスタムテーマ (配色、フォントスタイルとサイズ、背景画像、 詳細については、 [Windows ターミナルのドキュメント](/windows/terminal)を参照してください。
 
 1. [Microsoft Store で Windows ターミナル](https://www.microsoft.com/store/apps/9n0dx20hk701)を取得します: ストアを介してインストールすると、更新プログラムが自動的に処理されます。
 
 2. インストールが完了したら、Windows ターミナルを開き、 **[設定]** を選択して、`profile.json` ファイルによってターミナルをカスタマイズします。
 
-## <a name="additional-resources"></a>その他の情報
+## <a name="additional-resources"></a>その他のリソース
 
 * [リモート開発の VS Code](https://code.visualstudio.com/docs/remote/remote-overview)
 * [リモート開発のヒントとテクニック](https://code.visualstudio.com/docs/remote/troubleshooting)
 * [WSL を使用したリモート開発のチュートリアル](https://code.visualstudio.com/remote-tutorials/wsl/getting-started)
 * [WSL 2 および VS Code での Docker の使用](https://code.visualstudio.com/blogs/2020/03/02/docker-in-wsl2)
 * [VS Code での C++ と WSL の使用](https://code.visualstudio.com/docs/cpp/config-wsl)
-* [Linux 用のリモート R サービス](https://docs.microsoft.com/visualstudio/rtvs/setting-up-remote-r-service-on-linux?view=vs-2017)
+* [Linux 用のリモート R サービス](/visualstudio/rtvs/setting-up-remote-r-service-on-linux)
 
 他にも検討をお勧めする拡張機能として、次のようなものがあります。
 

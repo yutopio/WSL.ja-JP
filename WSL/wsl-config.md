@@ -4,12 +4,12 @@ description: Windows Subsystem for Linux で実行されている複数の Linux
 keywords: BashOnWindows, bash, wsl, windows, windows subsystem for linux, windowssubsystem, ubuntu, wsl.conf, wslconfig
 ms.date: 05/12/2020
 ms.topic: article
-ms.openlocfilehash: 0a127d376a8606a1a13ea88c9efed161e18a161d
-ms.sourcegitcommit: 69fc9d3ca22cf3f07622db4cdf80c8ec751fe620
+ms.openlocfilehash: 73544d4d8c8eda462194f213a0f093b21ab6d90e
+ms.sourcegitcommit: b15b847b87d29a40de4a1517315949bce9c7a3d5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/19/2020
-ms.locfileid: "90818734"
+ms.lasthandoff: 09/28/2020
+ms.locfileid: "91413323"
 ---
 # <a name="wsl-commands-and-launch-configurations"></a>WSL コマンドと起動構成
 
@@ -170,7 +170,7 @@ Linux ディストリビューションは Microsoft Store を介してインス
 たとえば、 `ubuntu config --default-user johndoe` Ubuntu ディストリビューションの既定のユーザーを "johndoe" ユーザーに変更します。
 
 > [!NOTE]
-> 配布の名前を確認できない場合は、コマンドの [ [ディストリビューションの一覧](https://docs.microsoft.com/windows/wsl/wsl-config#list-distributions) ] を参照して、インストールされているディストリビューションの正式な名前を一覧表示します。 
+> 配布の名前を確認できない場合は、コマンドの [ [ディストリビューションの一覧](#list-distributions) ] を参照して、インストールされているディストリビューションの正式な名前を一覧表示します。 
 
 ## <a name="run-a-specific-distribution"></a>特定のディストリビューションの実行
 
@@ -339,11 +339,11 @@ processors=2 # Makes the WSL 2 VM use two virtual processors
 | key | value | default | notes|
 |:----|:----|:----|:----|
 | kernel | string | Microsoft が構築したカーネルの受信トレイ | カスタム Linux カーネルへの絶対 Windows パス。 |
-| メモリ | サイズ | Windows または 8 GB のメモリ合計の 50% (どちらか少ない方)20175より前のビルドの場合: Windows 上の合計メモリの80% | WSL 2 VM に割り当てるメモリの量。 |
+| メモリ | size | Windows または 8 GB のメモリ合計の 50% (どちらか少ない方)20175より前のビルドの場合: Windows 上の合計メモリの80% | WSL 2 VM に割り当てるメモリの量。 |
 | 状況 | 数値 | Windows 上の同じプロセッサ数 | WSL 2 VM に割り当てるプロセッサの数。 |
 | localhostForwarding | boolean | `true` | WSL 2 VM のワイルドカードまたは localhost にバインドされたポートが localhost: port を介してホストから接続可能である必要があるかどうかを指定するブール値。 |
 | カーネルコマンドライン | string | 空白 | 追加のカーネルコマンドライン引数。 |
-| swap | サイズ | Windows 上のメモリサイズの25% が最も近い GB に切り上げられます | WSL 2 VM に追加するスワップ領域の大きさ。スワップファイルがない場合は0です。 |
+| swap | size | Windows 上のメモリサイズの25% が最も近い GB に切り上げられます | WSL 2 VM に追加するスワップ領域の大きさ。スワップファイルがない場合は0です。 |
 | スワップ | string | %USERPROFILE%\AppData\Local\Temp\swap.vhdx | スワップバーチャルハードディスクへの絶対 Windows パス。 |
 
 * メモ: この値は Windows ビルド19041では true であり、Insider プログラムの Windows ビルドでは異なる場合があります。

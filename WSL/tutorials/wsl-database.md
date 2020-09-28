@@ -5,23 +5,23 @@ keywords: wsl、windows、windowssubsystem、MySQL MongoDB、PostgreSQL、SQLite
 ms.date: 07/07/2020
 ms.topic: article
 ms.localizationpriority: medium
-ms.openlocfilehash: 561af482e245892156a02fe287b95867ef80ded1
-ms.sourcegitcommit: ba3399a5ffeffd23551315acd04ea6848d30693b
+ms.openlocfilehash: b7e4f7477741a931c4ee71e07736bac115443ac9
+ms.sourcegitcommit: b15b847b87d29a40de4a1517315949bce9c7a3d5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/17/2020
-ms.locfileid: "90719131"
+ms.lasthandoff: 09/28/2020
+ms.locfileid: "91413303"
 ---
 # <a name="get-started-with-databases-on-windows-subsystem-for-linux"></a>Windows Subsystem for Linux でデータベースを使ってみる
 
 このステップバイステップガイドでは、WSL 内のプロジェクトをデータベースに接続する方法について説明します。 MySQL、PostgreSQL、MongoDB、Redis、Microsoft SQL Server、または SQLite の使用を開始します。
 
-## <a name="prerequisites"></a>前提条件
+## <a name="prerequisites"></a>[前提条件]
 
 - [バージョン 2004](ms-settings:windowsupdate)、**ビルド 19041** 以上に更新された Windows 10 を実行している。
-- [Wsl が有効になり、インストールされ、wsl 2 に更新されました](https://docs.microsoft.com/windows/wsl/install-win10)。
-- [Linux ディストリビューションがインストールされている](https://docs.microsoft.com/windows/wsl/install-win10#step-6---install-your-linux-distribution-of-choice) (例については Ubuntu 18.04)。
-- Ubuntu 18.04 のディストリビューションが [WSL 2 モードで実行](https://docs.microsoft.com/windows/wsl/install-win10#set-your-distribution-version-to-wsl-1-or-wsl-2)されていることを確認します。 (WSL では、v1 モードと v2 モードの両方でディストリビューションを実行できます)。これを確認するには、PowerShell を開き、次のように入力します。 `wsl -l -v`
+- [Wsl が有効になり、インストールされ、wsl 2 に更新されました](../install-win10.md)。
+- [Linux ディストリビューションがインストールされている](../install-win10.md#step-6---install-your-linux-distribution-of-choice) (例については Ubuntu 18.04)。
+- Ubuntu 18.04 のディストリビューションが [WSL 2 モードで実行](../install-win10.md#set-your-distribution-version-to-wsl-1-or-wsl-2)されていることを確認します。 (WSL では、v1 モードと v2 モードの両方でディストリビューションを実行できます)。これを確認するには、PowerShell を開き、次のように入力します。 `wsl -l -v`
 
 ## <a name="differences-between-database-systems"></a>データベースシステム間の相違点
 
@@ -29,7 +29,7 @@ ms.locfileid: "90719131"
 
 - [MySQL](https://www.mysql.com/why-mysql/) (SQL)
 - [PostgreSQL](https://www.postgresql.org/about/) (SQL)
-- [Microsoft SQL Server](https://docs.microsoft.com/sql) (SQL)
+- [Microsoft SQL Server](/sql) (SQL)
 - [SQLite](https://www.sqlite.org/about.html) (SQL)
 - [MongoDB](https://www.mongodb.com/what-is-mongodb) (NoSQL)
 - [Redis](https://redis.io/topics/introduction) (NoSQL)
@@ -157,7 +157,7 @@ VS Code は、 [Azure CosmosDB 拡張機能](https://marketplace.visualstudio.co
 
 ## <a name="install-microsoft-sql-server"></a>Microsoft SQL Server のインストール:
 
-WSL (Ubuntu 18.04) に SQL Server をインストールするには、次のクイックスタートに従ってください。 [ubuntu で SQL Server をインストールし、データベースを作成](https://docs.microsoft.com/sql/linux/quickstart-install-connect-ubuntu)します。
+WSL (Ubuntu 18.04) に SQL Server をインストールするには、次のクイックスタートに従ってください。 [ubuntu で SQL Server をインストールし、データベースを作成](/sql/linux/quickstart-install-connect-ubuntu)します。
 
 VS Code で Microsoft SQL Server データベースを操作するには、 [MSSQL 拡張子](https://marketplace.visualstudio.com/items?itemName=ms-mssql.mssql)を試してください。
 
@@ -224,6 +224,6 @@ VS Code で Redis データベースを使用するには、 [redis 拡張機能
 4. 新しいエイリアスを追加したら、**Ctrl + X** キーを使用して Nano テキスト エディターを終了し、保存の確認に対して `Y` (はい) を選択して Enter キーを押します (ファイル名は `.profile` のままにします)。
 5. WSL ターミナルを閉じて開き直してから、新しいエイリアス コマンドを試してみてください。
 
-## <a name="additional-resources"></a>その他の技術情報
+## <a name="additional-resources"></a>その他のリソース
 
-- [Windows 10 での開発環境のセットアップ](https://docs.microsoft.com/windows/dev-environment/)
+- [Windows 10 での開発環境のセットアップ](/windows/dev-environment/)

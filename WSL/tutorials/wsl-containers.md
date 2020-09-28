@@ -5,12 +5,12 @@ keywords: wsl、windows、windowssubsystem、windows 10、docker、コンテナ�
 ms.date: 08/28/2020
 ms.topic: article
 ms.localizationpriority: medium
-ms.openlocfilehash: 2ae9da815335f99a9b4a75334a02d2730ddd08c6
-ms.sourcegitcommit: 69fc9d3ca22cf3f07622db4cdf80c8ec751fe620
+ms.openlocfilehash: 5a1187336341d73f662b7e9f27b19df4fd0e1e73
+ms.sourcegitcommit: b15b847b87d29a40de4a1517315949bce9c7a3d5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/19/2020
-ms.locfileid: "90818754"
+ms.lasthandoff: 09/28/2020
+ms.locfileid: "91413333"
 ---
 # <a name="get-started-with-docker-remote-containers-on-wsl-2"></a>WSL 2 で Docker リモートコンテナーを使ってみる
 
@@ -24,17 +24,17 @@ Docker は、コンテナーを使用してアプリケーションを作成、�
 
 Docker コンテナーは仮想マシンに似ていますが、仮想オペレーティング システム全体を作成するわけではありません。 代わりに、Docker により、アプリが実行されているシステムと同じ Linux カーネルを使用することができます。 これにより、アプリ パッケージにはホスト コンピューター上にまだ存在しない部分だけが必要になるため、パッケージ サイズが減り、パフォーマンスを向上させることができます。
 
-[Kubernetes](https://docs.microsoft.com/azure/aks/) などのツールで Docker コンテナーを使用する、継続的な可用性が、コンテナーの人気のもう 1 つの理由です。 これにより、複数のバージョンのアプリ コンテナーを異なるタイミングで作成できます。 更新またはメンテナンスのためにシステム全体を停止するのではなく、各コンテナー (およびその特定のマイクロサービス) をすぐに置き換えることができます。 すべての更新プログラムが含まれた新しいコンテナーを準備し、運用環境用にコンテナーを設定して、新しいコンテナーの準備ができたら、それをポイントするだけです。 また、コンテナーを使用して異なるバージョンのアプリをアーカイブし、必要に応じて安全のフォールバックとしてそれらを実行し続けることもできます。
+[Kubernetes](/azure/aks/) などのツールで Docker コンテナーを使用する、継続的な可用性が、コンテナーの人気のもう 1 つの理由です。 これにより、複数のバージョンのアプリ コンテナーを異なるタイミングで作成できます。 更新またはメンテナンスのためにシステム全体を停止するのではなく、各コンテナー (およびその特定のマイクロサービス) をすぐに置き換えることができます。 すべての更新プログラムが含まれた新しいコンテナーを準備し、運用環境用にコンテナーを設定して、新しいコンテナーの準備ができたら、それをポイントするだけです。 また、コンテナーを使用して異なるバージョンのアプリをアーカイブし、必要に応じて安全のフォールバックとしてそれらを実行し続けることもできます。
 
-詳細については、Microsoft Learn の [Docker コンテナーの概要](https://docs.microsoft.com/learn/modules/intro-to-docker-containers/) に関するページを参照してください。
+詳細については、Microsoft Learn の [Docker コンテナーの概要](/learn/modules/intro-to-docker-containers/) に関するページを参照してください。
 
-## <a name="prerequisites"></a>前提条件
+## <a name="prerequisites"></a>[前提条件]
 
 - コンピューターで Windows 10 が実行されていること、バージョン2004、**ビルド 18362**以降[に更新さ](ms-settings:windowsupdate)れていることを確認します。
-- [WSL を有効にし、Linux ディストリビューションをインストールして、wsl 2 に更新](https://docs.microsoft.com/windows/wsl/install-win10)します。
-- [Linux カーネル更新パッケージをダウンロードしてインストール](https://docs.microsoft.com/windows/wsl/wsl2-kernel)します。
+- [WSL を有効にし、Linux ディストリビューションをインストールして、wsl 2 に更新](../install-win10.md)します。
+- [Linux カーネル更新パッケージをダウンロードしてインストール](/windows/wsl/wsl2-kernel)します。
 - [Visual Studio Code をインストール](https://code.visualstudio.com/download)します *(省略可能)*。 これにより、リモート Docker コンテナー内でコードおよびデバッグを行い、Linux ディストリビューションに接続する機能など、最適なエクスペリエンスが提供されます。
-- [Windows ターミナルをインストール](https://docs.microsoft.com/windows/terminal/get-started)します *(省略可能)*。 これにより、同じインターフェイス (Ubuntu、Debian、PowerShell、Azure CLI など) で複数のターミナルをカスタマイズして開く機能など、最適なエクスペリエンスが得られます。
+- [Windows ターミナルをインストール](/windows/terminal/get-started)します *(省略可能)*。 これにより、同じインターフェイス (Ubuntu、Debian、PowerShell、Azure CLI など) で複数のターミナルをカスタマイズして開く機能など、最適なエクスペリエンスが得られます。
 - Docker [Hub で DOCKER ID にサインアップ](https://hub.docker.com/signup)します *(省略可能)*。
 
 > [!NOTE]
@@ -46,7 +46,7 @@ Docker コンテナーは仮想マシンに似ていますが、仮想オペレ�
 
 Docker Desktop for Windows でサポートされている WSL 2 バックエンドでは、Linux ベースの開発環境で作業し、コードの編集とデバッグに Visual Studio Code を使用し、Windows の Microsoft Edge ブラウザーでコンテナーを実行できます。
 
-Docker をインストールするには ( [WSL 2](https://docs.microsoft.com/windows/wsl/install-win10)を既にインストールした後):
+Docker をインストールするには ( [WSL 2](../install-win10.md)を既にインストールした後):
 
 1. [Docker Desktop](https://docs.docker.com/docker-for-windows/wsl/#download)をダウンロードし、インストール手順に従います。
 
@@ -84,7 +84,7 @@ WSL 2 で Docker を使用してアプリの開発を開始するには、リモ
 
 Docker を使用して、既存のアプリプロジェクトの開発コンテナーを作成しましょう。
 
-1. この例では、Python 開発環境の [Django に関する Hello World](https://docs.microsoft.com/windows/python/web-frameworks#hello-world-tutorial-for-django) 記事のソースコードを使用して、ドキュメントを設定します。独自のプロジェクトソースコードを使用する場合は、この手順を省略できます。 GitHub から Django web アプリをダウンロードするには、WSL ターミナル (Ubuntu など) を開き、次のように入力します。 `git clone https://github.com/mattwojo/helloworld-django.git`
+1. この例では、Python 開発環境の [Django に関する Hello World](/windows/python/web-frameworks#hello-world-tutorial-for-django) 記事のソースコードを使用して、ドキュメントを設定します。独自のプロジェクトソースコードを使用する場合は、この手順を省略できます。 GitHub から Django web アプリをダウンロードするには、WSL ターミナル (Ubuntu など) を開き、次のように入力します。 `git clone https://github.com/mattwojo/helloworld-django.git`
 
     > [!NOTE]
     > コードは、ツールを使用しているのと同じファイルシステムに常に格納してください。 これにより、ファイルアクセスのパフォーマンスが向上します。 この例では、Linux ディストリビューション (Ubuntu) を使用して、WSL ファイルシステムにプロジェクトファイルを格納し `\\wsl\` ます。 Windows ファイルシステムにプロジェクトファイルを格納すると、WSL の Linux ツールを使用してこれらのファイルにアクセスするときに、処理が大幅に遅くなります。
