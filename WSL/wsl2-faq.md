@@ -7,12 +7,12 @@ ms.topic: article
 ms.assetid: 7afaeacf-435a-4e58-bff0-a9f0d75b8a51
 ms.custom: seodec18
 ms.localizationpriority: high
-ms.openlocfilehash: a021dc3c6c3c2a14fea631f2733d2b846c6fe3ad
-ms.sourcegitcommit: 910845e9b3f980b2c5b9b4968331a706720603c6
+ms.openlocfilehash: 458aadc89e0f8e63e7d7bad780ed8c5fad0de702
+ms.sourcegitcommit: 69fc9d3ca22cf3f07622db4cdf80c8ec751fe620
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/28/2020
-ms.locfileid: "89058487"
+ms.lasthandoff: 09/19/2020
+ms.locfileid: "90818684"
 ---
 # <a name="wsl-2-faqs"></a>WSL 2 に関する FAQ
 
@@ -30,13 +30,13 @@ WSL 2 は、WSL を現在使用できるすべての SKU (Windows 10 Home を含
 
 ## <a name="will-i-be-able-to-run-wsl-2-and-other-3rd-party-virtualization-tools-such-as-vmware-or-virtualbox"></a>WSL 2 と、VMware や VirtualBox などの他のサード パーティの仮想化ツールを実行できますか?
 
-一部のサード パーティ アプリケーションは、Hyper-V が使用されている場合は機能しません。つまり、VMware や VirtualBox など、WSL 2 が有効な場合は実行できません。 しかし、VirtualBox と VMware の両方から、Hyper-v と WSL2 をサポートするバージョンが最近リリースされました。 [VirtualBox の変更点についてはこちら][1]から、[VMware の変更点についてはこちら][4]から、それぞれ詳細をご確認いただけます。
+一部のサード パーティ アプリケーションは、Hyper-V が使用されている場合は機能しません。つまり、VMware や VirtualBox など、WSL 2 が有効な場合は実行できません。 しかし、VirtualBox と VMware の両方から、Hyper-v と WSL2 をサポートするバージョンが最近リリースされました。 [VirtualBox の変更点についてはこちら][1]から、[VMware の変更点についてはこちら][4]から、詳細を参照してください。 トラブルシューティングの問題については、[GitHub の WSL リポジトリにある VirtualBox の問題に関するディスカッション](https://github.com/MicrosoftDocs/WSL/issues?q=is%3Aissue+virtualbox+sort%3Acomments-desc)をご覧ください。
 
 Microsoft は、Hyper-V のサードパーティ統合をサポートするソリューションに一貫して取り組んでいます。 たとえば、[Hypervisor Platform][2] という一連の API を公開しています。サードパーティの仮想化プロバイダーはこれを使用してソフトウェアに Hyper-V との互換性を持たせることができます。 これにより、アプリケーションでは、[Google Android Emulator][3] や、Hyper-V と互換性のある VirtualBox 6 以降など、のエミュレーションに Hyper-V アーキテクチャを使用できます。
 
 ## <a name="can-i-access-the-gpu-in-wsl-2-are-there-plans-to-increase-hardware-support"></a>WSL 2 の GPU にはアクセスできますか? ハードウェア サポートを強化する予定はありますか?
 
-WSL 2 ディストリビューション内の GPU にアクセスするためのサポートがリリースされました。 これは、ビッグ データ セットが関係している場合に、機械学習、人工知能、データ サイエンスのシナリオで WSL をより簡単に使用できるようになったことを意味します。 [こちらで、GPU サポートの概要](./tutorials/gpu-compute)に関するチュートリアルを参照してください。 現時点では、WSL 2 にはシリアル サポートや USB デバイス サポートは含まれていません。 Microsoft では、これらの機能を追加するための最適な方法を調査しています。
+WSL 2 ディストリビューション内の GPU にアクセスするためのサポートがリリースされました。 これは、ビッグ データ セットが関係している場合に、機械学習、人工知能、データ サイエンスのシナリオで WSL をより簡単に使用できるようになったことを意味します。 [GPU サポートの概要](./tutorials/gpu-compute.md)に関するチュートリアルをご確認ください。 現時点では、WSL 2 にはシリアル サポートや USB デバイス サポートは含まれていません。 Microsoft では、これらの機能を追加するための最適な方法を調査しています。
 
 ## <a name="will-wsl-2-be-able-to-use-networking-applications"></a>WSL 2 ではネットワーク アプリケーションを使用できるようになりますか?
 

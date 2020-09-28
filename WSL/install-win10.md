@@ -1,22 +1,26 @@
 ---
 title: Windows Subsystem for Linux (WSL) を Windows 10 にインストールする
-description: Windows 10 に Linux 用 Windows サブシステムをインストールする方法について説明します。 Windows 10 は、バージョン 2004、ビルド 19041 以上に更新する必要があります。
+description: Ubuntu、Debian、SUSE、Kali、Fedora、Pengwin、Alpine などの Linux ディストリビューションを、Bash ターミナルを使用して、Windows 10 マシンにインストールする方法について説明します。
 keywords: BashOnWindows, bash, wsl, windows, linux 用 windows サブシステム, windowssubsystem, ubuntu, debian, suse, windows 10, インストール, 有効にする, WSL2, バージョン 2
-ms.date: 05/12/2020
+ms.date: 09/15/2020
 ms.topic: article
 ms.localizationpriority: high
-ms.openlocfilehash: 50b434e288ba90173875cf5e7cd5fe9e6c3d8a16
-ms.sourcegitcommit: 498592fa4b09015be3ee9a8913e5e3cf755de24b
+ms.openlocfilehash: f617f006ae8067da8adbe1449bfcfe5bf32e73a3
+ms.sourcegitcommit: 1232d3b3becc4ceaa113f8ffb0b935c5550f99a2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89559292"
+ms.lasthandoff: 09/18/2020
+ms.locfileid: "90777653"
 ---
 # <a name="windows-subsystem-for-linux-installation-guide-for-windows-10"></a>Windows 10 用 Windows Subsystem for Linux のインストール ガイド
 
-## <a name="install-the-windows-subsystem-for-linux"></a>Windows Subsystem for Linux のインストール
+## <a name="install-windows-subsystem-for-linux"></a>Linux 用 Windows サブシステムをインストールする
 
-Windows 上に Linux ディストリビューションをインストールする前に、"Linux 用 Windows サブシステム" オプション機能を有効にする必要があります。
+Linux 用 Windows サブシステムには 2 つの異なるバージョンがあり、インストール プロセス中にどちらかを選択します。 全体的なパフォーマンスは WSL 2 の方が優れているため、これを使用することをお勧めします。 システムが WSL 2 をサポートしていない場合、またはクロスシステム ファイル ストレージを必要とする特定の状況がある場合は、WSL 1 を使い続けることができます。 詳細については、「[WSL 2 と WSL 1 の比較](./compare-versions.md)」を参照してください。
+
+## <a name="step-1---enable-the-windows-subsystem-for-linux"></a>手順 1 - Linux 用 Windows サブシステムを有効にする
+
+Windows 上に Linux ディストリビューションをインストールする前に、まず "Linux 用 Windows サブシステム" オプション機能を有効にする必要があります。
 
 管理者として PowerShell を開き、以下を実行します。
 
@@ -24,22 +28,26 @@ Windows 上に Linux ディストリビューションをインストールす�
 dism.exe /online /enable-feature /featurename:Microsoft-Windows-Subsystem-Linux /all /norestart
 ```
 
-WSL 1 のみをインストールするには、お使いのマシンを再起動し、「[選択した Linux ディストリビューションをインストールする](./install-win10.md#install-your-linux-distribution-of-choice)」に進んでください。それ以外の場合は、再起動を待ってから WSL 2 への更新操作に進んでください。 詳細については、「[WSL 2 と WSL 1 の比較](./compare-versions.md)」を参照してください。
+ここで、手順 2 に進み、WSL 2 に更新することをお勧めしますが、WSL 1 のみをインストールする場合は、マシンを再起動して、「[手順 6 - 選択した Linux ディストリビューションをインストールする](./install-win10.md#step-6---install-your-linux-distribution-of-choice)」に進むことができます。 WSL 2 に更新するには、マシンの再起動を待ってから、次の手順に進みます。
 
-## <a name="update-to-wsl-2"></a>WSL 2 に更新する
+## <a name="step-2---update-to-wsl-2"></a>手順 2 - WSL 2 に更新する
 
-WSL 2 に更新するには、次の条件を満たす必要があります。
+WSL 2 に更新するには、Windows 10 を実行している必要があります。
 
-- [バージョン 1903 以降](ms-settings:windowsupdate)、**ビルド 18362** 以上に更新された x64 システム用の Windows 10 を実行している。
-   - Windows 10 バージョン 1903 または 1909 を使用している場合、マイナー ビルド番号が 1049 以上であることをご確認ください。 [詳細なトラブルシューティング手順についてはこちら](https://docs.microsoft.com/windows/wsl/troubleshooting#im-on-windows-10-version-1903-and-i-still-do-not-see-options-for-wsl-2)をご覧ください
-- バージョン 2004 以降、**ビルド 19041** に更新された ARM64 システム用の Windows 10 を実行している。
-- Windows 10 バージョン 1903 または 1909 を使用している場合は、適切なバックポートがあることを確認する必要があります。手順については、[こちらを参照してください](https://devblogs.microsoft.com/commandline/wsl-2-support-is-coming-to-windows-10-versions-1903-and-1909/#how-do-i-get-it)。 
+### <a name="requirements"></a>必要条件
 
-- Windows のバージョンを確認するには **Windows ロゴ キー + R** キーを押します。次に「**winver**」と入力し、 **[OK]** を選択します (または、Windows コマンド プロンプトで `ver` コマンドを入力します)。 お使いのビルドが 18361 より前の場合は、[最新の Windows バージョンに更新](ms-settings:windowsupdate)してください。 [Windows 更新アシスタントを入手する](https://www.microsoft.com/software-download/windows10)。
+- x64 システムの場合:**バージョン 1903** 以降、**ビルド 18362** 以上。
+- ARM64 システムの場合:**バージョン 2004** 以降、**ビルド 19041** 以上。
+- 18362 より前のビルドは WSL 2 をサポートしていません。 [Windows 更新アシスタント](https://www.microsoft.com/software-download/windows10)を使用して、お使いのバージョンの Windows を更新します。
 
-### <a name="enable-the-virtual-machine-platform-optional-component"></a>"仮想マシン プラットフォーム" のオプション コンポーネントを有効にする
+バージョンとビルド番号を確認するには、**Windows ロゴ キー + R キー**を押して、「**winver**」と入力し、 **[OK]** を選択します。 (または、Windows コマンド プロンプトで `ver` コマンドを入力します)。 [設定] メニューで、[最新の Windows バージョンに更新](ms-settings:windowsupdate)します。
 
-WSL 2 をインストールする前に、"仮想マシン プラットフォーム" オプション機能を有効にする必要があります。
+> [!NOTE]
+> Windows 10 バージョン 1903 または 1909 を実行している場合は、Windows メニューから [設定] を開き、[更新とセキュリティ] に移動して、[更新プログラムのチェック] を選択します。 ビルド番号は、18362.1049+ または 18363.1049+ で、マイナー ビルド番号は .1049 より大きい必要があります。 詳細については、「[Windows 10 バージョン 1903 および 1909 で WSL 2 のサポート開始](https://devblogs.microsoft.com/commandline/wsl-2-support-is-coming-to-windows-10-versions-1903-and-1909/)」を参照してください。 また、[トラブルシューティング手順](https://docs.microsoft.com/windows/wsl/troubleshooting#im-on-windows-10-version-1903-and-i-still-do-not-see-options-for-wsl-2)も参照してください。
+
+## <a name="step-3---enable-virtual-machine-feature"></a>手順 3: 仮想マシンの機能を有効にする
+
+WSL 2 をインストールする前に、"**仮想マシン プラットフォーム**" オプション機能を有効にする必要があります。
 
 管理者として PowerShell を開き、以下を実行します。
 
@@ -49,7 +57,22 @@ dism.exe /online /enable-feature /featurename:VirtualMachinePlatform /all /nores
 
 お使いのマシンを**再起動**して WSL のインストールを完了し、WSL 2 に更新します。
 
-### <a name="set-wsl-2-as-your-default-version"></a>WSL 2 を既定のバージョンとして設定する
+## <a name="step-4---download-the-linux-kernel-update-package"></a>手順 4 - Linux カーネル更新プログラム パッケージをダウンロードする
+
+1. 最新のパッケージをダウンロードします。
+    - [x64 マシン用 WSL2 Linux カーネル更新プログラム パッケージ](https://wslstorestorage.blob.core.windows.net/wslblob/wsl_update_x64.msi)
+
+    > [!NOTE]
+    > ARM64 マシンを使用している場合は、代わりに [ARM64 パッケージ](https://wslstorestorage.blob.core.windows.net/wslblob/wsl_update_arm64.msi)をダウンロードしてください。 使用しているマシンの種類がわからない場合は、コマンド プロンプトまたは PowerShell を開き、「`systeminfo | find "System Type"`」と入力します。
+
+2. 前の手順でダウンロードした更新プログラム パッケージを実行します。 (ダブルクリックして実行します。管理者特権のアクセス許可を求めるメッセージが表示されます。[はい] を選択して、このインストールを承認します。)
+
+インストールが完了したら、次の手順に進み、新しい Linux ディストリビューションをインストールする際の既定のバージョンとして WSL 2 を設定します。 (新しい Linux インストールを WSL 1 に設定する場合は、この手順をスキップしてください)。
+
+> [!NOTE]
+> 詳細については、[Windows コマンドラインのブログ](https://aka.ms/cliblog)にある[WSL2 Linux カーネルの更新プログラムに対する変更](https://devblogs.microsoft.com/commandline/wsl2-will-be-generally-available-in-windows-10-version-2004)に関するページを参照してください。
+
+## <a name="step-5---set-wsl-2-as-your-default-version"></a>手順 5 - WSL 2 を既定のバージョンとして設定する
 
 管理者として PowerShell を開いて次のコマンドを実行し、新しい Linux ディストリビューションをインストールする際の既定のバージョンとして WSL 2 を設定します。
 
@@ -57,14 +80,14 @@ dism.exe /online /enable-feature /featurename:VirtualMachinePlatform /all /nores
 wsl --set-default-version 2
 ```
 
-このメッセージは、コマンド `WSL 2 requires an update to its kernel component. For information please visit https://aka.ms/wsl2kernel` を実行した後に表示されることがあります。 リンク ([https://aka.ms/wsl2kernel](https://aka.ms/wsl2kernel)) に従って、WSL 2 で使用する Linux カーネルをコンピューターにインストールするためのドキュメントのこのページから MSI をインストールしてください。 カーネルをインストールしたら、コマンドを再度実行すると、メッセージが表示されることなく正常に完了します。 
-
 > [!NOTE]
-> 対象のディストリビューションのサイズによっては、WSL 1 から WSL 2 への更新が完了するまでに数分かかる場合があります。 Windows 10 Anniversary Update または Creators Update から WSL 1 の古い (レガシ) インストールを実行している場合は、更新エラーが発生することがあります。 次の手順に従って、[レガシ ディストリビューションをアンインストールして削除](https://docs.microsoft.com/windows/wsl/install-legacy#uninstallingremoving-the-legacy-distro)します。 
+> 対象のディストリビューションのサイズによっては、WSL 1 から WSL 2 への更新が完了するまでに数分かかる場合があります。 Windows 10 Anniversary Update または Creators Update から WSL 1 の古い (レガシ) インストールを実行している場合は、更新エラーが発生することがあります。 次の手順に従って、[レガシ ディストリビューションをアンインストールして削除](https://docs.microsoft.com/windows/wsl/install-legacy#uninstallingremoving-the-legacy-distro)します。
 >
 > `wsl --set-default-version` の結果が無効なコマンドである場合は、「`wsl --help`」と入力してください。 `--set-default-version` が表示されない場合は、お使いの OS によってサポートされていないことを意味しているため、バージョン 1903、ビルド 18362 以上に更新する必要があります。
+>
+> コマンドの実行後に、次のメッセージが表示される場合: `WSL 2 requires an update to its kernel component. For information please visit https://aka.ms/wsl2kernel`。 さらに MSI Linux カーネル更新パッケージをインストールする必要があります。
 
-## <a name="install-your-linux-distribution-of-choice"></a>選択した Linux ディストリビューションをインストールする
+## <a name="step-6---install-your-linux-distribution-of-choice"></a>手順 6 - 選択した Linux ディストリビューションをインストールする
 
 1. [Microsoft Store](https://aka.ms/wslstore) を開き、希望する Linux ディストリビューションを選択します。
 
@@ -89,13 +112,23 @@ wsl --set-default-version 2
 
     ![Microsoft Store での Linux ディストリビューション](media/UbuntuStore.png)
 
-## <a name="set-up-a-new-distribution"></a>新しいディストリビューションを設定する
+## <a name="step-7---set-up-a-new-distribution"></a>手順 7 - 新しいディストリビューションを設定する
 
 新しくインストールした Linux ディストリビューションを初めて起動すると、コンソール ウィンドウが開き、ファイルが圧縮解除されて PC に格納されるまで 1、2 分待つように求められます。 今後のすべての起動には、1 秒もかかりません。
 
 次に、[新しい Linux ディストリビューションのユーザー アカウントとパスワードを作成する](./user-support.md)必要があります。
 
 ![Windows コンソールでの Ubuntu の展開](media/UbuntuInstall.png)
+
+**お疲れさまでした。これで、Windows オペレーティング システムと完全に統合された Linux ディストリビューションのインストールと設定が正常に完了しました。**
+
+## <a name="install-windows-terminal-optional"></a>Windows ターミナルをインストールする (省略可能)
+
+Windows ターミナルでは、複数のタブ (複数の Linux コマンド ライン、Windows コマンド プロンプト、PowerShell、Azure CLI などをすばやく切り替える) が有効になり、カスタム キー バインド (タブを開くまたは閉じる、コピーと貼り付けを行うなどのためのショートカット キー) を作成でき、検索機能、カスタム テーマ (配色、フォント スタイルとサイズ、背景画像、ぼかし、透明度) を使用できます。 [詳細情報。](https://docs.microsoft.com/windows/terminal)
+
+[Windows ターミナルをインストール](https://docs.microsoft.com/windows/terminal/get-started)します。
+
+  ![Windows ターミナル](media/terminal.png)
 
 ## <a name="set-your-distribution-version-to-wsl-1-or-wsl-2"></a>ディストリビューションのバージョンを WSL 1 または WSL 2 に設定する
 
@@ -152,4 +185,17 @@ wsl --set-default-version 2
 > この問題の最新情報が追跡されている [WSL ドキュメント GitHub スレッド #4103](https://github.com/microsoft/WSL/issues/4103) をご確認ください。
 
 - **"wsl" という用語が、コマンドレット、関数、スクリプト ファイル、または操作可能なプログラムの名前として認識されません。**
-  - [Linux 用 Windows サブシステムのオプション コンポーネントがインストールされている](./install-win10.md#enable-the-virtual-machine-platform-optional-component)ことを確認してください。 また、ARM64 デバイスを使用し、PowerShell からこのコマンドを実行している場合も、このエラーを受け取ります。 代わりに、`wsl.exe`PowerShell Core[ またはコマンド プロンプトから ](https://docs.microsoft.com/powershell/scripting/install/installing-powershell-core-on-windows?view=powershell-6) を実行します。
+  - [Linux 用 Windows サブシステムのオプション コンポーネントがインストールされている](./install-win10.md#step-3---enable-virtual-machine-feature)ことを確認してください。 また、ARM64 デバイスを使用し、PowerShell からこのコマンドを実行している場合も、このエラーを受け取ります。 代わりに、`wsl.exe`PowerShell Core[ またはコマンド プロンプトから ](https://docs.microsoft.com/powershell/scripting/install/installing-powershell-core-on-windows) を実行します。
+
+- **Error:この更新プログラムは、Linux 用 Windows サブシステムを搭載したマシンにのみ適用されます。**
+  - Linux カーネル更新プログラム MSI パッケージをインストールするには、WSL が必要であり、最初に有効にする必要があります。 失敗した場合は、"`This update only applies to machines with the Windows Subsystem for Linux`" というメッセージが表示されます。
+  - このメッセージが表示される理由として、次の 3 つが考えられます。
+
+  1. WSL 2 をサポートしていない古いバージョンの Windows を使用しています。 バージョン要件と更新プログラムへのリンクについては、手順 2 を参照してください。
+
+  2. WSL が有効になっていません。 手順 1 に戻り、お使いのマシンでオプションの WSL 機能が有効になっていることを確認する必要があります。
+
+  3. WSL を有効にした後、再起動しないと、効力が発しません。マシンを再起動してから、もう一度お試しください。
+
+- **Error:WSL 2 のカーネル コンポーネントを更新する必要があります。詳細については、 https://aka.ms/wsl2kernel をアクセスしてください。**
+  - Linux カーネル パッケージが %SystemRoot%\system32\lxss\tools フォルダーにない場合、このエラーが発生します。 このインストール手順の手順 4 に従って Linux カーネル更新プログラム MSI パッケージをインストールすることにより、このエラーを解決できます。 [[プログラムの追加と削除]](ms-settings:appsfeatures-app) から MSI をアンインストールして、インストールし直すことが必要な場合があります。

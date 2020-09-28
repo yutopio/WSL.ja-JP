@@ -5,20 +5,20 @@ keywords: BashOnWindows, bash, wsl, windows, windows subsystem for linux, window
 ms.date: 05/12/2020
 ms.topic: article
 ms.localizationpriority: high
-ms.openlocfilehash: cdb510b8195f18f89ea475889c34850234b7c0e8
-ms.sourcegitcommit: 6ff046993e9f196cdfa04f5f91130e0e4ff1e7fa
+ms.openlocfilehash: 7f1ad56a6f4261ad0455ee93bdeb5e31d0ed10d1
+ms.sourcegitcommit: 69fc9d3ca22cf3f07622db4cdf80c8ec751fe620
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/03/2020
-ms.locfileid: "89427189"
+ms.lasthandoff: 09/19/2020
+ms.locfileid: "90818724"
 ---
 # <a name="create-a-user-account-and-password-for-your-new-linux-distribution"></a>新しい Linux ディストリビューションのユーザー アカウントとパスワードを作成する
 
 [WSL を有効にし、Microsoft Store から Linux ディストリビューションをインストール](./install-win10.md)したら、新しくインストールされた Linux ディストリビューションを開くときに最初に実行する必要がある手順は、**ユーザー名**および**パスワード**を含むアカウントを作成することです。
 
-- この**ユーザー名**および**パスワード**は、お使いの Linux ディストリビューションに固有であり、Windows ユーザー名とは関係ありません。
+- この**ユーザー名**および**パスワード**は、インストールする Linux ディストリビューションごとに固有であり、Windows ユーザー名とは関係ありません。
 
-- この**ユーザー名**および**パスワード**を作成すると、このアカウントがディストリビューションの既定のユーザーとなり、起動時に自動的にサインインされます。
+- ユーザーが**ユーザー名**および**パスワード**を作成すると、そのアカウントがディストリビューションの既定のユーザーとなり、起動時に自動的にサインインされます。
 
 - このアカウントは、Linux 管理者と見なされ、`sudo` (Super User Do) 管理コマンドを実行できます。
 

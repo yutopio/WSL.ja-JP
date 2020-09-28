@@ -6,23 +6,33 @@ author: benhillis
 ms.date: 05/15/2020
 ms.topic: article
 ms.localizationpriority: high
-ms.openlocfilehash: 57d06a8666f8003b187f043bd18655a9287d8a63
-ms.sourcegitcommit: fb79750bd71d6ebaed5203b3de71ba85a67227b1
+ms.openlocfilehash: f79acbbc7f6436bae54c5160e769cababa76a341
+ms.sourcegitcommit: 69fc9d3ca22cf3f07622db4cdf80c8ec751fe620
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/26/2020
-ms.locfileid: "88866104"
+ms.lasthandoff: 09/19/2020
+ms.locfileid: "90818694"
 ---
 # <a name="release-notes-for-windows-subsystem-for-linux"></a>Windows Subsystem for Linux のリリース ノート
+
+## <a name="build-20211"></a>ビルド 20211
+ビルド 20211 の一般的な Windows 情報については、[Windows ブログ](https://blogs.windows.com/windows-insider/2020/09/10/announcing-windows-10-insider-preview-build-20211/)を参照してください。
+
+* 物理ディスクや仮想ディスクをマウントするための `wsl.exe --mount` を導入します。 詳細については、「[Windows および WSL 2 で Linux ファイルシステムにアクセスする](https://devblogs.microsoft.com/commandline/access-linux-filesystems-in-windows-and-wsl-2/)」を参照してください。
+* VM がアイドル状態であるかどうかを確認する際の LxssManager サービスのクラッシュを修正します。 [GH 5768]
+* 圧縮された VHD ファイルのサポート。 [GH 4103]
+* c:\windows\system32\lxss\lib にインストールされている Linux ユーザー モード ライブラリが、OS アップグレードの際に保持されるようにします。 [GH 5848]
+* `wsl --install --list-distributions` を使用して、インストールできる利用可能なディストリビューションを一覧表示する機能が追加されました。
+* WSL インスタンスは、ユーザーがログオフすると終了されるようになりました。
 
 ## <a name="build-20190"></a>ビルド 20190
 ビルド 20190 の一般的な Windows 情報については、[Windows ブログ](https://blogs.windows.com/windowsexperience/2020/08/12/announcing-windows-10-insider-preview-build-20190/)を参照してください。
 
-* WSL1 インスタンスの起動を妨げているバグを修正します [GH 5633]
-* Windows プロセスの出力をリダイレクトする際のハングを修正します [GH 5648]
-* VM アイドル タイムアウトを制御するための %userprofile%\\.wslconfig オプションを追加します (wsl2.vmIdleTimeout=<time_in_ms>)
-* WSL からアプリの実行エイリアスを起動する操作をサポートします
-* WSL2 カーネルとディストリビューションをインストールするためのサポートが wsl.exe --install に追加されました
+* WSL1 インスタンスが起動できなくなるバグを修正します。 [GH 5633]
+* Windows プロセスの出力をリダイレクトする際のハングを修正します。 [GH 5648]
+* VM アイドル タイムアウトを制御するための %userprofile%\\.wslconfig オプションを追加します (wsl2.vmIdleTimeout=<time_in_ms>)。
+* WSL からアプリの実行エイリアスを起動する操作をサポートします。
+* WSL2 カーネルとディストリビューションをインストールするためのサポートが wsl.exe --install に追加されました。
 
 ## <a name="build-20175"></a>ビルド 20175
 ビルド 20175 の一般的な Windows 情報については、[Windows ブログ](https://blogs.windows.com/windowsexperience/2020/07/22/announcing-windows-10-insider-preview-build-20175/)を参照してください。

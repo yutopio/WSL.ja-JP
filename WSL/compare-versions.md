@@ -1,22 +1,29 @@
 ---
 title: WSL 2 と WSL 1 の比較
-description: Linux 用 Windows サブシステムのバージョン 1 とバージョン 2 を比較します。 WSL 2 は、実際の Linux カーネルを実行し、速度とシステム コールの完全な互換性を高めます。 WSL 1 は、Windows と Linux の両方のファイル システムで作業している場合に適しています。
+description: Linux 用 Windows サブシステムのバージョン 1 とバージョン 2 を比較します。 WSL 2 の新機能について説明します。これには、実際の Linux カーネル、速度の向上、システム コールの完全な互換性が含まれます。 複数のオペレーティング ファイル システムをまたいでファイルを格納している場合は、WSL 1 の方が適しています。 WSL 2 の仮想ハードウェア ディスク (VHD) のサイズは拡張できます。
 keywords: BashOnWindows, bash, wsl, windows, windowssubsystem, gnu, linux, ubuntu, debian, suse, windows 10, UX の変更, WSL 2, linux カーネル, ネットワーク アプリケーション, localhost, IPv6, 仮想ハードウェア ディスク, VHD, VHD の制限, VHD エラー
-ms.date: 07/22/2020
-ms.topic: article
+ms.date: 09/15/2020
+ms.topic: conceptual
 ms.localizationpriority: high
-ms.openlocfilehash: 930fbdc0b86396f41fbb1189f4a651bb03e05f22
-ms.sourcegitcommit: 6ff046993e9f196cdfa04f5f91130e0e4ff1e7fa
+ms.custom: contperfq1
+ms.openlocfilehash: e8a8fc2c5e844ae5b6a62b2a4f7844e674bdcfd9
+ms.sourcegitcommit: 69fc9d3ca22cf3f07622db4cdf80c8ec751fe620
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/03/2020
-ms.locfileid: "89427179"
+ms.lasthandoff: 09/19/2020
+ms.locfileid: "90818744"
 ---
 # <a name="comparing-wsl-1-and-wsl-2"></a>WSL 1 と WSL 2 の比較
 
-Linux 用 Windows サブシステムを新しいバージョンに更新する主な目的は、**ファイル システムのパフォーマンスを向上させ**、**システム コールの完全な互換性**をサポートすることです。 
+Linux 用 Windows サブシステムを WSL 1 から WSL 2 に更新する際の主な相違点と、そうする理由は次のとおりです。
 
-軽量のユーティリティ仮想マシン (VM) 内で Linux カーネルを実行するために、WSL 2 には最新の優れた仮想化テクノロジが使用されています。 ただし、WSL 2 は従来の VM エクスペリエンスではありません。 [WSL 2 アーキテクチャの詳細については、こちらをご覧ください](#wsl-2-architecture)。
+- **ファイル システム パフォーマンスの向上**
+- **システム コールの完全な互換性のサポート**
+
+軽量のユーティリティ仮想マシン (VM) 内で Linux カーネルを実行するために、WSL 2 には最新の優れた仮想化テクノロジが使用されています。 ただし、WSL 2 は従来の VM エクスペリエンスではありません。
+
+> [!div class="nextstepaction"]
+> [WSL 1 をインストールし、WSL 2 に更新する](install-win10.md)
 
 ## <a name="comparing-features"></a>機能の比較
 
@@ -25,47 +32,41 @@ Linux 用 Windows サブシステムを新しいバージョンに更新する�
  Windows と Linux の統合| ✅|✅
  高速の起動時間| ✅ | ✅
  小さなリソース フット プリント| ✅ |✅
- 現在のバージョンの VMware と VirtualBox での実行| ✅ | ✅
+ 現在のバージョンの VMware および VirtualBox での実行| ✅ | ✅
  マネージド VM| ❌ | ✅
  完全な Linux カーネル| ❌ |✅
  システム コールの完全な互換性| ❌ | ✅
  OS ファイル システム間でのパフォーマンス| ✅ | ❌
 
-WSL 1 を既に使用していて、WSL 2 にアップグレードする場合は、 手順に従って [WSL 2 に更新](./install-win10.md#update-to-wsl-2)してください。
+上の比較表からわかるように、WSL 2 のアーキテクチャは、いくつかの点で WSL 1 よりも優れています (OS ファイル システム間でのパフォーマンスを除く)。
+
+## <a name="performance-across-os-file-systems"></a>OS ファイル システム間でのパフォーマンス
+
+特殊な理由がない限り、複数のオペレーティング システム間でファイルを操作しないことをお勧めします。 Linux コマンド ライン (Ubuntu、OpenSUSE など) で作業している場合、最速のパフォーマンス速度を実現するには、ファイルを WSL ファイル システムに格納します。 Windows コマンド ライン (PowerShell、コマンド プロンプト) で作業している場合は、ファイルを Windows ファイル システムに格納します。
+
+たとえば、WSL プロジェクト ファイルを格納する場合は、次のとおりです。
+
+- Linux ファイル システムのルート ディレクトリを使用します: `\\wsl$\Ubuntu-18.04\home\<user name>\Project`
+- Windows ファイル システムのルート ディレクトリではありません: `C:\Users\<user name>\Project`
+
+Linux ルート ファイル システムには、エクスプローラーなどの Windows アプリやツールを使用してアクセスできます。 Linux ディストリビューション (Ubuntu など) を開いてみてください。また、次のコマンドを入力して、Linux ホーム ディレクトリにいることを確認してください: `cd ~`。 次に、以下を入力して、エクスプローラーで Linux ファイル システムを開きます " *(末尾のピリオドを忘れないでください)* ": `explorer.exe .`
 
 WSL 2 は、Windows 10 (バージョン 1903、ビルド 18362 以上) でのみ使用できます。 Windows のバージョンを確認するには **Windows ロゴ キー + R** キーを押します。次に「**winver**」と入力し、 **[OK]** を選択します (または、Windows コマンド プロンプトで `ver` コマンドを入力します)。 [最新の Windows バージョンに更新する](ms-settings:windowsupdate)必要がある場合があります。 18362 より前のビルドでは、WSL はまったくサポートされていません。
 
 > [!NOTE]
-> WSL 2 は [VMWare 15.5.5+](https://blogs.vmware.com/workstation/2020/05/vmware-workstation-now-supports-hyper-v-mode.html) と [VirtualBox 6+](https://www.virtualbox.org/wiki/Changelog-6.0) で動作します。
+> WSL 2 は [VMware 15.5.5+](https://blogs.vmware.com/workstation/2020/05/vmware-workstation-now-supports-hyper-v-mode.html) と [VirtualBox 6+](https://www.virtualbox.org/wiki/Changelog-6.0) で動作します。 詳細については、[WSL 2 に関するよくあるご質問](./wsl2-faq.md#will-i-be-able-to-run-wsl-2-and-other-3rd-party-virtualization-tools-such-as-vmware-or-virtualbox)を参照してください。
 
-## <a name="use-the-linux-file-system-for-faster-performance"></a>Linux ファイル システムを使用してパフォーマンスを向上させる
+## <a name="whats-new-in-wsl-2"></a>WSL 2 の新機能
 
-最速のパフォーマンス速度を実現するために最適化するには、プロジェクト ファイルを (Windows ファイル システムではなく) Linux ファイル システムに格納してください。
+WSL 2 では、基盤となるアーキテクチャの大きな見直しが行われ、新機能を有効にするために仮想化テクノロジと Linux カーネルが使用されています。 この更新の主な目標は、ファイル システムのパフォーマンスを向上させることと、システム コールの完全な互換性を追加することです。
 
-たとえば、WSL プロジェクト ファイルを格納する場合は、次のとおりです。
+- [WSL 2 のシステム要件](./install-win10.md#step-2---update-to-wsl-2)
+- [WSL 1 から WSL 2 に更新する](./install-win10.md#step-2---update-to-wsl-2)
+- [WSL 2 に関してよく寄せられる質問](./wsl2-faq.md)
 
-* Linux ファイル システムのルート ディレクトリを使用します: `\\wsl$\Ubuntu-18.04\home\<user name>\Project`
-* Windows ファイル システムのルート ディレクトリではありません: `C:\Users\<user name>\Project`
+### <a name="wsl-2-architecture"></a>WSL 2 のアーキテクチャ
 
-WSL ディストリビューション (Ubuntu など) を使用して作業しているプロジェクト ファイルは、より高速なファイル システム アクセスを利用するために、Linux ルート ファイル システムに配置する必要があります。
-
-Linux ルート ファイル システムには、エクスプローラーなどの Windows アプリやツールを使用してアクセスできます。 Linux ディストリビューション (Ubuntu など) を開いてみてください。また、次のコマンドを入力して、Linux ホーム ディレクトリにいることを確認してください: `cd ~`。 次に、以下を入力して、エクスプローラーで Linux ファイル システムを開きます " *(末尾のピリオドを忘れないでください)* ": `explorer.exe .`
-
-## <a name="exceptions-for-using-wsl-1-rather-than-wsl-2"></a>例外的に WSL 2 ではなく WSL 1 を使用する場合
-
-WSL2 ではより高速なパフォーマンスと 100% のシステム コールの互換性が提供されるため、WSL 2 を使用することをお勧めします。 ただし、WSL 1 を使用する方が好ましいシナリオもいくつかあります。 次の場合は、WSL 1 の使用を検討してください。
-
-* プロジェクト ファイルを Windows ファイル システムに格納する必要がある。
-  * WSL Linux ディストリビューションを使用して Windows ファイル システム上のプロジェクト ファイルにアクセスする予定で、これらのファイルを Linux ファイル システムに格納できない場合は、WSL 1 を使用することにより、OS ファイル システム間でより高速なパフォーマンスを実現できます。
-* 同じファイルに対して Windows と Linux の両方のツールを使用したクロスコンパイルを必要とするプロジェクト。
-  * Windows オペレーティング システムと Linux オペレーティング システムの間のファイル パフォーマンスは WSL 1 の方が WSL 2 よりも高速です。そのため、Windows アプリケーションを使用して Linux ファイルにアクセスする場合、現時点では WSL 1 を使用する方がより高速なパフォーマンスを得られます。
-
-> [!NOTE]
-> VS Code [Remote WSL 拡張機能](https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.remote-wsl)を試すことを検討してください。Linux コマンド ライン ツールを使用してプロジェクト ファイルを Linux ファイル システム上に格納できるだけでなく、Windows 上で VS Code を使用して、インターネット ブラウザーでプロジェクトを作成、編集、デバッグ、実行できるようになります。Linux ファイル システムと Windows ファイル システムをまたぐ処理に伴うパフォーマンスの低下は発生しません。 [詳しくはこちらをご覧ください](https://code.visualstudio.com/docs/remote/wsl)。
-
-## <a name="wsl-2-architecture"></a>WSL 2 のアーキテクチャ
-
-従来の VM エクスペリエンスは起動に時間がかかり、分離され、大量のリソースが消費され、管理に時間がかかります。 WSL 2 にこのような特徴はありません。
+従来の VM エクスペリエンスは起動に時間がかかり、分離され、大量のリソースが消費され、管理に時間がかかる場合があります。 WSL 2 にこのような特徴はありません。
 
 WSL 2 には、Windows と Linux の間のシームレスな統合、高速な起動時間、小さなリソース フットプリントをはじめとする WSL 1 の利点があるうえ、VM の構成や管理が必要ありません。 WSL 2 には VM が使用されますが、バックグラウンドで管理および実行されるため、WSL 1 とユーザー エクスペリエンスは同じです。
 
@@ -85,13 +86,25 @@ WSL 2 を使用すると、git clone、npm install、apt update、apt upgrade �
 
 Linux バイナリでは、システム コールを使用して、ファイルへのアクセス、メモリの要求、プロセスの作成などの機能を実行します。 WSL 1 では WSL チームが構築した変換レイヤーが使用されていましたが、WSL 2 にはシステム コールの完全な互換性を持つ独自の Linux カーネルが含まれています。 次のような利点があります。
 
-* **[Docker](https://code.visualstudio.com/blogs/2020/03/02/docker-in-wsl2)** など、WSL 内で実行できるまったく新しいアプリのセット。
+- **[Docker](tutorials/wsl-containers.md)** など、WSL 内で実行できるまったく新しいアプリのセット。
 
-* Linux カーネルに対する更新プログラムがすぐに使用可能になります (WSL チームが更新プログラムを実装して変更を追加するまで待つ必要はありません)。
+- Linux カーネルに対する更新プログラムがすぐに使用可能になります (WSL チームが更新プログラムを実装して変更を追加するまで待つ必要はありません)。
 
 ### <a name="wsl-2-uses-a-smaller-amount-of-memory-on-startup"></a>WSL 2 は起動時のメモリ使用量が少ない
 
 WSL 2 では、メモリ フットプリントが小さな実際の Linux カーネル上で軽量のユーティリティ VM を使用します。 このユーティリティは、仮想アドレスが使用されるメモリを起動時に割り当てます。 これは、WSL 1 で必要とされていたよりも少ない割合の合計メモリで起動するように構成されています。
+
+## <a name="exceptions-for-using-wsl-1-rather-than-wsl-2"></a>例外的に WSL 2 ではなく WSL 1 を使用する場合
+
+WSL2 ではより高速なパフォーマンスと 100% のシステム コールの互換性が提供されるため、WSL 2 を使用することをお勧めします。 ただし、WSL 1 を使用する方が好ましいシナリオもいくつかあります。 次の場合は、WSL 1 の使用を検討してください。
+
+- プロジェクト ファイルを Windows ファイル システムに格納する必要がある。 WSL 1 を使用すると、Windows からマウントされたファイルにより高速にアクセスできます。
+  - WSL Linux ディストリビューションを使用して Windows ファイル システム上のプロジェクト ファイルにアクセスする予定で、これらのファイルを Linux ファイル システムに格納できない場合は、WSL 1 を使用することにより、OS ファイル システム間でより高速なパフォーマンスを実現できます。
+- 同じファイルに対して Windows と Linux の両方のツールを使用したクロスコンパイルを必要とするプロジェクト。
+  - Windows オペレーティング システムと Linux オペレーティング システムの間のファイル パフォーマンスは WSL 1 の方が WSL 2 よりも高速です。そのため、Windows アプリケーションを使用して Linux ファイルにアクセスする場合、現時点では WSL 1 を使用する方がより高速なパフォーマンスを得られます。
+
+> [!NOTE]
+> VS Code [Remote WSL 拡張機能](https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.remote-wsl)を試すことを検討してください。Linux コマンド ライン ツールを使用してプロジェクト ファイルを Linux ファイル システム上に格納できるだけでなく、Windows 上で VS Code を使用して、インターネット ブラウザーでプロジェクトを作成、編集、デバッグ、実行できるようになります。Linux ファイル システムと Windows ファイル システムをまたぐ処理に伴うパフォーマンスの低下は発生しません。 [詳しくはこちらをご覧ください](tutorials/wsl-vscode.md)。
 
 ## <a name="accessing-network-applications"></a>ネットワーク アプリケーションへのアクセス
 
@@ -103,14 +116,14 @@ Linux ディストリビューションでネットワーク アプリ (たと�
 
 Linux ディストリビューションが動作する仮想マシンの IP アドレスを確認するには、次の手順に従います。
 
-* WSL ディストリビューション (つまり、Ubuntu) から、次のコマンドを実行します: `ip addr`
-* `eth0` インターフェイスの `inet` 値の下で目的のアドレスを見つけてコピーします。
-* grep ツールがインストールされている場合は、次のコマンドを使用して出力をフィルター処理することにより、これをより簡単に見つけることができます: `ip addr | grep eth0`
-* この IP アドレスを使用して Linux サーバーに接続します。
+- WSL ディストリビューション (つまり、Ubuntu) から、次のコマンドを実行します: `ip addr`
+- `eth0` インターフェイスの `inet` 値の下で目的のアドレスを見つけてコピーします。
+- grep ツールがインストールされている場合は、次のコマンドを使用して出力をフィルター処理することにより、これをより簡単に見つけることができます: `ip addr | grep eth0`
+- この IP アドレスを使用して Linux サーバーに接続します。
 
 次の図は、これを実行するために、Edge ブラウザーを使用して Node.js サーバーに接続する例です。
 
-![Windows からの Linux ネットワーク アプリケーションへのアクセス](media/wsl2-network-w2l.jpg)
+![Edge を使用して NodeJS サーバーに接続する](media/wsl2-network-w2l.jpg)
 
 ### <a name="accessing-windows-networking-apps-from-linux-host-ip"></a>Linux からの Windows ネットワーク アプリへのアクセス (ホスト IP)
 
@@ -121,7 +134,7 @@ Linux ディストリビューション (つまり、Ubuntu) から Windows 上�
 
 次の図は、これを実行するために、curl を介して Windows で実行されている Node.js サーバーに接続する例です。
 
-![Windows からの Linux ネットワーク アプリケーションへのアクセス](media/wsl2-network-l2w.png)
+![Curl を介して Windows で NodeJS サーバーに接続する](media/wsl2-network-l2w.png)
 
 ### <a name="additional-networking-considerations"></a>ネットワークに関する追加の考慮事項
 
@@ -138,6 +151,7 @@ WSL 1 ディストリビューションを使用している場合、LAN から�
 WSL 2 では、これは既定の動作ではありません。 WSL 2 には、独自の一意の IP アドレスを持つ仮想化されたイーサネット アダプターがあります。 現在、このワークフローを有効にするには、通常の仮想マシンの場合と同じ手順を実行する必要があります。 (Microsoft は、このエクスペリエンスを改善する方法を検討しています)。
 
 次に、ホスト上のポート 4000 でリッスンし、それを IP アドレス 192.168.101.100 の WSL 2 VM のポート 4000 に接続するポート プロキシを追加する PowerShell コマンドの例を示します。
+
 ```powershell
 netsh interface portproxy add v4tov4 listenport=4000 listenaddress=0.0.0.0 connectport=4000 connectaddress=192.168.101.100
 ```
@@ -157,26 +171,26 @@ WSL 2 VHD では、ext4 ファイル システムが使用されます。 この
 1. 次のコマンドを使用して、すべての WSL インスタンスを終了します: `wsl --shutdown`
 
 2. ディストリビューションのインストール パッケージ名 ("PackageFamilyName") を見つけます
-    * PowerShell を使用して、次のコマンドを入力します ("distro" はディストリビューション名です):
-    * `Get-AppxPackage -Name "*<distro>*" | Select PackageFamilyName`
+    - PowerShell を使用して、次のコマンドを入力します ("distro" はディストリビューション名です):
+    - `Get-AppxPackage -Name "*<distro>*" | Select PackageFamilyName`
 
 3. WSL 2 のインストールで使用される VHD ファイルの `fullpath` を特定します。これが `pathToVHD` になります。
-     * `%LOCALAPPDATA%\Packages\<PackageFamilyName>\LocalState\<disk>.vhdx`
+     - `%LOCALAPPDATA%\Packages\<PackageFamilyName>\LocalState\<disk>.vhdx`
 
 4. 次のコマンドを実行して、WSL 2 VHD のサイズを変更します。
-   * 管理者特権で Windows コマンド プロンプトを開き、次のように入力します。
-      * `diskpart`
-      * `Select vdisk file="<pathToVHD>"`
-      * `expand vdisk maximum="<sizeInMegaBytes>"`
+   - 管理者特権で Windows コマンド プロンプトを開き、次のように入力します。
+      - `diskpart`
+      - `Select vdisk file="<pathToVHD>"`
+      - `expand vdisk maximum="<sizeInMegaBytes>"`
 
 5. WSL ディストリビューション (たとえば、Ubuntu) を起動します。
 
 6. Linux ディストリビューションのコマンド ラインから次のコマンドを実行して、ファイル システムのサイズを拡張できることを WSL に認識させます。
-    * `sudo mount -t devtmpfs none /dev`
-    * `mount | grep ext4`
-    * `/dev/sdXX` のようなこのエントリの名前をコピーします (X は他の文字を表します)
-    * `sudo resize2fs /dev/sdXX`
-    * 前の手順でコピーした値を使用します。 resize2fs のインストールが必要になる場合もあります: `apt install resize2fs`
+    - `sudo mount -t devtmpfs none /dev`
+    - `mount | grep ext4`
+    - `/dev/sdXX` のようなこのエントリの名前をコピーします (X は他の文字を表します)
+    - `sudo resize2fs /dev/sdXX`
+    - 前の手順でコピーした値を使用します。 resize2fs のインストールが必要になる場合もあります: `apt install resize2fs`
 
 > [!NOTE]
 > 通常、Windows ツールまたはエディターを使用して、AppData フォルダー内にある WSL 関連ファイルを変更、移動、またはアクセスしないでください。 そうすると、Linux ディストリビューションが破損する可能性があります。
