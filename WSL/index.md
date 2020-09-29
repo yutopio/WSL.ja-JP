@@ -5,12 +5,12 @@ keywords: BashOnWindows, bash, wsl, windows, windowssubsystem, gnu, linux
 ms.topic: article
 ms.date: 09/15/2020
 ms.localizationpriority: high
-ms.openlocfilehash: e8046e4ec95e599014c5e5c09a24e7fac44da43d
-ms.sourcegitcommit: ba3399a5ffeffd23551315acd04ea6848d30693b
+ms.openlocfilehash: 6bfa3a67418e2b5c164f3506d0ee9180df828377
+ms.sourcegitcommit: b15b847b87d29a40de4a1517315949bce9c7a3d5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/17/2020
-ms.locfileid: "90719161"
+ms.lasthandoff: 09/28/2020
+ms.locfileid: "91413203"
 ---
 # <a name="windows-subsystem-for-linux-documentation"></a>Windows Subsystem for Linux に関するドキュメント
 
@@ -37,7 +37,7 @@ Linux 用 Windows サブシステムを使用すると、開発者は、従来�
 
 * [ビデオとブログのコレクションを含む概要の投稿](https://blogs.msdn.microsoft.com/commandline/learn-about-windows-console-and-windows-subsystem-for-linux-wsl/)
 * [コマンド ラインに関するブログ](https://blogs.msdn.microsoft.com/commandline/) (アクティブ)
-* [Windows Subsystem for Linux に関するブログ](https://blogs.msdn.microsoft.com/wsl/) (履歴)
+* [Windows Subsystem for Linux に関するブログ](/archive/blogs/wsl/) (履歴)
 
 ## <a name="posts-and-articles"></a>投稿と記事
 
