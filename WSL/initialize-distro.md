@@ -5,12 +5,12 @@ keywords: BashOnWindows, bash, wsl, windows, windows subsystem for linux, window
 ms.date: 07/24/2018
 ms.topic: article
 ms.localizationpriority: high
-ms.openlocfilehash: 7ce4455dd4ab5e75d69ba841d7dfb7963af9c891
-ms.sourcegitcommit: 3fb40fd65b34a5eb26b213a0df6a3b2746b7a9b4
+ms.openlocfilehash: 11dc84d3a58b51241c7c63e8ca35eba94a12508b
+ms.sourcegitcommit: b15b847b87d29a40de4a1517315949bce9c7a3d5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/12/2020
-ms.locfileid: "83235792"
+ms.lasthandoff: 09/28/2020
+ms.locfileid: "91413213"
 ---
 # <a name="initializing-a-newly-installed-distribution"></a>新しくインストールされたディストリビューションの初期化
 
@@ -28,13 +28,11 @@ ms.locfileid: "83235792"
 
 新しくインストールされたディストリビューションを初めて実行すると、コンソール ウィンドウが開き、インストールが完了するまで 1、2 分待つように求められます。
 
-> WSL 2 では数秒で合わることもあるほど高速です｡
-
 > インストールのこの最終段階で、ディストリビューションのファイルが圧縮解除されて PC に保存され、使用できるようになります。 PC の記憶装置のパフォーマンスによっては、約 1 分またはそれ以上かかることがあります。 この初回インストール段階は、ディストリビューションがクリーン インストールされる場合にのみ必要です。以降のすべての起動にかかる時間は 1 秒未満です。
 
 ## <a name="setting-up-a-new-linux-user-account"></a>新しい Linux ユーザー アカウントの設定
 
-インストールが完了すると、新しいユーザーアカウント (およびそのパスワード) を作成するように求められます。
+インストールが完了すると、新しいユーザー アカウント (およびそのパスワード) を作成するように求められます。
 
 ![Windows コンソールでの Ubuntu の展開](media/UbuntuInstall.png)
 
@@ -54,7 +52,7 @@ sudo apt update && sudo apt upgrade
 
 > Windows では、Linux ディストリビューションの更新やアップグレードは自動的に行われません。これは、Linux ユーザーが自分で制御することを好むタスクです。
 
-これで完了です。 WSL 上で新しい Linux ディストリビューションをご利用ください。 WSL の詳細については、他の [WSL ドキュメント](https://aka.ms/wsldocs)または[WSL の学習リソースのページ](https://aka.ms/learnwsl)を参照してください。
+これで完了です。 WSL 上で新しい Linux ディストリビューションをご利用ください。 WSL の詳細については、他の [WSL ドキュメント](./index.md)または[WSL の学習リソースのページ](https://aka.ms/learnwsl)を参照してください。
 
 ![WSL で Linux を使用する](media/linux-on-wsl.png)
 
@@ -62,10 +60,6 @@ sudo apt update && sudo apt upgrade
 
 関連エラーと推奨される修正を次に示します。 その他の一般的なエラーとその解決策については、[WSL のトラブルシューティングのページ](troubleshooting.md)を参照してください。
 
-> **エラー 0x8007007e が発生してインストールに失敗しました**
-
-このエラーは、ストアの Linux をシステムがサポートしていない場合に発生します。
-
-次のことを確認します。
+> **エラー 0x8007007e が発生してインストールに失敗しました** このエラーは、ストアの Linux をシステムがサポートしていない場合に発生します。  次のことを確認します。
 > * Windows ビルド 16215 以降を実行している。 [ビルドを確認してください](troubleshooting.md#check-your-build-number)。
 > * Windows Subsystem for Linux オプション コンポーネントが有効になっていて、コンピューターが再起動されている。  [WSL が有効になっていることを確認してください](troubleshooting.md#confirm-wsl-is-enabled)。

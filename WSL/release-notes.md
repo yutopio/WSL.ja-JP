@@ -6,12 +6,12 @@ author: benhillis
 ms.date: 05/15/2020
 ms.topic: article
 ms.localizationpriority: high
-ms.openlocfilehash: f79acbbc7f6436bae54c5160e769cababa76a341
-ms.sourcegitcommit: 69fc9d3ca22cf3f07622db4cdf80c8ec751fe620
+ms.openlocfilehash: d7b868f959c62879524dcbdad20509ef35fecfce
+ms.sourcegitcommit: b15b847b87d29a40de4a1517315949bce9c7a3d5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/19/2020
-ms.locfileid: "90818694"
+ms.lasthandoff: 09/28/2020
+ms.locfileid: "91413273"
 ---
 # <a name="release-notes-for-windows-subsystem-for-linux"></a>Windows Subsystem for Linux のリリース ノート
 
@@ -1184,14 +1184,14 @@ WSL と Windows のアプリケーションは、UNIX ソケット経由で相�
 
 ### <a name="fixed"></a>固定
 
-- [シリアル サポートを有効にしました](https://blogs.msdn.microsoft.com/wsl/2017/04/14/serial-support-on-the-windows-subsystem-for-linux/)
+- [シリアル サポートを有効にしました](/archive/blogs/wsl/serial-support-on-the-windows-subsystem-for-linux)
 - IP ソケット オプション IP_OPTIONS を追加しました [GH 1116]
 - (nginx/PHP-FPM にファイルをアップロード中に) pwritev 関数を実装しました [GH 1506]
 - IP ソケット オプション IP_MULTICAST_IF および IPV6_MULTICAST_IF を追加しました [GH 990]
 - ソケット オプション IP_MULTICAST_LOOP および IPV6_MULTICAST_LOOP に対するサポート [GH 1678]
 - apps node、traceroute、dig、nslookup、host に対する IP(V6)_MTU ソケット オプションを追加しました
 - IP ソケット オプション IPV6_UNICAST_HOPS を追加しました
-- [ファイルシステムの機能強化](https://blogs.msdn.microsoft.com/wsl/2017/04/18/file-system-improvements-to-the-windows-subsystem-for-linux/)
+- [ファイルシステムの機能強化](/archive/blogs/wsl/file-system-improvements-to-the-windows-subsystem-for-linux)
     * UNC パスのマウントを許可します
     * drvfs で CDFS のサポートを有効にします
     * drvfs でネットワーク ファイル システムのアクセス許可を正しく処理します
@@ -1208,7 +1208,7 @@ WSL と Windows のアプリケーションは、UNIX ソケット経由で相�
 
 ビルド 16170 の一般的な Windows 情報については、[Windows ブログ](https://blogs.windows.com/windowsexperience/2017/04/07/announcing-windows-10-insider-preview-build-16170-pc/)を参照してください。<br/>
 
-WSL のテストに関する取り組みを説明する新しい[ブログ投稿](https://blogs.msdn.microsoft.com/wsl/2017/04/11/testing-the-windows-subsystem-for-linux/)をリリースしました。
+WSL のテストに関する取り組みを説明する新しい[ブログ投稿](/archive/blogs/wsl/testing-the-windows-subsystem-for-linux)をリリースしました。
 
 ### <a name="fixed"></a>固定
 
@@ -1540,7 +1540,7 @@ Windows 10 の Creators Update への組み込みが予定されている WSL �
 
 ### <a name="fixed"></a>固定
 
-- Windows の Pico プロセス通知を改善しました。  [WSL ブログ](https://blogs.msdn.microsoft.com/wsl/2016/11/01/wsl-antivirus-and-firewall-compatibility/)に追加情報があります。
+- Windows の Pico プロセス通知を改善しました。  [WSL ブログ](/archive/blogs/wsl/wsl-antivirus-and-firewall-compatibility)に追加情報があります。
 - Windows の相互運用性での安定性を向上させました
 - エンタープライズ データ保護 (EDP) が有効になっているときに bash.exe を起動すると発生するエラー 0x80070057 を修正しました
 - その他のバグ修正と機能強化
@@ -1586,8 +1586,8 @@ $ cmd.exe /c dir
 
 詳細については、以下を参照してください。
 
-- [相互運用に関する WSL チームのブログ](https://blogs.msdn.microsoft.com/wsl/2016/10/19/windows-and-ubuntu-interoperability/)<br/>
-- [MSDN 相互運用のドキュメント](https://msdn.microsoft.com/commandline/wsl/interop)<br/>
+- [相互運用に関する WSL チームのブログ](/archive/blogs/wsl/windows-and-ubuntu-interoperability)<br/>
+- [MSDN 相互運用のドキュメント](./interop.md)<br/>
 
 ### <a name="fixed"></a>固定
 
@@ -1807,7 +1807,7 @@ Windows 10 Anniversary Update リリース以降の最初の Insider ビルド�
 
 ### <a name="fixed"></a>固定
 - 8/2 の Windows 10 Anniversary Update の準備をするための修正
-  - Anniversary Update での WSL の詳細情報については、こちらの[ブログ](https://blogs.msdn.microsoft.com/wsl/)を参照してください
+  - Anniversary Update での WSL の詳細情報については、こちらの[ブログ](/archive/blogs/wsl/)を参照してください
 
 <br/>
 
@@ -1926,7 +1926,7 @@ Windows 10 Anniversary Update リリース以降の最初の Insider ビルド�
 ## <a name="build-14342"></a>ビルド 14342
 ビルド 14342 の一般的な Windows 情報については、[Windows ブログ](https://aka.ms/wip14342)を参照してください。 <br/>
 
-VolFs および DriveFs の情報については、[WSL ブログ](https://blogs.msdn.microsoft.com/wsl)を参照してください。 <br/>
+VolFs および DriveFs の情報については、[WSL ブログ](/archive/blogs/wsl/)を参照してください。 <br/>
 
 ### <a name="fixed"></a>固定
 - Windows ユーザーのユーザー名に Unicode 文字が含まれている場合のインストールの問題を修正しました

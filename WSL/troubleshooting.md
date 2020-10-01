@@ -5,12 +5,12 @@ keywords: BashOnWindows, bash, wsl, windows, windowssubsystem, ubuntu
 ms.date: 01/20/2020
 ms.topic: article
 ms.localizationpriority: high
-ms.openlocfilehash: 83c73e99afd4745081290340a67edee3ec26dc60
-ms.sourcegitcommit: 69fc9d3ca22cf3f07622db4cdf80c8ec751fe620
+ms.openlocfilehash: 78d122ce22e3ab4d67339cc6f0d6038502e23dbb
+ms.sourcegitcommit: b15b847b87d29a40de4a1517315949bce9c7a3d5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/19/2020
-ms.locfileid: "90818714"
+ms.lasthandoff: 09/28/2020
+ms.locfileid: "91413293"
 ---
 # <a name="troubleshooting-windows-subsystem-for-linux"></a>Windows Subsystem for Linux のトラブルシューティング
 
@@ -87,8 +87,8 @@ WSL 2
 
 ### <a name="please-enable-the-virtual-machine-platform-windows-feature-and-ensure-virtualization-is-enabled-in-the-bios"></a>仮想マシン プラットフォームの Windows 機能を有効にし、BIOS で仮想化が有効になっていることを確認してください。
 
-1. [Hyper-V のシステム要件](https://docs.microsoft.com/windows-server/virtualization/hyper-v/system-requirements-for-hyper-v-on-windows#:~:text=on%20Windows%20Server.-,General%20requirements,the%20processor%20must%20have%20SLAT.)を確認
-2. マシンが VM の場合は、[入れ子になった仮想化](https://docs.microsoft.com/windows/wsl/wsl2-faq#can-i-run-wsl-2-in-a-virtual-machine)を手動で有効にしてください。 管理者で Powershell を起動し、次を実行します。 
+1. [Hyper-V のシステム要件](/windows-server/virtualization/hyper-v/system-requirements-for-hyper-v-on-windows#:~:text=on%20Windows%20Server.-,General%20requirements,the%20processor%20must%20have%20SLAT.)を確認
+2. マシンが VM の場合は、[入れ子になった仮想化](./wsl2-faq.md#can-i-run-wsl-2-in-a-virtual-machine)を手動で有効にしてください。 管理者で Powershell を起動し、次を実行します。 
 
 ```powershell
 Set-VMProcessor -VMName <VMName> -ExposeVirtualizationExtensions $true

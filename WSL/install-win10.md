@@ -5,12 +5,12 @@ keywords: BashOnWindows, bash, wsl, windows, linux 用 windows サブシステ�
 ms.date: 09/15/2020
 ms.topic: article
 ms.localizationpriority: high
-ms.openlocfilehash: f617f006ae8067da8adbe1449bfcfe5bf32e73a3
-ms.sourcegitcommit: 1232d3b3becc4ceaa113f8ffb0b935c5550f99a2
+ms.openlocfilehash: 74a5960609e058b2f2da6160ecd04dc48f666a69
+ms.sourcegitcommit: b15b847b87d29a40de4a1517315949bce9c7a3d5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/18/2020
-ms.locfileid: "90777653"
+ms.lasthandoff: 09/28/2020
+ms.locfileid: "91413114"
 ---
 # <a name="windows-subsystem-for-linux-installation-guide-for-windows-10"></a>Windows 10 用 Windows Subsystem for Linux のインストール ガイド
 
@@ -43,7 +43,7 @@ WSL 2 に更新するには、Windows 10 を実行している必要がありま
 バージョンとビルド番号を確認するには、**Windows ロゴ キー + R キー**を押して、「**winver**」と入力し、 **[OK]** を選択します。 (または、Windows コマンド プロンプトで `ver` コマンドを入力します)。 [設定] メニューで、[最新の Windows バージョンに更新](ms-settings:windowsupdate)します。
 
 > [!NOTE]
-> Windows 10 バージョン 1903 または 1909 を実行している場合は、Windows メニューから [設定] を開き、[更新とセキュリティ] に移動して、[更新プログラムのチェック] を選択します。 ビルド番号は、18362.1049+ または 18363.1049+ で、マイナー ビルド番号は .1049 より大きい必要があります。 詳細については、「[Windows 10 バージョン 1903 および 1909 で WSL 2 のサポート開始](https://devblogs.microsoft.com/commandline/wsl-2-support-is-coming-to-windows-10-versions-1903-and-1909/)」を参照してください。 また、[トラブルシューティング手順](https://docs.microsoft.com/windows/wsl/troubleshooting#im-on-windows-10-version-1903-and-i-still-do-not-see-options-for-wsl-2)も参照してください。
+> Windows 10 バージョン 1903 または 1909 を実行している場合は、Windows メニューから [設定] を開き、[更新とセキュリティ] に移動して、[更新プログラムのチェック] を選択します。 ビルド番号は、18362.1049+ または 18363.1049+ で、マイナー ビルド番号は .1049 より大きい必要があります。 詳細については、「[Windows 10 バージョン 1903 および 1909 で WSL 2 のサポート開始](https://devblogs.microsoft.com/commandline/wsl-2-support-is-coming-to-windows-10-versions-1903-and-1909/)」を参照してください。 また、[トラブルシューティング手順](./troubleshooting.md#im-on-windows-10-version-1903-and-i-still-do-not-see-options-for-wsl-2)も参照してください。
 
 ## <a name="step-3---enable-virtual-machine-feature"></a>手順 3: 仮想マシンの機能を有効にする
 
@@ -81,7 +81,7 @@ wsl --set-default-version 2
 ```
 
 > [!NOTE]
-> 対象のディストリビューションのサイズによっては、WSL 1 から WSL 2 への更新が完了するまでに数分かかる場合があります。 Windows 10 Anniversary Update または Creators Update から WSL 1 の古い (レガシ) インストールを実行している場合は、更新エラーが発生することがあります。 次の手順に従って、[レガシ ディストリビューションをアンインストールして削除](https://docs.microsoft.com/windows/wsl/install-legacy#uninstallingremoving-the-legacy-distro)します。
+> 対象のディストリビューションのサイズによっては、WSL 1 から WSL 2 への更新が完了するまでに数分かかる場合があります。 Windows 10 Anniversary Update または Creators Update から WSL 1 の古い (レガシ) インストールを実行している場合は、更新エラーが発生することがあります。 次の手順に従って、[レガシ ディストリビューションをアンインストールして削除](./install-legacy.md#uninstallingremoving-the-legacy-distro)します。
 >
 > `wsl --set-default-version` の結果が無効なコマンドである場合は、「`wsl --help`」と入力してください。 `--set-default-version` が表示されない場合は、お使いの OS によってサポートされていないことを意味しているため、バージョン 1903、ビルド 18362 以上に更新する必要があります。
 >
@@ -124,9 +124,9 @@ wsl --set-default-version 2
 
 ## <a name="install-windows-terminal-optional"></a>Windows ターミナルをインストールする (省略可能)
 
-Windows ターミナルでは、複数のタブ (複数の Linux コマンド ライン、Windows コマンド プロンプト、PowerShell、Azure CLI などをすばやく切り替える) が有効になり、カスタム キー バインド (タブを開くまたは閉じる、コピーと貼り付けを行うなどのためのショートカット キー) を作成でき、検索機能、カスタム テーマ (配色、フォント スタイルとサイズ、背景画像、ぼかし、透明度) を使用できます。 [詳細情報。](https://docs.microsoft.com/windows/terminal)
+Windows ターミナルでは、複数のタブ (複数の Linux コマンド ライン、Windows コマンド プロンプト、PowerShell、Azure CLI などをすばやく切り替える) が有効になり、カスタム キー バインド (タブを開くまたは閉じる、コピーと貼り付けを行うなどのためのショートカット キー) を作成でき、検索機能、カスタム テーマ (配色、フォント スタイルとサイズ、背景画像、ぼかし、透明度) を使用できます。 [詳細情報。](/windows/terminal)
 
-[Windows ターミナルをインストール](https://docs.microsoft.com/windows/terminal/get-started)します。
+[Windows ターミナルをインストール](/windows/terminal/get-started)します。
 
   ![Windows ターミナル](media/terminal.png)
 
@@ -185,7 +185,7 @@ wsl --set-default-version 2
 > この問題の最新情報が追跡されている [WSL ドキュメント GitHub スレッド #4103](https://github.com/microsoft/WSL/issues/4103) をご確認ください。
 
 - **"wsl" という用語が、コマンドレット、関数、スクリプト ファイル、または操作可能なプログラムの名前として認識されません。**
-  - [Linux 用 Windows サブシステムのオプション コンポーネントがインストールされている](./install-win10.md#step-3---enable-virtual-machine-feature)ことを確認してください。 また、ARM64 デバイスを使用し、PowerShell からこのコマンドを実行している場合も、このエラーを受け取ります。 代わりに、`wsl.exe`PowerShell Core[ またはコマンド プロンプトから ](https://docs.microsoft.com/powershell/scripting/install/installing-powershell-core-on-windows) を実行します。
+  - [Linux 用 Windows サブシステムのオプション コンポーネントがインストールされている](./install-win10.md#step-3---enable-virtual-machine-feature)ことを確認してください。 また、ARM64 デバイスを使用し、PowerShell からこのコマンドを実行している場合も、このエラーを受け取ります。 代わりに、`wsl.exe`PowerShell Core[ またはコマンド プロンプトから ](/powershell/scripting/install/installing-powershell-core-on-windows) を実行します。
 
 - **Error:この更新プログラムは、Linux 用 Windows サブシステムを搭載したマシンにのみ適用されます。**
   - Linux カーネル更新プログラム MSI パッケージをインストールするには、WSL が必要であり、最初に有効にする必要があります。 失敗した場合は、"`This update only applies to machines with the Windows Subsystem for Linux`" というメッセージが表示されます。

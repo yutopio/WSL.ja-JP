@@ -6,12 +6,12 @@ ms.date: 09/15/2020
 ms.topic: article
 ms.assetid: 129101ed-b88a-43c2-b6a2-cd2c4ff6fee1
 ms.localizationpriority: high
-ms.openlocfilehash: 0f16471968151fa040d41baa90af6aedfb6fee79
-ms.sourcegitcommit: ba3399a5ffeffd23551315acd04ea6848d30693b
+ms.openlocfilehash: f769261bab35619b034e2a84e4f308eeb0a93cb4
+ms.sourcegitcommit: b15b847b87d29a40de4a1517315949bce9c7a3d5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/17/2020
-ms.locfileid: "90719191"
+ms.lasthandoff: 09/28/2020
+ms.locfileid: "91413242"
 ---
 # <a name="frequently-asked-questions-about-windows-subsystem-for-linux"></a>Windows Subsystem for Linux に関してよく寄せられる質問
 
@@ -45,7 +45,7 @@ WSL は開発者を対象としており、内部開発ループの一部とし�
 
 ## <a name="how-does-this-work"></a>この処理のしくみ
 
-基礎となるテクノロジの詳細については、[ブログ](https://blogs.msdn.microsoft.com/wsl/)を参照してください。
+基礎となるテクノロジの詳細については、[ブログ](/archive/blogs/wsl/)を参照してください。
 
 ## <a name="why-would-i-use-wsl-rather-than-linux-in-a-vm"></a>VM で Linux ではなく WSL を使用するのはなぜですか。
 
@@ -103,7 +103,7 @@ git config --global credential.helper "/mnt/c/Program\ Files/Git/mingw64/libexec
 
 これで、WSL ディストリビューション内で実行するすべての Git 操作で、資格情報マネージャーが使用されるようになります。 ホスト用に既にキャッシュされている資格情報がある場合は、それらへのアクセスが資格情報マネージャーから行われます。 そうでない場合は、Linux コンソールを使用しているとしても、資格情報を要求するダイアログ応答が表示されます。
 
-このサポートは、[Linux 用 Windows サブシステムと Windows そのものとの相互運用性](https://docs.microsoft.com/windows/wsl/interop)に依存しています。
+このサポートは、[Linux 用 Windows サブシステムと Windows そのものとの相互運用性](./interop.md)に依存しています。
 
 ## <a name="how-do-i-use-a-windows-file-with-a-linux-app"></a>Linux アプリで Windows ファイルをどのように使用しますか。
 
@@ -161,7 +161,7 @@ WSL では、コンピューターの固定ドライブを Linux ディストリ
   lxrun /uninstall /full
   ```
   
-ストアからインストールされた WSL ディストリビューションは、他の Windows アプリと同様に、アプリ タイルを右クリックして [アンインストール] をクリックするか、[`Remove-AppxPackage` コマンドレット](https://technet.microsoft.com/library/hh856038.aspx)を使用して PowerShell を介してアンインストールできます。
+ストアからインストールされた WSL ディストリビューションは、他の Windows アプリと同様に、アプリ タイルを右クリックして [アンインストール] をクリックするか、[`Remove-AppxPackage` コマンドレット](/previous-versions//hh856038(v=technet.10))を使用して PowerShell を介してアンインストールできます。
 
 ## <a name="why-does-ping-generate-permission-denied-errors"></a>ping によってアクセス拒否エラーが発生するのはなぜですか。
 
@@ -181,7 +181,7 @@ WSL は、従来のコンソールでの実行をサポートしていません�
 
 ## <a name="why-do-i-get-error-0x80040154-when-i-run-bashexe-after-upgrading-windows"></a>Windows のアップグレード後に bash.exe を実行すると、"エラー:0x80040154" が表示されるのはなぜですか。
 
-Windows Update 時に "Windows Subsystem for Linux" 機能が無効になる可能性があります。 その場合は、この Windows 機能を再度有効にする必要があります。 "Windows Subsystem for Linux" 機能を有効にする手順については、[インストール ガイド](https://docs.microsoft.com/windows/wsl/install-win10)をご覧ください。
+Windows Update 時に "Windows Subsystem for Linux" 機能が無効になる可能性があります。 その場合は、この Windows 機能を再度有効にする必要があります。 "Windows Subsystem for Linux" 機能を有効にする手順については、[インストール ガイド](./install-win10.md)をご覧ください。
 
 ## <a name="how-do-i-change-the-display-language-of-wsl"></a>WSL の表示言語を変更するにはどうすればよいですか。
 

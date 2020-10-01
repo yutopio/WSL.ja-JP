@@ -6,12 +6,12 @@ ms.date: 01/14/2020
 ms.topic: article
 ms.assetid: 7afaeacf-435a-4e58-bff0-a9f0d75b8a51
 ms.localizationpriority: high
-ms.openlocfilehash: 81d4cfa1ae57cdd077ba8cbd614111881724718a
-ms.sourcegitcommit: f1b049a1276782d4f2754f46a8d2025b598a0784
+ms.openlocfilehash: 3de8553baf616ee8d5d45f0738615f83df952942
+ms.sourcegitcommit: b15b847b87d29a40de4a1517315949bce9c7a3d5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/24/2020
-ms.locfileid: "85336075"
+ms.lasthandoff: 09/28/2020
+ms.locfileid: "91413223"
 ---
 # <a name="file-permissions-for-wsl"></a>WSL のファイルのアクセス許可
 
@@ -32,7 +32,7 @@ WSL では、次の 4 つの NTFS 拡張属性を追加できます。
 | $LXMOD | ファイル モード (ファイル システムのアクセス許可の 8 進数と種類。例: 0777) |
 | $LXDEV | デバイス (デバイス ファイルの場合) |
 
-さらに、通常のファイルやディレクトリではないファイル (例: シンボリック リンク、FIFO、ブロック デバイス、UNIX ソケット、文字デバイス) には、NTFS [再解析ポイント](https://docs.microsoft.com/windows/win32/fileio/reparse-points)もあります。 これにより、特定のディレクトリ内のファイルの種類を、その拡張属性を照会しなくても、はるかにすばやく特定できます。
+さらに、通常のファイルやディレクトリではないファイル (例: シンボリック リンク、FIFO、ブロック デバイス、UNIX ソケット、文字デバイス) には、NTFS [再解析ポイント](/windows/win32/fileio/reparse-points)もあります。 これにより、特定のディレクトリ内のファイルの種類を、その拡張属性を照会しなくても、はるかにすばやく特定できます。
 
 ## <a name="file-access-scenarios"></a>ファイル アクセスのシナリオ
 
@@ -40,7 +40,7 @@ WSL では、次の 4 つの NTFS 拡張属性を追加できます。
 
 ### <a name="accessing-files-in-the-windows-drive-file-system-drvfs-from-linux"></a>Linux から Windows ドライブ ファイル システム (DrvFS) のファイルにアクセスする
 
-これらのシナリオは、WSL から (既定の場合 `/mnt/c` 経由で) Windows ファイルにアクセスする場合に生じるものです。
+これらのシナリオは、WSL から (ほとんどの場合 `/mnt/c` 経由で) Windows ファイルにアクセスする場合に生じるものです。
 
 #### <a name="reading-file-permissions-from-an-existing-windows-file"></a>既存の Windows ファイルからファイルのアクセス許可を読み取る
 
