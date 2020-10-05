@@ -5,22 +5,22 @@ keywords: BashOnWindows, bash, wsl, windows, linux 用 windows サブシステ�
 ms.date: 05/15/2020
 ms.topic: article
 ms.localizationpriority: high
-ms.openlocfilehash: 02f4ff41614f78c0e588f329c777a87f8b416233
-ms.sourcegitcommit: 3fb40fd65b34a5eb26b213a0df6a3b2746b7a9b4
+ms.openlocfilehash: ac0025257ae70547c5b20d89535510a8b8bb006c
+ms.sourcegitcommit: b15b847b87d29a40de4a1517315949bce9c7a3d5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/12/2020
-ms.locfileid: "83235829"
+ms.lasthandoff: 09/28/2020
+ms.locfileid: "91413103"
 ---
 # <a name="set-up-windows-subsystem-for-linux-for-your-enterprise-company"></a>エンタープライズ企業向けに Linux 用 Windows サブシステムを設定する
 
-ビジネス向け Microsoft Store では、自社に WSL をデプロイすることを検討している企業に対してさまざまなソリューションを提供しています。 [ビジネスおよび教育機関向け Microsoft Store のドキュメント](https://docs.microsoft.com/microsoft-store/)は、Store のエクスペリエンスに関する一般的な情報を見つけるための優れたリソースです。
+ビジネス向け Microsoft Store では、自社に WSL をデプロイすることを検討している企業に対してさまざまなソリューションを提供しています。 [ビジネスおよび教育機関向け Microsoft Store のドキュメント](/microsoft-store/)は、Store のエクスペリエンスに関する一般的な情報を見つけるための優れたリソースです。
 
 WSL のデプロイを開始する準備の方法を調べている企業のお客様は、次の手順に従ってください。
 
-* [ビジネス向け Microsoft Store にサインアップして開始します](https://docs.microsoft.com/microsoft-store/sign-up-microsoft-store-for-business-overview)
-* [対象の製品とサービスを管理します (たとえば、どのユーザーがプライベート ストア内のどのアプリにアクセスできるか)](https://docs.microsoft.com/microsoft-store/manage-apps-microsoft-store-for-business-overview)。 ここでは、WSL ディストリビューションをストアに追加したり、それらをインストールできるユーザーを制御したりできます
-* [任意の配布方法を使用して、ソフトウェアを会社にデプロイします](https://docs.microsoft.com/microsoft-store/distribute-apps-to-your-employees-microsoft-store-for-business)
+* [ビジネス向け Microsoft Store にサインアップして開始します](/microsoft-store/sign-up-microsoft-store-for-business-overview)
+* [対象の製品とサービスを管理します (たとえば、どのユーザーがプライベート ストア内のどのアプリにアクセスできるか)](/microsoft-store/manage-apps-microsoft-store-for-business-overview)。 ここでは、WSL ディストリビューションをストアに追加したり、それらをインストールできるユーザーを制御したりできます
+* [任意の配布方法を使用して、ソフトウェアを会社にデプロイします](/microsoft-store/distribute-apps-to-your-employees-microsoft-store-for-business)
 * このドキュメント リンクを使用して WSL をインストールできることを会社の従業員に伝えます: [Linux 用 Windows サブシステムのインストール](./install-win10.md)
 
 ## <a name="how-to-distribute-a-linux-distribution-on-windows-offline"></a>Windows 上で Linux ディストリビューションをオフラインで配布する方法
@@ -29,7 +29,7 @@ WSL のデプロイを開始する準備の方法を調べている企業のお�
 
 ### <a name="set-up-an-azure-active-directory-account"></a>Azure Active Directory アカウントを設定する
 
-Microsoft Store アプリのインストーラーを入手するには、[Azure AD アカウントにサインアップ](https://docs.microsoft.com/azure/active-directory/fundamentals/sign-up-organization?WT.mc_id=windows-c9-niner)する必要があり、組織のグローバル管理者である必要があります。 既にアカウントがある場合は、この手順を省略できます。
+Microsoft Store アプリのインストーラーを入手するには、[Azure AD アカウントにサインアップ](/azure/active-directory/fundamentals/sign-up-organization?WT.mc_id=windows-c9-niner)する必要があり、組織のグローバル管理者である必要があります。 既にアカウントがある場合は、この手順を省略できます。
 
 ### <a name="set-up-wsl-using-your-microsoft-store-for-business-account"></a>ビジネス向け Microsoft Store アカウントを使用して WSL を設定する
 
@@ -53,14 +53,14 @@ Microsoft Store アプリのインストーラーを入手するには、[Azure 
 
 5. [ライセンスの種類] ドロップダウン メニューで [オフライン] ライセンスを選択し、[Get the app]\(アプリを入手\) を選択します (一部の Linux ディストリビューションでは、オフライン ライセンスが提供されない場合があります)。
 
-    ![ビジネス向け MS Store の Ubuntu の製品ページ](media/offlineinstallscreens/4-screen.png)
+    ![ビジネス向け MS Store の Ubuntu でオフラインを選択](media/offlineinstallscreens/4-screen.png)
 
 6. [管理] ボタンを選択して、アプリの製品ページに移動します。
 
-    ![ビジネス向け MS Store の Ubuntu の製品ページ](media/offlineinstallscreens/5-screen.png)
+    ![ビジネス向け MS Store の Ubuntu で管理を選択](media/offlineinstallscreens/5-screen.png)
 
 7. 対象のアーキテクチャを選択し、オフラインで使用するためにパッケージをダウンロードします。
 
-    ![ビジネス向け MS Store の Ubuntu の製品詳細ページ](media/offlineinstallscreens/6-screen.png)
+    ![ビジネス向け MS Store の Ubuntu でアーキテクチャを選択](media/offlineinstallscreens/6-screen.png)
 
 このインストーラーは、WSL をインストールする任意のコンピューターに配布できます。
