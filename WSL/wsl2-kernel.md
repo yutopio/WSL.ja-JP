@@ -53,7 +53,7 @@ MSI カーネルをインストールするには、WSL が必要であり、最
 
 ### `WSL 2 requires an update to its kernel component. For information please visit https://aka.ms/wsl2kernel`
 
-%SystemRoot%\system32\lxss\tools\, にカーネルがない場合、その都度上記のエラーが発生する可能性があります。
+%SystemRoot%\system32\lxss\tools\ にカーネルがない場合、その都度上記のエラーが発生する可能性があります。
 
 これを解決するには、次のような方法があります。
 
